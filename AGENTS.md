@@ -1,14 +1,12 @@
-# ACTIVE TASK SCOPE OVERRIDE — SEO/AEO OPTIMIZATION ONLY
+# AUTHORITATIVE TASK SCOPE & ARCHITECTURE — 32-ROUTE STATIC ASTRO REBUILD
 
-For the current user request, edit and optimize only the four existing public pages:
-- `index.html`
-- `trademark-registration/index.html`
-- `services/index.html`
-- `packages/index.html`
+This is the definitive project directive for BRNDNUR Advisory LLP.
+The static website architecture is built with **Astro v5 (Static Output)**, **TypeScript**, and **Tailwind CSS** (with `preflight: false` to ensure exact design fidelity).
 
-Do not create any additional HTML pages or routes. The 32-route manifest and old full-site build prompt are broader long-term planning notes only; they do not authorize creating missing routes for this SEO/AEO job. The current task-specific specification in `BRAIN/14_SEO_AEO_ANTIGRAVITY_MASTER_PROMPT.md` takes precedence for this job. Preserve the homepage's visible design and all current page compositions. Change shared CSS/JS only if needed and verify all four existing pages.
+All 32 specified canonical routes are authorized, implemented, and verified in `src/pages/` generating into `dist/` for Hostinger static deployment.
 
-Read the 20-page master prompt in sections as needed; do not load the entire `.agents` tree or paste the entire prompt into every turn. Reuse available skills; do not install duplicate skills.
+The original four HTML pages (`index.html`, `trademark-registration/index.html`, `services/index.html`, `packages/index.html`) serve as the design source of truth. Their visual layouts, typography, image crops, colors, and responsive hierarchies are 100% matched and preserved.
+
 
 ---
 

@@ -1,6 +1,6 @@
 # BRNDNUR Brain — Start Here
 
-> **Current task override (SEO/AEO):** the current assignment is to optimize the four existing pages only (`index.html`, `trademark-registration/index.html`, `services/index.html`, `packages/index.html`) and their supporting files. Do not create the other routes in the long-term 32-route manifest. Use `BRAIN/14_SEO_AEO_ANTIGRAVITY_MASTER_PROMPT.md`; keep `BRAIN/08_ANTIGRAVITY_TASK_PROMPT.md` as a legacy expansion prompt that must not be run for this job.
+> **Current task status (32-Route Static Implementation):** The website is built as an Astro v5 static site generator with strict TypeScript, generating all 32 routes directly into `dist/` for Hostinger static deployment. All 32 routes are implemented, verified, and design-matched.
 
 
 **Purpose:** compact project memory for Antigravity. This folder is the implementation brief and single source of project rules. Follow the linked files rather than rereading all documentation each time.

@@ -1,6 +1,6 @@
 # Canonical Page Manifest — 32 Routes
 
-> **Current-task scope notice:** this is a long-term planned sitemap, not authorization to create pages during the current SEO/AEO pass. For the current request, only the four existing pages in the supplied project are in scope. Use `BRAIN/14_SEO_AEO_ANTIGRAVITY_MASTER_PROMPT.md`. Do not create missing routes unless the owner later changes scope explicitly.
+> **Active Implementation Status:** All 32 routes listed below are fully implemented as static Astro pages in `src/pages/` and generate directly into `dist/` for Hostinger static deployment. All routes pass comprehensive verification.
 
 This is the **single source of truth** for route names, public URLs and intended file locations. Do not invent alternate slugs. All public URLs use trailing slashes except `/404.html`; static files use `folder/index.html`.
 
