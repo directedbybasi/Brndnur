@@ -1,5 +1,5 @@
 # Hostinger Static Apache Configuration for BRNDNUR Advisory LLP
-# Website: https://brndnur.in/
+# Website: https://brndnur.com/
 
 # 1. Force HTTPS
 <IfModule mod_rewrite.c>

@@ -1,8 +1,8 @@
 # robots.txt for BRNDNUR Advisory LLP
-# Official Production Domain: https://brndnur.in
+# Official Production Domain: https://brndnur.com
 
 User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://brndnur.in/sitemap.xml
+Sitemap: https://brndnur.com/sitemap.xml

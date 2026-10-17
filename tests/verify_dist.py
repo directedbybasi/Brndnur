@@ -7,52 +7,52 @@ DIST_DIR = os.path.abspath('dist')
 
 ALL_32_ROUTES = [
     # Group A: Main Website (4)
-    ('/', 'index.html', 'https://brndnur.in/'),
-    ('/trademark-registration/', 'trademark-registration/index.html', 'https://brndnur.in/trademark-registration/'),
-    ('/services/', 'services/index.html', 'https://brndnur.in/services/'),
-    ('/packages/', 'packages/index.html', 'https://brndnur.in/packages/'),
+    ('/', 'index.html', 'https://brndnur.com/'),
+    ('/trademark-registration/', 'trademark-registration/index.html', 'https://brndnur.com/trademark-registration/'),
+    ('/services/', 'services/index.html', 'https://brndnur.com/services/'),
+    ('/packages/', 'packages/index.html', 'https://brndnur.com/packages/'),
     
     # Group B: Company Information (4)
-    ('/about/', 'about/index.html', 'https://brndnur.in/about/'),
-    ('/how-it-works/', 'how-it-works/index.html', 'https://brndnur.in/how-it-works/'),
-    ('/faqs/', 'faqs/index.html', 'https://brndnur.in/faqs/'),
-    ('/contact/', 'contact/index.html', 'https://brndnur.in/contact/'),
+    ('/about/', 'about/index.html', 'https://brndnur.com/about/'),
+    ('/how-it-works/', 'how-it-works/index.html', 'https://brndnur.com/how-it-works/'),
+    ('/faqs/', 'faqs/index.html', 'https://brndnur.com/faqs/'),
+    ('/contact/', 'contact/index.html', 'https://brndnur.com/contact/'),
     
     # Group C: Trademark Services (6)
-    ('/trademark-classes/', 'trademark-classes/index.html', 'https://brndnur.in/trademark-classes/'),
-    ('/brand-name-search/', 'brand-name-search/index.html', 'https://brndnur.in/brand-name-search/'),
-    ('/wordmark-registration/', 'wordmark-registration/index.html', 'https://brndnur.in/wordmark-registration/'),
-    ('/logo-trademark-registration/', 'logo-trademark-registration/index.html', 'https://brndnur.in/logo-trademark-registration/'),
-    ('/trademark-renewal/', 'trademark-renewal/index.html', 'https://brndnur.in/trademark-renewal/'),
-    ('/trademark-monitoring/', 'trademark-monitoring/index.html', 'https://brndnur.in/trademark-monitoring/'),
+    ('/trademark-classes/', 'trademark-classes/index.html', 'https://brndnur.com/trademark-classes/'),
+    ('/brand-name-search/', 'brand-name-search/index.html', 'https://brndnur.com/brand-name-search/'),
+    ('/wordmark-registration/', 'wordmark-registration/index.html', 'https://brndnur.com/wordmark-registration/'),
+    ('/logo-trademark-registration/', 'logo-trademark-registration/index.html', 'https://brndnur.com/logo-trademark-registration/'),
+    ('/trademark-renewal/', 'trademark-renewal/index.html', 'https://brndnur.com/trademark-renewal/'),
+    ('/trademark-monitoring/', 'trademark-monitoring/index.html', 'https://brndnur.com/trademark-monitoring/'),
     
     # Group D: Business Services (4)
-    ('/gst-registration/', 'gst-registration/index.html', 'https://brndnur.in/gst-registration/'),
-    ('/udyam-msme-registration/', 'udyam-msme-registration/index.html', 'https://brndnur.in/udyam-msme-registration/'),
-    ('/fssai-registration/', 'fssai-registration/index.html', 'https://brndnur.in/fssai-registration/'),
-    ('/business-setup/', 'business-setup/index.html', 'https://brndnur.in/business-setup/'),
+    ('/gst-registration/', 'gst-registration/index.html', 'https://brndnur.com/gst-registration/'),
+    ('/udyam-msme-registration/', 'udyam-msme-registration/index.html', 'https://brndnur.com/udyam-msme-registration/'),
+    ('/fssai-registration/', 'fssai-registration/index.html', 'https://brndnur.com/fssai-registration/'),
+    ('/business-setup/', 'business-setup/index.html', 'https://brndnur.com/business-setup/'),
     
     # Group E: Package Details (4)
-    ('/packages/individual-msme/', 'packages/individual-msme/index.html', 'https://brndnur.in/packages/individual-msme/'),
-    ('/packages/company-llp/', 'packages/company-llp/index.html', 'https://brndnur.in/packages/company-llp/'),
-    ('/packages/food-brand/', 'packages/food-brand/index.html', 'https://brndnur.in/packages/food-brand/'),
-    ('/packages/gulf-return-business/', 'packages/gulf-return-business/index.html', 'https://brndnur.in/packages/gulf-return-business/'),
+    ('/packages/individual-msme/', 'packages/individual-msme/index.html', 'https://brndnur.com/packages/individual-msme/'),
+    ('/packages/company-llp/', 'packages/company-llp/index.html', 'https://brndnur.com/packages/company-llp/'),
+    ('/packages/food-brand/', 'packages/food-brand/index.html', 'https://brndnur.com/packages/food-brand/'),
+    ('/packages/gulf-return-business/', 'packages/gulf-return-business/index.html', 'https://brndnur.com/packages/gulf-return-business/'),
     
     # Group F: Resources & Educational Guides (5)
-    ('/resources/', 'resources/index.html', 'https://brndnur.in/resources/'),
-    ('/resources/trademark-registration-guide/', 'resources/trademark-registration-guide/index.html', 'https://brndnur.in/resources/trademark-registration-guide/'),
-    ('/resources/trademark-class-guide/', 'resources/trademark-class-guide/index.html', 'https://brndnur.in/resources/trademark-class-guide/'),
-    ('/resources/brand-name-search-guide/', 'resources/brand-name-search-guide/index.html', 'https://brndnur.in/resources/brand-name-search-guide/'),
-    ('/resources/trademark-application-process/', 'resources/trademark-application-process/index.html', 'https://brndnur.in/resources/trademark-application-process/'),
+    ('/resources/', 'resources/index.html', 'https://brndnur.com/resources/'),
+    ('/resources/trademark-registration-guide/', 'resources/trademark-registration-guide/index.html', 'https://brndnur.com/resources/trademark-registration-guide/'),
+    ('/resources/trademark-class-guide/', 'resources/trademark-class-guide/index.html', 'https://brndnur.com/resources/trademark-class-guide/'),
+    ('/resources/brand-name-search-guide/', 'resources/brand-name-search-guide/index.html', 'https://brndnur.com/resources/brand-name-search-guide/'),
+    ('/resources/trademark-application-process/', 'resources/trademark-application-process/index.html', 'https://brndnur.com/resources/trademark-application-process/'),
     
     # Group G: Legal and Policy Pages (4)
-    ('/privacy-policy/', 'privacy-policy/index.html', 'https://brndnur.in/privacy-policy/'),
-    ('/terms-and-conditions/', 'terms-and-conditions/index.html', 'https://brndnur.in/terms-and-conditions/'),
-    ('/disclaimer/', 'disclaimer/index.html', 'https://brndnur.in/disclaimer/'),
-    ('/refund-cancellation-policy/', 'refund-cancellation-policy/index.html', 'https://brndnur.in/refund-cancellation-policy/'),
+    ('/privacy-policy/', 'privacy-policy/index.html', 'https://brndnur.com/privacy-policy/'),
+    ('/terms-and-conditions/', 'terms-and-conditions/index.html', 'https://brndnur.com/terms-and-conditions/'),
+    ('/disclaimer/', 'disclaimer/index.html', 'https://brndnur.com/disclaimer/'),
+    ('/refund-cancellation-policy/', 'refund-cancellation-policy/index.html', 'https://brndnur.com/refund-cancellation-policy/'),
     
     # Group H: Error Page (1)
-    ('/404.html', '404.html', 'https://brndnur.in/404.html')
+    ('/404.html', '404.html', 'https://brndnur.com/404.html')
 ]
 
 def verify_all():
@@ -152,7 +152,7 @@ def verify_all():
     else:
         with open(robots_path, 'r', encoding='utf-8') as f:
             rob = f.read()
-        if 'Sitemap: https://brndnur.in/sitemap.xml' not in rob:
+        if 'Sitemap: https://brndnur.com/sitemap.xml' not in rob:
             failures.append("robots.txt missing valid Sitemap URL reference!")
         if 'Allow: /' not in rob:
             failures.append("robots.txt missing Allow: / directive!")

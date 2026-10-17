@@ -127,7 +127,7 @@
 
 1. **Unique Metadata Across 32 Routes**: Every page has a distinct, descriptive `<title>`, compelling `<meta name="description">`, and absolute `rel="canonical"` URL.
 2. **Sitemap Accuracy**: `dist/sitemap.xml` contains exactly the 31 indexable content routes with `<priority>` and `<changefreq>`. `/404.html` is strictly excluded.
-3. **Robots Configuration**: `dist/robots.txt` specifies `Allow: /` and links to `https://brndnur.in/sitemap.xml`.
+3. **Robots Configuration**: `dist/robots.txt` specifies `Allow: /` and links to `https://brndnur.com/sitemap.xml`.
 4. **404 Error Isolation**: `dist/404.html` specifies `<meta name="robots" content="noindex, follow">`.
 5. **Schema / Structured Data**: Homepage contains verified `Organization`, `WebSite`, and `WebPage` JSON-LD schemas. Service pages include validated `FAQPage` schema without fabricated reviews or ratings.
 6. **AEO Optimization**: Direct definitions, structured step numbers (01–05), Nice classification tables, and question-answer pairs tailored for LLM/answer-engine search clarity.
@@ -169,6 +169,6 @@
    - Navigate to the website root directory: `public_html/`.
    - Upload **all contents** of the local `dist/` folder directly into `public_html/` (ensure `index.html`, `.htaccess`, `sitemap.xml`, and `robots.txt` sit directly inside `public_html/`).
 3. **Verify Deployment**:
-   - Visit `https://brndnur.in/` to verify the homepage.
+   - Visit `https://brndnur.com/` to verify the homepage.
    - Navigate through services, packages, guides, and legal pages.
-   - Test a non-existent URL (e.g., `https://brndnur.in/non-existent-page`) to confirm that `404.html` is returned with an HTTP 404 status.
+   - Test a non-existent URL (e.g., `https://brndnur.com/non-existent-page`) to confirm that `404.html` is returned with an HTTP 404 status.
