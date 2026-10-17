@@ -1,0 +1,61 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+---
+
+<a class="bn-skip" href="#main-content">Skip to content</a>
+<header class="bn-header">
+  <div class="bn-header-inner container">
+    <a class="bn-brand" href="/" aria-label="BRNDNUR Advisory LLP home">
+      <span class="bn-brand-name">BRNDNUR</span>
+      <span class="bn-brand-sub">ADVISORY LLP</span>
+      <span class="bn-brand-tag">LIGHT UP YOUR BRAND &trade;</span>
+    </a>
+    <nav class="bn-nav" id="bn-nav" aria-label="Main navigation">
+      <a href="/" aria-current={currentPath === '/' ? 'page' : undefined}>Home</a>
+      <a href="/trademark-registration/" aria-current={currentPath === '/trademark-registration/' ? 'page' : undefined}>Trademark Registration</a>
+      <a href="/services/" aria-current={currentPath === '/services/' ? 'page' : undefined}>Services</a>
+      <a href="/packages/" aria-current={currentPath === '/packages/' ? 'page' : undefined}>Packages</a>
+      <a href="/#about">About</a>
+      <a href="/#process">How It Works</a>
+      <a href="/services/#faqs">FAQs</a>
+      <a href="/#contact">Contact</a>
+      <a class="bn-nav-cta" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%20Advisory%2C%20I%20would%20like%20to%20discuss%20your%20services." target="_blank" rel="noopener noreferrer">Get in Touch &rarr;</a>
+    </nav>
+    <a class="bn-cta" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%20Advisory%2C%20I%20would%20like%20to%20discuss%20your%20services." target="_blank" rel="noopener noreferrer">&#9673;&nbsp; Get in Touch <span aria-hidden="true">&rarr;</span></a>
+    <button class="bn-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="bn-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<script>
+  // Shared navigation behaviour for mobile menu
+  const toggle = document.querySelector('.bn-toggle');
+  const nav = document.getElementById('bn-nav');
+  if (toggle && nav) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      nav.classList.toggle('is-open', open);
+    };
+    toggle.addEventListener('click', () => {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    nav.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => setOpen(false));
+    });
+    document.addEventListener('click', (e) => {
+      const target = e.target as Node;
+      if (nav.classList.contains('is-open') && !nav.contains(target) && !toggle.contains(target)) {
+        setOpen(false);
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setOpen(false);
+    });
+  }
+</script>

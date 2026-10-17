@@ -1,0 +1,25 @@
+---
+interface Props {
+  text?: string;
+  message?: string;
+  class?: string;
+}
+
+const {
+  text = 'Chat on WhatsApp',
+  message = 'Hello BRNDNUR Advisory, I would like to discuss your services.',
+  class: className = '',
+} = Astro.props;
+
+const encodedMessage = encodeURIComponent(message);
+const whatsappUrl = `https://wa.me/919048188899?text=${encodedMessage}`;
+---
+
+<a
+  href={whatsappUrl}
+  class={`bn-cta ${className}`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  &#9673;&nbsp; {text} <span aria-hidden="true">&rarr;</span>
+</a>

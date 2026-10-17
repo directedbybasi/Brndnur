@@ -1,0 +1,19 @@
+/* Design Tokens for BRNDNUR Advisory LLP */
+:root {
+  --color-ivory: #F4EFE4;
+  --color-ivory-light: #FCFAF6;
+  --color-ivory-dark: #E8DFC8;
+  --color-navy: #13233A;
+  --color-navy-dark: #0C1726;
+  --color-gold: #A8781A;
+  --color-gold-dark: #8F6214;
+  --color-gold-pale: #F0E2C8;
+  --color-line: #DCCEB6;
+  --color-text: #26354A;
+  --color-muted: #566174;
+  
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", Arial, -apple-system, sans-serif;
+  
+  --container-max-width: 1200px;
+}
