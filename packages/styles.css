@@ -44,10 +44,12 @@ p {margin-bottom:0}
 .section {padding:var(--section-y) 0}
 .section-compact {padding:var(--section-compact) 0}
 .section-heading {margin-bottom:26px}
+.section-heading.centered {text-align:center;margin-inline:auto}
 .section-heading h2 {margin-bottom:8px}
-.section-heading>p:not(.eyebrow) {max-width:690px;color:var(--muted);font-size:14px;margin-inline:auto}
+.section-heading.centered h2 {text-align:center;margin-inline:auto}
+.section-heading>p:not(.eyebrow) {max-width:690px;color:var(--muted);font-size:14px;margin-inline:auto;text-align:center}
 .centered {text-align:center}
-.eyebrow-rule {display:flex;justify-content:center;align-items:center;gap:10px}
+.eyebrow-rule {display:flex;justify-content:center;align-items:center;gap:10px;width:100%;margin-inline:auto;text-align:center}
 .eyebrow-rule:before, .eyebrow-rule:after {content:"";height:1px;width:27px;background:var(--gold);opacity:.65}
 .finder {background:#F8F4EC;padding-top:33px;padding-bottom:30px;border-bottom:1px solid rgba(226,213,189,.6)}
 .finder .section-heading {margin-bottom:22px}

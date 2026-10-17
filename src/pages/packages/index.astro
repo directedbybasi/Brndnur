@@ -1002,14 +1002,23 @@ const ogImage = "/packages/assets/hero-packages.webp";
   .section-heading {
     margin-bottom: 26px;
   }
+  .section-heading.centered {
+    text-align: center;
+    margin-inline: auto;
+  }
   .section-heading h2 {
     margin-bottom: 8px;
+  }
+  .section-heading.centered h2 {
+    text-align: center;
+    margin-inline: auto;
   }
   .section-heading > p:not(.eyebrow) {
     max-width: 690px;
     color: var(--muted);
     font-size: 14px;
     margin-inline: auto;
+    text-align: center;
   }
   .centered {
     text-align: center;
@@ -1019,6 +1028,9 @@ const ogImage = "/packages/assets/hero-packages.webp";
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
   }
   .eyebrow-rule:before,
   .eyebrow-rule:after {
