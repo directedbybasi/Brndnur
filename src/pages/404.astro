@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Page Not Found (404) | BRNDNUR Advisory LLP";
+const description = "The page you are looking for cannot be found. Explore our services, packages, and guides or return to the BRNDNUR homepage.";
+const canonical = "https://brndnur.in/404.html";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  currentPath="/404.html"
+  robots="noindex, follow"
+>
+  <main id="main-content">
+    <section class="section" style="min-height: 60vh; display: flex; align-items: center;">
+      <div class="container text-center" style="max-width: 680px; margin: 0 auto; text-align: center;">
+        <p class="eyebrow" style="color: #A8781A; font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 12px;">Error 404</p>
+        <h1 style="font-family: var(--bn-serif, 'Playfair Display', Georgia, serif); font-size: clamp(34px, 4.5vw, 54px); font-weight: 400; color: #13233A; margin: 0 0 16px;">We couldn’t find that page.</h1>
+        <p style="color: #566174; font-size: 16px; line-height: 1.65; margin: 0 0 32px;">The page you requested may have moved, been renamed, or is temporarily unavailable. Let us help you get back on track.</p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 40px;">
+          <a class="btn btn-primary" href="/">Return to Homepage &rarr;</a>
+          <a class="btn btn-outline" href="/services/">Explore Services</a>
+          <a class="btn btn-outline" href="/packages/">View Packages</a>
+          <a class="btn btn-outline" href="/contact/">Contact Us</a>
+        </div>
+
+        <div class="bn-card" style="text-align: left; padding: 20px 24px;">
+          <h3 style="margin-top: 0; font-size: 16px;">Looking for something specific?</h3>
+          <p style="margin-bottom: 8px; font-size: 14px;">Browse our popular resources and service pages:</p>
+          <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #566174; line-height: 1.8;">
+            <li><a href="/trademark-registration/" style="color: #A8781A; font-weight: 600;">Trademark Registration in India</a></li>
+            <li><a href="/trademark-classes/" style="color: #A8781A; font-weight: 600;">Trademark Class Directory (1–45)</a></li>
+            <li><a href="/brand-name-search/" style="color: #A8781A; font-weight: 600;">Brand Name Clearance Searches</a></li>
+            <li><a href="/resources/" style="color: #A8781A; font-weight: 600;">Educational Resources & Guides</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

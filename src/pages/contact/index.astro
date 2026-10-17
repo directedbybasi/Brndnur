@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Contact Us | BRNDNUR Advisory LLP";
+const description = "Connect with BRNDNUR Advisory LLP in Manjeri, Malappuram, Kerala. Contact us via WhatsApp, phone, or email for trademark and business advisory support.";
+const canonical = "https://brndnur.in/contact/";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  currentPath="/contact/"
+>
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Get In Touch</p>
+        <h1>Let’s Talk About Your Brand.</h1>
+        <p class="lead">Reach out to discuss your brand name, explore trademark protection, or request tailored guidance for your business registrations.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <div class="bn-card">
+            <div class="card-icon">💬</div>
+            <h3>WhatsApp Consultation</h3>
+            <p>Our fastest and most convenient communication channel for preliminary inquiries, document sharing, and status updates.</p>
+            <p><strong>+91 90481 88899</strong></p>
+            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%20Advisory%2C%20I%20would%20like%20to%20discuss%20my%20requirements." target="_blank" rel="noopener noreferrer">Chat on WhatsApp &rarr;</a>
+          </div>
+
+          <div class="bn-card">
+            <div class="card-icon">📞</div>
+            <h3>Telephone Inquiry</h3>
+            <p>Speak directly with our advisory coordinators during normal business hours (Monday to Saturday, 9:30 AM to 6:00 PM IST).</p>
+            <p><strong>+91 90481 88899</strong></p>
+            <a class="btn btn-primary" href="tel:+919048188899">Call Directly &rarr;</a>
+          </div>
+
+          <div class="bn-card">
+            <div class="card-icon">✉️</div>
+            <h3>Email Correspondence</h3>
+            <p>Send detailed documentation, formal inquiries, or partnership proposals directly to our inbox.</p>
+            <p><strong>brndnuradvisoryllp@gmail.com</strong></p>
+            <a class="btn btn-outline" href="mailto:brndnuradvisoryllp@gmail.com">Send an Email &rarr;</a>
+          </div>
+        </div>
+
+        <div class="section-alt" style="margin-top: 56px; padding: 40px; border-radius: 12px;">
+          <div style="max-width: 680px; margin: 0 auto; text-align: center;">
+            <p class="eyebrow">Office Location</p>
+            <h2 style="font-family: var(--bn-serif); font-size: 28px; margin: 0 0 12px; color: #13233A;">Manjeri, Malappuram District</h2>
+            <p style="color: #566174; line-height: 1.65; margin: 0 0 20px;">
+              BRNDNUR Advisory LLP operates from Manjeri, Malappuram, Kerala, India (PIN 676121). We serve clients across Kerala and throughout India via secure digital communication.
+            </p>
+            <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20to%20connect%20with%20your%20Manjeri%20office." target="_blank" rel="noopener noreferrer">Schedule a Discussion &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

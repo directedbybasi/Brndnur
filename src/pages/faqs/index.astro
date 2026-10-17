@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Frequently Asked Questions | BRNDNUR Advisory LLP";
+const description = "Find clear answers to common questions about Indian trademark registration, classification classes, business setup, fees, and ongoing monitoring.";
+const canonical = "https://brndnur.in/faqs/";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  currentPath="/faqs/"
+>
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Knowledge & Guidance</p>
+        <h1>Frequently Asked Questions.</h1>
+        <p class="lead">Clear, objective answers regarding trademark registration, business registrations, pricing structures, and regulatory requirements in India.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 860px;">
+        <div class="section-heading">
+          <p class="eyebrow">Trademark Basics</p>
+          <h2>Understanding Trademark Registration</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is a trademark and why does my business need one?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              A trademark is a distinctive sign, logo, word, or combination thereof that identifies your goods or services from competitors. Registering a trademark gives you statutory exclusive rights under the Trade Marks Act, 1999, preventing others from exploiting your brand reputation.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How does an individual or MSME fee differ from a company fee?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              The Government of India provides a 50% concession on statutory trademark filing fees for individuals, sole proprietors, startups, and registered MSME/Udyam certificate holders (₹4,500 statutory fee per class) compared to standard companies or LLPs (₹9,000 statutory fee per class).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can registration be guaranteed?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              No ethical advisory firm can guarantee registration. The final authority to accept or reject an application belongs solely to the Registrar of Trade Marks. Our role is to minimize risk through rigorous preliminary searches, accurate class classification, and compliant documentation.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is the difference between a wordmark and a logo?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              A wordmark protects the brand name text itself regardless of font, size, or visual styling. A logo (device mark) protects the specific visual representation, typography, graphic emblems, and design arrangement submitted in the application.
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading" style="margin-top: 56px;">
+          <p class="eyebrow">Business Registrations & Support</p>
+          <h2>GST, Udyam, FSSAI & Packages</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>When does my business need GST registration?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              GST registration is mandatory for businesses exceeding statutory aggregate turnover thresholds (generally ₹40 lakhs for goods and ₹20 lakhs for services in most states) or engaging in inter-state supply, e-commerce selling, or reverse-charge mechanisms.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is the Food Brand Package?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Our Food Brand Package bundles relevant foundational registrations for food manufacturing, packaging, catering, and cloud kitchen businesses—including preliminary trademark clearance, class filing guidance, Udyam MSME certificate assistance, and basic FSSAI licensing support.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How long does a trademark remain valid?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              A registered trademark in India is valid for a period of 10 years from the date of filing. It can be renewed indefinitely every 10 years by submitting renewal forms and statutory fees.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-panel">
+          <p class="eyebrow">Have More Questions?</p>
+          <h2>Speak Directly with an Advisor.</h2>
+          <p>We are here to evaluate your specific situation and clarify the most suitable steps for your enterprise.</p>
+          <div class="cta-actions">
+            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+            <a class="btn btn-outline" href="/contact/">Contact Our Office</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach((button) => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      if (item) {
+        const isOpen = item.classList.toggle('is-open');
+        button.setAttribute('aria-expanded', String(isOpen));
+      }
+    });
+  });
+</script>
