@@ -13,62 +13,116 @@ const canonical = "https://brndnur.com/resources/";
   currentPath="/resources/"
 >
   <main id="main-content">
+    <!-- Breadcrumb & Hero -->
     <section class="page-hero">
       <div class="container">
+        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="sep">/</span>
+          <span class="current">Resources</span>
+        </nav>
         <p class="eyebrow">Knowledge Center</p>
         <h1>Intellectual Property & Compliance Guides for Founders.</h1>
         <p class="lead">Clear, verified explanations on trademark protection, classification principles, brand clearance searches, and statutory registration procedures under Indian law.</p>
-        <div class="actions">
+        
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>Trade Marks Act, 1999 Knowledge</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>NICE Classification Guides</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Statutory Verification & Walkthroughs</span>
+          </div>
+        </div>
+
+        <div class="actions" style="margin-top: 28px;">
           <a class="btn btn-primary" href="/trademark-registration/">Trademark Services &rarr;</a>
           <a class="btn btn-outline" href="/contact/">Consult an Advisor</a>
         </div>
       </div>
     </section>
 
+    <!-- Split Visual Section -->
     <section class="section">
       <div class="container">
+        <div class="split-row">
+          <div class="split-photo">
+            <img src="/packages/assets/faq-legal-books.webp" alt="Indian intellectual property law library and statutory resources" width="800" height="600" loading="lazy" />
+          </div>
+          <div class="split-copy">
+            <p class="eyebrow">Statutory Literacy</p>
+            <h2>Empowering Indian Founders with Legal Clarity</h2>
+            <p>Intellectual property is frequently misunderstood by first-time entrepreneurs as a mere formality or a bureaucratic expense. In reality, your registered trademark is often the single most valuable capital asset on your enterprise balance sheet.</p>
+            <p>Our educational guides are authored to demystify Indian trademark legislation, procedural timelines, and classification intricacies—giving you the insight needed to make informed strategic decisions before launching products or expanding into new markets.</p>
+            <div class="advisory-notice" style="margin-top: 16px;">
+              <div class="advisory-notice-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div class="advisory-notice-content">
+                <h4>Educational Disclaimer</h4>
+                <p>The resources in this library provide general informational commentary on Indian commercial regulations. They do not constitute formal legal counsel. For case-specific legal strategy, consult our advisory directors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Featured Guides with Clean SVGs -->
+    <section class="section section-alt">
+      <div class="container">
         <div class="section-heading text-center">
-          <p class="eyebrow">Featured Educational Guides</p>
+          <p class="eyebrow">Featured Guides</p>
           <h2>Essential Brand Protection Knowledge</h2>
           <p>Explore practical, plain-English overviews written to help entrepreneurs make informed decisions about their intangible assets.</p>
         </div>
 
         <div class="card-grid">
           <div class="bn-card">
-            <div class="card-icon">📖</div>
+            <div class="card-icon" style="color: #A8781A;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
             <h3>Trademark Registration Guide</h3>
             <p>A comprehensive overview of what trademark protection entails in India, document prerequisites, search basics, examination processes, and post-registration maintenance.</p>
             <a class="card-link" href="/resources/trademark-registration-guide/">Read the Guide &rarr;</a>
           </div>
 
           <div class="bn-card">
-            <div class="card-icon">🏷️</div>
+            <div class="card-icon" style="color: #A8781A;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
             <h3>Trademark Class Guide</h3>
             <p>Understand the Nice Classification system (Classes 1 to 45). Learn the difference between goods and services, how to select your core class, and how to avoid costly misclassification.</p>
             <a class="card-link" href="/resources/trademark-class-guide/">Read the Guide &rarr;</a>
           </div>
 
           <div class="bn-card">
-            <div class="card-icon">🔍</div>
+            <div class="card-icon" style="color: #A8781A;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
             <h3>Brand Name Search Guide</h3>
             <p>Why a preliminary search matters before you invest in branding. Understand phonetic similarity, visual conflicts, well-known mark conflicts, and the limits of public portal queries.</p>
             <a class="card-link" href="/resources/brand-name-search-guide/">Read the Guide &rarr;</a>
           </div>
 
           <div class="bn-card">
-            <div class="card-icon">📋</div>
+            <div class="card-icon" style="color: #A8781A;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
             <h3>Trademark Application Process</h3>
             <p>Step-by-step breakdown of the official journey: Form TM-A drafting, Vienna codification, formalities checks, examination reports, journal publication, and certificate issuance.</p>
             <a class="card-link" href="/resources/trademark-application-process/">Read the Guide &rarr;</a>
           </div>
         </div>
-
-        <div class="legal-box" style="margin-top: 48px;">
-          <strong>Educational Notice:</strong> The articles in this knowledge center provide general procedural information regarding trademark and commercial registration in India. They do not constitute formal legal opinions or binding guarantees of registration. For specific matters, consult our advisory team or qualified legal counsel.
-        </div>
       </div>
     </section>
 
+    <!-- Call to Action -->
     <section class="cta-section">
       <div class="container">
         <div class="cta-panel">

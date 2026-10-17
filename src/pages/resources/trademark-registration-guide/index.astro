@@ -13,23 +13,54 @@ const canonical = "https://brndnur.com/resources/trademark-registration-guide/";
   currentPath="/resources/trademark-registration-guide/"
 >
   <main id="main-content">
+    <!-- Breadcrumb & Hero -->
     <section class="page-hero">
       <div class="container">
+        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="sep">/</span>
+          <a href="/resources/">Resources</a>
+          <span class="sep">/</span>
+          <span class="current">Trademark Registration Guide</span>
+        </nav>
         <p class="eyebrow">Founders' Guide</p>
         <h1>Trademark Registration in India: The Complete Founders' Guide.</h1>
         <p class="lead">Everything you need to know about protecting your brand name, logo, and distinctive identity under the Trade Marks Act, 1999.</p>
-        <div class="actions">
+        
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Trade Marks Act, 1999</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>10-Year Renewable Protection</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>PAN-India Statutory Exclusive Rights</span>
+          </div>
+        </div>
+
+        <div class="actions" style="margin-top: 28px;">
           <a class="btn btn-primary" href="/trademark-registration/">Apply for Registration &rarr;</a>
           <a class="btn btn-outline" href="/resources/">Back to Resources</a>
         </div>
       </div>
     </section>
 
+    <!-- Guide Content -->
     <section class="section">
       <div class="container">
-        <article class="legal-prose">
-          <div class="legal-box">
-            <strong>Quick Summary:</strong> A registered trademark confers exclusive statutory rights to use a brand identifier in connection with specified goods or services in India. Registration is valid for 10 years from the application filing date and is renewable indefinitely.
+        <article class="legal-prose" style="max-width: 860px; margin: 0 auto;">
+          <div class="advisory-notice" style="margin-top: 0; margin-bottom: 32px;">
+            <div class="advisory-notice-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="advisory-notice-content">
+              <h4>Quick Summary for Founders</h4>
+              <p>A registered trademark confers exclusive statutory rights to use a brand identifier in connection with specified goods or services in India. Registration is valid for 10 years from the application filing date and is renewable indefinitely every 10 years.</p>
+            </div>
           </div>
 
           <h2>1. What Is a Trademark?</h2>
@@ -51,16 +82,47 @@ const canonical = "https://brndnur.com/resources/trademark-registration-guide/";
             <li><strong>List of Goods or Services:</strong> Accurate specification aligned with the appropriate Nice Class.</li>
           </ul>
 
-          <h2>4. The Application Lifecycle</h2>
-          <p>The journey from filing to registration involves distinct statutory stages:</p>
-          <ol>
-            <li><strong>Filing & Number Generation:</strong> Filing Form TM-A generates an application number. The applicant may immediately use the &trade; symbol.</li>
-            <li><strong>Formalities Check & Vienna Codification:</strong> The Registry verifies document completeness and codes figurative elements.</li>
-            <li><strong>Substantive Examination:</strong> An Examiner reviews absolute grounds for refusal (Section 9) and relative grounds of conflict with prior marks (Section 11).</li>
-            <li><strong>Examination Response:</strong> If an objection is raised, a written reply must be submitted within 30 days.</li>
-            <li><strong>Journal Publication:</strong> Accepted marks are advertised in the Trade Marks Journal for 4 months to allow public opposition.</li>
-            <li><strong>Registration Certificate:</strong> If no opposition is filed, the digital Certificate of Registration is issued, granting the right to use the &reg; symbol.</li>
-          </ol>
+          <h2>4. The Statutory Application Lifecycle</h2>
+          <p>The journey from filing to registration involves distinct statutory stages governed by the CGPDTM:</p>
+
+          <div class="bn-table-wrap">
+            <table class="bn-table">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Key Milestone</th>
+                  <th>Legal Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1. E-Filing</td>
+                  <td>Form TM-A submitted & official receipt generated</td>
+                  <td>Entitled to use &trade; symbol</td>
+                </tr>
+                <tr>
+                  <td>2. Formalities Check</td>
+                  <td>Registry verifies applicant details & Vienna code</td>
+                  <td>Formalities Chk Pass</td>
+                </tr>
+                <tr>
+                  <td>3. Examination</td>
+                  <td>Section 9 & 11 review; Examination Report issued</td>
+                  <td>Marked for Exam / Objection</td>
+                </tr>
+                <tr>
+                  <td>4. Journal Publication</td>
+                  <td>Advertised in Trade Marks Journal for 4 months</td>
+                  <td>Public Opposition Window</td>
+                </tr>
+                <tr>
+                  <td>5. Registration</td>
+                  <td>Certificate of Registration issued by Registrar</td>
+                  <td>Lawful right to use &reg; symbol</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2>5. Common Mistakes to Avoid</h2>
           <ul>
