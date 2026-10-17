@@ -13,19 +13,60 @@ const canonical = "https://brndnur.com/faqs/";
   currentPath="/faqs/"
 >
   <main id="main-content">
+    <!-- Breadcrumb & Hero -->
     <section class="page-hero">
       <div class="container">
+        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="sep">/</span>
+          <span class="current">FAQs</span>
+        </nav>
         <p class="eyebrow">Knowledge & Guidance</p>
         <h1>Frequently Asked Questions.</h1>
         <p class="lead">Clear, objective answers regarding trademark registration, business registrations, pricing structures, and regulatory requirements in India.</p>
+        
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>Verified Regulatory Answers</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Trade Marks Act, 1999</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>Government & MSME Fee Concessions</span>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Split Visual Intro -->
+    <section class="section" style="padding-bottom: 20px;">
+      <div class="container">
+        <div class="split-row">
+          <div class="split-photo">
+            <img src="/packages/assets/faq-legal-books.webp" alt="Indian statutory law books and trademark reference materials" width="800" height="600" loading="lazy" />
+          </div>
+          <div class="split-copy">
+            <p class="eyebrow">Clear Legal Advice</p>
+            <h2>Objective Advice, Without the Commercial Jargon</h2>
+            <p>Navigating brand protection and commercial licensing under Indian law involves distinct procedural rules, statutory thresholds, and fee structures.</p>
+            <p>Below we have compiled straightforward answers to the queries most frequently raised by entrepreneurs, growing manufacturers, and Kerala business owners. Jump directly to any topic below or reach out to our team if you need guidance specific to your enterprise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordions by Topic -->
     <section class="section">
-      <div class="container" style="max-width: 860px;">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Trademark Basics</p>
-          <h2>Understanding Trademark Registration</h2>
+      <div class="container" style="max-width: 920px;">
+        <!-- Category 1: Trademark Law & Procedure -->
+        <div class="section-heading text-center" id="trademark-essentials">
+          <p class="eyebrow">Trademark Law & Procedure</p>
+          <h2>Trademark Registration Essentials</h2>
+          <p>Key legal principles governing trademark ownership and enforcement in India.</p>
         </div>
 
         <div class="faq-list">
@@ -35,44 +76,85 @@ const canonical = "https://brndnur.com/faqs/";
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              A trademark is a distinctive sign, logo, word, or combination thereof that identifies your goods or services from competitors. Registering a trademark gives you statutory exclusive rights under the Trade Marks Act, 1999, preventing others from exploiting your brand reputation.
+              A trademark is a distinctive sign, logo, word, phrase, or graphic emblem that legally distinguishes your goods or services from competitors. Registering a trademark gives you exclusive statutory rights under the Trade Marks Act, 1999 across all of India, empowering you to prevent counterfeiting, unauthorized branding, and commercial dilution.
             </div>
           </div>
 
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is the difference between the &trade; and &reg; symbols?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              The &trade; (TM) symbol signifies that an application for trademark registration has been filed with the Trade Marks Registry and an application number has been issued. You may begin using the &trade; symbol immediately after filing. The &reg; (Registered) symbol can only be legally used once the Registrar officially grants the Certificate of Registration. Using &reg; before registration is an offence under Section 107 of the Act.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is the difference between a Wordmark and a Logo (Device Mark)?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              A wordmark protects the actual textual name in plain text, irrespective of typography, color schemes, or stylistic changes. It provides the broadest commercial name protection. A logo (device mark) protects the specific graphic design, stylized lettering, and visual composition. For complete protection, businesses often register both a wordmark and their primary logo.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can registration be guaranteed by any consultant?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              No ethical advisory firm can guarantee registration. The final statutory authority to approve or refuse an application rests solely with the Registrar of Trade Marks under the CGPDTM. Our advisory role is to minimize risk through rigorous preliminary searches, accurate class classification, and compliant documentation.
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Statutory Fees & MSME Concessions -->
+        <div class="section-heading text-center" id="fees-concessions" style="margin-top: 56px;">
+          <p class="eyebrow">Government Fees & Concessions</p>
+          <h2>Government Statutory Fees & MSME Discounts</h2>
+          <p>Transparent explanation of Indian government filing charges.</p>
+        </div>
+
+        <div class="faq-list">
           <div class="faq-item">
             <button class="faq-question" type="button" aria-expanded="false">
               <span>How does an individual or MSME fee differ from a company fee?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              The Government of India provides a 50% concession on statutory trademark filing fees for individuals, sole proprietors, startups, and registered MSME/Udyam certificate holders (₹4,500 statutory fee per class) compared to standard companies or LLPs (₹9,000 statutory fee per class).
+              Under the Trade Marks Rules, 2017, the Government of India provides a 50% concession on statutory e-filing fees for individuals, sole proprietorships, recognized startups, and registered MSME/Udyam certificate holders (₹4,500 statutory fee per class). For standard corporate entities (Private Limited, Limited, or non-MSME LLP), the government filing fee is ₹9,000 per class.
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" type="button" aria-expanded="false">
-              <span>Can registration be guaranteed?</span>
+              <span>How do I claim the 50% MSME fee discount?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              No ethical advisory firm can guarantee registration. The final authority to accept or reject an application belongs solely to the Registrar of Trade Marks. Our role is to minimize risk through rigorous preliminary searches, accurate class classification, and compliant documentation.
+              To claim the 50% statutory discount, you must possess a valid Udyam Registration Certificate issued by the Ministry of Micro, Small and Medium Enterprises. If your business does not yet have an Udyam certificate, BRNDNUR Advisory can assist you in obtaining one prior to submitting your trademark application.
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" type="button" aria-expanded="false">
-              <span>What is the difference between a wordmark and a logo?</span>
+              <span>Are government fees included in professional charges?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              A wordmark protects the brand name text itself regardless of font, size, or visual styling. A logo (device mark) protects the specific visual representation, typography, graphic emblems, and design arrangement submitted in the application.
+              No, government statutory fees are paid directly to the Trade Marks Registry's official portal. At BRNDNUR Advisory LLP, we always clearly delineate government fees from our professional advisory fees, ensuring absolute financial transparency with official payment receipts.
             </div>
           </div>
         </div>
 
-        <div class="section-heading text-center" style="margin-top: 56px;">
-          <p class="eyebrow">Business Registrations & Support</p>
+        <!-- Category 3: Business Setup & Licensing -->
+        <div class="section-heading text-center" id="business-registrations" style="margin-top: 56px;">
+          <p class="eyebrow">Business Registrations</p>
           <h2>GST, Udyam, FSSAI & Packages</h2>
+          <p>Foundational registrations for new ventures and expanding enterprises.</p>
         </div>
 
         <div class="faq-list">
@@ -82,33 +164,34 @@ const canonical = "https://brndnur.com/faqs/";
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              GST registration is mandatory for businesses exceeding statutory aggregate turnover thresholds (generally ₹40 lakhs for goods and ₹20 lakhs for services in most states) or engaging in inter-state supply, e-commerce selling, or reverse-charge mechanisms.
+              GST registration is mandatory if your aggregate annual turnover exceeds ₹40 lakhs for goods (₹20 lakhs in special category states) or ₹20 lakhs for services. Furthermore, GST registration is compulsory regardless of turnover if you sell goods inter-state, operate via e-commerce marketplaces (Amazon, Flipkart), or are liable to pay tax under reverse charge.
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" type="button" aria-expanded="false">
-              <span>What is the Food Brand Package?</span>
+              <span>What does the Food Brand Package include?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              Our Food Brand Package bundles relevant foundational registrations for food manufacturing, packaging, catering, and cloud kitchen businesses—including preliminary trademark clearance, class filing guidance, Udyam MSME certificate assistance, and basic FSSAI licensing support.
+              Our Food Brand Package is customized for food manufacturers, cloud kitchens, bakeries, and packaged food brands. It bundles comprehensive trademark clearance search, Class 29/30/43 filing guidance, Udyam MSME registration, and basic FSSAI food licensing support under one coordinated scope.
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" type="button" aria-expanded="false">
-              <span>How long does a trademark remain valid?</span>
+              <span>How long does a trademark remain valid after registration?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              A registered trademark in India is valid for a period of 10 years from the date of filing. It can be renewed indefinitely every 10 years by submitting renewal forms and statutory fees.
+              A registered trademark in India remains valid for 10 years from the date of filing. It can be renewed indefinitely every 10 years by filing Form TM-R along with the prescribed renewal fee within 6 months prior to the expiration date.
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Call to Action -->
     <section class="cta-section">
       <div class="container">
         <div class="cta-panel">

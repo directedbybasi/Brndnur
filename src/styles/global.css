@@ -474,3 +474,327 @@ body {
   line-height: 1.6;
 }
 
+/* ==========================================================================
+   BRNDNUR Design System: Page-Specific Components & Layout Patterns
+   ========================================================================== */
+
+/* Breadcrumbs */
+.bn-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #717E92;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.bn-breadcrumb a {
+  color: #566174;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+.bn-breadcrumb a:hover {
+  color: #A8781A;
+}
+.bn-breadcrumb .sep {
+  color: #C5B69F;
+  font-size: 11px;
+}
+.bn-breadcrumb .current {
+  color: #13233A;
+  font-weight: 600;
+}
+
+/* Page Hero Badges / Assurance Chips */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 22px;
+}
+.hero-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #37445B;
+  background: rgba(255, 252, 246, 0.7);
+  padding: 6px 13px;
+  border-radius: 4px;
+  border: 1px solid #DCCEB6;
+}
+.hero-badge-item svg {
+  width: 14px;
+  height: 14px;
+  color: #A8781A;
+  flex-shrink: 0;
+}
+
+/* Page Hero with Split Media Option */
+.page-hero-split {
+  padding: clamp(36px, 4.5vw, 60px) 0;
+  background: #F4EFE4;
+  border-bottom: 1px solid rgba(220, 206, 182, 0.7);
+}
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 4vw, 56px);
+  align-items: center;
+}
+.page-hero-photo {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 12px 28px rgba(19, 35, 58, 0.08);
+  border: 1px solid #DCCEB6;
+  background: #E8DCC9;
+}
+.page-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Split Feature Rows (Alternating Photographic Sections) */
+.split-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(36px, 4.5vw, 64px);
+  align-items: center;
+}
+.split-row.reverse {
+  direction: rtl;
+}
+.split-row.reverse > * {
+  direction: ltr;
+}
+.split-photo {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(19, 35, 58, 0.07);
+  border: 1px solid #DCCEB6;
+  aspect-ratio: 4 / 3;
+  background: #E8DCC9;
+}
+.split-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.split-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.split-copy .eyebrow {
+  margin-bottom: 8px;
+}
+.split-copy h2 {
+  font-family: var(--bn-serif, "Playfair Display", Georgia, serif);
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 400;
+  letter-spacing: -.03em;
+  color: #13233A;
+  margin: 0 0 14px;
+  line-height: 1.15;
+}
+.split-copy p {
+  color: #566174;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+
+/* Step-by-Step Chronological Journey */
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: 28px;
+}
+.journey-card {
+  background: #FFFCF6;
+  border: 1px solid #DCCEB6;
+  border-radius: 9px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.journey-card:hover {
+  transform: translateY(-2px);
+  border-color: #A8781A;
+  box-shadow: 0 8px 20px rgba(19, 35, 58, 0.06);
+}
+.journey-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.journey-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #13233A;
+  color: #F4EFE4;
+  font-family: var(--bn-serif, "Playfair Display", serif);
+  font-size: 14px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.journey-header span.journey-step-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #A8781A;
+}
+.journey-card h3 {
+  font-family: var(--bn-serif, "Playfair Display", serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: #13233A;
+  margin: 0 0 8px;
+}
+.journey-card p {
+  font-size: 13.5px;
+  color: #566174;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Comparison & Regulatory Tables */
+.bn-table-wrap {
+  overflow-x: auto;
+  background: #FFFCF6;
+  border: 1px solid #DCCEB6;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(19, 35, 58, 0.03);
+  margin: 24px 0 32px;
+}
+.bn-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+.bn-table th {
+  background: #EDE3D1;
+  color: #13233A;
+  font-weight: 700;
+  padding: 13px 18px;
+  border-bottom: 1px solid #DCCEB6;
+  font-family: var(--bn-sans, "DM Sans", sans-serif);
+}
+.bn-table td {
+  padding: 13px 18px;
+  border-bottom: 1px solid rgba(220, 206, 182, 0.55);
+  color: #46536A;
+  vertical-align: top;
+  line-height: 1.55;
+}
+.bn-table tr:last-child td {
+  border-bottom: 0;
+}
+.bn-table tr:hover td {
+  background: rgba(244, 239, 228, 0.35);
+}
+
+/* Advisory Insight / Legal Notice Callouts */
+.advisory-notice {
+  background: #FFFCF6;
+  border: 1px solid #DCCEB6;
+  border-left: 4px solid #A8781A;
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+  margin: 28px 0;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.advisory-notice-icon {
+  color: #A8781A;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-top: 1px;
+}
+.advisory-notice-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.advisory-notice-content h4 {
+  font-family: var(--bn-serif, "Playfair Display", serif);
+  font-size: 17px;
+  font-weight: 500;
+  color: #13233A;
+  margin: 0 0 6px;
+}
+.advisory-notice-content p {
+  font-size: 14px;
+  color: #566174;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Clean SVG Icon Integration for Cards */
+.bn-card .card-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.75;
+}
+
+/* Checklists with SVG ticks */
+.check-list {
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #314157;
+  line-height: 1.55;
+}
+.check-list .check {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #A8781A;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* Media Query Adaptations for Split & Grid */
+@media (max-width: 900px) {
+  .page-hero-grid,
+  .split-row,
+  .split-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    direction: ltr;
+  }
+  .page-hero-photo,
+  .split-photo {
+    max-height: 320px;
+    order: -1;
+  }
+}
+
+
