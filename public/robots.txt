@@ -1,8 +1,48 @@
 # robots.txt for BRNDNUR Advisory LLP
 # Official Production Domain: https://brndnur.com
+# Canonical Entity: BRNDNUR Advisory LLP (Manjeri, Malappuram, Kerala)
 
 User-agent: *
 Allow: /
+Disallow: /resources/preview/
 
-# Sitemap Location
+# AI Search & Answer Engine Crawlers (Explicitly Allowed for AEO / GEO Discovery)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Knowledge Base & Discovery Manifests for LLMs
+# LLMs Text: https://brndnur.com/llms.txt
+# LLMs Full: https://brndnur.com/llms-full.txt
+
+# Canonical XML Sitemap
 Sitemap: https://brndnur.com/sitemap.xml

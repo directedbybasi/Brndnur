@@ -14,28 +14,30 @@ const canonical = "https://brndnur.com/404.html";
   robots="noindex, follow"
 >
   <main id="main-content">
-    <section class="section" style="min-height: 60vh; display: flex; align-items: center;">
+    <section class="section" style="min-height: 70vh; display: flex; align-items: center;">
       <div class="container text-center" style="max-width: 680px; margin: 0 auto; text-align: center;">
-        <p class="eyebrow" style="color: #A8781A; font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 12px;">Error 404</p>
-        <h1 style="font-family: var(--bn-serif, 'Playfair Display', Georgia, serif); font-size: clamp(34px, 4.5vw, 54px); font-weight: 400; color: #13233A; margin: 0 0 16px;">We couldn’t find that page.</h1>
-        <p style="color: #566174; font-size: 16px; line-height: 1.65; margin: 0 0 32px;">The page you requested may have moved, been renamed, or is temporarily unavailable. Let us help you get back on track.</p>
+        <p class="eyebrow">Error 404</p>
+        <h1>We couldn’t find <span>that page.</span></h1>
+        <div class="gold-rule"></div>
+        <p class="lead" style="margin: 0 auto 32px;">The page you requested may have moved, been renamed, or is temporarily unavailable. Let us help you find the right information.</p>
         
-        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 40px;">
-          <a class="btn btn-primary" href="/">Return to Homepage &rarr;</a>
-          <a class="btn btn-outline" href="/services/">Explore Services</a>
-          <a class="btn btn-outline" href="/packages/">View Packages</a>
-          <a class="btn btn-outline" href="/contact/">Contact Us</a>
+        <div class="hero-actions" style="justify-content: center; margin-bottom: 40px;">
+          <a class="btn btn-primary" href="/">Return to Homepage <span class="arrow">→</span></a>
+          <a class="btn btn-outline" href="/services/">Explore Services <span class="arrow">→</span></a>
+          <a class="btn btn-outline" href="/contact/">Contact Us <span class="arrow">→</span></a>
         </div>
 
-        <div class="bn-card" style="text-align: left; padding: 20px 24px;">
-          <h3 style="margin-top: 0; font-size: 16px;">Looking for something specific?</h3>
-          <p style="margin-bottom: 8px; font-size: 14px;">Browse our popular resources and service pages:</p>
-          <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #566174; line-height: 1.8;">
-            <li><a href="/trademark-registration/" style="color: #A8781A; font-weight: 600;">Trademark Registration in India</a></li>
-            <li><a href="/trademark-classes/" style="color: #A8781A; font-weight: 600;">Trademark Class Directory (1–45)</a></li>
-            <li><a href="/brand-name-search/" style="color: #A8781A; font-weight: 600;">Brand Name Clearance Searches</a></li>
-            <li><a href="/resources/" style="color: #A8781A; font-weight: 600;">Educational Resources & Guides</a></li>
-          </ul>
+        <div class="service-card" style="text-align: left;">
+          <div class="service-body">
+            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px;">Looking for something specific?</h2>
+            <p style="margin-bottom: 12px;">Browse our most popular services and educational guides:</p>
+            <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: var(--muted); line-height: 1.8;">
+              <li><a href="/trademark-registration/" class="text-link">Trademark Registration in India <span>→</span></a></li>
+              <li><a href="/trademark-classes/" class="text-link">Trademark Class Directory (1–45) <span>→</span></a></li>
+              <li><a href="/brand-name-search/" class="text-link">Brand Name Clearance Searches <span>→</span></a></li>
+              <li><a href="/packages/" class="text-link">Packages &amp; Transparent Pricing <span>→</span></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

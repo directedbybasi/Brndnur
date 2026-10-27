@@ -1,7 +1,10 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import IntroAnimation from '../components/IntroAnimation.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import '../styles/global.css';
+import '../styles/motion.css';
 
 interface Props {
   title: string;
@@ -11,20 +14,144 @@ interface Props {
   ogType?: string;
   currentPath?: string;
   robots?: string;
+  hasCustomSchema?: boolean;
 }
 
 const {
   title,
   description,
   canonical,
-  ogImage = '/assets/hero-brand-desk.webp',
+  ogImage = '/assets/brndnur-og-banner.jpg',
   ogType = 'website',
   currentPath = '/',
   robots = 'index, follow, max-image-preview:large',
+  hasCustomSchema = false,
 } = Astro.props;
 
 const siteName = 'BRNDNUR Advisory LLP';
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://brndnur.com${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
+
+const isIndexable = !robots.includes('noindex');
+
+// High-fidelity structured data incorporating WebPage, WebSite, Breadcrumbs, and ProfessionalService/LegalService entity
+const defaultSchema = isIndexable && !hasCustomSchema ? {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LegalService",
+      "additionalType": [
+        "https://schema.org/ProfessionalService",
+        "https://schema.org/LocalBusiness"
+      ],
+      "@id": "https://brndnur.com/#organization",
+      "name": "BRNDNUR Advisory LLP",
+      "legalName": "BRNDNUR Advisory LLP",
+      "url": "https://brndnur.com/",
+      "sameAs": [
+        "https://www.linkedin.com/company/brndnur",
+        "https://x.com/brndnur"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://brndnur.com/#logo",
+        "url": "https://brndnur.com/assets/brndnur-logo-transparent.png",
+        "caption": "BRNDNUR Advisory LLP"
+      },
+      "image": "https://brndnur.com/assets/brndnur-og-banner.jpg",
+      "telephone": "+91 90481 88899",
+      "email": "brndnuradvisoryllp@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Skatt Business Park",
+        "addressLocality": "Manjeri",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.1219,
+        "longitude": 76.1210
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:30",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        "Manjeri",
+        "Malappuram",
+        "Kozhikode",
+        "Wayanad",
+        "Kannur",
+        "Kasaragod",
+        "Palakkad",
+        "Thrissur",
+        "Ernakulam",
+        "Kerala",
+        "India"
+      ],
+      "knowsAbout": [
+        "Trademark Registration in India",
+        "Brand Name Search",
+        "Nice Classification",
+        "Trademark Renewal",
+        "Trademark Journal Monitoring",
+        "GST Registration",
+        "Udyam MSME Registration",
+        "FSSAI Registration",
+        "Business Setup Advisory"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-90481-88899",
+        "contactType": "customer service",
+        "availableLanguage": ["en", "ml"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://brndnur.com/#website",
+      "url": "https://brndnur.com/",
+      "name": "BRNDNUR Advisory LLP",
+      "publisher": {
+        "@id": "https://brndnur.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonical}#webpage`,
+      "url": canonical,
+      "name": title,
+      "description": description,
+      "isPartOf": {
+        "@id": "https://brndnur.com/#website"
+      },
+      "about": {
+        "@id": "https://brndnur.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${canonical}#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://brndnur.com/"
+        },
+        ...(currentPath !== '/' ? [{
+          "@type": "ListItem",
+          "position": 2,
+          "name": title.split('|')[0].trim(),
+          "item": canonical
+        }] : [])
+      ]
+    }
+  ]
+} : null;
 ---
 
 <!DOCTYPE html>
@@ -37,6 +164,21 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://brndnur.com$
   <meta name="robots" content={robots}>
   <link rel="canonical" href={canonical}>
 
+  <!-- Geographic & Local Entity Metadata -->
+  <meta name="geo.region" content="IN-KL">
+  <meta name="geo.placename" content="Manjeri, Malappuram, Kerala">
+  <meta name="geo.position" content="11.1219;76.1210">
+  <meta name="ICBM" content="11.1219, 76.1210">
+  <meta name="author" content="BRNDNUR Advisory LLP">
+  <meta name="theme-color" content="#13233A">
+
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:site_name" content={siteName}>
   <meta property="og:type" content={ogType}>
@@ -44,6 +186,9 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://brndnur.com$
   <meta property="og:description" content={description}>
   <meta property="og:url" content={canonical}>
   <meta property="og:image" content={fullOgImage}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_IN">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -54,13 +199,62 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://brndnur.com$
   <!-- Typography & Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  {defaultSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(defaultSchema)} />
+  )}
+
+  <!-- First-Visit Intro Detection Script (Synchronous in <head> to prevent flash of content) -->
+  <script is:inline>
+    (function() {
+      try {
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var isReplay = window.location.search.indexOf('replay=') !== -1;
+        var introPlayed = false;
+        try {
+          introPlayed = sessionStorage.getItem('brndnur_intro_played') === 'true';
+        } catch(e) {}
+
+        if ((!introPlayed && !prefersReduced) || isReplay) {
+          document.documentElement.classList.add('bn-show-intro');
+          document.addEventListener('DOMContentLoaded', function() {
+            if (document.documentElement.classList.contains('bn-show-intro')) {
+              document.body.classList.add('bn-intro-active');
+            }
+          });
+        }
+      } catch(e) {}
+    })();
+  </script>
 
   <slot name="head" />
 </head>
 <body>
+  <!-- Accessible Skip Link for Keyboard & Screen Reader Users (WCAG 2.4.1 Bypass Blocks) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <IntroAnimation />
+
   <Header currentPath={currentPath} />
   <slot />
   <Footer />
+  <FloatingWhatsApp currentPath={currentPath} pageTitle={title} />
+
+  <script is:inline>
+    document.addEventListener('click', (e) => {
+      const button = e.target.closest('.faq-question, .bn-faq-q');
+      if (button) {
+        const item = button.closest('.faq-item, .bn-faq-item');
+        if (item) {
+          const isOpen = item.classList.toggle('is-open');
+          item.classList.toggle('open', isOpen);
+          button.setAttribute('aria-expanded', String(isOpen));
+        }
+      }
+    });
+  </script>
+  <script is:inline src="/scripts/carousel.js" defer></script>
+  <script is:inline src="/scripts/motion.js" defer></script>
 </body>
 </html>

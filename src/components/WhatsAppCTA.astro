@@ -1,18 +1,51 @@
 ---
+import { buildWhatsAppUrl, WHATSAPP_PHONE } from '../utils/whatsapp';
+
 interface Props {
   text?: string;
   message?: string;
+  pageName?: string;
+  sectionName?: string;
+  enquiryType?: string;
+  topic?: string;
+  details?: string;
+  callToAction?: string;
   class?: string;
 }
 
 const {
   text = 'Chat on WhatsApp',
-  message = 'Hello BRNDNUR Advisory, I would like to discuss your services.',
+  message,
+  pageName,
+  sectionName,
+  enquiryType,
+  topic,
+  details,
+  callToAction,
   class: className = '',
 } = Astro.props;
 
-const encodedMessage = encodeURIComponent(message);
-const whatsappUrl = `https://wa.me/919048188899?text=${encodedMessage}`;
+let whatsappUrl = '';
+
+if (pageName && sectionName && enquiryType && topic) {
+  whatsappUrl = buildWhatsAppUrl({
+    pageName,
+    sectionName,
+    enquiryType,
+    topic,
+    details,
+    callToAction
+  });
+} else if (message) {
+  whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+} else {
+  whatsappUrl = buildWhatsAppUrl({
+    pageName: 'Website',
+    sectionName: 'General CTA',
+    enquiryType: 'General Advisory Consultation',
+    topic: 'I visited your website and would like to discuss trademark and business registration services.'
+  });
+}
 ---
 
 <a
@@ -21,5 +54,5 @@ const whatsappUrl = `https://wa.me/919048188899?text=${encodedMessage}`;
   target="_blank"
   rel="noopener noreferrer"
 >
-  &#9673;&nbsp; {text} <span aria-hidden="true">&rarr;</span>
+  {text} <span class="bn-cta-arrow" aria-hidden="true">&rarr;</span>
 </a>

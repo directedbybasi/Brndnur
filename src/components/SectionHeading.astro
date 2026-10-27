@@ -9,7 +9,7 @@ interface Props {
 const { eyebrow, title, subtitle, class: className = '' } = Astro.props;
 ---
 
-<div class={`section-heading ${className}`}>
+<div class={`section-heading reveal-on-scroll ${className}`}>
   {eyebrow && <p class="eyebrow">{eyebrow}</p>}
   <h2>{title}</h2>
   <div class="rule" aria-hidden="true"></div>

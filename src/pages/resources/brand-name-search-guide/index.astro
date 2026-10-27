@@ -1,9 +1,20 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/hero/PageHero.astro';
 
 const title = "Brand Name Search Guide in India | BRNDNUR Advisory LLP";
 const description = "Learn how to conduct a preliminary trademark search on the Indian IP database. Understand phonetic checks, visual conflicts, and Section 9/11 screening.";
 const canonical = "https://brndnur.com/resources/brand-name-search-guide/";
+import { buildWhatsAppUrl } from '../../../utils/whatsapp';
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Brand Name Search Guide",
+  "sectionName": "Guide Closing CTA",
+  "enquiryType": "Brand Name Clearance Advisory",
+  "topic": "I have read your Brand Name Search Guide and would like assistance checking availability for my proposed brand name.",
+  "details": "Proposed brand name: [Please enter your brand name]",
+  "callToAction": "Could you please conduct an initial clearance check and provide guidance?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +24,54 @@ const canonical = "https://brndnur.com/resources/brand-name-search-guide/";
   currentPath="/resources/brand-name-search-guide/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/resources/">Resources</a>
-          <span class="sep">/</span>
-          <span class="current">Brand Name Search Guide</span>
-        </nav>
-        <p class="eyebrow">Clearance Guide</p>
-        <h1>Brand Name Search: The Essential Clearance Guide.</h1>
-        <p class="lead">Why searching the official Indian trademark registry before launching your brand saves thousands in legal fees, redesigns, and lost momentum.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <span>IP India Official Database</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Section 9 & 11 Risk Appraisal</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Phonetic & Semantic Screening</span>
-          </div>
-        </div>
-
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="/brand-name-search/">Request Clearance Check &rarr;</a>
-          <a class="btn btn-outline" href="/resources/">Back to Resources</a>
-        </div>
-      </div>
-    </section>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Clearance Guide"
+      title="Brand Name Search: <span>The Essential Guide.</span>"
+      hasGoldRule={true}
+      description="Why searching the official Indian trademark registry before launching your brand saves thousands in legal fees, redesigns, and lost momentum."
+      primaryCta={{
+        text: "Request Clearance Check",
+        href: "/brand-name-search/",
+        icon: "→"
+      }}
+      secondaryCta={{
+        text: "Back to Resources",
+        href: "/resources/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Official IP India", subtitle: "Database Check" },
+        { icon: "▱", title: "Section 9 & 11", subtitle: "Risk Appraisal" },
+        { icon: "⌖", title: "Phonetic & Semantic", subtitle: "Screening" }
+      ]}
+      image="/assets/guide-search-hero.webp"
+      imageAlt="Preliminary brand name search workstation and clearance analysis"
+    />
 
     <!-- Guide Content -->
     <section class="section">
-      <div class="container">
-        <article class="legal-prose" style="max-width: 860px; margin: 0 auto;">
-          <div class="advisory-notice" style="margin-top: 0; margin-bottom: 32px;">
-            <div class="advisory-notice-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="advisory-notice-content">
-              <h4>The Cost of Skipping Due Diligence</h4>
-              <p>Government statutory filing fees are non-refundable. If an examiner rejects your mark under Section 11 due to a prior identical mark, your fees are forfeited and you must begin again with an entirely new brand identity.</p>
+      <div class="container" style="max-width: 900px;">
+        <article class="legal-prose">
+          <div class="values" style="margin-bottom: 32px;">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>The Cost of Skipping Due Diligence</strong>
+                <p>Government statutory filing fees are non-refundable. If an examiner rejects your mark under Section 11 due to a prior identical mark, your fees are forfeited and you must begin again with an entirely new brand identity.</p>
+              </div>
             </div>
           </div>
 
+          <p class="eyebrow">Search Fallacies</p>
           <h2>1. The Myth of the Simple Google Search</h2>
+          <div class="gold-rule"></div>
           <p>Many founders believe that if a domain is available or a quick Google search yields no local competitors, their chosen name is safe. In reality, the Trade Marks Registry includes thousands of registered trademarks, pending applications, and regional business marks that may not maintain an active social media presence yet possess senior statutory rights.</p>
 
+          <p class="eyebrow">Comprehensive Due Diligence</p>
           <h2>2. The 4 Layers of Trademark Search</h2>
-          <div class="bn-table-wrap">
+          <div class="gold-rule"></div>
+          <div class="table-wrap">
             <table class="bn-table">
               <thead>
                 <tr>
@@ -79,12 +83,12 @@ const canonical = "https://brndnur.com/resources/brand-name-search-guide/";
               <tbody>
                 <tr>
                   <td><strong>1. Wordmark Match</strong></td>
-                  <td>Direct exact & prefix/suffix matching</td>
+                  <td>Direct exact &amp; prefix/suffix matching</td>
                   <td>Catches obvious direct name conflicts</td>
                 </tr>
                 <tr>
                   <td><strong>2. Phonetic Search</strong></td>
-                  <td>Sound-alike algorithms & variant spellings</td>
+                  <td>Sound-alike algorithms &amp; variant spellings</td>
                   <td>Blocks phonetically confusing marks (e.g., 'Xylo' vs 'Zilo')</td>
                 </tr>
                 <tr>
@@ -101,23 +105,53 @@ const canonical = "https://brndnur.com/resources/brand-name-search-guide/";
             </table>
           </div>
 
+          <p class="eyebrow">Statutory Grounds of Refusal</p>
           <h2>3. Section 9 vs Section 11 Objections</h2>
+          <div class="gold-rule"></div>
           <ul>
             <li><strong>Section 9 (Absolute Grounds):</strong> Is the name too generic, descriptive, or devoid of distinctiveness? Example: attempting to register "Organic Spices" for spice manufacturing will face an immediate Section 9 refusal.</li>
             <li><strong>Section 11 (Relative Grounds):</strong> Does the mark resemble an earlier mark registered or pending for identical or similar goods/services, creating a likelihood of public confusion?</li>
           </ul>
 
+          <p class="eyebrow">Distinctiveness Strategy</p>
           <h2>4. Recommendations for Coining Strong Names</h2>
+          <div class="gold-rule"></div>
           <p>To maximize search clearance and registration speed, strive for coined, invented words (like Rolex, Google, or Haier), arbitrary words with no commercial connection to your product (like Apple for computers), or suggestive words requiring cognitive deduction.</p>
         </article>
+      </div>
+    </section>
 
-        <div class="cta-panel" style="margin-top: 48px;">
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Clear Your Name Early</p>
-          <h2>Request a Preliminary Search from BRNDNUR.</h2>
+          <h2>Request a Preliminary<br>Search from BRNDNUR.</h2>
           <p>We check the official IP India registry across all relevant phonetic permutations and provide an objective viability appraisal.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20check%20my%20brand%20name%20clearance." target="_blank" rel="noopener noreferrer">Inquire on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/brand-name-search/">Brand Search Page</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Inquire on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Phonetic Screening</strong>
+              <p>Algorithms checking sound-alike spellings and syllables.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Class Correlation</strong>
+              <p>Evaluation across direct and complementary goods categories.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Actionable Summary</strong>
+              <p>Clear guidance on whether to file as proposed or adjust spelling.</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,405 @@
+/* ==========================================================================
+   BRNDNUR ADVISORY LLP — PREMIUM WEBSITE-WIDE MOTION DESIGN SYSTEM
+   Brand Palette: Ivory #F4EFE4, Navy #13233A, Gold #A8781A
+   Architectural Principles:
+   - Progressive Enhancement: 100% visible if JS fails or before motion inits.
+   - Restrained Luxury: Decelerated curves, 2-4px micro-lifts, no jarring bounce.
+   - Performance: Native CSS transitions + IntersectionObserver, rAF throttling.
+   - Accessibility: Respects prefers-reduced-motion: reduce unconditionally.
+   ========================================================================== */
+
+:root {
+  /* Motion Duration Tokens */
+  --motion-fast: 180ms;
+  --motion-normal: 280ms;
+  --motion-reveal: 580ms;
+  --motion-entrance: 680ms;
+  --motion-stagger: 75ms;
+
+  /* Motion Easing Tokens */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-subtle: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ==========================================================================
+   1. PROGRESSIVE ENHANCEMENT BASE & SCROLL REVEALS
+   Elements default to visible. Only when html.has-motion is added do elements
+   commence in the restrained initial offset state.
+   ========================================================================== */
+
+.reveal-on-scroll,
+.reveal-item,
+.wrap.split,
+.cta-panel,
+.finder-grid,
+.informed-split {
+  opacity: 1;
+  transform: none;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-on-scroll,
+html.has-motion:not(.prefers-reduced-motion) .reveal-item,
+html.has-motion:not(.prefers-reduced-motion) .wrap.split,
+html.has-motion:not(.prefers-reduced-motion) .cta-panel,
+html.has-motion:not(.prefers-reduced-motion) .finder-grid,
+html.has-motion:not(.prefers-reduced-motion) .informed-split {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--motion-reveal) var(--ease-smooth),
+              transform var(--motion-reveal) var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-on-scroll.is-revealed,
+html.has-motion:not(.prefers-reduced-motion) .reveal-item.is-revealed,
+html.has-motion:not(.prefers-reduced-motion) .wrap.split.is-revealed,
+html.has-motion:not(.prefers-reduced-motion) .cta-panel.is-revealed,
+html.has-motion:not(.prefers-reduced-motion) .finder-grid.is-revealed,
+html.has-motion:not(.prefers-reduced-motion) .informed-split.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered sequential reveals for grids and card groups */
+html.has-motion:not(.prefers-reduced-motion) .reveal-group > .reveal-item:nth-child(1),
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item:nth-child(1) { transition-delay: 0ms; }
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-group > .reveal-item:nth-child(2),
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item:nth-child(2) { transition-delay: 75ms; }
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-group > .reveal-item:nth-child(3),
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item:nth-child(3) { transition-delay: 150ms; }
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-group > .reveal-item:nth-child(4),
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item:nth-child(4) { transition-delay: 225ms; }
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-group > .reveal-item:nth-child(5),
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item:nth-child(5) { transition-delay: 300ms; }
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-group > .reveal-item:nth-child(6),
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item:nth-child(6) { transition-delay: 375ms; }
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-group > .reveal-item:nth-child(7),
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item:nth-child(7) { transition-delay: 450ms; }
+
+html.has-motion:not(.prefers-reduced-motion) .reveal-group > .reveal-item:nth-child(8),
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item:nth-child(8) { transition-delay: 525ms; }
+
+/* When an entire reveal-group is revealed, ensure its children transition */
+html.has-motion:not(.prefers-reduced-motion) .reveal-group.is-revealed > .reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   2. HERO ENTRANCE CHOREOGRAPHY
+   Coordinated with first-visit intro curtain or immediate on session return.
+   ========================================================================== */
+
+.hero-stagger-1,
+.hero-stagger-2,
+.hero-stagger-3,
+.hero-stagger-4,
+.hero-stagger-5,
+.hero-photo-animate {
+  opacity: 1;
+  transform: none;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .hero-animated .hero-stagger-1,
+html.has-motion:not(.prefers-reduced-motion) .hero-animated .hero-stagger-2,
+html.has-motion:not(.prefers-reduced-motion) .hero-animated .hero-stagger-3,
+html.has-motion:not(.prefers-reduced-motion) .hero-animated .hero-stagger-4,
+html.has-motion:not(.prefers-reduced-motion) .hero-animated .hero-stagger-5 {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--motion-entrance) var(--ease-smooth),
+              transform var(--motion-entrance) var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .hero-animated .hero-photo-animate {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: opacity 0.75s var(--ease-smooth),
+              transform 0.75s var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+/* Stagger sequence once .hero-revealed is added */
+html.has-motion:not(.prefers-reduced-motion) .hero-animated.hero-revealed .hero-stagger-1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 40ms;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .hero-animated.hero-revealed .hero-stagger-2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 110ms;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .hero-animated.hero-revealed .hero-stagger-3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 180ms;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .hero-animated.hero-revealed .hero-stagger-4 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 250ms;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .hero-animated.hero-revealed .hero-stagger-5 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 320ms;
+}
+
+html.has-motion:not(.prefers-reduced-motion) .hero-animated.hero-revealed .hero-photo-animate {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 120ms;
+}
+
+/* ==========================================================================
+   3. CARDS & GRID MICROINTERACTIONS
+   Restrained 2-4px elevation, subtle luxury shadow, gentle image zoom.
+   Touch devices: hover translation is scoped to pointer: fine only.
+   ========================================================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .service-card,
+  .package-card,
+  .prep-card,
+  .advise-card,
+  .step,
+  .resource-card,
+  .article-card,
+  .finder-item,
+  .service-mini,
+  .benefit,
+  .feature-card,
+  .quick-answer-card,
+  .faq-item,
+  .bn-faq-item,
+  .audience-photo-card,
+  .related-link-item,
+  .author-card,
+  .checklist-card {
+    transition: transform var(--motion-normal) var(--ease-smooth),
+                box-shadow var(--motion-normal) var(--ease-smooth),
+                border-color var(--motion-normal) var(--ease-smooth);
+  }
+
+  .service-card:hover,
+  .package-card:hover,
+  .prep-card:hover,
+  .advise-card:hover,
+  .step:hover,
+  .resource-card:hover,
+  .article-card:hover,
+  .finder-item:hover,
+  .service-mini:hover,
+  .audience-photo-card:hover,
+  .related-link-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px -4px rgba(19, 35, 58, 0.1), 0 4px 8px -2px rgba(19, 35, 58, 0.05);
+  }
+
+  /* Gentle image zoom inside cards with image wrappers */
+  .package-photo img,
+  .service-card img,
+  .article-card-img img,
+  .resource-card img,
+  .audience-media img,
+  .card-media img,
+  .section-image img,
+  .informed-media img {
+    transition: transform 0.45s var(--ease-smooth);
+    will-change: transform;
+  }
+
+  .package-card:hover .package-photo img,
+  .service-card:hover img,
+  .resource-card:hover img,
+  .audience-photo-card:hover .audience-media img,
+  .service-card:hover .card-media img {
+    transform: scale(1.025);
+  }
+
+  /* Subtle arrow nudge on card hover */
+  .service-card:hover .arrow,
+  .service-card:hover .btn-arrow,
+  .package-card:hover .arrow,
+  .resource-card:hover .arrow,
+  .resource-card:hover span,
+  .audience-photo-card:hover span,
+  .finder-item:hover b,
+  .service-mini:hover .mini-icon,
+  .related-link-item:hover .related-arrow,
+  .text-link:hover span {
+    transform: translateX(4px);
+    transition: transform 0.2s var(--ease-smooth);
+  }
+}
+
+/* Active pressed state for cards */
+.service-card:active,
+.package-card:active,
+.prep-card:active,
+.advise-card:active,
+.finder-item:active,
+.related-link-item:active {
+  transform: translateY(-1px);
+  transition-duration: 100ms;
+}
+
+/* ==========================================================================
+   4. BUTTONS & LINK MICROINTERACTIONS
+   Crisp, responsive feedback with subtle arrow nudge and pressed state.
+   ========================================================================== */
+
+.btn,
+.button,
+.bn-cta,
+.service-btn,
+.faq-editorial-btn,
+.bn-view-all-link,
+.prep-card-link,
+.resource-link {
+  transition: background-color var(--motion-fast) ease,
+              border-color var(--motion-fast) ease,
+              color var(--motion-fast) ease,
+              transform var(--motion-fast) var(--ease-smooth),
+              box-shadow var(--motion-fast) ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover,
+  .button:hover,
+  .bn-cta:hover,
+  .service-btn:hover,
+  .faq-editorial-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn:hover .arrow,
+  .button:hover span,
+  .bn-cta:hover .bn-cta-arrow,
+  .service-btn:hover .btn-arrow,
+  .faq-editorial-btn:hover .faq-btn-arrow,
+  .prep-card-link:hover .arrow,
+  .resource-link:hover span,
+  .bn-view-all-link:hover .bn-view-all-arrow {
+    transform: translateX(3px);
+    transition: transform 0.2s var(--ease-smooth);
+  }
+}
+
+.btn:active,
+.button:active,
+.bn-cta:active,
+.service-btn:active,
+.faq-editorial-btn:active {
+  transform: translateY(0) scale(0.985);
+  transition-duration: 80ms;
+}
+
+/* Floating WhatsApp button refined touch/hover interaction */
+@media (hover: hover) and (pointer: fine) {
+  .bn-floating-wa-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.32), 0 4px 12px rgba(19, 35, 58, 0.16);
+  }
+}
+
+.bn-floating-wa-btn:active {
+  transform: translateY(-1px) scale(0.98);
+  transition-duration: 80ms;
+}
+
+/* ==========================================================================
+   5. ACCORDION & FAQ EXPANSION MOTION
+   Silky smooth icon rotation and content fade-in.
+   ========================================================================== */
+
+@keyframes bnFaqExpandFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-item.is-open .faq-answer,
+.faq-item.open .faq-answer,
+.bn-faq-item.is-open .bn-faq-a {
+  animation: bnFaqExpandFade 0.28s var(--ease-smooth) forwards;
+}
+
+.faq-icon,
+.bn-faq-icon {
+  transition: transform 0.28s var(--ease-smooth);
+}
+
+/* ==========================================================================
+   6. ARTICLE EDITORIAL MOTION & READING PROGRESS
+   Thin gold reading progress bar at the top of long-form articles.
+   ========================================================================== */
+
+.article-reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #A8781A;
+  background: linear-gradient(90deg, #A8781A 0%, #C28A25 60%, #E3BA5E 100%);
+  z-index: 1001;
+  pointer-events: none;
+  transition: width 0.08s linear;
+  box-shadow: 0 1px 3px rgba(168, 120, 26, 0.3);
+}
+
+/* ==========================================================================
+   7. ACCESSIBILITY & PREFERS-REDUCED-MOTION OVERRIDES
+   Guarantees zero disorientation for visitors requesting reduced motion.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .article-reading-progress {
+    display: none !important;
+  }
+
+  .reveal-on-scroll,
+  .reveal-item,
+  .wrap.split,
+  .cta-panel,
+  .finder-grid,
+  .informed-split,
+  .hero-stagger-1,
+  .hero-stagger-2,
+  .hero-stagger-3,
+  .hero-stagger-4,
+  .hero-stagger-5,
+  .hero-photo-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

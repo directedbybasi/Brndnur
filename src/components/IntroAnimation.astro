@@ -1,0 +1,518 @@
+---
+// src/components/IntroAnimation.astro
+// Premium, accessible first-visit intro overlay for BRNDNUR Advisory LLP
+---
+
+<div id="bn-intro-overlay" class="bn-intro-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="BRNDNUR Brand Introduction">
+  <!-- Subtle Ambient Radial Glow -->
+  <div class="bn-intro-ambient" aria-hidden="true"></div>
+
+  <!-- Accessible Skip Intro Button -->
+  <button id="bn-intro-skip" class="bn-intro-skip" type="button" aria-label="Skip intro animation">
+    <span>Skip Intro</span>
+    <span class="bn-intro-skip-arrow" aria-hidden="true">&rarr;</span>
+  </button>
+
+  <!-- Centered Brand Composition -->
+  <div class="bn-intro-content">
+    <!-- Brand Eyebrow -->
+    <div class="bn-intro-eyebrow">
+      <span>TRADEMARK &bull; BUSINESS &bull; ADVISORY</span>
+    </div>
+
+    <!-- Official BRNDNUR Logo Lockup with Left-to-Right Horizontal Reveal -->
+    <div class="bn-intro-logo-wrap">
+      <picture class="bn-intro-picture">
+        <source srcset="/assets/brndnur-logo-transparent.webp" type="image/webp" />
+        <img
+          id="bn-intro-logo-img"
+          src="/assets/brndnur-logo-transparent.png"
+          alt="BRNDNUR Advisory LLP"
+          width="2170"
+          height="725"
+          fetchpriority="high"
+          loading="eager"
+          decoding="sync"
+          class="bn-intro-logo"
+        />
+      </picture>
+    </div>
+
+    <!-- Thin Gold Divider with Smooth Light Sweep -->
+    <div class="bn-intro-divider-wrap" aria-hidden="true">
+      <div class="bn-intro-divider">
+        <div class="bn-intro-sweep"></div>
+      </div>
+    </div>
+
+    <!-- Subtle Brand Caption -->
+    <div class="bn-intro-caption">
+      <span>LIGHT UP YOUR BRAND &trade;</span>
+    </div>
+
+    <!-- Official Business Location with gold location-pin icon -->
+    <div class="bn-intro-address">
+      <svg class="bn-intro-pin" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 22s7-7.4 7-13a7 7 0 1 0-14 0c0 5.6 7 13 7 13Z"/>
+        <circle cx="12" cy="9" r="2.4"/>
+      </svg>
+      <span>Skatt Business Park, Manjeri</span>
+    </div>
+  </div>
+
+  <!-- Thin Gold Bottom Progress Line -->
+  <div class="bn-intro-progress-bar" aria-hidden="true">
+    <div class="bn-intro-progress-fill"></div>
+  </div>
+</div>
+
+<style>
+  /* ==========================================================================
+     BRNDNUR INTRO ANIMATION OVERLAY STYLES
+     Colors: Ivory #F4EFE4, Navy #13233A, Gold #A8781A, Light Gold #D4A849
+     ========================================================================== */
+
+  /* Hidden by default (prevents any layout shifts or blocking when JS is disabled or session exists) */
+  .bn-intro-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 999999;
+    background-color: #F4EFE4;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    transform: translateY(0);
+    transition: transform 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+    box-sizing: border-box;
+  }
+
+  /* Displayed only when the first-visit class is explicitly active */
+  :global(html.bn-show-intro) .bn-intro-overlay {
+    display: flex;
+  }
+
+  /* Prevent body scrolling while intro is running */
+  :global(html.bn-show-intro body.bn-intro-active) {
+    overflow: hidden !important;
+    touch-action: none !important;
+  }
+
+  /* Phase 4: Curtain transition moving upward */
+  .bn-intro-overlay.bn-curtain-up {
+    transform: translateY(-100%) !important;
+  }
+
+  /* Fully hidden and non-interactive after completion */
+  .bn-intro-overlay.bn-hidden {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* Ambient radial gradient for a warm, luxurious depth */
+  .bn-intro-ambient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 70% 60% at 50% 48%,
+      rgba(255, 255, 255, 0.75) 0%,
+      rgba(244, 239, 228, 0.4) 60%,
+      rgba(235, 227, 212, 0.8) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Accessible Skip Button (top-right) */
+  .bn-intro-skip {
+    position: absolute;
+    top: clamp(18px, 3.5vw, 32px);
+    right: clamp(18px, 3.5vw, 36px);
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    font-family: var(--sans, 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #13233A;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(168, 120, 26, 0.35);
+    border-radius: 24px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(19, 35, 58, 0.06);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    opacity: 0;
+    animation: bnFadeIn 0.4s ease 0.3s forwards;
+  }
+
+  .bn-intro-skip:hover,
+  .bn-intro-skip:focus-visible {
+    background: #13233A;
+    color: #F4EFE4;
+    border-color: #13233A;
+    transform: translateY(-1px);
+    outline: none;
+  }
+
+  .bn-intro-skip-arrow {
+    font-size: 13px;
+    line-height: 1;
+    color: #A8781A;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .bn-intro-skip:hover .bn-intro-skip-arrow,
+  .bn-intro-skip:focus-visible .bn-intro-skip-arrow {
+    color: #D4A849;
+    transform: translateX(2px);
+  }
+
+  /* Centered Composition */
+  .bn-intro-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 24px;
+    max-width: 580px;
+    width: 100%;
+    margin-top: -12px;
+  }
+
+  /* Eyebrow Tagline (Phase 1) */
+  .bn-intro-eyebrow {
+    font-family: var(--sans, 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: clamp(10px, 1.2vw, 11.5px);
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    color: #A8781A;
+    text-transform: uppercase;
+    margin-bottom: clamp(16px, 2.5vw, 22px);
+    opacity: 0;
+    animation: bnEyebrowReveal 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  }
+
+  /* Logo Wrapper & Image (Phase 2) */
+  .bn-intro-logo-wrap {
+    width: min(340px, 80vw);
+    max-width: 340px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bn-intro-picture {
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+
+  .bn-intro-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 92px;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 6px 18px rgba(19, 35, 58, 0.08));
+    /* Left-to-right horizontal wipe reveal */
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+    animation: bnLogoReveal 1.05s cubic-bezier(0.25, 1, 0.5, 1) 0.35s forwards;
+    will-change: clip-path, opacity, transform;
+  }
+
+  /* Thin Gold Divider with Moving Light Sweep (Phase 3) */
+  .bn-intro-divider-wrap {
+    margin-top: clamp(18px, 2.8vw, 24px);
+    margin-bottom: clamp(14px, 2.2vw, 18px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .bn-intro-divider {
+    position: relative;
+    width: clamp(140px, 35vw, 200px);
+    height: 1.5px;
+    background: rgba(168, 120, 26, 0.25);
+    border-radius: 2px;
+    overflow: hidden;
+    opacity: 0;
+    animation: bnFadeIn 0.5s ease 0.9s forwards;
+  }
+
+  .bn-intro-sweep {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212, 168, 73, 0.9) 50%,
+      #A8781A 85%,
+      transparent 100%
+    );
+    left: -70px;
+    animation: bnLightSweep 0.9s cubic-bezier(0.4, 0, 0.2, 1) 1.05s forwards;
+  }
+
+  /* Caption Tagline */
+  .bn-intro-caption {
+    font-family: var(--sans, 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: clamp(10.5px, 1.2vw, 12px);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: #13233A;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: bnCaptionReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.25s forwards;
+  }
+
+  /* Official Business Address (Matching Reference Business Card) */
+  .bn-intro-address {
+    margin-top: clamp(10px, 1.8vw, 14px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: var(--sans, 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: clamp(10.5px, 1.2vw, 12px);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #13233A;
+    opacity: 0;
+    animation: bnCaptionReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards;
+  }
+
+  .bn-intro-pin {
+    color: #A8781A;
+    flex-shrink: 0;
+    width: 13px;
+    height: 13px;
+  }
+
+  /* Bottom Progress Bar */
+  .bn-intro-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(168, 120, 26, 0.14);
+    overflow: hidden;
+  }
+
+  .bn-intro-progress-fill {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #A8781A 0%, #D4A849 50%, #A8781A 100%);
+    transform-origin: left center;
+    transform: scaleX(0);
+    animation: bnProgressRun 1.95s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s forwards;
+  }
+
+  /* ==========================================================================
+     ANIMATION KEYFRAMES
+     ========================================================================== */
+
+  @keyframes bnFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes bnEyebrowReveal {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Crisp left-to-right horizontal wipe reveal without distortion */
+  @keyframes bnLogoReveal {
+    0% {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+      transform: scale(0.97) translateY(4px);
+    }
+    15% {
+      opacity: 1;
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* Soft gold light sweep across divider */
+  @keyframes bnLightSweep {
+    0% {
+      left: -70px;
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      left: 200px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes bnCaptionReveal {
+    0% {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    100% {
+      opacity: 0.92;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bnProgressRun {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  /* ==========================================================================
+     ACCESSIBILITY: PREFERS REDUCED MOTION
+     ========================================================================== */
+  @media (prefers-reduced-motion: reduce) {
+    .bn-intro-overlay {
+      display: none !important;
+      animation: none !important;
+      transition: none !important;
+    }
+    :global(html.bn-show-intro) .bn-intro-overlay {
+      display: none !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    // Check if reduced motion is requested
+    var prefersReduced = false;
+    try {
+      prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch(e) {}
+
+    if (prefersReduced) {
+      return;
+    }
+
+    var overlay = document.getElementById('bn-intro-overlay');
+    if (!overlay) return;
+
+    var skipBtn = document.getElementById('bn-intro-skip');
+    var hasRun = false;
+
+    // Dismissal function: triggers curtain-up and clean finish
+    function dismissIntro(instant) {
+      if (hasRun) return;
+      hasRun = true;
+
+      // Mark as played in sessionStorage
+      try {
+        sessionStorage.setItem('brndnur_intro_played', 'true');
+      } catch(e) {}
+
+      if (instant) {
+        overlay.classList.add('bn-hidden');
+        document.body.classList.remove('bn-intro-active');
+        document.documentElement.classList.remove('bn-show-intro');
+        return;
+      }
+
+      // Slide curtain upward
+      overlay.classList.add('bn-curtain-up');
+
+      // Restore scroll slightly before curtain finishes for smooth transition
+      setTimeout(function() {
+        document.body.classList.remove('bn-intro-active');
+      }, 350);
+
+      // Clean up after transition
+      var onTransitionEnd = function(e) {
+        if (e.target === overlay) {
+          overlay.classList.add('bn-hidden');
+          document.documentElement.classList.remove('bn-show-intro');
+          overlay.removeEventListener('transitionend', onTransitionEnd);
+        }
+      };
+      overlay.addEventListener('transitionend', onTransitionEnd);
+
+      // Guaranteed safety cleanup timer (in case transitionend does not fire)
+      setTimeout(function() {
+        overlay.classList.add('bn-hidden');
+        document.body.classList.remove('bn-intro-active');
+        document.documentElement.classList.remove('bn-show-intro');
+      }, 850);
+    }
+
+    // Schedule Phase 4 Curtain Transition at 2.15 seconds
+    var autoDismissTimer = setTimeout(function() {
+      dismissIntro(false);
+    }, 2150);
+
+    // Hard absolute fallback (never let page get stuck)
+    var hardSafetyTimer = setTimeout(function() {
+      dismissIntro(true);
+    }, 3500);
+
+    // Skip button click handler
+    if (skipBtn) {
+      skipBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        clearTimeout(autoDismissTimer);
+        clearTimeout(hardSafetyTimer);
+        dismissIntro(false);
+      });
+    }
+
+    // Keyboard accessibility: Escape key dismisses intro
+    function onKeyDown(e) {
+      if (e.key === 'Escape' || e.keyCode === 27) {
+        clearTimeout(autoDismissTimer);
+        clearTimeout(hardSafetyTimer);
+        dismissIntro(false);
+        window.removeEventListener('keydown', onKeyDown);
+      }
+    }
+    window.addEventListener('keydown', onKeyDown);
+  })();
+</script>

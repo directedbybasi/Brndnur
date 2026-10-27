@@ -1,9 +1,20 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/hero/PageHero.astro';
 
-const title = "Trademark Application Process in India | Step-by-Step Guide";
+const title = "Trademark Application Process in India | Guide | BRNDNUR";
 const description = "Comprehensive breakdown of the Indian trademark application process: from Form TM-A filing and Vienna codification to examination reports, journal publication, and certificate issuance.";
 const canonical = "https://brndnur.com/resources/trademark-application-process/";
+import { buildWhatsAppUrl } from '../../../utils/whatsapp';
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Trademark Application Process Guide",
+  "sectionName": "Guide Closing CTA",
+  "enquiryType": "Application Filing Guidance",
+  "topic": "I have reviewed your step-by-step guide to the Trademark Application Process and would like to proceed with filing.",
+  "details": "Brand name / business name: [Please enter]",
+  "callToAction": "Could you please advise on documents required and how to initiate Form TM-A drafting?"
+});
 ---
 
 <BaseLayout
@@ -13,60 +24,51 @@ const canonical = "https://brndnur.com/resources/trademark-application-process/"
   currentPath="/resources/trademark-application-process/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/resources/">Resources</a>
-          <span class="sep">/</span>
-          <span class="current">Trademark Application Process</span>
-        </nav>
-        <p class="eyebrow">Procedural Guide</p>
-        <h1>Trademark Application Process in India: Step-by-Step.</h1>
-        <p class="lead">From initial Form TM-A drafting and Vienna codification to examination reports, Trade Marks Journal publication, and certificate issuance.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            <span>Form TM-A E-Filing Procedure</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Vienna Codification & Formalities</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <span>4-Month Journal Opposition Period</span>
-          </div>
-        </div>
-
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="/how-it-works/">View Our Process &rarr;</a>
-          <a class="btn btn-outline" href="/resources/">Back to Resources</a>
-        </div>
-      </div>
-    </section>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Procedural Guide"
+      title="Trademark Application Process<br>in India: <span>Step-by-Step.</span>"
+      hasGoldRule={true}
+      description="From initial Form TM-A drafting and Vienna codification to examination reports, Trade Marks Journal publication, and certificate issuance."
+      primaryCta={{
+        text: "View Our Process",
+        href: "/how-it-works/",
+        icon: "→"
+      }}
+      secondaryCta={{
+        text: "Back to Resources",
+        href: "/resources/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Form TM-A E-Filing", subtitle: "Procedure" },
+        { icon: "▱", title: "Vienna Codification", subtitle: "& Formalities" },
+        { icon: "⌖", title: "4-Month Journal", subtitle: "Opposition Window" }
+      ]}
+      image="/assets/guide-process-hero.webp"
+      imageAlt="Trademark registration application documents, legal scales, and statutory process workflow"
+    />
 
     <!-- Guide Content -->
     <section class="section">
-      <div class="container">
-        <article class="legal-prose" style="max-width: 860px; margin: 0 auto;">
-          <div class="advisory-notice" style="margin-top: 0; margin-bottom: 32px;">
-            <div class="advisory-notice-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="advisory-notice-content">
-              <h4>Immediate Right to Use &trade;</h4>
-              <p>The moment Form TM-A is submitted on the official IP India portal and the government filing receipt is issued, you gain the lawful right to append the &trade; symbol to your brand name and marketing assets.</p>
+      <div class="container" style="max-width: 900px;">
+        <article class="legal-prose">
+          <div class="values" style="margin-bottom: 32px;">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Immediate Right to Use &trade;</strong>
+                <p>The moment Form TM-A is submitted on the official IP India portal and the government filing receipt is issued, you gain the lawful right to append the &trade; symbol to your brand name and marketing assets.</p>
+              </div>
             </div>
           </div>
 
+          <p class="eyebrow">Procedural Milestones</p>
           <h2>1. Overview of the Statutory Sequence</h2>
+          <div class="gold-rule"></div>
           <p>Indian trademark registration is managed by the Controller General of Patents, Designs and Trade Marks (CGPDTM). For applicants based in Kerala, the appropriate jurisdictional branch is the Trade Marks Registry in Chennai.</p>
 
-          <div class="bn-table-wrap">
+          <div class="table-wrap">
             <table class="bn-table">
               <thead>
                 <tr>
@@ -92,7 +94,7 @@ const canonical = "https://brndnur.com/resources/trademark-application-process/"
                 <tr>
                   <td><strong>Step 3</strong></td>
                   <td>Substantive Examination</td>
-                  <td>Section 9 & 11 review; Examination Report generated</td>
+                  <td>Section 9 &amp; 11 review; Examination Report generated</td>
                   <td>1 to 6 Months</td>
                 </tr>
                 <tr>
@@ -117,7 +119,9 @@ const canonical = "https://brndnur.com/resources/trademark-application-process/"
             </table>
           </div>
 
+          <p class="eyebrow">Statutory Documentation</p>
           <h2>2. Primary Statutory Forms Under Trade Marks Rules</h2>
+          <div class="gold-rule"></div>
           <ul>
             <li><strong>Form TM-A:</strong> The foundational application form used to register any wordmark, logo, or collective mark.</li>
             <li><strong>Form TM-48:</strong> The statutory Power of Attorney authorizing an advocate or trademark agent to act on behalf of the applicant.</li>
@@ -126,21 +130,49 @@ const canonical = "https://brndnur.com/resources/trademark-application-process/"
             <li><strong>Form TM-R:</strong> Application for renewal of a registered trademark (filed every 10 years).</li>
           </ul>
 
+          <p class="eyebrow">Examination &amp; Responses</p>
           <h2>3. What Happens During Registry Examination?</h2>
+          <div class="gold-rule"></div>
           <p>The Registry Examiner analyzes whether the application complies with the Trade Marks Act, 1999:</p>
           <ul>
             <li><strong>Accepted:</strong> If the mark is distinctive and lacks conflicting prior marks, it is accepted and directly forwarded for Journal publication.</li>
             <li><strong>Objected:</strong> The Examiner issues an Examination Report citing objections under Section 9 (lack of distinctiveness/descriptiveness) or Section 11 (conflict with existing marks). The applicant must file a formal written response within 30 days.</li>
           </ul>
         </article>
+      </div>
+    </section>
 
-        <div class="cta-panel" style="margin-top: 48px;">
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Ready to Protect Your Brand?</p>
-          <h2>Let BRNDNUR Manage Your Trademark Filing.</h2>
+          <h2>Let BRNDNUR Manage<br>Your Trademark Filing.</h2>
           <p>We assemble documentation, draft Form TM-A, and track your application milestones with complete transparency.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20to%20file%20a%20trademark%20application." target="_blank" rel="noopener noreferrer">File via WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/packages/">Explore All Packages</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">File via WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Form TM-A Drafting</strong>
+              <p>Precise goods specifications avoiding unnecessary registry objections.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Examination Tracking</strong>
+              <p>Continuous surveillance of office actions and examiner reports.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Direct E-Receipt</strong>
+              <p>Official government receipt delivered immediately upon submission.</p>
+            </div>
           </div>
         </div>
       </div>

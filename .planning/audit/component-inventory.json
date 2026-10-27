@@ -1,0 +1,98 @@
+{
+  "components": [
+    {
+      "name": "Button.astro",
+      "path": "src/components/Button.astro",
+      "sizeBytes": 469,
+      "hasProps": true
+    },
+    {
+      "name": "CardCarousel.astro",
+      "path": "src/components/CardCarousel.astro",
+      "sizeBytes": 1574,
+      "hasProps": true
+    },
+    {
+      "name": "FaqItem.astro",
+      "path": "src/components/FaqItem.astro",
+      "sizeBytes": 1156,
+      "hasProps": true
+    },
+    {
+      "name": "FloatingWhatsApp.astro",
+      "path": "src/components/FloatingWhatsApp.astro",
+      "sizeBytes": 4381,
+      "hasProps": true
+    },
+    {
+      "name": "Footer.astro",
+      "path": "src/components/Footer.astro",
+      "sizeBytes": 4213,
+      "hasProps": false
+    },
+    {
+      "name": "Header.astro",
+      "path": "src/components/Header.astro",
+      "sizeBytes": 10996,
+      "hasProps": true
+    },
+    {
+      "name": "HeroBenefitStrip.astro",
+      "path": "src/components/hero/HeroBenefitStrip.astro",
+      "sizeBytes": 5743,
+      "hasProps": true
+    },
+    {
+      "name": "PageHero.astro",
+      "path": "src/components/hero/PageHero.astro",
+      "sizeBytes": 19700,
+      "hasProps": true
+    },
+    {
+      "name": "IntroAnimation.astro",
+      "path": "src/components/IntroAnimation.astro",
+      "sizeBytes": 13146,
+      "hasProps": false
+    },
+    {
+      "name": "Logo.astro",
+      "path": "src/components/Logo.astro",
+      "sizeBytes": 1261,
+      "hasProps": true
+    },
+    {
+      "name": "SectionHeading.astro",
+      "path": "src/components/SectionHeading.astro",
+      "sizeBytes": 389,
+      "hasProps": true
+    },
+    {
+      "name": "WhatsAppCTA.astro",
+      "path": "src/components/WhatsAppCTA.astro",
+      "sizeBytes": 1219,
+      "hasProps": true
+    }
+  ],
+  "layouts": [
+    {
+      "name": "BaseLayout.astro",
+      "path": "src/layouts/BaseLayout.astro",
+      "sizeBytes": 8270,
+      "hasProps": true
+    }
+  ],
+  "heroComponents": [
+    {
+      "name": "HeroBenefitStrip.astro",
+      "path": "src/components/hero/HeroBenefitStrip.astro",
+      "sizeBytes": 5743,
+      "hasProps": true
+    },
+    {
+      "name": "PageHero.astro",
+      "path": "src/components/hero/PageHero.astro",
+      "sizeBytes": 19700,
+      "hasProps": true
+    }
+  ]
+}

@@ -4,6 +4,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = "Terms & Conditions | BRNDNUR Advisory LLP";
 const description = "Terms and conditions governing advisory engagements, website usage, and professional services with BRNDNUR Advisory LLP.";
 const canonical = "https://brndnur.com/terms-and-conditions/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Terms & Conditions",
+  "sectionName": "Legal Inquiry CTA",
+  "enquiryType": "Service Terms Clarification",
+  "topic": "I am reviewing your Terms and Conditions and have a question regarding your advisory engagement terms.",
+  "details": "My question is: [Please describe your question]",
+  "callToAction": "Could you please provide clarification on this query?"
+});
 ---
 
 <BaseLayout
@@ -13,81 +23,120 @@ const canonical = "https://brndnur.com/terms-and-conditions/";
   currentPath="/terms-and-conditions/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <span class="current">Terms & Conditions</span>
-        </nav>
-        <p class="eyebrow">Legal & Compliance</p>
-        <h1>Terms & Conditions</h1>
-        <p class="lead">Terms and conditions governing the use of this website and professional advisory engagements with BRNDNUR Advisory LLP.</p>
+    <!-- Editorial Hero -->
+    <section class="hero" style="min-height: auto; padding: clamp(48px, 6vw, 72px) 0 clamp(32px, 4vw, 48px); text-align: center;">
+      <div class="container" style="max-width: 860px;">
+        <p class="eyebrow">Legal &amp; Compliance</p>
+        <h1>Terms &amp;&nbsp;<span>Conditions.</span></h1>
+        <div class="gold-rule" style="margin: 16px auto 20px;"></div>
+        <p class="lead" style="margin: 0 auto; max-width: 680px;">Terms and conditions governing the use of this website and professional advisory engagements with BRNDNUR Advisory LLP.</p>
         
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            <span>Advisory Terms of Engagement</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Last Updated: October 2026</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Malappuram, Kerala Jurisdiction</span>
-          </div>
+        <div class="trust-row" style="margin: 28px auto 0; justify-content: center; max-width: 640px;">
+          <div class="trust-item"><span class="trust-icon">♢</span><span class="trust-label">Advisory Terms of<br>Engagement</span></div>
+          <div class="trust-item"><span class="trust-icon">▱</span><span class="trust-label">Effective Date<br>October 2026</span></div>
+          <div class="trust-item"><span class="trust-icon">⌖</span><span class="trust-label">Malappuram, Kerala<br>Jurisdiction</span></div>
         </div>
       </div>
     </section>
 
     <!-- Terms Content -->
-    <section class="section">
-      <div class="container">
-        <article class="legal-prose" style="max-width: 860px; margin: 0 auto;">
-          <div class="advisory-notice" style="margin-top: 0; margin-bottom: 32px;">
-            <div class="advisory-notice-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="advisory-notice-content">
-              <h4>Effective Date: October 2026</h4>
-              <p>Please review these terms carefully before utilizing our website or engaging our professional advisory services.</p>
+    <section class="section section-alt">
+      <div class="container" style="max-width: 860px;">
+        <article class="legal-prose">
+          <div class="values" style="margin-bottom: 32px;">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Advisory Framework</strong>
+                <p>Please review these terms carefully before utilizing our website or engaging our professional advisory services.</p>
+              </div>
             </div>
           </div>
 
+          <p class="eyebrow">Service Scope</p>
           <h2>1. Nature of the Website and Advisory Services</h2>
+          <div class="gold-rule"></div>
           <p>BRNDNUR Advisory LLP ("BRNDNUR") provides business advisory, brand protection consultation, and statutory registration filing assistance. Information published on this website is for general informational guidance and does not constitute a formal legal opinion, binding statutory guarantee, or court representation.</p>
 
+          <p class="eyebrow">Client Engagement</p>
           <h2>2. Scope of Engagement</h2>
+          <div class="gold-rule"></div>
           <p>A client-advisor engagement commences only upon mutual written agreement, acceptance of a formal service scope, and payment of agreed professional and statutory charges. Sending an inquiry through the website or WhatsApp does not, by itself, create a binding advisory relationship.</p>
 
+          <p class="eyebrow">Document Authenticity</p>
           <h2>3. Client Responsibilities and Document Accuracy</h2>
+          <div class="gold-rule"></div>
           <p>Clients are solely responsible for ensuring the truthfulness, accuracy, and authenticity of all information, commercial invoices, identity proofs, and representations provided to BRNDNUR. BRNDNUR is not liable for filing rejections, statutory penalties, or delays resulting from inaccurate, fraudulent, or incomplete information furnished by the client.</p>
 
+          <p class="eyebrow">Registry Authority</p>
           <h2>4. Independent Government Outcomes</h2>
+          <div class="gold-rule"></div>
           <p>All statutory registration decisions—including trademark acceptance, examination objections, opposition rulings, GST approvals, Udyam certificates, and FSSAI licenses—are sovereign determinations made solely by respective governmental authorities (such as the Trade Marks Registry / CGPDTM, Ministry of Corporate Affairs, GSTN, and FSSAI). BRNDNUR cannot and does not guarantee approval, timeline, or non-objection by any government registry.</p>
 
+          <p class="eyebrow">Statutory Charges</p>
           <h2>5. Professional Fees and Statutory Disbursements</h2>
-          <p>Service fees charged by BRNDNUR comprise advisory fees and statutory government filing fees. Statutory government fees paid directly to official portals are non-refundable once government challans/receipts are generated. Advisory fee terms are detailed in our <a href="/refund-cancellation-policy/">Refund & Cancellation Policy</a>.</p>
+          <div class="gold-rule"></div>
+          <p>Service fees charged by BRNDNUR comprise advisory fees and statutory government filing fees. Statutory government fees paid directly to official portals are non-refundable once government challans/receipts are generated. Advisory fee terms are detailed in our <a href="/refund-cancellation-policy/">Refund &amp; Cancellation Policy</a>.</p>
 
+          <p class="eyebrow">Proprietary Content</p>
           <h2>6. Intellectual Property Rights</h2>
+          <div class="gold-rule"></div>
           <p>All website content, copy, design layouts, logos, branding, and educational articles on this website are the intellectual property of BRNDNUR Advisory LLP and are protected by applicable copyright and trademark laws. Unauthorized reproduction, mirroring, or commercial redistribution without prior written consent is strictly prohibited.</p>
 
+          <p class="eyebrow">Liability Limits</p>
           <h2>7. Limitation of Liability</h2>
+          <div class="gold-rule"></div>
           <p>To the maximum extent permitted by applicable Indian law, BRNDNUR Advisory LLP shall not be liable for indirect, consequential, punitive, or incidental damages arising out of business decisions, market delays, registry backlogs, or third-party trademark oppositions.</p>
 
+          <p class="eyebrow">Statutory Jurisdiction</p>
           <h2>8. Governing Law and Jurisdiction</h2>
+          <div class="gold-rule"></div>
           <p>These terms and conditions shall be governed by and construed in accordance with the laws of India. Any legal disputes arising in connection with our services shall be subject to the exclusive jurisdiction of the competent courts in Malappuram / Manjeri, Kerala, India.</p>
 
+          <p class="eyebrow">Contact Details</p>
           <h2>9. Contact Information</h2>
-          <div class="legal-box" style="margin-top: 24px;">
-            <strong>BRNDNUR Advisory LLP</strong><br />
-            Manjeri, Malappuram District, Kerala, India &ndash; PIN 676121<br />
-            Email: <a href="mailto:brndnuradvisoryllp@gmail.com">brndnuradvisoryllp@gmail.com</a><br />
-            Phone / WhatsApp: <a href="tel:+919048188899">+91 90481 88899</a>
-          </div>
+          <div class="gold-rule"></div>
+          <p><strong>BRNDNUR Advisory LLP</strong><br />
+          Skatt Business Park, Manjeri<br />
+          Email: <a href="mailto:brndnuradvisoryllp@gmail.com">brndnuradvisoryllp@gmail.com</a><br />
+          Phone / WhatsApp: <a href="tel:+919048188899">+91 90481 88899</a></p>
         </article>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="eyebrow">Client Partnership</p>
+          <h2>Clear Terms &amp;<br>Transparent Advisory.</h2>
+          <p>We believe in upfront agreements, precise deliverables, and absolute clarity at every step of your engagement.</p>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Inquire on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Written Scope</strong>
+              <p>Itemized proposals confirming exact professional and statutory fees.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>No Hidden Charges</strong>
+              <p>Government portal receipts provided directly with every application.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Malabar Legal Entity</strong>
+              <p>Formally registered LLP operating under Indian commercial law.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

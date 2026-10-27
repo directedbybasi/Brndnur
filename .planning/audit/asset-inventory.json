@@ -1,0 +1,1206 @@
+{
+  "totalAssets": 171,
+  "webpCount": 117,
+  "pngCount": 16,
+  "svgCount": 0,
+  "jpgCount": 36,
+  "assets": [
+    {
+      "fileName": "apple-touch-icon.png",
+      "relPath": "public/apple-touch-icon.png",
+      "ext": ".png",
+      "sizeBytes": 11698,
+      "isWebp": false
+    },
+    {
+      "fileName": "about-card-corporate.webp",
+      "relPath": "public/assets/about-card-corporate.webp",
+      "ext": ".webp",
+      "sizeBytes": 69400,
+      "isWebp": true
+    },
+    {
+      "fileName": "about-card-search.webp",
+      "relPath": "public/assets/about-card-search.webp",
+      "ext": ".webp",
+      "sizeBytes": 85270,
+      "isWebp": true
+    },
+    {
+      "fileName": "about-card-trademark.webp",
+      "relPath": "public/assets/about-card-trademark.webp",
+      "ext": ".webp",
+      "sizeBytes": 89068,
+      "isWebp": true
+    },
+    {
+      "fileName": "about-hero-guidance.webp",
+      "relPath": "public/assets/about-hero-guidance.webp",
+      "ext": ".webp",
+      "sizeBytes": 90360,
+      "isWebp": true
+    },
+    {
+      "fileName": "about-values-integrity.png",
+      "relPath": "public/assets/about-values-integrity.png",
+      "ext": ".png",
+      "sizeBytes": 1176546,
+      "isWebp": false
+    },
+    {
+      "fileName": "about-values-integrity.webp",
+      "relPath": "public/assets/about-values-integrity.webp",
+      "ext": ".webp",
+      "sizeBytes": 102874,
+      "isWebp": true
+    },
+    {
+      "fileName": "about-workspace-rounded.webp",
+      "relPath": "public/assets/about-workspace-rounded.webp",
+      "ext": ".webp",
+      "sizeBytes": 91754,
+      "isWebp": true
+    },
+    {
+      "fileName": "audience-first-time-founders.webp",
+      "relPath": "public/assets/audience-first-time-founders.webp",
+      "ext": ".webp",
+      "sizeBytes": 63504,
+      "isWebp": true
+    },
+    {
+      "fileName": "audience-food-brands.webp",
+      "relPath": "public/assets/audience-food-brands.webp",
+      "ext": ".webp",
+      "sizeBytes": 74818,
+      "isWebp": true
+    },
+    {
+      "fileName": "audience-growing-businesses.webp",
+      "relPath": "public/assets/audience-growing-businesses.webp",
+      "ext": ".webp",
+      "sizeBytes": 82616,
+      "isWebp": true
+    },
+    {
+      "fileName": "audience-gulf-return.webp",
+      "relPath": "public/assets/audience-gulf-return.webp",
+      "ext": ".webp",
+      "sizeBytes": 76804,
+      "isWebp": true
+    },
+    {
+      "fileName": "brndnur-logo-background.png",
+      "relPath": "public/assets/brndnur-logo-background.png",
+      "ext": ".png",
+      "sizeBytes": 805534,
+      "isWebp": false
+    },
+    {
+      "fileName": "brndnur-logo-background.webp",
+      "relPath": "public/assets/brndnur-logo-background.webp",
+      "ext": ".webp",
+      "sizeBytes": 29818,
+      "isWebp": true
+    },
+    {
+      "fileName": "brndnur-logo-transparent.png",
+      "relPath": "public/assets/brndnur-logo-transparent.png",
+      "ext": ".png",
+      "sizeBytes": 349004,
+      "isWebp": false
+    },
+    {
+      "fileName": "brndnur-logo-transparent.webp",
+      "relPath": "public/assets/brndnur-logo-transparent.webp",
+      "ext": ".webp",
+      "sizeBytes": 103860,
+      "isWebp": true
+    },
+    {
+      "fileName": "brndnur-og-banner.jpg",
+      "relPath": "public/assets/brndnur-og-banner.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 26373,
+      "isWebp": false
+    },
+    {
+      "fileName": "classes-avoid-overfiling.png",
+      "relPath": "public/assets/classes-avoid-overfiling.png",
+      "ext": ".png",
+      "sizeBytes": 772094,
+      "isWebp": false
+    },
+    {
+      "fileName": "classes-avoid-overfiling.webp",
+      "relPath": "public/assets/classes-avoid-overfiling.webp",
+      "ext": ".webp",
+      "sizeBytes": 53774,
+      "isWebp": true
+    },
+    {
+      "fileName": "classes-hero-catalog.jpg",
+      "relPath": "public/assets/classes-hero-catalog.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 113187,
+      "isWebp": false
+    },
+    {
+      "fileName": "classes-hero-catalog.webp",
+      "relPath": "public/assets/classes-hero-catalog.webp",
+      "ext": ".webp",
+      "sizeBytes": 63258,
+      "isWebp": true
+    },
+    {
+      "fileName": "contact-hero-consultation.jpg",
+      "relPath": "public/assets/contact-hero-consultation.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 121367,
+      "isWebp": false
+    },
+    {
+      "fileName": "contact-hero-consultation.webp",
+      "relPath": "public/assets/contact-hero-consultation.webp",
+      "ext": ".webp",
+      "sizeBytes": 67228,
+      "isWebp": true
+    },
+    {
+      "fileName": "cta-leaves.webp",
+      "relPath": "public/assets/cta-leaves.webp",
+      "ext": ".webp",
+      "sizeBytes": 40668,
+      "isWebp": true
+    },
+    {
+      "fileName": "faqs-guidance-consultation.webp",
+      "relPath": "public/assets/faqs-guidance-consultation.webp",
+      "ext": ".webp",
+      "sizeBytes": 110148,
+      "isWebp": true
+    },
+    {
+      "fileName": "faqs-hero-library.webp",
+      "relPath": "public/assets/faqs-hero-library.webp",
+      "ext": ".webp",
+      "sizeBytes": 93052,
+      "isWebp": true
+    },
+    {
+      "fileName": "fssai-hero-food-safety.jpg",
+      "relPath": "public/assets/fssai-hero-food-safety.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 181281,
+      "isWebp": false
+    },
+    {
+      "fileName": "fssai-hero-food-safety.webp",
+      "relPath": "public/assets/fssai-hero-food-safety.webp",
+      "ext": ".webp",
+      "sizeBytes": 112880,
+      "isWebp": true
+    },
+    {
+      "fileName": "fssai-packaging-standards.webp",
+      "relPath": "public/assets/fssai-packaging-standards.webp",
+      "ext": ".webp",
+      "sizeBytes": 60878,
+      "isWebp": true
+    },
+    {
+      "fileName": "gst-hero-compliance.webp",
+      "relPath": "public/assets/gst-hero-compliance.webp",
+      "ext": ".webp",
+      "sizeBytes": 58516,
+      "isWebp": true
+    },
+    {
+      "fileName": "gst-tax-credibility.webp",
+      "relPath": "public/assets/gst-tax-credibility.webp",
+      "ext": ".webp",
+      "sizeBytes": 84372,
+      "isWebp": true
+    },
+    {
+      "fileName": "guide-class-hero.jpg",
+      "relPath": "public/assets/guide-class-hero.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 199984,
+      "isWebp": false
+    },
+    {
+      "fileName": "guide-class-hero.webp",
+      "relPath": "public/assets/guide-class-hero.webp",
+      "ext": ".webp",
+      "sizeBytes": 131996,
+      "isWebp": true
+    },
+    {
+      "fileName": "guide-process-hero.jpg",
+      "relPath": "public/assets/guide-process-hero.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 70400,
+      "isWebp": false
+    },
+    {
+      "fileName": "guide-process-hero.webp",
+      "relPath": "public/assets/guide-process-hero.webp",
+      "ext": ".webp",
+      "sizeBytes": 34472,
+      "isWebp": true
+    },
+    {
+      "fileName": "guide-search-hero.webp",
+      "relPath": "public/assets/guide-search-hero.webp",
+      "ext": ".webp",
+      "sizeBytes": 86424,
+      "isWebp": true
+    },
+    {
+      "fileName": "guide-tm-reg-hero.jpg",
+      "relPath": "public/assets/guide-tm-reg-hero.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 146874,
+      "isWebp": false
+    },
+    {
+      "fileName": "guide-tm-reg-hero.webp",
+      "relPath": "public/assets/guide-tm-reg-hero.webp",
+      "ext": ".webp",
+      "sizeBytes": 87056,
+      "isWebp": true
+    },
+    {
+      "fileName": "hero-brand-desk-crop.png",
+      "relPath": "public/assets/hero-brand-desk-crop.png",
+      "ext": ".png",
+      "sizeBytes": 1720382,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-brand-desk-mobile.webp",
+      "relPath": "public/assets/hero-brand-desk-mobile.webp",
+      "ext": ".webp",
+      "sizeBytes": 49646,
+      "isWebp": true
+    },
+    {
+      "fileName": "hero-brand-desk-original.png",
+      "relPath": "public/assets/hero-brand-desk-original.png",
+      "ext": ".png",
+      "sizeBytes": 2029313,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-brand-desk.png",
+      "relPath": "public/assets/hero-brand-desk.png",
+      "ext": ".png",
+      "sizeBytes": 2029313,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-brand-desk.webp",
+      "relPath": "public/assets/hero-brand-desk.webp",
+      "ext": ".webp",
+      "sizeBytes": 131316,
+      "isWebp": true
+    },
+    {
+      "fileName": "hero-business-setup.jpg",
+      "relPath": "public/assets/hero-business-setup.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 168992,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-contact-consultation.jpg",
+      "relPath": "public/assets/hero-contact-consultation.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 148674,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-fssai-compliance.jpg",
+      "relPath": "public/assets/hero-fssai-compliance.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 149971,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-logo-branding.jpg",
+      "relPath": "public/assets/hero-logo-branding.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 172533,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-trademark-classes.jpg",
+      "relPath": "public/assets/hero-trademark-classes.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 183649,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-trademark-monitoring.jpg",
+      "relPath": "public/assets/hero-trademark-monitoring.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 161057,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-trademark-renewal.jpg",
+      "relPath": "public/assets/hero-trademark-renewal.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 147333,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-udyam-msme.jpg",
+      "relPath": "public/assets/hero-udyam-msme.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 185074,
+      "isWebp": false
+    },
+    {
+      "fileName": "hero-wordmark-desk.jpg",
+      "relPath": "public/assets/hero-wordmark-desk.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 168369,
+      "isWebp": false
+    },
+    {
+      "fileName": "home-about-partnership.webp",
+      "relPath": "public/assets/home-about-partnership.webp",
+      "ext": ".webp",
+      "sizeBytes": 89754,
+      "isWebp": true
+    },
+    {
+      "fileName": "home-card-business.webp",
+      "relPath": "public/assets/home-card-business.webp",
+      "ext": ".webp",
+      "sizeBytes": 88044,
+      "isWebp": true
+    },
+    {
+      "fileName": "home-card-search.webp",
+      "relPath": "public/assets/home-card-search.webp",
+      "ext": ".webp",
+      "sizeBytes": 71080,
+      "isWebp": true
+    },
+    {
+      "fileName": "home-card-trademark.webp",
+      "relPath": "public/assets/home-card-trademark.webp",
+      "ext": ".webp",
+      "sizeBytes": 58398,
+      "isWebp": true
+    },
+    {
+      "fileName": "home-hero-brand-desk.png",
+      "relPath": "public/assets/home-hero-brand-desk.png",
+      "ext": ".png",
+      "sizeBytes": 1072923,
+      "isWebp": false
+    },
+    {
+      "fileName": "how-choice-protect.webp",
+      "relPath": "public/assets/how-choice-protect.webp",
+      "ext": ".webp",
+      "sizeBytes": 117502,
+      "isWebp": true
+    },
+    {
+      "fileName": "how-choice-scale.webp",
+      "relPath": "public/assets/how-choice-scale.webp",
+      "ext": ".webp",
+      "sizeBytes": 85754,
+      "isWebp": true
+    },
+    {
+      "fileName": "how-choice-start.webp",
+      "relPath": "public/assets/how-choice-start.webp",
+      "ext": ".webp",
+      "sizeBytes": 75808,
+      "isWebp": true
+    },
+    {
+      "fileName": "how-hero-workflow.webp",
+      "relPath": "public/assets/how-hero-workflow.webp",
+      "ext": ".webp",
+      "sizeBytes": 70422,
+      "isWebp": true
+    },
+    {
+      "fileName": "how-prep-research.webp",
+      "relPath": "public/assets/how-prep-research.webp",
+      "ext": ".webp",
+      "sizeBytes": 54626,
+      "isWebp": true
+    },
+    {
+      "fileName": "how-step-business.webp",
+      "relPath": "public/assets/how-step-business.webp",
+      "ext": ".webp",
+      "sizeBytes": 69164,
+      "isWebp": true
+    },
+    {
+      "fileName": "how-step-filing.webp",
+      "relPath": "public/assets/how-step-filing.webp",
+      "ext": ".webp",
+      "sizeBytes": 54062,
+      "isWebp": true
+    },
+    {
+      "fileName": "how-step-search.webp",
+      "relPath": "public/assets/how-step-search.webp",
+      "ext": ".webp",
+      "sizeBytes": 77544,
+      "isWebp": true
+    },
+    {
+      "fileName": "logo-hero-branding.jpg",
+      "relPath": "public/assets/logo-hero-branding.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 121428,
+      "isWebp": false
+    },
+    {
+      "fileName": "logo-hero-branding.webp",
+      "relPath": "public/assets/logo-hero-branding.webp",
+      "ext": ".webp",
+      "sizeBytes": 78434,
+      "isWebp": true
+    },
+    {
+      "fileName": "logo-packaging-protection.webp",
+      "relPath": "public/assets/logo-packaging-protection.webp",
+      "ext": ".webp",
+      "sizeBytes": 34662,
+      "isWebp": true
+    },
+    {
+      "fileName": "monitoring-hero-watch.jpg",
+      "relPath": "public/assets/monitoring-hero-watch.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 93251,
+      "isWebp": false
+    },
+    {
+      "fileName": "monitoring-hero-watch.webp",
+      "relPath": "public/assets/monitoring-hero-watch.webp",
+      "ext": ".webp",
+      "sizeBytes": 47248,
+      "isWebp": true
+    },
+    {
+      "fileName": "monitoring-surveillance-defense.webp",
+      "relPath": "public/assets/monitoring-surveillance-defense.webp",
+      "ext": ".webp",
+      "sizeBytes": 34704,
+      "isWebp": true
+    },
+    {
+      "fileName": "prep-card-applicant.webp",
+      "relPath": "public/assets/prep-card-applicant.webp",
+      "ext": ".webp",
+      "sizeBytes": 14666,
+      "isWebp": true
+    },
+    {
+      "fileName": "prep-card-brand-logo.webp",
+      "relPath": "public/assets/prep-card-brand-logo.webp",
+      "ext": ".webp",
+      "sizeBytes": 15572,
+      "isWebp": true
+    },
+    {
+      "fileName": "prep-card-business-info.webp",
+      "relPath": "public/assets/prep-card-business-info.webp",
+      "ext": ".webp",
+      "sizeBytes": 17682,
+      "isWebp": true
+    },
+    {
+      "fileName": "prep-card-deadlines.webp",
+      "relPath": "public/assets/prep-card-deadlines.webp",
+      "ext": ".webp",
+      "sizeBytes": 11124,
+      "isWebp": true
+    },
+    {
+      "fileName": "prep-card-existing-tm.webp",
+      "relPath": "public/assets/prep-card-existing-tm.webp",
+      "ext": ".webp",
+      "sizeBytes": 12258,
+      "isWebp": true
+    },
+    {
+      "fileName": "prep-card-products.webp",
+      "relPath": "public/assets/prep-card-products.webp",
+      "ext": ".webp",
+      "sizeBytes": 15884,
+      "isWebp": true
+    },
+    {
+      "fileName": "prep-hero-banner.webp",
+      "relPath": "public/assets/prep-hero-banner.webp",
+      "ext": ".webp",
+      "sizeBytes": 47402,
+      "isWebp": true
+    },
+    {
+      "fileName": "prep-hero-plain.webp",
+      "relPath": "public/assets/prep-hero-plain.webp",
+      "ext": ".webp",
+      "sizeBytes": 26248,
+      "isWebp": true
+    },
+    {
+      "fileName": "renewal-hero-timeline.jpg",
+      "relPath": "public/assets/renewal-hero-timeline.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 108229,
+      "isWebp": false
+    },
+    {
+      "fileName": "renewal-hero-timeline.webp",
+      "relPath": "public/assets/renewal-hero-timeline.webp",
+      "ext": ".webp",
+      "sizeBytes": 56472,
+      "isWebp": true
+    },
+    {
+      "fileName": "renewal-ownership-maintenance.webp",
+      "relPath": "public/assets/renewal-ownership-maintenance.webp",
+      "ext": ".webp",
+      "sizeBytes": 80450,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-card-classes-169.webp",
+      "relPath": "public/assets/resources-card-classes-169.webp",
+      "ext": ".webp",
+      "sizeBytes": 93636,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-card-classes.jpg",
+      "relPath": "public/assets/resources-card-classes.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 150951,
+      "isWebp": false
+    },
+    {
+      "fileName": "resources-card-classes.webp",
+      "relPath": "public/assets/resources-card-classes.webp",
+      "ext": ".webp",
+      "sizeBytes": 88598,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-card-process-169.webp",
+      "relPath": "public/assets/resources-card-process-169.webp",
+      "ext": ".webp",
+      "sizeBytes": 71672,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-card-process.webp",
+      "relPath": "public/assets/resources-card-process.webp",
+      "ext": ".webp",
+      "sizeBytes": 68524,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-card-search-169.webp",
+      "relPath": "public/assets/resources-card-search-169.webp",
+      "ext": ".webp",
+      "sizeBytes": 82352,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-card-search.webp",
+      "relPath": "public/assets/resources-card-search.webp",
+      "ext": ".webp",
+      "sizeBytes": 87652,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-card-tm-169.webp",
+      "relPath": "public/assets/resources-card-tm-169.webp",
+      "ext": ".webp",
+      "sizeBytes": 73256,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-card-tm.webp",
+      "relPath": "public/assets/resources-card-tm.webp",
+      "ext": ".webp",
+      "sizeBytes": 82276,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-hero-knowledge.webp",
+      "relPath": "public/assets/resources-hero-knowledge.webp",
+      "ext": ".webp",
+      "sizeBytes": 180864,
+      "isWebp": true
+    },
+    {
+      "fileName": "resources-support-clarity.jpg",
+      "relPath": "public/assets/resources-support-clarity.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 145092,
+      "isWebp": false
+    },
+    {
+      "fileName": "resources-support-clarity.webp",
+      "relPath": "public/assets/resources-support-clarity.webp",
+      "ext": ".webp",
+      "sizeBytes": 84406,
+      "isWebp": true
+    },
+    {
+      "fileName": "search-hero-preclearance.webp",
+      "relPath": "public/assets/search-hero-preclearance.webp",
+      "ext": ".webp",
+      "sizeBytes": 82292,
+      "isWebp": true
+    },
+    {
+      "fileName": "search-why-clearance.webp",
+      "relPath": "public/assets/search-why-clearance.webp",
+      "ext": ".webp",
+      "sizeBytes": 103332,
+      "isWebp": true
+    },
+    {
+      "fileName": "service-business.webp",
+      "relPath": "public/assets/service-business.webp",
+      "ext": ".webp",
+      "sizeBytes": 68910,
+      "isWebp": true
+    },
+    {
+      "fileName": "service-search.webp",
+      "relPath": "public/assets/service-search.webp",
+      "ext": ".webp",
+      "sizeBytes": 68906,
+      "isWebp": true
+    },
+    {
+      "fileName": "service-trademark.webp",
+      "relPath": "public/assets/service-trademark.webp",
+      "ext": ".webp",
+      "sizeBytes": 80870,
+      "isWebp": true
+    },
+    {
+      "fileName": "setup-hero-foundations.jpg",
+      "relPath": "public/assets/setup-hero-foundations.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 87811,
+      "isWebp": false
+    },
+    {
+      "fileName": "setup-hero-foundations.webp",
+      "relPath": "public/assets/setup-hero-foundations.webp",
+      "ext": ".webp",
+      "sizeBytes": 41510,
+      "isWebp": true
+    },
+    {
+      "fileName": "setup-startup-readiness.webp",
+      "relPath": "public/assets/setup-startup-readiness.webp",
+      "ext": ".webp",
+      "sizeBytes": 86882,
+      "isWebp": true
+    },
+    {
+      "fileName": "udyam-growth-catalyst.webp",
+      "relPath": "public/assets/udyam-growth-catalyst.webp",
+      "ext": ".webp",
+      "sizeBytes": 135228,
+      "isWebp": true
+    },
+    {
+      "fileName": "udyam-hero-certificate.jpg",
+      "relPath": "public/assets/udyam-hero-certificate.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 133255,
+      "isWebp": false
+    },
+    {
+      "fileName": "udyam-hero-certificate.webp",
+      "relPath": "public/assets/udyam-hero-certificate.webp",
+      "ext": ".webp",
+      "sizeBytes": 77480,
+      "isWebp": true
+    },
+    {
+      "fileName": "wordmark-foundation-exclusivity.webp",
+      "relPath": "public/assets/wordmark-foundation-exclusivity.webp",
+      "ext": ".webp",
+      "sizeBytes": 101432,
+      "isWebp": true
+    },
+    {
+      "fileName": "wordmark-hero-typography.jpg",
+      "relPath": "public/assets/wordmark-hero-typography.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 167056,
+      "isWebp": false
+    },
+    {
+      "fileName": "wordmark-hero-typography.webp",
+      "relPath": "public/assets/wordmark-hero-typography.webp",
+      "ext": ".webp",
+      "sizeBytes": 102018,
+      "isWebp": true
+    },
+    {
+      "fileName": "favicon-16x16.png",
+      "relPath": "public/favicon-16x16.png",
+      "ext": ".png",
+      "sizeBytes": 437,
+      "isWebp": false
+    },
+    {
+      "fileName": "favicon-32x32.png",
+      "relPath": "public/favicon-32x32.png",
+      "ext": ".png",
+      "sizeBytes": 993,
+      "isWebp": false
+    },
+    {
+      "fileName": "favicon-48x48.png",
+      "relPath": "public/favicon-48x48.png",
+      "ext": ".png",
+      "sizeBytes": 1689,
+      "isWebp": false
+    },
+    {
+      "fileName": "favicon.ico",
+      "relPath": "public/favicon.ico",
+      "ext": ".ico",
+      "sizeBytes": 3173,
+      "isWebp": false
+    },
+    {
+      "fileName": "icon-192.png",
+      "relPath": "public/icon-192.png",
+      "ext": ".png",
+      "sizeBytes": 12866,
+      "isWebp": false
+    },
+    {
+      "fileName": "icon-512.png",
+      "relPath": "public/icon-512.png",
+      "ext": ".png",
+      "sizeBytes": 56697,
+      "isWebp": false
+    },
+    {
+      "fileName": "brand-starter-pack.webp",
+      "relPath": "public/packages/assets/brand-starter-pack.webp",
+      "ext": ".webp",
+      "sizeBytes": 193720,
+      "isWebp": true
+    },
+    {
+      "fileName": "brand-watch-support.webp",
+      "relPath": "public/packages/assets/brand-watch-support.webp",
+      "ext": ".webp",
+      "sizeBytes": 177994,
+      "isWebp": true
+    },
+    {
+      "fileName": "faq-legal-books.webp",
+      "relPath": "public/packages/assets/faq-legal-books.webp",
+      "ext": ".webp",
+      "sizeBytes": 116268,
+      "isWebp": true
+    },
+    {
+      "fileName": "food-brand-package.webp",
+      "relPath": "public/packages/assets/food-brand-package.webp",
+      "ext": ".webp",
+      "sizeBytes": 152680,
+      "isWebp": true
+    },
+    {
+      "fileName": "gulf-business-package.webp",
+      "relPath": "public/packages/assets/gulf-business-package.webp",
+      "ext": ".webp",
+      "sizeBytes": 147532,
+      "isWebp": true
+    },
+    {
+      "fileName": "hero-packages.webp",
+      "relPath": "public/packages/assets/hero-packages.webp",
+      "ext": ".webp",
+      "sizeBytes": 114360,
+      "isWebp": true
+    },
+    {
+      "fileName": "packages-card-food.webp",
+      "relPath": "public/packages/assets/packages-card-food.webp",
+      "ext": ".webp",
+      "sizeBytes": 84784,
+      "isWebp": true
+    },
+    {
+      "fileName": "packages-card-gulf.webp",
+      "relPath": "public/packages/assets/packages-card-gulf.webp",
+      "ext": ".webp",
+      "sizeBytes": 76262,
+      "isWebp": true
+    },
+    {
+      "fileName": "packages-card-starter.webp",
+      "relPath": "public/packages/assets/packages-card-starter.webp",
+      "ext": ".webp",
+      "sizeBytes": 66908,
+      "isWebp": true
+    },
+    {
+      "fileName": "packages-card-trademark.webp",
+      "relPath": "public/packages/assets/packages-card-trademark.webp",
+      "ext": ".webp",
+      "sizeBytes": 114520,
+      "isWebp": true
+    },
+    {
+      "fileName": "packages-faq-legal.webp",
+      "relPath": "public/packages/assets/packages-faq-legal.webp",
+      "ext": ".webp",
+      "sizeBytes": 70928,
+      "isWebp": true
+    },
+    {
+      "fileName": "packages-hero-pricing.webp",
+      "relPath": "public/packages/assets/packages-hero-pricing.webp",
+      "ext": ".webp",
+      "sizeBytes": 71646,
+      "isWebp": true
+    },
+    {
+      "fileName": "packages-pricing-breakdown.webp",
+      "relPath": "public/packages/assets/packages-pricing-breakdown.webp",
+      "ext": ".webp",
+      "sizeBytes": 87356,
+      "isWebp": true
+    },
+    {
+      "fileName": "packages-watch-support.webp",
+      "relPath": "public/packages/assets/packages-watch-support.webp",
+      "ext": ".webp",
+      "sizeBytes": 83540,
+      "isWebp": true
+    },
+    {
+      "fileName": "pkg-corp-hero.webp",
+      "relPath": "public/packages/assets/pkg-corp-hero.webp",
+      "ext": ".webp",
+      "sizeBytes": 63764,
+      "isWebp": true
+    },
+    {
+      "fileName": "pkg-corp-security.webp",
+      "relPath": "public/packages/assets/pkg-corp-security.webp",
+      "ext": ".webp",
+      "sizeBytes": 93776,
+      "isWebp": true
+    },
+    {
+      "fileName": "pkg-food-compliance.jpg",
+      "relPath": "public/packages/assets/pkg-food-compliance.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 141915,
+      "isWebp": false
+    },
+    {
+      "fileName": "pkg-food-compliance.webp",
+      "relPath": "public/packages/assets/pkg-food-compliance.webp",
+      "ext": ".webp",
+      "sizeBytes": 82140,
+      "isWebp": true
+    },
+    {
+      "fileName": "pkg-food-hero.webp",
+      "relPath": "public/packages/assets/pkg-food-hero.webp",
+      "ext": ".webp",
+      "sizeBytes": 122604,
+      "isWebp": true
+    },
+    {
+      "fileName": "pkg-gulf-commercial.jpg",
+      "relPath": "public/packages/assets/pkg-gulf-commercial.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 155097,
+      "isWebp": false
+    },
+    {
+      "fileName": "pkg-gulf-commercial.webp",
+      "relPath": "public/packages/assets/pkg-gulf-commercial.webp",
+      "ext": ".webp",
+      "sizeBytes": 98436,
+      "isWebp": true
+    },
+    {
+      "fileName": "pkg-gulf-hero.webp",
+      "relPath": "public/packages/assets/pkg-gulf-hero.webp",
+      "ext": ".webp",
+      "sizeBytes": 106240,
+      "isWebp": true
+    },
+    {
+      "fileName": "pkg-indiv-breakdown.webp",
+      "relPath": "public/packages/assets/pkg-indiv-breakdown.webp",
+      "ext": ".webp",
+      "sizeBytes": 82028,
+      "isWebp": true
+    },
+    {
+      "fileName": "pkg-indiv-hero.webp",
+      "relPath": "public/packages/assets/pkg-indiv-hero.webp",
+      "ext": ".webp",
+      "sizeBytes": 74210,
+      "isWebp": true
+    },
+    {
+      "fileName": "pricing-breakdown.webp",
+      "relPath": "public/packages/assets/pricing-breakdown.webp",
+      "ext": ".webp",
+      "sizeBytes": 173260,
+      "isWebp": true
+    },
+    {
+      "fileName": "trademark-registration.webp",
+      "relPath": "public/packages/assets/trademark-registration.webp",
+      "ext": ".webp",
+      "sizeBytes": 140526,
+      "isWebp": true
+    },
+    {
+      "fileName": "business-support.webp",
+      "relPath": "public/services/assets/business-support.webp",
+      "ext": ".webp",
+      "sizeBytes": 123456,
+      "isWebp": true
+    },
+    {
+      "fileName": "faq-portfolio.webp",
+      "relPath": "public/services/assets/faq-portfolio.webp",
+      "ext": ".webp",
+      "sizeBytes": 156584,
+      "isWebp": true
+    },
+    {
+      "fileName": "hero-trademark.backup.webp",
+      "relPath": "public/services/assets/hero-trademark.backup.webp",
+      "ext": ".webp",
+      "sizeBytes": 128672,
+      "isWebp": true
+    },
+    {
+      "fileName": "hero-trademark.webp",
+      "relPath": "public/services/assets/hero-trademark.webp",
+      "ext": ".webp",
+      "sizeBytes": 24894,
+      "isWebp": true
+    },
+    {
+      "fileName": "process-search.webp",
+      "relPath": "public/services/assets/process-search.webp",
+      "ext": ".webp",
+      "sizeBytes": 108562,
+      "isWebp": true
+    },
+    {
+      "fileName": "services-business-registration.webp",
+      "relPath": "public/services/assets/services-business-registration.webp",
+      "ext": ".webp",
+      "sizeBytes": 119734,
+      "isWebp": true
+    },
+    {
+      "fileName": "services-faq-portfolio.webp",
+      "relPath": "public/services/assets/services-faq-portfolio.webp",
+      "ext": ".webp",
+      "sizeBytes": 76954,
+      "isWebp": true
+    },
+    {
+      "fileName": "services-hero-trademark.webp",
+      "relPath": "public/services/assets/services-hero-trademark.webp",
+      "ext": ".webp",
+      "sizeBytes": 84040,
+      "isWebp": true
+    },
+    {
+      "fileName": "services-process-search.webp",
+      "relPath": "public/services/assets/services-process-search.webp",
+      "ext": ".webp",
+      "sizeBytes": 64236,
+      "isWebp": true
+    },
+    {
+      "fileName": "services-trademark-filing.webp",
+      "relPath": "public/services/assets/services-trademark-filing.webp",
+      "ext": ".webp",
+      "sizeBytes": 50670,
+      "isWebp": true
+    },
+    {
+      "fileName": "services-why-brndnur.png",
+      "relPath": "public/services/assets/services-why-brndnur.png",
+      "ext": ".png",
+      "sizeBytes": 1205711,
+      "isWebp": false
+    },
+    {
+      "fileName": "services-why-brndnur.webp",
+      "relPath": "public/services/assets/services-why-brndnur.webp",
+      "ext": ".webp",
+      "sizeBytes": 99072,
+      "isWebp": true
+    },
+    {
+      "fileName": "trademark-services.webp",
+      "relPath": "public/services/assets/trademark-services.webp",
+      "ext": ".webp",
+      "sizeBytes": 116124,
+      "isWebp": true
+    },
+    {
+      "fileName": "why-brndnur.png",
+      "relPath": "public/services/assets/why-brndnur.png",
+      "ext": ".png",
+      "sizeBytes": 2128074,
+      "isWebp": false
+    },
+    {
+      "fileName": "why-brndnur.webp",
+      "relPath": "public/services/assets/why-brndnur.webp",
+      "ext": ".webp",
+      "sizeBytes": 154464,
+      "isWebp": true
+    },
+    {
+      "fileName": "site.webmanifest",
+      "relPath": "public/site.webmanifest",
+      "ext": ".webmanifest",
+      "sizeBytes": 580,
+      "isWebp": false
+    },
+    {
+      "fileName": "tm-benefits-foundation.jpg",
+      "relPath": "public/trademark-registration/assets/tm-benefits-foundation.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 162760,
+      "isWebp": false
+    },
+    {
+      "fileName": "tm-benefits-foundation.webp",
+      "relPath": "public/trademark-registration/assets/tm-benefits-foundation.webp",
+      "ext": ".webp",
+      "sizeBytes": 119176,
+      "isWebp": true
+    },
+    {
+      "fileName": "tm-faq-advisory.jpg",
+      "relPath": "public/trademark-registration/assets/tm-faq-advisory.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 130543,
+      "isWebp": false
+    },
+    {
+      "fileName": "tm-faq-advisory.webp",
+      "relPath": "public/trademark-registration/assets/tm-faq-advisory.webp",
+      "ext": ".webp",
+      "sizeBytes": 73832,
+      "isWebp": true
+    },
+    {
+      "fileName": "tm-hero-protection.jpg",
+      "relPath": "public/trademark-registration/assets/tm-hero-protection.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 139809,
+      "isWebp": false
+    },
+    {
+      "fileName": "tm-hero-protection.webp",
+      "relPath": "public/trademark-registration/assets/tm-hero-protection.webp",
+      "ext": ".webp",
+      "sizeBytes": 79922,
+      "isWebp": true
+    },
+    {
+      "fileName": "tm-process-path.jpg",
+      "relPath": "public/trademark-registration/assets/tm-process-path.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 259120,
+      "isWebp": false
+    },
+    {
+      "fileName": "tm-process-path.webp",
+      "relPath": "public/trademark-registration/assets/tm-process-path.webp",
+      "ext": ".webp",
+      "sizeBytes": 210338,
+      "isWebp": true
+    },
+    {
+      "fileName": "tm-support-steps.jpg",
+      "relPath": "public/trademark-registration/assets/tm-support-steps.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 109752,
+      "isWebp": false
+    },
+    {
+      "fileName": "tm-support-steps.webp",
+      "relPath": "public/trademark-registration/assets/tm-support-steps.webp",
+      "ext": ".webp",
+      "sizeBytes": 57150,
+      "isWebp": true
+    },
+    {
+      "fileName": "trademark-benefits-generated.jpg",
+      "relPath": "public/trademark-registration/assets/trademark-benefits-generated.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 201897,
+      "isWebp": false
+    },
+    {
+      "fileName": "trademark-faq-generated.jpg",
+      "relPath": "public/trademark-registration/assets/trademark-faq-generated.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 162918,
+      "isWebp": false
+    },
+    {
+      "fileName": "trademark-hero-generated.jpg",
+      "relPath": "public/trademark-registration/assets/trademark-hero-generated.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 227700,
+      "isWebp": false
+    },
+    {
+      "fileName": "trademark-process-generated.jpg",
+      "relPath": "public/trademark-registration/assets/trademark-process-generated.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 116026,
+      "isWebp": false
+    },
+    {
+      "fileName": "trademark-support-generated.jpg",
+      "relPath": "public/trademark-registration/assets/trademark-support-generated.jpg",
+      "ext": ".jpg",
+      "sizeBytes": 239189,
+      "isWebp": false
+    }
+  ]
+}

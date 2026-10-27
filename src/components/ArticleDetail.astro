@@ -1,0 +1,1439 @@
+---
+import FaqItem from './FaqItem.astro';
+import { buildWhatsAppUrl } from '../utils/whatsapp';
+import type { ArticleData } from '../utils/blog';
+
+interface Props {
+  article: ArticleData;
+  isPreview?: boolean;
+}
+
+const { article, isPreview = false } = Astro.props;
+
+const readingTime = Math.ceil((article.wordCount || 1000) / 200);
+
+const articleWhatsAppUrl = buildWhatsAppUrl({
+  pageName: article.title,
+  sectionName: 'Resource Guide Sidebar',
+  enquiryType: 'Resource Advisory Guidance',
+  topic: `I have read your guide "${article.title}" and would like guidance on this topic for my business.`,
+  details: `District / Location: ${article.district || 'Kerala'}`,
+  callToAction: 'Could you please assist me with the advisory process and next steps?'
+});
+
+// Format category / location eyebrow
+const locationText = article.town ? `${article.town}, ${article.district}` : (article.district || 'Kerala');
+const categoryText = article.category || 'Brand & Business Guidance';
+---
+
+{/* Administrative Draft Notice Bar — Restricted strictly to Preview Route */}
+{isPreview && (
+  <div class="draft-notice-bar" role="status" aria-label="Editorial draft notice">
+    <div class="container draft-notice-inner">
+      <div class="draft-badge-group">
+        <span class="draft-badge">DRAFT PREVIEW</span>
+        <span class="draft-status-pill">Unpublished Editorial Build</span>
+      </div>
+      <div class="draft-meta">
+        <span>ID: <strong>{article.id}</strong></span>
+        <span class="meta-separator" aria-hidden="true">&bull;</span>
+        <span>Location: <strong>{locationText}</strong></span>
+        <span class="meta-separator" aria-hidden="true">&bull;</span>
+        <span>Word Count: ~{article.wordCount || 1100}</span>
+        <span class="meta-separator" aria-hidden="true">&bull;</span>
+        <span>Est. Reading: {readingTime} min</span>
+      </div>
+      {article.reviewFlags && article.reviewFlags.length > 0 && (
+        <a href="#editorial-review-panel" class="draft-flags-indicator">
+          ⚠️ {article.reviewFlags.length} Review Note{article.reviewFlags.length > 1 ? 's' : ''} &darr;
+        </a>
+      )}
+    </div>
+  </div>
+)}
+
+<main id="main-content" class="article-page">
+  {/* Breadcrumb Navigation */}
+  <nav class="article-breadcrumb-nav" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li class="breadcrumb-sep" aria-hidden="true">&rsaquo;</li>
+        <li><a href="/resources/">Resources</a></li>
+        {article.district && (
+          <>
+            <li class="breadcrumb-sep" aria-hidden="true">&rsaquo;</li>
+            <li><span>{article.district}</span></li>
+          </>
+        )}
+        {article.town && (
+          <>
+            <li class="breadcrumb-sep" aria-hidden="true">&rsaquo;</li>
+            <li><span>{article.town}</span></li>
+          </>
+        )}
+        <li class="breadcrumb-sep" aria-hidden="true">&rsaquo;</li>
+        <li class="breadcrumb-current" aria-current="page">{article.title}</li>
+      </ol>
+    </div>
+  </nav>
+
+  {/* Editorial Article Header */}
+  <header class="article-hero">
+    <div class="container">
+      <div class="article-hero-content">
+        <p class="eyebrow hero-stagger-1">{locationText.toUpperCase()} &bull; {categoryText.toUpperCase()}</p>
+
+        <h1 class="article-title hero-stagger-2">{article.title}</h1>
+        <div class="gold-rule hero-stagger-3" aria-hidden="true"></div>
+
+        {article.metaDescription && (
+          <p class="article-lead hero-stagger-3">{article.metaDescription}</p>
+        )}
+
+        <div class="article-meta-row hero-stagger-4" aria-label="Article publication metadata">
+          <div class="meta-item">
+            <span class="meta-icon" aria-hidden="true">⏱</span>
+            <span>~{readingTime} min read</span>
+          </div>
+          <span class="meta-sep" aria-hidden="true">&bull;</span>
+          <div class="meta-item">
+            <span class="meta-icon" aria-hidden="true">🏛️</span>
+            <span>Chennai Jurisdiction</span>
+          </div>
+          <span class="meta-sep" aria-hidden="true">&bull;</span>
+          <div class="meta-item">
+            <span class="meta-icon" aria-hidden="true">⚖</span>
+            <span>Trade Marks Act, 1999</span>
+          </div>
+          <span class="meta-sep" aria-hidden="true">&bull;</span>
+          <div class="meta-item meta-verified">
+            <span class="meta-icon" aria-hidden="true">✓</span>
+            <span>Advisory Clearance Guide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {/* Main 2-Column Responsive Layout */}
+  <div class="container article-layout-container">
+    <div class="article-layout">
+      {/* Primary Article Content Column */}
+      <article class="article-main legal-prose">
+        {/* Quick Answer / Executive Takeaway Panel */}
+        {article.quickAnswer && (
+          <section class="quick-answer-card reveal-on-scroll" id="quick-answer" aria-label="Quick Answer Summary for Founders">
+            <div class="quick-answer-header">
+              <div class="quick-answer-title-group">
+                <span class="quick-answer-icon" aria-hidden="true">💡</span>
+                <h3>Quick Answer for Founders</h3>
+              </div>
+              <span class="quick-answer-tag">Key Takeaway</span>
+            </div>
+            <p class="quick-answer-text">{article.quickAnswer}</p>
+          </section>
+        )}
+
+        {/* Mobile Quick Consultation Callout (Stacked on small screens) */}
+        <div class="mobile-consultation-strip">
+          <div class="strip-text">
+            <strong>Need direct guidance for {locationText}?</strong>
+            <span>Discuss your filing with BRNDNUR Advisory advisors.</span>
+          </div>
+          <a class="btn-strip-wa" href={articleWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+            WhatsApp Advisory &rarr;
+          </a>
+        </div>
+
+        {/* Body Sections */}
+        {article.h2Sections && article.h2Sections.map((sec, idx) => (
+          <section class="article-section" id={`section-${idx + 1}`}>
+            <h2 class="section-h2">{sec.h2}</h2>
+            {sec.h3 && <h3 class="section-h3">{sec.h3}</h3>}
+
+            {sec.content && sec.content.map((p) => {
+              if (typeof p === 'string' && p.includes('\n')) {
+                const parts = p.split('\n').filter(Boolean);
+                return (
+                  <div class="qa-block">
+                    {parts.map((part) => {
+                      if (part.startsWith('Q:') || part.startsWith('Question:')) {
+                        return <p class="qa-q"><strong>{part}</strong></p>;
+                      }
+                      return <p class="qa-a" set:html={part} />;
+                    })}
+                  </div>
+                );
+              }
+              return <p set:html={p} />;
+            })}
+
+            {/* Checklist items */}
+            {sec.checklist && sec.checklist.length > 0 && (
+              <div class="checklist-panel">
+                <h4 class="checklist-heading">Action Items &amp; Filing Checkpoints</h4>
+                <ul class="check-list">
+                  {sec.checklist.map((item) => (
+                    <li>
+                      <span class="check" aria-hidden="true">✓</span>
+                      <span class="check-text" set:html={item} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Tables */}
+            {sec.table && sec.table.headers && sec.table.rows && (
+              <div class="table-container">
+                <div class="table-scroll-hint" aria-hidden="true">
+                  <span>&larr; Scroll horizontally to view full table &rarr;</span>
+                </div>
+                <div class="table-wrap">
+                  <table class="bn-table">
+                    <thead>
+                      <tr>
+                        {sec.table.headers.map((h) => (
+                          <th scope="col">{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {sec.table.rows.map((row) => (
+                        <tr>
+                          {row.map((cell, cIdx) => (
+                            <td class={cIdx === 0 ? 'td-primary' : ''} set:html={cell} />
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* Callouts */}
+            {sec.callout && (
+              <aside class={`callout-card callout-${sec.callout.type || 'note'}`} aria-label={sec.callout.title}>
+                <div class="callout-header">
+                  <span class="callout-icon" aria-hidden="true">
+                    {sec.callout.type === 'warning' ? '⚠️' : sec.callout.type === 'tip' ? '💡' : 'ℹ️'}
+                  </span>
+                  <strong class="callout-title">{sec.callout.title}</strong>
+                </div>
+                <p class="callout-text">{sec.callout.text}</p>
+              </aside>
+            )}
+          </section>
+        ))}
+
+        {/* Frequently Asked Questions */}
+        {article.faqs && article.faqs.length > 0 && (
+          <section class="article-faqs reveal-on-scroll" id="faqs" aria-labelledby="faq-heading">
+            <div class="faqs-header">
+              <span class="section-eyebrow">Clarity &amp; Compliance</span>
+              <h2 id="faq-heading" class="section-h2">Frequently Asked Questions</h2>
+              <div class="article-gold-accent" aria-hidden="true"></div>
+            </div>
+            <div class="faq-editorial-list faq-list">
+              {article.faqs.map((faq, idx) => (
+                <FaqItem
+                  num={idx + 1}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Relevant Statutory Services & Guides */}
+        {article.internalLinks && article.internalLinks.length > 0 && (
+          <section class="related-services-card reveal-on-scroll" id="related-services" aria-labelledby="related-heading">
+            <div class="related-header">
+              <span class="section-eyebrow">Statutory Assistance</span>
+              <h3 id="related-heading">Relevant Advisory &amp; Registration Services</h3>
+              <p>Explore related filings, classification tools, and government incentive schemes:</p>
+            </div>
+            <div class="related-links-grid reveal-group">
+              {article.internalLinks.map((link) => (
+                <a class="related-link-item reveal-item" href={link.url}>
+                  <div class="related-link-title-row">
+                    <strong>{link.title}</strong>
+                    <span class="related-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                  <span>{link.description}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Official Statutory Authorities & Sources */}
+        {article.officialSources && article.officialSources.length > 0 && (
+          <section class="sources-card reveal-on-scroll" id="official-sources" aria-labelledby="sources-heading">
+            <div class="sources-header">
+              <span class="sources-icon" aria-hidden="true">🏛️</span>
+              <h3 id="sources-heading">Official Authorities &amp; Statutory References</h3>
+            </div>
+            <ul class="sources-list">
+              {article.officialSources.map((source) => (
+                <li>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer">
+                    <span class="source-title">{source.title}</span>
+                    <span class="source-authority">&mdash; {source.authority}</span>
+                    <span class="external-icon" aria-hidden="true">&#x2197;</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* Educational Disclaimer */}
+        <footer class="educational-disclaimer">
+          <p>
+            <strong>Disclaimer:</strong> This article is published for general educational and informational purposes only. It does not constitute individualized legal, tax, or professional advisory. Statutory rules, official filing fees, and procedural requirements under the Trade Marks Act 1999, CGST Act, and related notifications are subject to periodic governmental amendment. Consult qualified professionals or official authorities before acting on this information.
+          </p>
+        </footer>
+      </article>
+
+      {/* Balanced Sidebar Column (Sticky Companion) */}
+      <aside class="article-sidebar" aria-label="Advisory consultation">
+        <div class="sidebar-sticky-wrapper">
+          {/* Consultation / Advisory Conversion Card */}
+          <div class="sidebar-card sidebar-cta-card">
+            <div class="sidebar-card-header">
+              <span class="eyebrow">BRNDNUR Advisory</span>
+              <h3 class="cta-heading">{article.cta.heading}</h3>
+            </div>
+            <p class="cta-desc">{article.cta.description}</p>
+
+            <div class="sidebar-contact-info">
+              <div class="contact-pill">
+                <span class="pill-icon" aria-hidden="true">📍</span>
+                <span>Registered at Skatt Business Park, Manjeri</span>
+              </div>
+              <div class="contact-pill">
+                <span class="pill-icon" aria-hidden="true">⏱</span>
+                <span>Mon &ndash; Sat: 9:30 AM &ndash; 6:00 PM</span>
+              </div>
+              <div class="contact-pill">
+                <span class="pill-icon" aria-hidden="true">📞</span>
+                <span>+91 90481 88899</span>
+              </div>
+            </div>
+
+            <div class="sidebar-actions">
+              <a class="btn btn-primary sidebar-btn-wa" href={articleWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+                <span>{article.cta.buttonText}</span>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <a class="btn btn-outline sidebar-btn-call" href="tel:+919048188899">
+                <span>Call Advisory Desk</span>
+              </a>
+            </div>
+
+            <div class="sidebar-trust-guarantee">
+              <span class="trust-icon" aria-hidden="true">🔒</span>
+              <span>Confidential &bull; Direct Partner Review &bull; No Obligation</span>
+            </div>
+          </div>
+
+          {/* Topical Pillar / Core Advisory Solutions Navigation (Hub & Spoke Silo) */}
+          <div class="sidebar-card sidebar-pillar-card">
+            <span class="eyebrow">Direct Solutions</span>
+            <h4 class="pillar-heading">Core Advisory Services</h4>
+            <ul class="pillar-links-list">
+              <li>
+                <a href="/trademark-registration/">
+                  <span>Trademark Registration</span>
+                  <span class="pillar-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              </li>
+              <li>
+                <a href="/packages/">
+                  <span>Fixed-Fee Advisory Packages</span>
+                  <span class="pillar-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              </li>
+              <li>
+                <a href="/trademark-classes/">
+                  <span>Nice Classification Guide</span>
+                  <span class="pillar-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              </li>
+              <li>
+                <a href="/business-setup/">
+                  <span>Kerala Business Setup Advisory</span>
+                  <span class="pillar-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  {/* Administrative Internal Review Notes — Restricted strictly to Preview Route and clearly separated from customer-facing content */}
+  {isPreview && article.reviewFlags && article.reviewFlags.length > 0 && (
+    <section class="container editorial-admin-section" id="editorial-review-panel" aria-label="Editorial Staff Review Notes">
+      <div class="editorial-admin-card">
+        <div class="editorial-admin-header">
+          <div class="editorial-title-group">
+            <span class="editorial-lock-icon" aria-hidden="true">🔒</span>
+            <h3>Internal Editorial Review Notes</h3>
+          </div>
+          <span class="editorial-tag">Staff Only &bull; Excluded from Live Site</span>
+        </div>
+        <p class="editorial-subtext">
+          These internal review flags are visible only in this preview route for editorial audit compliance. They are not displayed on public published articles.
+        </p>
+        <ul class="editorial-flags-list">
+          {article.reviewFlags.map((flag) => (
+            <li>
+              <span class="flag-bullet" aria-hidden="true">⚠️</span>
+              <span class="flag-text">{flag}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+</main>
+
+<style>
+  /* Base Article Page Styles */
+  .article-page {
+    background: var(--ivory);
+    padding-bottom: 80px;
+    width: 100%;
+    color: var(--body);
+    font-family: var(--sans);
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+  /* Preview Administrative Notice Bar */
+  .draft-notice-bar {
+    background: #1B1305;
+    color: #F8E6B8;
+    border-bottom: 2px solid #C28A25;
+    padding: 10px 0;
+    font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .draft-notice-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 20px;
+  }
+  .draft-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .draft-badge {
+    background: #C28A25;
+    color: #13233A;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 2px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .draft-status-pill {
+    color: #E6D2A8;
+    font-size: 12px;
+  }
+  .draft-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    color: #D6C298;
+    font-size: 12px;
+  }
+  .draft-meta strong {
+    color: #FFF2D1;
+  }
+  .meta-separator {
+    opacity: 0.5;
+  }
+  .draft-flags-indicator {
+    background: rgba(194, 138, 37, 0.2);
+    color: #FEE8A2;
+    border: 1px solid rgba(194, 138, 37, 0.6);
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 11.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .draft-flags-indicator:hover {
+    background: rgba(194, 138, 37, 0.35);
+  }
+
+  /* Breadcrumb Navigation */
+  .article-breadcrumb-nav {
+    padding: 24px 0 12px;
+    font-size: 13px;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(220, 206, 182, 0.4);
+    background: rgba(244, 239, 228, 0.6);
+  }
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+  }
+  .breadcrumb-list a {
+    color: var(--navy);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .breadcrumb-list a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .breadcrumb-sep {
+    color: var(--gold);
+    opacity: 0.7;
+    font-size: 14px;
+  }
+  .breadcrumb-current {
+    color: var(--muted);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Editorial Article Hero */
+  .article-hero {
+    padding: 38px 0 44px;
+    border-bottom: 1px solid var(--line);
+    background: var(--ivory);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .article-hero-content {
+    max-width: 920px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .article-hero .eyebrow {
+    margin: 0 0 14px;
+    color: var(--gold);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  .article-title {
+    font-size: clamp(2.35rem, 3.8vw, 3.35rem);
+    font-weight: 600;
+    line-height: 1.16;
+    color: var(--navy);
+    margin: 0 0 18px;
+    letter-spacing: -0.025em;
+  }
+  .article-hero .gold-rule {
+    width: 50px;
+    height: 2.5px;
+    background: var(--gold);
+    margin: 0 0 22px;
+  }
+  .article-lead {
+    font-size: 18px;
+    line-height: 1.68;
+    color: #384659;
+    margin: 0 0 24px;
+    max-width: 820px;
+  }
+  .article-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+    font-size: 13.5px;
+    color: var(--muted);
+    padding-top: 4px;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    color: #475569;
+  }
+  .meta-icon {
+    font-size: 13px;
+    line-height: 1;
+    color: var(--gold);
+  }
+  .meta-sep {
+    color: var(--line);
+    font-size: 14px;
+    user-select: none;
+  }
+  .meta-verified {
+    color: #1B4D2B;
+    font-weight: 600;
+  }
+  .meta-verified .meta-icon {
+    color: #1B4D2B;
+  }
+
+  /* Main Responsive Two-Column Layout */
+  .article-layout-container {
+    padding-top: 48px;
+  }
+  .article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 40px;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .article-main {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .article-section,
+  .quick-answer-card,
+  .article-faqs,
+  .related-services-card,
+  .sources-card,
+  .editorial-admin-section {
+    scroll-margin-top: 100px;
+  }
+
+  /* Quick Answer / Takeaway Card */
+  .quick-answer-card {
+    background: #FFFDF9;
+    border: 1.5px solid var(--gold);
+    border-left: 5px solid var(--gold);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 44px;
+    box-shadow: 0 4px 18px rgba(168, 120, 26, 0.08);
+    box-sizing: border-box;
+  }
+  .quick-answer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .quick-answer-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .quick-answer-icon {
+    font-size: 1.35rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .quick-answer-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--navy);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .quick-answer-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background: #F0E2C8;
+    color: #8F6214;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .quick-answer-text {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.72;
+    color: #1F2D3D;
+    font-weight: 500;
+  }
+
+  /* Mobile Quick Consultation Strip (Hidden on Desktop) */
+  .mobile-consultation-strip {
+    display: none;
+    background: #EAE1D1;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 32px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .mobile-consultation-strip .strip-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 13.5px;
+  }
+  .mobile-consultation-strip .strip-text strong {
+    color: var(--navy);
+  }
+  .mobile-consultation-strip .strip-text span {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .btn-strip-wa {
+    display: inline-block;
+    background: #1B4D2B;
+    color: #fff !important;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* Article Sections */
+  .article-section {
+    margin-bottom: 48px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .section-h2 {
+    font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+    color: var(--navy);
+    margin: 0 0 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    padding-top: 8px;
+  }
+  .section-h3 {
+    font-size: 1.25rem;
+    color: #24354D;
+    margin: 22px 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .article-section p {
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: #334155;
+    margin: 0 0 18px;
+  }
+
+  /* Q&A Block inside H2 Section */
+  .qa-block {
+    background: #FAF7F0;
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    margin: 16px 0 20px;
+  }
+  .qa-q {
+    font-size: 16px;
+    color: var(--navy) !important;
+    margin: 0 0 8px !important;
+  }
+  .qa-a {
+    font-size: 15.5px !important;
+    line-height: 1.68 !important;
+    color: #42526E !important;
+    margin: 0 !important;
+  }
+
+  /* Checklist Panel */
+  .checklist-panel {
+    background: #FAF7F0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 24px 0 28px;
+  }
+  .checklist-heading {
+    margin: 0 0 14px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #2D3D52;
+  }
+  .check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
+    background: #EAE1D1;
+    color: var(--gold-dark);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+    line-height: 1;
+  }
+  .check-text {
+    flex: 1;
+  }
+
+  /* Comparison Tables */
+  .table-container {
+    margin: 28px 0 32px;
+  }
+  .table-scroll-hint {
+    display: none;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(19, 35, 58, 0.04);
+  }
+  .bn-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    text-align: left;
+    min-width: 540px;
+  }
+  .bn-table th {
+    background: var(--navy);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 13.5px;
+    letter-spacing: 0.03em;
+    padding: 14px 18px;
+    border-bottom: 2px solid var(--gold);
+    text-align: left;
+  }
+  .bn-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ECE3D4;
+    vertical-align: top;
+    line-height: 1.6;
+    color: #2D3D52;
+  }
+  .bn-table tr:last-child td {
+    border-bottom: none;
+  }
+  .bn-table tr:nth-child(even) td {
+    background: #FAF7F2;
+  }
+  .bn-table td.td-primary {
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* Callout Panels */
+  .callout-card {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 26px 0;
+    box-sizing: border-box;
+  }
+  .callout-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .callout-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .callout-title {
+    font-size: 16px;
+    color: var(--navy);
+    font-weight: 700;
+  }
+  .callout-text {
+    margin: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+  .callout-warning {
+    background: #FFF8F0;
+    border: 1px solid #F2D2B3;
+    border-left: 5px solid #DD6B20;
+  }
+  .callout-warning .callout-text {
+    color: #5C320A !important;
+  }
+  .callout-note {
+    background: #F0F4F9;
+    border: 1px solid #C8D7EA;
+    border-left: 5px solid #2B6CB0;
+  }
+  .callout-note .callout-text {
+    color: #1D3F66 !important;
+  }
+  .callout-tip {
+    background: #F2F9F4;
+    border: 1px solid #BFDEC9;
+    border-left: 5px solid #2E7D32;
+  }
+  .callout-tip .callout-text {
+    color: #154722 !important;
+  }
+
+  /* Article FAQs Section */
+  .article-faqs {
+    margin: 54px 0 44px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .faqs-header {
+    margin-bottom: 24px;
+  }
+  .section-eyebrow {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .faq-editorial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Related Services Card */
+  .related-services-card {
+    background: #EAE2D2;
+    border: 1px solid rgba(220, 206, 182, 0.9);
+    border-radius: 8px;
+    padding: 28px;
+    margin: 48px 0;
+    box-sizing: border-box;
+  }
+  .related-header h3 {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .related-header p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--muted);
+  }
+  .related-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .related-link-item {
+    background: #FFFFFF;
+    border: 1px solid rgba(220, 206, 182, 0.6);
+    border-radius: 6px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .related-link-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+    box-shadow: 0 6px 16px rgba(19, 35, 58, 0.08);
+  }
+  .related-link-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .related-link-title-row strong {
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.35;
+  }
+  .related-arrow {
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  .related-link-item span {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+
+  /* Sources Card */
+  .sources-card {
+    background: #FAF7F0;
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 36px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  .sources-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .sources-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+  .sources-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--navy);
+    font-weight: 700;
+  }
+  .sources-list {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sources-list a {
+    color: var(--navy);
+    text-decoration: none;
+    line-height: 1.5;
+    display: inline-block;
+  }
+  .sources-list a:hover {
+    text-decoration: underline;
+    color: var(--gold);
+  }
+  .source-title {
+    font-weight: 600;
+  }
+  .source-authority {
+    color: var(--muted);
+    font-style: italic;
+  }
+  .external-icon {
+    font-size: 12px;
+    margin-left: 4px;
+    color: var(--gold);
+  }
+
+  /* Educational Disclaimer */
+  .educational-disclaimer {
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    margin-top: 40px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #6C7A8E;
+  }
+  .educational-disclaimer p {
+    margin: 0;
+  }
+
+  /* ==========================================================================
+     Sidebar Components & Sticky Behavior
+     ========================================================================== */
+  .article-sidebar {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .sidebar-sticky-wrapper {
+    position: sticky;
+    top: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar-card {
+    background: #FFFFFF;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    padding: 26px 24px;
+    box-shadow: 0 4px 18px rgba(19, 35, 58, 0.05);
+    box-sizing: border-box;
+  }
+
+  /* Consultation CTA Card */
+  .sidebar-cta-card {
+    border-top: 3.5px solid var(--gold);
+  }
+  .sidebar-cta-card .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .cta-heading {
+    margin: 0;
+    font-size: 19px;
+    color: var(--navy);
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  .cta-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 10px 0 16px;
+  }
+  .sidebar-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .contact-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #33445C;
+    background: #F4EFE4;
+    padding: 6px 10px;
+    border-radius: 4px;
+    line-height: 1.4;
+  }
+  .pill-icon {
+    flex-shrink: 0;
+  }
+  .sidebar-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sidebar-actions .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  }
+  .sidebar-btn-wa {
+    background: var(--navy);
+    color: #FFFFFF !important;
+    border: 1px solid var(--navy);
+  }
+  .sidebar-btn-wa:hover {
+    background: #1C3352;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(19, 35, 58, 0.15);
+  }
+  .sidebar-btn-call {
+    background: transparent;
+    color: var(--navy);
+    border: 1.5px solid var(--navy);
+  }
+  .sidebar-btn-call:hover {
+    background: #F4EFE4;
+    transform: translateY(-1px);
+  }
+  .sidebar-trust-guarantee {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 11px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Pillar Navigation Card (Hub & Spoke Silo) */
+  .sidebar-pillar-card {
+    background: #FAF8F5;
+    border-top: 3.5px solid var(--navy);
+  }
+  .sidebar-pillar-card .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .pillar-heading {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    font-family: var(--serif);
+    color: var(--navy);
+    line-height: 1.3;
+  }
+  .pillar-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pillar-links-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .pillar-links-list li a:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateX(2px);
+  }
+  .pillar-arrow {
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  /* ==========================================================================
+     Internal Editorial Review Section (Draft Preview Only)
+     Cleanly separated administrative panel
+     ========================================================================== */
+  .editorial-admin-section {
+    padding-top: 48px;
+    width: 100%;
+  }
+  .editorial-admin-card {
+    background: #FFFDF5;
+    border: 2px dashed #C28A25;
+    border-radius: 8px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 16px rgba(194, 138, 37, 0.08);
+  }
+  .editorial-admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .editorial-title-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .editorial-title-group h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #634305;
+    font-weight: 700;
+  }
+  .editorial-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #C28A25;
+    color: #13233A;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .editorial-subtext {
+    font-size: 13.5px;
+    color: #7A5B1F;
+    margin: 0 0 16px;
+    line-height: 1.5;
+  }
+  .editorial-flags-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .editorial-flags-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #402E09;
+    background: #FDF4E1;
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+  .flag-bullet {
+    flex-shrink: 0;
+  }
+
+  /* ==========================================================================
+     Responsive Media Queries
+     ========================================================================== */
+  @media (max-width: 1024px) {
+    .article-layout {
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 32px;
+    }
+    .article-hero-content {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .article-layout {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 40px;
+    }
+    .article-sidebar {
+      position: static;
+      margin-top: 16px;
+    }
+    .sidebar-sticky-wrapper {
+      position: static;
+      max-height: none;
+      overflow-y: visible;
+      gap: 24px;
+    }
+    .mobile-consultation-strip {
+      display: flex;
+    }
+    .table-scroll-hint {
+      display: block;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .article-hero {
+      padding: 28px 0 32px;
+    }
+    .article-title {
+      font-size: clamp(1.75rem, 6.5vw, 2.2rem);
+    }
+    .article-lead {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .article-layout-container {
+      padding-top: 32px;
+    }
+    .quick-answer-card {
+      padding: 18px 20px;
+      margin-bottom: 32px;
+    }
+    .quick-answer-text {
+      font-size: 15px;
+    }
+    .section-h2 {
+      font-size: 1.45rem;
+    }
+    .section-h3 {
+      font-size: 1.15rem;
+    }
+    .article-section p {
+      font-size: 15.5px;
+      line-height: 1.7;
+    }
+    .related-links-grid {
+      grid-template-columns: 1fr;
+    }
+    .sidebar-card {
+      padding: 20px 18px;
+    }
+    .mobile-consultation-strip {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+    .btn-strip-wa {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .article-breadcrumb-nav {
+      padding: 16px 0 10px;
+    }
+    .breadcrumb-current {
+      max-width: 220px;
+    }
+    .meta-chip {
+      font-size: 12px;
+      padding: 4px 10px;
+    }
+    .checklist-panel {
+      padding: 16px 18px;
+    }
+    .related-services-card {
+      padding: 20px 18px;
+    }
+  }
+</style>

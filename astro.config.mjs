@@ -14,4 +14,18 @@ export default defineConfig({
       applyBaseStyles: false, // Allows custom global typography & resets to coexist seamlessly
     }),
   ],
+  vite: {
+    server: {
+      allowedHosts: [
+        'carlo-tube-region-diamonds.trycloudflare.com',
+        'scenes-axis-bones-allow.trycloudflare.com',
+      ],
+    },
+    preview: {
+      allowedHosts: [
+        'carlo-tube-region-diamonds.trycloudflare.com',
+        'scenes-axis-bones-allow.trycloudflare.com',
+      ],
+    },
+  },
 });

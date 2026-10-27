@@ -1,9 +1,20 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/hero/PageHero.astro';
 
 const title = "Trademark Registration Guide for Indian Businesses | BRNDNUR";
 const description = "A founder-friendly guide to trademark registration in India: what can be registered, prerequisites, class selection, examination, and post-filing maintenance.";
 const canonical = "https://brndnur.com/resources/trademark-registration-guide/";
+import { buildWhatsAppUrl } from '../../../utils/whatsapp';
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Trademark Registration Guide",
+  "sectionName": "Guide Closing CTA",
+  "enquiryType": "Trademark Registration Inquiry",
+  "topic": "I have read your Trademark Registration Guide and would like assistance filing a trademark application.",
+  "details": "Proposed brand name: [Please enter your brand name]",
+  "callToAction": "Could you please explain the next steps for conducting a search and preparing Form TM-A?"
+});
 ---
 
 <BaseLayout
@@ -13,67 +24,62 @@ const canonical = "https://brndnur.com/resources/trademark-registration-guide/";
   currentPath="/resources/trademark-registration-guide/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/resources/">Resources</a>
-          <span class="sep">/</span>
-          <span class="current">Trademark Registration Guide</span>
-        </nav>
-        <p class="eyebrow">Founders' Guide</p>
-        <h1>Trademark Registration in India: The Complete Founders' Guide.</h1>
-        <p class="lead">Everything you need to know about protecting your brand name, logo, and distinctive identity under the Trade Marks Act, 1999.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Trade Marks Act, 1999</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>10-Year Renewable Protection</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>PAN-India Statutory Exclusive Rights</span>
-          </div>
-        </div>
-
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="/trademark-registration/">Apply for Registration &rarr;</a>
-          <a class="btn btn-outline" href="/resources/">Back to Resources</a>
-        </div>
-      </div>
-    </section>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Founders' Guide"
+      title="Trademark Registration<br>in India: <span>The Complete Guide.</span>"
+      hasGoldRule={true}
+      description="Everything you need to know about protecting your brand name, logo, and distinctive identity under the Trade Marks Act, 1999."
+      primaryCta={{
+        text: "Apply for Registration",
+        href: "/trademark-registration/",
+        icon: "→"
+      }}
+      secondaryCta={{
+        text: "Back to Resources",
+        href: "/resources/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Trade Marks Act", subtitle: "1999 Grounding" },
+        { icon: "▱", title: "10-Year Renewable", subtitle: "Protection" },
+        { icon: "⌖", title: "PAN-India Statutory", subtitle: "Exclusivity" }
+      ]}
+      image="/assets/guide-tm-reg-hero.webp"
+      imageAlt="Trademark registration documentation folio and statutory legal books"
+    />
 
     <!-- Guide Content -->
     <section class="section">
-      <div class="container">
-        <article class="legal-prose" style="max-width: 860px; margin: 0 auto;">
-          <div class="advisory-notice" style="margin-top: 0; margin-bottom: 32px;">
-            <div class="advisory-notice-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="advisory-notice-content">
-              <h4>Quick Summary for Founders</h4>
-              <p>A registered trademark confers exclusive statutory rights to use a brand identifier in connection with specified goods or services in India. Registration is valid for 10 years from the application filing date and is renewable indefinitely every 10 years.</p>
+      <div class="container" style="max-width: 900px;">
+        <article class="legal-prose">
+          <div class="values" style="margin-bottom: 32px;">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Quick Summary for Founders</strong>
+                <p>A registered trademark confers exclusive statutory rights to use a brand identifier in connection with specified goods or services in India. Registration is valid for 10 years from the application filing date and is renewable indefinitely every 10 years.</p>
+              </div>
             </div>
           </div>
 
+          <p class="eyebrow">Statutory Definition</p>
           <h2>1. What Is a Trademark?</h2>
+          <div class="gold-rule"></div>
           <p>Under Section 2(1)(zb) of the Trade Marks Act, 1999, a trademark is defined as a mark capable of being represented graphically and capable of distinguishing the goods or services of one person from those of others. It may include a device, brand, heading, label, ticket, name, signature, word, letter, numeral, shape of goods, packaging or combination of colours.</p>
 
+          <p class="eyebrow">Distinctiveness Criteria</p>
           <h2>2. What Can and Cannot Be Registered?</h2>
+          <div class="gold-rule"></div>
           <p>To qualify for registration, a mark must possess distinctive character:</p>
           <ul>
             <li><strong>Strong Candidates:</strong> Coined or invented words (e.g., brand names with no dictionary meaning), arbitrary words (common words used in an unrelated context), or suggestive terms requiring imagination.</li>
             <li><strong>Challenging or Prohibited:</strong> Purely descriptive words describing the nature, quality, or geographical origin of the goods/services (e.g., "Fast Delivery" for a courier service), generic product terms, deceptive marks, or marks identical to prior registered marks.</li>
           </ul>
 
+          <p class="eyebrow">Filing Checklist</p>
           <h2>3. Prerequisites and Information to Prepare</h2>
+          <div class="gold-rule"></div>
           <p>Before filing Form TM-A with the Trade Marks Registry, ensure you have gathered:</p>
           <ul>
             <li><strong>Applicant Details:</strong> Full legal name, nationality, and trading address. For firms/LLPs/companies, the registration certificate and Udyam MSME certificate (if eligible for 50% government fee concession).</li>
@@ -82,10 +88,12 @@ const canonical = "https://brndnur.com/resources/trademark-registration-guide/";
             <li><strong>List of Goods or Services:</strong> Accurate specification aligned with the appropriate Nice Class.</li>
           </ul>
 
+          <p class="eyebrow">CGPDTM Examination</p>
           <h2>4. The Statutory Application Lifecycle</h2>
+          <div class="gold-rule"></div>
           <p>The journey from filing to registration involves distinct statutory stages governed by the CGPDTM:</p>
 
-          <div class="bn-table-wrap">
+          <div class="table-wrap">
             <table class="bn-table">
               <thead>
                 <tr>
@@ -96,27 +104,27 @@ const canonical = "https://brndnur.com/resources/trademark-registration-guide/";
               </thead>
               <tbody>
                 <tr>
-                  <td>1. E-Filing</td>
-                  <td>Form TM-A submitted & official receipt generated</td>
+                  <td><strong>1. E-Filing</strong></td>
+                  <td>Form TM-A submitted &amp; official receipt generated</td>
                   <td>Entitled to use &trade; symbol</td>
                 </tr>
                 <tr>
-                  <td>2. Formalities Check</td>
-                  <td>Registry verifies applicant details & Vienna code</td>
+                  <td><strong>2. Formalities Check</strong></td>
+                  <td>Registry verifies applicant details &amp; Vienna code</td>
                   <td>Formalities Chk Pass</td>
                 </tr>
                 <tr>
-                  <td>3. Examination</td>
-                  <td>Section 9 & 11 review; Examination Report issued</td>
+                  <td><strong>3. Examination</strong></td>
+                  <td>Section 9 &amp; 11 review; Examination Report issued</td>
                   <td>Marked for Exam / Objection</td>
                 </tr>
                 <tr>
-                  <td>4. Journal Publication</td>
+                  <td><strong>4. Journal Publication</strong></td>
                   <td>Advertised in Trade Marks Journal for 4 months</td>
                   <td>Public Opposition Window</td>
                 </tr>
                 <tr>
-                  <td>5. Registration</td>
+                  <td><strong>5. Registration</strong></td>
                   <td>Certificate of Registration issued by Registrar</td>
                   <td>Lawful right to use &reg; symbol</td>
                 </tr>
@@ -124,7 +132,9 @@ const canonical = "https://brndnur.com/resources/trademark-registration-guide/";
             </table>
           </div>
 
+          <p class="eyebrow">Risk Mitigation</p>
           <h2>5. Common Mistakes to Avoid</h2>
+          <div class="gold-rule"></div>
           <ul>
             <li>Skipping preliminary clearance searches before launching brand packaging.</li>
             <li>Selecting the wrong trademark class, leaving primary revenue streams unprotected.</li>
@@ -132,17 +142,45 @@ const canonical = "https://brndnur.com/resources/trademark-registration-guide/";
             <li>Missing statutory deadlines for responding to Examination Reports or opposition notices.</li>
           </ul>
 
+          <p class="eyebrow">Official Authorities</p>
           <h2>6. Statutory Official Sources</h2>
+          <div class="gold-rule"></div>
           <p>For official rules, fee schedules, and public search portals, refer directly to the Controller General of Patents, Designs and Trade Marks (CGPDTM) at <a href="https://ipindia.gov.in" target="_blank" rel="noopener noreferrer">ipindia.gov.in</a>.</p>
         </article>
+      </div>
+    </section>
 
-        <div class="cta-panel" style="margin-top: 48px;">
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Ready to Protect Your Brand?</p>
-          <h2>Start with a Professional Clearance Review.</h2>
+          <h2>Start with a Professional<br>Clearance Review.</h2>
           <p>Our advisory team conducts thorough similarity searches and helps you navigate class selection and documentation.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20want%20to%20register%20a%20trademark." target="_blank" rel="noopener noreferrer">Inquire on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/trademark-registration/">View Registration Services</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Inquire on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Registry Search</strong>
+              <p>Phonetic, visual, and well-known mark database inspection.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Class Precision</strong>
+              <p>Classification matching your real product and service lines.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Direct E-Filing</strong>
+              <p>Official filing receipts generated immediately from government portals.</p>
+            </div>
           </div>
         </div>
       </div>

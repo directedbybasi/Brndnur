@@ -6,15 +6,24 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/build_sitemap.mjs && astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "test": "node tests/audit_master_suite.mjs",
+    "test:master": "node tests/audit_master_suite.mjs",
+    "test:autoplay": "node tests/verify_5s_autoplay_all_sliders.mjs",
+    "test:header": "node scripts/verify_smart_header.mjs",
+    "test:typography": "node scripts/audit_32_routes_typography.mjs",
+    "test:e2e": "node tests/full_e2e_browser_suite.mjs",
+    "audit:lighthouse": "astro build && lhci autorun"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^6.0.2",
+    "@lhci/cli": "^0.15.1",
     "@types/node": "^22.10.7",
     "astro": "^5.1.8",
+    "playwright": "^1.64.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3"
   }

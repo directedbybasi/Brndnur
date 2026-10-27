@@ -20,6 +20,7 @@
 - [x] **Phase 9: Production Static Compilation**: Built cleanly via `npm run build` into `dist/` with zero errors.
 - [x] **Phase 10: Multi-Viewport Browser QA & Route Verification**: Inspected via browser automation across desktop (1440x900) and mobile (390x844). Verified 0 console errors. Verified all 32 files via automated test script.
 - [x] **Phase 11: Hostinger Deployment Configuration**: Configured `public/.htaccess` with HTTPS redirects, browser caching, and Gzip compression. Verified `dist/` output.
+- [x] **Phase 12: Editorial FAQ Section Redesign**: Re-engineered Section 8 (`#faq-preview`) on the homepage to match the minimalist editorial reference design (`scratch/reference_faq.png`). Implemented warm ivory background (`#FAF7EE`), gold-accented eyebrow with decorative rule lines, two-line Playfair Display heading, 8 numbered rows (`01`–`08`) with vertical dividers, right-aligned circular gold controls with smooth `+` to `−` state transition, indented answer alignment, and centered button linked to `/faqs/`. Verified across Desktop (1440px), Tablet (768px), and Mobile (390px).
 
 ---
 
@@ -99,10 +100,12 @@
 1. **Type-Check & Diagnostic Scan**: `npx astro check` -> 0 errors, 0 warnings, 0 hints across 44 project files.
 2. **Production Build**: `npm run build` -> 32 static routes built cleanly into `dist/` in 2.33s.
 3. **Automated QA Suite**: `python tests/verify_dist.py` -> All 32 routes, 32 unique titles, 31 sitemap URLs, robots.txt, and .htaccess passed.
-4. **Browser Subagent Inspections**:
-   - Desktop viewports (1440x900, 1366x768): Tested homepage, resources hub, guides, package details, and 404 recovery page.
-   - Mobile viewports (390x844, 360x740): Tested mobile navigation drawer, responsive card grids, touch buttons, and font scaling.
+4. **Browser Subagent & Automated Viewport QA**:
+   - Desktop viewports (1440x900, 1366x768): Tested homepage, resources hub, guides, package details, 404 recovery page, and redesigned editorial FAQ section.
+   - Tablet viewport (768x1024): Verified responsive row wrapping, icon alignment, and vertical dividers.
+   - Mobile viewports (390x844, 360x740): Tested mobile navigation drawer, responsive card grids, touch buttons, and zero horizontal overflow.
    - Console: 0 JavaScript console errors.
+5. **Editorial FAQ Test Suite**: `node tests/test_redesigned_faq.js` -> 100% passed (verified 8 numbered rows, correct sequence, `+` to `−` SVG transition, collapse/expand interaction, and view-all link).
 
 ---
 

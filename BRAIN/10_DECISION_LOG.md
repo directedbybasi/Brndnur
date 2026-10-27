@@ -11,17 +11,19 @@ This file prevents unresolved decisions from being forgotten. Update it after ea
 - [ ] Trademark Classes HTML: user says it exists, but not present in supplied project ZIP. Search workspace/user assets; import if found; otherwise document not found and implement from spec.
 - [ ] Remaining 28 route files must be checked against manifest in a full audit (four routes exist now; a separate Trademark Classes file is not confirmed).
 
-## Decisions requiring owner confirmation
-1. **Trademark fees:** current `/packages/` table shows ₹4,500 + ₹1,500 = ₹6,000 for individual/small business and ₹9,000 + ₹2,000 = ₹11,000 for company/LLP. WhatsApp library shows different professional fees/approximate totals. Which rate table is current and approved?
-2. **Brand Starter Pack:** confirm current public price, whether ₹3,500 is member-only, whether ₹4,999 is the normal price, and exact package inclusions.
-3. **JCI/JCOM offers:** confirm if currently active and eligibility/terms before publishing.
-4. **Food Brand Package:** confirm ₹12,000, exact inclusions and whether applicable government fees/other charges are included.
-5. **Gulf Return Business Package:** confirm “starting ₹18,000”, exact eligibility, scope and exclusions.
-6. **Brand Watch:** confirm current annual price range and monitoring frequency/deliverables.
-7. **Website form handling:** confirm whether the site should use WhatsApp-only enquiries or a real backend/email form.
-8. **Social accounts:** confirm official URLs before enabling social icons.
-9. **Legal policies:** owner and legal review of Privacy, Terms, Disclaimer, Refund/Cancellation and exact business practices.
-10. **Brand assets:** verify logo lockup/tagline file and exact approved TM usage. Do not reproduce uncertain TM symbols in newly drawn logo artwork.
+## Resolved Owner Decisions (Approved via Owner Interview)
+1. **Trademark fees:** APPROVED. Transparent statutory fee breakdown is standard across site:
+   - Individual / MSME / Eligible Small Business: ₹4,500 statutory government fee + ₹1,500 professional fee = **₹6,000 total per class**.
+   - Company / Standard Corporate: ₹9,000 statutory government fee + ₹2,000 professional fee = **₹11,000 total per class**.
+2. **Brand Starter Pack:** APPROVED. Display ₹4,999 as standard public price (marked 'Indicative — confirm current scope') on website. Member promotions (e.g. ₹3,500) kept offline via direct WhatsApp inquiry.
+3. **JCI/JCOM member offers:** APPROVED. Keep offline and do not publish directly on public price cards. Direct community partners to contact BRNDNUR on WhatsApp for partner quotas.
+4. **Food Brand Package:** APPROVED. Maintain base professional quote of **From ₹12,000** + statutory government fees (TM/FSSAI) payable at actuals.
+5. **Gulf Return Business Package:** APPROVED. Maintain base professional quote of **Starting ₹18,000** + statutory government charges payable at actuals depending on entity structure.
+6. **Brand Watch:** APPROVED. Dedicated surveillance across Trade Marks Journal published marks. Structured milestones from Day 0 journal advertisement to Month 4 opposition cutoff.
+7. **Website form handling:** APPROVED. 100% WhatsApp-only consultation routing (+91 90481 88899). Email submission button removed from contact form to eliminate delivery drop-offs and prevent spam.
+8. **Social accounts:** APPROVED. Generic social icons temporarily removed from header/footer until official social media channels and handles are registered and confirmed.
+9. **Legal policies & safeguards:** APPROVED. Dual-tier fee transparency (statutory non-refundable once remitted, pro-rata advisory pre-filing), Section 107 ™ vs ® compliance, non-government entity notice on all service pages.
+10. **Canonical Production Domain:** APPROVED. Canonical production domain is confirmed as `https://brndnur.com`. Official contact phone: `+91 90481 88899`, email: `brndnuradvisoryllp@gmail.com`, registered location: Manjeri, Malappuram, Kerala.
 
 ## Per-batch work log template
 Copy this block for each development pass:

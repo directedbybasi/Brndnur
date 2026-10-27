@@ -1,0 +1,32 @@
+{
+  "totalChecked": 234,
+  "passed": 232,
+  "issuesCount": 8,
+  "checks": {
+    "hasSkipLink": 232,
+    "hasMainLandmark": 232,
+    "hasHeaderLandmark": 232,
+    "hasFooterLandmark": 232,
+    "imagesWithoutAlt": 0
+  },
+  "details": [
+    {
+      "route": "/blog/",
+      "pageIssues": [
+        "Missing skip-to-content link",
+        "Missing <main id=\"main-content\"> landmark",
+        "Missing <header> landmark",
+        "Missing <footer> landmark"
+      ]
+    },
+    {
+      "route": "/trademark/",
+      "pageIssues": [
+        "Missing skip-to-content link",
+        "Missing <main id=\"main-content\"> landmark",
+        "Missing <header> landmark",
+        "Missing <footer> landmark"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "totalDistSizeBytes": 39653885,
+  "totalHtmlBytes": 10611519,
+  "averageHtmlSizeBytes": 45348,
+  "fontPreconnectConfigured": true,
+  "zeroUnneededClientHydration": true,
+  "staticOutputMode": "static"
+}

@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import CardCarousel from '../../components/CardCarousel.astro';
+import FaqItem from '../../components/FaqItem.astro';
 
 const title = "Udyam / MSME Registration Guidance | BRNDNUR Advisory LLP";
 const description = "Obtain your Udyam Registration Certificate for micro, small, and medium enterprises. Qualify for 50% trademark fee concessions and government benefits with BRNDNUR.";
 const canonical = "https://brndnur.com/udyam-msme-registration/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Udyam MSME Registration",
+  "sectionName": "Hero Section",
+  "enquiryType": "Udyam Registration Assistance",
+  "topic": "I would like assistance applying for Udyam MSME registration for my business.",
+  "details": "Enterprise structure: [e.g. Proprietorship, Firm, LLP, Company]\\nMajor activity: [Manufacturing / Services]",
+  "callToAction": "Could you please explain the documentation needed and how this secures 50% government fee concessions for trademarks?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Udyam MSME Registration",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "Udyam Application Filing",
+  "topic": "I would like to proceed with Udyam registration for my enterprise in Kerala.",
+  "details": "Aadhaar / PAN linked mobile available: [Yes / No]",
+  "callToAction": "Could you please guide me through the filing requirements and official certificate generation?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/udyam-msme-registration/";
   currentPath="/udyam-msme-registration/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/services/">Services</a>
-          <span class="sep">/</span>
-          <span class="current">Udyam MSME Registration</span>
-        </nav>
-        <p class="eyebrow">Enterprise Recognition</p>
-        <h1>Udyam / MSME Registration Assistance.</h1>
-        <p class="lead">Udyam Registration is the official recognition provided by the Ministry of Micro, Small and Medium Enterprises. It unlocks critical government benefits, priority lending access, and an immediate 50% statutory fee concession on all Indian trademark applications.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-            <span>Official Ministry of MSME Certificate</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>50% Trademark Government Fee Discount</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
-            <span>Priority Banking & Collateral-Free Loans</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Enterprise Recognition"
+      title="Udyam / MSME Registration<br>Assistance in <span>India.</span>"
+      hasGoldRule={true}
+      description="Udyam Registration is the official recognition provided by the Ministry of Micro, Small and Medium Enterprises. It unlocks critical government benefits, priority lending access, and an immediate 50% statutory fee concession on all Indian trademark applications."
+      primaryCta={{
+        text: "Get Udyam Assistance",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "MSME Trademark Package",
+        href: "/packages/individual-msme/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Official Ministry of", subtitle: "MSME Certificate" },
+        { icon: "▱", title: "50% Trademark", subtitle: "Fee Discount" },
+        { icon: "⌖", title: "Priority Banking &", subtitle: "Credit Access" }
+      ]}
+      image="/assets/udyam-hero-certificate.webp"
+      imageAlt="Indian small enterprise owner workspace with blueprints, craft samples, and strategic growth notebook"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20need%20assistance%20with%20Udyam%20MSME%20registration." target="_blank" rel="noopener noreferrer">Get Udyam Assistance &rarr;</a>
-          <a class="btn btn-outline" href="/packages/individual-msme/">MSME Trademark Package</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual Section -->
+    <!-- Split Visual Section (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/services/assets/business-support.webp" alt="BRNDNUR Udyam MSME certificate guidance and filing in Kerala" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Enterprise Empowerment</p>
-            <h2>Catalyst for Small Business Growth and Intellectual Property Savings</h2>
-            <p>For entrepreneurs, food producers, and local manufacturers in Kerala, obtaining an Udyam Registration Certificate is the most cost-effective legal step you can take. It formally verifies your entity constitution as an eligible micro, small, or medium enterprise.</p>
-            <p>Most importantly for brand owners, holding an active Udyam certificate reduces the Government of India's statutory trademark filing fee from ₹9,000 per class down to ₹4,500 per class—a direct 50% savings on every trademark filing.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/udyam-growth-catalyst.webp" alt="BRNDNUR Udyam MSME certificate guidance and filing in Kerala" width="800" height="600" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Enterprise Empowerment</p>
+          <h2>Catalyst for Small Business Growth and Trademark Savings.</h2>
+          <div class="gold-rule"></div>
+          <p>For entrepreneurs, food producers, and local manufacturers in Kerala, obtaining an Udyam Registration Certificate is the most cost-effective legal step you can take. It formally verifies your entity constitution as an eligible micro, small, or medium enterprise.</p>
+          <p>Most importantly for brand owners, holding an active Udyam certificate reduces the Government of India's statutory trademark filing fee from ₹9,000 per class down to ₹4,500 per class—a direct 50% savings on every trademark filing.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Aadhaar &amp; PAN Linked Verification</strong>
+                <p>Prompt OTP-based filing ensuring zero errors in registered business activity descriptions or NIC codes.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>Aadhaar & PAN Linking Requirement</h4>
-                <p>Udyam Registration requires an Aadhaar-linked mobile number for OTP verification, along with an active PAN card. For proprietary firms, the owner's personal PAN is used; for LLPs and companies, the entity's PAN is mandatory.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>Direct Fee Halving on Form TM-A</strong>
+                <p>Save ₹4,500 per class across every trademark application filed for your enterprise.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>Statutory Protection Against Delayed Payments</strong>
+                <p>Access to the MSME Samadhaan portal to recover outstanding dues from corporate buyers with interest.</p>
               </div>
             </div>
           </div>
@@ -75,66 +101,68 @@ const canonical = "https://brndnur.com/udyam-msme-registration/";
       </div>
     </section>
 
-    <!-- 4 Core MSME Advantages with Clean SVGs -->
+    <!-- MSME Advantages (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">Major Advantages</p>
-          <h2>Why Every Small Enterprise Should Register</h2>
-          <p>Securing an Udyam Certificate delivers substantial commercial, legal, and operational advantages:</p>
+          <h2>Why Every Small Enterprise Should Register.</h2>
+          <div class="gold-rule"></div>
+          <p>Securing an Udyam Certificate delivers substantial commercial, legal, and operational advantages.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        <CardCarousel id="udyam-advantages-carousel" ariaLabel="Udyam MSME advantages">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>50% Off Trademark Statutory Fees</h3>
+              <p>Reduces government trademark filing fees from ₹9,000 per class down to ₹4,500 per class, cutting intellectual property protection costs in half.</p>
             </div>
-            <h3>50% Off Trademark Statutory Fees</h3>
-            <p>Reduces government trademark filing fees from ₹9,000 per class down to ₹4,500 per class, cutting intellectual property protection costs in half.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>Priority Sector Bank Lending</h3>
+              <p>Banks offer concessional interest rates and collateral-free credit under the CGTMSE credit guarantee scheme for registered MSMEs.</p>
             </div>
-            <h3>Priority Sector Bank Lending</h3>
-            <p>Enables eligibility for collateral-free credit schemes (CGTMSE), lower bank interest rates, and dedicated MSME credit lines.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>Protection Against Delayed Payments</h3>
+              <p>Section 15 of the MSMED Act entitles registered enterprises to statutory interest on payments delayed beyond 45 days by commercial buyers.</p>
             </div>
-            <h3>Delayed Payment Protection</h3>
-            <p>Access to the statutory MSME Samadhaan portal to recover outstanding dues from corporate buyers with mandatory compound interest penalties.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">04</div>
+              <h3>Government Tender Preferences</h3>
+              <p>Enjoy exemption from tender earnest money deposits (EMD) and procurement waivers in state and central government bids.</p>
             </div>
-            <h3>Subsidies & Concessions</h3>
-            <p>Eligible for patent filing subsidies, ISO certification fee reimbursements, and electricity tariff concessions depending on state industrial policies.</p>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- MSME Classification & Fee Comparison Table -->
+    <!-- MSME Classification Matrix Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Classification Criteria</p>
-          <h2>Official MSME Criteria & Trademark Concessions</h2>
-          <p>Revised composite criteria under the MSME Development Act, 2006.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Statutory Thresholds</p>
+          <h2>MSME Classification Matrix &amp; Fee Comparison.</h2>
+          <div class="gold-rule"></div>
+          <p>Official classification criteria under the MSMED Act, 2006.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
                 <th>Enterprise Category</th>
-                <th>Investment in Plant & Machinery</th>
+                <th>Investment in Plant &amp; Machinery</th>
                 <th>Annual Turnover Limit</th>
                 <th>Statutory Trademark Fee (Per Class)</th>
               </tr>
@@ -170,16 +198,113 @@ const canonical = "https://brndnur.com/udyam-msme-registration/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- 3-Step Udyam Process -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Seamless Registration</p>
+          <h2>The 3-Step Udyam Registration Process.</h2>
+          <div class="gold-rule"></div>
+          <p>Obtaining your official recognition from the Ministry of Micro, Small and Medium Enterprises.</p>
+        </div>
+
+        <CardCarousel id="udyam-steps-carousel" ariaLabel="The 3-step Udyam registration process">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Aadhaar &amp; PAN Verification</h3>
+            <p>Verification of the applicant's Aadhaar-linked mobile number and business PAN to authenticate digital portal access.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>NIC Activity Mapping</h3>
+            <p>Precise mapping of National Industrial Classification (NIC) 5-digit codes covering all manufacturing, retail, or service operations.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Certificate Issuance &amp; Integration</h3>
+            <p>Delivery of your official Udyam Registration Certificate containing your unique QR code, ready for immediate trademark filing.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Udyam FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">Udyam FAQs</p>
+          <h2>Frequently Asked Questions About MSME.</h2>
+          <div class="gold-rule"></div>
+          <p>Clear facts on eligibility, government portal fee rules, and statutory fee benefits.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="Is there an official government fee for Udyam registration?"
+            answer="No. Registration on the official government Udyam portal (udyamregistration.gov.in) is completely free of statutory charges. BRNDNUR Advisory charges solely for professional document verification, 5-digit NIC code mapping, and seamless application processing."
+          />
+          <FaqItem
+            num="02"
+            question="How does Udyam save 50% on trademark registration?"
+            answer="Under the Trade Marks Rules, 2017, standard corporate applicants (such as Private Limited companies or LLPs) must pay a statutory government fee of ₹9,000 per class. However, entities that hold a valid Udyam certificate are classified as MSMEs and qualify for the reduced statutory fee of ₹4,500 per class—a direct saving of ₹4,500 per class filed."
+          />
+          <FaqItem
+            num="03"
+            question="Do retail traders and wholesale distributors qualify for Udyam?"
+            answer="Yes. The Ministry of MSME officially permits retail and wholesale traders to register under Udyam (under NIC codes 45, 46, and 47) for priority sector lending benefits and statutory intellectual property fee concessions."
+          />
+          <FaqItem
+            num="04"
+            question="Can an individual proprietor without GST obtain Udyam?"
+            answer="Yes. If your business turnover is below the mandatory GST threshold, you can obtain Udyam registration using only your personal PAN, Aadhaar, and bank account details."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Quick Turnaround</p>
-          <h2>Obtain Your Udyam Certificate.</h2>
+          <h2>Obtain Your Udyam<br>Certificate Promptly.</h2>
           <p>We verify your Aadhaar, PAN, and investment/turnover figures to file seamlessly on the official Udyam portal.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20to%20apply%20for%20Udyam%20registration." target="_blank" rel="noopener noreferrer">Apply via WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/gst-registration/">GST Registration</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Apply via WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Instant Processing</strong>
+              <p>Prompt filing upon completion of Aadhaar OTP verification.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>NIC Code Precision</strong>
+              <p>Accurate activity categorization aligned with your business model.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Immediate 50% Savings</strong>
+              <p>Use your new certificate immediately to claim the trademark discount.</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Group A: Main Pages -->
-  <url>
+<url>
     <loc>https://brndnur.com/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://brndnur.com/trademark-registration/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://brndnur.com/services/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://brndnur.com/packages/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -25,21 +28,25 @@
   <!-- Group B: Company Information -->
   <url>
     <loc>https://brndnur.com/about/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://brndnur.com/how-it-works/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://brndnur.com/faqs/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://brndnur.com/contact/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -47,31 +54,37 @@
   <!-- Group C: Trademark Services -->
   <url>
     <loc>https://brndnur.com/trademark-classes/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/brand-name-search/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/wordmark-registration/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/logo-trademark-registration/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/trademark-renewal/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://brndnur.com/trademark-monitoring/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -79,21 +92,25 @@
   <!-- Group D: Business Registration Services -->
   <url>
     <loc>https://brndnur.com/gst-registration/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/udyam-msme-registration/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/fssai-registration/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/business-setup/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -101,21 +118,25 @@
   <!-- Group E: Detailed Packages -->
   <url>
     <loc>https://brndnur.com/packages/individual-msme/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/packages/company-llp/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/packages/food-brand/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/packages/gulf-return-business/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -123,26 +144,31 @@
   <!-- Group F: Resources & Educational Guides -->
   <url>
     <loc>https://brndnur.com/resources/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brndnur.com/resources/trademark-registration-guide/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://brndnur.com/resources/trademark-class-guide/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://brndnur.com/resources/brand-name-search-guide/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://brndnur.com/resources/trademark-application-process/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -150,22 +176,1228 @@
   <!-- Group G: Legal & Policy Pages -->
   <url>
     <loc>https://brndnur.com/privacy-policy/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://brndnur.com/terms-and-conditions/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://brndnur.com/disclaimer/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://brndnur.com/refund-cancellation-policy/</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <!-- Group H: Kerala District Statutory Guides (200 Resource Articles) -->
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-thiruvananthapuram-guide/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-name-availability-kazhakkoottam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-it-startups-technopark/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-classes-saas-digital-businesses-thiruvananthapuram/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-registration-brand-protection-cloud-kitchens-kazhakkoottam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-homestays-hospitality-varkala/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/choose-protect-brand-name-tourism-kovalam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-textile-brands-balaramapuram/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-small-businesses-attingal/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-checklist-retailers-neyyattinkara/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/home-based-businesses-nedumangad-brand-protection/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-vs-wordmark-registration-kattakada/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-classes-seafood-packaged-food-vizhinjam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-brand-monitoring-thiruvananthapuram/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-kollam-guide/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/check-brand-name-availability-kottarakkara/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-cashew-packaged-food-kollam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-name-registration-seafood-food-karunagappally/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-manufacturers-traders-kundara/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-registration-checklist-punalur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-local-food-brands-in-paravur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/protecting-retail-shop-names-and-logos-in-chathannoor/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-tourism-and-hospitality-businesses-in-thenmala/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-small-businesses-in-sasthamkotta-can-build-a-protectable-brand/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/choosing-trademark-classes-for-handicraft-and-consumer-product-businesses-in-kollam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-and-trademark-registration-a-checklist-for-wholesale-traders-in-kollam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-basics-for-online-sellers-starting-from-anchal/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/what-to-do-when-a-similar-business-name-already-exists-in-kollam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-pathanamthitta-a-guide-for-first-time-applicants/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-conduct-a-brand-name-search-for-businesses-in-thiruvalla/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-for-retailers-and-service-businesses-in-adoor/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-registration-for-food-brands-in-pandalam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-manufacturers-and-entrepreneurs-in-ranni/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-planning-for-tourism-and-travel-businesses-around-konni/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-bakeries-and-packaged-food-sellers-in-kozhencherry-can-protect-their-brand/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-checklist-for-traders-in-mallappally/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-select-a-business-name-before-registering-a-brand-in-adoor/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/wordmark-vs-logo-which-is-more-suitable-for-businesses-in-thiruvalla/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-for-professional-service-businesses-in-pathanamthitta/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/common-trademark-filing-mistakes-made-by-first-time-business-owners/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-what-established-businesses-in-pathanamthitta-should-know/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/starting-a-business-after-returning-from-the-gulf-a-guide-for-thiruvalla-entrepreneurs/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-alappuzha-a-local-business-owners-guide/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-protect-the-brand-name-of-a-houseboat-or-tourism-business-in-alappuzha/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-name-ideas-and-trademark-checks-for-homestays-in-alappuzha/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-packaged-food-businesses-in-cherthala/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-coir-product-brands-in-cherthala/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-online-sellers-in-kayamkulam-can-register-and-protect-their-brand/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-classes-for-seafood-and-processed-food-businesses-in-aroo/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-for-cafes-restaurants-and-hospitality-businesses-in-mararikulam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-choose-the-right-trademark-class-for-coir-products-in-alappuzha/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-trademark-registration-for-tourism-businesses-in-ambalappuzha/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-and-brand-protection-for-retailers-in-mavelikkara/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-registration-checklist-for-new-ventures-in-chengannur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-monitoring-for-hospitality-and-retail-brands-in-alappuzha/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-product-manufacturers-in-alappuzha/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-kottayam-process-documents-and-costs/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/wordmark-vs-logo-trademark-for-new-brands-in-pala/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-protect-rubber-based-product-brands-in-the-kottayam-region/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-businesses-in-changanassery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-publishing-printing-and-educational-brands-in-kottayam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-packaged-food-businesses-in-ettumanoor/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-checklist-for-traders-in-vaikom/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-boutiques-and-clothing-businesses-in-erattupetta-can-protect-their-logos/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-name-search-for-new-retail-businesses-in-kanjirappally/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-choose-a-distinctive-business-name-in-kottayam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-classes-for-cafes-and-food-brands-in-pala/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/registration-checklist-for-professional-service-businesses-in-kottayam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-and-monitoring-for-established-brands-in-changanassery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-small-businesses-in-kottayam-can-protect-their-brands-online/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-thodupuzha-a-step-by-step-business-guide/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-protect-a-coffee-brand-in-munnar/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-for-spice-product-brands-in-idukki/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/choosing-trademark-classes-for-homestays-and-hospitality-businesses-in-munnar/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-packaged-spice-businesses-in-kattappana/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-manufacturers-in-nedumkandam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-for-tourism-and-activity-operators-in-thekkady/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-check-brand-name-availability-before-launching-in-adimali/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-trademark-registration-for-local-food-brands-in-kumily/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-checklist-for-retail-shops-in-thodupuzha/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-cafes-in-munnar-can-select-and-protect-a-distinctive-brand-name/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/branding-and-registration-checklist-for-spice-producers-in-idukki/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-setup-considerations-for-homestay-owners-in-idukki/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-for-tourism-and-product-brands-in-idukki/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-kochi-a-complete-guide-for-entrepreneurs/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-check-brand-name-availability-for-businesses-in-kakkanad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-saas-and-technology-startups-around-infopark/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/wordmark-vs-logo-registration-for-e-commerce-brands-in-edappally/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-and-business-registration-checklist-for-entrepreneurs-in-aluva/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-cloud-kitchens-in-kochi/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-classes-for-product-manufacturers-in-perumbavoor/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-manufacturing-businesses-in-kalamassery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-beauty-retail-and-consumer-brands-in-thrippunithura/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-choose-a-business-name-for-a-new-venture-in-angamaly/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-for-cafes-and-hospitality-businesses-in-fort-kochi/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-for-hospitality-and-retail-brands-in-maradu/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-trademark-registration-for-agencies-and-service-businesses-in-muvattupuzha/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-businesses-in-ernakulam-can-respond-to-brand-copying-online/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-thrissur-what-business-owners-should-prepare/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-jewellery-and-gold-retail-brands-in-thrissur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-jewellery-businesses-can-check-brand-name-availability-before-expansion/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-classes-for-wellness-and-consumer-product-brands-in-thrissur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-packaged-snack-brands-in-irinjalakuda/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-furniture-and-product-manufacturers-in-kunnamkulam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-conduct-a-brand-name-search-for-businesses-in-chalakudy/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-registration-checklist-for-retailers-in-kodungallur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-manufacturers-in-wadakkanchery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-planning-for-tourism-and-hospitality-businesses-in-guruvayur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-clothing-and-textile-businesses-in-thrissur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/registration-checklist-for-bakeries-and-packaged-food-businesses-in-thrissur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-and-trademark-planning-for-wholesale-traders-in-thrissur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-for-established-retail-and-product-brands-in-thrissur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-palakkad-a-guide-for-small-businesses/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-planning-for-agricultural-product-brands-in-chittur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/choosing-trademark-classes-for-packaged-food-and-spice-brands-in-mannarkkad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-manufacturers-in-kanjikode/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-boutiques-and-online-sellers-in-ottapalam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-checklist-for-distributors-in-shoranur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-packaged-food-brands-in-alathur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-check-business-name-availability-in-pattambi/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-considerations-for-export-oriented-businesses-near-walayar/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-trademark-registration-for-service-businesses-in-palakkad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-protect-a-regional-rice-or-millet-product-brand-in-palakkad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-planning-for-agriculture-related-businesses-in-palakkad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-and-monitoring-for-established-businesses-in-palakkad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-launch-checklist-for-entrepreneurs-in-cherpulassery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-malappuram-a-guide-for-local-businesses/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-check-brand-name-availability-for-businesses-in-manjeri/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/wordmark-vs-logo-trademark-for-brands-in-kottakkal/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-registration-checklist-for-service-businesses-in-perinthalmanna/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-clothing-and-garment-brands-in-tirur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-micro-businesses-in-valanchery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-food-brands-in-kondotty/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-for-online-sellers-starting-in-nilambur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-for-seafood-and-food-product-businesses-in-ponnani/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-retail-shops-in-tanur-can-protect-their-business-names-and-logos/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-checklist-for-traders-in-tirurangadi/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/starting-a-business-after-returning-from-the-gulf-a-malappuram-founders-checklist/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-name-search-and-trademark-planning-for-e-commerce-sellers-in-edappal/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-food-cosmetics-and-apparel-brands-in-parappanangadi/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-kozhikode-complete-guide-for-entrepreneurs/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-check-brand-name-availability-before-launching-in-kozhikode/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-food-and-packaged-snack-brands-in-kozhikode/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-trademark-registration-for-restaurants-and-cafes-in-beypore/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-for-furniture-and-craft-product-businesses-in-feroke/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-and-business-setup-checklist-for-retailers-in-ramanattukara/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-manufacturers-in-koyilandy/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-home-based-food-businesses-in-mukkam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-it-and-digital-agencies-in-kozhikode/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-beauty-and-personal-care-brands-in-kozhikode-can-select-a-trademark-class/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-for-clothing-and-retail-brands-in-vadakara/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-online-sellers-in-koduvally-can-protect-their-product-brands/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-launch-checklist-for-first-time-founders-in-perambra/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-and-brand-monitoring-for-businesses-in-kozhikode/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-wayanad-a-guide-for-local-entrepreneurs/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-protect-a-coffee-brand-in-wayanad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-for-spice-product-brands-in-sulthan-bathery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-classes-for-homestays-and-tourism-businesses-in-vythiri/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-registration-checklist-for-tourism-entrepreneurs-in-meppadi/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-trademark-registration-for-local-food-brands-in-pulpally/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-coffee-roasters-in-mananthavady/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-packaged-produce-in-ambalavayal/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-tourism-businesses-in-kalpetta-can-choose-a-distinctive-brand-name/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-planning-for-honey-and-spice-product-brands-in-wayanad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/online-brand-protection-for-small-agricultural-product-sellers-in-wayanad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-checklist-for-retail-businesses-in-kalpetta/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-monitoring-for-coffee-spice-and-tourism-brands-in-wayanad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/new-brand-launch-checklist-for-small-businesses-across-wayanad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-kannur-a-practical-guide-for-businesses/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-handloom-and-textile-brands-in-kannur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-food-brands-in-thalassery-can-check-brand-name-availability/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-trademark-registration-for-boutiques-in-payyanur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-classes-for-furniture-and-product-businesses-in-iritty/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-small-manufacturers-in-mattannur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-bakery-and-snack-brands-in-thalassery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-protection-for-tourism-businesses-near-muzhappilangad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-registration-checklist-for-traders-in-taliparamba/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-online-sellers-in-kannur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-name-vs-trademark-what-founders-in-kuthuparamba-should-know/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-local-food-product-brands-in-panoor-can-protect-their-names/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-registration-checklist-for-entrepreneurs-in-dharmadam/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-and-monitoring-for-established-businesses-in-kannur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-kasaragod-a-business-owners-guide/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-to-check-brand-name-availability-for-businesses-in-kanhangad/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/logo-trademark-registration-for-retailers-in-nileshwaram/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-cashew-and-food-product-brands-in-kasaragod/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/udyam-registration-for-local-entrepreneurs-in-uppala/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/fssai-and-trademark-planning-for-food-businesses-in-manjeshwaram/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-protection-for-handloom-and-textile-businesses-in-kasaragod/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/brand-registration-considerations-for-homestays-and-tourism-businesses-in-bekal/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/how-businesses-in-kanhangad-can-respond-to-similar-brand-names/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-planning-for-e-commerce-sellers-in-kasaragod/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/choosing-trademark-classes-for-spice-product-brands-in-kasaragod/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/branding-and-trademark-checklist-for-local-product-manufacturers/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/gst-and-business-registration-questions-for-small-traders-in-cheruvathur/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-renewal-and-monitoring-for-businesses-across-kasaragod/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/trademark-registration-in-kerala-a-complete-guide-to-the-application-process-documents-and-fees/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/business-registration-across-kerala-a-checklist-for-gst-udyam-fssai-and-brand-protection/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/choosing-the-right-trademark-class-for-kerala-businesses-examples-from-food-fashion-technology-and-tourism/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brndnur.com/resources/starting-a-business-in-kerala-after-returning-from-the-gulf-brand-registration-and-business-setup-checklist/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -1,9 +1,30 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import CardCarousel from '../../components/CardCarousel.astro';
+import FaqItem from '../../components/FaqItem.astro';
 
 const title = "How It Works | BRNDNUR Advisory LLP";
 const description = "Understand the BRNDNUR client journey: from initial inquiry and preliminary search to scope confirmation and application tracking.";
 const canonical = "https://brndnur.com/how-it-works/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "How It Works",
+  "sectionName": "Hero Section",
+  "enquiryType": "Advisory Process Guidance",
+  "topic": "I have reviewed your service workflow and would like guidance on getting started with my enquiry.",
+  "callToAction": "Could you please explain the first step and the information I should prepare?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "How It Works",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "Process Onboarding",
+  "topic": "I understand your 4-stage advisory methodology and am ready to begin with my brand or business enquiry.",
+  "details": "Brand / Service of interest: [Please specify]",
+  "callToAction": "Could you please connect me with a coordinator in Manjeri to start the preliminary assessment?"
+});
 ---
 
 <BaseLayout
@@ -13,233 +34,305 @@ const canonical = "https://brndnur.com/how-it-works/";
   currentPath="/how-it-works/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <span class="current">How It Works</span>
-        </nav>
-        <p class="eyebrow">Our Advisory Process</p>
-        <h1>A Clearer Way to Protect and Build.</h1>
-        <p class="lead">We believe working with a business advisory should be straightforward, transparent, and completely free of confusing jargon. Here is how we collaborate with you from first contact to execution.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Structured 4-Step Journey</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Trade Marks Registry Guidelines</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <span>Milestone-Driven Tracking</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Our Advisory Process"
+      title="A Clearer Way to<br><span>Protect and Build.</span>"
+      hasGoldRule={true}
+      description="We believe working with a business advisory should be straightforward, transparent, and completely free of confusing jargon. Here is how we collaborate with you from first contact to execution."
+      primaryCta={{
+        text: "Start an Inquiry",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "View Service Packages",
+        href: "/packages/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Structured 4-Step", subtitle: "Advisory Journey" },
+        { icon: "▱", title: "Statutory Registry", subtitle: "Due Diligence" },
+        { icon: "⌖", title: "Milestone-Driven", subtitle: "Client Tracking" }
+      ]}
+      image="/assets/how-hero-workflow.webp"
+      imageAlt="BRNDNUR Advisory structured consultation and filing process workspace"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20to%20discuss%20the%20process." target="_blank" rel="noopener noreferrer">Start an Inquiry &rarr;</a>
-          <a class="btn btn-outline" href="/packages/">View Service Packages</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4-Step Journey Section -->
+    <!-- 4-Step Journey Section (Harmonized with Homepage Timeline Steps) -->
     <section class="section">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">The 4-Step Journey</p>
-          <h2>From Consultation to Filing and Protection</h2>
+          <h2>From Consultation to Filing and Protection.</h2>
+          <div class="gold-rule"></div>
           <p>Every business engagement follows an established sequence designed to safeguard your brand interests and confirm mutual expectations.</p>
         </div>
 
-        <div class="journey-grid">
-          <div class="journey-card">
-            <div class="journey-header">
-              <div class="journey-number">01</div>
-              <span class="journey-step-tag">Discovery</span>
+        <CardCarousel id="how-steps-carousel" ariaLabel="The 4-Step Journey">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
             </div>
             <h3>Share Your Vision</h3>
             <p>Tell us your brand name, proposed business constitution (Sole Proprietor, LLP, or Private Limited), and your specific commercial products or services.</p>
-          </div>
+          </article>
 
-          <div class="journey-card">
-            <div class="journey-header">
-              <div class="journey-number">02</div>
-              <span class="journey-step-tag">Feasibility</span>
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
             </div>
-            <h3>Search & Analysis</h3>
+            <h3>Search &amp; Analysis</h3>
             <p>We perform an indicative preliminary search on the official Trade Marks Registry database, examine conflicting phonetics, and map appropriate NICE classes.</p>
-          </div>
+          </article>
 
-          <div class="journey-card">
-            <div class="journey-header">
-              <div class="journey-number">03</div>
-              <span class="journey-step-tag">Confirmation</span>
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
             </div>
-            <h3>Scope & Authorization</h3>
+            <h3>Scope &amp; Authorization</h3>
             <p>We provide a formal written breakdown itemizing applicable government statutory fees versus professional fees. You review and authorize before filing.</p>
-          </div>
+          </article>
 
-          <div class="journey-card">
-            <div class="journey-header">
-              <div class="journey-number">04</div>
-              <span class="journey-step-tag">Filing</span>
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">04</span>
+              <span class="step-line"></span>
             </div>
-            <h3>Execution & Tracking</h3>
-            <p>We assemble documentation, file the application, provide your official government filing receipt, and keep you updated at each milestone.</p>
+            <h3>Execution &amp; Tracking</h3>
+            <p>We assemble documentation, file the application, provide your official government filing receipt, and keep you updated at each examination milestone.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Photographic Split Feature: Due Diligence (Harmonized with Reference Split) -->
+    <section class="section section-alt">
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/how-prep-research.webp" alt="BRNDNUR Trademark research and database verification in progress" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Behind the Scenes</p>
+          <h2>How We Research and Prepare Your Application.</h2>
+          <div class="gold-rule"></div>
+          <p>Filing a trademark without deep preliminary due diligence can lead to costly objections under Section 9 (absolute grounds of refusal) or Section 11 (relative grounds based on earlier identical or similar marks).</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Phonetic &amp; Visual Matching</strong>
+                <p>We check spelling variations, similar pronunciations, and visual similarities across active and pending marks.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>NICE Class Precision</strong>
+                <p>We precisely formulate your description of goods and services to avoid vague classifications that invite registry queries.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>User Date Documentary Affidavits</strong>
+                <p>If you claim prior commercial usage, we guide you on compiling valid documentary affidavits and invoices.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Photographic Split Feature: Behind the Scenes -->
-    <section class="section section-alt">
+    <!-- Document Preparation Checklist (Harmonized with Service Cards) -->
+    <section class="section">
       <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/services/assets/process-search.webp" alt="BRNDNUR Trademark research and database verification in progress" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Behind the Scenes</p>
-            <h2>How We Research and Prepare Your Application</h2>
-            <p>Filing a trademark without deep preliminary due diligence can lead to costly objections under Section 9 (absolute grounds of refusal) or Section 11 (relative grounds based on earlier identical or similar marks).</p>
-            <p>Our advisory team conducts multi-layered checks:</p>
+        <div class="section-heading">
+          <p class="eyebrow">Preparation Checklist</p>
+          <h2>What You Need to Get Started.</h2>
+          <div class="gold-rule"></div>
+          <p>Having these foundational business details prepared ensures the fastest turnaround for your preliminary search and filing draft.</p>
+        </div>
+
+        <CardCarousel id="how-checklist-carousel" ariaLabel="Preparation Checklist">
+          <article class="service-card">
+            <img src="/assets/how-step-search.webp" alt="Brand Identity Representation" width="1000" height="750" loading="lazy" />
+            <div class="service-body">
+              <h3>Brand Identity Materials</h3>
+              <p>Your brand name in exact text form, or your high-resolution logo artwork (JPEG/PNG) if applying for a graphical device mark.</p>
+              <a class="text-link" href="/wordmark-registration/">Learn More <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="/assets/how-step-business.webp" alt="Applicant Entity Details" width="1000" height="750" loading="lazy" />
+            <div class="service-body">
+              <h3>Applicant Constitution</h3>
+              <p>PAN, Aadhaar for individual proprietors; Certificate of Incorporation, LLP Agreement, or Partnership Deed for registered firms.</p>
+              <a class="text-link" href="/business-setup/">Learn More <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="/assets/how-step-filing.webp" alt="Statutory Concession Certificates" width="1000" height="750" loading="lazy" />
+            <div class="service-body">
+              <h3>MSME / Startup Certificate</h3>
+              <p>Valid Udyam Registration certificate or DPIIT Startup recognition to claim the 50% statutory government fee concession.</p>
+              <a class="text-link" href="/udyam-msme-registration/">Learn More <span>→</span></a>
+            </div>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Scope & Clarity: What You Share vs What We Discuss -->
+    <section class="section section-alt">
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Engagement Clarity</p>
+          <h2>Before Work Begins.</h2>
+          <div class="gold-rule"></div>
+          <p>We believe in absolute clarity before any professional or statutory commitment is made.</p>
+        </div>
+
+        <div class="card-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+          <div style="background: rgba(255, 252, 246, 0.9); border: 1px solid var(--line); border-radius: 4px; padding: 2rem;">
+            <p class="eyebrow" style="margin-bottom: .5rem;">Information You Provide</p>
+            <h3 style="font-family: var(--sans); font-weight: 600; font-size: 1.35rem; color: var(--navy); margin-bottom: 1rem;">What You Share With Us</h3>
             <ul class="check-list">
-              <li>
-                <div class="check">✓</div>
-                <div><strong>Phonetic & Visual Matching:</strong> We check spelling variations, similar pronunciations, and visual similarities across active and pending marks.</div>
-              </li>
-              <li>
-                <div class="check">✓</div>
-                <div><strong>Class Specification:</strong> We precisely formulate your description of goods and services to avoid vague classifications that invite registry queries.</div>
-              </li>
-              <li>
-                <div class="check">✓</div>
-                <div><strong>User Date Evidence:</strong> If you claim prior commercial usage, we guide you on compiling valid documentary affidavits and invoices.</div>
-              </li>
+              <li><span class="check">✓</span><span>Proposed brand name, slogan, or high-resolution logo artwork.</span></li>
+              <li><span class="check">✓</span><span>Detailed list of commercial goods sold or services delivered.</span></li>
+              <li><span class="check">✓</span><span>Applicant business constitution (Sole Proprietorship, LLP, Pvt Ltd).</span></li>
+              <li><span class="check">✓</span><span>Date of first commercial usage in India, supported by invoice records if claiming prior use.</span></li>
+            </ul>
+          </div>
+
+          <div style="background: rgba(255, 252, 246, 0.9); border: 1px solid var(--line); border-radius: 4px; padding: 2rem;">
+            <p class="eyebrow" style="margin-bottom: .5rem;">Our Advisory Commitment</p>
+            <h3 style="font-family: var(--sans); font-weight: 600; font-size: 1.35rem; color: var(--navy); margin-bottom: 1rem;">What BRNDNUR Clarifies</h3>
+            <ul class="check-list">
+              <li><span class="check">✓</span><span>Indicative availability risk appraisal based on official registry data.</span></li>
+              <li><span class="check">✓</span><span>Precise NICE class mapping across all 45 categories to avoid over-filing.</span></li>
+              <li><span class="check">✓</span><span>Transparent written fee breakdown: official government fee vs advisory charge.</span></li>
+              <li><span class="check">✓</span><span>Direct official e-filing receipts and milestone tracking updates.</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Preparation Checklist with Clean SVGs -->
+    <!-- FAQs Section (Per BRAIN/03_PAGE_SPECS/01_MAIN_PAGES.md) -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Information to Prepare</p>
-          <h2>What You Should Have Ready</h2>
-          <p>To ensure our introductory consultation is efficient and tailored, having these basic details at hand is helpful:</p>
+      <div class="container" style="max-width: 860px;">
+        <div class="section-heading">
+          <p class="eyebrow">Common Questions</p>
+          <h2>Questions About the Process.</h2>
+          <div class="gold-rule"></div>
+          <p>Clear, direct answers about working with BRNDNUR Advisory LLP.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
-            </div>
-            <h3>Brand Representation</h3>
-            <p>The exact wordmark spelling, tagline, or high-resolution logo artwork (JPEG/PNG) you wish to protect under trademark law.</p>
-          </div>
-
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
-            <h3>Applicant & MSME Details</h3>
-            <p>Identity and address proof of the applicant, along with an active Udyam MSME certificate if eligible for 50% statutory fee concessions.</p>
-          </div>
-
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <h3>Commercial Description</h3>
-            <p>A concise summary of the goods manufactured, sold, or services provided, including your current date of first commercial use in India if applicable.</p>
-          </div>
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="What happens immediately after I send an inquiry?"
+            answer="An advisory coordinator reviews your brand name and commercial industry, conducts a preliminary classification screening, and contacts you via WhatsApp or phone to discuss likely filing options and scope."
+          />
+          <FaqItem
+            num="02"
+            question="Does a preliminary search guarantee that my trademark will be registered?"
+            answer="No. A preliminary search identifies potentially identical or phonetically similar conflicting marks currently on record. The statutory decision to approve, object, or advertise a mark rests exclusively with the Trade Marks Registry (CGPDTM)."
+          />
+          <FaqItem
+            num="03"
+            question="How are fees confirmed before any work begins?"
+            answer="You receive a formal, itemized quotation distinguishing official Government fees (e.g. ₹4,500 per class for MSME/Individuals or ₹9,000 for standard companies) from BRNDNUR professional advisory fees. Work commences only upon your written approval."
+          />
+          <FaqItem
+            num="04"
+            question="Can everything be completed remotely without visiting your office?"
+            answer="Yes. All consultation, search documentation, digital authorizations (Power of Attorney Form TM-48), and e-filing operations are completed 100% digitally for clients across Kerala, India, and NRI founders abroad."
+          />
         </div>
       </div>
     </section>
 
-    <!-- Regulatory Timeline Expectations Table -->
+    <!-- Related Services Grid -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Realistic Timelines</p>
-          <h2>Trademark Processing Stages in India</h2>
-          <p>Indian trademark registration follows a multi-stage statutory procedure governed by the Trade Marks Act, 1999.</p>
+        <div class="section-heading">
+          <p class="eyebrow">Explore Relevant Services</p>
+          <h2>Find the Right Starting Point.</h2>
+          <div class="gold-rule"></div>
+          <p>Depending on your current business stage, explore our dedicated services and packages.</p>
         </div>
 
-        <div class="bn-table-wrap">
-          <table class="bn-table">
-            <thead>
-              <tr>
-                <th>Stage</th>
-                <th>Estimated Duration</th>
-                <th>Key Milestone & Deliverable</th>
-                <th>Applicant Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>1. Preliminary Search & Class Advice</strong></td>
-                <td>24 – 48 Hours</td>
-                <td>Conflict report & recommended NICE class list</td>
-                <td>Review & approve proposed marks</td>
-              </tr>
-              <tr>
-                <td><strong>2. Application Filing (Form TM-A)</strong></td>
-                <td>1 – 2 Working Days</td>
-                <td>Official filing receipt & TM application number issued; right to use &trade; symbol</td>
-                <td>Sign Form TM-48 (Authorization)</td>
-              </tr>
-              <tr>
-                <td><strong>3. Registry Examination</strong></td>
-                <td>1 – 6 Months</td>
-                <td>Registry issues Examination Report (Acceptance or Examination Query)</td>
-                <td>Review report with advisor</td>
-              </tr>
-              <tr>
-                <td><strong>4. Journal Publication</strong></td>
-                <td>4 Months</td>
-                <td>Published in the weekly Trade Marks Journal for public review</td>
-                <td>Opposition monitoring window</td>
-              </tr>
-              <tr>
-                <td><strong>5. Registration Certificate</strong></td>
-                <td>~7 – 12 Months</td>
-                <td>Official Certificate of Registration issued; lawful right to use &reg; symbol</td>
-                <td>Valid for 10 years; renewable</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <CardCarousel id="how-services-carousel" ariaLabel="Explore Relevant Services">
+          <article class="service-card">
+            <img src="/assets/how-choice-start.webp" alt="Brand name search clearance" width="1000" height="750" loading="lazy" />
+            <div class="service-body">
+              <h3>Brand Name Search</h3>
+              <p>Verify whether your desired commercial trade name is available before investing in signage, labels, and marketing.</p>
+              <a class="text-link" href="/brand-name-search/">Explore Search <span>→</span></a>
+            </div>
+          </article>
 
-        <div class="advisory-notice">
-          <div class="advisory-notice-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <div class="advisory-notice-content">
-            <h4>Statutory Timeline Clarification</h4>
-            <p>Processing timelines at the Trade Marks Registry (Chennai jurisdiction for Kerala applicants) are managed by the Controller General of Patents, Designs and Trade Marks (CGPDTM). BRNDNUR guarantees prompt filing within 1–2 business days of authorization, while subsequent examination intervals depend entirely on official registry workload.</p>
-          </div>
-        </div>
+          <article class="service-card">
+            <img src="/assets/how-choice-scale.webp" alt="Trademark registration services" width="1000" height="750" loading="lazy" />
+            <div class="service-body">
+              <h3>Trademark Registration</h3>
+              <p>End-to-end filing guidance across all 45 classes, document preparation, and official e-filing submission.</p>
+              <a class="text-link" href="/trademark-registration/">Learn More <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="/assets/how-choice-protect.webp" alt="Service Packages & Pricing" width="1000" height="750" loading="lazy" />
+            <div class="service-body">
+              <h3>Packages &amp; Pricing</h3>
+              <p>Transparent bundles designed for individual proprietors, growing food enterprises, and corporate entities.</p>
+              <a class="text-link" href="/packages/">View Packages <span>→</span></a>
+            </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-panel">
-          <p class="eyebrow">Ready to Begin?</p>
-          <h2>Let’s Discuss the Right Route for Your Brand.</h2>
-          <p>Reach out to our advisory team today for an honest, confidential discussion regarding your requirements.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20to%20discuss%20my%20application." target="_blank" rel="noopener noreferrer">Discuss on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/faqs/">Browse FAQs</a>
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="eyebrow">Get Started Today</p>
+          <h2>Ready to Begin Your Brand's Protection Journey?</h2>
+          <p>Send us your brand name and commercial details on WhatsApp. Our advisory team in Manjeri will guide you through the exact next steps.</p>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Discuss Your Process on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Fast Response</strong>
+              <p>Connect directly with our advisory team.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Confidential Review</strong>
+              <p>Your brand concept remains completely private.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>End-to-End Guidance</strong>
+              <p>Clear communication across every statutory stage.</p>
+            </div>
           </div>
         </div>
       </div>

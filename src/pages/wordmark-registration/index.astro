@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import CardCarousel from '../../components/CardCarousel.astro';
+import FaqItem from '../../components/FaqItem.astro';
 
 const title = "Wordmark Registration in India | BRNDNUR Advisory LLP";
 const description = "Protect your brand name, business name, or slogan as a registered wordmark in India. Learn the advantages of wordmark filing over visual logo protection.";
 const canonical = "https://brndnur.com/wordmark-registration/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Wordmark Registration",
+  "sectionName": "Hero Section",
+  "enquiryType": "Wordmark Registration",
+  "topic": "I would like to register my brand name as a wordmark for statutory nationwide protection.",
+  "details": "Proposed wordmark: [Please enter brand name]\\nTrade goods/services: [Please describe]",
+  "callToAction": "Could you please explain the wordmark filing procedure, applicable fees, and next steps?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Wordmark Registration",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "Wordmark Filing Consultation",
+  "topic": "I would like to consult with an advisor regarding filing a wordmark application under Form TM-A.",
+  "details": "Brand name: [Please enter]",
+  "callToAction": "Could you please evaluate phonetic distinctiveness and guide me on filing?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/wordmark-registration/";
   currentPath="/wordmark-registration/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/services/">Services</a>
-          <span class="sep">/</span>
-          <span class="current">Wordmark Registration</span>
-        </nav>
-        <p class="eyebrow">Text-Only Trademark Protection</p>
-        <h1>Wordmark Registration Support in India.</h1>
-        <p class="lead">A wordmark registration protects the actual words, letters, and numbers of your brand name across any font, color, or graphic arrangement. It offers the broadest scope of commercial name protection available under Indian trademark law.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
-            <span>Broadest Scope of Legal Defense</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
-            <span>Valid Across Any Font or Color</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>10-Year Renewable Protection</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Text-Only Trademark Protection"
+      title="Wordmark Registration<br>Support in <span>India.</span>"
+      hasGoldRule={true}
+      description="A wordmark registration protects the actual words, letters, and numbers of your brand name across any font, color, or graphic arrangement. It offers the broadest scope of commercial name protection available under Indian trademark law."
+      primaryCta={{
+        text: "Register a Wordmark",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "Compare with Logo",
+        href: "/logo-trademark-registration/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Broadest Legal", subtitle: "Defense Scope" },
+        { icon: "▱", title: "Valid Across", subtitle: "Any Font or Color" },
+        { icon: "⌖", title: "10-Year Renewable", subtitle: "Protection" }
+      ]}
+      image="/assets/wordmark-hero-typography.webp"
+      imageAlt="Typography design specimen, leather book, and brass letter blocks on a sunlit studio desk"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20want%20to%20register%20a%20wordmark." target="_blank" rel="noopener noreferrer">Register a Wordmark &rarr;</a>
-          <a class="btn btn-outline" href="/logo-trademark-registration/">Compare with Logo Trademark</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual Section -->
+    <!-- Split Visual Section (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/assets/service-trademark.webp" alt="BRNDNUR Wordmark registration documentation and trademark filing" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Strategic Asset</p>
-            <h2>The Foundation of Brand Exclusivity</h2>
-            <p>When you register a wordmark, your legal ownership covers the text itself. Whether your brand name is displayed on an e-commerce website header, embossed on physical merchandise, printed on invoices, or announced in broadcast audio, your trademark rights apply.</p>
-            <p>Unlike logo registrations which restrict protection to a specific graphical arrangement, a wordmark allows your company to evolve its visual identity and design styles without relinquishing statutory ownership.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/wordmark-foundation-exclusivity.webp" alt="BRNDNUR Wordmark registration documentation and trademark filing" width="800" height="600" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Strategic Asset</p>
+          <h2>The Foundation of Brand Exclusivity.</h2>
+          <div class="gold-rule"></div>
+          <p>When you register a wordmark, your legal ownership covers the text itself. Whether your brand name is displayed on an e-commerce website header, embossed on physical merchandise, printed on invoices, or announced in broadcast audio, your trademark rights apply.</p>
+          <p>Unlike logo registrations which restrict protection to a specific graphical arrangement, a wordmark allows your company to evolve its visual identity and design styles without relinquishing statutory ownership.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Section 9 Distinctiveness</strong>
+                <p>Ensuring your mark is distinctive and capable of distinguishing goods or services in Indian commerce.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>Distinctiveness Rule (Section 9)</h4>
-                <p>Wordmarks must be distinctive. Coined words (e.g. Kodak), arbitrary names (e.g. Apple for computers), or suggestive terms enjoy much higher registration success than descriptive words that simply describe product qualities.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>Rebranding Immunity</strong>
+                <p>Update your logo styling, typography, packaging, or brand colors without needing to re-file your trademark.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>Marketplace Enforcement</strong>
+                <p>Powerful legal standing to remove infringing competitor listings on Amazon, Flipkart, and digital marketplaces.</p>
               </div>
             </div>
           </div>
@@ -75,59 +101,61 @@ const canonical = "https://brndnur.com/wordmark-registration/";
       </div>
     </section>
 
-    <!-- 3 Core Advantages with Clean SVGs -->
+    <!-- Core Advantages (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">Strategic Value</p>
-          <h2>Why Seasoned Enterprises Prioritize Wordmarks</h2>
+          <h2>Why Seasoned Enterprises Prioritize Wordmarks.</h2>
+          <div class="gold-rule"></div>
           <p>Key legal and operational advantages that make wordmarks the preferred filing route.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+        <CardCarousel id="wordmark-value-carousel" ariaLabel="Why seasoned enterprises prioritize wordmarks">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>Design Independence</h3>
+              <p>You can redesign your company logo, update your website fonts, or alter packaging colors without invalidating your statutory trademark registration.</p>
             </div>
-            <h3>Design Independence</h3>
-            <p>You can redesign your company logo, update your website fonts, or alter packaging colors without invalidating your statutory trademark registration.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>Superior Audio Protection</h3>
+              <p>Wordmarks prevent phonetic copying in podcasts, radio ads, word-of-mouth marketing, and spoken commercial references across India.</p>
             </div>
-            <h3>Stronger Legal Enforcement</h3>
-            <p>Prevents competitors from using your brand name in any visual style, even if they use completely different typography, color schemes, or graphic badges.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>Domain &amp; Social Precedence</h3>
+              <p>Registered wordmarks establish conclusive proof of prior commercial adoption during domain dispute arbitrations and social media handle claims.</p>
             </div>
-            <h3>Domain & Marketplace Defense</h3>
-            <p>Establishes prior commercial ownership crucial for takedown notices on Amazon, Flipkart, social media handles, and domain dispute arbitration.</p>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- Wordmark vs Logo Comparison Table -->
+    <!-- Wordmark vs Device Mark Comparison Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Comparison Matrix</p>
-          <h2>Wordmark vs. Logo (Device Mark) Comparison</h2>
-          <p>Understand how the two fundamental filing categories protect your business assets.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Direct Comparison</p>
+          <h2>Wordmark vs. Logo (Device Mark).</h2>
+          <div class="gold-rule"></div>
+          <p>Understanding which filing route best protects your enterprise assets.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
-                <th>Feature / Dimension</th>
-                <th>Wordmark Registration</th>
-                <th>Logo (Device Mark) Registration</th>
+                <th>Legal Dimension</th>
+                <th>Wordmark (Name Only)</th>
+                <th>Device Mark (Visual Logo)</th>
               </tr>
             </thead>
             <tbody>
@@ -162,16 +190,122 @@ const canonical = "https://brndnur.com/wordmark-registration/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- Application Stages (4-Step Process) -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Statutory Workflow</p>
+          <h2>The 4 Stages of Wordmark Registration.</h2>
+          <div class="gold-rule"></div>
+          <p>From initial draft preparation to final statutory certificate issuance by the Trade Marks Registry.</p>
+        </div>
+
+        <CardCarousel id="wordmark-stages-carousel" ariaLabel="The 4 stages of wordmark registration">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Specification Formulation</h3>
+            <p>Drafting exact textual representations and categorizing goods/services under appropriate NICE classes.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Statutory TM-A Submission</h3>
+            <p>E-filing via the official IP India portal, paying government fees directly, and securing the official TM application number.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Registry Examination</h3>
+            <p>The examiner reviews distinctiveness under Section 9 and similarity under Section 11, issuing an examination report.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">04</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Journal &amp; Certificate</h3>
+            <p>Upon acceptance, the mark is advertised in the Trade Marks Journal for 4 months before final Certificate issuance.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Wordmark FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">Wordmark FAQs</p>
+          <h2>Questions About Wordmark Filings.</h2>
+          <div class="gold-rule"></div>
+          <p>Key legal distinctions for wordmark protection in India.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="If I register a wordmark, does it protect my name in any font or color?"
+            answer="Yes. A wordmark is registered in standard typographical characters without claim to any particular font, size, or color scheme. This gives you the exclusive right to use the textual word itself in any graphic presentation, modern typeface, or brand redesign."
+          />
+          <FaqItem
+            num="02"
+            question="What if my brand name is descriptive or laudatory?"
+            answer="Under Section 9(1)(b) of the Trade Marks Act, words that directly describe the quality, quantity, intended purpose, or geographical origin of goods (e.g., &quot;Best Quality Rice&quot; or &quot;Kerala Fresh&quot;) are generally refused registration. We help you evaluate whether your wordmark is sufficiently arbitrary, fanciful, or suggestive to pass statutory examination."
+          />
+          <FaqItem
+            num="03"
+            question="When can I legally begin displaying the ™ symbol?"
+            answer="You can legally display the ™ (TM) symbol next to your brand name as soon as your TM-A application is officially submitted and an application number is generated on the registry receipt. The ® (Registered) symbol can only be displayed after the registration certificate is officially granted."
+          />
+          <FaqItem
+            num="04"
+            question="Should I file both a wordmark and a logo mark?"
+            answer="For comprehensive protection, established commercial brands typically file both: the wordmark secures broad exclusivity over the commercial name itself, while the logo (device mark) protects distinctive graphic emblems, mascot illustrations, and visual packaging badges."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Get Started</p>
-          <h2>Protect Your Brand Name Today.</h2>
+          <h2>Protect Your Brand Name<br>from Day One.</h2>
           <p>Connect with our team in Manjeri, Kerala to prepare and file your wordmark application under the Trade Marks Act, 1999.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20to%20register%20my%20wordmark." target="_blank" rel="noopener noreferrer">Consult on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/packages/">View Packages & Pricing</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Consult on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Structured Drafting</strong>
+              <p>Meticulous TM-A preparation with appropriate user date documentation.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Transparent Invoicing</strong>
+              <p>Separation of official statutory fees from professional advisory.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Lifecycle Monitoring</strong>
+              <p>Milestone alerts through examination, journal advertisement, and certificate.</p>
+            </div>
           </div>
         </div>
       </div>

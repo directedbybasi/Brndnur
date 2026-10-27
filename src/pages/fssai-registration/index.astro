@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import CardCarousel from '../../components/CardCarousel.astro';
+import FaqItem from '../../components/FaqItem.astro';
 
 const title = "FSSAI Registration & Licensing Support | BRNDNUR Advisory LLP";
 const description = "Understand FSSAI food business registration and licensing in India. Guidance on basic registration, state licensing, and compliance with BRNDNUR.";
 const canonical = "https://brndnur.com/fssai-registration/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "FSSAI Registration",
+  "sectionName": "Hero Section",
+  "enquiryType": "FSSAI Food Business Licensing",
+  "topic": "I need assistance obtaining FSSAI food business registration or licensing.",
+  "details": "Food business type: [e.g. Restaurant, Bakery, Cloud Kitchen, Packaged Goods, Manufacturing]\\nProjected turnover: [Below ₹12 Lakhs / Above ₹12 Lakhs]",
+  "callToAction": "Could you please guide me on the applicable license tier (Basic, State, or Central) and required documents?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "FSSAI Registration",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "FSSAI Licensing Consultation",
+  "topic": "I would like to consult with an advisor regarding food safety compliance and FSSAI licensing for my brand.",
+  "details": "Commercial premises location: [Please specify]",
+  "callToAction": "Could you please share the document requirements, statutory fees, and registration timeline?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/fssai-registration/";
   currentPath="/fssai-registration/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/services/">Services</a>
-          <span class="sep">/</span>
-          <span class="current">FSSAI Registration</span>
-        </nav>
-        <p class="eyebrow">Food Safety Compliance</p>
-        <h1>FSSAI Food Business Registration & Licensing.</h1>
-        <p class="lead">Under the Food Safety and Standards Act, 2006, every food business operator (FBO)—from home bakers and cloud kitchens to manufacturers, packaged food brands, and distributors—must obtain an FSSAI license or registration prior to commercial operations.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Food Safety and Standards Act, 2006</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            <span>14-Digit FSSAI License Number</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>1 to 5 Year Validity Options</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Food Safety Compliance"
+      title='FSSAI Food Business<br class="hero-br">Registration &amp;&nbsp;<span>Licensing.</span>'
+      hasGoldRule={true}
+      description="Under the Food Safety and Standards Act, 2006, every food business operator (FBO)—from home bakers and cloud kitchens to manufacturers, packaged food brands, and distributors—must obtain an FSSAI license or registration prior to commercial operations."
+      primaryCta={{
+        text: "Request FSSAI Assistance",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "View Food Brand Package",
+        href: "/packages/food-brand/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "FSS Act 2006", subtitle: "Compliance" },
+        { icon: "▱", title: "14-Digit FSSAI", subtitle: "License Number" },
+        { icon: "⌖", title: "1 to 5 Year", subtitle: "Validity Options" }
+      ]}
+      image="/assets/fssai-hero-food-safety.webp"
+      imageAlt="Artisanal food enterprise workspace with spices, botanical oils, and quality development log"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20need%20FSSAI%20registration%20guidance." target="_blank" rel="noopener noreferrer">Request FSSAI Assistance &rarr;</a>
-          <a class="btn btn-outline" href="/packages/food-brand/">View Food Brand Package</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual Section -->
+    <!-- Split Visual Section (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/packages/assets/food-brand-package.webp" alt="BRNDNUR FSSAI food business licensing and registration advisory in Kerala" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Consumer Health & Law</p>
-            <h2>Mandatory Compliance for Packaged Goods and Kitchens</h2>
-            <p>Operating a food venture without a valid FSSAI license carries heavy statutory penalties under Section 63 of the Food Safety and Standards Act. Whether you produce traditional Malabar chips, packaged spices, bakery treats, or run a modern cloud kitchen, obtaining your 14-digit FSSAI number is legally required before retail distribution.</p>
-            <p>BRNDNUR Advisory coordinates documentation—including kitchen layout blueprints, list of food categories, water test reports, and NOCs—submitting applications on the official FoSCoS portal to ensure timely inspection and approval.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/fssai-packaging-standards.webp" alt="BRNDNUR FSSAI food business licensing and registration advisory in Kerala" width="800" height="600" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Consumer Health &amp; Law</p>
+          <h2>Mandatory Compliance for Packaged Goods and Kitchens.</h2>
+          <div class="gold-rule"></div>
+          <p>Operating a food venture without a valid FSSAI license carries heavy statutory penalties under Section 63 of the Food Safety and Standards Act. Whether you produce traditional Malabar chips, packaged spices, bakery treats, or run a modern cloud kitchen, obtaining your 14-digit FSSAI number is legally required before retail distribution.</p>
+          <p>BRNDNUR Advisory coordinates documentation—including kitchen layout blueprints, list of food categories, water test reports, and NOCs—submitting applications on the official FoSCoS portal to ensure timely inspection and approval.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Mandatory Labeling Compliance</strong>
+                <p>The 14-digit license number and official FSSAI logo must be legibly printed on all retail product packages.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>Mandatory Labeling Rule</h4>
-                <p>The 14-digit FSSAI registration/license number and the official FSSAI logo must be legibly printed on all packaged food labels, display boards, and restaurant menus under FSSAI Packaging & Labelling Regulations.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>FoSCoS Portal Coordination</strong>
+                <p>End-to-end management of online submissions, category declarations, and officer query responses.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>Integrated Trademark Alignment</strong>
+                <p>Ensuring your food brand name and logo match your FSSAI registration records and Class 29/30 filings.</p>
               </div>
             </div>
           </div>
@@ -75,53 +101,55 @@ const canonical = "https://brndnur.com/fssai-registration/";
       </div>
     </section>
 
-    <!-- 3 Categories with Clean SVGs -->
+    <!-- Classification Tiers (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">Classification Tiers</p>
-          <h2>Basic Registration vs. State vs. Central License</h2>
-          <p>The appropriate regulatory tier depends directly on your annual turnover and production capacity:</p>
+          <h2>Basic Registration vs. State vs. Central License.</h2>
+          <div class="gold-rule"></div>
+          <p>The appropriate regulatory tier depends directly on your annual turnover and production capacity.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <CardCarousel id="fssai-tiers-carousel" ariaLabel="FSSAI classification tiers">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>FSSAI Basic Registration</h3>
+              <p>For small-scale food business operators, cloud kitchens, home caterers, and petty retailers with an annual turnover up to ₹12 lakhs.</p>
             </div>
-            <h3>FSSAI Basic Registration</h3>
-            <p>For small-scale food business operators, cloud kitchens, home caterers, and petty retailers with an annual turnover up to ₹12 lakhs.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>FSSAI State License</h3>
+              <p>For medium-scale food manufacturers, commercial dining restaurants, distributors, repackagers, and hotels with annual turnover between ₹12 lakhs and ₹20 crores.</p>
             </div>
-            <h3>FSSAI State License</h3>
-            <p>For medium-scale manufacturers, storage facilities, transporters, food distributors, and restaurants with turnover between ₹12 lakhs and ₹20 crores.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>FSSAI Central License</h3>
+              <p>For large-scale food manufacturing units, 100% export-oriented food ventures, e-commerce food platforms, and multi-state restaurant chains.</p>
             </div>
-            <h3>FSSAI Central License</h3>
-            <p>For large-scale food processors, multi-state chain operators, food importers/exporters, and enterprises with turnover exceeding ₹20 crores.</p>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- FSSAI Criteria & Documents Matrix -->
+    <!-- FSSAI Matrix Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Regulatory Matrix</p>
-          <h2>FSSAI Licensing Thresholds & Criteria</h2>
-          <p>Official classification standards under the FoSCoS portal.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Licensing Standards</p>
+          <h2>FSSAI Operational &amp; Documentation Matrix.</h2>
+          <div class="gold-rule"></div>
+          <p>Statutory standards under the Food Safety and Standards Regulations.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
@@ -156,16 +184,113 @@ const canonical = "https://brndnur.com/fssai-registration/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- 3-Step FoSCoS Process -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">FoSCoS Compliance</p>
+          <h2>The 3-Step FSSAI Licensing Journey.</h2>
+          <div class="gold-rule"></div>
+          <p>Navigating the Food Safety and Standards Authority of India (FSSAI) regulatory framework.</p>
+        </div>
+
+        <CardCarousel id="fssai-steps-carousel" ariaLabel="The 3-step FSSAI licensing journey">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Eligibility &amp; Category Mapping</h3>
+            <p>We review your expected turnover and manufacturing capacity to determine whether Basic Registration, State License, or Central License applies.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>FoSCoS Application Drafting</h3>
+            <p>We compile your equipment layout, food category codes, water test reports, and NOCs for digital submission on the FoSCoS portal.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>FSSAI License Issuance</h3>
+            <p>We handle safety officer clarification requests and deliver your official 14-digit FSSAI certificate and mandatory packaging display formats.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- FSSAI FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">Food Safety FAQs</p>
+          <h2>Frequently Asked Questions About FSSAI.</h2>
+          <div class="gold-rule"></div>
+          <p>Essential statutory compliance rules under the Food Safety and Standards Act, 2006.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="What is the difference between an FSSAI Registration and a State License?"
+            answer="An FSSAI Basic Registration is meant for petty food businesses, small retailers, and home-scale kitchens with an annual turnover up to ₹12 Lakhs. A State License is mandatory for businesses with annual turnover between ₹12 Lakhs and ₹20 Crores, as well as commercial restaurants, food repackagers, and commercial manufacturing units regardless of turnover."
+          />
+          <FaqItem
+            num="02"
+            question="Is FSSAI mandatory for cloud kitchens, home bakers, and food delivery partners?"
+            answer="Yes. Under FSSAI regulations, any entity that produces, stores, distributes, or sells food—including cloud kitchens operating on Swiggy/Zomato and home bakeries—must possess a valid 14-digit FSSAI number before commencing commercial operations."
+          />
+          <FaqItem
+            num="03"
+            question="Where must the 14-digit FSSAI number be displayed?"
+            answer="The 14-digit FSSAI license/registration number along with the official FSSAI logo must be clearly printed on all packaged food labels, retail food product pouches, menu cards, commercial invoices, and premises entrance display boards."
+          />
+          <FaqItem
+            num="04"
+            question="How are government fees distinguished from advisory fees?"
+            answer="Official statutory portal fees (e.g. ₹100/year for Basic Registration or ₹2,000–₹5,000/year for State Licenses depending on category) are paid directly to the government on FoSCoS. BRNDNUR Advisory charges solely for professional document assembly, food code classification, and application handling."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Launch Compliantly</p>
-          <h2>Operating a Food or Beverage Enterprise?</h2>
+          <h2>Operating a Food or<br>Beverage Enterprise?</h2>
           <p>We review your premise documents, kitchen declarations, and product categories to file on the official FoSCoS portal.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20help%20with%20FSSAI%20licensing." target="_blank" rel="noopener noreferrer">Consult on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/packages/food-brand/">Explore Food Brand Package</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Consult on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Category Mapping</strong>
+              <p>Precise food product code classification under FoSCoS regulations.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Blueprint &amp; Water Audit</strong>
+              <p>Guidance on layout plans and mandatory laboratory water tests.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Complete Package</strong>
+              <p>Seamless coordination alongside trademark and MSME registration.</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,362 @@
+{
+  "desktopViewportsPassed": true,
+  "tabletViewportPassed": true,
+  "mobileBehavior": "Auto-adapting height on screens <= 767px prevents content truncation and excessive white space",
+  "heroMeasurementsSummary": {
+    "totalAssertions": 130,
+    "passed": 80,
+    "failed": 50,
+    "mismatches": [
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Services Hub",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Packages Hub",
+        "pageHeight": 726.9,
+        "baselineHeight": 876.2,
+        "diff": 149.30000000000007
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Trademark Registration",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "About BRNDNUR",
+        "pageHeight": 788.8,
+        "baselineHeight": 876.2,
+        "diff": 87.40000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "How It Works",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Contact Page",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Trademark Classes",
+        "pageHeight": 788.8,
+        "baselineHeight": 876.2,
+        "diff": 87.40000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Brand Name Search",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Wordmark Registration",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Logo TM Registration",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Trademark Renewal",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Trademark Monitoring",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "GST Registration",
+        "pageHeight": 822,
+        "baselineHeight": 876.2,
+        "diff": 54.200000000000045
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Udyam MSME Registration",
+        "pageHeight": 822,
+        "baselineHeight": 876.2,
+        "diff": 54.200000000000045
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "FSSAI Registration",
+        "pageHeight": 788.8,
+        "baselineHeight": 876.2,
+        "diff": 87.40000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Business Setup",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Package: Individual MSME",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Package: Company LLP",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Package: Food Brand",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Package: Gulf Return",
+        "pageHeight": 798.4,
+        "baselineHeight": 876.2,
+        "diff": 77.80000000000007
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Resources Hub",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Guide: TM Registration",
+        "pageHeight": 751.3,
+        "baselineHeight": 876.2,
+        "diff": 124.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Guide: TM Class",
+        "pageHeight": 718.1,
+        "baselineHeight": 876.2,
+        "diff": 158.10000000000002
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Guide: Brand Search",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Guide: TM Process",
+        "pageHeight": 751.3,
+        "baselineHeight": 876.2,
+        "diff": 124.90000000000009
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Services Hub",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Packages Hub",
+        "pageHeight": 708,
+        "baselineHeight": 905.9,
+        "diff": 197.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Trademark Registration",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "About BRNDNUR",
+        "pageHeight": 772.1,
+        "baselineHeight": 905.9,
+        "diff": 133.79999999999995
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "How It Works",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Contact Page",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Trademark Classes",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Brand Name Search",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Wordmark Registration",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Logo TM Registration",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Trademark Renewal",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Trademark Monitoring",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "GST Registration",
+        "pageHeight": 779.5,
+        "baselineHeight": 905.9,
+        "diff": 126.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Udyam MSME Registration",
+        "pageHeight": 803.1,
+        "baselineHeight": 905.9,
+        "diff": 102.79999999999995
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "FSSAI Registration",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Business Setup",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Package: Individual MSME",
+        "pageHeight": 701.4,
+        "baselineHeight": 905.9,
+        "diff": 204.5
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Package: Company LLP",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Package: Food Brand",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Package: Gulf Return",
+        "pageHeight": 779.5,
+        "baselineHeight": 905.9,
+        "diff": 126.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Resources Hub",
+        "pageHeight": 701.4,
+        "baselineHeight": 905.9,
+        "diff": 204.5
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Guide: TM Registration",
+        "pageHeight": 708.9,
+        "baselineHeight": 905.9,
+        "diff": 197
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Guide: TM Class",
+        "pageHeight": 677.9,
+        "baselineHeight": 905.9,
+        "diff": 228
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Guide: Brand Search",
+        "pageHeight": 701.4,
+        "baselineHeight": 905.9,
+        "diff": 204.5
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Guide: TM Process",
+        "pageHeight": 732.4,
+        "baselineHeight": 905.9,
+        "diff": 173.5
+      }
+    ]
+  }
+}

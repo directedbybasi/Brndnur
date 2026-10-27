@@ -1,0 +1,152 @@
+{
+  "id": "KL-025",
+  "status": "published",
+  "published": true,
+  "district": "Kollam",
+  "title": "Choosing Trademark Classes for Handicraft and Consumer Product Businesses in Kollam",
+  "slug": "choosing-trademark-classes-for-handicraft-and-consumer-product-businesses-in-kollam",
+  "metaTitle": "Trademark Classes for Kollam Handicrafts & Consumer Goods | BRNDNUR",
+  "metaDescription": "Detailed classification guide for artisan enterprises, coir craft makers, wood sculptors, and consumer goods manufacturers in Kollam across Classes 20, 21, 27, and 28.",
+  "primaryKeyword": "trademark classes handicrafts Kollam",
+  "relatedKeywords": [
+    "coir products trademark class",
+    "handicraft brand protection Kerala",
+    "Class 20 woodcraft trademark",
+    "Class 27 coir mat branding",
+    "Nice classification consumer goods Kerala"
+  ],
+  "searchIntent": "informational",
+  "intendedAudience": "Artisans, coir craft cooperative societies, woodworkers, brass craftsmen, and consumer product manufacturers in Kollam district.",
+  "quickAnswer": "Handicraft and consumer product businesses in Kollam must classify their goods precisely under the Nice Classification: Class 20 for wooden artifacts and furniture, Class 21 for brass/kitchen utensils, Class 27 for coir mats and floor coverings, and Class 28 for decorative toys and festive crafts. Filing under incorrect classes leaves your actual export and domestic merchandise unprotected.",
+  "wordCount": 1220,
+  "h2Sections": [
+    {
+      "h2": "Kollam’s Artisan Legacy and Modern Brand Vulnerability",
+      "content": [
+        "Beyond its cashew and seafood processing dominance, Kollam possesses a rich heritage of traditional craftsmanship—ranging from intricate coir floor coverings and coconut shell handicrafts to brassware, temple craft, and wood carvings.",
+        "As these traditional crafts modernize and enter global export markets, high-end e-commerce portals, and lifestyle exhibitions, brand protection becomes crucial. International buyers and upscale urban retail chains demand certified trademark ownership before signing multi-year distribution contracts."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "GI Tag vs Commercial Trademark",
+        "text": "A Geographical Indication (GI) tag protects a regional craft community (such as Alleppey Coir), but it does not protect your enterprise’s private commercial brand name. Individual manufacturers must secure independent trademark registration."
+      }
+    },
+    {
+      "h2": "Detailed Breakdown of Key Nice Classes for Kollam Crafts",
+      "content": [
+        "The Trade Marks Registry strictly applies the international Nice Classification system. Choosing the right class depends entirely on the raw materials and finished utility of your products:"
+      ],
+      "checklist": [
+        "<strong>Class 20:</strong> Wooden handicrafts, carved religious figures, furniture, mirrors, picture frames, and ornamental items made of wood, cane, or coconut shell.",
+        "<strong>Class 21:</strong> Household and kitchen utensils, brass and bell-metal cookware, decorative glassware, ceramics, and earthenware art objects.",
+        "<strong>Class 27:</strong> Coir mats, floor rugs, wall hangings of non-textile material, doormats, and natural fiber floor coverings.",
+        "<strong>Class 28:</strong> Traditional handcrafted toys, board games, decorative festive figurines, and ornamental cultural models.",
+        "<strong>Class 35:</strong> Operating an artisan retail showroom, gift gallery, or e-commerce marketplace promoting multiple handicraft lines."
+      ]
+    },
+    {
+      "h2": "Comparative Matrix: Matching Goods to Correct Classes",
+      "content": [
+        "Use this authoritative reference matrix when preparing Form TM-A for craft-based consumer ventures:"
+      ],
+      "table": {
+        "headers": [
+          "Product / Artifact Category",
+          "Primary Raw Material",
+          "Correct Nice Class",
+          "Common Misclassification Risk"
+        ],
+        "rows": [
+          [
+            "Coir Doormats & Runners",
+            "Natural coir fiber",
+            "Class 27 (Floor coverings)",
+            "Often wrongly filed in Class 24 (Textiles)"
+          ],
+          [
+            "Carved Wooden Statues & Boxes",
+            "Teak, rosewood, coconut wood",
+            "Class 20 (Wood artifacts)",
+            "Wrongly filed in Class 16 (Stationery/art)"
+          ],
+          [
+            "Brass Oil Lamps & Cookware",
+            "Bell metal / brass alloy",
+            "Class 21 (Utensils & vessels)",
+            "Wrongly filed in Class 6 (Raw metals)"
+          ],
+          [
+            "Handcrafted Wooden Toys",
+            "Natural seasoned timber",
+            "Class 28 (Games & playthings)",
+            "Wrongly filed in Class 20 (Furniture)"
+          ]
+        ]
+      }
+    },
+    {
+      "h2": "Securing Trademark Protection for Kollam Craft Exporters",
+      "content": [
+        "If you plan to ship your consumer or artisanal goods outside Kerala or across international borders, follow these vital guidelines:",
+        "Secure domestic registration under the Chennai jurisdiction, leverage Udyam for export incentive schemes, and utilize the Madrid Protocol to extend protection to overseas retail destinations."
+      ],
+      "checklist": [
+        "<strong>1. Indian Base Application:</strong> Establish senior trademark priority through Form TM-A.",
+        "<strong>2. Export Registration:</strong> Link your trademark to your Import Export Code (IEC) from DGFT.",
+        "<strong>3. Madrid Protocol Filing:</strong> Extend your brand into target overseas markets within 6 months of domestic filing.",
+        "<strong>4. Customs Protection:</strong> Register your trademark with Indian Customs to interdict unauthorized foreign knockoffs."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can our coir manufacturing society file a collective trademark in Kollam?",
+      "answer": "Yes. Under Section 61 of the Trade Marks Act, an association of manufacturers or cooperative society can register a \"Collective Mark\" to distinguish the goods of its members from those of other enterprises."
+    },
+    {
+      "question": "Does an artisan cooperative need GST registration to file a trademark?",
+      "answer": "No. GST registration is not a mandatory prerequisite for filing a trademark application. Any individual artisan, proprietorship, or society can apply with basic KYC and an Udyam certificate."
+    }
+  ],
+  "internalLinks": [
+    {
+      "title": "Complete Trademark Class Guide",
+      "url": "/trademark-classes/",
+      "description": "Comprehensive directory of Nice classification classes."
+    },
+    {
+      "title": "Company & LLP Package",
+      "url": "/packages/company-llp/",
+      "description": "Corporate incorporation and brand protection packages."
+    },
+    {
+      "title": "Trademark Application Roadmap",
+      "url": "/resources/trademark-application-process/",
+      "description": "Step-by-step statutory process for Indian trademark filings."
+    }
+  ],
+  "officialSources": [
+    {
+      "title": "IP India Classification Search Tool",
+      "authority": "Controller General of Patents, Designs and Trade Marks",
+      "url": "https://ipindiaonline.gov.in"
+    },
+    {
+      "title": "Coir Board of India",
+      "authority": "Ministry of MSME, Government of India",
+      "url": "https://coirboard.gov.in"
+    }
+  ],
+  "cta": {
+    "heading": "Classify and Protect Your Kollam Craft Brand",
+    "description": "Avoid costly classification errors at the Trade Marks Registry. Consult BRNDNUR Advisory LLP for accurate handicraft and consumer product brand filing.",
+    "buttonText": "Consult Our Class Specialists",
+    "whatsappUrl": "https://wa.me/919048188899?text=Hello%20BRNDNUR,%20I%20need%20help%20classifying%20handicraft%20trademark%20classes%20in%20Kollam"
+  },
+  "imageConcept": {
+    "description": "Artisanal coir mats and polished wooden handicrafts displayed beside trademark class classification documents in a Kollam artisan studio.",
+    "altText": "Handicrafts and consumer products trademark classes in Kollam Kerala"
+  },
+  "reviewFlags": []
+}

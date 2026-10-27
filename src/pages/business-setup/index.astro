@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import CardCarousel from '../../components/CardCarousel.astro';
+import FaqItem from '../../components/FaqItem.astro';
 
 const title = "Business Setup Advisory in Kerala | BRNDNUR Advisory LLP";
 const description = "Comprehensive business setup advisory in Kerala. Guidance on entity constitution, registrations, trademark protection, and statutory compliance for entrepreneurs.";
 const canonical = "https://brndnur.com/business-setup/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Business Setup",
+  "sectionName": "Hero Section",
+  "enquiryType": "Business Setup Advisory",
+  "topic": "I would like to discuss structuring and setting up a new business enterprise in Kerala.",
+  "details": "Proposed venture: [Please describe briefly]\\nPreferred entity: [e.g. Proprietorship, Partnership, LLP, Pvt Ltd]",
+  "callToAction": "Could you please guide me on the entity selection, statutory licenses, and advisory roadmap?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Business Setup",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "Startup Advisory Discussion",
+  "topic": "I am planning to launch a business and would like assistance with complete legal setup and brand protection.",
+  "details": "Location in Kerala: [Please enter]\\nTarget launch timeline: [Please specify]",
+  "callToAction": "Could you please arrange an advisory consultation to discuss next steps?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/business-setup/";
   currentPath="/business-setup/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/services/">Services</a>
-          <span class="sep">/</span>
-          <span class="current">Business Setup</span>
-        </nav>
-        <p class="eyebrow">Foundational Advisory</p>
-        <h1>Business Setup & Startup Advisory in Kerala.</h1>
-        <p class="lead">Starting a new enterprise requires aligning brand identity, legal entity constitution, tax registrations, and operational licenses. BRNDNUR Advisory LLP provides practical, structured guidance to help founders launch on solid footing.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
-            <span>Entity Constitution Guidance</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>MCA & Trademark Synchronization</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <span>Complete Statutory Compliance</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Foundational Advisory"
+      title='Business Setup &amp;&nbsp;Startup<br class="hero-br">Advisory in <span>Kerala.</span>'
+      hasGoldRule={true}
+      description="Starting a new enterprise requires aligning brand identity, legal entity constitution, tax registrations, and operational licenses. BRNDNUR Advisory LLP provides practical, structured guidance to help founders launch on solid footing."
+      primaryCta={{
+        text: "Discuss Your Business Setup",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "Explore Startup Packages",
+        href: "/packages/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Entity Constitution", subtitle: "Guidance" },
+        { icon: "▱", title: "MCA & Trademark", subtitle: "Synchronization" },
+        { icon: "⌖", title: "Complete Statutory", subtitle: "Compliance" }
+      ]}
+      image="/assets/setup-hero-foundations.webp"
+      imageAlt="Venture planning desk with strategic canvas blueprints, executive leather folio, and brass compass"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20to%20discuss%20setting%20up%20a%20business." target="_blank" rel="noopener noreferrer">Discuss Your Business Setup &rarr;</a>
-          <a class="btn btn-outline" href="/packages/">Explore Startup Packages</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual Section -->
+    <!-- Split Visual Section (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/packages/assets/brand-starter-pack.webp" alt="BRNDNUR Comprehensive business setup advisory in Kerala" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Enterprise Foundations</p>
-            <h2>Building Sustainable Business Foundations in Malabar & Beyond</h2>
-            <p>Every commercial venture begins with an idea, but its long-term viability depends on sound legal structure. Choosing the wrong constitution can result in personal financial liability, excessive compliance costs, or severe roadblocks when raising capital or onboarding partners.</p>
-            <p>At BRNDNUR Advisory LLP, we provide objective diagnostic consultations to help entrepreneurs, partnership ventures, and Gulf-return investors select the ideal entity structure and secure the exact registrations needed to trade compliantly.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/setup-startup-readiness.webp" alt="BRNDNUR Comprehensive business setup advisory in Kerala" width="800" height="600" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Enterprise Foundations</p>
+          <h2>Building Sustainable Business Foundations in Malabar &amp; Beyond.</h2>
+          <div class="gold-rule"></div>
+          <p>Every commercial venture begins with an idea, but its long-term viability depends on sound legal structure. Choosing the wrong constitution can result in personal financial liability, excessive compliance costs, or severe roadblocks when raising capital or onboarding partners.</p>
+          <p>At BRNDNUR Advisory LLP, we provide objective diagnostic consultations to help entrepreneurs, partnership ventures, and Gulf-return investors select the ideal entity structure and secure the exact registrations needed to trade compliantly.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>MCA vs. Trademark Synchronization</strong>
+                <p>Registering a corporate name with the MCA does not grant trademark ownership. We clear both simultaneously.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>MCA Name Approval vs Trademark Rights</h4>
-                <p>Registering a company name with the Ministry of Corporate Affairs (MCA) does NOT automatically grant trademark ownership. A third party with a registered trademark can legally compel you to change your corporate name. Always conduct trademark clearance alongside MCA incorporation.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>Liability &amp; Capital Structuring</strong>
+                <p>Evaluating trade-offs between Proprietorship, Partnership, LLP, and Private Limited company models.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>Single-Window Regulatory Onboarding</strong>
+                <p>Coordinating GSTIN, Udyam MSME, and FSSAI registrations alongside foundational trademark protection.</p>
               </div>
             </div>
           </div>
@@ -75,64 +101,63 @@ const canonical = "https://brndnur.com/business-setup/";
       </div>
     </section>
 
-    <!-- 4 Foundational Pillars with Clean SVGs -->
+    <!-- Foundational Pillars (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">End-to-End Foundations</p>
-          <h2>What Comprehensive Setup Entails</h2>
-          <p>We help you navigate the foundational pillars required to operate legally and build brand value from day one:</p>
+          <h2>What Comprehensive Setup Entails.</h2>
+          <div class="gold-rule"></div>
+          <p>We help you navigate the foundational pillars required to operate legally and build brand value from day one.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+        <CardCarousel id="setup-foundations-carousel" ariaLabel="Business setup foundational pillars">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>Entity Constitution Guidance</h3>
+              <p>Evaluating the trade-offs between Sole Proprietorship, Partnership Firm, Limited Liability Partnership (LLP), and Private Limited Company structures.</p>
             </div>
-            <h3>Entity Constitution Guidance</h3>
-            <p>Evaluating the trade-offs between Sole Proprietorship, Partnership Firm, Limited Liability Partnership (LLP), and Private Limited Company.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>Statutory Tax Onboarding</h3>
+              <p>Facilitating GSTIN registration, MSME Udyam documentation, and professional tax enrollment for smooth commercial banking setup.</p>
             </div>
-            <h3>Trademark & Brand Clearance</h3>
-            <p>Conducting pre-incorporation brand searches to ensure your corporate or commercial name does not infringe existing trademarks.</p>
-            <a class="card-link" href="/brand-name-search/">Brand Search Details &rarr;</a>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>Pre-Filing Name Clearance</h3>
+              <p>Conducting comprehensive Trade Marks Registry searches and MCA name availability checks before brand assets are produced.</p>
             </div>
-            <h3>Statutory Tax Registrations</h3>
-            <p>Guiding you through GST registration, PAN/TAN allocation, Professional Tax where applicable, and MSME/Udyam certification.</p>
-            <a class="card-link" href="/gst-registration/">GST Assistance &rarr;</a>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">04</div>
+              <h3>Industry Specific Licensing</h3>
+              <p>Securing required sector permits, including FSSAI food licensing, local trade licenses, and import-export code (IEC) registrations.</p>
             </div>
-            <h3>Industry-Specific Licenses</h3>
-            <p>Securing FSSAI registrations for food enterprises, trade licenses, shop and establishment filings, and environmental clearances as required.</p>
-            <a class="card-link" href="/fssai-registration/">FSSAI Information &rarr;</a>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
     <!-- Entity Comparison Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Entity Selection</p>
-          <h2>Business Entity Constitution Comparison</h2>
-          <p>Key legal and operational characteristics of Indian business forms.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Structural Comparison</p>
+          <h2>Entity Constitution Matrix.</h2>
+          <div class="gold-rule"></div>
+          <p>Comparing common business structures in India across liability, regulatory burden, and suitability.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
@@ -162,7 +187,7 @@ const canonical = "https://brndnur.com/business-setup/";
                 <td><strong>Limited Liability Partnership (LLP)</strong></td>
                 <td>Limited to agreed contribution</td>
                 <td>Ministry of Corporate Affairs (MCA)</td>
-                <td>Moderate (Form 8 & 11 to MCA, Tax Audit)</td>
+                <td>Moderate (Form 8 &amp; 11 to MCA, Tax Audit)</td>
                 <td>Professional services, consultancies, joint ventures</td>
               </tr>
               <tr>
@@ -178,16 +203,122 @@ const canonical = "https://brndnur.com/business-setup/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- 4-Stage Business Setup Roadmap -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Sequential Roadmap</p>
+          <h2>The 4 Stages of New Business Setup.</h2>
+          <div class="gold-rule"></div>
+          <p>Coordinating legal identity, brand protection, and tax compliance in the proper statutory order.</p>
+        </div>
+
+        <CardCarousel id="setup-roadmap-carousel" ariaLabel="The 4 stages of new business setup">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Entity Structure Selection</h3>
+            <p>Choosing between Sole Proprietorship, LLP, or Private Limited Company based on founding capital, liability, and investor readiness.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Brand Clearance &amp; Filing</h3>
+            <p>Conducting preliminary registry searches and filing the trademark application before committing funds to branding and packaging.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Udyam MSME &amp; Tax Setup</h3>
+            <p>Securing the Udyam certificate to establish MSME status and obtaining GST registration for banking and commercial operations.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">04</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Sector-Specific Licensing</h3>
+            <p>Filing for mandatory industry licenses such as FSSAI for food operations, municipal trade licenses, and export registrations.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Business Setup FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">Setup FAQs</p>
+          <h2>Questions About Starting a Business.</h2>
+          <div class="gold-rule"></div>
+          <p>Objective guidance on entity selection, statutory timing, and initial regulatory compliance.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="How do I decide between an LLP and a Private Limited Company?"
+            answer="An LLP is generally preferred by professional consultancies, service providers, and closely held partnerships because it provides limited liability with significantly lower annual ROC compliance costs and no requirement for statutory dividend distribution taxes. A Private Limited Company is essential if you plan to raise venture capital, issue employee stock options (ESOPs), or scale a venture with external equity investors."
+          />
+          <FaqItem
+            num="02"
+            question="Should I register my trademark before or after incorporating my company?"
+            answer="Always conduct a preliminary trademark search before finalizing your corporate entity name with the MCA. A registered company name does NOT grant proprietary trademark rights under the Trade Marks Act, 1999. In fact, if an earlier conflicting trademark exists, the trademark holder can compel you to change your corporate name under Section 16 of the Companies Act, 2013."
+          />
+          <FaqItem
+            num="03"
+            question="Can Gulf-return founders or NRI entrepreneurs incorporate remotely?"
+            answer="Yes. MCA incorporation, GST registration, Udyam filing, and trademark applications are processed 100% digitally through official government portals. NRIs can provide notarized passport copies and apostilled declarations without needing to physically travel to Kerala during initial setup."
+          />
+          <FaqItem
+            num="04"
+            question="What is the first step to begin business setup with BRNDNUR?"
+            answer="Reach out to our advisory desk on WhatsApp or email with your proposed business activity, commercial location, and partner details. We prepare an initial diagnostic roadmap outlining recommended entity forms, tax registrations, and a clear fee schedule."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Start Confidently</p>
-          <h2>Turn Your Entrepreneurial Vision into Reality.</h2>
+          <h2>Turn Your Entrepreneurial<br>Vision into Reality.</h2>
           <p>Meet with our advisory team in Manjeri or schedule an online consultation to discuss your business setup roadmap.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20help%20me%20plan%20my%20business%20setup." target="_blank" rel="noopener noreferrer">Plan on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/contact/">Visit Our Office</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Plan on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Executive Consultation</strong>
+              <p>One-on-one session with our senior advisors in Malabar.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Holistic Roadmap</strong>
+              <p>Synchronized timing for trademark, MCA, GST, and MSME steps.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Transparent Fees</strong>
+              <p>Strict itemized separation of official fees from advisory charges.</p>
+            </div>
           </div>
         </div>
       </div>

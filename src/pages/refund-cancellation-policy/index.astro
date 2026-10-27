@@ -4,6 +4,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = "Refund & Cancellation Policy | BRNDNUR Advisory LLP";
 const description = "Refund and Cancellation Policy for BRNDNUR Advisory LLP. Details regarding statutory fees, advisory disbursements, and cancellation procedures.";
 const canonical = "https://brndnur.com/refund-cancellation-policy/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Refund & Cancellation Policy",
+  "sectionName": "Policy Inquiry CTA",
+  "enquiryType": "Billing & Policy Clarification",
+  "topic": "I have reviewed your Refund and Cancellation Policy and have a question regarding your billing or payment terms.",
+  "details": "My query is: [Please describe your question]",
+  "callToAction": "Could you please provide clarification on this matter?"
+});
 ---
 
 <BaseLayout
@@ -13,83 +23,118 @@ const canonical = "https://brndnur.com/refund-cancellation-policy/";
   currentPath="/refund-cancellation-policy/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <span class="current">Refund & Cancellation Policy</span>
-        </nav>
-        <p class="eyebrow">Legal & Compliance</p>
-        <h1>Refund & Cancellation Policy</h1>
-        <p class="lead">Clear guidelines regarding service cancellations, professional fee adjustments, and statutory government disbursements.</p>
+    <!-- Editorial Hero -->
+    <section class="hero" style="min-height: auto; padding: clamp(48px, 6vw, 72px) 0 clamp(32px, 4vw, 48px); text-align: center;">
+      <div class="container" style="max-width: 860px;">
+        <p class="eyebrow">Legal &amp; Compliance</p>
+        <h1>Refund &amp;&nbsp;Cancellation <span>Policy.</span></h1>
+        <div class="gold-rule" style="margin: 16px auto 20px;"></div>
+        <p class="lead" style="margin: 0 auto; max-width: 680px;">Clear guidelines regarding service cancellations, professional fee adjustments, and statutory government disbursements.</p>
         
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>Government Statutory Fees Non-Refundable</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>7 to 10 Working Days Processing</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Manjeri, Malappuram, Kerala</span>
-          </div>
+        <div class="trust-row" style="margin: 28px auto 0; justify-content: center; max-width: 640px;">
+          <div class="trust-item"><span class="trust-icon">♢</span><span class="trust-label">Statutory Fees<br>Non-Refundable</span></div>
+          <div class="trust-item"><span class="trust-icon">▱</span><span class="trust-label">7–10 Working Days<br>Processing</span></div>
+          <div class="trust-item"><span class="trust-icon">⌖</span><span class="trust-label">Skatt Business Park<br>Manjeri</span></div>
         </div>
       </div>
     </section>
 
     <!-- Policy Content -->
-    <section class="section">
-      <div class="container">
-        <article class="legal-prose" style="max-width: 860px; margin: 0 auto;">
-          <div class="advisory-notice" style="margin-top: 0; margin-bottom: 32px;">
-            <div class="advisory-notice-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="advisory-notice-content">
-              <h4>Effective Date: October 2026</h4>
-              <p>This policy governs cancellations and refund inquiries for advisory services provided by BRNDNUR Advisory LLP.</p>
+    <section class="section section-alt">
+      <div class="container" style="max-width: 860px;">
+        <article class="legal-prose">
+          <div class="values" style="margin-bottom: 32px;">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Statutory Disbursements Notice</strong>
+                <p>This policy governs cancellations and refund inquiries for advisory services provided by BRNDNUR Advisory LLP.</p>
+              </div>
             </div>
           </div>
 
+          <p class="eyebrow">Service Invoicing</p>
           <h2>1. Overview of Service Structure</h2>
+          <div class="gold-rule"></div>
           <p>BRNDNUR Advisory LLP provides customized intellectual property, commercial compliance, and corporate advisory services. Engagements typically involve two distinct cost components:</p>
           <ul>
             <li><strong>Statutory Government Fees:</strong> Mandatory fees paid directly to official government bodies (such as the Trade Marks Registry / CGPDTM, Ministry of Corporate Affairs, or FSSAI).</li>
             <li><strong>Professional Advisory Fees:</strong> Fees for clearance search analysis, documentation assembly, filing coordination, and advisory consultations.</li>
           </ul>
 
+          <p class="eyebrow">Government Portals</p>
           <h2>2. Statutory Government Fees Are Non-Refundable</h2>
+          <div class="gold-rule"></div>
           <p>Once a statutory government fee has been disbursed to the official government portal and a government challan or filing receipt has been generated, that statutory fee is strictly non-refundable under all circumstances, as government portals do not remit paid filing fees back to applicants.</p>
 
+          <p class="eyebrow">Pre-Filing Stage</p>
           <h2>3. Cancellation Prior to Application Filing</h2>
+          <div class="gold-rule"></div>
           <p>If a client requests service cancellation in writing before documentation has been submitted to the official government portal:</p>
           <ul>
             <li>Any unexpended statutory government fees collected on behalf of the client will be refunded in full.</li>
             <li>Professional advisory fees will be assessed based on the work already completed (e.g., preliminary clearance searching, document drafting, or advisory sessions conducted). The balance of unearned advisory fees, if any, will be refunded.</li>
           </ul>
 
+          <p class="eyebrow">Post-Filing Stage</p>
           <h2>4. Cancellation Post-Filing</h2>
+          <div class="gold-rule"></div>
           <p>Once an application (such as Form TM-A for trademarks, GST registration, Udyam MSME, or FSSAI filing) has been officially submitted and acknowledged by the statutory portal, professional advisory fees for the filing phase are deemed fully earned and are non-refundable.</p>
 
+          <p class="eyebrow">Statutory Events</p>
           <h2>5. Unforeseen Registry Actions and Oppositions</h2>
+          <div class="gold-rule"></div>
           <p>Government examination objections, third-party trademark oppositions, and official hearing notices are independent statutory events resulting from registry review or third-party claims. Such events do not constitute service deficiency on the part of BRNDNUR and do not entitle the applicant to a refund of filing fees.</p>
 
+          <p class="eyebrow">Disbursement Timelines</p>
           <h2>6. Refund Processing Method</h2>
+          <div class="gold-rule"></div>
           <p>Approved refunds are processed via original payment methods (direct bank transfer or UPI) within 7 to 10 working days following written confirmation and verification of bank account details.</p>
 
+          <p class="eyebrow">Billing Desk</p>
           <h2>7. Contact for Cancellation Inquiries</h2>
-          <div class="legal-box" style="margin-top: 24px;">
-            <strong>BRNDNUR Advisory LLP</strong><br />
-            Manjeri, Malappuram District, Kerala, India &ndash; PIN 676121<br />
-            Email: <a href="mailto:brndnuradvisoryllp@gmail.com">brndnuradvisoryllp@gmail.com</a><br />
-            Phone / WhatsApp: <a href="tel:+919048188899">+91 90481 88899</a>
-          </div>
+          <div class="gold-rule"></div>
+          <p><strong>BRNDNUR Advisory LLP</strong><br />
+          Skatt Business Park, Manjeri<br />
+          Email: <a href="mailto:brndnuradvisoryllp@gmail.com">brndnuradvisoryllp@gmail.com</a><br />
+          Phone / WhatsApp: <a href="tel:+919048188899">+91 90481 88899</a></p>
         </article>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="eyebrow">Financial Transparency</p>
+          <h2>Clear Invoicing &amp;<br>Transparent Billing.</h2>
+          <p>We provide full clarity on government fee disbursements and professional service milestones.</p>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Inquire on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Itemized Quotes</strong>
+              <p>Government fees and advisory charges are always billed separately.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Prompt Accounting</strong>
+              <p>Direct electronic payment vouchers provided for all statutory fees.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Responsive Resolution</strong>
+              <p>Billing queries addressed promptly by our accounting team.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

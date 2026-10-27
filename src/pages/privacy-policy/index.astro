@@ -4,6 +4,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = "Privacy Policy | BRNDNUR Advisory LLP";
 const description = "Privacy Policy for BRNDNUR Advisory LLP. Details our data collection, consultation handling, and confidentiality practices for clients across India.";
 const canonical = "https://brndnur.com/privacy-policy/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Privacy Policy",
+  "sectionName": "Privacy Inquiry CTA",
+  "enquiryType": "Confidentiality & Privacy Inquiry",
+  "topic": "I have reviewed your Privacy Policy and have a question regarding confidentiality and data handling.",
+  "details": "My inquiry is: [Please describe]",
+  "callToAction": "Could you please provide clarification on your privacy safeguards?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +23,54 @@ const canonical = "https://brndnur.com/privacy-policy/";
   currentPath="/privacy-policy/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <span class="current">Privacy Policy</span>
-        </nav>
-        <p class="eyebrow">Legal & Compliance</p>
-        <h1>Privacy Policy</h1>
-        <p class="lead">How BRNDNUR Advisory LLP handles client communications, consultation inquiries, and operational records with confidentiality and professional care.</p>
+    <!-- Editorial Hero -->
+    <section class="hero" style="min-height: auto; padding: clamp(48px, 6vw, 72px) 0 clamp(32px, 4vw, 48px); text-align: center;">
+      <div class="container" style="max-width: 860px;">
+        <p class="eyebrow">Legal &amp; Compliance</p>
+        <h1>Privacy <span>Policy.</span></h1>
+        <div class="gold-rule" style="margin: 16px auto 20px;"></div>
+        <p class="lead" style="margin: 0 auto; max-width: 680px;">How BRNDNUR Advisory LLP handles client communications, consultation inquiries, and operational records with confidentiality and professional care.</p>
         
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Strict Client Confidentiality</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Last Updated: October 2026</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Manjeri, Malappuram, Kerala</span>
-          </div>
+        <div class="trust-row" style="margin: 28px auto 0; justify-content: center; max-width: 640px;">
+          <div class="trust-item"><span class="trust-icon">♢</span><span class="trust-label">Strict Client<br>Confidentiality</span></div>
+          <div class="trust-item"><span class="trust-icon">▱</span><span class="trust-label">Effective Date<br>October 2026</span></div>
+          <div class="trust-item"><span class="trust-icon">⌖</span><span class="trust-label">Skatt Business Park<br>Manjeri</span></div>
         </div>
       </div>
     </section>
 
     <!-- Policy Content -->
-    <section class="section">
-      <div class="container">
-        <article class="legal-prose" style="max-width: 860px; margin: 0 auto;">
-          <div class="advisory-notice" style="margin-top: 0; margin-bottom: 32px;">
-            <div class="advisory-notice-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="advisory-notice-content">
-              <h4>Effective Date: October 2026</h4>
-              <p>This privacy policy outlines how BRNDNUR Advisory LLP collects, uses, and safeguards information provided through this website and associated communication channels.</p>
+    <section class="section section-alt">
+      <div class="container" style="max-width: 860px;">
+        <article class="legal-prose">
+          <div class="values" style="margin-bottom: 32px;">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Operational Commitment</strong>
+                <p>This privacy policy outlines how BRNDNUR Advisory LLP collects, uses, and safeguards information provided through this website and associated communication channels.</p>
+              </div>
             </div>
           </div>
 
+          <p class="eyebrow">Data Governance</p>
           <h2>1. Introduction</h2>
+          <div class="gold-rule"></div>
           <p>BRNDNUR Advisory LLP ("BRNDNUR", "we", "our", or "us") is an independent business and brand advisory firm based in Manjeri, Malappuram, Kerala, India. We are committed to protecting the privacy of entrepreneurs, founders, and visitors who communicate with us or use our advisory services.</p>
 
+          <p class="eyebrow">Data Collection</p>
           <h2>2. Information We Collect</h2>
+          <div class="gold-rule"></div>
           <p>We collect information solely to provide responsive business advisory and registration assistance:</p>
           <ul>
             <li><strong>Contact Details:</strong> Name, email address, telephone/WhatsApp number, company/firm name, and business address provided voluntarily through our contact forms or direct WhatsApp/phone consultations.</li>
-            <li><strong>Filing & Business Data:</strong> Information required to assess trademark eligibility, Udyam MSME classification, GST documentation, or business setup requirements (such as PAN, trade names, logo artwork, and commercial invoice samples provided for user affidavits).</li>
+            <li><strong>Filing &amp; Business Data:</strong> Information required to assess trademark eligibility, Udyam MSME classification, GST documentation, or business setup requirements (such as PAN, trade names, logo artwork, and commercial invoice samples provided for user affidavits).</li>
             <li><strong>Technical Diagnostics:</strong> Standard non-personally identifiable server logs (browser type, operating system, and anonymized access timestamps) strictly for security and performance monitoring. We do not employ third-party ad tracking or cross-site tracking scripts.</li>
           </ul>
 
+          <p class="eyebrow">Advisory Mandates</p>
           <h2>3. How We Use Collected Information</h2>
+          <div class="gold-rule"></div>
           <p>Information shared with us is used exclusively for legitimate business purposes:</p>
           <ul>
             <li>Responding to your advisory inquiries, quotation requests, and eligibility queries.</li>
@@ -76,27 +79,69 @@ const canonical = "https://brndnur.com/privacy-policy/";
             <li>Fulfilling legal and accounting compliance obligations under Indian law.</li>
           </ul>
 
+          <p class="eyebrow">Confidentiality Standards</p>
           <h2>4. Information Sharing and Disclosure</h2>
+          <div class="gold-rule"></div>
           <p>We do not sell, rent, or trade client information to marketing brokers. Client details are shared only under specific circumstances:</p>
           <ul>
             <li><strong>Official Portals:</strong> Information submitted to government registries (such as IP India, MCA, GSTN, or FoSCoS) during statutory filing operations as authorized by the client. Note that public registry filings become matters of public record under applicable statutory rules.</li>
             <li><strong>Legal Requirements:</strong> If mandated by statutory summons, court orders, or applicable Indian law enforcement requests.</li>
           </ul>
 
+          <p class="eyebrow">Security Protocols</p>
           <h2>5. Data Retention and Security</h2>
+          <div class="gold-rule"></div>
           <p>We employ administrative and technical precautions to secure client records against unauthorized access, alteration, or disclosure. Records relating to statutory filings are retained for durations necessary to fulfill ongoing advisory mandates, compliance requirements, and legitimate accounting obligations.</p>
 
+          <p class="eyebrow">Client Rights</p>
           <h2>6. User Rights</h2>
+          <div class="gold-rule"></div>
           <p>Clients and website visitors may contact us to review, update, or request correction of their contact information on file, subject to statutory retention mandates.</p>
 
+          <p class="eyebrow">Compliance Inquiries</p>
           <h2>7. Contact for Privacy Inquiries</h2>
-          <div class="legal-box" style="margin-top: 24px;">
-            <strong>BRNDNUR Advisory LLP</strong><br />
-            Manjeri, Malappuram District, Kerala, India &ndash; PIN 676121<br />
-            Email: <a href="mailto:brndnuradvisoryllp@gmail.com">brndnuradvisoryllp@gmail.com</a><br />
-            Phone / WhatsApp: <a href="tel:+919048188899">+91 90481 88899</a>
-          </div>
+          <div class="gold-rule"></div>
+          <p><strong>BRNDNUR Advisory LLP</strong><br />
+          Skatt Business Park, Manjeri<br />
+          Email: <a href="mailto:brndnuradvisoryllp@gmail.com">brndnuradvisoryllp@gmail.com</a><br />
+          Phone / WhatsApp: <a href="tel:+919048188899">+91 90481 88899</a></p>
         </article>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="eyebrow">Confidential Inquiries</p>
+          <h2>Discuss Your Business<br>with Absolute Privacy.</h2>
+          <p>All brand details, unreleased logos, and proprietary concepts are handled with professional discretion.</p>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Inquire on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Non-Disclosure</strong>
+              <p>Proprietary business names handled under strict professional standards.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Direct Advisory</strong>
+              <p>Communicate directly with registered professionals in Kerala.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Transparent Records</strong>
+              <p>Direct electronic receipts and clear tracking for all filings.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

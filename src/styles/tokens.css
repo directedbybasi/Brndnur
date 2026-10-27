@@ -1,19 +1,123 @@
-/* Design Tokens for BRNDNUR Advisory LLP */
+/* ==========================================================================
+   BRNDNUR ADVISORY LLP — GLOBAL DESIGN TOKENS
+   Source of Truth: Approved Homepage (index.html) & Services (services/index.html)
+   ========================================================================== */
+
 :root {
-  --color-ivory: #F4EFE4;
-  --color-ivory-light: #FCFAF6;
-  --color-ivory-dark: #E8DFC8;
-  --color-navy: #13233A;
-  --color-navy-dark: #0C1726;
-  --color-gold: #A8781A;
-  --color-gold-dark: #8F6214;
-  --color-gold-pale: #F0E2C8;
-  --color-line: #DCCEB6;
-  --color-text: #26354A;
-  --color-muted: #566174;
-  
-  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-sans: "DM Sans", Arial, -apple-system, sans-serif;
-  
-  --container-max-width: 1200px;
+  /* Core Brand Colors */
+  --ivory: #F4EFE4;
+  --ivory-soft: #F8F4EB;
+  --ivory-deep: #EDE3D1;
+  --navy: #13233A;
+  --navy-deep: #0C1C2C;
+  --gold: #A8781A;
+  --gold-bright: #C28A25;
+  --gold-dark: #8F6214;
+  --gold-pale: #F0E2C8;
+  --body: #334155;
+  --ink: #13233A;
+  --muted: #536176;
+  --line: #DCCEB6;
+  --line-light: #E3D8C5;
+  --white: #FFFCF6;
+  --max: 1200px;
+
+  /* Typography Font Families — Pure DM Sans System (Matching Homepage Master Reference) */
+  --sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --serif: var(--sans);
+
+  /* Universal Compatibility Aliases */
+  --font-serif: var(--sans);
+  --font-sans: var(--sans);
+  --font-heading: var(--sans);
+  --font-body: var(--sans);
+
+  /* Typography Weight Tokens (Restrained, Professional Hierarchy) */
+  --fw-body: 400;
+  --fw-medium: 500;
+  --fw-heading: 600;
+  --fw-eyebrow: 700;
+
+  --color-ivory: var(--ivory);
+  --color-ivory-light: var(--ivory-soft);
+  --color-ivory-dark: var(--ivory-deep);
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-deep);
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-pale: var(--gold-pale);
+  --color-text: var(--body);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --container-max-width: var(--max);
+
+  /* Fluid Responsive Typography Scale Tokens (Exact Target Scale) */
+  /* Hero H1: Mobile 34–40px, Desktop 48–60px */
+  --font-hero: clamp(2.125rem, 1.35rem + 3vw, 3.75rem);
+  --h1-clamp: var(--font-hero);
+
+  /* Main section H2: Mobile 28–32px, Desktop 36–44px */
+  --font-h2: clamp(1.75rem, 1.35rem + 1.6vw, 2.75rem);
+  --h2-clamp: var(--font-h2);
+
+  /* Section H3: Mobile 22–26px, Desktop 26–32px */
+  --font-h3: clamp(1.375rem, 1.15rem + 0.9vw, 2rem);
+  --h3-clamp: var(--font-h3);
+
+  /* Card Headings: Mobile 19–22px, Desktop 20–24px */
+  --font-card-title: clamp(1.1875rem, 1.1rem + 0.35vw, 1.5rem);
+
+  /* Small Subsection Headings: Mobile 17–19px, Desktop 18–21px */
+  --font-subheading: clamp(1.0625rem, 1rem + 0.25vw, 1.3125rem);
+
+  /* Main Body Paragraphs: Mobile 16–17px, Desktop 16–18px */
+  --font-body: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-base: var(--font-body);
+
+  /* Card Descriptions & Body: Mobile 15–16px, Desktop 15–16px */
+  --font-card-body: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem);
+  --text-sm: var(--font-card-body);
+
+  /* Navigation Links: Mobile 15–16px, Desktop 14–16px */
+  --font-nav: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+
+  /* Primary & Secondary Buttons: Mobile 15–16px, Desktop 15–16px */
+  --font-button: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem);
+
+  /* Metadata, Badges, Table Details: Mobile 14–15px, Desktop 14–15px */
+  --font-meta: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+
+  /* Form Labels & Helper Text: Mobile 14–16px, Desktop 14–16px */
+  --font-label: clamp(0.875rem, 0.85rem + 0.15vw, 1rem);
+
+  /* Footer Descriptions & Links: Mobile 14–15px, Desktop 14–15px */
+  --font-footer: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+
+  /* Eyebrow Labels & Section Overlines: Mobile 11–13px, Desktop 12–13px */
+  --font-eyebrow: clamp(0.725rem, 0.7rem + 0.1vw, 0.8125rem);
+  --text-xs: var(--font-eyebrow);
+
+  /* Backward-compatible scale aliases */
+  --text-lg: var(--font-subheading);
+  --text-xl: var(--font-h3);
+
+  /* Professional Line Heights */
+  --line-heading: 1.15;
+  --line-subheading: 1.25;
+  --line-body: 1.65;
+  --line-compact: 1.45;
+
+  /* ==========================================================================
+     HERO CONTAINER HEIGHT TOKENS — VERIFIED HOMEPAGE SOURCE OF TRUTH
+     Measured at exact viewports:
+       Desktop (1536x900): 700px (evaluated from clamp(540px, calc(100svh - 72px), 700px))
+       Laptop (1366x768):  696px (evaluated from clamp(540px, calc(100svh - 72px), 700px))
+       Tablet (768x1024):  629px
+       Mobile (390x844):   840px
+       Narrow (360x800):   829px
+     ========================================================================== */
+  --hero-height-desktop: clamp(540px, calc(100svh - 72px), 700px);
+  --hero-height-tablet: 629px;
+  --hero-height-mobile: auto;
+  --hero-height-narrow: auto;
 }

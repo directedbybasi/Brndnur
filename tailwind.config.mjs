@@ -27,7 +27,7 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['"DM Sans"', 'system-ui', '-apple-system', 'sans-serif'],
         sans: ['"DM Sans"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       maxWidth: {

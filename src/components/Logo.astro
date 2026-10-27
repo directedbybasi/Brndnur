@@ -1,0 +1,59 @@
+---
+interface Props {
+  variant?: 'transparent' | 'background';
+  width?: number;
+  height?: number;
+  class?: string;
+  loading?: 'eager' | 'lazy';
+  fetchpriority?: 'high' | 'auto' | 'low';
+  alt?: string;
+}
+
+const {
+  variant = 'transparent',
+  width = 2170,
+  height = 725,
+  class: className = '',
+  loading = 'eager',
+  fetchpriority = 'high',
+  alt = 'BRNDNUR Advisory LLP - Light Up Your Brand',
+} = Astro.props;
+
+const logoSrc = variant === 'background'
+  ? '/assets/brndnur-logo-background.png'
+  : '/assets/brndnur-logo-transparent.png';
+
+const logoSrcWebp = variant === 'background'
+  ? '/assets/brndnur-logo-background.webp'
+  : '/assets/brndnur-logo-transparent.webp';
+---
+
+<picture class={`bn-logo-picture ${className}`.trim()}>
+  <source srcset={logoSrcWebp} type="image/webp" />
+  <img
+    src={logoSrc}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    fetchpriority={fetchpriority}
+    decoding="async"
+    class="bn-logo-img"
+  />
+</picture>
+
+<style>
+  .bn-logo-picture {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+  }
+  .bn-logo-img {
+    display: block;
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: left center;
+  }
+</style>

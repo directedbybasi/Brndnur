@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/hero/PageHero.astro';
+import CardCarousel from '../../../components/CardCarousel.astro';
+import FaqItem from '../../../components/FaqItem.astro';
 
 const title = "Gulf-Return Business Package | BRNDNUR Advisory LLP";
 const description = "Dedicated business setup and trademark advisory for Non-Resident Indians (NRIs) and Gulf returnees establishing enterprises in Kerala and across India.";
 const canonical = "https://brndnur.com/packages/gulf-return-business/";
+import { buildWhatsAppUrl } from '../../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Packages — Gulf Return Business",
+  "sectionName": "Hero Section",
+  "enquiryType": "Gulf Return NRI Package Enquiry",
+  "topic": "I am an NRI based in the Gulf and would like to discuss setting up a business in Kerala.",
+  "details": "Current GCC country: [e.g. UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain]\\nProposed venture: [Please describe]",
+  "callToAction": "Could you please schedule a remote advisory discussion on entity incorporation and brand clearance?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Packages — Gulf Return Business",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "Gulf Return Advisory Consultation",
+  "topic": "I am an NRI planning my commercial venture in Kerala and would like guidance on complete business setup before returning.",
+  "details": "Target launch date: [Please specify]",
+  "callToAction": "Could you please explain how we coordinate documentation remotely via WhatsApp and email?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/packages/gulf-return-business/";
   currentPath="/packages/gulf-return-business/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/packages/">Packages</a>
-          <span class="sep">/</span>
-          <span class="current">Gulf-Return Business Package</span>
-        </nav>
-        <p class="eyebrow">Repatriate & Invest</p>
-        <h1>Gulf-Return Business Package.</h1>
-        <p class="lead">Specialized advisory designed for Non-Resident Indians (NRIs) and Gulf returnees establishing ventures in Kerala. Synchronizes business entity setup, intellectual property defense, and regulatory licensing under one seamless umbrella.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span>NRI & Gulf Returnee Specialized Focus</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
-            <span>Entity Setup & Corporate Banking Guidance</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Pre-Launch Trademark Clearance</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Repatriate &amp; Invest"
+      title="Gulf-Return Business<br>Package for <span>Entrepreneurs.</span>"
+      hasGoldRule={true}
+      description="Specialized advisory designed for Non-Resident Indians (NRIs) and Gulf returnees establishing ventures in Kerala. Synchronizes business entity setup, intellectual property defense, and regulatory licensing under one seamless umbrella."
+      primaryCta={{
+        text: "Inquire About This Package",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "All Packages",
+        href: "/packages/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "NRI & Gulf Returnee", subtitle: "Specialized Focus" },
+        { icon: "▱", title: "Entity Setup &", subtitle: "Banking Guidance" },
+        { icon: "⌖", title: "Pre-Launch Trademark", subtitle: "Clearance" }
+      ]}
+      image="/packages/assets/pkg-gulf-hero.webp"
+      imageAlt="BRNDNUR Gulf-Return Business Package advisory in Kerala"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20am%20interested%20in%20the%20Gulf-Return%20Business%20Package." target="_blank" rel="noopener noreferrer">Inquire About This Package &rarr;</a>
-          <a class="btn btn-outline" href="/packages/">All Packages</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual Section -->
+    <!-- Split Visual Section (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/packages/assets/gulf-business-package.webp" alt="BRNDNUR Gulf-Return Business Package advisory in Kerala" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Enterprise Repatriation</p>
-            <h2>Guiding Kerala’s Global Returnees to Commercial Success</h2>
-            <p>Tens of thousands of Malayalis build successful careers and enterprises in the UAE, Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain, eventually seeking to channel their capital and expertise into ventures back home in Kerala.</p>
-            <p>However, navigating Indian regulatory compliance—including entity incorporation, NRE/NRO banking transitions, GST thresholds, and trademark registration—can prove challenging from abroad. BRNDNUR Advisory acts as your on-ground advisory partner in Manjeri, coordinating your complete legal setup before your physical relocation or grand opening.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/packages/assets/pkg-gulf-commercial.webp" alt="Strategic business venture planning desk and roadmap for Kerala returnee enterprise" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Enterprise Repatriation</p>
+          <h2>Guiding Kerala’s Global Returnees to Commercial Success.</h2>
+          <div class="gold-rule"></div>
+          <p>Tens of thousands of Malayalis build successful careers and enterprises in the UAE, Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain, eventually seeking to channel their capital and expertise into ventures back home in Kerala.</p>
+          <p>However, navigating Indian regulatory compliance—including entity incorporation, NRE/NRO banking transitions, GST thresholds, and trademark registration—can prove challenging from abroad. BRNDNUR Advisory acts as your on-ground advisory partner in Manjeri, coordinating your complete legal setup before your physical relocation or grand opening.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>FEMA &amp; Foreign Investment Clarity</strong>
+                <p>Ensuring overseas capital transfers and entity investments fully comply with RBI regulations.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>FEMA & Overseas Investment Clarity</h4>
-                <p>We advise on structural options that comply with the Foreign Exchange Management Act (FEMA) and Reserve Bank of India (RBI) guidelines, ensuring smooth investment routing and business bank account opening.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>Remote Pre-Relocation Execution</strong>
+                <p>Complete paperwork, registrations, and portal submissions coordinated before you land in Kerala.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>On-Ground Malabar Advisory Desk</strong>
+                <p>Direct local support in Manjeri for banking introductions and physical statutory documentation.</p>
               </div>
             </div>
           </div>
@@ -75,61 +101,63 @@ const canonical = "https://brndnur.com/packages/gulf-return-business/";
       </div>
     </section>
 
-    <!-- 4 Package Pillars with Clean SVGs -->
+    <!-- Package Deliverables (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">Package Inclusions</p>
-          <h2>Four Strategic Pillars for Returning Entrepreneurs</h2>
-          <p>Everything required to launch a compliant, protected commercial venture in Kerala:</p>
+          <h2>Four Strategic Pillars for Returning Entrepreneurs.</h2>
+          <div class="gold-rule"></div>
+          <p>Everything required to launch a compliant, protected commercial venture in Kerala.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+        <CardCarousel id="pkg-gulf-inclusions-carousel" ariaLabel="Package Inclusions">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>Entity Constitution Setup</h3>
+              <p>Strategic consultation to select and register the right entity—Sole Proprietorship, Partnership Firm, LLP, or Private Limited Company—based on scale and investor count.</p>
             </div>
-            <h3>Entity Constitution Setup</h3>
-            <p>Strategic consultation to select and register the right entity—Sole Proprietorship, Partnership Firm, LLP, or Private Limited Company—based on scale and investor count.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>Pre-Launch Trademark Clearance</h3>
+              <p>Thorough search of the official IP India registry to ensure your intended venture brand name is legally available before committing signage and lease capital.</p>
             </div>
-            <h3>Brand & Trademark Clearance</h3>
-            <p>Preliminary search across Indian databases to secure your brand name before capital is deployed into store interiors, signage, packaging, or stock.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>Tax &amp; Licensing Approvals</h3>
+              <p>Obtaining GSTIN tax registration, Udyam MSME certification for statutory concessions, and local trade licenses or FSSAI permits as needed.</p>
             </div>
-            <h3>Tax & Statutory Registrations</h3>
-            <p>End-to-end assistance securing GSTIN, Udyam MSME certificate (unlocking 50% trademark fee discount), PAN/TAN, and professional tax enrollment.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="18" x2="12" y2="6"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">04</div>
+              <h3>Commercial Banking Guidance</h3>
+              <p>Document preparation and advisory on establishing current bank accounts, coordinating NRI/NRO fund transitions into compliant business capital.</p>
             </div>
-            <h3>Banking & Government Subsidies</h3>
-            <p>Guidance on opening domestic business current accounts and exploring state industrial development schemes (e.g., KSIDC, MSME credit guarantee).</p>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- Onboarding Roadmap Table -->
+    <!-- Implementation Roadmap Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Onboarding Roadmap</p>
-          <h2>Gulf-Return Business Onboarding Stages</h2>
-          <p>Chronological milestones from initial digital consultation to commercial launch.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Execution Sequence</p>
+          <h2>Gulf-Return Business Setup Roadmap.</h2>
+          <div class="gold-rule"></div>
+          <p>Structured milestones from remote planning to operational launch.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
@@ -142,25 +170,25 @@ const canonical = "https://brndnur.com/packages/gulf-return-business/";
             <tbody>
               <tr>
                 <td><strong>Phase 1: Diagnostic</strong></td>
-                <td>Entity & Name Feasibility</td>
+                <td>Entity &amp; Name Feasibility</td>
                 <td>Trademark search report + Entity structure recommendation</td>
                 <td>Remote video / WhatsApp call from Gulf</td>
               </tr>
               <tr>
                 <td><strong>Phase 2: Incorporation</strong></td>
-                <td>Registration & Filings</td>
+                <td>Registration &amp; Filings</td>
                 <td>Incorporation / Deed execution, PAN/TAN allocation</td>
-                <td>Digital drafting & official filing</td>
+                <td>Digital drafting &amp; official filing</td>
               </tr>
               <tr>
                 <td><strong>Phase 3: Licensing</strong></td>
-                <td>Tax & Operational Approvals</td>
+                <td>Tax &amp; Operational Approvals</td>
                 <td>GSTIN issuance, Udyam certificate, FSSAI / Trade license</td>
-                <td>Portal submission & liaison</td>
+                <td>Portal submission &amp; liaison</td>
               </tr>
               <tr>
                 <td><strong>Phase 4: Launch</strong></td>
-                <td>Brand Exclusivity & Banking</td>
+                <td>Brand Exclusivity &amp; Banking</td>
                 <td>Form TM-A filing receipt (&trade; symbol), Current account documents</td>
                 <td>On-ground handoff in Kerala</td>
               </tr>
@@ -170,16 +198,113 @@ const canonical = "https://brndnur.com/packages/gulf-return-business/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- 3-Step NRI Journey -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Onboarding Process</p>
+          <h2>The 3-Step Remote Onboarding Journey.</h2>
+          <div class="gold-rule"></div>
+          <p>Seamless transition from overseas planning to operational launch in Kerala.</p>
+        </div>
+
+        <CardCarousel id="pkg-gulf-steps-carousel" ariaLabel="The 3-Step Remote Onboarding Journey">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Remote Strategy Session</h3>
+            <p>Connect with our senior partners via video or WhatsApp call to review your commercial venture, capital allocation, and trademark clearance.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Digital Drafting &amp; Filings</h3>
+            <p>We execute your entity registration, MSME certificate, GST setup, and trademark applications digitally while you remain in the GCC.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>On-Ground Launch in Kerala</h3>
+            <p>Upon your arrival in Kerala, your registrations, bank resolution paperwork, and trademark receipts are prepared and ready for active commerce.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Gulf Return FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">NRI FAQs</p>
+          <h2>Frequently Asked Questions.</h2>
+          <div class="gold-rule"></div>
+          <p>Practical guidance for Malayali expatriates and overseas entrepreneurs investing in Kerala.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="Can I initiate my business setup while still living in the Gulf?"
+            answer="Yes. All preliminary trademark searches, MCA name reservations, LLP/Company drafting, and digital applications can be completed while you are still abroad. We coordinate with you via WhatsApp and email, ensuring your legal setup is complete before you relocate."
+          />
+          <FaqItem
+            num="02"
+            question="Can non-resident Indians (NRIs) own registered trademarks in India?"
+            answer="Yes. Under the Trade Marks Act, 1999, any person or entity—including non-resident Indians and foreign corporations—can apply for and hold trademark registrations in India, provided they have an address for service in India (which BRNDNUR Advisory provides as your registered agent)."
+          />
+          <FaqItem
+            num="03"
+            question="What business constitution is most suitable for returning NRIs?"
+            answer="For capital-intensive manufacturing or joint ventures with local partners, an LLP or Private Limited Company is usually recommended to limit personal liability. For retail ventures or local trading, a registered Partnership or Sole Proprietorship may offer faster initial operational flexibility."
+          />
+          <FaqItem
+            num="04"
+            question="What documents should I prepare while still in the GCC?"
+            answer="Valid Indian passport copies, PAN card, Aadhaar card (if linked to an active mobile for OTPs), local address proof in Kerala, and bank account statements. If foreign nationals are involved as directors, notarized and apostilled passport copies will be required."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Plan Your Venture</p>
-          <h2>Returning to Kerala to Start a Business?</h2>
+          <h2>Returning to Kerala to<br>Start a Business?</h2>
           <p>Schedule a confidential consultation with our advisory directors in Manjeri to map out your setup roadmap.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20am%20an%20NRI%20planning%20to%20start%20a%20business%20in%20Kerala." target="_blank" rel="noopener noreferrer">Discuss on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/contact/">Connect via Email / Phone</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Discuss on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Gulf Time-Zone Friendly</strong>
+              <p>Flexible consultations scheduled around your working hours in the GCC.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>On-Ground Malabar Liaison</strong>
+              <p>Physical document verification and portal liaison handled in Kerala.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Holistic Advisory</strong>
+              <p>Synchronized legal, intellectual property, and banking advisory.</p>
+            </div>
           </div>
         </div>
       </div>

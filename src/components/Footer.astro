@@ -1,26 +1,23 @@
 ---
-// src/components/Footer.astro
+import Logo from './Logo.astro';
+import { getFooterWhatsAppUrl } from '../utils/whatsapp';
+
+const footerWhatsAppUrl = getFooterWhatsAppUrl();
 ---
 
 <footer class="bn-footer" id="contact">
   <div class="container bn-footer-main">
     <div class="bn-footer-brand">
-      <div class="bn-brand">
-        <span class="bn-brand-name">BRNDNUR</span>
-        <span class="bn-brand-sub">ADVISORY LLP</span>
-        <span class="bn-brand-tag">LIGHT UP YOUR BRAND &trade;</span>
-      </div>
+      <a class="bn-brand footer-logo" href="/" aria-label="BRNDNUR Advisory LLP - Light Up Your Brand">
+        <Logo variant="transparent" loading="lazy" fetchpriority="auto" />
+        <span class="sr-only">BRNDNUR Advisory LLP - Light Up Your Brand</span>
+      </a>
       <p>Trademark registration guidance and business advisory services for entrepreneurs and growing businesses.</p>
-      <div class="bn-socials" aria-label="Social media links">
-        <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">&#9678;</a>
-        <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-        <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer">&#9654;</a>
-      </div>
     </div>
     <div class="bn-footer-col">
       <p class="bn-foot-title">Quick Links</p>
       <a href="/">Home</a>
-      <a href="/trademark-registration/">Trademark Registration</a>
+      <a href="/trademark-registration/">Trademark</a>
       <a href="/services/">Services</a>
       <a href="/packages/">Packages</a>
       <a href="/about/">About</a>
@@ -43,20 +40,26 @@
     </div>
     <div class="bn-footer-col">
       <p class="bn-foot-title">Contact</p>
-      <p class="bn-contact-line">
+      <a class="bn-contact-line" href="https://maps.google.com/?q=Skatt+Business+Park,+Manjeri" target="_blank" rel="noopener noreferrer" aria-label="BRNDNUR Advisory LLP on Google Maps">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true">
           <path d="M12 22s7-7.4 7-13a7 7 0 1 0-14 0c0 5.6 7 13 7 13Z"/>
           <circle cx="12" cy="9" r="2.4"/>
         </svg>
-        <span>Manjeri, Malappuram<br>Kerala, India</span>
-      </p>
+        <span>Skatt Business Park,<br>Manjeri</span>
+      </a>
       <a class="bn-contact-line" href="tel:+919048188899">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true">
           <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7.7 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 2.2 2.5Z"/>
         </svg>
         <span>+91 90481 88899</span>
       </a>
-      <a class="bn-contact-line" href="mailto:brndnuradvisoryllp@gmail.com">
+      <a class="bn-contact-line footer-contact-whatsapp" href={footerWhatsAppUrl} target="_blank" rel="noopener noreferrer" aria-label="Chat with BRNDNUR Advisory on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12.01 2.001c-5.502 0-9.98 4.478-9.98 9.98 0 1.76.46 3.475 1.332 4.992L2.001 22l5.16-1.353a9.948 9.948 0 0 0 4.849 1.258h.004c5.501 0 9.98-4.479 9.98-9.98 0-2.667-1.038-5.174-2.924-7.06A9.918 9.918 0 0 0 12.01 2zM12.01 20.25a8.27 8.27 0 0 1-4.223-1.152l-.303-.18-3.139.823.838-3.061-.197-.314a8.276 8.276 0 0 1-1.268-4.436c0-4.57 3.719-8.289 8.29-8.289 2.215 0 4.297.863 5.863 2.43 1.566 1.566 2.428 3.649 2.428 5.864 0 4.572-3.719 8.29-8.29 8.29zm4.542-6.196c-.249-.125-1.472-.726-1.7-.809-.228-.083-.394-.125-.56.125-.166.249-.643.809-.788.975-.145.166-.29.187-.539.062-.249-.125-1.052-.388-2.004-1.237-.741-.661-1.241-1.478-1.386-1.727-.145-.249-.015-.383.109-.507.112-.112.249-.29.373-.435.125-.145.166-.249.249-.415.083-.166.042-.311-.021-.436-.062-.124-.56-1.349-.768-1.848-.202-.486-.407-.42-.56-.427l-.478-.008c-.166 0-.435.062-.663.311-.228.249-.871.851-.871 2.075 0 1.224.892 2.407 1.016 2.573.124.166 1.755 2.68 4.252 3.757.594.256 1.058.41 1.419.525.597.19 1.141.163 1.571.099.479-.072 1.472-.602 1.68-1.183.207-.581.207-1.079.145-1.183-.062-.104-.228-.166-.477-.291z" />
+        </svg>
+        <span>WhatsApp: +91 90481 88899</span>
+      </a>
+      <a class="bn-contact-line footer-contact-email" href="mailto:brndnuradvisoryllp@gmail.com">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true">
           <rect x="3" y="5" width="18" height="14" rx="1.5"/>
           <path d="m3 7 9 6 9-6"/>
@@ -70,7 +73,7 @@
     <div class="bn-legal">
       <a href="/privacy-policy/">Privacy Policy</a>
       <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
-      <a href="/disclaimer/">Disclaimer</a>
+      <a href="/disclaimer/">Disclaimer &amp; Editorial Policy</a>
       <a href="/refund-cancellation-policy/">Refund &amp; Cancellation Policy</a>
     </div>
   </div>

@@ -1,9 +1,37 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
 
 const title = "Contact Us | BRNDNUR Advisory LLP";
 const description = "Connect with BRNDNUR Advisory LLP in Manjeri, Malappuram, Kerala. Contact us via WhatsApp, phone, or email for trademark and business advisory support.";
 const canonical = "https://brndnur.com/contact/";
+
+const contactHeroWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'Contact Page',
+  sectionName: 'Hero Section',
+  enquiryType: 'General Enquiry',
+  topic: 'I visited your contact page and would like to discuss my business requirements.',
+  callToAction: 'Could you please help me identify the appropriate service and explain how to proceed?'
+});
+
+const contactChannelWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'Contact Page',
+  sectionName: 'Direct WhatsApp Channel Card',
+  enquiryType: 'Direct WhatsApp Consultation',
+  topic: 'I am reaching out via your direct WhatsApp consultation channel on the contact page.',
+  details: 'My enquiry is regarding: [Please describe your requirement or brand name]',
+  callToAction: 'Could you please assist me with the next steps?'
+});
+
+const contactClosingWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'Contact Page',
+  sectionName: 'Closing Consultation Section',
+  enquiryType: 'Immediate Advisory Consultation',
+  topic: 'I visited your contact page and would like an immediate WhatsApp consultation regarding brand protection.',
+  details: 'My brand name / requirement: [Please describe]',
+  callToAction: 'Could you please connect me with an advisory coordinator?'
+});
 ---
 
 <BaseLayout
@@ -13,190 +41,428 @@ const canonical = "https://brndnur.com/contact/";
   currentPath="/contact/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Get In Touch"
+      title="Let’s Talk About<br><span>Your Brand.</span>"
+      hasGoldRule={true}
+      description="Reach out to discuss your brand name, explore trademark protection, or request tailored guidance for your business registrations. Our team in Manjeri, Kerala is here to assist you."
+      primaryCta={{
+        text: "Chat on WhatsApp",
+        href: contactHeroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "Call +91 90481 88899",
+        href: "tel:+919048188899",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "☏", title: "Direct Advisory", subtitle: "+91 90481 88899" },
+        { icon: "▱", title: "Based in", subtitle: "Skatt Business Park, Manjeri" },
+        { icon: "⌖", title: "Mon – Sat", subtitle: "9:30 AM – 6:00 PM" }
+      ]}
+      image="/assets/contact-hero-consultation.webp"
+      imageAlt="BRNDNUR Advisory executive consultation desk in Kerala"
+    />
+
+    <!-- Channels Grid (Harmonized with Reference Component Style) -->
+    <section class="section section-alt">
       <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <span class="current">Contact</span>
-        </nav>
-        <p class="eyebrow">Get In Touch</p>
-        <h1>Let’s Talk About Your Brand.</h1>
-        <p class="lead">Reach out to discuss your brand name, explore trademark protection, or request tailored guidance for your business registrations.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Manjeri, Malappuram, Kerala</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>Direct WhatsApp Advisory: +91 90481 88899</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Mon &ndash; Sat, 9:30 AM &ndash; 6:00 PM IST</span>
-          </div>
+        <div class="section-heading">
+          <p class="eyebrow">Direct Channels</p>
+          <h2>How You Can Reach Us.</h2>
+          <div class="gold-rule"></div>
+          <p>Choose the communication channel that suits you best. We respond promptly during normal business hours.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12.01 2.001c-5.502 0-9.98 4.478-9.98 9.98 0 1.76.46 3.475 1.332 4.992L2.001 22l5.16-1.353a9.948 9.948 0 0 0 4.849 1.258h.004c5.501 0 9.98-4.479 9.98-9.98 0-2.667-1.038-5.174-2.924-7.06A9.918 9.918 0 0 0 12.01 2zM12.01 20.25a8.27 8.27 0 0 1-4.223-1.152l-.303-.18-3.139.823.838-3.061-.197-.314a8.276 8.276 0 0 1-1.268-4.436c0-4.57 3.719-8.289 8.29-8.289 2.215 0 4.297.863 5.863 2.43 1.566 1.566 2.428 3.649 2.428 5.864 0 4.572-3.719 8.29-8.29 8.29zm4.542-6.196c-.249-.125-1.472-.726-1.7-.809-.228-.083-.394-.125-.56.125-.166.249-.643.809-.788.975-.145.166-.29.187-.539.062-.249-.125-1.052-.388-2.004-1.237-.741-.661-1.241-1.478-1.386-1.727-.145-.249-.015-.383.109-.507.112-.112.249-.29.373-.435.125-.145.166-.249.249-.415.083-.166.042-.311-.021-.436-.062-.124-.56-1.349-.768-1.848-.202-.486-.407-.42-.56-.427l-.478-.008c-.166 0-.435.062-.663.311-.228.249-.871.851-.871 2.075 0 1.224.892 2.407 1.016 2.573.124.166 1.755 2.68 4.252 3.757.594.256 1.058.41 1.419.525.597.19 1.141.163 1.571.099.479-.072 1.472-.602 1.68-1.183.207-.581.207-1.079.145-1.183-.062-.104-.228-.166-.477-.291z"/></svg>
+            </div>
+            <h3>WhatsApp Consultation</h3>
+            <p>Our fastest and most convenient communication channel for preliminary inquiries, document sharing, and status updates.</p>
+            <div class="contact-highlight">+91 90481 88899</div>
+            <a class="btn btn-primary btn-block" href={contactChannelWhatsAppUrl} target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span class="arrow">→</span></a>
+          </article>
+
+          <article class="service-card contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>Telephone Inquiry</h3>
+            <p>Speak directly with our advisory coordinators during normal business hours (Monday to Saturday, 9:30 AM to 6:00 PM IST).</p>
+            <div class="contact-highlight">+91 90481 88899</div>
+            <a class="btn btn-primary btn-block" href="tel:+919048188899">Call Directly <span class="arrow">→</span></a>
+          </article>
+
+          <article class="service-card contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3>Email Correspondence</h3>
+            <p>Send formal documentation, search inquiries, or multi-class service proposals directly to our inbox.</p>
+            <div class="contact-highlight contact-email">brndnuradvisoryllp@gmail.com</div>
+            <a class="btn btn-outline btn-block" href="mailto:brndnuradvisoryllp@gmail.com">Send an Email <span class="arrow">→</span></a>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Channels Grid with SVGs -->
+    <!-- Two Column: Consultation Form + Office Location -->
     <section class="section">
       <div class="container">
-        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </div>
-            <h3>WhatsApp Consultation</h3>
-            <p>Our fastest and most convenient communication channel for preliminary inquiries, document sharing, and status updates.</p>
-            <p style="font-size: 16px; margin: 12px 0;"><strong>+91 90481 88899</strong></p>
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%20Advisory%2C%20I%20would%20like%20to%20discuss%20my%20requirements." target="_blank" rel="noopener noreferrer">Chat on WhatsApp &rarr;</a>
-          </div>
-
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <h3>Telephone Inquiry</h3>
-            <p>Speak directly with our advisory coordinators during normal business hours (Monday to Saturday, 9:30 AM to 6:00 PM IST).</p>
-            <p style="font-size: 16px; margin: 12px 0;"><strong>+91 90481 88899</strong></p>
-            <a class="btn btn-primary" href="tel:+919048188899">Call Directly &rarr;</a>
-          </div>
-
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <h3>Email Correspondence</h3>
-            <p>Send formal documentation, search inquiries, or multi-class service proposals directly to our inbox.</p>
-            <p style="font-size: 16px; margin: 12px 0;"><strong>brndnuradvisoryllp@gmail.com</strong></p>
-            <a class="btn btn-outline" href="mailto:brndnuradvisoryllp@gmail.com">Send an Email &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Two Column: Consultation Form + Office Location -->
-        <div style="margin-top: 56px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: clamp(32px, 4vw, 56px); align-items: start;">
+        <div class="contact-split-grid">
           <!-- Left: Direct Interactive Inquiry Builder (Zero Fake Success) -->
-          <div style="background: #FFFCF6; border: 1px solid #DCCEB6; border-radius: 10px; padding: clamp(24px, 3vw, 36px); box-shadow: 0 4px 16px rgba(19, 35, 58, 0.04);">
+          <div class="inquiry-card">
             <p class="eyebrow">Quick Inquiry</p>
-            <h2 style="font-family: var(--bn-serif); font-size: 24px; margin: 0 0 10px; color: #13233A;">Start an Advisory Discussion</h2>
-            <p style="color: #566174; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px;">
+            <h2>Start an Advisory Discussion</h2>
+            <div class="gold-rule"></div>
+            <p class="inquiry-subtitle">
               Fill in your preliminary details to initiate a direct conversation with our advisory desk.
             </p>
 
-            <form id="contact-inquiry-form" onsubmit="event.preventDefault(); submitInquiry();" style="display: grid; gap: 16px;">
+            <form id="contact-inquiry-form" class="inquiry-form">
               <div>
-                <label for="client-name" style="display: block; font-size: 13px; font-weight: 600; color: #13233A; margin-bottom: 6px;">Your Name / Enterprise Name *</label>
-                <input type="text" id="client-name" required placeholder="e.g. Rahul Sharma / Malabar Spices" style="width: 100%; padding: 10px 14px; border: 1px solid #DCCEB6; border-radius: 6px; font-family: inherit; font-size: 14px; background: #FFF;" />
+                <label for="client-name">Your Name / Enterprise Name *</label>
+                <input type="text" id="client-name" name="client-name" aria-label="Your Name or Enterprise Name" required placeholder="e.g. Rahul Sharma / Malabar Spices" class="form-input" />
               </div>
 
               <div>
-                <label for="client-phone" style="display: block; font-size: 13px; font-weight: 600; color: #13233A; margin-bottom: 6px;">Phone / WhatsApp Number *</label>
-                <input type="tel" id="client-phone" required placeholder="+91 98765 43210" style="width: 100%; padding: 10px 14px; border: 1px solid #DCCEB6; border-radius: 6px; font-family: inherit; font-size: 14px; background: #FFF;" />
+                <label for="client-phone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="client-phone" name="client-phone" aria-label="Phone or WhatsApp Number" required placeholder="+91 98765 43210" class="form-input" />
               </div>
 
               <div>
-                <label for="client-service" style="display: block; font-size: 13px; font-weight: 600; color: #13233A; margin-bottom: 6px;">Service Required *</label>
-                <select id="client-service" style="width: 100%; padding: 10px 14px; border: 1px solid #DCCEB6; border-radius: 6px; font-family: inherit; font-size: 14px; background: #FFF;">
+                <label for="client-service">Service Required *</label>
+                <select id="client-service" name="client-service" aria-label="Service Required" class="form-select">
                   <option value="Trademark Registration">Trademark Registration (Form TM-A)</option>
                   <option value="Brand Name Search">Preliminary Brand Name Search & Clearance</option>
                   <option value="GST & Udyam MSME Setup">GST & Udyam MSME Setup</option>
                   <option value="FSSAI Food License">FSSAI Food Licensing Package</option>
                   <option value="Gulf Return Business Advisory">Gulf-Return Business Setup</option>
-                  <option value="General Advisory">General Advisory Inquiry</option>
+                  <option value="General Consultation">General Commercial Advisory</option>
                 </select>
               </div>
 
               <div>
-                <label for="client-note" style="display: block; font-size: 13px; font-weight: 600; color: #13233A; margin-bottom: 6px;">Brand Name or Requirements (Optional)</label>
-                <textarea id="client-note" rows="3" placeholder="Tell us your proposed brand name or specific questions..." style="width: 100%; padding: 10px 14px; border: 1px solid #DCCEB6; border-radius: 6px; font-family: inherit; font-size: 14px; background: #FFF;"></textarea>
+                <label for="client-details">Brand Name or Requirements (Optional)</label>
+                <textarea id="client-details" name="client-details" aria-label="Brand Name or Requirements" rows="3" placeholder="Tell us your proposed brand name or specific questions..." class="form-textarea"></textarea>
               </div>
 
-              <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px;">
-                <button type="submit" class="btn btn-gold" style="cursor: pointer; border: none;">
-                  Chat on WhatsApp &rarr;
-                </button>
-                <button type="button" onclick="submitEmail()" class="btn btn-outline" style="cursor: pointer;">
-                  Send via Email
-                </button>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Chat on WhatsApp <span class="arrow">→</span></button>
               </div>
             </form>
           </div>
 
           <!-- Right: Registered Office & Details -->
-          <div style="background: #F4EFE4; border: 1px solid #DCCEB6; border-radius: 10px; padding: clamp(24px, 3vw, 36px);">
-            <p class="eyebrow">Registered Office</p>
-            <h2 style="font-family: var(--bn-serif); font-size: 24px; margin: 0 0 14px; color: #13233A;">BRNDNUR Advisory LLP</h2>
-            
-            <p style="color: #46536A; font-size: 14.5px; line-height: 1.65; margin: 0 0 16px;">
-              <strong>Office Location:</strong><br />
-              Manjeri, Malappuram District,<br />
-              Kerala, India &ndash; PIN 676121
-            </p>
-
-            <p style="color: #46536A; font-size: 14.5px; line-height: 1.65; margin: 0 0 16px;">
-              <strong>Advisory Hours:</strong><br />
-              Monday to Saturday: 9:30 AM &ndash; 6:00 PM IST<br />
-              Sunday: Closed (Digital inquiries queued)
-            </p>
-
-            <p style="color: #46536A; font-size: 14.5px; line-height: 1.65; margin: 0 0 20px;">
-              <strong>Statutory Jurisdictions Served:</strong><br />
-              &bull; Trade Marks Registry, Chennai (Kerala jurisdiction)<br />
-              &bull; Ministry of Corporate Affairs (MCA)<br />
-              &bull; Ministry of MSME (Udyam)<br />
-              &bull; FSSAI National Food Authority
-            </p>
-
-            <div class="advisory-notice" style="margin: 0; padding: 14px 18px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="office-card">
+            <!-- Digital Business Card Visual (Matching Approved Reference) -->
+            <div class="bn-business-card" aria-label="BRNDNUR Advisory LLP Official Business Card">
+              <div class="bn-card-header">
+                <img src="/assets/brndnur-logo-transparent.png" alt="BRNDNUR Advisory LLP" class="bn-card-logo" width="190" height="63" loading="eager" />
+                <span class="bn-card-tagline">LIGHT UP YOUR BRAND</span>
               </div>
-              <div class="advisory-notice-content">
-                <h4 style="font-size: 15px;">Remote & Pan-India Collaboration</h4>
-                <p style="font-size: 13px;">Our trademark and business filing processes are 100% digitally executed across all Indian states and for NRI founders globally.</p>
+              <div class="bn-card-divider" aria-hidden="true"></div>
+              <div class="bn-card-body">
+                <div class="bn-card-row">
+                  <svg class="bn-card-pin" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M12 22s7-7.4 7-13a7 7 0 1 0-14 0c0 5.6 7 13 7 13Z"/>
+                    <circle cx="12" cy="9" r="2.4"/>
+                  </svg>
+                  <span class="bn-card-address">Skatt Business Park, Manjeri</span>
+                </div>
+                <div class="bn-card-row">
+                  <svg class="bn-card-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                  </svg>
+                  <span>brndnur.com</span>
+                </div>
+                <div class="bn-card-row">
+                  <svg class="bn-card-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7.7 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 2.2 2.5Z"/>
+                  </svg>
+                  <span>+91 9048 188 899</span>
+                </div>
+                <div class="bn-card-row">
+                  <svg class="bn-card-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/>
+                    <path d="m22 6-10 7L2 6"/>
+                  </svg>
+                  <span>brndnuradvisoryllp@gmail.com</span>
+                </div>
               </div>
+            </div>
+
+            <p class="eyebrow" style="margin-top: 1.75rem;">Registered Office</p>
+            <h2>BRNDNUR Advisory LLP</h2>
+            <div class="gold-rule"></div>
+
+            <div class="office-details">
+              <div>
+                <strong>Office Location:</strong>
+                Skatt Business Park, Manjeri
+              </div>
+
+              <div>
+                <strong>Advisory Hours:</strong>
+                Monday to Saturday: 9:30 AM &ndash; 6:00 PM IST<br>
+                Sunday: Closed (Digital inquiries queued)
+              </div>
+
+              <div>
+                <strong>Statutory Jurisdictions Served:</strong>
+                &bull; Trade Marks Registry, Chennai (Kerala jurisdiction)<br>
+                &bull; Ministry of Corporate Affairs (MCA)<br>
+                &bull; Ministry of MSME (Udyam)<br>
+                &bull; FSSAI National Food Authority
+              </div>
+
+              <div class="office-callout">
+                <strong>Remote &amp; Pan-India Collaboration</strong>
+                <p>
+                  Our trademark and business filing processes are 100% digitally executed across all Indian states and for NRI founders globally.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="eyebrow">Direct Contact</p>
+          <h2>Prefer an Immediate WhatsApp Consultation?</h2>
+          <p>Send your brand name and questions directly to our advisory coordinators. We review preliminary availability and provide clear scope guidance.</p>
+          <a class="btn btn-gold" href={contactClosingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Chat on WhatsApp Directly <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Quick Response</strong>
+              <p>Direct communication without intermediaries.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Confidential Discussions</strong>
+              <p>Your brand name is kept strictly private.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Expert Clarifications</strong>
+              <p>Understand classes, costs, and timeline expectations.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <script is:inline>
+    document.getElementById('contact-inquiry-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('client-name').value;
+      const phone = document.getElementById('client-phone').value;
+      const service = document.getElementById('client-service').value;
+      const details = document.getElementById('client-details').value;
+
+      const message = encodeURIComponent(
+        `Hello BRNDNUR Team,\n\n` +
+        `I visited your contact page and filled out the consultation form.\n\n` +
+        `Client details:\n` +
+        `• Name / Enterprise: ${name}\n` +
+        `• Contact Phone: ${phone}\n` +
+        `• Service Required: ${service}\n` +
+        (details ? `• Brand / Specific Notes: ${details}\n\n` : '\n') +
+        `Could you please review my enquiry and advise on the next steps?\n\n` +
+        `Website source: Contact Page — Quick Inquiry Form\n` +
+        `Enquiry type: Direct Consultation Request`
+      );
+
+      window.open(`https://wa.me/919048188899?text=${message}`, '_blank');
+    });
+  </script>
 </BaseLayout>
 
-<script is:inline>
-  function submitInquiry() {
-    var name = document.getElementById('client-name').value;
-    var phone = document.getElementById('client-phone').value;
-    var service = document.getElementById('client-service').value;
-    var note = document.getElementById('client-note').value;
-    
-    var text = "Hello BRNDNUR Advisory, I would like to consult regarding " + service + ".\n" +
-               "Name: " + name + "\n" +
-               "Phone: " + phone + 
-               (note ? ("\nDetails: " + note) : "");
-               
-    var url = "https://wa.me/919048188899?text=" + encodeURIComponent(text);
-    window.open(url, '_blank');
+<style>
+  .contact-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    background: var(--gold-pale);
+    display: grid;
+    place-items: center;
+    color: var(--gold-dark);
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  .contact-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+  }
+  .contact-card p {
+    font-size: var(--font-card-body, clamp(0.9375rem, 0.91rem + 0.15vw, 1rem));
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    flex: 1;
+  }
+  .contact-highlight {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .contact-email {
+    font-size: 0.9375rem;
+    word-break: break-all;
+  }
+  .btn-block {
+    width: 100%;
+    margin-top: auto;
+  }
+  .contact-split-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: clamp(32px, 4vw, 56px);
+    align-items: start;
+  }
+  .inquiry-card, .office-card {
+    background: rgba(255, 252, 246, 0.85);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: clamp(24px, 3vw, 36px);
+    box-shadow: 0 4px 16px rgba(19, 35, 58, 0.04);
+  }
+  .inquiry-card h2, .office-card h2 {
+    font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+    margin-bottom: .5rem;
+  }
+  .inquiry-subtitle {
+    font-size: var(--font-body, 1rem);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+  .inquiry-form {
+    display: grid;
+    gap: 1rem;
+  }
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+  }
+  .form-actions {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin-top: .5rem;
+  }
+  .office-details {
+    display: grid;
+    gap: 1.25rem;
+    font-size: var(--font-body, 1rem);
+    color: var(--body);
+    line-height: 1.65;
+  }
+  .office-details strong {
+    color: var(--navy);
+    display: block;
+    margin-bottom: .25rem;
+  }
+  .office-callout {
+    margin-top: .5rem;
+    padding: 1rem;
+    background: var(--ivory-soft);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+  }
+  .office-callout p {
+    margin: 0;
+    font-size: var(--font-card-body, clamp(0.9375rem, 0.91rem + 0.15vw, 1rem));
+    line-height: 1.65;
+    color: var(--body);
+  }
+  @media (max-width: 900px) {
+    .contact-split-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
-  function submitEmail() {
-    var name = document.getElementById('client-name').value;
-    var phone = document.getElementById('client-phone').value;
-    var service = document.getElementById('client-service').value;
-    var note = document.getElementById('client-note').value;
-    
-    var subject = "Advisory Inquiry: " + service + " - " + name;
-    var body = "Hello BRNDNUR Advisory Team,\n\n" +
-               "I would like to inquire about: " + service + "\n" +
-               "Name: " + name + "\n" +
-               "Phone: " + phone + "\n\n" +
-               "Notes / Brand Details:\n" + note;
-               
-    var mailto = "mailto:brndnuradvisoryllp@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-    window.location.href = mailto;
+  /* Digital Business Card Visual Styles */
+  .bn-business-card {
+    background: #FAF7F0;
+    color: #13233A;
+    border: 1px solid rgba(168, 120, 26, 0.4);
+    border-radius: 8px;
+    padding: clamp(20px, 2.5vw, 26px);
+    box-shadow: 0 6px 20px rgba(19, 35, 58, 0.08);
+    position: relative;
+    overflow: hidden;
   }
-</script>
+  .bn-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .bn-card-logo {
+    max-height: 48px;
+    width: auto;
+    object-fit: contain;
+  }
+  .bn-card-tagline {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #A8781A;
+    text-transform: uppercase;
+  }
+  .bn-card-divider {
+    height: 1.5px;
+    background: linear-gradient(90deg, rgba(168, 120, 26, 0.8) 0%, rgba(168, 120, 26, 0.15) 100%);
+    margin: 10px 0 14px 0;
+  }
+  .bn-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9125rem;
+  }
+  .bn-card-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #13233A;
+  }
+  .bn-card-pin {
+    color: #A8781A;
+    flex-shrink: 0;
+  }
+  .bn-card-icon {
+    color: #A8781A;
+    flex-shrink: 0;
+  }
+  .bn-card-address {
+    font-weight: 700;
+    color: #13233A;
+  }
+</style>

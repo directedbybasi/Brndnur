@@ -1,10 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CardCarousel from '../components/CardCarousel.astro';
+import { buildWhatsAppUrl } from '../utils/whatsapp';
 
-const title = "BRNDNUR Advisory LLP | Trademark Registration & Business Advisory";
-const description = "Trademark registration guidance, preliminary brand-name searches, and business advisory services with BRNDNUR Advisory LLP in Manjeri, Malappuram, Kerala.";
+const title = "BRNDNUR Advisory LLP | Trademark & Business Advisory";
+const description = "Trademark registration guidance, preliminary brand-name searches, class selection, and business advisory services with BRNDNUR Advisory LLP in Manjeri, Malappuram, Kerala.";
 const canonical = "https://brndnur.com/";
-const ogImage = "/assets/hero-brand-desk.webp";
+const ogImage = "/assets/hero-brand-desk.png";
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'Homepage',
+  sectionName: 'Hero Section',
+  enquiryType: 'Preliminary Brand Name Search',
+  topic: 'I visited your homepage and would like assistance with a preliminary trademark search for my proposed brand name.',
+  details: 'Proposed brand name: [Please enter your brand name]',
+  callToAction: 'Could you please guide me on the availability assessment and next steps?'
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'Homepage',
+  sectionName: 'Closing Consultation Section',
+  enquiryType: 'General Advisory Consultation',
+  topic: 'I visited your homepage and would like to discuss my brand and business requirements with your advisory team.',
+  details: 'My requirement is: [Please describe your brand name or service requirement]',
+  callToAction: 'Could you please explain the suitable options and next steps?'
+});
 ---
 
 <BaseLayout
@@ -13,6 +33,7 @@ const ogImage = "/assets/hero-brand-desk.webp";
   canonical={canonical}
   ogImage={ogImage}
   currentPath="/"
+  hasCustomSchema={true}
 >
   <Fragment slot="head">
     <script type="application/ld+json">
@@ -20,22 +41,58 @@ const ogImage = "/assets/hero-brand-desk.webp";
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness", "ProfessionalService", "LegalService"],
       "@id": "https://brndnur.com/#organization",
       "name": "BRNDNUR Advisory LLP",
       "legalName": "BRNDNUR Advisory LLP",
       "url": "https://brndnur.com/",
+      "sameAs": [
+        "https://www.linkedin.com/company/brndnur",
+        "https://x.com/brndnur"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://brndnur.com/#logo",
+        "url": "https://brndnur.com/assets/brndnur-logo-transparent.png",
+        "caption": "BRNDNUR Advisory LLP"
+      },
+      "image": "https://brndnur.com/assets/brndnur-og-banner.jpg",
+      "telephone": "+91 90481 88899",
       "email": "brndnuradvisoryllp@gmail.com",
-      "telephone": "+919048188899",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Skatt Business Park",
         "addressLocality": "Manjeri",
         "addressRegion": "Kerala",
         "addressCountry": "IN"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.1219,
+        "longitude": 76.1210
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:30",
+        "closes": "18:00"
+      },
+      "areaServed": ["Manjeri", "Malappuram", "Kozhikode", "Wayanad", "Kannur", "Kasaragod", "Palakkad", "Thrissur", "Ernakulam", "Kerala", "India"],
+      "knowsAbout": [
+        "Trademark Registration in India",
+        "Brand Name Search",
+        "Nice Classification",
+        "Trademark Renewal",
+        "Trademark Journal Monitoring",
+        "GST Registration",
+        "Udyam MSME Registration",
+        "FSSAI Registration",
+        "Business Setup Advisory"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-90481-88899",
+        "telephone": "+91 90481 88899",
         "contactType": "customer service",
         "availableLanguage": ["en", "ml"]
       }
@@ -54,51 +111,1687 @@ const ogImage = "/assets/hero-brand-desk.webp";
       "@id": "https://brndnur.com/#webpage",
       "url": "https://brndnur.com/",
       "name": "BRNDNUR Advisory LLP | Trademark Registration & Business Advisory",
-      "description": "Trademark registration guidance, preliminary brand-name searches, and business advisory services with BRNDNUR Advisory LLP in Manjeri, Malappuram, Kerala.",
+      "description": "Trademark registration guidance, preliminary brand-name searches, class selection, and business advisory services with BRNDNUR Advisory LLP in Manjeri, Malappuram, Kerala.",
       "isPartOf": {
         "@id": "https://brndnur.com/#website"
       },
       "about": {
         "@id": "https://brndnur.com/#organization"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://brndnur.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a trademark?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A trademark protects your distinctive brand name, logo, slogan, or commercial symbol used in connection with goods or services. Registration under the Trade Marks Act grants statutory nationwide exclusive rights, deters deceptive imitation, and secures brand equity as your business grows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I begin a trademark registration enquiry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can begin by sharing your proposed brand name, logo concept, and a brief description of your products or services via WhatsApp or our enquiry channels. We conduct a preliminary discussion to assess relevant classes and identify potentially conflicting marks before filing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do trademark classes work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "India follows the international Nice Classification system of 45 classes: Classes 1 to 34 cover physical goods (e.g. food, clothing, cosmetics), while Classes 35 to 45 cover services (e.g. retail, consulting, software). Applications must specify the exact classes that correspond to your commercial activities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a wordmark and a logo trademark?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A wordmark protects the brand name itself in standard text, offering broad protection regardless of typography or styling. A logo (device mark) protects the distinctive visual symbol, stylized lettering, or emblem. Many businesses file both to secure comprehensive coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What information should I prepare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Having your proposed brand name, logo file (if available), a brief description of products or services, applicant details (individual, proprietorship, LLP, or company), and commercial usage status helps ensure an efficient initial assessment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is trademark registration the same as company registration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Registering a company, LLP, or GST establishes your legal commercial entity and tax compliance, but does not grant proprietary trademark protection over your brand name. Trademark registration is a separate statutory intellectual property procedure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can affect the time required for an application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trademark timelines depend on Trade Marks Registry examination workloads, whether the examiner issues examination report objections, whether third parties file oppositions during publication, and the promptness of responses to official queries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I enquire about service charges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Statutory official government fees are prescribed by the Trade Marks Registry (with a 50% concession for individuals, startups, and MSMEs). BRNDNUR provides a transparent, itemised breakdown of official fees and our professional advisory charges before any work begins."
+          }
+        }
+      ]
     }
   ]
 }
-</script>
+    </script>
   </Fragment>
 
   <main id="main-content">
     
-<section class="hero"><div class="container hero-inner"><div class="hero-copy">
-<p class="eyebrow">Trademark Registration &amp; Business Advisory</p><h1>Your Brand Deserves<br>a <span>Stronger Tomorrow.</span></h1>
-<p>Your brand reflects your ideas, your hard work and the trust you build with customers. BRNDNUR helps you understand trademark registration and relevant business advisory services, so you can take informed steps towards building your brand.</p>
-<div class="actions"><a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20a%20preliminary%20brand-name%20search.">Request a Preliminary Search <span class="arrow">→</span></a><a class="btn btn-secondary" href="#services">Explore Our Services <span class="arrow">→</span></a></div>
-<div class="trust-row"><div class="trust-item"><span class="trust-icon">♢</span><span>Brand<br>Protection Guidance</span></div><div class="trust-item"><span class="trust-icon">▱</span><span>Business-Focused<br>Support</span></div><div class="trust-item"><span class="trust-icon">⌖</span><span>Based in<br>Manjeri, Kerala</span></div></div>
-</div></div><img class="hero-photo" src="/assets/hero-brand-desk.webp" alt="BRNDNUR notebook with shield logo, BRNDNUR trademark and LIGHT UP YOUR BRAND trademark embossed on a cream cover beside a black-and-gold pen" width="1448" height="1086" fetchpriority="high"></section>
-<section class="section services" id="services"><div class="container"><div class="section-heading"><p class="eyebrow">A Stronger Brand Starts With</p><h2>Informed Decisions.</h2><div class="rule"></div><p>Choosing a brand name is an important business decision. Understanding trademark protection, relevant classes and the registration process can help you plan the next steps with greater clarity.</p></div>
-<div class="service-grid">
-<article class="service-card"><img src="/assets/service-trademark.webp" alt="Bronze registration symbol embossed on a cream leather portfolio" width="1000" height="750" loading="lazy" decoding="async"><div class="service-body"><h3>Trademark Registration</h3><p>Understand wordmark and logo applications, relevant classes, documentation and filing requirements.</p><a class="text-link" href="/trademark-registration/">Learn More <span>→</span></a></div></article>
-<article class="service-card"><img src="/assets/service-search.webp" alt="Laptop, notebook and stationery in a warm professional workspace" width="1000" height="750" loading="lazy" decoding="async"><div class="service-body"><h3>Brand Name Search</h3><p>Request a preliminary search to identify potentially relevant existing marks before deciding how to proceed.</p><a class="text-link" href="/brand-name-search/">Learn More <span>→</span></a></div></article>
-<article class="service-card"><img src="/assets/service-business.webp" alt="Ivory business binders with refined gold business and document icons" width="1000" height="750" loading="lazy" decoding="async"><div class="service-body"><h3>Business Registration Support</h3><p>Explore assistance with GST, Udyam/MSME, FSSAI and business setup requirements, where applicable.</p><a class="text-link" href="/services/#business-support">Learn More <span>→</span></a></div></article>
-</div></div></section>
-<section class="process" id="process"><div class="container"><div class="section-heading"><p class="eyebrow">How It Works</p><h2>A Clearer Way Forward.</h2></div><div class="steps">
-<article class="step"><div class="step-top"><span class="step-num">01</span><span class="step-line"></span></div><h3>Tell Us About Your Brand</h3><p>Share your brand name, business type, products or services and the assistance you are looking for.</p></article>
-<article class="step"><div class="step-top"><span class="step-num">02</span><span class="step-line"></span></div><h3>Discuss Your Options</h3><p>Understand the relevant services, classes, requirements and the next steps for your situation.</p></article>
-<article class="step"><div class="step-top"><span class="step-num">03</span><span class="step-line"></span></div><h3>Confirm the Scope</h3><p>Review the proposed work, applicable charges and documents before proceeding.</p></article>
-</div></div></section>
-<section class="about" id="about"><img class="about-photo" src="/assets/about-workspace-rounded.webp" alt="Warm sunlit workspace photograph with a cream notebook, black-and-gold pen and green plants, framed with rounded corners" width="1244" height="832" loading="lazy" decoding="async"><div class="about-copy"><p class="eyebrow">Why BRNDNUR</p><h2>More Than a Service.<br>A Partner in Your Brand Journey.</h2><p>We focus on clear guidance, transparent discussions and practical support, so you can make informed decisions about your brand and business.</p><div class="values">
-<div class="value"><span class="value-icon">♙</span><div><strong>Client-Focused Guidance</strong><p>We take the time to understand your business and requirements.</p></div></div>
-<div class="value"><span class="value-icon">▤</span><div><strong>Transparent Discussions</strong><p>You’ll know the proposed scope and charges before proceeding.</p></div></div>
-<div class="value"><span class="value-icon">▥</span><div><strong>Practical Support</strong><p>Relevant services for entrepreneurs and growing businesses.</p></div></div>
-</div></div></section>
-<section class="cta-band" id="contact"><img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async"><div class="container cta-inner"><div class="cta-copy"><p class="eyebrow">Let's Talk</p><h2>Take the Next Step<br>for Your Brand.</h2><p>Share your brand name and tell us what you need help with. We'll discuss the relevant options and the next steps.</p><a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20to%20discuss%20my%20brand%20requirements.">◉ Discuss Your Requirements on WhatsApp <span>→</span></a></div>
-<div class="cta-benefits"><div class="cta-benefit"><span class="value-icon">☏</span><div><strong>Quick Response</strong><p>Discuss your enquiry directly.</p></div></div><div class="cta-benefit"><span class="value-icon">♢</span><div><strong>Confidential Discussions</strong><p>Your information is handled with care.</p></div></div><div class="cta-benefit"><span class="value-icon">♧</span><div><strong>Support at Every Stage</strong><p>Guidance from enquiry to next steps.</p></div></div></div></div></section>
+    <!-- 1. HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow hero-stagger-1">Trademark Registration &amp; Business Advisory</p>
+          <h1 id="hero-heading" class="hero-stagger-2">Your Brand Deserves<br>a <span>Stronger Tomorrow.</span></h1>
+          <p class="hero-stagger-3">Your brand reflects your ideas, your hard work and the trust you build with customers. BRNDNUR helps you understand trademark registration and relevant business advisory services, so you can take informed steps towards building your brand.</p>
+          
+          <div class="actions hero-stagger-4">
+            <a class="btn btn-primary" href={heroWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+              Request a Preliminary Search <span class="arrow">→</span>
+            </a>
+            <a class="btn btn-secondary" href="#services">
+              Explore Our Services <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <div class="trust-row hero-stagger-5" aria-label="Key Highlights">
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">♢</span>
+              <span class="trust-label">Brand<br>Protection Guidance</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">▱</span>
+              <span class="trust-label">Business-Focused<br>Support</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">⌖</span>
+              <span class="trust-label">Based in<br>Manjeri, Kerala</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <picture class="hero-photo-wrap hero-photo-animate">
+        <source srcset="/assets/hero-brand-desk-mobile.webp 768w, /assets/hero-brand-desk.webp 1448w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp" />
+        <img
+          class="hero-photo"
+          src="/assets/hero-brand-desk.webp"
+          alt="BRNDNUR notebook with shield logo, BRNDNUR trademark and LIGHT UP YOUR BRAND trademark embossed on a cream cover beside a black-and-gold pen"
+          width="1448"
+          height="1086"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+        />
+      </picture>
+    </section>
+
+    <!-- 2. SECTION 2: INFORMED DECISIONS (EDITORIAL IMAGE & TEXT SPLIT) -->
+    <section class="section informed-section" id="informed" aria-labelledby="informed-heading">
+      <div class="container">
+        <div class="informed-split">
+          <div class="informed-media reveal-on-scroll">
+            <img
+              src="/assets/home-card-trademark.webp"
+              alt="Close-up of a bronze trademark registration symbol embossed on a cream portfolio beside legal reference documents and gold pen"
+              width="1000"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+              class="informed-photo"
+            />
+          </div>
+          <div class="informed-content reveal-on-scroll">
+            <p class="eyebrow">A Stronger Brand Starts With</p>
+            <h2 id="informed-heading">Informed Decisions.</h2>
+            <div class="rule-left" aria-hidden="true"></div>
+            <p class="informed-lead">Choosing a brand name is an important business decision. Understanding trademark protection, relevant classes and the registration process can help you plan the next steps with greater clarity.</p>
+            
+            <div class="informed-pillars reveal-group">
+              <div class="informed-pillar reveal-item">
+                <span class="pillar-bullet" aria-hidden="true">♢</span>
+                <div>
+                  <strong>Brand Protection Clarity</strong>
+                  <p>Understand the statutory differences between business name registration and nationwide trademark ownership.</p>
+                </div>
+              </div>
+              <div class="informed-pillar reveal-item">
+                <span class="pillar-bullet" aria-hidden="true">▱</span>
+                <div>
+                  <strong>Precise Class Alignment</strong>
+                  <p>Identify the relevant goods and services categories across the 45 Nice Classification classes before filing.</p>
+                </div>
+              </div>
+              <div class="informed-pillar reveal-item">
+                <span class="pillar-bullet" aria-hidden="true">⌖</span>
+                <div>
+                  <strong>Clear Commercial Roadmap</strong>
+                  <p>Review preliminary search findings, filing prerequisites, and applicable fees before committing resources.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="informed-action">
+              <a class="btn btn-primary" href="/trademark-registration/">
+                Explore Trademark Registration <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SECTION 3: COMPREHENSIVE SERVICES (INTERACTIVE LUXURY SUITE) -->
+    <section class="section service-directory" id="services" aria-labelledby="directory-heading">
+      <div class="container">
+        <div class="section-heading text-center reveal-on-scroll">
+          <p class="eyebrow">Our Advisory Services</p>
+          <h2 id="directory-heading">Comprehensive Support for Your Brand and Business.</h2>
+          <div class="rule" aria-hidden="true"></div>
+          <p class="section-lead">
+            From statutory trademark clearance and nationwide registration to corporate structuring and regulatory licensing, explore our core advisory capabilities.
+          </p>
+        </div>
+
+        <!-- Interactive Category Filter Bar -->
+        <div class="services-filter-bar reveal-on-scroll" role="tablist" aria-label="Filter services by category">
+          <button
+            type="button"
+            role="tab"
+            class="filter-tab active"
+            id="tab-all"
+            aria-selected="true"
+            aria-controls="services-grid"
+            data-filter="all"
+          >
+            <span class="tab-label">All Services</span>
+            <span class="tab-badge">9</span>
+          </button>
+
+          <button
+            type="button"
+            role="tab"
+            class="filter-tab"
+            id="tab-trademark"
+            aria-selected="false"
+            aria-controls="services-grid"
+            data-filter="trademark"
+          >
+            <span class="tab-icon" aria-hidden="true">🛡️</span>
+            <span class="tab-label">Trademark &amp; Brand Protection</span>
+            <span class="tab-badge">5</span>
+          </button>
+
+          <button
+            type="button"
+            role="tab"
+            class="filter-tab"
+            id="tab-business"
+            aria-selected="false"
+            aria-controls="services-grid"
+            data-filter="business"
+          >
+            <span class="tab-icon" aria-hidden="true">🏛️</span>
+            <span class="tab-label">Business Registration &amp; Setup</span>
+            <span class="tab-badge">4</span>
+          </button>
+        </div>
+
+        <!-- Screen reader status live region -->
+        <div id="services-filter-status" class="sr-only" aria-live="polite">
+          Showing all 9 advisory services
+        </div>
+
+        <!-- Unified 4-Column Luxury Horizontal Service Carousel -->
+        <div class="services-carousel" id="services-carousel">
+          <div class="services-carousel__viewport" id="services-carousel-viewport" tabindex="0" role="region" aria-label="Services carousel track">
+            <div class="services-carousel__track services-grid" id="services-grid">
+              <!-- Card 1 — Trademark Registration (Trademark) -->
+              <article class="service-card services-carousel__card" data-category="trademark">
+                <div class="card-media">
+                  <img
+                    src="/assets/about-card-trademark.webp"
+                    alt="Cream document folder with trademark registration heading, gold pen, and premium stationery on a warm office desk"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Statutory Filing</span>
+                </div>
+                <div class="card-content">
+                  <h3>Trademark Registration</h3>
+                  <p>End-to-end guidance for filing wordmarks and logos under the Trade Marks Act, including applicant vetting, documentation, and class selection.</p>
+                  <a class="service-btn" href="/trademark-registration/">
+                    <span>Explore Registration</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 2 — Brand Name Search (Trademark) -->
+              <article class="service-card services-carousel__card" data-category="trademark">
+                <div class="card-media">
+                  <img
+                    src="/assets/home-card-search.webp"
+                    alt="Magnifying glass over a notebook beside a laptop displaying a neutral trademark search interface"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Pre-Filing Clearance</span>
+                </div>
+                <div class="card-content">
+                  <h3>Brand Name Search</h3>
+                  <p>Preliminary clearance on the IP India database to evaluate phonetic and visual conflict risks under Sections 9 and 11 before committing capital.</p>
+                  <a class="service-btn" href="/brand-name-search/">
+                    <span>Request Search</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 3 — Trademark Classes (Trademark) -->
+              <article class="service-card services-carousel__card" data-category="trademark">
+                <div class="card-media">
+                  <img
+                    src="/assets/classes-hero-catalog.webp"
+                    alt="Organised cream product-category folders and document dividers arranged on an editorial desk"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Classification</span>
+                </div>
+                <div class="card-content">
+                  <h3>Trademark Classes</h3>
+                  <p>Navigate the 45 Nice Classification categories to pinpoint precisely which goods and services your business must protect without overfiling.</p>
+                  <a class="service-btn" href="/trademark-classes/">
+                    <span>Class Guidance</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 4 — Wordmark and Logo Protection (Trademark) -->
+              <article class="service-card services-carousel__card" data-category="trademark">
+                <div class="card-media">
+                  <img
+                    src="/assets/wordmark-foundation-exclusivity.webp"
+                    alt="Two elegant sheets displaying a wordmark design and a separate logo concept side by side"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Mark Types</span>
+                </div>
+                <div class="card-content">
+                  <h3>Wordmark &amp; Logo Protection</h3>
+                  <p>Understand the statutory distinctions between name-only text exclusivity and visual logo symbol protection to secure broad commercial coverage.</p>
+                  <div class="card-dual-actions">
+                    <a class="service-btn service-btn-split" href="/wordmark-registration/">
+                      <span>Wordmark</span>
+                      <span class="btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="service-btn service-btn-subtle" href="/logo-trademark-registration/">
+                      <span>Logo</span>
+                      <span class="btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 5 — Trademark Renewal & Monitoring (Trademark) -->
+              <article class="service-card services-carousel__card" data-category="trademark">
+                <div class="card-media">
+                  <img
+                    src="/assets/renewal-ownership-maintenance.webp"
+                    alt="Document calendar, neatly organised filing records, and a premium desk with subtle gold accents"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Ongoing Maintenance</span>
+                </div>
+                <div class="card-content">
+                  <h3>Trademark Renewal &amp; Monitoring</h3>
+                  <p>Protect registered marks through 10-year statutory renewals on Form TM-R and ongoing surveillance of the Trade Marks Journal for conflicting marks.</p>
+                  <div class="card-dual-actions">
+                    <a class="service-btn service-btn-split" href="/trademark-renewal/">
+                      <span>Renewal</span>
+                      <span class="btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="service-btn service-btn-subtle" href="/trademark-monitoring/">
+                      <span>Monitoring</span>
+                      <span class="btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 6 — GST Registration (Business) -->
+              <article class="service-card services-carousel__card" data-category="business">
+                <div class="card-media">
+                  <img
+                    src="/assets/gst-tax-credibility.webp"
+                    alt="Professional accounting documents, a calculator, and organised business paperwork"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Taxation &amp; Commerce</span>
+                </div>
+                <div class="card-content">
+                  <h3>GST Registration</h3>
+                  <p>Assistance with Goods &amp; Services Tax registration, document verification, and compliance alignment for manufacturers, traders, and service providers.</p>
+                  <a class="service-btn" href="/gst-registration/">
+                    <span>GST Assistance</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 7 — Udyam / MSME Registration (Business) -->
+              <article class="service-card services-carousel__card" data-category="business">
+                <div class="card-media">
+                  <img
+                    src="/assets/udyam-growth-catalyst.webp"
+                    alt="Small-business workspace featuring an organised business file and laptop"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">MSME Concessions</span>
+                </div>
+                <div class="card-content">
+                  <h3>Udyam / MSME Registration</h3>
+                  <p>Official digital MSME certification to unlock the statutory 50% government fee concession on trademark filings, priority credit, and subsidy schemes.</p>
+                  <a class="service-btn" href="/udyam-msme-registration/">
+                    <span>MSME Assistance</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 8 — FSSAI Registration (Business) -->
+              <article class="service-card services-carousel__card" data-category="business">
+                <div class="card-media">
+                  <img
+                    src="/assets/fssai-packaging-standards.webp"
+                    alt="Clean food-brand workspace featuring packaged food products, ingredient labels, and regulatory paperwork"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Food Licensing</span>
+                </div>
+                <div class="card-content">
+                  <h3>FSSAI Registration</h3>
+                  <p>Regulatory food business licensing and basic registration assistance on the FoSCoS portal for restaurants, bakeries, cloud kitchens, and packaged foods.</p>
+                  <a class="service-btn" href="/fssai-registration/">
+                    <span>FSSAI Assistance</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 9 — Business Setup Advisory (Business) -->
+              <article class="service-card services-carousel__card" data-category="business">
+                <div class="card-media">
+                  <img
+                    src="/assets/setup-startup-readiness.webp"
+                    alt="Professional business planning documents, a notebook, and architectural details of a modern business workspace"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Entity Structuring</span>
+                </div>
+                <div class="card-content">
+                  <h3>Business Setup Advisory</h3>
+                  <p>Strategic constitution advice for founders choosing between Sole Proprietorships, Partnerships, LLPs, and Private Limited Companies synchronized with trademark clearance.</p>
+                  <a class="service-btn" href="/business-setup/">
+                    <span>Setup Advisory</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Carousel Navigation Controls (Dot-Only Standard) -->
+          <div class="services-carousel__controls" aria-label="Services carousel navigation">
+            <div class="services-carousel__dots" id="services-dots" role="tablist" aria-label="Services pagination"></div>
+          </div>
+        </div>
+
+        <!-- Section Footer Callout -->
+        <div class="services-footer-banner">
+          <div class="services-footer-content">
+            <div class="services-footer-text">
+              <h4>Looking for an Integrated Regulatory Solution?</h4>
+              <p>Explore our bundled advisory packages designed for first-time founders, food brands, and Gulf-return entrepreneurs.</p>
+            </div>
+            <a class="btn btn-secondary" href="/packages/">
+              <span>Explore All Packages</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECTION 4: HOW IT WORKS (A CLEARER WAY FORWARD) -->
+    <section class="process" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <p class="eyebrow">How It Works</p>
+          <h2 id="process-heading">A Clearer Way Forward.</h2>
+          <p>A straightforward process to understand your requirements, discuss relevant options, and agree on the next steps.</p>
+        </div>
+        
+        <CardCarousel id="home-process-carousel" ariaLabel="A Clearer Way Forward">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Tell Us About Your Brand</h3>
+            <p>Share your proposed brand name, business type, products or services, and the assistance you are looking for.</p>
+          </article>
+          
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Discuss Your Options</h3>
+            <p>Understand relevant services, possible trademark classes, requirements, and practical considerations.</p>
+          </article>
+          
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Confirm the Scope</h3>
+            <p>Review the proposed work, applicable charges, and relevant documents before proceeding.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">04</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Proceed with Support</h3>
+            <p>Proceed with the agreed scope of work and receive relevant communication and updates where applicable.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- 5. SECTION 5: WHO WE HELP (IMAGE-LED AUDIENCE CARDS) -->
+    <section class="section audiences" id="audiences" aria-labelledby="audiences-heading">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <p class="eyebrow">Guidance for Every Stage</p>
+          <h2 id="audiences-heading">Support for Every Stage of Your Business Journey.</h2>
+          <div class="rule" aria-hidden="true"></div>
+          <p>Whether you are choosing your first brand name or expanding an established business, explore the services relevant to your needs.</p>
+        </div>
+
+        <CardCarousel id="home-audiences-carousel" ariaLabel="Support for Every Stage of Your Business Journey">
+          <!-- Audience 1: First-Time Founders -->
+          <article class="audience-photo-card">
+            <div class="audience-media">
+              <img
+                src="/assets/audience-first-time-founders.webp"
+                alt="Modern entrepreneur minimalist desk with laptop, open cream notebook, and brass pen in warm daylight"
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="audience-body">
+              <span class="audience-tag">Founders &amp; Solopreneurs</span>
+              <h3>First-Time Founders</h3>
+              <p>Explore preliminary brand-name search, trademark registration guidance, and relevant business registration support tailored to early-stage ventures.</p>
+              <a class="text-link" href="/packages/individual-msme/">View Founder Package <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Audience 2: Food and Consumer Brands -->
+          <article class="audience-photo-card">
+            <div class="audience-media">
+              <img
+                src="/assets/audience-food-brands.webp"
+                alt="Artisanal food and beverage products, specialty olive oils, and gourmet packaging on a sunlit marble board"
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="audience-body">
+              <span class="audience-tag">Food &amp; Consumer Goods</span>
+              <h3>Food &amp; Consumer Brands</h3>
+              <p>Explore how trademark protection and applicable FSSAI registration assistance fit the statutory needs of packaged foods, cafes, and consumer products.</p>
+              <a class="text-link" href="/packages/food-brand/">View Food Package <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Audience 3: Growing Businesses -->
+          <article class="audience-photo-card">
+            <div class="audience-media">
+              <img
+                src="/assets/audience-growing-businesses.webp"
+                alt="Corporate boardroom with legal files, blueprints, and executive team overlooking a modern city skyline"
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="audience-body">
+              <span class="audience-tag">Companies &amp; LLPs</span>
+              <h3>Growing Businesses</h3>
+              <p>Explore assistance relating to trademark portfolios, multi-class filings, relevant renewals, brand monitoring, and business registration requirements.</p>
+              <a class="text-link" href="/packages/company-llp/">View Company Package <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Audience 4: Gulf-Return Entrepreneurs -->
+          <article class="audience-photo-card">
+            <div class="audience-media">
+              <img
+                src="/assets/audience-gulf-return.webp"
+                alt="Executive desk with vintage brass globe, embossed BRNDNUR portfolio, and tropical Kerala garden view"
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="audience-body">
+              <span class="audience-tag">Kerala &amp; NRI Ventures</span>
+              <h3>Gulf-Return Entrepreneurs</h3>
+              <p>Returning to Kerala to start a new venture? Explore relevant business setup, commercial entity structuring, trademark security, and licensing assistance.</p>
+              <a class="text-link" href="/packages/gulf-return-business/">View Gulf Return Package <span>→</span></a>
+            </div>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- 6. SECTION 6: WHY BRNDNUR (IMAGE AND CONTENT) -->
+    <section class="about-section" id="about" aria-labelledby="why-heading">
+      <div class="about reveal-on-scroll">
+        <img
+          class="about-photo"
+          src="/assets/home-about-partnership.webp"
+          alt="Professional, sunlit office consultation-space photograph with cream stone details, warm wood, green plants, and a notebook"
+          width="1000"
+          height="1000"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="about-copy">
+          <p class="eyebrow">Why BRNDNUR</p>
+          <h2 id="why-heading">More Than a Service.<br>A Partner in Your Brand Journey.</h2>
+          <p>We focus on clear guidance, transparent discussions and practical support, so you can make informed decisions about your brand and business.</p>
+          
+          <div class="values reveal-group">
+            <div class="value reveal-item">
+              <span class="value-icon" aria-hidden="true">♙</span>
+              <div>
+                <strong>Client-Focused Guidance</strong>
+                <p>We take the time to understand your business and requirements before recommending any specific service or class.</p>
+              </div>
+            </div>
+            
+            <div class="value reveal-item">
+              <span class="value-icon" aria-hidden="true">▤</span>
+              <div>
+                <strong>Transparent Discussions</strong>
+                <p>You will know the proposed scope and applicable charges before proceeding, with no hidden costs or surprise fees.</p>
+              </div>
+            </div>
+            
+            <div class="value reveal-item">
+              <span class="value-icon" aria-hidden="true">▥</span>
+              <div>
+                <strong>Practical Support</strong>
+                <p>Relevant services for entrepreneurs and growing businesses navigating statutory registrations in Kerala and India.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SECTION 7: WHAT TO PREPARE BEFORE YOUR ENQUIRY -->
+    <section class="section checklist-section" id="checklist" aria-labelledby="checklist-heading">
+      <div class="container">
+        <!-- Top Editorial Banner with Plain Image Backdrop and Live HTML Text Overlay -->
+        <div class="prep-banner-wrapper reveal-on-scroll">
+          <div class="prep-banner-card">
+            <img
+              src="/assets/prep-hero-plain.webp"
+              alt="What to Prepare Before You Begin - desk with notebook, fountain pen and legal materials"
+              width="1024"
+              height="440"
+              loading="lazy"
+              decoding="async"
+              class="prep-banner-img"
+            />
+            <div class="prep-banner-overlay">
+              <div class="prep-banner-copy">
+                <p class="prep-banner-eyebrow">What to Prepare Before You Begin</p>
+                <h2 id="checklist-heading" class="prep-banner-title">
+                  Get Ready for Your<br />
+                  <span>Trademark Enquiry.</span>
+                </h2>
+                <div class="prep-banner-rule" aria-hidden="true"></div>
+                <p class="prep-banner-desc">
+                  Having a few key details ready can help us understand your requirements and discuss the appropriate next steps.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 6-Card Slider with Dot-Only Navigation -->
+        <div class="prep-slider-wrapper">
+          <div class="prep-cards-track" id="prep-slider" tabindex="0" role="region" aria-label="Preparation steps slider">
+            <!-- Card 1 -->
+            <article class="prep-card">
+              <div class="prep-card-media">
+                <img
+                  src="/assets/prep-card-brand-logo.webp"
+                  alt="Proposed Brand Name & Existing Logo - trademark sketches and notebook"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="prep-card-body">
+                <h3>Proposed Brand Name &amp; Existing Logo</h3>
+                <p>The exact spelling, variations, or logo graphic you intend to protect in commerce.</p>
+                <div class="prep-card-divider" aria-hidden="true"></div>
+                <a href="/trademark-registration/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="prep-card">
+              <div class="prep-card-media">
+                <img
+                  src="/assets/prep-card-products.webp"
+                  alt="Description of Products or Services - trademark classification review"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="prep-card-body">
+                <h3>Description of Products or Services</h3>
+                <p>A plain-language summary of what your business sells, manufactures, or provides.</p>
+                <div class="prep-card-divider" aria-hidden="true"></div>
+                <a href="/trademark-classes/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="prep-card">
+              <div class="prep-card-media">
+                <img
+                  src="/assets/prep-card-applicant.webp"
+                  alt="Applicant Name & Applicant Type - applicant identity details form"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="prep-card-body">
+                <h3>Applicant Name &amp; Applicant Type</h3>
+                <p>Whether filing as an individual, sole proprietorship, partnership firm, LLP, or private limited company.</p>
+                <div class="prep-card-divider" aria-hidden="true"></div>
+                <a href="/packages/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="prep-card">
+              <div class="prep-card-media">
+                <img
+                  src="/assets/prep-card-business-info.webp"
+                  alt="Relevant Business Information - business registration and compliance certificates"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="prep-card-body">
+                <h3>Relevant Business Information</h3>
+                <p>GST details, MSME/Udyam certificates (for fee concessions), or local trade licenses where applicable.</p>
+                <div class="prep-card-divider" aria-hidden="true"></div>
+                <a href="/udyam-msme-registration/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="prep-card">
+              <div class="prep-card-media">
+                <img
+                  src="/assets/prep-card-existing-tm.webp"
+                  alt="Existing Trademark Details, If Any - prior trademark registry search and records"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="prep-card-body">
+                <h3>Existing Trademark Details, If Any</h3>
+                <p>Any prior application numbers, user-date commercial evidence, or previous clearance records.</p>
+                <div class="prep-card-divider" aria-hidden="true"></div>
+                <a href="/brand-name-search/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="prep-card">
+              <div class="prep-card-media">
+                <img
+                  src="/assets/prep-card-deadlines.webp"
+                  alt="Known Deadlines or Immediate Concerns - timeline and schedule planning"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="prep-card-body">
+                <h3>Known Deadlines or Immediate Concerns</h3>
+                <p>Upcoming product launches, domain registration deadlines, packaging print runs, or marketing schedules.</p>
+                <div class="prep-card-divider" aria-hidden="true"></div>
+                <a href="/contact/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- 6 Pagination Dots matching user mockup -->
+        <div class="prep-dots" id="prep-dots" role="tablist" aria-label="Preparation steps pagination">
+          <button type="button" class="prep-dot active" role="tab" aria-selected="true" aria-label="Step 1: Brand Name & Logo" data-index="0"></button>
+          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 2: Products or Services" data-index="1"></button>
+          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 3: Applicant Details" data-index="2"></button>
+          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 4: Business Information" data-index="3"></button>
+          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 5: Existing Trademark" data-index="4"></button>
+          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 6: Known Deadlines" data-index="5"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECTION 8: FAQ EDITORIAL PREVIEW (MINIMALIST NUMBERED ACCORDION) -->
+    <section class="section faq-section" id="faq-preview" aria-labelledby="faq-heading">
+      <div class="container">
+        <!-- Section Introduction -->
+        <div class="faq-editorial-header reveal-on-scroll">
+          <div class="faq-eyebrow-wrap">
+            <span class="faq-eyebrow-line" aria-hidden="true"></span>
+            <span class="faq-eyebrow-text">FREQUENT QUESTIONS</span>
+            <span class="faq-eyebrow-line" aria-hidden="true"></span>
+          </div>
+          <h2 id="faq-heading" class="faq-editorial-title">
+            Common Questions About<br />
+            <span class="gold-text">Trademarks.</span>
+          </h2>
+          <p class="faq-editorial-desc">
+            Clear, practical answers to essential questions founders and business owners ask before starting a trademark or registration enquiry.
+          </p>
+        </div>
+
+        <!-- Numbered Editorial FAQ List -->
+        <div class="faq-editorial-list" id="faq-accordion-container">
+          <!-- Item 01 -->
+          <details class="faq-row-item faq-details">
+            <summary class="faq-row-summary faq-summary">
+              <div class="faq-row-lead">
+                <span class="faq-row-num">01</span>
+                <span class="faq-row-vbar" aria-hidden="true"></span>
+                <span class="faq-row-question">What is a trademark?</span>
+              </div>
+              <span class="faq-row-toggle" aria-hidden="true">
+                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-row-content">
+              <p>A trademark protects your distinctive brand name, logo, slogan, or commercial symbol used in connection with goods or services. Registration under the Trade Marks Act grants statutory nationwide exclusive rights, deters deceptive imitation, and secures brand equity as your business grows.</p>
+            </div>
+          </details>
+
+          <!-- Item 02 -->
+          <details class="faq-row-item faq-details">
+            <summary class="faq-row-summary faq-summary">
+              <div class="faq-row-lead">
+                <span class="faq-row-num">02</span>
+                <span class="faq-row-vbar" aria-hidden="true"></span>
+                <span class="faq-row-question">How do I begin a trademark registration enquiry?</span>
+              </div>
+              <span class="faq-row-toggle" aria-hidden="true">
+                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-row-content">
+              <p>You can begin by sharing your proposed brand name, logo concept, and a brief description of your products or services via WhatsApp or our enquiry channels. We conduct a preliminary discussion to assess relevant classes and identify potentially conflicting marks before filing.</p>
+            </div>
+          </details>
+
+          <!-- Item 03 -->
+          <details class="faq-row-item faq-details">
+            <summary class="faq-row-summary faq-summary">
+              <div class="faq-row-lead">
+                <span class="faq-row-num">03</span>
+                <span class="faq-row-vbar" aria-hidden="true"></span>
+                <span class="faq-row-question">How do trademark classes work?</span>
+              </div>
+              <span class="faq-row-toggle" aria-hidden="true">
+                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-row-content">
+              <p>India follows the international Nice Classification system of 45 classes: Classes 1 to 34 cover physical goods (e.g. food, clothing, cosmetics), while Classes 35 to 45 cover services (e.g. retail, consulting, software). Applications must specify the exact classes that correspond to your commercial activities.</p>
+            </div>
+          </details>
+
+          <!-- Item 04 -->
+          <details class="faq-row-item faq-details">
+            <summary class="faq-row-summary faq-summary">
+              <div class="faq-row-lead">
+                <span class="faq-row-num">04</span>
+                <span class="faq-row-vbar" aria-hidden="true"></span>
+                <span class="faq-row-question">What is the difference between a wordmark and a logo trademark?</span>
+              </div>
+              <span class="faq-row-toggle" aria-hidden="true">
+                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-row-content">
+              <p>A wordmark protects the brand name itself in standard text, offering broad protection regardless of typography or styling. A logo (device mark) protects the distinctive visual symbol, stylized lettering, or emblem. Many businesses file both to secure comprehensive coverage.</p>
+            </div>
+          </details>
+
+          <!-- Item 05 -->
+          <details class="faq-row-item faq-details">
+            <summary class="faq-row-summary faq-summary">
+              <div class="faq-row-lead">
+                <span class="faq-row-num">05</span>
+                <span class="faq-row-vbar" aria-hidden="true"></span>
+                <span class="faq-row-question">What information should I prepare?</span>
+              </div>
+              <span class="faq-row-toggle" aria-hidden="true">
+                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-row-content">
+              <p>Having your proposed brand name, logo file (if available), a brief description of products or services, applicant details (individual, proprietorship, LLP, or company), and commercial usage status helps ensure an efficient initial assessment.</p>
+            </div>
+          </details>
+
+          <!-- Item 06 -->
+          <details class="faq-row-item faq-details">
+            <summary class="faq-row-summary faq-summary">
+              <div class="faq-row-lead">
+                <span class="faq-row-num">06</span>
+                <span class="faq-row-vbar" aria-hidden="true"></span>
+                <span class="faq-row-question">Is trademark registration the same as company registration?</span>
+              </div>
+              <span class="faq-row-toggle" aria-hidden="true">
+                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-row-content">
+              <p>No. Registering a company, LLP, or GST establishes your legal commercial entity and tax compliance, but does not grant proprietary trademark protection over your brand name. Trademark registration is a separate statutory intellectual property procedure.</p>
+            </div>
+          </details>
+
+          <!-- Item 07 -->
+          <details class="faq-row-item faq-details">
+            <summary class="faq-row-summary faq-summary">
+              <div class="faq-row-lead">
+                <span class="faq-row-num">07</span>
+                <span class="faq-row-vbar" aria-hidden="true"></span>
+                <span class="faq-row-question">What can affect the time required for an application?</span>
+              </div>
+              <span class="faq-row-toggle" aria-hidden="true">
+                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-row-content">
+              <p>Trademark timelines depend on Trade Marks Registry examination workloads, whether the examiner issues examination report objections, whether third parties file oppositions during publication, and the promptness of responses to official queries. We monitor every stage to avoid avoidable administrative delays.</p>
+            </div>
+          </details>
+
+          <!-- Item 08 -->
+          <details class="faq-row-item faq-details">
+            <summary class="faq-row-summary faq-summary">
+              <div class="faq-row-lead">
+                <span class="faq-row-num">08</span>
+                <span class="faq-row-vbar" aria-hidden="true"></span>
+                <span class="faq-row-question">How can I enquire about service charges?</span>
+              </div>
+              <span class="faq-row-toggle" aria-hidden="true">
+                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-row-content">
+              <p>Statutory official government fees are prescribed by the Trade Marks Registry (with a 50% concession for individuals, startups, and MSMEs). BRNDNUR provides a transparent, itemised breakdown of official fees and our professional advisory charges before any work begins, so you know the full scope upfront.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- View All Button -->
+        <div class="faq-editorial-footer">
+          <a class="faq-editorial-btn" href="/faqs/">
+            <span>View All Frequently Asked Questions</span>
+            <span class="faq-btn-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. SECTION 9: GUIDES AND RESOURCES WITH IMAGES -->
+    <section class="section resources-section" id="resources-preview" aria-labelledby="resources-heading">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <p class="eyebrow">Latest Resources</p>
+          <h2 id="resources-heading">Guides and Insights to Help Your Brand.</h2>
+          <div class="rule" aria-hidden="true"></div>
+          <p>Explore helpful articles and guides on trademark registration, classes, brand-name searches, and relevant business registration topics.</p>
+        </div>
+
+        <CardCarousel id="home-resources-carousel" ariaLabel="Guides and Insights to Help Your Brand">
+          <!-- Guide 1: Trademark Registration Guide -->
+          <article class="resource-card">
+            <img
+              src="/assets/resources-card-tm-169.webp"
+              alt="An organised legal-reference desk with cream portfolio and embossed gold trademark seal"
+              width="1200"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="resource-body">
+              <span class="resource-tag">Core Guide</span>
+              <h3>Trademark Registration Guide</h3>
+              <p>A comprehensive walk-through of the Indian trademark application process, statutory requirements, and key milestones.</p>
+              <a class="resource-link" href="/resources/trademark-registration-guide/">Read Guide <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Guide 2: Trademark Class Guide -->
+          <article class="resource-card">
+            <img
+              src="/assets/resources-card-classes-169.webp"
+              alt="Product-category folders, color swatches, and drafting tools arranged on an editorial desk"
+              width="1200"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="resource-body">
+              <span class="resource-tag">Classification</span>
+              <h3>Trademark Class Guide</h3>
+              <p>Learn how the 45 Nice Classification classes work and how to select the right categories for your products and services.</p>
+              <a class="resource-link" href="/resources/trademark-class-guide/">Read Guide <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Guide 3: Brand Name Search Guide -->
+          <article class="resource-card">
+            <img
+              src="/assets/resources-card-search-169.webp"
+              alt="A magnifying glass, brass compass, and trademark clearance checklist on a warm wooden desk"
+              width="1200"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="resource-body">
+              <span class="resource-tag">Clearance</span>
+              <h3>Brand Name Search Guide</h3>
+              <p>Understand phonetic clearance, visual conflict checks, and how to verify brand availability before filing.</p>
+              <a class="resource-link" href="/resources/brand-name-search-guide/">Read Guide <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Guide 4: Trademark Application Process -->
+          <article class="resource-card">
+            <img
+              src="/assets/resources-card-process-169.webp"
+              alt="Numbered sequence tent cards 1 to 4 detailing the statutory trademark application milestones"
+              width="1200"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="resource-body">
+              <span class="resource-tag">Procedure</span>
+              <h3>Trademark Application Process</h3>
+              <p>Detailed stage-by-stage explanation of what happens after application filing, from examination to registration.</p>
+              <a class="resource-link" href="/resources/trademark-application-process/">Read Guide <span>→</span></a>
+            </div>
+          </article>
+        </CardCarousel>
+
+        <div class="resources-footer">
+          <a class="btn btn-secondary" href="/resources/">
+            Explore All Resources in Our Hub <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. SECTION 10: CLOSING WHATSAPP CTA WITH IMAGE -->
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <img
+        class="cta-leaves"
+        src="/assets/cta-leaves.webp"
+        alt=""
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="container cta-inner reveal-on-scroll">
+        <div class="cta-copy">
+          <p class="eyebrow">Let's Talk</p>
+          <h2 id="cta-heading">Take the Next Step<br>for Your Brand.</h2>
+          <p>Share your brand name and tell us what you need help with. We will discuss the relevant options and the next steps.</p>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+            Discuss Your Requirements on WhatsApp <span class="arrow">→</span>
+          </a>
+        </div>
+        
+        <div class="cta-benefits reveal-group">
+          <div class="cta-benefit reveal-item">
+            <span class="value-icon" aria-hidden="true">☏</span>
+            <div>
+              <strong>Quick Response</strong>
+              <p>Discuss your enquiry directly with our advisory team.</p>
+            </div>
+          </div>
+          <div class="cta-benefit reveal-item">
+            <span class="value-icon" aria-hidden="true">♢</span>
+            <div>
+              <strong>Confidential Discussions</strong>
+              <p>Your brand concepts and business plans are handled with strict care.</p>
+            </div>
+          </div>
+          <div class="cta-benefit reveal-item">
+            <span class="value-icon" aria-hidden="true">♧</span>
+            <div>
+              <strong>Support at Every Stage</strong>
+              <p>Clear guidance from pre-filing clearance to ongoing renewal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive 4.5s Auto-Infinity Sliders for Group A, Group B, and Section 7 -->
+    <script is:inline>
+      function setupInfiniteSlider(config) {
+        const slider = document.getElementById(config.sliderId);
+        const prevBtn = document.getElementById(config.prevId);
+        const nextBtn = document.getElementById(config.nextId);
+        if (!slider) return null;
+
+        const container = config.containerSelector 
+          ? (slider.closest(config.containerSelector) || document.querySelector(config.containerSelector) || slider.parentElement)
+          : (config.containerId ? document.getElementById(config.containerId) : slider.parentElement);
+        const dots = config.dotsId ? document.querySelectorAll(`#${config.dotsId} .prep-dot`) : [];
+        const intervalTime = config.interval || 5000;
+        let timer = null;
+        let isPaused = false;
+
+        function getStep() {
+          const card = slider.querySelector(config.cardSelector);
+          if (!card) return 320;
+          const style = window.getComputedStyle(slider);
+          const gap = parseFloat(style.gap) || 20;
+          return card.getBoundingClientRect().width + gap;
+        }
+
+        function getMaxScroll() {
+          return Math.max(0, slider.scrollWidth - slider.clientWidth - 4);
+        }
+
+        function updateDots() {
+          if (!dots || dots.length === 0) return;
+          const max = getMaxScroll();
+          let activeIndex = 0;
+          if (max > 4) {
+            const ratio = Math.min(1, Math.max(0, slider.scrollLeft / max));
+            activeIndex = Math.min(dots.length - 1, Math.round(ratio * (dots.length - 1)));
+          }
+          dots.forEach((dot, idx) => {
+            const isActive = idx === activeIndex;
+            dot.classList.toggle('active', isActive);
+            dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+        }
+
+        function nextSlide() {
+          const max = getMaxScroll();
+          if (slider.scrollLeft >= max - 6) {
+            slider.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            slider.scrollBy({ left: getStep(), behavior: 'smooth' });
+          }
+        }
+
+        function prevSlide() {
+          const max = getMaxScroll();
+          if (slider.scrollLeft <= 6) {
+            slider.scrollTo({ left: max, behavior: 'smooth' });
+          } else {
+            slider.scrollBy({ left: -getStep(), behavior: 'smooth' });
+          }
+        }
+
+        function startAuto() {
+          stopAuto();
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+          }
+          if (isPaused) return;
+          timer = setInterval(nextSlide, intervalTime);
+        }
+
+        function stopAuto() {
+          if (timer) {
+            clearInterval(timer);
+            timer = null;
+          }
+        }
+
+        function resetAuto() {
+          stopAuto();
+          startAuto();
+        }
+
+        if (nextBtn) {
+          nextBtn.onclick = function() {
+            nextSlide();
+            resetAuto();
+          };
+        }
+
+        if (prevBtn) {
+          prevBtn.onclick = function() {
+            prevSlide();
+            resetAuto();
+          };
+        }
+
+        if (dots && dots.length > 0) {
+          dots.forEach(dot => {
+            dot.onclick = function() {
+              const idx = parseInt(this.dataset.index, 10);
+              const max = getMaxScroll();
+              if (max > 0) {
+                const target = (idx / (dots.length - 1)) * max;
+                slider.scrollTo({ left: target, behavior: 'smooth' });
+              }
+              resetAuto();
+            };
+          });
+        }
+
+        slider.addEventListener('scroll', function() {
+          requestAnimationFrame(updateDots);
+        }, { passive: true });
+
+        let touchResumeTimeout = null;
+        if (container) {
+          container.addEventListener('mouseenter', function() {
+            isPaused = true;
+            stopAuto();
+          });
+          container.addEventListener('mouseleave', function() {
+            isPaused = false;
+            startAuto();
+          });
+          container.addEventListener('focusin', function() {
+            isPaused = true;
+            stopAuto();
+          });
+          container.addEventListener('focusout', function(e) {
+            if (!container.contains(e.relatedTarget)) {
+              isPaused = false;
+              startAuto();
+            }
+          });
+        }
+
+        slider.addEventListener('touchstart', function() {
+          isPaused = true;
+          if (touchResumeTimeout) clearTimeout(touchResumeTimeout);
+          stopAuto();
+        }, { passive: true });
+        slider.addEventListener('touchend', function() {
+          isPaused = false;
+          if (touchResumeTimeout) clearTimeout(touchResumeTimeout);
+          touchResumeTimeout = setTimeout(startAuto, intervalTime);
+        }, { passive: true });
+
+        document.addEventListener('visibilitychange', function() {
+          if (document.hidden) {
+            stopAuto();
+          } else {
+            if (!isPaused) startAuto();
+          }
+        });
+
+        document.addEventListener('astro:before-swap', function() {
+          stopAuto();
+          if (touchResumeTimeout) clearTimeout(touchResumeTimeout);
+        });
+
+        startAuto();
+        updateDots();
+      }
+
+      function initAllSliders() {
+        // Section 7: Preparation Checklist (3 columns in a row, auto-infinity 5s + dots)
+        setupInfiniteSlider({
+          sliderId: 'prep-slider',
+          prevId: 'prep-prev',
+          nextId: 'prep-next',
+          containerSelector: '.prep-slider-wrapper',
+          dotsId: 'prep-dots',
+          cardSelector: '.prep-card',
+          interval: 5000
+        });
+      }
+
+      function initServicesCarousel() {
+        const filterBar = document.querySelector('.services-filter-bar');
+        const grid = document.getElementById('services-grid');
+        const viewport = document.getElementById('services-carousel-viewport');
+        const prevBtn = document.getElementById('services-prev');
+        const nextBtn = document.getElementById('services-next');
+        const dotsContainer = document.getElementById('services-dots');
+        const statusEl = document.getElementById('services-filter-status');
+        if (!grid || !viewport) return;
+
+        const tabs = filterBar ? filterBar.querySelectorAll('.filter-tab') : [];
+        const cards = Array.from(grid.querySelectorAll('.service-card'));
+        let currentIndex = 0;
+
+        const AUTOPLAY_INTERVAL = 5000;
+        let autoTimer = null;
+        let isPaused = false;
+        let touchResumeTimer = null;
+
+        function nextSlide() {
+          const max = getMaxIndex();
+          if (max <= 0) return;
+          if (currentIndex >= max) {
+            currentIndex = 0;
+          } else {
+            currentIndex++;
+          }
+          updateCarousel();
+        }
+
+        function startAuto() {
+          stopAuto();
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+          }
+          if (isPaused) return;
+          const max = getMaxIndex();
+          if (max <= 0) return;
+          autoTimer = setInterval(nextSlide, AUTOPLAY_INTERVAL);
+        }
+
+        function stopAuto() {
+          if (autoTimer) {
+            clearInterval(autoTimer);
+            autoTimer = null;
+          }
+        }
+
+        function resetAuto() {
+          stopAuto();
+          startAuto();
+        }
+
+        function getCardsPerView() {
+          const w = window.innerWidth;
+          if (w >= 1200) return 4;
+          if (w >= 1024) return 3;
+          if (w >= 768) return 2;
+          return 1;
+        }
+
+        function getVisibleCards() {
+          return cards.filter(card => !card.classList.contains('is-hidden'));
+        }
+
+        function getMaxIndex() {
+          const visible = getVisibleCards();
+          const perView = getCardsPerView();
+          return Math.max(0, visible.length - perView);
+        }
+
+        function updateCarousel() {
+          const visible = getVisibleCards();
+          const perView = getCardsPerView();
+          const maxIndex = Math.max(0, visible.length - perView);
+
+          if (currentIndex > maxIndex) currentIndex = maxIndex;
+          if (currentIndex < 0) currentIndex = 0;
+
+          // Compute exact offset
+          if (visible.length === 0 || maxIndex === 0 || currentIndex === 0) {
+            grid.style.transform = 'translateX(0px)';
+          } else {
+            const targetCard = visible[currentIndex];
+            const firstCard = visible[0];
+            if (targetCard && firstCard) {
+              const offset = targetCard.offsetLeft - firstCard.offsetLeft;
+              grid.style.transform = `translateX(-${offset}px)`;
+            }
+          }
+
+          // Update arrow states
+          if (prevBtn) {
+            prevBtn.disabled = (currentIndex <= 0);
+            prevBtn.setAttribute('aria-disabled', (currentIndex <= 0).toString());
+          }
+          if (nextBtn) {
+            nextBtn.disabled = (currentIndex >= maxIndex);
+            nextBtn.setAttribute('aria-disabled', (currentIndex >= maxIndex).toString());
+          }
+
+          // Render / update pagination dots
+          if (dotsContainer) {
+            const totalDots = maxIndex + 1;
+            if (dotsContainer.children.length !== totalDots) {
+              dotsContainer.innerHTML = '';
+              for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'services-carousel__dot' + (i === currentIndex ? ' active' : '');
+                dot.setAttribute('role', 'tab');
+                dot.setAttribute('aria-selected', (i === currentIndex).toString());
+                dot.setAttribute('aria-label', `Go to service slide ${i + 1} of ${totalDots}`);
+                dot.dataset.index = i.toString();
+                dot.addEventListener('click', () => {
+                  currentIndex = i;
+                  updateCarousel();
+                  resetAuto();
+                });
+                dotsContainer.appendChild(dot);
+              }
+            } else {
+              Array.from(dotsContainer.children).forEach((dot, idx) => {
+                const isActive = (idx === currentIndex);
+                dot.classList.toggle('active', isActive);
+                dot.setAttribute('aria-selected', isActive.toString());
+              });
+            }
+          }
+        }
+
+        // Category tab filter handling
+        tabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter') || 'all';
+
+            // Update tab states
+            tabs.forEach(t => {
+              t.classList.remove('active');
+              t.setAttribute('aria-selected', 'false');
+            });
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+
+            // Filter cards
+            let visibleCount = 0;
+            cards.forEach(card => {
+              const category = card.getAttribute('data-category');
+              if (filter === 'all' || category === filter) {
+                card.classList.remove('is-hidden');
+                visibleCount++;
+              } else {
+                card.classList.add('is-hidden');
+              }
+            });
+
+            // Reset carousel to first card position and reset timer
+            currentIndex = 0;
+
+            // Recalculate after layout update
+            requestAnimationFrame(() => {
+              updateCarousel();
+              resetAuto();
+            });
+
+            // Announce to screen readers
+            if (statusEl) {
+              const label = this.querySelector('.tab-label')?.textContent?.trim() || filter;
+              statusEl.textContent = `Showing ${visibleCount} services for ${label}`;
+            }
+          });
+        });
+
+        // Navigation arrows
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+              currentIndex--;
+              updateCarousel();
+              resetAuto();
+            }
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            const max = getMaxIndex();
+            if (currentIndex < max) {
+              currentIndex++;
+              updateCarousel();
+              resetAuto();
+            }
+          });
+        }
+
+        // Keyboard navigation (ArrowLeft / ArrowRight)
+        viewport.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight') {
+            const max = getMaxIndex();
+            if (currentIndex < max) {
+              e.preventDefault();
+              currentIndex++;
+              updateCarousel();
+              resetAuto();
+            }
+          } else if (e.key === 'ArrowLeft') {
+            if (currentIndex > 0) {
+              e.preventDefault();
+              currentIndex--;
+              updateCarousel();
+              resetAuto();
+            }
+          }
+        });
+
+        // Hover pause
+        viewport.addEventListener('mouseenter', () => {
+          isPaused = true;
+          stopAuto();
+        });
+        viewport.addEventListener('mouseleave', () => {
+          isPaused = false;
+          startAuto();
+        });
+
+        // Focus pause (interactive accessibility: buttons, links inside carousel)
+        viewport.addEventListener('focusin', () => {
+          isPaused = true;
+          stopAuto();
+        });
+        viewport.addEventListener('focusout', (e) => {
+          if (!viewport.contains(e.relatedTarget)) {
+            isPaused = false;
+            startAuto();
+          }
+        });
+
+        // Touch swipe handling on mobile & tablet
+        let touchStartX = 0;
+        let touchStartY = 0;
+        viewport.addEventListener('touchstart', (e) => {
+          isPaused = true;
+          if (touchResumeTimer) clearTimeout(touchResumeTimer);
+          stopAuto();
+          touchStartX = e.changedTouches[0].screenX;
+          touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        viewport.addEventListener('touchend', (e) => {
+          const touchEndX = e.changedTouches[0].screenX;
+          const touchEndY = e.changedTouches[0].screenY;
+          const diffX = touchEndX - touchStartX;
+          const diffY = touchEndY - touchStartY;
+
+          if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+            if (diffX < 0) {
+              const max = getMaxIndex();
+              if (currentIndex < max) {
+                currentIndex++;
+                updateCarousel();
+              }
+            } else {
+              if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+              }
+            }
+          }
+          isPaused = false;
+          if (touchResumeTimer) clearTimeout(touchResumeTimer);
+          touchResumeTimer = setTimeout(startAuto, AUTOPLAY_INTERVAL);
+        }, { passive: true });
+
+        // Tab visibility pause
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            stopAuto();
+          } else {
+            if (!isPaused) startAuto();
+          }
+        });
+
+        // Astro page transition cleanup
+        document.addEventListener('astro:before-swap', () => {
+          stopAuto();
+          if (touchResumeTimer) clearTimeout(touchResumeTimer);
+        });
+
+        // Responsive resize handler
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            updateCarousel();
+            resetAuto();
+          }, 80);
+        });
+
+        // Initial setup and start autoplay
+        updateCarousel();
+        startAuto();
+      }
+
+      function initPageInteractive() {
+        initAllSliders();
+        initServicesCarousel();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPageInteractive);
+      } else {
+        initPageInteractive();
+      }
+      document.addEventListener('astro:page-load', initPageInteractive);
+    </script>
 
   </main>
 </BaseLayout>
 
 <style is:global>
-
 :root {
   --ivory: #F4EFE4;
   --navy: #13233A;
@@ -107,7 +1800,7 @@ const ogImage = "/assets/hero-brand-desk.webp";
   --line: #E3D8C5;
   --white: #FFFCF6;
   --max: 1200px;
-  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --serif: "DM Sans", Arial, Helvetica, sans-serif;
   --sans: "DM Sans", Arial, Helvetica, sans-serif;
   --text-xs: .75rem;
   --text-sm: .875rem;
@@ -119,173 +1812,715 @@ body { margin: 0; background: var(--ivory); color: var(--navy); font: 400 var(--
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 .container { width: min(var(--max), calc(100% - 64px)); margin-inline: auto; }
-h1, h2, h3, p { margin-top: 0; }
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.12; letter-spacing: -.025em; }
+h1, h2, h3, h4, p { margin-top: 0; }
+h1, h2, h3, h4 { font-family: var(--sans); font-weight: 600; line-height: 1.15; letter-spacing: -.02em; }
 h1 { font-size: clamp(2.65rem, 4.1vw, 4rem); margin-bottom: 1.1rem; }
 h2 { font-size: clamp(2rem, 3.1vw, 2.8rem); margin-bottom: 1rem; }
 h3 { font-size: 1.35rem; margin-bottom: .5rem; }
+h4 { font-size: 1.12rem; margin-bottom: .4rem; }
 p { color: var(--body); }
 .eyebrow { margin: 0 0 .8rem; color: var(--gold); font-size: .75rem; font-weight: 700; letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .7rem; min-height: 3.15rem; padding: .85rem 1.35rem; border: 1px solid var(--navy); border-radius: 4px; font: 700 .875rem/1.25 var(--sans); white-space: normal; text-align: center; transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease; }
-.btn:hover { transform: translateY(-1px); }
-.btn:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #C28A28; outline-offset: 3px; }
-.btn-primary { background: var(--navy); color: #fff; }
-.btn-primary:hover { background: #203D5D; border-color: #203D5D; }
-.btn-secondary { background: rgba(255,255,255,.30); color: var(--navy); }
-.btn-secondary:hover { background: #fffaf0; }
-.btn-gold { background: var(--gold); color: #fff; border-color: var(--gold); }
-.btn-gold:hover { background: #936414; border-color: #936414; }
-.arrow { color: #C18A2A; font-size: 1.05rem; font-weight: 400; line-height: 1; }
-.hero { min-height: clamp(540px, calc(100svh - 72px), 700px); position: relative; overflow: hidden; background: var(--ivory); }
-.hero-photo { position: absolute; right: 0; top: 0; width: 65%; height: 100%; object-fit: cover; object-position: 57% 54%; -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.8) 5%, #000 10%); mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.8) 5%, #000 10%); }
+
+.btn { display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; min-height: 48px !important; padding: 12px 22px !important; border: 1.5px solid var(--navy) !important; border-radius: 6px !important; font-family: var(--sans) !important; font-size: 14px !important; font-weight: 600 !important; line-height: 1.25 !important; letter-spacing: -0.01em !important; white-space: nowrap !important; text-align: center !important; box-shadow: 0 2px 6px rgba(19, 35, 58, 0.16) !important; transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease !important; cursor: pointer !important; box-sizing: border-box !important; }
+.btn:hover { transform: translateY(-1px) !important; }
+.btn:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #A8781A !important; outline-offset: 3px !important; }
+.btn-primary { background: var(--navy) !important; color: var(--ivory, #F4EFE4) !important; border-color: var(--navy) !important; box-shadow: 0 2px 6px rgba(19, 35, 58, 0.16) !important; }
+.btn-primary:hover { background: #1B2F4A !important; border-color: #1B2F4A !important; color: #FFFFFF !important; box-shadow: 0 6px 16px rgba(19, 35, 58, 0.24) !important; }
+.btn-secondary { background: transparent !important; color: var(--navy) !important; border-color: var(--navy) !important; box-shadow: none !important; }
+.btn-secondary:hover { background: #F0E2C8 !important; border-color: var(--gold, #A8781A) !important; color: var(--navy) !important; }
+.btn-gold { background: var(--gold) !important; color: #fff !important; border-color: var(--gold) !important; }
+.btn-gold:hover { background: #936414 !important; border-color: #936414 !important; }
+.arrow { color: var(--gold, #A8781A) !important; font-size: 15px !important; font-weight: 600 !important; line-height: 1 !important; display: inline-block !important; transition: transform .2s ease, color .2s ease !important; }
+.btn:hover .arrow { transform: translateX(3px) !important; color: #C28A25 !important; }
+
+/* 1. HERO */
+.hero { min-height: clamp(540px, calc(100svh - 72px), 700px); position: relative; isolation: isolate; overflow: hidden; background: var(--ivory); }
+.hero-photo-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+}
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+@media screen and (min-width: 1024px) {
+  .hero-photo {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.75) 60%,
+      #000 65%,
+      #000 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.75) 60%,
+      #000 65%,
+      #000 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .hero-photo {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+}
 .hero:after { content: ""; position: absolute; inset: 0; pointer-events: none; background: none; }
 .hero-inner { position: relative; z-index: 1; min-height: inherit; display: flex; align-items: center; }
 .hero-copy { width: 57%; max-width: 700px; padding: 3.25rem 0 2.9rem; }
-.hero h1 { max-width: 690px; }
+.hero h1 { max-width: 690px; text-wrap: balance; overflow-wrap: normal; word-break: normal; }
 .hero h1 span { color: var(--gold); }
 .hero-copy > p:not(.eyebrow) { max-width: 545px; font-size: 1rem; line-height: 1.62; margin-bottom: 1.5rem; }
 .actions { display: flex; gap: .85rem; flex-wrap: wrap; }
-.hero .btn { min-height: 3.25rem; padding: .9rem 1.35rem; font-size: .875rem; }
-.trust-row { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; }
-.trust-item { display: flex; align-items: center; gap: .65rem; padding-right: 1rem; border-right: 1px solid var(--line); font-size: .75rem; font-weight: 700; line-height: 1.4; }
+.hero .btn { min-height: 3.25rem; padding: .9rem 1.35rem; font-size: 0.9375rem; }
+.trust-row { display: flex; align-items: center; gap: 0; margin-top: 1.85rem; }
+.trust-item { display: flex; align-items: center; gap: 10px; padding: 0 16px; border-right: 1px solid var(--line); font-size: 13px; font-weight: 600; line-height: 1.35; color: var(--navy); }
+.trust-item:first-child { padding-left: 0; }
 .trust-item:last-child { border: 0; padding-right: 0; }
-.trust-icon { color: var(--gold); font-size: 1.75rem; line-height: 1; }
-.section { padding: 4.4rem 0; }
-.section-heading { text-align: center; max-width: 780px; margin: 0 auto 2rem; }
+.trust-icon { width: 32px; height: 32px; min-width: 32px; flex: 0 0 32px; background: rgba(168, 120, 26, 0.12); color: var(--gold); display: grid; place-items: center; border-radius: 6px; font-size: 15px; line-height: 1; }
+
+/* GENERAL SECTION SYSTEM */
+.section { padding: clamp(3.2rem, 5vw, 4.8rem) 0; }
+.section-heading { text-align: center; max-width: 780px; margin: 0 auto clamp(1.8rem, 3.2vw, 2.5rem); }
 .section-heading .eyebrow { margin-bottom: .5rem; }
 .section-heading h2 { margin-bottom: .75rem; }
-.rule { width: 2rem; height: 2px; background: var(--gold); margin: 0 auto .9rem; }
-.section-heading p { font-size: .9375rem; line-height: 1.65; margin: 0 auto; max-width: 720px; }
-.services { padding-top: 2.8rem; padding-bottom: 3.2rem; }
-.service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; align-items: stretch; }
-.service-card { background: rgba(255,252,246,.74); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
-.service-card img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; }
-.service-body { padding: 1.15rem; display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
-.service-body h3 { font-size: 1.3rem; line-height: 1.2; margin-bottom: .5rem; }
-.service-body p { font-size: .875rem; line-height: 1.55; margin-bottom: .9rem; }
-.text-link { margin-top: auto; color: #8E520E; font-size: .875rem; font-weight: 700; }
-.text-link span { font-size: 1rem; margin-left: .25rem; }
-.process { padding: 2.1rem 0 3.5rem; }
-.process .section-heading { margin-bottom: 1.7rem; }
-.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
-.step-top { display: flex; align-items: center; gap: 1rem; margin-bottom: .7rem; }
-.step-num { width: 2.65rem; height: 2.65rem; flex: 0 0 2.65rem; border-radius: 50%; background: #F0E2C8; display: grid; place-items: center; font: 1.25rem var(--serif); color: #4B3212; }
-.step-line { height: 1px; background: #D9C4A3; flex: 1; position: relative; }
-.step-line:after { content: "›"; position: absolute; right: -.2rem; top: -.82rem; color: var(--gold); font-size: 1.4rem; }
-.step:last-child .step-line:after { display: none; }
-.step h3 { font-size: 1.15rem; margin-bottom: .45rem; }
-.step p { font-size: .875rem; line-height: 1.6; margin: 0; }
-.about { display: grid; grid-template-columns: 1fr 1fr; min-height: 390px; }
-.about-photo { width: 100%; height: auto; min-height: 0; aspect-ratio: 3 / 2; object-fit: contain; object-position: center; background: var(--ivory); }
-.about-copy { padding: 3rem clamp(2rem, 4vw, 4rem); align-self: center; }
-.about-copy .eyebrow { margin-bottom: .7rem; }
-.about-copy h2 { font-size: clamp(1.9rem, 2.65vw, 2.4rem); margin-bottom: .85rem; }
-.about-copy > p { font-size: .9375rem; line-height: 1.6; margin-bottom: 1.25rem; }
-.values { display: grid; gap: 1rem; }
-.value { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; align-items: start; }
-.value-icon { font-size: 1.6rem; color: var(--gold); line-height: 1.15; }
-.value strong { display: block; font-size: .875rem; line-height: 1.35; margin-bottom: .2rem; }
-.value p { font-size: .8125rem; line-height: 1.5; margin: 0; }
-.cta-band { background: var(--navy); color: #fff; position: relative; isolation: isolate; overflow: hidden; padding: 3.25rem 0; }
-.cta-band:before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(19,35,58,.25) 0%, rgba(19,35,58,.65) 24%, rgba(19,35,58,.9) 45%, var(--navy) 72%, var(--navy) 100%); pointer-events: none; }
-.cta-leaves { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center; }
-.cta-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.2fr .8fr; gap: 3rem; align-items: center; }
-.cta-copy { padding-left: clamp(0px, 4vw, 3.5rem); }
-.cta-copy .eyebrow { color: #D8A64D; }
-.cta-copy h2 { font-size: clamp(2rem, 3vw, 2.55rem); color: #fff; margin-bottom: .75rem; }
-.cta-copy p { color: #E8EAF0; font-size: .9375rem; line-height: 1.6; max-width: 510px; margin-bottom: 1.15rem; }
-.cta-copy .btn { font-size: .875rem; }
-.cta-benefits { border-left: 1px solid rgba(216,166,77,.45); padding-left: 2rem; display: grid; gap: 1.25rem; }
-.cta-benefit { display: grid; grid-template-columns: 2rem 1fr; gap: .85rem; align-items: center; }
-.cta-benefit strong { display: block; color: #fff; font-size: .875rem; line-height: 1.35; margin-bottom: .2rem; }
-.cta-benefit p { color: #D5DBE5; font-size: .8125rem; line-height: 1.5; margin: 0; }
-@media (max-width: 1120px) {
-.container { width: calc(100% - 48px); }
-.hero-copy { width: 60%; }
-.hero h1 { font-size: clamp(2.65rem, 4.4vw, 3.5rem); }
-.trust-row { gap: .75rem; }
-.trust-item { gap: .5rem; padding-right: .75rem; }
+.rule { width: 2.25rem; height: 2px; background: var(--gold); margin: 0 auto 1rem; }
+.rule-left { width: 2.25rem; height: 2px; background: var(--gold); margin: 0 0 1.15rem; }
+.section-heading p { font-size: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem); line-height: 1.65; margin: 0 auto; max-width: 720px; }
+
+/* 2. SECTION 2: INFORMED DECISIONS (EDITORIAL IMAGE & TEXT SPLIT) */
+.informed-section {
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line);
 }
-@media (max-width: 980px) {
-.hero { min-height: 550px; }
-.hero-inner { min-height: inherit; }
-.hero-photo { width: 65%; }
-.hero-copy { width: 64%; padding: 3rem 0 2.5rem; }
-.hero h1 { font-size: clamp(2.45rem, 5vw, 3.25rem); }
-.hero-copy > p:not(.eyebrow) { font-size: .9375rem; max-width: 500px; }
-.hero .btn { min-height: 3rem; padding: .8rem 1rem; font-size: .8125rem; }
-.trust-item { font-size: .6875rem; }
-.trust-icon { font-size: 1.5rem; }
-.service-grid { gap: 1rem; }
-.service-body { padding: .95rem; }
-.service-body h3 { font-size: 1.12rem; }
-.service-body p { font-size: .8125rem; }
-.steps { gap: 1.3rem; }
-.step h3 { font-size: 1.05rem; }
-.about { min-height: 340px; }
-.about-photo { min-height: 0; aspect-ratio: 3 / 2; object-fit: contain; }
-.about-copy { padding: 2rem 1.8rem; }
-.cta-inner { gap: 1.8rem; }
-.cta-copy { padding-left: 0; }
+.informed-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
 }
-@media (max-width: 720px) {
-.container { width: calc(100% - 40px); }
-.hero { min-height: 0; }
-.hero-inner { min-height: 0; display: block; }
-.hero-copy { width: 100%; max-width: none; padding: 2.8rem 0 1.8rem; }
-.hero h1 { font-size: clamp(2.4rem, 8vw, 3.2rem); max-width: 600px; }
-.hero-copy > p:not(.eyebrow) { max-width: 620px; font-size: .9375rem; }
-.hero-photo { position: relative; width: calc(100% - 40px); height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 57% 54%; margin: 0 auto; -webkit-mask-image: none; mask-image: none; }
-.hero:after { display: none; }
-.trust-row { gap: .6rem; justify-content: flex-start; flex-wrap: wrap; margin-top: 1.5rem; }
-.trust-item { font-size: .75rem; gap: .45rem; padding-right: .65rem; }
-.trust-icon { font-size: 1.45rem; }
-.section { padding: 3.2rem 0; }
-.services { padding-top: 2.3rem; padding-bottom: 2.7rem; }
-.section-heading { margin-bottom: 1.6rem; }
-.section-heading p { font-size: .9rem; }
-.service-grid { grid-template-columns: 1fr; gap: 1rem; }
-.service-card img { aspect-ratio: 4 / 3; }
-.service-body { padding: 1rem; }
-.service-body h3 { font-size: 1.25rem; }
-.service-body p { font-size: .875rem; }
-.process { padding: 1.4rem 0 2.8rem; }
-.steps { grid-template-columns: 1fr; gap: 1.5rem; }
-.step-top { margin-bottom: .5rem; }
-.step-line { max-width: 150px; }
-.about { grid-template-columns: 1fr; min-height: 0; }
-.about-photo { min-height: 0; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: var(--ivory); }
-.about-copy { padding: 2.2rem 20px 2.5rem; }
-.about-copy h2 { font-size: clamp(1.9rem, 7vw, 2.25rem); }
-.cta-band { padding: 2.6rem 0; }
-.cta-band:before { background: rgba(19,35,58,.78); }
-.cta-inner { grid-template-columns: 1fr; gap: 1.8rem; }
-.cta-copy h2 { font-size: clamp(1.95rem, 7vw, 2.25rem); }
-.cta-copy p { font-size: .9rem; }
-.cta-copy .btn { max-width: 100%; font-size: .8rem; }
-.cta-benefits { border-left: 0; border-top: 1px solid rgba(216,166,77,.4); padding: 1.4rem 0 0; gap: 1rem; }
+.informed-media {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(19, 35, 58, 0.09);
+  border: 1px solid var(--line);
+  background: #F8F3E9;
 }
-@media (max-width: 480px) {
-.container { width: calc(100% - 32px); }
-.hero-copy { padding-top: 2.2rem; }
-.eyebrow { font-size: .68rem; letter-spacing: .13em; }
-.hero h1 { font-size: clamp(2.15rem, 9.4vw, 2.7rem); line-height: 1.08; }
-.hero-copy > p:not(.eyebrow) { font-size: .875rem; line-height: 1.6; }
-.actions { display: grid; grid-template-columns: 1fr; gap: .65rem; }
-.hero .btn { width: 100%; min-height: 2.9rem; padding: .75rem .85rem; font-size: .8125rem; }
-.trust-row { display: grid; grid-template-columns: 1fr; gap: .75rem; }
-.trust-item { border-right: 0; padding-right: 0; font-size: .75rem; }
-.service-body h3 { font-size: 1.15rem; }
+.informed-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .4s ease;
 }
+.informed-media:hover .informed-photo {
+  transform: scale(1.02);
+}
+.informed-content {
+  display: flex;
+  flex-direction: column;
+}
+.informed-lead {
+  font-size: clamp(1rem, 1.05vw, 1.12rem);
+  line-height: 1.68;
+  color: #2D3A4B;
+  margin-bottom: 1.5rem;
+}
+.informed-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 1.85rem;
+}
+.informed-pillar {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.pillar-bullet {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 6px;
+  background: rgba(168, 120, 26, 0.12);
+  color: var(--gold);
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.informed-pillar strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+.informed-pillar p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+.informed-action {
+  margin-top: 0.5rem;
+}
+
+/* 3. SECTION 3: COMPREHENSIVE SERVICES (INTERACTIVE LUXURY SUITE) */
+.service-directory {
+  background: #FAF6EF;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+/* Category Filter Bar */
+.services-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0 auto 3rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+}
+
+.filter-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  background: #FFFCF6;
+  border: 1.5px solid rgba(19, 35, 58, 0.16);
+  color: #13233A;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(19, 35, 58, 0.04);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  touch-action: manipulation;
+  min-height: 44px;
+}
+
+.filter-tab:hover {
+  background: #F4EFE4;
+  border-color: rgba(168, 120, 26, 0.6);
+  color: #13233A;
+  transform: translateY(-1px);
+}
+
+.filter-tab:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.filter-tab.active {
+  background: #13233A;
+  color: #FFFFFF;
+  border-color: #13233A;
+  box-shadow: 0 6px 18px rgba(19, 35, 58, 0.22);
+  transform: translateY(-1px);
+}
+
+.tab-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(19, 35, 58, 0.09);
+  color: #13233A;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-tab.active .tab-badge {
+  background: #A8781A;
+  color: #FFFFFF;
+}
+
+/* Services Carousel Architecture */
+.services-carousel {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.services-carousel__viewport {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 10px 4px 16px;
+  margin: -10px -4px -16px;
+}
+
+.services-carousel__viewport:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.services-carousel__track,
+.services-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  gap: 20px !important;
+  width: 100%;
+  transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Card sizing per breakpoint */
+/* Desktop (>= 1200px): Exactly 4 cards visible in one row */
+.service-card,
+.services-carousel__card {
+  flex: 0 0 calc((100% - 60px) / 4) !important;
+  width: calc((100% - 60px) / 4) !important;
+  max-width: calc((100% - 60px) / 4) !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Small Desktop (1024px to 1199px): 3 cards visible in one row */
+@media (max-width: 1199px) {
+  .service-card,
+  .services-carousel__card {
+    flex: 0 0 calc((100% - 40px) / 3) !important;
+    width: calc((100% - 40px) / 3) !important;
+    max-width: calc((100% - 40px) / 3) !important;
+  }
+}
+
+/* Tablet (768px to 1023px): 2 cards visible in one row */
+@media (max-width: 1023px) {
+  .services-carousel__track,
+  .services-grid {
+    gap: 16px !important;
+  }
+  .service-card,
+  .services-carousel__card {
+    flex: 0 0 calc((100% - 16px) / 2) !important;
+    width: calc((100% - 16px) / 2) !important;
+    max-width: calc((100% - 16px) / 2) !important;
+  }
+}
+
+/* Mobile (below 768px): 1 card visible */
+@media (max-width: 767px) {
+  .services-carousel__track,
+  .services-grid {
+    gap: 16px !important;
+  }
+  .service-card,
+  .services-carousel__card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-html { scroll-behavior: auto; }
-*, *::before, *::after { transition: none !important; }
+  .services-carousel__track,
+  .services-grid {
+    transition: none !important;
+  }
 }
+
+/* Services Carousel Controls — Dot-Only Standard */
+.services-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.85rem;
+  position: relative;
+  z-index: 5;
+}
+
+.services-carousel__arrow {
+  display: none !important;
+}
+
+.services-carousel__dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.services-carousel__dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  border: none;
+  background: rgba(19, 35, 58, 0.22);
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  min-height: 0;
+}
+
+.services-carousel__dot::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+}
+
+.services-carousel__dot:hover {
+  background: rgba(168, 120, 26, 0.65);
+}
+
+.services-carousel__dot.active {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: var(--gold, #A8781A) !important;
+  transform: scale(1.15);
+  box-shadow: 0 1px 4px rgba(168, 120, 26, 0.35);
+}
+
+.services-carousel__dot:focus-visible {
+  outline: 2px solid var(--gold, #A8781A);
+  outline-offset: 3px;
+}
+
+/* Service Card */
+.service-card {
+  background: #FFFCF6;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 18px rgba(19, 35, 58, 0.04);
+  position: relative;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, opacity 0.25s ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #13233A 0%, #A8781A 60%, #E8C982 100%);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.24s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 120, 26, 0.55);
+  box-shadow: 0 16px 36px rgba(19, 35, 58, 0.11);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card.is-hidden {
+  display: none !important;
+}
+
+/* Card Media */
+.card-media {
+  position: relative;
+  overflow: hidden;
+  background: #F4EFE4;
+  border-bottom: 1px solid var(--line);
+  aspect-ratio: 16 / 10;
+}
+
+.card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .card-media img {
+  transform: scale(1.04);
+}
+
+.card-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: rgba(19, 35, 58, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #F4EFE4;
+  border: 1px solid rgba(168, 120, 26, 0.4);
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* Card Content */
+.card-content {
+  padding: 1.25rem 1.15rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #FFFCF6;
+}
+
+.card-content h3 {
+  font-family: var(--sans, "DM Sans", sans-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin: 0 0 0.55rem;
+  line-height: 1.3;
+}
+
+.card-content p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0 0 1.2rem;
+  flex-grow: 1;
+}
+
+/* Action Buttons */
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.65rem 0.95rem;
+  border-radius: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--navy);
+  background: #FAF6EF;
+  border: 1px solid rgba(19, 35, 58, 0.18);
+  margin-top: auto;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  min-height: 42px;
+  box-sizing: border-box;
+}
+
+.service-btn .btn-arrow {
+  color: var(--gold);
+  font-weight: 700;
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.service-btn:hover {
+  background: var(--navy);
+  color: #FFFFFF;
+  border-color: var(--navy);
+}
+
+.service-btn:hover .btn-arrow {
+  color: #E8C982;
+  transform: translateX(4px);
+}
+
+.service-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.card-dual-actions {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+.service-btn-split {
+  flex: 1 1 0;
+  min-width: 0;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+}
+
+.service-btn-subtle {
+  flex: 1 1 0;
+  min-width: 0;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  border-color: rgba(168, 120, 26, 0.35);
+  color: #8E520E;
+  background: rgba(168, 120, 26, 0.05);
+}
+
+.service-btn-subtle .btn-arrow {
+  color: #8E520E;
+}
+
+.service-btn-subtle:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #FFFFFF;
+}
+
+.service-btn-subtle:hover .btn-arrow {
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+/* Section Bottom Callout Banner */
+.services-footer-banner {
+  margin-top: 3.5rem;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(135deg, #13233A 0%, #1A2F4C 100%);
+  border: 1px solid rgba(168, 120, 26, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(19, 35, 58, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-footer-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(168, 120, 26, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.services-footer-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.services-footer-text {
+  flex: 1 1 340px;
+}
+
+.services-footer-text h4 {
+  font-family: var(--sans, "DM Sans", sans-serif);
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  font-weight: 700;
+  color: #F4EFE4;
+  margin: 0 0 0.45rem;
+  line-height: 1.3;
+}
+
+.services-footer-text p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #CBD5E1;
+  margin: 0;
+}
+
+.services-footer-banner .btn {
+  background: #FFFCF6 !important;
+  color: #13233A !important;
+  border: 1.5px solid rgba(168, 120, 26, 0.45) !important;
+  font-weight: 700 !important;
+  padding: 0.82rem 1.6rem !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18) !important;
+  text-decoration: none !important;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.services-footer-banner .btn .arrow {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+  transition: transform 0.22s ease, color 0.22s ease !important;
+}
+
+.services-footer-banner .btn:hover {
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(168, 120, 26, 0.4) !important;
+}
+
+.services-footer-banner .btn:hover .arrow {
+  color: #FFFFFF !important;
+  transform: translateX(4px) !important;
+}
+
+.services-footer-banner .btn:focus-visible {
+  outline: 2px solid #E8C982 !important;
+  outline-offset: 3px !important;
+}
+
+/* 4. SECTION 4: PROCESS (HOW IT WORKS - 4 STEPS) */
 .process {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: clamp(3.1rem, 5.2vw, 4.6rem) 0 clamp(3.3rem, 5.5vw, 4.8rem);
+  padding: clamp(3.2rem, 5.2vw, 4.8rem) 0;
   background: #13233A;
   border-top: 1px solid rgba(168,120,26,.28);
   border-bottom: 1px solid rgba(168,120,26,.28);
@@ -296,370 +2531,1253 @@ html { scroll-behavior: auto; }
   z-index: -1;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at 50% 0%, rgba(55,78,108,.18), transparent 62%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(55,78,108,.24), transparent 65%);
 }
 .process .container { position: relative; z-index: 1; }
 .process .section-heading { margin-bottom: clamp(1.8rem, 3.5vw, 2.6rem); }
-.process .section-heading .eyebrow { color: #D8A64D; letter-spacing: .2em; margin-bottom: .65rem; }
-.process .section-heading h2 { color: #FFFCF6; font-size: clamp(2.15rem, 3.5vw, 3rem); margin-bottom: 0; }
-.process .steps { gap: 1rem; align-items: stretch; }
+.process .section-heading .eyebrow {
+  color: #D4A647 !important;
+  letter-spacing: .16em;
+  margin-bottom: .65rem;
+}
+.process .section-heading h2 {
+  color: #F4EFE4 !important;
+  font-size: clamp(2.15rem, 3.5vw, 3rem);
+  margin-bottom: 0.6rem;
+}
+.process .section-heading p:not(.eyebrow) {
+  color: #D9DFE8 !important;
+  font-size: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem);
+  line-height: 1.65;
+  margin: 0 auto;
+  max-width: 720px;
+}
+.process .steps { display: grid; gap: 1rem; align-items: stretch; }
+.process .steps.steps-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .process .step {
   min-width: 0;
-  padding: 1.35rem 1.3rem 1.5rem;
-  background: rgba(255,252,246,.035);
-  border: 1px solid rgba(244,239,228,.13);
-  border-radius: 7px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
-  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+  padding: 1.45rem 1.35rem 1.6rem;
+  background: rgba(28, 45, 70, 0.65) !important;
+  border: 1px solid rgba(244, 239, 228, 0.16) !important;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 4px 16px rgba(0, 0, 0, 0.22);
+  transition: background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
 .process .step:hover {
-  background: rgba(255,252,246,.06);
-  border-color: rgba(216,166,77,.42);
+  background: rgba(28, 45, 70, 0.9) !important;
+  border-color: rgba(212, 166, 71, 0.5) !important;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
 }
-.process .step-top { gap: .85rem; margin-bottom: 1rem; }
+.process .step-top { display: flex; align-items: center; gap: .85rem; margin-bottom: 1.15rem; }
 .process .step-num {
   width: 2.75rem;
   height: 2.75rem;
-  flex-basis: 2.75rem;
+  flex: 0 0 2.75rem;
+  border-radius: 50%;
   background: #D8A64D;
   border: 1px solid #E3B75F;
   color: #13233A;
-  font: 700 1.08rem/1 var(--serif);
-  box-shadow: 0 0 0 4px rgba(216,166,77,.09);
+  font: 700 1.08rem/1 var(--sans);
+  box-shadow: 0 0 0 4px rgba(216, 166, 77, 0.10);
+  display: grid;
+  place-items: center;
 }
-.process .step-line { background: rgba(216,166,77,.44); }
-.process .step-line:after { color: #D8A64D; top: -.8rem; }
+.process .step-line { height: 1px; background: rgba(216, 166, 77, 0.44); flex: 1; }
+.process .step:last-child .step-line { display: none; }
 .process .step h3 {
-  color: #FFFCF6;
-  font-size: clamp(1.08rem, 1.25vw, 1.22rem);
+  color: #F4EFE4 !important;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 1.2vw, 1.18rem);
   line-height: 1.3;
-  letter-spacing: -.01em;
   margin-bottom: .6rem;
 }
-.process .step p { color: #D1D9E4; font-size: .9rem; line-height: 1.7; margin: 0; }
-@media (max-width: 980px) {
-.process .step { padding: 1.2rem 1.1rem 1.35rem; }
-.process .step h3 { font-size: 1.08rem; }
+.process .step p {
+  color: #CBD5E1 !important;
+  font-size: clamp(0.92rem, 0.9rem + 0.1vw, 0.98rem);
+  line-height: 1.65;
+  margin: 0;
 }
-@media (max-width: 720px) {
-.process { padding: 3rem 0; }
-.process .section-heading { text-align: left; margin-bottom: 1.5rem; }
-.process .section-heading h2 { font-size: clamp(2rem, 7vw, 2.55rem); }
-.process .steps { gap: .9rem; }
-.process .step { padding: 1.15rem 1rem 1.25rem; }
-.process .step-top { margin-bottom: .8rem; }
-.process .step-line { max-width: 150px; }
-.process .step p { font-size: .875rem; }
+
+/* 5. SECTION 5: WHO WE HELP (IMAGE-LED AUDIENCE CARDS) */
+.audiences {
+  background: var(--ivory);
 }
-@media (prefers-reduced-motion: reduce) {
-.process .step { transition: none; }
-}
-.services {
-  padding-top: clamp(2.8rem, 4.3vw, 4rem);
-  padding-bottom: clamp(3rem, 4.5vw, 4.2rem);
-}
-.service-grid {
+.audiences-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 1.8vw, 1.55rem);
-  align-items: stretch;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
 }
-.service-card {
-  position: relative;
-  min-width: 0;
+.audience-photo-card {
+  background: #FFFCF6;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: #13233A;
-  color: #FFFCF6;
-  border: 1px solid rgba(168,120,26,.30);
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(19,35,58,.08);
-  transform: translateY(0);
-  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
-}
-.service-card:hover, .service-card:focus-within {
-  transform: translateY(-5px);
-  border-color: rgba(216,166,77,.78);
-  box-shadow: 0 18px 38px rgba(19,35,58,.16);
-}
-.service-card img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-  background: #E8DDCA;
-  transition: transform .55s cubic-bezier(.2,.65,.3,1);
-}
-.service-card:hover img, .service-card:focus-within img {
-  transform: scale(1.035);
-}
-.service-body {
   position: relative;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.35rem 1.3rem 1.45rem;
-  border-top: 2px solid #D8A64D;
-  background: linear-gradient(145deg, #172A43 0%, #13233A 76%);
+  box-shadow: 0 4px 16px rgba(19, 35, 58, 0.04);
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
 }
-.service-body h3 {
-  color: #FFFCF6;
-  font-family: var(--serif);
-  font-size: clamp(1.12rem, 1.28vw, 1.32rem);
-  font-weight: 400;
-  letter-spacing: -.015em;
-  line-height: 1.28;
-  margin: 0 0 .62rem;
-}
-.service-body p {
-  color: #D3DCE7;
-  font-size: .9rem;
-  line-height: 1.65;
-  margin: 0 0 1.15rem;
-}
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  margin-top: auto;
-  padding-bottom: .18rem;
-  border-bottom: 1px solid transparent;
-  color: #E0B45D;
-  font-size: .875rem;
-  font-weight: 700;
-  line-height: 1.45;
-  transition: color .18s ease, border-color .18s ease;
-}
-.text-link:hover, .service-card:focus-within .text-link {
-  color: #FFD783;
-  border-color: rgba(255,215,131,.75);
-}
-.text-link span { font-size: 1.05rem; margin-left: .12rem; transition: transform .18s ease; }
-.text-link:hover span { transform: translateX(3px); }
-@media (min-width: 721px) and (max-width: 980px) {
-.service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.service-body { padding: 1.2rem 1.15rem 1.3rem; }
-.service-body h3 { font-size: 1.2rem; }
-}
-@media (max-width: 720px) {
-.service-grid { grid-template-columns: 1fr; gap: 1.15rem; }
-.service-card { border-radius: 12px; }
-.service-card img { aspect-ratio: 4 / 3; }
-.service-body { padding: 1.15rem 1.1rem 1.25rem; }
-.service-body h3 { font-size: 1.25rem; }
-.service-body p { font-size: .9rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-.service-card, .service-card img, .text-link span { transition: none !important; }
-}
-.service-grid {
-  gap: clamp(1.15rem, 2vw, 1.8rem);
-}
-.service-card {
-  background: #F8F3E9;
-  color: #13233A;
-  border: 1px solid #E5D8C3;
-  border-radius: 18px;
-  box-shadow: 0 7px 22px rgba(19,35,58,.07);
-  isolation: isolate;
-}
-.service-card::before {
+.audience-photo-card::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, #13233A 0%, #D8A64D 72%, #E8C982 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gold);
   z-index: 2;
-  pointer-events: none;
 }
-.service-card:hover, .service-card:focus-within {
-  transform: translateY(-6px);
-  border-color: #D8A64D;
-  box-shadow: 0 18px 36px rgba(19,35,58,.14);
+.audience-photo-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px rgba(19, 35, 58, 0.10);
 }
-.service-card img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-bottom: 1px solid #E5D8C3;
-}
-.service-body {
-  padding: clamp(1.2rem, 1.6vw, 1.55rem);
-  border-top: 0;
-  background: #F8F3E9;
+.audience-media {
   position: relative;
+  overflow: hidden;
+  background: #F4EFE4;
+  border-bottom: 1px solid var(--line);
+  aspect-ratio: 16 / 9;
 }
-.service-body::before {
-  content: "";
-  width: 42px;
-  height: 2px;
+.audience-media img {
   display: block;
-  background: #D8A64D;
-  margin: 0 0 .85rem;
-}
-.service-body h3 {
-  color: #13233A;
-  font-size: clamp(1.12rem, 1.3vw, 1.3rem);
-  line-height: 1.3;
-  font-weight: 500;
-  margin-bottom: .6rem;
-}
-.service-body p {
-  color: #465366;
-  font-size: .9rem;
-  line-height: 1.7;
-  margin-bottom: 1.15rem;
-}
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .55rem;
-  padding: .55rem .85rem;
-  border: 1px solid rgba(19,35,58,.22);
-  border-radius: 5px;
-  color: #13233A;
-  background: transparent;
-  font-size: .84rem;
-  font-weight: 700;
-  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
-}
-.text-link:hover, .service-card:focus-within .text-link {
-  color: #FFFCF6;
-  background: #13233A;
-  border-color: #13233A;
-}
-.text-link span { color: #B78024; }
-.text-link:hover span { color: #EAC16F; }
-@media (max-width: 720px) {
-.service-card { border-radius: 14px; }
-.service-body { padding: 1.15rem; }
-}
-.about {
-  background: var(--ivory);
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-  min-height: 0;
-  padding: clamp(2rem, 4vw, 3.5rem) 0;
-  gap: 0;
-}
-.about-photo {
-  display: block;
-  width: calc(100% - clamp(2rem, 4vw, 4.5rem));
-  height: auto;
-  min-height: 0;
-  aspect-ratio: 3 / 2;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: center;
-  margin: 0 auto;
-  padding: 0;
-  border: 0;
-  border-radius: 18px;
-  background: transparent;
-  box-shadow: 0 12px 30px rgba(19, 35, 58, .10);
+  transition: transform .35s ease;
 }
-.about-copy {
-  align-self: center;
+.audience-photo-card:hover .audience-media img {
+  transform: scale(1.03);
 }
-@media (max-width: 720px) {
-.about {
-    grid-template-columns: minmax(0, 1fr);
-    padding: 2rem 0 0;
-  }
-.about-photo {
-    width: calc(100% - 2rem);
-    aspect-ratio: 3 / 2;
-    margin: 0 auto;
-    border-radius: 16px;
-  }
-.about-copy {
-    padding: 2rem 20px 2.5rem;
-  }
+.audience-body {
+  padding: 1.25rem 1.15rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.audience-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 0.45rem;
+}
+.audience-body h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 0.55rem;
+  line-height: 1.3;
+}
+.audience-body p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+}
+
+/* 6. SECTION 6: WHY BRNDNUR (NAVY BLUE SPLIT ABOUT SECTION) */
+.about-section {
+  width: 100%;
+  background: var(--navy);
+  border-top: 1px solid rgba(168, 120, 26, 0.28);
+  border-bottom: 1px solid rgba(168, 120, 26, 0.28);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.about-section::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 30% 40%, rgba(55, 78, 108, 0.36), transparent 70%);
 }
 .about {
   width: min(1400px, calc(100% - 64px));
   max-width: 1400px;
   margin: 0 auto;
-  padding: clamp(2rem, 3.5vw, 3rem) clamp(1.5rem, 2.7vw, 3rem);
+  padding: clamp(3.2rem, 5vw, 5rem) clamp(1rem, 2vw, 2.5rem);
+  display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: clamp(1.25rem, 2vw, 2rem);
+  column-gap: clamp(1.75rem, 3.5vw, 3.5rem);
   align-items: center;
-  min-height: 0;
+  position: relative;
+  z-index: 1;
 }
 .about-photo {
   display: block;
-  width: calc(100% - 16px);
-  max-width: 640px;
+  width: 100%;
+  max-width: 520px;
   height: auto;
   min-height: 0;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
   justify-self: center;
   align-self: center;
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 0 auto;
   border-radius: 18px;
-  background: transparent;
-  box-shadow: 0 12px 30px rgba(19, 35, 58, .10);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(168, 120, 26, 0.28);
 }
 .about-copy {
   width: 100%;
   max-width: 680px;
   min-width: 0;
-  padding: 2rem clamp(1rem, 1.8vw, 1.5rem);
+  padding: 1.5rem clamp(1rem, 1.8vw, 1.5rem);
   align-self: center;
 }
-@media (max-width: 1100px) and (min-width: 821px) {
-.about {
-    width: calc(100% - 48px);
-    padding-inline: 20px;
-    column-gap: 18px;
-  }
-.about-photo { width: calc(100% - 12px); }
-.about-copy { padding-inline: 14px; }
+.about-section .about-copy .eyebrow {
+  margin-bottom: .7rem;
+  color: #D4A647 !important;
+  letter-spacing: .16em;
 }
-@media (max-width: 820px) and (min-width: 721px) {
-.about {
-    width: calc(100% - 48px);
-    grid-template-columns: minmax(0, 1fr);
-    padding: 2rem 0 0;
-    row-gap: 1rem;
+.about-section .about-copy h2 {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  margin-bottom: 0.95rem;
+  color: #F4EFE4 !important;
+  line-height: 1.2;
+}
+.about-section .about-copy > p:not(.eyebrow) {
+  font-size: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem);
+  line-height: 1.68;
+  margin-bottom: 1.6rem;
+  color: #D9DFE8 !important;
+}
+.about-section .values {
+  display: grid;
+  gap: 1rem;
+}
+.about-section .value {
+  display: grid !important;
+  grid-template-columns: 2.75rem 1fr !important;
+  gap: 1rem !important;
+  align-items: flex-start !important;
+  padding: 0.85rem 1rem !important;
+  border-radius: 10px !important;
+  background: rgba(28, 45, 70, 0.55) !important;
+  border: 1px solid rgba(168, 120, 26, 0.22) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18) !important;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease !important;
+}
+.about-section .value:hover {
+  background: rgba(28, 45, 70, 0.85) !important;
+  border-color: rgba(212, 166, 71, 0.45) !important;
+  transform: translateX(4px) !important;
+}
+.about-section .value-icon {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(168, 120, 26, 0.22) !important;
+  border: 1px solid rgba(212, 166, 71, 0.45) !important;
+  color: #E8C982 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.25rem !important;
+  line-height: 1 !important;
+}
+.about-section .value strong {
+  display: block !important;
+  font-size: clamp(0.98rem, 0.95rem + 0.15vw, 1.08rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-bottom: .25rem !important;
+  color: #F4EFE4 !important;
+}
+.about-section .value p {
+  font-size: clamp(0.9rem, 0.88rem + 0.1vw, 0.96rem) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  color: #CBD5E1 !important;
+}
+
+/* 7. SECTION 7: CHECKLIST (WHAT TO PREPARE BEFORE YOU BEGIN) */
+.checklist-section {
+  background: #FAF7EE;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(3rem, 5vw, 4.8rem) 0;
+}
+.prep-banner-wrapper {
+  width: 100%;
+  margin-bottom: clamp(1.75rem, 3vw, 2.35rem);
+}
+.prep-banner-card {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(220, 208, 190, 0.7);
+  box-shadow: 0 8px 24px rgba(19, 35, 58, 0.08);
+  background: #13233A;
+  isolation: isolate;
+}
+.prep-banner-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1024 / 440;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+.prep-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: clamp(1.75rem, 3.5vw, 3rem) clamp(1.75rem, 4vw, 3.5rem);
+}
+.prep-banner-copy {
+  max-width: 470px;
+  width: 100%;
+}
+.prep-banner-eyebrow {
+  font-family: var(--sans);
+  font-size: clamp(0.72rem, 0.7rem + 0.1vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #D4A647;
+  margin: 0 0 0.85rem;
+  line-height: 1.4;
+}
+.prep-banner-title {
+  font-family: var(--sans, "DM Sans", sans-serif);
+  font-size: clamp(1.75rem, 1.4rem + 1.8vw, 2.55rem);
+  font-weight: 600;
+  line-height: 1.16;
+  color: #FFFFFF;
+  margin: 0 0 1.1rem;
+  letter-spacing: -0.02em;
+}
+.prep-banner-title span {
+  color: #D4A647;
+  font-family: inherit;
+}
+.prep-banner-rule {
+  width: 2.25rem;
+  height: 2px;
+  background: #D4A647;
+  margin: 0 0 1.15rem;
+  border-radius: 1px;
+}
+.prep-banner-desc {
+  font-family: var(--sans);
+  font-size: clamp(0.88rem, 0.85rem + 0.12vw, 0.98rem);
+  line-height: 1.6;
+  color: #D9DFE8;
+  margin: 0;
+  max-width: 430px;
+}
+
+.prep-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+.prep-slider-arrow {
+  display: none !important;
+}
+
+
+.prep-cards-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 2px 14px;
+  margin: -4px -2px -14px;
+}
+.prep-cards-track::-webkit-scrollbar {
+  display: none;
+}
+
+.prep-card {
+  flex: 0 0 calc((100% - (2 * 1.25rem)) / 3);
+  min-width: 0;
+  scroll-snap-align: start;
+  background: #FAF7EE;
+  border: 1px solid rgba(220, 208, 190, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(19, 35, 58, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.prep-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 120, 26, 0.5);
+  box-shadow: 0 12px 28px rgba(19, 35, 58, 0.10);
+}
+.prep-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #EADEC9;
+}
+.prep-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.prep-card:hover .prep-card-media img {
+  transform: scale(1.04);
+}
+.prep-card-body {
+  padding: 1.35rem 1.25rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.prep-card-body h3 {
+  font-family: var(--sans, "DM Sans", sans-serif);
+  font-size: 1.14rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.34;
+  color: var(--navy);
+  margin: 0 0 0.6rem;
+  min-height: 2.7em;
+}
+.prep-card-body p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+}
+.prep-card-divider {
+  width: 32px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 0.85rem;
+  border-radius: 1px;
+}
+.prep-card-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.2s ease, color 0.2s ease;
+  margin-top: auto;
+}
+.prep-card-link:hover {
+  gap: 9px;
+  color: #8A6012;
+}
+
+.prep-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 1.85rem auto 0;
+}
+.prep-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: rgba(19, 35, 58, 0.22);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+.prep-dot::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+}
+.prep-dot:hover {
+  background: rgba(168, 120, 26, 0.65);
+}
+.prep-dot.active {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: var(--gold, #A8781A) !important;
+  transform: scale(1.15);
+  box-shadow: 0 1px 4px rgba(168, 120, 26, 0.35);
+}
+.prep-dot:focus-visible {
+  outline: 2px solid var(--gold, #A8781A);
+  outline-offset: 3px;
+}
+
+/* 8. SECTION 8: FAQ EDITORIAL PREVIEW (MINIMALIST NUMBERED ACCORDION) - NAVY BLUE THEME */
+.faq-section {
+  width: 100%;
+  background: #13233A;
+  border-top: 1px solid rgba(168, 120, 26, 0.28);
+  border-bottom: 1px solid rgba(168, 120, 26, 0.28);
+  position: relative;
+  padding: clamp(4rem, 6.5vw, 6.25rem) 0;
+}
+.faq-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Area */
+.faq-editorial-header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 4.5vw, 3.75rem);
+}
+.faq-eyebrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 0.85rem;
+}
+.faq-eyebrow-line {
+  display: inline-block;
+  width: 44px;
+  height: 1.5px;
+  background: var(--gold, #A8781A);
+  opacity: 0.85;
+}
+.faq-eyebrow-text {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold, #A8781A);
+}
+.faq-editorial-title {
+  font-family: var(--sans, "DM Sans", sans-serif);
+  font-size: clamp(2.15rem, 4.2vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #F4EFE4;
+  text-align: center;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+.faq-editorial-title .gold-text {
+  color: var(--gold, #A8781A);
+}
+.faq-editorial-desc {
+  font-family: var(--sans);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.62;
+  color: rgba(244, 239, 228, 0.78);
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+/* Numbered Editorial List */
+.faq-editorial-list {
+  max-width: 980px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(244, 239, 228, 0.14);
+}
+.faq-row-item {
+  border-bottom: 1px solid rgba(244, 239, 228, 0.14);
+  transition: background-color 0.2s ease;
+}
+.faq-row-item:hover {
+  background-color: rgba(244, 239, 228, 0.035);
+}
+.faq-row-item[open] {
+  background-color: rgba(244, 239, 228, 0.045);
+}
+
+.faq-row-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: clamp(1.15rem, 1.8vw, 1.45rem) 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+.faq-row-summary::-webkit-details-marker {
+  display: none;
+}
+.faq-row-summary::marker {
+  display: none;
+  content: "";
+}
+.faq-row-summary:focus-visible {
+  outline: 2px solid var(--gold, #A8781A);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.faq-row-lead {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.faq-row-num {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold, #A8781A);
+  flex: 0 0 28px;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.faq-row-vbar {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: rgba(168, 120, 26, 0.45);
+  margin: 0 22px 0 16px;
+  flex: 0 0 1px;
+}
+.faq-row-question {
+  font-family: var(--sans);
+  font-size: clamp(1.02rem, 1.25vw, 1.15rem);
+  font-weight: 600;
+  color: #F4EFE4;
+  text-align: left;
+  line-height: 1.42;
+  transition: color 0.2s ease;
+}
+.faq-row-item:hover .faq-row-question {
+  color: #D4A647;
+}
+.faq-row-item[open] .faq-row-question {
+  color: #F4EFE4;
+}
+
+/* Expand / Collapse Control */
+.faq-row-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold, #A8781A);
+  background: transparent;
+  color: var(--gold, #A8781A);
+  transition: all 0.22s ease;
+}
+.faq-row-item:hover .faq-row-toggle {
+  border-color: #D4A647;
+  color: #D4A647;
+  background: rgba(168, 120, 26, 0.16);
+}
+.faq-toggle-svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+.faq-toggle-svg .line-v {
+  transform-origin: 7px 7px;
+  transition: transform 0.24s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+}
+.faq-row-item[open] .faq-toggle-svg .line-v {
+  transform: scaleY(0);
+  opacity: 0;
+}
+.faq-row-item[open] .faq-row-toggle {
+  border-color: var(--gold, #A8781A);
+  background: rgba(168, 120, 26, 0.2);
+}
+
+/* Answer Content */
+.faq-row-content {
+  padding-left: 68px;
+  padding-right: 50px;
+  padding-bottom: 1.5rem;
+  padding-top: 0.25rem;
+  overflow: hidden;
+  animation: faqFadeIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes faqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
   }
-.about-photo {
-    width: min(calc(100% - 24px), 640px);
-    margin-inline: auto;
-  }
-.about-copy {
-    max-width: 680px;
-    margin-inline: auto;
-    padding: 1.5rem 20px 2.25rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-@media (max-width: 720px) {
-.about {
-    width: 100%;
-    max-width: none;
-    grid-template-columns: minmax(0, 1fr);
-    padding: 2rem 0 0;
-    row-gap: .75rem;
+.faq-row-content p {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.965rem;
+  line-height: 1.7;
+  color: rgba(244, 239, 228, 0.84);
+}
+
+/* View All Button */
+.faq-editorial-footer {
+  text-align: center;
+  margin-top: clamp(2.5rem, 4vw, 3.5rem);
+}
+.faq-editorial-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  color: #F4EFE4;
+  border: 1.5px solid rgba(244, 239, 228, 0.38);
+  border-radius: 6px;
+  padding: 13px 28px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.faq-editorial-btn .faq-btn-arrow {
+  color: var(--gold, #A8781A);
+  font-size: 1.15em;
+  transition: transform 0.22s ease, color 0.22s ease;
+}
+.faq-editorial-btn:hover {
+  background: rgba(244, 239, 228, 0.08);
+  border-color: var(--gold, #A8781A);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+}
+.faq-editorial-btn:hover .faq-btn-arrow {
+  color: #D4A647;
+  transform: translateX(4px);
+}
+.faq-editorial-btn:focus-visible {
+  outline: 2px solid var(--gold, #A8781A);
+  outline-offset: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .faq-row-summary {
+    padding: 1.1rem 0.25rem;
+    gap: 12px;
   }
-.about-photo {
-    width: calc(100% - 32px);
-    max-width: 640px;
-    aspect-ratio: 3 / 2;
-    margin: 0 auto;
-    border-radius: 16px;
+  .faq-row-vbar {
+    margin: 0 16px 0 12px;
   }
-.about-copy {
-    width: 100%;
-    max-width: 720px;
-    padding: 2rem 20px 2.5rem;
+  .faq-row-content {
+    padding-left: 56px;
+    padding-right: 36px;
+    padding-bottom: 1.25rem;
   }
 }
 
+@media (max-width: 580px) {
+  .faq-row-lead {
+    align-items: flex-start;
+  }
+  .faq-row-num {
+    margin-top: 1px;
+    font-size: 0.95rem;
+    flex: 0 0 24px;
+  }
+  .faq-row-vbar {
+    height: 18px;
+    margin: 3px 12px 0 8px;
+  }
+  .faq-row-question {
+    font-size: 0.985rem;
+    line-height: 1.38;
+  }
+  .faq-row-toggle {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    margin-top: 2px;
+  }
+  .faq-toggle-svg {
+    width: 12px;
+    height: 12px;
+  }
+  .faq-row-content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 1.15rem;
+  }
+  .faq-editorial-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 9. SECTION 9: RESOURCES PREVIEW */
+.resources-section {
+  background: #FAF6EF;
+  border-bottom: 1px solid var(--line);
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.resource-card {
+  background: rgba(255, 252, 246, 0.95);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(19, 35, 58, 0.04);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.resource-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px rgba(19, 35, 58, 0.09);
+}
+.resource-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+.resource-body {
+  padding: 1.2rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.resource-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 0.45rem;
+}
+.resource-body h3 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 0.55rem;
+  line-height: 1.3;
+}
+.resource-body p {
+  font-size: 0.885rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0 0 1rem;
+  flex-grow: 1;
+}
+.resource-link {
+  color: #8E520E;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+  transition: color .18s ease;
+}
+.resource-link:hover { color: var(--gold); }
+.resources-footer {
+  text-align: center;
+  margin-top: 2.25rem;
+}
+
+/* 10. SECTION 10: CLOSING CTA BAND */
+.cta-band {
+  background: var(--navy);
+  color: #fff;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(3.2rem, 5vw, 4.5rem) 0;
+}
+.cta-band:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(19,35,58,.25) 0%, rgba(19,35,58,.65) 24%, rgba(19,35,58,.9) 45%, var(--navy) 72%, var(--navy) 100%);
+  pointer-events: none;
+}
+.cta-leaves {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+.cta-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 3rem;
+  align-items: center;
+}
+.cta-copy { padding-left: clamp(0px, 4vw, 3.5rem); }
+.cta-copy .eyebrow { color: var(--gold); }
+.cta-copy h2 { font-size: clamp(2rem, 3vw, 2.55rem); color: #fff; margin-bottom: .75rem; }
+.cta-copy p { color: #E8EAF0; font-size: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem); line-height: 1.65; max-width: 510px; margin-bottom: 1.25rem; }
+.cta-copy .btn { font-size: 0.9375rem; min-height: 48px; }
+.cta-benefits { border-left: 1px solid rgba(216,166,77,.45); padding-left: 2rem; display: grid; gap: 1.25rem; }
+.cta-benefit { display: grid; grid-template-columns: 2rem 1fr; gap: .85rem; align-items: center; }
+.cta-benefit strong { display: block; color: #fff; font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem); line-height: 1.35; margin-bottom: .2rem; }
+.cta-benefit p { color: #D5DBE5; font-size: clamp(0.875rem, 0.85rem + 0.1vw, 0.95rem); line-height: 1.55; margin: 0; }
+
+/* ==========================================================================
+   RESPONSIVE MATRIX & PERFECTION ACROSS ALL BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1120px) {
+  .container { width: calc(100% - 48px); }
+  .hero-copy { width: 60%; }
+  .hero h1 { font-size: clamp(2.65rem, 4.4vw, 3.5rem); }
+  .trust-item { gap: 8px; padding: 0 12px; font-size: 12.5px; }
+}
+
+@media (max-width: 1024px) {
+  .audiences-grid,
+  .resources-grid,
+  .service-cards-grid.grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .service-cards-grid.grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .services-footer-banner {
+    padding: 1.85rem 1.75rem !important;
+    margin-top: 2.75rem !important;
+  }
+  .process .steps.steps-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.25rem;
+  }
+  .process .step:nth-child(2) .step-line { display: none; }
+  .informed-split {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero { min-height: 550px; }
+  .hero-inner { min-height: inherit; }
+  .hero-photo { inset: 0; width: 100%; height: 100%; }
+  .hero-copy { width: 64%; padding: 3rem 0 2.5rem; }
+  .hero h1 { font-size: clamp(2.45rem, 5vw, 3.25rem); }
+  .hero-copy > p:not(.eyebrow) { font-size: 1rem; max-width: 500px; }
+  .prep-card { flex: 0 0 calc((100% - 1.25rem) / 2) !important; }
+  .about { grid-template-columns: minmax(0, 1fr); padding: 2.5rem 0; row-gap: 1.5rem; width: calc(100% - 48px); }
+  .about-photo { width: 100%; max-width: min(calc(100% - 24px), 520px); height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center center; margin: 0 auto; }
+  .about-copy { max-width: 680px; margin: 0 auto; padding: 1.5rem 0; }
+  .cta-inner { gap: 1.8rem; }
+  .cta-copy { padding-left: 0; }
+}
+
+@media (max-width: 767px) {
+  .container { width: calc(100% - 40px); }
+  .hero { display: flex !important; flex-direction: column !important; height: auto !important; min-height: 0 !important; padding-bottom: 2rem !important; }
+  .hero-photo-wrap {
+    order: 1 !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    inset: auto !important;
+    width: calc(100% - 40px) !important;
+    max-width: 600px !important;
+    height: auto !important;
+    margin: 1.5rem auto 0 !important;
+    display: block !important;
+    z-index: 1 !important;
+    pointer-events: auto !important;
+  }
+  .hero-photo {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+    object-position: 57% 54% !important;
+    margin: 0 !important;
+    border-radius: 8px !important;
+    display: block !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+  .hero-inner {
+    order: 2 !important;
+    width: calc(100% - 40px) !important;
+    max-width: 600px !important;
+    flex: 0 0 auto !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    min-height: 0 !important;
+    display: block !important;
+  }
+  .hero-copy { width: 100% !important; max-width: none !important; padding: 1.25rem 0 0 !important; }
+  .hero h1 { font-size: clamp(2.4rem, 8vw, 3.2rem); max-width: 600px; }
+  .hero-copy > p:not(.eyebrow) { max-width: 620px; font-size: 1rem; }
+  
+  .trust-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: center !important;
+    column-gap: 12px !important;
+    row-gap: 12px !important;
+    margin-top: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .trust-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    min-width: 0 !important;
+  }
+  .trust-item:first-child { border-right: 1px solid var(--line) !important; padding-right: 10px !important; }
+  .trust-item:nth-child(2) { border-right: 0 !important; padding-left: 6px !important; }
+  .trust-item:nth-child(3),
+  .trust-item:last-child { grid-column: 1 / -1 !important; justify-self: center !important; margin-inline: auto !important; border: 0 !important; padding: 0 !important; }
+  .trust-icon { width: 28px !important; height: 28px !important; min-width: 28px !important; flex: 0 0 28px !important; border-radius: 5px !important; font-size: 13px !important; }
+
+  .section { padding: clamp(2rem, 5vw, 2.75rem) 0 !important; }
+  .section-heading { margin-bottom: 1.5rem !important; }
+  .services-filter-bar {
+    gap: 0.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .filter-tab {
+    padding: 0.55rem 0.95rem !important;
+    font-size: 0.85rem !important;
+  }
+  .services-footer-banner {
+    padding: 1.5rem 1.25rem !important;
+    margin-top: 2rem !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .services-footer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1.5rem !important;
+    height: auto !important;
+    min-height: 0 !important;
+    text-align: left !important;
+  }
+  .services-footer-text {
+    flex: 0 0 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .services-footer-text h4 {
+    font-family: var(--sans, "DM Sans", sans-serif) !important;
+    font-size: clamp(1.15rem, 5vw, 1.35rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    margin: 0 0 0.55rem !important;
+  }
+  .services-footer-text p {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+  }
+  .services-footer-content .btn {
+    width: 100% !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    min-height: 48px !important;
+    padding: 0.85rem 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .service-cards-grid.grid-3,
+  .service-cards-grid.grid-4,
+  .audiences-grid,
+  .checklist-items,
+  .resources-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.15rem !important;
+    width: 100% !important;
+  }
+  .process .steps.steps-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+  .process .step-line { display: none !important; }
+
+  .about { width: 100%; max-width: none; padding: 2.2rem 20px 2.5rem; }
+  .about-photo {
+    width: 100% !important;
+    max-width: 440px !important;
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    margin: 0 auto !important;
+    border-radius: 16px !important;
+  }
+  .about-copy { padding: 1.5rem 0 0; }
+  .about-copy h2 { font-size: clamp(1.9rem, 7vw, 2.25rem); }
+
+  .cta-band { padding: 2.6rem 0; }
+  .cta-band:before { background: rgba(19,35,58,.78); }
+  .cta-inner { grid-template-columns: 1fr; gap: 1.8rem; }
+  .cta-copy h2 { font-size: clamp(1.95rem, 7vw, 2.25rem); }
+  .cta-copy p { font-size: 0.95rem; }
+  .cta-copy .btn { max-width: 100%; font-size: 0.9375rem; min-height: 48px; }
+  .cta-benefits { border-left: 0; border-top: 1px solid rgba(216,166,77,.4); padding: 1.4rem 0 0; gap: 1rem; }
+
+  .prep-banner-card {
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+  }
+  .prep-banner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% center;
+  }
+  .prep-banner-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 2.25rem 1.4rem;
+    background: linear-gradient(180deg, rgba(19, 35, 58, 0.94) 0%, rgba(19, 35, 58, 0.86) 65%, rgba(19, 35, 58, 0.96) 100%);
+    width: 100%;
+  }
+  .prep-banner-copy {
+    max-width: 100%;
+  }
+  .prep-banner-title {
+    font-size: clamp(1.45rem, 6vw, 1.85rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+  .actions .btn {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 12px 18px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    border-radius: 6px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    box-sizing: border-box !important;
+  }
+  .prep-card {
+    flex: 0 0 85% !important;
+  }
+  .prep-slider-arrow {
+    display: none !important;
+  }
+  .card-dual-actions {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  .service-btn-split,
+  .service-btn-subtle {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 767px) {
+  .actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+  .actions .btn {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
+    min-height: 48px !important;
+    padding: 10px 16px !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    border-radius: 6px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container { width: calc(100% - 32px); }
+  .hero-photo-wrap { width: calc(100% - 32px) !important; margin: 1.25rem auto 0 !important; }
+  .hero-photo { width: 100% !important; }
+  .hero-inner { width: calc(100% - 32px) !important; }
+  .hero-copy { padding-top: 1.25rem !important; }
+  .eyebrow { font-size: .68rem; letter-spacing: .13em; }
+  .hero h1 { font-size: clamp(2.15rem, 9.4vw, 2.7rem); line-height: 1.08; }
+  .hero-copy > p:not(.eyebrow) { font-size: 0.95rem; line-height: 1.6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
 </style>

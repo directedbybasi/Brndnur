@@ -1,0 +1,31 @@
+---
+interface Props {
+  num: string | number;
+  question: string;
+  answer?: string;
+  open?: boolean;
+  class?: string;
+}
+
+const { num, question, answer, open = false, class: className = '' } = Astro.props;
+const formattedNum = String(num).padStart(2, '0');
+---
+
+<details class={`faq-row-item faq-details faq-item ${className}`.trim()} open={open || undefined} data-faq-num={formattedNum}>
+  <summary class="faq-row-summary faq-summary">
+    <div class="faq-row-lead">
+      <span class="faq-row-num">{formattedNum}</span>
+      <span class="faq-row-vbar" aria-hidden="true"></span>
+      <span class="faq-row-question">{question}</span>
+    </div>
+    <span class="faq-row-toggle" aria-hidden="true">
+      <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+        <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+      </svg>
+    </span>
+  </summary>
+  <div class="faq-row-content faq-answer">
+    {answer ? <p>{answer}</p> : <slot />}
+  </div>
+</details>

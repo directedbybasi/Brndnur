@@ -19,4 +19,10 @@ Thumbs.db
 
 # Scratch and test artifacts
 scratch/
+.lighthouseci/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
 

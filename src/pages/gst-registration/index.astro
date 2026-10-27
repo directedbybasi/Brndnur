@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import CardCarousel from '../../components/CardCarousel.astro';
+import FaqItem from '../../components/FaqItem.astro';
 
 const title = "GST Registration Assistance in India | BRNDNUR Advisory LLP";
 const description = "Professional GST registration guidance for proprietors, LLPs, and companies in Kerala and throughout India. Understand thresholds and documentation with BRNDNUR.";
 const canonical = "https://brndnur.com/gst-registration/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "GST Registration",
+  "sectionName": "Hero Section",
+  "enquiryType": "GST Registration Assistance",
+  "topic": "I would like assistance with GST registration for my business.",
+  "details": "Type of business: [e.g. Proprietorship, Partnership, LLP, Pvt Ltd]\\nNature of activity: [e.g. Retail, E-commerce, Services, Manufacturing]",
+  "callToAction": "Could you please explain the applicable requirements, documents, service charges, and next steps?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "GST Registration",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "GST Document Checklist & Quotation",
+  "topic": "I would like to receive the complete GST registration document checklist and fee structure for my enterprise.",
+  "details": "State / District: [e.g. Kerala / Malappuram]\\nBusiness turnover estimate: [Please specify if applicable]",
+  "callToAction": "Could you please guide me on registration timelines and portal onboarding?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/gst-registration/";
   currentPath="/gst-registration/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/services/">Services</a>
-          <span class="sep">/</span>
-          <span class="current">GST Registration</span>
-        </nav>
-        <p class="eyebrow">Tax Compliance Support</p>
-        <h1>GST Registration Guidance for Your Business.</h1>
-        <p class="lead">Goods and Services Tax (GST) is the foundational indirect tax registration in India. We assist startups, trading firms, and service enterprises in understanding statutory thresholds, assembling required paperwork, and securing GSTIN registration smoothly.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            <span>GSTIN Issuance Assistance</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="18" x2="12" y2="6"/></svg>
-            <span>Input Tax Credit (ITC) Advisory</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Kerala State & Pan-India Coverage</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Tax Compliance Support"
+      title="GST Registration<br>Guidance for <span>Your Business.</span>"
+      hasGoldRule={true}
+      description="Goods and Services Tax (GST) is the foundational indirect tax registration in India. We assist startups, trading firms, and service enterprises in understanding statutory thresholds, assembling required paperwork, and securing GSTIN registration smoothly."
+      primaryCta={{
+        text: "Apply for GST Assistance",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "MSME Registration",
+        href: "/udyam-msme-registration/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "GSTIN Issuance", subtitle: "Assistance" },
+        { icon: "▱", title: "Input Tax Credit", subtitle: "(ITC) Advisory" },
+        { icon: "⌖", title: "Kerala & Pan-India", subtitle: "Coverage" }
+      ]}
+      image="/assets/gst-hero-compliance.webp"
+      imageAlt="Ivory business binders with refined gold business and compliance icons"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20need%20help%20with%20GST%20registration." target="_blank" rel="noopener noreferrer">Apply for GST Assistance &rarr;</a>
-          <a class="btn btn-outline" href="/udyam-msme-registration/">MSME Registration</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual Section -->
+    <!-- Split Visual Section (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/assets/service-business.webp" alt="BRNDNUR GST registration and commercial tax advisory in Kerala" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Fiscal Credibility</p>
-            <h2>Unlocking Business Credibility and Tax Input Offsets</h2>
-            <p>Obtaining a Goods and Services Tax Identification Number (GSTIN) is not merely a statutory obligation once sales cross turnover limits; it is a vital commercial asset. Having an active GSTIN allows you to issue legal tax invoices, open corporate current accounts, and partner with established institutional buyers.</p>
-            <p>Moreover, GST registration enables your enterprise to claim Input Tax Credit (ITC) on commercial purchases, raw materials, capital equipment, and operational overheads, directly lowering your effective cost of doing business.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/gst-tax-credibility.webp" alt="BRNDNUR GST registration and commercial tax advisory in Kerala" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Fiscal Credibility</p>
+          <h2>Unlocking Business Credibility and Tax Input Offsets.</h2>
+          <div class="gold-rule"></div>
+          <p>Obtaining a Goods and Services Tax Identification Number (GSTIN) is not merely a statutory obligation once sales cross turnover limits; it is a vital commercial asset. Having an active GSTIN allows you to issue legal tax invoices, open corporate current accounts, and partner with established institutional buyers.</p>
+          <p>Moreover, GST registration enables your enterprise to claim Input Tax Credit (ITC) on commercial purchases, raw materials, capital equipment, and operational overheads, directly lowering your effective cost of doing business.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Statutory Documentation Review</strong>
+                <p>Meticulous verification of electricity bills, rent agreements, and ownership deeds to prevent portal queries.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>Mandatory Return Filing</h4>
-                <p>Once registered under GST, timely monthly or quarterly compliance (GSTR-1 and GSTR-3B) becomes mandatory even during months with zero commercial turnover. Our team explains return schedules before filing.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>Aadhaar Authentication Support</strong>
+                <p>Guided biometric or OTP authentication to avoid unnecessary physical premises inspections.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>Return Schedule Clarity</strong>
+                <p>Clear instruction on monthly or quarterly GSTR-1 and GSTR-3B compliance obligations from day one.</p>
               </div>
             </div>
           </div>
@@ -75,61 +101,63 @@ const canonical = "https://brndnur.com/gst-registration/";
       </div>
     </section>
 
-    <!-- 4 GST Scenarios with Clean SVGs -->
+    <!-- GST Requirements (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">When Is GST Required?</p>
-          <h2>Turnover Thresholds & Mandatory Categories</h2>
-          <p>Under GST legislation, businesses require registration under specific operational conditions:</p>
+          <h2>Turnover Thresholds &amp; Mandatory Categories.</h2>
+          <div class="gold-rule"></div>
+          <p>Under GST legislation, businesses require registration under specific operational conditions.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <CardCarousel id="gst-requirements-carousel" ariaLabel="GST requirements and mandatory categories">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>Threshold Limits</h3>
+              <p>Mandatory when annual aggregate turnover exceeds ₹40 lakhs for businesses exclusively supplying goods (₹20 lakhs in special category states) or ₹20 lakhs for service providers.</p>
             </div>
-            <h3>Threshold Limits</h3>
-            <p>Mandatory when annual aggregate turnover exceeds ₹40 lakhs for businesses exclusively supplying goods (₹20 lakhs in special category states) or ₹20 lakhs for service providers.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>Inter-State Commerce</h3>
+              <p>Mandatory under Section 24 of the CGST Act for any enterprise selling goods across state boundaries, irrespective of total annual turnover.</p>
             </div>
-            <h3>Inter-State Commerce</h3>
-            <p>Mandatory for any person or entity supplying goods or taxable services across state boundaries, regardless of overall annual turnover volume.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>E-Commerce Marketplaces</h3>
+              <p>Selling through digital platforms like Amazon, Flipkart, or Meesho requires compulsory GST registration for merchant listing and TCS compliance.</p>
             </div>
-            <h3>E-Commerce & Online Sellers</h3>
-            <p>Required for selling goods or digital services through e-commerce marketplaces like Amazon, Flipkart, or your own online storefront.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">04</div>
+              <h3>Voluntary Registration</h3>
+              <p>Early-stage enterprises voluntarily register to establish corporate credibility, issue tax invoices, and pass on Input Tax Credit to B2B clients.</p>
             </div>
-            <h3>Voluntary Registration</h3>
-            <p>Early-stage businesses often register voluntarily to claim Input Tax Credit (ITC), build commercial credibility, and establish vendor relationships with corporate buyers.</p>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- GST Threshold Matrix -->
+    <!-- Threshold Comparison Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Threshold Reference</p>
-          <h2>Statutory GST Registration Thresholds</h2>
-          <p>National thresholds under the Central Goods and Services Tax Act, 2017.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Statutory Thresholds</p>
+          <h2>GST Applicability Matrix.</h2>
+          <div class="gold-rule"></div>
+          <p>Standard regulatory thresholds governing registration obligations across India.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
@@ -170,16 +198,113 @@ const canonical = "https://brndnur.com/gst-registration/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- 3-Step GST Registration Process -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Structured Support</p>
+          <h2>The 3-Step GST Registration Journey.</h2>
+          <div class="gold-rule"></div>
+          <p>Navigating the Goods and Services Tax Network (GSTN) portal with diligence and compliance.</p>
+        </div>
+
+        <CardCarousel id="gst-steps-carousel" ariaLabel="The 3-step GST registration journey">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Document &amp; Address Verification</h3>
+            <p>We review your PAN, Aadhaar, electricity bills, rent agreements, and NOCs to ensure they comply with local jurisdictional GST officer scrutiny.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Form GST REG-01 E-Filing</h3>
+            <p>We draft the application, map your HSN/SAC commercial codes, and complete biometric Aadhaar authentication for expedited portal clearance.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>ARN Tracking &amp; Certificate Issuance</h3>
+            <p>We track the Application Reference Number (ARN), respond to any clarification notices (REG-03), and deliver your official GSTIN Certificate.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- GST FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">GST FAQs</p>
+          <h2>Frequently Asked Questions About GST.</h2>
+          <div class="gold-rule"></div>
+          <p>Practical facts on government portal fees, composition schemes, and interstate rules.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="Is there an official government fee for GST registration?"
+            answer="No. The Government of India does not levy a statutory fee for issuing a new GST registration on the GSTN portal. BRNDNUR Advisory charges solely for professional document verification, HSN/SAC mapping, application drafting, and officer query resolution."
+          />
+          <FaqItem
+            num="02"
+            question="What address proof is required if operating from rented premises?"
+            answer="You must provide a registered rent/lease agreement in the name of the applicant/firm, a recent electricity bill or municipal tax receipt for the property, and a signed No Objection Certificate (NOC) from the property owner."
+          />
+          <FaqItem
+            num="03"
+            question="What is the Composition Scheme under GST?"
+            answer="Small businesses with an annual turnover up to ₹1.5 Crore (₹75 Lakhs for special category states) can opt for the Composition Scheme, paying a fixed lower turnover tax (1% for manufacturers/traders, 5% for restaurants) with quarterly return filings. However, composition dealers cannot claim input tax credit or make inter-state sales."
+          />
+          <FaqItem
+            num="04"
+            question="How long does GST approval take in Kerala?"
+            answer="With successful Aadhaar authentication and clear address proof, GSTIN certificates are typically approved by the jurisdictional tax officer within 3 to 7 working days. If a clarification query (REG-03) is issued, we respond within the statutory 7-day window."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Get Registered</p>
-          <h2>Streamline Your GST Compliance.</h2>
+          <h2>Streamline Your GST<br>Compliance Today.</h2>
           <p>We review your business structure, verify address documentation, and guide you through the official GST portal application process.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20share%20GST%20registration%20checklist%20and%20fees." target="_blank" rel="noopener noreferrer">Inquire on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/business-setup/">Business Setup Advisory</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Inquire on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Structured Verification</strong>
+              <p>Pre-filing documentation audit to ensure prompt approval.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Clear Timelines</strong>
+              <p>Transparent updates through ARN generation and GSTIN certificate issuance.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Post-Approval Clarity</strong>
+              <p>Complete guidance on invoicing formats and filing calendars.</p>
+            </div>
           </div>
         </div>
       </div>

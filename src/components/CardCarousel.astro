@@ -1,0 +1,32 @@
+---
+interface Props {
+  id?: string;
+  ariaLabel?: string;
+  autoplayInterval?: number;
+  class?: string;
+  showDots?: boolean;
+  showArrows?: boolean;
+}
+
+const {
+  id = `carousel-${Math.random().toString(36).substring(2, 9)}`,
+  ariaLabel = 'Card carousel',
+  autoplayInterval = 5000,
+  class: className = '',
+  showDots = true,
+} = Astro.props;
+---
+
+<div class={`bn-carousel reveal-on-scroll ${className}`} id={id} data-bn-carousel data-interval={autoplayInterval}>
+  <div class="bn-carousel-viewport">
+    <div class="bn-carousel-track" role="region" aria-label={ariaLabel} tabindex="0">
+      <slot />
+    </div>
+  </div>
+
+  <div class="bn-carousel-controls" aria-label={`${ariaLabel} navigation`}>
+    {showDots && (
+      <div class="bn-carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
+    )}
+  </div>
+</div>

@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getAllArticles, type ArticleData } from '../../../utils/blog';
+import ArticleDetail from '../../../components/ArticleDetail.astro';
+
+export async function getStaticPaths() {
+  // Exclude preview routes from production static builds to prevent exposing internal editorial review notes on public static deployments (Hostinger).
+  // Preview routes remain fully accessible in development mode (npm run dev) or when ENABLE_EDITORIAL_PREVIEWS=true.
+  if (import.meta.env.PROD && !process.env.ENABLE_EDITORIAL_PREVIEWS) {
+    return [];
+  }
+
+  const articles = getAllArticles();
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: ArticleData;
+}
+
+const { article } = Astro.props;
+const canonical = `https://brndnur.com/resources/${article.slug}/`;
+---
+
+<BaseLayout
+  title={`${article.metaTitle} | BRNDNUR Draft Preview`}
+  description={article.metaDescription}
+  canonical={canonical}
+  robots="noindex, nofollow"
+  currentPath={`/resources/${article.slug}/`}
+  hasCustomSchema={true}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${canonical}#breadcrumb`,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://brndnur.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Resources",
+              "item": "https://brndnur.com/resources/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": article.title,
+              "item": canonical
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": `${canonical}#article`,
+          "isPartOf": {
+            "@type": "WebPage",
+            "@id": `${canonical}#webpage`
+          },
+          "headline": article.title,
+          "description": article.metaDescription,
+          ...(article.quickAnswer ? { "abstract": article.quickAnswer } : {}),
+          "inLanguage": "en-IN",
+          "mainEntityOfPage": canonical,
+          ...(article.datePublished ? { "datePublished": article.datePublished } : {}),
+          ...(article.dateModified ? { "dateModified": article.dateModified } : {}),
+          "author": {
+            "@type": "Organization",
+            "@id": "https://brndnur.com/#organization",
+            "name": "BRNDNUR Advisory LLP"
+          },
+          "publisher": {
+            "@type": "LegalService",
+            "@id": "https://brndnur.com/#organization",
+            "name": "BRNDNUR Advisory LLP",
+            "url": "https://brndnur.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://brndnur.com/assets/brndnur-logo-transparent.png"
+            }
+          }
+        },
+        ...(article.faqs && article.faqs.length > 0 ? [{
+          "@type": "FAQPage",
+          "@id": `${canonical}#faq`,
+          "mainEntity": article.faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        }] : [])
+      ]
+    })} />
+  </Fragment>
+
+  <ArticleDetail article={article} isPreview={true} />
+</BaseLayout>

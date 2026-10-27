@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/hero/PageHero.astro';
+import CardCarousel from '../../../components/CardCarousel.astro';
+import FaqItem from '../../../components/FaqItem.astro';
 
-const title = "Food Brand Package | Trademark, FSSAI & Udyam Bundle";
+const title = "Food Brand Package | Trademark & FSSAI Bundle | BRNDNUR";
 const description = "All-in-one regulatory and brand protection package for food manufacturers, cloud kitchens, and packaged goods brands in India with BRNDNUR Advisory LLP.";
 const canonical = "https://brndnur.com/packages/food-brand/";
+import { buildWhatsAppUrl } from '../../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Packages — Food Brand",
+  "sectionName": "Hero Section",
+  "enquiryType": "Food Brand Package Enquiry",
+  "topic": "I am interested in the Food Brand Package covering Trademark Registration and FSSAI Food Licensing.",
+  "details": "Food brand name: [Please enter]\\nProduct category: [e.g. Spices, Bakery, Beverages, Restaurant, Packaged Snacks]",
+  "callToAction": "Could you please explain the integrated filing process, official fees, and timeline?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Packages — Food Brand",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "Food Brand Package Confirmation",
+  "topic": "I would like to confirm the scope and quotation for the Food Brand Package.",
+  "details": "Premises location / type: [Please specify]",
+  "callToAction": "Could you please send the checklist of documents required for trademark filing and FSSAI registration?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/packages/food-brand/";
   currentPath="/packages/food-brand/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/packages/">Packages</a>
-          <span class="sep">/</span>
-          <span class="current">Food Brand Package</span>
-        </nav>
-        <p class="eyebrow">Industry-Specific Bundle</p>
-        <h1>Food Brand Package.</h1>
-        <p class="lead">A complete, integrated package designed for restaurants, packaged food producers, bakeries, cloud kitchens, and culinary entrepreneurs. Unites trademark protection with mandatory food safety and MSME registrations.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Trademark + FSSAI + Udyam Bundle</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>Indicative Professional Fee: From ₹12,000</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>FoSCoS Portal & Class 29/30/43 Setup</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Industry-Specific Bundle"
+      title="Food Brand<br>Package <span>for Enterprises.</span>"
+      hasGoldRule={true}
+      description="A complete, integrated package designed for restaurants, packaged food producers, bakeries, cloud kitchens, and culinary entrepreneurs. Unites trademark protection with mandatory food safety and MSME registrations."
+      primaryCta={{
+        text: "Inquire About Food Package",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "All Packages",
+        href: "/packages/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Trademark + FSSAI +", subtitle: "Udyam Bundle" },
+        { icon: "▱", title: "Professional Fee:", subtitle: "From ₹12,000" },
+        { icon: "⌖", title: "Classes 29/30/43", subtitle: "Filing Guidance" }
+      ]}
+      image="/packages/assets/pkg-food-hero.webp"
+      imageAlt="BRNDNUR Food Brand Package bundling Trademark, FSSAI and MSME in Kerala"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20am%20interested%20in%20the%20Food%20Brand%20Package." target="_blank" rel="noopener noreferrer">Inquire About Food Package &rarr;</a>
-          <a class="btn btn-outline" href="/packages/">All Packages</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual Section -->
+    <!-- Split Visual Section (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/packages/assets/food-brand-package.webp" alt="BRNDNUR Food Brand Package bundling Trademark, FSSAI and MSME in Kerala" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Culinary Compliance</p>
-            <h2>Unified Brand Defense and Food Safety Licensing</h2>
-            <p>Kerala is renowned for exceptional culinary entrepreneurship—from traditional spices, banana chips, and bakery creations to contemporary specialty cafes and cloud kitchens. Yet launching a food brand requires navigating multiple regulatory authorities simultaneously.</p>
-            <p>Our Food Brand Package eliminates administrative fragmentation by synchronizing your trademark filing (Classes 29, 30, or 43), mandatory FSSAI food business licensing on FoSCoS, and Udyam MSME certification under a single coordinated workflow.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/packages/assets/pkg-food-compliance.webp" alt="Artisanal food packaging and quality compliance setup" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Culinary Compliance</p>
+          <h2>Unified Brand Defense and Food Safety Licensing.</h2>
+          <div class="gold-rule"></div>
+          <p>Kerala is renowned for exceptional culinary entrepreneurship—from traditional spices, banana chips, and bakery creations to contemporary specialty cafes and cloud kitchens. Yet launching a food brand requires navigating multiple regulatory authorities simultaneously.</p>
+          <p>Our Food Brand Package eliminates administrative fragmentation by synchronizing your trademark filing (Classes 29, 30, or 43), mandatory FSSAI food business licensing on FoSCoS, and Udyam MSME certification under a single coordinated workflow.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Single-Window Execution</strong>
+                <p>One dedicated advisor handles trademark clearance, FoSCoS portal submission, and MSME certification.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>FSSAI Tiering Notice</h4>
-                <p>Statutory fees depend on your operation scale: Basic FSSAI Registration (turnover up to ₹12 lakhs) carries a nominal government fee, whereas State Licenses (turnover ₹12L–₹20Cr) require higher statutory dues. We verify your turnover tier before submitting.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>Turnover-Based FSSAI Structuring</strong>
+                <p>Accurate guidance on whether Basic Registration or State Licensing matches your production capacity.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>Statutory Fee Itemization</strong>
+                <p>Complete transparency on government fees payable to CGPDTM and FSSAI with direct payment receipts.</p>
               </div>
             </div>
           </div>
@@ -75,53 +101,55 @@ const canonical = "https://brndnur.com/packages/food-brand/";
       </div>
     </section>
 
-    <!-- 3 Core Inclusions with Clean SVGs -->
+    <!-- Package Deliverables (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">Comprehensive Inclusions</p>
-          <h2>Three Essential Pillars for Food Businesses</h2>
-          <p>Launching a food enterprise requires brand exclusivity combined with strict statutory licensing:</p>
+          <h2>Three Essential Pillars for Food Businesses.</h2>
+          <div class="gold-rule"></div>
+          <p>Launching a food enterprise requires brand exclusivity combined with strict statutory licensing.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <CardCarousel id="pkg-food-inclusions-carousel" ariaLabel="Comprehensive Inclusions">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>Food Trademark Filing</h3>
+              <p>Pre-filing name clearance, class identification (Class 29, 30, 31, 32, or 43 as applicable), and application filing on Form TM-A with official receipt.</p>
             </div>
-            <h3>Food Trademark Filing</h3>
-            <p>Pre-filing name clearance, class identification (Class 29, 30, 31, 32, or 43 as applicable), and application filing on Form TM-A with official receipt.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>FSSAI License Coordination</h3>
+              <p>Documentation preparation, layout declaration, water test guidance, and submission on the official FoSCoS portal for prompt approval.</p>
             </div>
-            <h3>FSSAI License / Registration</h3>
-            <p>Document preparation, FoSCoS portal application assembly, layout plan review, and guidance securing your mandatory 14-digit FSSAI license number.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>Udyam MSME Certification</h3>
+              <p>Filing your enterprise with the Ministry of MSME to immediately secure the 50% statutory trademark discount and credit priority.</p>
             </div>
-            <h3>Udyam / MSME Certificate</h3>
-            <p>Registration as a certified MSME, qualifying your enterprise for priority lending and the 50% statutory trademark fee concession.</p>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- Bundle Matrix Table -->
+    <!-- Package Scope & Fee Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Bundle Specifications</p>
-          <h2>Food Brand Package Component Breakdown</h2>
-          <p>Full breakdown of deliverables, statutory jurisdictions, and pricing structure.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Package Details</p>
+          <h2>Food Brand Package Scope &amp; Fee Breakdown.</h2>
+          <div class="gold-rule"></div>
+          <p>Coordinated licensing and protection under one comprehensive engagement.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
@@ -134,7 +162,7 @@ const canonical = "https://brndnur.com/packages/food-brand/";
             <tbody>
               <tr>
                 <td><strong>Trademark Protection</strong></td>
-                <td>Search, class mapping (Cl 29/30/43), Form TM-A filing & receipt</td>
+                <td>Search, class mapping (Cl 29/30/43), Form TM-A filing &amp; receipt</td>
                 <td>Trade Marks Registry (CGPDTM)</td>
                 <td>₹4,500 statutory fee (with MSME) + professional fee</td>
               </tr>
@@ -162,16 +190,113 @@ const canonical = "https://brndnur.com/packages/food-brand/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- 3-Stage Food Brand Workflow -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Integrated Execution</p>
+          <h2>The 3-Stage Food Brand Workflow.</h2>
+          <div class="gold-rule"></div>
+          <p>Synchronizing trademark clearance, MSME fee savings, and FSSAI licensing under one timeline.</p>
+        </div>
+
+        <CardCarousel id="pkg-food-steps-carousel" ariaLabel="The 3-Stage Food Brand Workflow">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Trademark Clearance &amp; Class Selection</h3>
+            <p>Preliminary search on IP India across Classes 29, 30, and 43 to ensure your food brand name and logo are free from conflicting culinary marks.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>MSME Certification &amp; TM Filing</h3>
+            <p>Filing your Udyam registration to unlock the 50% statutory fee discount, then drafting and submitting Form TM-A with official receipts.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>FSSAI FoSCoS Licensing</h3>
+            <p>Preparing premise declarations, water reports, and food product category mapping to secure your official 14-digit FSSAI license.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Food Brand FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">Food Brand FAQs</p>
+          <h2>Frequently Asked Questions.</h2>
+          <div class="gold-rule"></div>
+          <p>Key legal insights for food manufacturers, cloud kitchens, and packaged snack brands.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="Which trademark classes are essential for food products?"
+            answer="Class 29 covers meat, fish, poultry, dairy, edible oils, and preserved fruits/vegetables. Class 30 covers spices, tea, coffee, bakery products, confectionery, and grain preparations. If you also operate a restaurant, cafe, or cloud kitchen, Class 43 is required to protect your food delivery and dining brand."
+          />
+          <FaqItem
+            num="02"
+            question="Can home bakeries and small food startups use this package?"
+            answer="Yes. The package is tailored for emerging culinary ventures. We configure the FSSAI portion as a Basic Registration (for turnover under ₹12 Lakhs) and ensure you secure Udyam MSME status to claim the 50% government fee reduction on trademark filing."
+          />
+          <FaqItem
+            num="03"
+            question="What if my food venture requires a State License instead of Basic Registration?"
+            answer="If your turnover exceeds ₹12 Lakhs or you operate a commercial kitchen/repacking unit requiring a State License, the package accommodates the higher statutory portal fees and additional blueprint/water lab documentation required by the food safety officer."
+          />
+          <FaqItem
+            num="04"
+            question="Do you review food packaging labels for compliance?"
+            answer="Yes. We provide advisory guidance on statutory packaging requirements under FSSAI (Packaging and Labelling) Regulations, ensuring correct placement of the 14-digit license number, veg/non-veg logo, ingredient listing, and manufacturer address declarations."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Launch Compliantly</p>
-          <h2>Operating a Food or Beverage Enterprise?</h2>
+          <h2>Operating a Food or<br>Beverage Enterprise?</h2>
           <p>Connect with our team to verify your food categories, calculate exact statutory fees, and begin your applications.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20confirm%20the%20Food%20Brand%20Package%20scope%20and%20current%20price." target="_blank" rel="noopener noreferrer">Confirm Food Package Quote &rarr;</a>
-            <a class="btn btn-outline" href="/packages/gulf-return-business/">Gulf-Return Package</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Confirm Food Package Quote <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Culinary Sector Expertise</strong>
+              <p>Advising food producers, packaged snack brands, and cloud kitchens.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>End-to-End Coordination</strong>
+              <p>Simultaneous processing across Trade Marks, FSSAI, and Udyam MSME.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Direct Official Receipts</strong>
+              <p>Transparent government fee vouchers provided directly to you.</p>
+            </div>
           </div>
         </div>
       </div>

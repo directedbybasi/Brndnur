@@ -1,0 +1,3882 @@
+{
+  "summary": {
+    "total_generated_routes": 234,
+    "total_content_records": 200,
+    "valid_content_records": 200,
+    "broken_internal_links_count": 0,
+    "broken_images_count": 0,
+    "heading_issues_count": 0,
+    "meta_issues_count": 0,
+    "short_pages_count": 0
+  },
+  "routes": [
+    {
+      "route": "/404.html",
+      "rel_path": "404.html",
+      "title": "Page Not Found (404) | BRNDNUR Advisory LLP",
+      "word_count": 600,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/",
+      "rel_path": "index.html",
+      "title": "BRNDNUR Advisory LLP | Trademark &amp; Business Advisory",
+      "word_count": 3216,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/about/",
+      "rel_path": "about/index.html",
+      "title": "About BRNDNUR | Brand &amp; Business Advisory LLP",
+      "word_count": 1167,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/brand-name-search/",
+      "rel_path": "brand-name-search/index.html",
+      "title": "Brand Name Search in India | Trademark Check | BRNDNUR",
+      "word_count": 1442,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/business-setup/",
+      "rel_path": "business-setup/index.html",
+      "title": "Business Setup Advisory in Kerala | BRNDNUR Advisory LLP",
+      "word_count": 1436,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/contact/",
+      "rel_path": "contact/index.html",
+      "title": "Contact Us | BRNDNUR Advisory LLP",
+      "word_count": 1082,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/disclaimer/",
+      "rel_path": "disclaimer/index.html",
+      "title": "Disclaimer | BRNDNUR Advisory LLP",
+      "word_count": 1097,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/faqs/",
+      "rel_path": "faqs/index.html",
+      "title": "Frequently Asked Questions | BRNDNUR Advisory LLP",
+      "word_count": 5359,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/fssai-registration/",
+      "rel_path": "fssai-registration/index.html",
+      "title": "FSSAI Registration &amp; Licensing Support | BRNDNUR Advisory LLP",
+      "word_count": 1364,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/gst-registration/",
+      "rel_path": "gst-registration/index.html",
+      "title": "GST Registration Assistance in India | BRNDNUR Advisory LLP",
+      "word_count": 1377,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/how-it-works/",
+      "rel_path": "how-it-works/index.html",
+      "title": "How It Works | BRNDNUR Advisory LLP",
+      "word_count": 1408,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/logo-trademark-registration/",
+      "rel_path": "logo-trademark-registration/index.html",
+      "title": "Logo Trademark Registration in India | Device Marks | BRNDNUR",
+      "word_count": 1385,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/packages/",
+      "rel_path": "packages/index.html",
+      "title": "Packages &amp; Pricing | BRNDNUR Advisory LLP",
+      "word_count": 1602,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/packages/company-llp/",
+      "rel_path": "packages/company-llp/index.html",
+      "title": "Company &amp; LLP Trademark Package | BRNDNUR Advisory LLP",
+      "word_count": 1337,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/packages/food-brand/",
+      "rel_path": "packages/food-brand/index.html",
+      "title": "Food Brand Package | Trademark &amp; FSSAI Bundle | BRNDNUR",
+      "word_count": 1360,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/packages/gulf-return-business/",
+      "rel_path": "packages/gulf-return-business/index.html",
+      "title": "Gulf-Return Business Package | BRNDNUR Advisory LLP",
+      "word_count": 1376,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/packages/individual-msme/",
+      "rel_path": "packages/individual-msme/index.html",
+      "title": "Individual &amp; MSME Trademark Package | BRNDNUR Advisory LLP",
+      "word_count": 1336,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/privacy-policy/",
+      "rel_path": "privacy-policy/index.html",
+      "title": "Privacy Policy | BRNDNUR Advisory LLP",
+      "word_count": 1097,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/refund-cancellation-policy/",
+      "rel_path": "refund-cancellation-policy/index.html",
+      "title": "Refund &amp; Cancellation Policy | BRNDNUR Advisory LLP",
+      "word_count": 1049,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/",
+      "rel_path": "resources/index.html",
+      "title": "Intellectual Property &amp; Brand Protection Guides | BRNDNUR Resources",
+      "word_count": 8535,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/brand-name-search-guide/",
+      "rel_path": "resources/brand-name-search-guide/index.html",
+      "title": "Brand Name Search Guide in India | BRNDNUR Advisory LLP",
+      "word_count": 1008,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-name-availability-kazhakkoottam/",
+      "rel_path": "resources/preview/brand-name-availability-kazhakkoottam/index.html",
+      "title": "Brand Name Availability Check in Kazhakkoottam | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1470,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-name-ideas-and-trademark-checks-for-homestays-in-alappuzha/",
+      "rel_path": "resources/preview/brand-name-ideas-and-trademark-checks-for-homestays-in-alappuzha/index.html",
+      "title": "Homestay Brand Names &amp; Trademark Checks in Alappuzha | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1546,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-name-registration-seafood-food-karunagappally/",
+      "rel_path": "resources/preview/brand-name-registration-seafood-food-karunagappally/index.html",
+      "title": "Seafood &amp; Food Brand Registration in Karunagappally | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1329,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-name-search-and-trademark-planning-for-e-commerce-sellers-in-edappal/",
+      "rel_path": "resources/preview/brand-name-search-and-trademark-planning-for-e-commerce-sellers-in-edappal/index.html",
+      "title": "Edappal E-Commerce Brand Name Search &amp; IP Planning | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1972,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-name-search-for-new-retail-businesses-in-kanjirappally/",
+      "rel_path": "resources/preview/brand-name-search-for-new-retail-businesses-in-kanjirappally/index.html",
+      "title": "Brand Name Search in Kanjirappally | Retail Trademark Guide | BRNDNUR Draft Preview",
+      "word_count": 1565,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-considerations-for-export-oriented-businesses-near-walayar/",
+      "rel_path": "resources/preview/brand-protection-considerations-for-export-oriented-businesses-near-walayar/index.html",
+      "title": "Walayar Border Export Brand Protection &amp; Trademarks | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2065,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-for-cafes-and-hospitality-businesses-in-fort-kochi/",
+      "rel_path": "resources/preview/brand-protection-for-cafes-and-hospitality-businesses-in-fort-kochi/index.html",
+      "title": "Fort Kochi Caf\u00e9 &amp; Hospitality Brand Protection | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1990,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-for-cafes-restaurants-and-hospitality-businesses-in-mararikulam/",
+      "rel_path": "resources/preview/brand-protection-for-cafes-restaurants-and-hospitality-businesses-in-mararikulam/index.html",
+      "title": "Mararikulam Caf\u00e9 &amp; Hospitality Brand Protection | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1681,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-for-furniture-and-craft-product-businesses-in-feroke/",
+      "rel_path": "resources/preview/brand-protection-for-furniture-and-craft-product-businesses-in-feroke/index.html",
+      "title": "Feroke Furniture &amp; Craft Product Brand Protection | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1891,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-for-retailers-and-service-businesses-in-adoor/",
+      "rel_path": "resources/preview/brand-protection-for-retailers-and-service-businesses-in-adoor/index.html",
+      "title": "Brand Protection for Adoor Retailers &amp; Service Hubs | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1609,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-for-seafood-and-food-product-businesses-in-ponnani/",
+      "rel_path": "resources/preview/brand-protection-for-seafood-and-food-product-businesses-in-ponnani/index.html",
+      "title": "Ponnani Seafood &amp; Food Brand Protection Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1909,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-for-tourism-and-activity-operators-in-thekkady/",
+      "rel_path": "resources/preview/brand-protection-for-tourism-and-activity-operators-in-thekkady/index.html",
+      "title": "Thekkady Tourism &amp; Activity Brand Protection | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1619,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-for-tourism-businesses-near-muzhappilangad/",
+      "rel_path": "resources/preview/brand-protection-for-tourism-businesses-near-muzhappilangad/index.html",
+      "title": "Brand Protection for Muzhappilangad Tourism Businesses | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1847,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-protection-homestays-hospitality-varkala/",
+      "rel_path": "resources/preview/brand-protection-homestays-hospitality-varkala/index.html",
+      "title": "Brand Protection for Varkala Homestays &amp; Resorts | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1528,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/brand-registration-considerations-for-homestays-and-tourism-businesses-in-bekal/",
+      "rel_path": "resources/preview/brand-registration-considerations-for-homestays-and-tourism-businesses-in-bekal/index.html",
+      "title": "Brand Registration for Bekal Homestays &amp; Tourism | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1867,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/branding-and-registration-checklist-for-spice-producers-in-idukki/",
+      "rel_path": "resources/preview/branding-and-registration-checklist-for-spice-producers-in-idukki/index.html",
+      "title": "Spice Producer Branding &amp; Registration in Idukki | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1613,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/branding-and-trademark-checklist-for-local-product-manufacturers/",
+      "rel_path": "resources/preview/branding-and-trademark-checklist-for-local-product-manufacturers/index.html",
+      "title": "Branding &amp; Trademark Checklist for Manufacturers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1918,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-launch-checklist-for-entrepreneurs-in-cherpulassery/",
+      "rel_path": "resources/preview/business-launch-checklist-for-entrepreneurs-in-cherpulassery/index.html",
+      "title": "Cherpulassery Business Launch Checklist | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1989,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-launch-checklist-for-first-time-founders-in-perambra/",
+      "rel_path": "resources/preview/business-launch-checklist-for-first-time-founders-in-perambra/index.html",
+      "title": "Perambra Business Launch Checklist for Founders | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2002,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-name-vs-trademark-what-founders-in-kuthuparamba-should-know/",
+      "rel_path": "resources/preview/business-name-vs-trademark-what-founders-in-kuthuparamba-should-know/index.html",
+      "title": "Business Name vs Trademark in Kuthuparamba | Legal Differences | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1961,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-registration-across-kerala-a-checklist-for-gst-udyam-fssai-and-brand-protection/",
+      "rel_path": "resources/preview/business-registration-across-kerala-a-checklist-for-gst-udyam-fssai-and-brand-protection/index.html",
+      "title": "Kerala Business Registration Checklist | GST, Udyam, FSSAI | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1958,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-registration-checklist-for-entrepreneurs-in-dharmadam/",
+      "rel_path": "resources/preview/business-registration-checklist-for-entrepreneurs-in-dharmadam/index.html",
+      "title": "Business Registration Checklist in Dharmadam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1873,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-registration-checklist-for-new-ventures-in-chengannur/",
+      "rel_path": "resources/preview/business-registration-checklist-for-new-ventures-in-chengannur/index.html",
+      "title": "Business Registration Checklist in Chengannur | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1595,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-registration-checklist-for-retailers-in-kodungallur/",
+      "rel_path": "resources/preview/business-registration-checklist-for-retailers-in-kodungallur/index.html",
+      "title": "Retail Business Registration Checklist in Kodungallur | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2008,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-registration-checklist-for-service-businesses-in-perinthalmanna/",
+      "rel_path": "resources/preview/business-registration-checklist-for-service-businesses-in-perinthalmanna/index.html",
+      "title": "Perinthalmanna Service Business Registration Checklist | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1992,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-registration-checklist-for-tourism-entrepreneurs-in-meppadi/",
+      "rel_path": "resources/preview/business-registration-checklist-for-tourism-entrepreneurs-in-meppadi/index.html",
+      "title": "Meppadi Tourism Business Registration Checklist | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1975,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-registration-checklist-punalur/",
+      "rel_path": "resources/preview/business-registration-checklist-punalur/index.html",
+      "title": "Business Registration Checklist in Punalur | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1457,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/business-setup-considerations-for-homestay-owners-in-idukki/",
+      "rel_path": "resources/preview/business-setup-considerations-for-homestay-owners-in-idukki/index.html",
+      "title": "Homestay Business Setup in Idukki | Complete Guide | BRNDNUR Draft Preview",
+      "word_count": 1646,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/check-brand-name-availability-kottarakkara/",
+      "rel_path": "resources/preview/check-brand-name-availability-kottarakkara/index.html",
+      "title": "Brand Name Availability Check in Kottarakkara | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1311,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/choose-protect-brand-name-tourism-kovalam/",
+      "rel_path": "resources/preview/choose-protect-brand-name-tourism-kovalam/index.html",
+      "title": "Choosing &amp; Protecting a Tourism Brand Name in Kovalam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1443,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/choosing-the-right-trademark-class-for-kerala-businesses-examples-from-food-fashion-technology-and-tourism/",
+      "rel_path": "resources/preview/choosing-the-right-trademark-class-for-kerala-businesses-examples-from-food-fashion-technology-and-tourism/index.html",
+      "title": "Choosing Trademark Classes in Kerala | Food, Fashion, Tech | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1978,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/choosing-trademark-classes-for-handicraft-and-consumer-product-businesses-in-kollam/",
+      "rel_path": "resources/preview/choosing-trademark-classes-for-handicraft-and-consumer-product-businesses-in-kollam/index.html",
+      "title": "Trademark Classes for Kollam Handicrafts &amp; Consumer Goods | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1580,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/choosing-trademark-classes-for-homestays-and-hospitality-businesses-in-munnar/",
+      "rel_path": "resources/preview/choosing-trademark-classes-for-homestays-and-hospitality-businesses-in-munnar/index.html",
+      "title": "Munnar Homestay &amp; Hospitality Trademark Classes | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1627,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/choosing-trademark-classes-for-packaged-food-and-spice-brands-in-mannarkkad/",
+      "rel_path": "resources/preview/choosing-trademark-classes-for-packaged-food-and-spice-brands-in-mannarkkad/index.html",
+      "title": "Mannarkkad Spice &amp; Food Trademark Classes Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1847,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/choosing-trademark-classes-for-spice-product-brands-in-kasaragod/",
+      "rel_path": "resources/preview/choosing-trademark-classes-for-spice-product-brands-in-kasaragod/index.html",
+      "title": "Trademark Classes for Spice Brands in Kasaragod | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1931,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/common-trademark-filing-mistakes-made-by-first-time-business-owners/",
+      "rel_path": "resources/preview/common-trademark-filing-mistakes-made-by-first-time-business-owners/index.html",
+      "title": "Common Trademark Mistakes by First-Time Owners | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1780,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-bakery-and-snack-brands-in-thalassery/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-bakery-and-snack-brands-in-thalassery/index.html",
+      "title": "FSSAI &amp; Trademark Planning for Thalassery Bakeries &amp; Snacks | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1856,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-cloud-kitchens-in-kochi/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-cloud-kitchens-in-kochi/index.html",
+      "title": "Cloud Kitchen FSSAI &amp; Trademark Guide in Kochi | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1677,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-food-brands-in-kondotty/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-food-brands-in-kondotty/index.html",
+      "title": "Kondotty Food Brands FSSAI &amp; Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1995,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-food-businesses-in-manjeshwaram/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-food-businesses-in-manjeshwaram/index.html",
+      "title": "FSSAI &amp; Trademark Planning in Manjeshwaram | Food Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1790,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-home-based-food-businesses-in-mukkam/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-home-based-food-businesses-in-mukkam/index.html",
+      "title": "Mukkam Home Food Businesses FSSAI &amp; Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1960,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-local-food-brands-in-paravur/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-local-food-brands-in-paravur/index.html",
+      "title": "FSSAI &amp; Trademark Guide for Paravur Food Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1591,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-packaged-food-brands-in-alathur/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-packaged-food-brands-in-alathur/index.html",
+      "title": "Alathur Packaged Food FSSAI &amp; Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2011,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-packaged-food-businesses-in-cherthala/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-packaged-food-businesses-in-cherthala/index.html",
+      "title": "FSSAI &amp; Trademark Guide for Cherthala Food Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1658,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-packaged-food-businesses-in-ettumanoor/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-packaged-food-businesses-in-ettumanoor/index.html",
+      "title": "FSSAI &amp; Trademark Guide for Ettumanoor Food Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1617,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-packaged-produce-in-ambalavayal/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-packaged-produce-in-ambalavayal/index.html",
+      "title": "FSSAI &amp; Trademark Planning for Produce in Ambalavayal | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1865,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-packaged-snack-brands-in-irinjalakuda/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-packaged-snack-brands-in-irinjalakuda/index.html",
+      "title": "FSSAI &amp; Trademark Planning for Snack Brands in Irinjalakuda | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1984,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-planning-for-packaged-spice-businesses-in-kattappana/",
+      "rel_path": "resources/preview/fssai-and-trademark-planning-for-packaged-spice-businesses-in-kattappana/index.html",
+      "title": "FSSAI &amp; Trademark Guide for Kattappana Spices | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1661,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-and-trademark-registration-for-food-brands-in-pandalam/",
+      "rel_path": "resources/preview/fssai-and-trademark-registration-for-food-brands-in-pandalam/index.html",
+      "title": "FSSAI &amp; Trademark Guide for Pandalam Food Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1563,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/fssai-registration-brand-protection-cloud-kitchens-kazhakkoottam/",
+      "rel_path": "resources/preview/fssai-registration-brand-protection-cloud-kitchens-kazhakkoottam/index.html",
+      "title": "FSSAI &amp; Trademark Guide for Cloud Kitchens in Kazhakkoottam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1523,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-and-business-registration-checklist-for-entrepreneurs-in-aluva/",
+      "rel_path": "resources/preview/gst-and-business-registration-checklist-for-entrepreneurs-in-aluva/index.html",
+      "title": "Aluva Business Setup &amp; GST Registration Checklist | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1606,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-and-business-registration-questions-for-small-traders-in-cheruvathur/",
+      "rel_path": "resources/preview/gst-and-business-registration-questions-for-small-traders-in-cheruvathur/index.html",
+      "title": "GST &amp; Business Registration in Cheruvathur | Small Traders | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1846,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-and-trademark-planning-for-wholesale-traders-in-thrissur/",
+      "rel_path": "resources/preview/gst-and-trademark-planning-for-wholesale-traders-in-thrissur/index.html",
+      "title": "GST &amp; Trademark Planning for Wholesale Traders in Thrissur | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2001,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-and-trademark-registration-a-checklist-for-wholesale-traders-in-kollam/",
+      "rel_path": "resources/preview/gst-and-trademark-registration-a-checklist-for-wholesale-traders-in-kollam/index.html",
+      "title": "GST &amp; Trademark Checklist for Wholesale Traders in Kollam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1623,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-and-brand-protection-for-retailers-in-mavelikkara/",
+      "rel_path": "resources/preview/gst-registration-and-brand-protection-for-retailers-in-mavelikkara/index.html",
+      "title": "GST &amp; Brand Protection for Mavelikkara Retailers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1676,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-and-business-setup-checklist-for-retailers-in-ramanattukara/",
+      "rel_path": "resources/preview/gst-registration-and-business-setup-checklist-for-retailers-in-ramanattukara/index.html",
+      "title": "Ramanattukara Retail Business Setup &amp; GST Checklist | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2025,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-checklist-for-distributors-in-shoranur/",
+      "rel_path": "resources/preview/gst-registration-checklist-for-distributors-in-shoranur/index.html",
+      "title": "Shoranur Distributors GST Registration Checklist | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2049,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-checklist-for-retail-businesses-in-kalpetta/",
+      "rel_path": "resources/preview/gst-registration-checklist-for-retail-businesses-in-kalpetta/index.html",
+      "title": "GST Registration Checklist for Retailers in Kalpetta | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1913,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-checklist-for-retail-shops-in-thodupuzha/",
+      "rel_path": "resources/preview/gst-registration-checklist-for-retail-shops-in-thodupuzha/index.html",
+      "title": "GST Registration Checklist for Thodupuzha Retailers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1609,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-checklist-for-traders-in-mallappally/",
+      "rel_path": "resources/preview/gst-registration-checklist-for-traders-in-mallappally/index.html",
+      "title": "GST Registration Checklist for Mallappally Traders | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1590,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-checklist-for-traders-in-taliparamba/",
+      "rel_path": "resources/preview/gst-registration-checklist-for-traders-in-taliparamba/index.html",
+      "title": "GST Registration Checklist for Traders in Taliparamba | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1915,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-checklist-for-traders-in-tirurangadi/",
+      "rel_path": "resources/preview/gst-registration-checklist-for-traders-in-tirurangadi/index.html",
+      "title": "Tirurangadi Traders GST Registration Checklist | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1889,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-checklist-for-traders-in-vaikom/",
+      "rel_path": "resources/preview/gst-registration-checklist-for-traders-in-vaikom/index.html",
+      "title": "GST Registration Checklist for Vaikom Traders | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1603,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/gst-registration-checklist-retailers-neyyattinkara/",
+      "rel_path": "resources/preview/gst-registration-checklist-retailers-neyyattinkara/index.html",
+      "title": "GST Registration for Neyyattinkara Retailers &amp; Traders | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1495,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/home-based-businesses-nedumangad-brand-protection/",
+      "rel_path": "resources/preview/home-based-businesses-nedumangad-brand-protection/index.html",
+      "title": "Brand Protection for Home Businesses in Nedumangad | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1328,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-bakeries-and-packaged-food-sellers-in-kozhencherry-can-protect-their-brand/",
+      "rel_path": "resources/preview/how-bakeries-and-packaged-food-sellers-in-kozhencherry-can-protect-their-brand/index.html",
+      "title": "Bakery &amp; Food Brand Protection in Kozhencherry | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1658,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-beauty-and-personal-care-brands-in-kozhikode-can-select-a-trademark-class/",
+      "rel_path": "resources/preview/how-beauty-and-personal-care-brands-in-kozhikode-can-select-a-trademark-class/index.html",
+      "title": "Kozhikode Beauty &amp; Personal Care Trademark Class Selection | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1915,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-boutiques-and-clothing-businesses-in-erattupetta-can-protect-their-logos/",
+      "rel_path": "resources/preview/how-boutiques-and-clothing-businesses-in-erattupetta-can-protect-their-logos/index.html",
+      "title": "Protecting Boutique Logos in Erattupetta | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1621,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-businesses-in-ernakulam-can-respond-to-brand-copying-online/",
+      "rel_path": "resources/preview/how-businesses-in-ernakulam-can-respond-to-brand-copying-online/index.html",
+      "title": "Responding to Online Brand Copying in Ernakulam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1948,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-businesses-in-kanhangad-can-respond-to-similar-brand-names/",
+      "rel_path": "resources/preview/how-businesses-in-kanhangad-can-respond-to-similar-brand-names/index.html",
+      "title": "Responding to Similar Brand Names in Kanhangad | IP Defense | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1942,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-cafes-in-munnar-can-select-and-protect-a-distinctive-brand-name/",
+      "rel_path": "resources/preview/how-cafes-in-munnar-can-select-and-protect-a-distinctive-brand-name/index.html",
+      "title": "Munnar Caf\u00e9 Naming &amp; Brand Protection Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1607,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-food-brands-in-thalassery-can-check-brand-name-availability/",
+      "rel_path": "resources/preview/how-food-brands-in-thalassery-can-check-brand-name-availability/index.html",
+      "title": "Food Brand Name Search in Thalassery | IP India Availability | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1881,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-jewellery-businesses-can-check-brand-name-availability-before-expansion/",
+      "rel_path": "resources/preview/how-jewellery-businesses-can-check-brand-name-availability-before-expansion/index.html",
+      "title": "Jewellery Brand Name Clearance &amp; Search Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2088,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-local-food-product-brands-in-panoor-can-protect-their-names/",
+      "rel_path": "resources/preview/how-local-food-product-brands-in-panoor-can-protect-their-names/index.html",
+      "title": "Food Brand Name Protection in Panoor | Trademark &amp; FSSAI | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1953,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-online-sellers-in-kayamkulam-can-register-and-protect-their-brand/",
+      "rel_path": "resources/preview/how-online-sellers-in-kayamkulam-can-register-and-protect-their-brand/index.html",
+      "title": "Brand Protection for Kayamkulam Online Sellers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1559,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-online-sellers-in-koduvally-can-protect-their-product-brands/",
+      "rel_path": "resources/preview/how-online-sellers-in-koduvally-can-protect-their-product-brands/index.html",
+      "title": "Koduvally Online Sellers Brand Protection Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1894,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-retail-shops-in-tanur-can-protect-their-business-names-and-logos/",
+      "rel_path": "resources/preview/how-retail-shops-in-tanur-can-protect-their-business-names-and-logos/index.html",
+      "title": "Tanur Retail Shops Business Name &amp; Logo Protection | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1967,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-small-businesses-in-kottayam-can-protect-their-brands-online/",
+      "rel_path": "resources/preview/how-small-businesses-in-kottayam-can-protect-their-brands-online/index.html",
+      "title": "Online Brand Protection for Kottayam Small Businesses | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1619,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-small-businesses-in-sasthamkotta-can-build-a-protectable-brand/",
+      "rel_path": "resources/preview/how-small-businesses-in-sasthamkotta-can-build-a-protectable-brand/index.html",
+      "title": "Building a Protectable Brand in Sasthamkotta | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1589,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-check-brand-name-availability-before-launching-in-adimali/",
+      "rel_path": "resources/preview/how-to-check-brand-name-availability-before-launching-in-adimali/index.html",
+      "title": "How to Check Brand Name Availability in Adimali | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1569,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-check-brand-name-availability-before-launching-in-kozhikode/",
+      "rel_path": "resources/preview/how-to-check-brand-name-availability-before-launching-in-kozhikode/index.html",
+      "title": "Kozhikode Brand Name Availability &amp; Search Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2016,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-check-brand-name-availability-for-businesses-in-kakkanad/",
+      "rel_path": "resources/preview/how-to-check-brand-name-availability-for-businesses-in-kakkanad/index.html",
+      "title": "Brand Name Availability Search in Kakkanad | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1579,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-check-brand-name-availability-for-businesses-in-kanhangad/",
+      "rel_path": "resources/preview/how-to-check-brand-name-availability-for-businesses-in-kanhangad/index.html",
+      "title": "Check Brand Name Availability in Kanhangad | IP India Search | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1793,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-check-brand-name-availability-for-businesses-in-manjeri/",
+      "rel_path": "resources/preview/how-to-check-brand-name-availability-for-businesses-in-manjeri/index.html",
+      "title": "Manjeri Business Brand Name Availability &amp; Search Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2027,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-check-business-name-availability-in-pattambi/",
+      "rel_path": "resources/preview/how-to-check-business-name-availability-in-pattambi/index.html",
+      "title": "Pattambi Business Name Availability &amp; Search Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2014,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-choose-a-business-name-for-a-new-venture-in-angamaly/",
+      "rel_path": "resources/preview/how-to-choose-a-business-name-for-a-new-venture-in-angamaly/index.html",
+      "title": "Choosing a Business Name in Angamaly | Brand Search &amp; Trademark Guide | BRNDNUR Draft Preview",
+      "word_count": 2002,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-choose-a-distinctive-business-name-in-kottayam/",
+      "rel_path": "resources/preview/how-to-choose-a-distinctive-business-name-in-kottayam/index.html",
+      "title": "How to Choose a Distinctive Business Name in Kottayam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1684,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-choose-the-right-trademark-class-for-coir-products-in-alappuzha/",
+      "rel_path": "resources/preview/how-to-choose-the-right-trademark-class-for-coir-products-in-alappuzha/index.html",
+      "title": "Choosing Coir Trademark Classes in Alappuzha | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1673,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-conduct-a-brand-name-search-for-businesses-in-chalakudy/",
+      "rel_path": "resources/preview/how-to-conduct-a-brand-name-search-for-businesses-in-chalakudy/index.html",
+      "title": "Brand Name Search Guide for Chalakudy Businesses | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2021,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-conduct-a-brand-name-search-for-businesses-in-thiruvalla/",
+      "rel_path": "resources/preview/how-to-conduct-a-brand-name-search-for-businesses-in-thiruvalla/index.html",
+      "title": "How to Search Brand Name Availability in Thiruvalla | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1567,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-protect-a-coffee-brand-in-munnar/",
+      "rel_path": "resources/preview/how-to-protect-a-coffee-brand-in-munnar/index.html",
+      "title": "How to Protect a Coffee Brand in Munnar | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1657,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-protect-a-coffee-brand-in-wayanad/",
+      "rel_path": "resources/preview/how-to-protect-a-coffee-brand-in-wayanad/index.html",
+      "title": "Wayanad Coffee Brand Protection &amp; Trademarks | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2000,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-protect-a-regional-rice-or-millet-product-brand-in-palakkad/",
+      "rel_path": "resources/preview/how-to-protect-a-regional-rice-or-millet-product-brand-in-palakkad/index.html",
+      "title": "Palakkad Rice &amp; Millet Brand Protection Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2025,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-protect-rubber-based-product-brands-in-the-kottayam-region/",
+      "rel_path": "resources/preview/how-to-protect-rubber-based-product-brands-in-the-kottayam-region/index.html",
+      "title": "Protecting Rubber Product Brands in Kottayam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1670,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-protect-the-brand-name-of-a-houseboat-or-tourism-business-in-alappuzha/",
+      "rel_path": "resources/preview/how-to-protect-the-brand-name-of-a-houseboat-or-tourism-business-in-alappuzha/index.html",
+      "title": "Houseboat &amp; Tourism Brand Protection in Alappuzha | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1628,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-to-select-a-business-name-before-registering-a-brand-in-adoor/",
+      "rel_path": "resources/preview/how-to-select-a-business-name-before-registering-a-brand-in-adoor/index.html",
+      "title": "How to Choose a Business Name in Adoor | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1686,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/how-tourism-businesses-in-kalpetta-can-choose-a-distinctive-brand-name/",
+      "rel_path": "resources/preview/how-tourism-businesses-in-kalpetta-can-choose-a-distinctive-brand-name/index.html",
+      "title": "Choosing a Distinctive Tourism Brand Name in Kalpetta | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1974,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-trademark-registration-for-agencies-and-service-businesses-in-muvattupuzha/",
+      "rel_path": "resources/preview/logo-trademark-registration-for-agencies-and-service-businesses-in-muvattupuzha/index.html",
+      "title": "Logo Trademark Registration in Muvattupuzha | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1887,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-trademark-registration-for-boutiques-in-payyanur/",
+      "rel_path": "resources/preview/logo-trademark-registration-for-boutiques-in-payyanur/index.html",
+      "title": "Logo Trademark Registration for Boutiques in Payyanur | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1845,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-trademark-registration-for-local-food-brands-in-kumily/",
+      "rel_path": "resources/preview/logo-trademark-registration-for-local-food-brands-in-kumily/index.html",
+      "title": "Kumily Food Brand Logo Trademark Registration | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1585,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-trademark-registration-for-local-food-brands-in-pulpally/",
+      "rel_path": "resources/preview/logo-trademark-registration-for-local-food-brands-in-pulpally/index.html",
+      "title": "Pulpally Food Brands Logo Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1921,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-trademark-registration-for-restaurants-and-cafes-in-beypore/",
+      "rel_path": "resources/preview/logo-trademark-registration-for-restaurants-and-cafes-in-beypore/index.html",
+      "title": "Beypore Restaurants &amp; Caf\u00e9s Logo Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1925,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-trademark-registration-for-retailers-in-nileshwaram/",
+      "rel_path": "resources/preview/logo-trademark-registration-for-retailers-in-nileshwaram/index.html",
+      "title": "Logo Trademark Registration in Nileshwaram | Retail Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1852,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-trademark-registration-for-service-businesses-in-palakkad/",
+      "rel_path": "resources/preview/logo-trademark-registration-for-service-businesses-in-palakkad/index.html",
+      "title": "Palakkad Service Businesses Logo Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1904,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-trademark-registration-for-tourism-businesses-in-ambalappuzha/",
+      "rel_path": "resources/preview/logo-trademark-registration-for-tourism-businesses-in-ambalappuzha/index.html",
+      "title": "Logo Trademark Registration in Ambalappuzha | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1650,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/logo-vs-wordmark-registration-kattakada/",
+      "rel_path": "resources/preview/logo-vs-wordmark-registration-kattakada/index.html",
+      "title": "Wordmark vs Logo Trademark in Kattakada | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1349,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/new-brand-launch-checklist-for-small-businesses-across-wayanad/",
+      "rel_path": "resources/preview/new-brand-launch-checklist-for-small-businesses-across-wayanad/index.html",
+      "title": "New Brand Launch Checklist for Wayanad Businesses | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1977,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/online-brand-protection-for-small-agricultural-product-sellers-in-wayanad/",
+      "rel_path": "resources/preview/online-brand-protection-for-small-agricultural-product-sellers-in-wayanad/index.html",
+      "title": "Online Brand Protection for Wayanad Agri-Sellers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1892,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/protecting-retail-shop-names-and-logos-in-chathannoor/",
+      "rel_path": "resources/preview/protecting-retail-shop-names-and-logos-in-chathannoor/index.html",
+      "title": "Retail Shop Name &amp; Logo Protection in Chathannoor | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1645,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/registration-checklist-for-bakeries-and-packaged-food-businesses-in-thrissur/",
+      "rel_path": "resources/preview/registration-checklist-for-bakeries-and-packaged-food-businesses-in-thrissur/index.html",
+      "title": "Thrissur Bakery &amp; Food Business Registration Checklist | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2068,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/registration-checklist-for-professional-service-businesses-in-kottayam/",
+      "rel_path": "resources/preview/registration-checklist-for-professional-service-businesses-in-kottayam/index.html",
+      "title": "Professional Service Registration in Kottayam | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1652,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/starting-a-business-after-returning-from-the-gulf-a-guide-for-thiruvalla-entrepreneurs/",
+      "rel_path": "resources/preview/starting-a-business-after-returning-from-the-gulf-a-guide-for-thiruvalla-entrepreneurs/index.html",
+      "title": "Gulf Return Business Setup Guide for Thiruvalla | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1727,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/starting-a-business-after-returning-from-the-gulf-a-malappuram-founders-checklist/",
+      "rel_path": "resources/preview/starting-a-business-after-returning-from-the-gulf-a-malappuram-founders-checklist/index.html",
+      "title": "Gulf Returnee Business Setup Checklist in Malappuram | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2013,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/starting-a-business-in-kerala-after-returning-from-the-gulf-brand-registration-and-business-setup-checklist/",
+      "rel_path": "resources/preview/starting-a-business-in-kerala-after-returning-from-the-gulf-brand-registration-and-business-setup-checklist/index.html",
+      "title": "Starting a Business in Kerala After Gulf Return | Pravasi Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2119,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-basics-for-online-sellers-starting-from-anchal/",
+      "rel_path": "resources/preview/trademark-basics-for-online-sellers-starting-from-anchal/index.html",
+      "title": "Trademark Basics for Anchal E-Commerce Sellers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1552,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-classes-for-cafes-and-food-brands-in-pala/",
+      "rel_path": "resources/preview/trademark-classes-for-cafes-and-food-brands-in-pala/index.html",
+      "title": "Caf\u00e9 &amp; Food Trademark Classes in Pala | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1626,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-classes-for-furniture-and-product-businesses-in-iritty/",
+      "rel_path": "resources/preview/trademark-classes-for-furniture-and-product-businesses-in-iritty/index.html",
+      "title": "Trademark Classes for Furniture Businesses in Iritty | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1896,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-classes-for-homestays-and-tourism-businesses-in-vythiri/",
+      "rel_path": "resources/preview/trademark-classes-for-homestays-and-tourism-businesses-in-vythiri/index.html",
+      "title": "Vythiri Homestays &amp; Tourism Trademark Classes Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1849,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-classes-for-product-manufacturers-in-perumbavoor/",
+      "rel_path": "resources/preview/trademark-classes-for-product-manufacturers-in-perumbavoor/index.html",
+      "title": "Trademark Classes for Manufacturers in Perumbavoor | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2207,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-classes-for-seafood-and-processed-food-businesses-in-aroo/",
+      "rel_path": "resources/preview/trademark-classes-for-seafood-and-processed-food-businesses-in-aroo/index.html",
+      "title": "Seafood Trademark Classes for Aroor Businesses | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1644,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-classes-for-wellness-and-consumer-product-brands-in-thrissur/",
+      "rel_path": "resources/preview/trademark-classes-for-wellness-and-consumer-product-brands-in-thrissur/index.html",
+      "title": "Ayurveda &amp; Wellness Trademark Classes in Thrissur | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1926,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-classes-saas-digital-businesses-thiruvananthapuram/",
+      "rel_path": "resources/preview/trademark-classes-saas-digital-businesses-thiruvananthapuram/index.html",
+      "title": "Trademark Classes for SaaS &amp; Digital Firms in Thiruvananthapuram | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1398,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-classes-seafood-packaged-food-vizhinjam/",
+      "rel_path": "resources/preview/trademark-classes-seafood-packaged-food-vizhinjam/index.html",
+      "title": "Seafood &amp; Food Trademark Classes in Vizhinjam | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1413,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-monitoring-for-coffee-spice-and-tourism-brands-in-wayanad/",
+      "rel_path": "resources/preview/trademark-monitoring-for-coffee-spice-and-tourism-brands-in-wayanad/index.html",
+      "title": "Trademark Monitoring for Wayanad Coffee, Spices &amp; Tourism | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1942,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-monitoring-for-hospitality-and-retail-brands-in-alappuzha/",
+      "rel_path": "resources/preview/trademark-monitoring-for-hospitality-and-retail-brands-in-alappuzha/index.html",
+      "title": "Trademark Monitoring for Alappuzha Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1653,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-planning-for-agricultural-product-brands-in-chittur/",
+      "rel_path": "resources/preview/trademark-planning-for-agricultural-product-brands-in-chittur/index.html",
+      "title": "Chittur Agricultural Brand Protection &amp; Trademarks | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1911,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-planning-for-agriculture-related-businesses-in-palakkad/",
+      "rel_path": "resources/preview/trademark-planning-for-agriculture-related-businesses-in-palakkad/index.html",
+      "title": "Palakkad Agri-Allied Business Trademark Planning | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1805,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-planning-for-e-commerce-sellers-in-kasaragod/",
+      "rel_path": "resources/preview/trademark-planning-for-e-commerce-sellers-in-kasaragod/index.html",
+      "title": "Trademark Planning for Kasaragod E-Commerce Sellers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1846,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-planning-for-honey-and-spice-product-brands-in-wayanad/",
+      "rel_path": "resources/preview/trademark-planning-for-honey-and-spice-product-brands-in-wayanad/index.html",
+      "title": "Trademark Planning for Honey &amp; Spices in Wayanad | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1916,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-planning-for-tourism-and-hospitality-businesses-in-guruvayur/",
+      "rel_path": "resources/preview/trademark-planning-for-tourism-and-hospitality-businesses-in-guruvayur/index.html",
+      "title": "Guruvayur Hospitality &amp; Tourism Trademark Planning | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1947,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-planning-for-tourism-and-travel-businesses-around-konni/",
+      "rel_path": "resources/preview/trademark-planning-for-tourism-and-travel-businesses-around-konni/index.html",
+      "title": "Tourism Brand &amp; Trademark Planning in Konni | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1594,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-cashew-packaged-food-kollam/",
+      "rel_path": "resources/preview/trademark-protection-cashew-packaged-food-kollam/index.html",
+      "title": "Cashew &amp; Food Brand Trademark Protection in Kollam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1466,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-beauty-retail-and-consumer-brands-in-thrippunithura/",
+      "rel_path": "resources/preview/trademark-protection-for-beauty-retail-and-consumer-brands-in-thrippunithura/index.html",
+      "title": "Beauty &amp; Retail Trademark Protection in Thrippunithura | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1977,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-boutiques-and-online-sellers-in-ottapalam/",
+      "rel_path": "resources/preview/trademark-protection-for-boutiques-and-online-sellers-in-ottapalam/index.html",
+      "title": "Ottapalam Boutiques &amp; Online Sellers Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1964,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-cashew-and-food-product-brands-in-kasaragod/",
+      "rel_path": "resources/preview/trademark-protection-for-cashew-and-food-product-brands-in-kasaragod/index.html",
+      "title": "Trademark Protection for Cashew &amp; Food in Kasaragod | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1898,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-clothing-and-garment-brands-in-tirur/",
+      "rel_path": "resources/preview/trademark-protection-for-clothing-and-garment-brands-in-tirur/index.html",
+      "title": "Tirur Clothing &amp; Garment Brand Protection | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1948,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-clothing-and-textile-businesses-in-thrissur/",
+      "rel_path": "resources/preview/trademark-protection-for-clothing-and-textile-businesses-in-thrissur/index.html",
+      "title": "Thrissur Textile &amp; Clothing Brand Protection | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1996,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-coir-product-brands-in-cherthala/",
+      "rel_path": "resources/preview/trademark-protection-for-coir-product-brands-in-cherthala/index.html",
+      "title": "Coir Product Brand Protection in Cherthala | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1651,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-food-and-packaged-snack-brands-in-kozhikode/",
+      "rel_path": "resources/preview/trademark-protection-for-food-and-packaged-snack-brands-in-kozhikode/index.html",
+      "title": "Kozhikode Food &amp; Packaged Snack Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2013,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-food-cosmetics-and-apparel-brands-in-parappanangadi/",
+      "rel_path": "resources/preview/trademark-protection-for-food-cosmetics-and-apparel-brands-in-parappanangadi/index.html",
+      "title": "Parappanangadi Consumer Brands Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1972,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-furniture-and-product-manufacturers-in-kunnamkulam/",
+      "rel_path": "resources/preview/trademark-protection-for-furniture-and-product-manufacturers-in-kunnamkulam/index.html",
+      "title": "Kunnamkulam Furniture &amp; Product Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1899,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-handloom-and-textile-brands-in-kannur/",
+      "rel_path": "resources/preview/trademark-protection-for-handloom-and-textile-brands-in-kannur/index.html",
+      "title": "Trademark Protection for Handloom &amp; Textiles in Kannur | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1904,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-handloom-and-textile-businesses-in-kasaragod/",
+      "rel_path": "resources/preview/trademark-protection-for-handloom-and-textile-businesses-in-kasaragod/index.html",
+      "title": "Trademark Protection for Kasaragod Handloom &amp; Textiles | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1909,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-it-and-digital-agencies-in-kozhikode/",
+      "rel_path": "resources/preview/trademark-protection-for-it-and-digital-agencies-in-kozhikode/index.html",
+      "title": "Kozhikode IT &amp; Digital Agencies Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1897,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-jewellery-and-gold-retail-brands-in-thrissur/",
+      "rel_path": "resources/preview/trademark-protection-for-jewellery-and-gold-retail-brands-in-thrissur/index.html",
+      "title": "Thrissur Gold Jewellery Brand Protection &amp; Trademarks | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2062,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-online-sellers-in-kannur/",
+      "rel_path": "resources/preview/trademark-protection-for-online-sellers-in-kannur/index.html",
+      "title": "Trademark Protection for Online Sellers in Kannur | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1851,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-publishing-printing-and-educational-brands-in-kottayam/",
+      "rel_path": "resources/preview/trademark-protection-for-publishing-printing-and-educational-brands-in-kottayam/index.html",
+      "title": "Publishing &amp; Educational Trademark Guide in Kottayam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1609,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-saas-and-technology-startups-around-infopark/",
+      "rel_path": "resources/preview/trademark-protection-for-saas-and-technology-startups-around-infopark/index.html",
+      "title": "SaaS &amp; Tech Startup Trademark Guide in Infopark | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1619,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-for-tourism-and-hospitality-businesses-in-thenmala/",
+      "rel_path": "resources/preview/trademark-protection-for-tourism-and-hospitality-businesses-in-thenmala/index.html",
+      "title": "Tourism &amp; Hospitality Trademark Guide for Thenmala | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1575,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-protection-it-startups-technopark/",
+      "rel_path": "resources/preview/trademark-protection-it-startups-technopark/index.html",
+      "title": "Trademark Protection for Technopark IT Startups | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1572,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-for-clothing-and-retail-brands-in-vadakara/",
+      "rel_path": "resources/preview/trademark-registration-for-clothing-and-retail-brands-in-vadakara/index.html",
+      "title": "Vadakara Clothing &amp; Retail Brands Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1955,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-for-hospitality-and-retail-brands-in-maradu/",
+      "rel_path": "resources/preview/trademark-registration-for-hospitality-and-retail-brands-in-maradu/index.html",
+      "title": "Maradu Hospitality &amp; Retail Trademark Registration | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1864,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-for-online-sellers-starting-in-nilambur/",
+      "rel_path": "resources/preview/trademark-registration-for-online-sellers-starting-in-nilambur/index.html",
+      "title": "Nilambur Online Sellers Trademark Registration Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1896,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-for-professional-service-businesses-in-pathanamthitta/",
+      "rel_path": "resources/preview/trademark-registration-for-professional-service-businesses-in-pathanamthitta/index.html",
+      "title": "Trademark Guide for Professional Services in Pathanamthitta | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1639,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-for-spice-product-brands-in-idukki/",
+      "rel_path": "resources/preview/trademark-registration-for-spice-product-brands-in-idukki/index.html",
+      "title": "Spice Brand Trademark Registration in Idukki | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1687,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-for-spice-product-brands-in-sulthan-bathery/",
+      "rel_path": "resources/preview/trademark-registration-for-spice-product-brands-in-sulthan-bathery/index.html",
+      "title": "Sulthan Bathery Spice Brands Trademark Registration | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1847,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-alappuzha-a-local-business-owners-guide/",
+      "rel_path": "resources/preview/trademark-registration-in-alappuzha-a-local-business-owners-guide/index.html",
+      "title": "Trademark Registration in Alappuzha | Complete Business Guide | BRNDNUR Draft Preview",
+      "word_count": 1631,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-kannur-a-practical-guide-for-businesses/",
+      "rel_path": "resources/preview/trademark-registration-in-kannur-a-practical-guide-for-businesses/index.html",
+      "title": "Trademark Registration in Kannur | Practical Business Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2006,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-kasaragod-a-business-owners-guide/",
+      "rel_path": "resources/preview/trademark-registration-in-kasaragod-a-business-owners-guide/index.html",
+      "title": "Trademark Registration in Kasaragod | Complete Business Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1924,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-kerala-a-complete-guide-to-the-application-process-documents-and-fees/",
+      "rel_path": "resources/preview/trademark-registration-in-kerala-a-complete-guide-to-the-application-process-documents-and-fees/index.html",
+      "title": "Trademark Registration in Kerala | Complete Guide 2026 | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1940,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-kochi-a-complete-guide-for-entrepreneurs/",
+      "rel_path": "resources/preview/trademark-registration-in-kochi-a-complete-guide-for-entrepreneurs/index.html",
+      "title": "Trademark Registration in Kochi | Complete Business Guide | BRNDNUR Draft Preview",
+      "word_count": 1660,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-kottayam-process-documents-and-costs/",
+      "rel_path": "resources/preview/trademark-registration-in-kottayam-process-documents-and-costs/index.html",
+      "title": "Trademark Registration in Kottayam | Process, Docs &amp; Costs | BRNDNUR Draft Preview",
+      "word_count": 1574,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-kozhikode-complete-guide-for-entrepreneurs/",
+      "rel_path": "resources/preview/trademark-registration-in-kozhikode-complete-guide-for-entrepreneurs/index.html",
+      "title": "Kozhikode Trademark Registration Guide for Entrepreneurs | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2098,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-malappuram-a-guide-for-local-businesses/",
+      "rel_path": "resources/preview/trademark-registration-in-malappuram-a-guide-for-local-businesses/index.html",
+      "title": "Malappuram Trademark Registration Guide for Businesses | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2074,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-palakkad-a-guide-for-small-businesses/",
+      "rel_path": "resources/preview/trademark-registration-in-palakkad-a-guide-for-small-businesses/index.html",
+      "title": "Palakkad Small Business Trademark Registration Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2155,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-pathanamthitta-a-guide-for-first-time-applicants/",
+      "rel_path": "resources/preview/trademark-registration-in-pathanamthitta-a-guide-for-first-time-applicants/index.html",
+      "title": "First-Time Trademark Registration in Pathanamthitta | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1612,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-thodupuzha-a-step-by-step-business-guide/",
+      "rel_path": "resources/preview/trademark-registration-in-thodupuzha-a-step-by-step-business-guide/index.html",
+      "title": "Trademark Registration in Thodupuzha | Complete Business Guide | BRNDNUR Draft Preview",
+      "word_count": 1624,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-thrissur-what-business-owners-should-prepare/",
+      "rel_path": "resources/preview/trademark-registration-in-thrissur-what-business-owners-should-prepare/index.html",
+      "title": "Trademark Registration in Thrissur: Business Preparation Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2013,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-in-wayanad-a-guide-for-local-entrepreneurs/",
+      "rel_path": "resources/preview/trademark-registration-in-wayanad-a-guide-for-local-entrepreneurs/index.html",
+      "title": "Wayanad Trademark Registration Guide for Entrepreneurs | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2084,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-kollam-guide/",
+      "rel_path": "resources/preview/trademark-registration-kollam-guide/index.html",
+      "title": "Trademark Registration in Kollam | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1431,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-textile-brands-balaramapuram/",
+      "rel_path": "resources/preview/trademark-registration-textile-brands-balaramapuram/index.html",
+      "title": "Textile Brand Trademark Registration in Balaramapuram | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1475,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-registration-thiruvananthapuram-guide/",
+      "rel_path": "resources/preview/trademark-registration-thiruvananthapuram-guide/index.html",
+      "title": "Trademark Registration in Thiruvananthapuram | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1751,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-and-brand-monitoring-for-businesses-in-kozhikode/",
+      "rel_path": "resources/preview/trademark-renewal-and-brand-monitoring-for-businesses-in-kozhikode/index.html",
+      "title": "Kozhikode Trademark Renewal &amp; Brand Monitoring Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2047,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-and-monitoring-for-businesses-across-kasaragod/",
+      "rel_path": "resources/preview/trademark-renewal-and-monitoring-for-businesses-across-kasaragod/index.html",
+      "title": "Trademark Renewal &amp; Monitoring in Kasaragod | IP India | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1894,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-and-monitoring-for-established-brands-in-changanassery/",
+      "rel_path": "resources/preview/trademark-renewal-and-monitoring-for-established-brands-in-changanassery/index.html",
+      "title": "Trademark Renewal &amp; Monitoring in Changanassery | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1612,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-and-monitoring-for-established-businesses-in-kannur/",
+      "rel_path": "resources/preview/trademark-renewal-and-monitoring-for-established-businesses-in-kannur/index.html",
+      "title": "Trademark Renewal &amp; Monitoring in Kannur | IP India Rules | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1905,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-and-monitoring-for-established-businesses-in-palakkad/",
+      "rel_path": "resources/preview/trademark-renewal-and-monitoring-for-established-businesses-in-palakkad/index.html",
+      "title": "Palakkad Trademark Renewal &amp; Monitoring Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2048,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-brand-monitoring-thiruvananthapuram/",
+      "rel_path": "resources/preview/trademark-renewal-brand-monitoring-thiruvananthapuram/index.html",
+      "title": "Trademark Renewal &amp; Monitoring in Thiruvananthapuram | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1446,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-for-established-retail-and-product-brands-in-thrissur/",
+      "rel_path": "resources/preview/trademark-renewal-for-established-retail-and-product-brands-in-thrissur/index.html",
+      "title": "Thrissur Trademark Renewal Guide (Form TM-R) | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2053,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-for-tourism-and-product-brands-in-idukki/",
+      "rel_path": "resources/preview/trademark-renewal-for-tourism-and-product-brands-in-idukki/index.html",
+      "title": "Trademark Renewal for Idukki Brands | Complete Guide | BRNDNUR Draft Preview",
+      "word_count": 1685,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/trademark-renewal-what-established-businesses-in-pathanamthitta-should-know/",
+      "rel_path": "resources/preview/trademark-renewal-what-established-businesses-in-pathanamthitta-should-know/index.html",
+      "title": "Trademark Renewal Guide for Pathanamthitta Businesses | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1660,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-local-entrepreneurs-in-uppala/",
+      "rel_path": "resources/preview/udyam-registration-for-local-entrepreneurs-in-uppala/index.html",
+      "title": "Udyam Registration in Uppala | MSME Benefits &amp; Subsidies | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1873,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-manufacturers-in-kanjikode/",
+      "rel_path": "resources/preview/udyam-registration-for-manufacturers-in-kanjikode/index.html",
+      "title": "Udyam Registration for Kanjikode Manufacturers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1893,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-micro-businesses-in-valanchery/",
+      "rel_path": "resources/preview/udyam-registration-for-micro-businesses-in-valanchery/index.html",
+      "title": "Valanchery Micro Businesses Udyam Registration Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1823,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-businesses-in-changanassery/",
+      "rel_path": "resources/preview/udyam-registration-for-small-businesses-in-changanassery/index.html",
+      "title": "Udyam MSME Registration in Changanassery | Complete Guide | BRNDNUR Draft Preview",
+      "word_count": 1591,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-coffee-roasters-in-mananthavady/",
+      "rel_path": "resources/preview/udyam-registration-for-small-coffee-roasters-in-mananthavady/index.html",
+      "title": "Udyam Registration for Coffee Roasters in Mananthavady | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2002,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-manufacturers-and-entrepreneurs-in-ranni/",
+      "rel_path": "resources/preview/udyam-registration-for-small-manufacturers-and-entrepreneurs-in-ranni/index.html",
+      "title": "Udyam MSME Registration in Ranni | Complete Business Guide | BRNDNUR Draft Preview",
+      "word_count": 1567,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-manufacturers-in-koyilandy/",
+      "rel_path": "resources/preview/udyam-registration-for-small-manufacturers-in-koyilandy/index.html",
+      "title": "Koyilandy Small Manufacturers Udyam Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1893,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-manufacturers-in-mattannur/",
+      "rel_path": "resources/preview/udyam-registration-for-small-manufacturers-in-mattannur/index.html",
+      "title": "Udyam Registration for Manufacturers in Mattannur | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1887,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-manufacturers-in-nedumkandam/",
+      "rel_path": "resources/preview/udyam-registration-for-small-manufacturers-in-nedumkandam/index.html",
+      "title": "Udyam MSME Registration in Nedumkandam | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1561,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-manufacturers-in-wadakkanchery/",
+      "rel_path": "resources/preview/udyam-registration-for-small-manufacturers-in-wadakkanchery/index.html",
+      "title": "Wadakkanchery Small Manufacturers Udyam Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1883,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-manufacturing-businesses-in-kalamassery/",
+      "rel_path": "resources/preview/udyam-registration-for-small-manufacturing-businesses-in-kalamassery/index.html",
+      "title": "Udyam Registration for Manufacturers in Kalamassery | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1904,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-for-small-product-manufacturers-in-alappuzha/",
+      "rel_path": "resources/preview/udyam-registration-for-small-product-manufacturers-in-alappuzha/index.html",
+      "title": "Udyam MSME Registration for Alappuzha Manufacturers | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1573,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-manufacturers-traders-kundara/",
+      "rel_path": "resources/preview/udyam-registration-manufacturers-traders-kundara/index.html",
+      "title": "Udyam MSME Registration in Kundara | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1311,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/udyam-registration-small-businesses-attingal/",
+      "rel_path": "resources/preview/udyam-registration-small-businesses-attingal/index.html",
+      "title": "Udyam MSME Registration in Attingal | BRNDNUR Advisory | BRNDNUR Draft Preview",
+      "word_count": 1461,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/what-to-do-when-a-similar-business-name-already-exists-in-kollam/",
+      "rel_path": "resources/preview/what-to-do-when-a-similar-business-name-already-exists-in-kollam/index.html",
+      "title": "What to Do If Similar Business Name Exists in Kollam | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1640,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/wordmark-vs-logo-registration-for-e-commerce-brands-in-edappally/",
+      "rel_path": "resources/preview/wordmark-vs-logo-registration-for-e-commerce-brands-in-edappally/index.html",
+      "title": "Wordmark vs Logo for Edappally E-Commerce Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1637,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/wordmark-vs-logo-trademark-for-brands-in-kottakkal/",
+      "rel_path": "resources/preview/wordmark-vs-logo-trademark-for-brands-in-kottakkal/index.html",
+      "title": "Kottakkal Wordmark vs Logo Trademark Guide | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 2009,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/wordmark-vs-logo-trademark-for-new-brands-in-pala/",
+      "rel_path": "resources/preview/wordmark-vs-logo-trademark-for-new-brands-in-pala/index.html",
+      "title": "Wordmark vs Logo Trademark in Pala | BRNDNUR Guide | BRNDNUR Draft Preview",
+      "word_count": 1703,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/preview/wordmark-vs-logo-which-is-more-suitable-for-businesses-in-thiruvalla/",
+      "rel_path": "resources/preview/wordmark-vs-logo-which-is-more-suitable-for-businesses-in-thiruvalla/index.html",
+      "title": "Wordmark vs Logo: Best Trademark for Thiruvalla Brands | BRNDNUR | BRNDNUR Draft Preview",
+      "word_count": 1721,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/trademark-application-process/",
+      "rel_path": "resources/trademark-application-process/index.html",
+      "title": "Trademark Application Process in India | Guide | BRNDNUR",
+      "word_count": 1056,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/trademark-class-guide/",
+      "rel_path": "resources/trademark-class-guide/index.html",
+      "title": "Trademark Class Guide (Classes 1\u201345) | BRNDNUR Advisory LLP",
+      "word_count": 1001,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/resources/trademark-registration-guide/",
+      "rel_path": "resources/trademark-registration-guide/index.html",
+      "title": "Trademark Registration Guide for Indian Businesses | BRNDNUR",
+      "word_count": 1175,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/services/",
+      "rel_path": "services/index.html",
+      "title": "Services &amp; Business Advisory | BRNDNUR Advisory LLP",
+      "word_count": 1320,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "rel_path": "terms-and-conditions/index.html",
+      "title": "Terms &amp; Conditions | BRNDNUR Advisory LLP",
+      "word_count": 1122,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/trademark-classes/",
+      "rel_path": "trademark-classes/index.html",
+      "title": "Trademark Classes in India | NICE Guide | BRNDNUR",
+      "word_count": 1399,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/trademark-monitoring/",
+      "rel_path": "trademark-monitoring/index.html",
+      "title": "Trademark Monitoring &amp; Brand Watch in India | BRNDNUR",
+      "word_count": 1421,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/trademark-registration/",
+      "rel_path": "trademark-registration/index.html",
+      "title": "Trademark Registration Support | BRNDNUR Advisory LLP",
+      "word_count": 1569,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/trademark-renewal/",
+      "rel_path": "trademark-renewal/index.html",
+      "title": "Trademark Renewal in India | 10-Year Maintenance | BRNDNUR",
+      "word_count": 1379,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/udyam-msme-registration/",
+      "rel_path": "udyam-msme-registration/index.html",
+      "title": "Udyam / MSME Registration Guidance | BRNDNUR Advisory LLP",
+      "word_count": 1355,
+      "has_header": true,
+      "has_footer": true
+    },
+    {
+      "route": "/wordmark-registration/",
+      "rel_path": "wordmark-registration/index.html",
+      "title": "Wordmark Registration in India | BRNDNUR Advisory LLP",
+      "word_count": 1392,
+      "has_header": true,
+      "has_footer": true
+    }
+  ],
+  "content_records": [
+    {
+      "file": "KL-001.json",
+      "id": "KL-001",
+      "slug": "trademark-registration-thiruvananthapuram-guide",
+      "district": "Thiruvananthapuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-002.json",
+      "id": "KL-002",
+      "slug": "brand-name-availability-kazhakkoottam",
+      "district": "Thiruvananthapuram",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-003.json",
+      "id": "KL-003",
+      "slug": "trademark-protection-it-startups-technopark",
+      "district": "Thiruvananthapuram",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-004.json",
+      "id": "KL-004",
+      "slug": "trademark-classes-saas-digital-businesses-thiruvananthapuram",
+      "district": "Thiruvananthapuram",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-005.json",
+      "id": "KL-005",
+      "slug": "fssai-registration-brand-protection-cloud-kitchens-kazhakkoottam",
+      "district": "Thiruvananthapuram",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-006.json",
+      "id": "KL-006",
+      "slug": "brand-protection-homestays-hospitality-varkala",
+      "district": "Thiruvananthapuram",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-007.json",
+      "id": "KL-007",
+      "slug": "choose-protect-brand-name-tourism-kovalam",
+      "district": "Thiruvananthapuram",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-008.json",
+      "id": "KL-008",
+      "slug": "trademark-registration-textile-brands-balaramapuram",
+      "district": "Thiruvananthapuram",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-009.json",
+      "id": "KL-009",
+      "slug": "udyam-registration-small-businesses-attingal",
+      "district": "Thiruvananthapuram",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-010.json",
+      "id": "KL-010",
+      "slug": "gst-registration-checklist-retailers-neyyattinkara",
+      "district": "Thiruvananthapuram",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-011.json",
+      "id": "KL-011",
+      "slug": "home-based-businesses-nedumangad-brand-protection",
+      "district": "Thiruvananthapuram",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-012.json",
+      "id": "KL-012",
+      "slug": "logo-vs-wordmark-registration-kattakada",
+      "district": "Thiruvananthapuram",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-013.json",
+      "id": "KL-013",
+      "slug": "trademark-classes-seafood-packaged-food-vizhinjam",
+      "district": "Thiruvananthapuram",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-014.json",
+      "id": "KL-014",
+      "slug": "trademark-renewal-brand-monitoring-thiruvananthapuram",
+      "district": "Thiruvananthapuram",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-015.json",
+      "id": "KL-015",
+      "slug": "trademark-registration-kollam-guide",
+      "district": "Kollam",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-016.json",
+      "id": "KL-016",
+      "slug": "check-brand-name-availability-kottarakkara",
+      "district": "Kollam",
+      "h2_count": 2,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-017.json",
+      "id": "KL-017",
+      "slug": "trademark-protection-cashew-packaged-food-kollam",
+      "district": "Kollam",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-018.json",
+      "id": "KL-018",
+      "slug": "brand-name-registration-seafood-food-karunagappally",
+      "district": "Kollam",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-019.json",
+      "id": "KL-019",
+      "slug": "udyam-registration-manufacturers-traders-kundara",
+      "district": "Kollam",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-020.json",
+      "id": "KL-020",
+      "slug": "business-registration-checklist-punalur",
+      "district": "Kollam",
+      "h2_count": 3,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-021.json",
+      "id": "KL-021",
+      "slug": "fssai-and-trademark-planning-for-local-food-brands-in-paravur",
+      "district": "Kollam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-022.json",
+      "id": "KL-022",
+      "slug": "protecting-retail-shop-names-and-logos-in-chathannoor",
+      "district": "Kollam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-023.json",
+      "id": "KL-023",
+      "slug": "trademark-protection-for-tourism-and-hospitality-businesses-in-thenmala",
+      "district": "Kollam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-024.json",
+      "id": "KL-024",
+      "slug": "how-small-businesses-in-sasthamkotta-can-build-a-protectable-brand",
+      "district": "Kollam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-025.json",
+      "id": "KL-025",
+      "slug": "choosing-trademark-classes-for-handicraft-and-consumer-product-businesses-in-kollam",
+      "district": "Kollam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-026.json",
+      "id": "KL-026",
+      "slug": "gst-and-trademark-registration-a-checklist-for-wholesale-traders-in-kollam",
+      "district": "Kollam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-027.json",
+      "id": "KL-027",
+      "slug": "trademark-basics-for-online-sellers-starting-from-anchal",
+      "district": "Kollam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-028.json",
+      "id": "KL-028",
+      "slug": "what-to-do-when-a-similar-business-name-already-exists-in-kollam",
+      "district": "Kollam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-029.json",
+      "id": "KL-029",
+      "slug": "trademark-registration-in-pathanamthitta-a-guide-for-first-time-applicants",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-030.json",
+      "id": "KL-030",
+      "slug": "how-to-conduct-a-brand-name-search-for-businesses-in-thiruvalla",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-031.json",
+      "id": "KL-031",
+      "slug": "brand-protection-for-retailers-and-service-businesses-in-adoor",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-032.json",
+      "id": "KL-032",
+      "slug": "fssai-and-trademark-registration-for-food-brands-in-pandalam",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-033.json",
+      "id": "KL-033",
+      "slug": "udyam-registration-for-small-manufacturers-and-entrepreneurs-in-ranni",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-034.json",
+      "id": "KL-034",
+      "slug": "trademark-planning-for-tourism-and-travel-businesses-around-konni",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-035.json",
+      "id": "KL-035",
+      "slug": "how-bakeries-and-packaged-food-sellers-in-kozhencherry-can-protect-their-brand",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-036.json",
+      "id": "KL-036",
+      "slug": "gst-registration-checklist-for-traders-in-mallappally",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-037.json",
+      "id": "KL-037",
+      "slug": "how-to-select-a-business-name-before-registering-a-brand-in-adoor",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-038.json",
+      "id": "KL-038",
+      "slug": "wordmark-vs-logo-which-is-more-suitable-for-businesses-in-thiruvalla",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-039.json",
+      "id": "KL-039",
+      "slug": "trademark-registration-for-professional-service-businesses-in-pathanamthitta",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-040.json",
+      "id": "KL-040",
+      "slug": "common-trademark-filing-mistakes-made-by-first-time-business-owners",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-041.json",
+      "id": "KL-041",
+      "slug": "trademark-renewal-what-established-businesses-in-pathanamthitta-should-know",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-042.json",
+      "id": "KL-042",
+      "slug": "starting-a-business-after-returning-from-the-gulf-a-guide-for-thiruvalla-entrepreneurs",
+      "district": "Pathanamthitta",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-043.json",
+      "id": "KL-043",
+      "slug": "trademark-registration-in-alappuzha-a-local-business-owners-guide",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-044.json",
+      "id": "KL-044",
+      "slug": "how-to-protect-the-brand-name-of-a-houseboat-or-tourism-business-in-alappuzha",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-045.json",
+      "id": "KL-045",
+      "slug": "brand-name-ideas-and-trademark-checks-for-homestays-in-alappuzha",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-046.json",
+      "id": "KL-046",
+      "slug": "fssai-and-trademark-planning-for-packaged-food-businesses-in-cherthala",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-047.json",
+      "id": "KL-047",
+      "slug": "trademark-protection-for-coir-product-brands-in-cherthala",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-048.json",
+      "id": "KL-048",
+      "slug": "how-online-sellers-in-kayamkulam-can-register-and-protect-their-brand",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-049.json",
+      "id": "KL-049",
+      "slug": "trademark-classes-for-seafood-and-processed-food-businesses-in-aroo",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-050.json",
+      "id": "KL-050",
+      "slug": "brand-protection-for-cafes-restaurants-and-hospitality-businesses-in-mararikulam",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-051.json",
+      "id": "KL-051",
+      "slug": "how-to-choose-the-right-trademark-class-for-coir-products-in-alappuzha",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-052.json",
+      "id": "KL-052",
+      "slug": "logo-trademark-registration-for-tourism-businesses-in-ambalappuzha",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-053.json",
+      "id": "KL-053",
+      "slug": "gst-registration-and-brand-protection-for-retailers-in-mavelikkara",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-054.json",
+      "id": "KL-054",
+      "slug": "business-registration-checklist-for-new-ventures-in-chengannur",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-055.json",
+      "id": "KL-055",
+      "slug": "trademark-monitoring-for-hospitality-and-retail-brands-in-alappuzha",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-056.json",
+      "id": "KL-056",
+      "slug": "udyam-registration-for-small-product-manufacturers-in-alappuzha",
+      "district": "Alappuzha",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-057.json",
+      "id": "KL-057",
+      "slug": "trademark-registration-in-kottayam-process-documents-and-costs",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-058.json",
+      "id": "KL-058",
+      "slug": "wordmark-vs-logo-trademark-for-new-brands-in-pala",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-059.json",
+      "id": "KL-059",
+      "slug": "how-to-protect-rubber-based-product-brands-in-the-kottayam-region",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-060.json",
+      "id": "KL-060",
+      "slug": "udyam-registration-for-small-businesses-in-changanassery",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-061.json",
+      "id": "KL-061",
+      "slug": "trademark-protection-for-publishing-printing-and-educational-brands-in-kottayam",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-062.json",
+      "id": "KL-062",
+      "slug": "fssai-and-trademark-planning-for-packaged-food-businesses-in-ettumanoor",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-063.json",
+      "id": "KL-063",
+      "slug": "gst-registration-checklist-for-traders-in-vaikom",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-064.json",
+      "id": "KL-064",
+      "slug": "how-boutiques-and-clothing-businesses-in-erattupetta-can-protect-their-logos",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-065.json",
+      "id": "KL-065",
+      "slug": "brand-name-search-for-new-retail-businesses-in-kanjirappally",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-066.json",
+      "id": "KL-066",
+      "slug": "how-to-choose-a-distinctive-business-name-in-kottayam",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-067.json",
+      "id": "KL-067",
+      "slug": "trademark-classes-for-cafes-and-food-brands-in-pala",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-068.json",
+      "id": "KL-068",
+      "slug": "registration-checklist-for-professional-service-businesses-in-kottayam",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-069.json",
+      "id": "KL-069",
+      "slug": "trademark-renewal-and-monitoring-for-established-brands-in-changanassery",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-070.json",
+      "id": "KL-070",
+      "slug": "how-small-businesses-in-kottayam-can-protect-their-brands-online",
+      "district": "Kottayam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-071.json",
+      "id": "KL-071",
+      "slug": "trademark-registration-in-thodupuzha-a-step-by-step-business-guide",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-072.json",
+      "id": "KL-072",
+      "slug": "how-to-protect-a-coffee-brand-in-munnar",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-073.json",
+      "id": "KL-073",
+      "slug": "trademark-registration-for-spice-product-brands-in-idukki",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-074.json",
+      "id": "KL-074",
+      "slug": "choosing-trademark-classes-for-homestays-and-hospitality-businesses-in-munnar",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-075.json",
+      "id": "KL-075",
+      "slug": "fssai-and-trademark-planning-for-packaged-spice-businesses-in-kattappana",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-076.json",
+      "id": "KL-076",
+      "slug": "udyam-registration-for-small-manufacturers-in-nedumkandam",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-077.json",
+      "id": "KL-077",
+      "slug": "brand-protection-for-tourism-and-activity-operators-in-thekkady",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-078.json",
+      "id": "KL-078",
+      "slug": "how-to-check-brand-name-availability-before-launching-in-adimali",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-079.json",
+      "id": "KL-079",
+      "slug": "logo-trademark-registration-for-local-food-brands-in-kumily",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-080.json",
+      "id": "KL-080",
+      "slug": "gst-registration-checklist-for-retail-shops-in-thodupuzha",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-081.json",
+      "id": "KL-081",
+      "slug": "how-cafes-in-munnar-can-select-and-protect-a-distinctive-brand-name",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-082.json",
+      "id": "KL-082",
+      "slug": "branding-and-registration-checklist-for-spice-producers-in-idukki",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-083.json",
+      "id": "KL-083",
+      "slug": "business-setup-considerations-for-homestay-owners-in-idukki",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-084.json",
+      "id": "KL-084",
+      "slug": "trademark-renewal-for-tourism-and-product-brands-in-idukki",
+      "district": "Idukki",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-085.json",
+      "id": "KL-085",
+      "slug": "trademark-registration-in-kochi-a-complete-guide-for-entrepreneurs",
+      "district": "Ernakulam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-086.json",
+      "id": "KL-086",
+      "slug": "how-to-check-brand-name-availability-for-businesses-in-kakkanad",
+      "district": "Ernakulam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-087.json",
+      "id": "KL-087",
+      "slug": "trademark-protection-for-saas-and-technology-startups-around-infopark",
+      "district": "Ernakulam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-088.json",
+      "id": "KL-088",
+      "slug": "wordmark-vs-logo-registration-for-e-commerce-brands-in-edappally",
+      "district": "Ernakulam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-089.json",
+      "id": "KL-089",
+      "slug": "gst-and-business-registration-checklist-for-entrepreneurs-in-aluva",
+      "district": "Ernakulam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-090.json",
+      "id": "KL-090",
+      "slug": "fssai-and-trademark-planning-for-cloud-kitchens-in-kochi",
+      "district": "Ernakulam",
+      "h2_count": 4,
+      "faq_count": 2,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-091.json",
+      "id": "KL-091",
+      "slug": "trademark-classes-for-product-manufacturers-in-perumbavoor",
+      "district": "Ernakulam",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-092.json",
+      "id": "KL-092",
+      "slug": "udyam-registration-for-small-manufacturing-businesses-in-kalamassery",
+      "district": "Ernakulam",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-093.json",
+      "id": "KL-093",
+      "slug": "trademark-protection-for-beauty-retail-and-consumer-brands-in-thrippunithura",
+      "district": "Ernakulam",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-094.json",
+      "id": "KL-094",
+      "slug": "how-to-choose-a-business-name-for-a-new-venture-in-angamaly",
+      "district": "Ernakulam",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-095.json",
+      "id": "KL-095",
+      "slug": "brand-protection-for-cafes-and-hospitality-businesses-in-fort-kochi",
+      "district": "Ernakulam",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-096.json",
+      "id": "KL-096",
+      "slug": "trademark-registration-for-hospitality-and-retail-brands-in-maradu",
+      "district": "Ernakulam",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-097.json",
+      "id": "KL-097",
+      "slug": "logo-trademark-registration-for-agencies-and-service-businesses-in-muvattupuzha",
+      "district": "Ernakulam",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-098.json",
+      "id": "KL-098",
+      "slug": "how-businesses-in-ernakulam-can-respond-to-brand-copying-online",
+      "district": "Ernakulam",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-099.json",
+      "id": "KL-099",
+      "slug": "trademark-registration-in-thrissur-what-business-owners-should-prepare",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-100.json",
+      "id": "KL-100",
+      "slug": "trademark-protection-for-jewellery-and-gold-retail-brands-in-thrissur",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-101.json",
+      "id": "KL-101",
+      "slug": "how-jewellery-businesses-can-check-brand-name-availability-before-expansion",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-102.json",
+      "id": "KL-102",
+      "slug": "trademark-classes-for-wellness-and-consumer-product-brands-in-thrissur",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-103.json",
+      "id": "KL-103",
+      "slug": "fssai-and-trademark-planning-for-packaged-snack-brands-in-irinjalakuda",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-104.json",
+      "id": "KL-104",
+      "slug": "trademark-protection-for-furniture-and-product-manufacturers-in-kunnamkulam",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-105.json",
+      "id": "KL-105",
+      "slug": "how-to-conduct-a-brand-name-search-for-businesses-in-chalakudy",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-106.json",
+      "id": "KL-106",
+      "slug": "business-registration-checklist-for-retailers-in-kodungallur",
+      "district": "Thrissur",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-107.json",
+      "id": "KL-107",
+      "slug": "udyam-registration-for-small-manufacturers-in-wadakkanchery",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-108.json",
+      "id": "KL-108",
+      "slug": "trademark-planning-for-tourism-and-hospitality-businesses-in-guruvayur",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-109.json",
+      "id": "KL-109",
+      "slug": "trademark-protection-for-clothing-and-textile-businesses-in-thrissur",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-110.json",
+      "id": "KL-110",
+      "slug": "registration-checklist-for-bakeries-and-packaged-food-businesses-in-thrissur",
+      "district": "Thrissur",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-111.json",
+      "id": "KL-111",
+      "slug": "gst-and-trademark-planning-for-wholesale-traders-in-thrissur",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-112.json",
+      "id": "KL-112",
+      "slug": "trademark-renewal-for-established-retail-and-product-brands-in-thrissur",
+      "district": "Thrissur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-113.json",
+      "id": "KL-113",
+      "slug": "trademark-registration-in-palakkad-a-guide-for-small-businesses",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-114.json",
+      "id": "KL-114",
+      "slug": "trademark-planning-for-agricultural-product-brands-in-chittur",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-115.json",
+      "id": "KL-115",
+      "slug": "choosing-trademark-classes-for-packaged-food-and-spice-brands-in-mannarkkad",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-116.json",
+      "id": "KL-116",
+      "slug": "udyam-registration-for-manufacturers-in-kanjikode",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-117.json",
+      "id": "KL-117",
+      "slug": "trademark-protection-for-boutiques-and-online-sellers-in-ottapalam",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-118.json",
+      "id": "KL-118",
+      "slug": "gst-registration-checklist-for-distributors-in-shoranur",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-119.json",
+      "id": "KL-119",
+      "slug": "fssai-and-trademark-planning-for-packaged-food-brands-in-alathur",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-120.json",
+      "id": "KL-120",
+      "slug": "how-to-check-business-name-availability-in-pattambi",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-121.json",
+      "id": "KL-121",
+      "slug": "brand-protection-considerations-for-export-oriented-businesses-near-walayar",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-122.json",
+      "id": "KL-122",
+      "slug": "logo-trademark-registration-for-service-businesses-in-palakkad",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-123.json",
+      "id": "KL-123",
+      "slug": "how-to-protect-a-regional-rice-or-millet-product-brand-in-palakkad",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-124.json",
+      "id": "KL-124",
+      "slug": "trademark-planning-for-agriculture-related-businesses-in-palakkad",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-125.json",
+      "id": "KL-125",
+      "slug": "trademark-renewal-and-monitoring-for-established-businesses-in-palakkad",
+      "district": "Palakkad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-126.json",
+      "id": "KL-126",
+      "slug": "business-launch-checklist-for-entrepreneurs-in-cherpulassery",
+      "district": "Palakkad",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-127.json",
+      "id": "KL-127",
+      "slug": "trademark-registration-in-malappuram-a-guide-for-local-businesses",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-128.json",
+      "id": "KL-128",
+      "slug": "how-to-check-brand-name-availability-for-businesses-in-manjeri",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-129.json",
+      "id": "KL-129",
+      "slug": "wordmark-vs-logo-trademark-for-brands-in-kottakkal",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-130.json",
+      "id": "KL-130",
+      "slug": "business-registration-checklist-for-service-businesses-in-perinthalmanna",
+      "district": "Malappuram",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-131.json",
+      "id": "KL-131",
+      "slug": "trademark-protection-for-clothing-and-garment-brands-in-tirur",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-132.json",
+      "id": "KL-132",
+      "slug": "udyam-registration-for-micro-businesses-in-valanchery",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-133.json",
+      "id": "KL-133",
+      "slug": "fssai-and-trademark-planning-for-food-brands-in-kondotty",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-134.json",
+      "id": "KL-134",
+      "slug": "trademark-registration-for-online-sellers-starting-in-nilambur",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-135.json",
+      "id": "KL-135",
+      "slug": "brand-protection-for-seafood-and-food-product-businesses-in-ponnani",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-136.json",
+      "id": "KL-136",
+      "slug": "how-retail-shops-in-tanur-can-protect-their-business-names-and-logos",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-137.json",
+      "id": "KL-137",
+      "slug": "gst-registration-checklist-for-traders-in-tirurangadi",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-138.json",
+      "id": "KL-138",
+      "slug": "starting-a-business-after-returning-from-the-gulf-a-malappuram-founders-checklist",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-139.json",
+      "id": "KL-139",
+      "slug": "brand-name-search-and-trademark-planning-for-e-commerce-sellers-in-edappal",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-140.json",
+      "id": "KL-140",
+      "slug": "trademark-protection-for-food-cosmetics-and-apparel-brands-in-parappanangadi",
+      "district": "Malappuram",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-141.json",
+      "id": "KL-141",
+      "slug": "trademark-registration-in-kozhikode-complete-guide-for-entrepreneurs",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-142.json",
+      "id": "KL-142",
+      "slug": "how-to-check-brand-name-availability-before-launching-in-kozhikode",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-143.json",
+      "id": "KL-143",
+      "slug": "trademark-protection-for-food-and-packaged-snack-brands-in-kozhikode",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-144.json",
+      "id": "KL-144",
+      "slug": "logo-trademark-registration-for-restaurants-and-cafes-in-beypore",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-145.json",
+      "id": "KL-145",
+      "slug": "brand-protection-for-furniture-and-craft-product-businesses-in-feroke",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-146.json",
+      "id": "KL-146",
+      "slug": "gst-registration-and-business-setup-checklist-for-retailers-in-ramanattukara",
+      "district": "Kozhikode",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-147.json",
+      "id": "KL-147",
+      "slug": "udyam-registration-for-small-manufacturers-in-koyilandy",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-148.json",
+      "id": "KL-148",
+      "slug": "fssai-and-trademark-planning-for-home-based-food-businesses-in-mukkam",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-149.json",
+      "id": "KL-149",
+      "slug": "trademark-protection-for-it-and-digital-agencies-in-kozhikode",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-150.json",
+      "id": "KL-150",
+      "slug": "how-beauty-and-personal-care-brands-in-kozhikode-can-select-a-trademark-class",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-151.json",
+      "id": "KL-151",
+      "slug": "trademark-registration-for-clothing-and-retail-brands-in-vadakara",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-152.json",
+      "id": "KL-152",
+      "slug": "how-online-sellers-in-koduvally-can-protect-their-product-brands",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-153.json",
+      "id": "KL-153",
+      "slug": "business-launch-checklist-for-first-time-founders-in-perambra",
+      "district": "Kozhikode",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-154.json",
+      "id": "KL-154",
+      "slug": "trademark-renewal-and-brand-monitoring-for-businesses-in-kozhikode",
+      "district": "Kozhikode",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-155.json",
+      "id": "KL-155",
+      "slug": "trademark-registration-in-wayanad-a-guide-for-local-entrepreneurs",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-156.json",
+      "id": "KL-156",
+      "slug": "how-to-protect-a-coffee-brand-in-wayanad",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-157.json",
+      "id": "KL-157",
+      "slug": "trademark-registration-for-spice-product-brands-in-sulthan-bathery",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-158.json",
+      "id": "KL-158",
+      "slug": "trademark-classes-for-homestays-and-tourism-businesses-in-vythiri",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-159.json",
+      "id": "KL-159",
+      "slug": "business-registration-checklist-for-tourism-entrepreneurs-in-meppadi",
+      "district": "Wayanad",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-160.json",
+      "id": "KL-160",
+      "slug": "logo-trademark-registration-for-local-food-brands-in-pulpally",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-161.json",
+      "id": "KL-161",
+      "slug": "udyam-registration-for-small-coffee-roasters-in-mananthavady",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-162.json",
+      "id": "KL-162",
+      "slug": "fssai-and-trademark-planning-for-packaged-produce-in-ambalavayal",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-163.json",
+      "id": "KL-163",
+      "slug": "how-tourism-businesses-in-kalpetta-can-choose-a-distinctive-brand-name",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-164.json",
+      "id": "KL-164",
+      "slug": "trademark-planning-for-honey-and-spice-product-brands-in-wayanad",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-165.json",
+      "id": "KL-165",
+      "slug": "online-brand-protection-for-small-agricultural-product-sellers-in-wayanad",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-166.json",
+      "id": "KL-166",
+      "slug": "gst-registration-checklist-for-retail-businesses-in-kalpetta",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-167.json",
+      "id": "KL-167",
+      "slug": "trademark-monitoring-for-coffee-spice-and-tourism-brands-in-wayanad",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-168.json",
+      "id": "KL-168",
+      "slug": "new-brand-launch-checklist-for-small-businesses-across-wayanad",
+      "district": "Wayanad",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-169.json",
+      "id": "KL-169",
+      "slug": "trademark-registration-in-kannur-a-practical-guide-for-businesses",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-170.json",
+      "id": "KL-170",
+      "slug": "trademark-protection-for-handloom-and-textile-brands-in-kannur",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-171.json",
+      "id": "KL-171",
+      "slug": "how-food-brands-in-thalassery-can-check-brand-name-availability",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-172.json",
+      "id": "KL-172",
+      "slug": "logo-trademark-registration-for-boutiques-in-payyanur",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-173.json",
+      "id": "KL-173",
+      "slug": "trademark-classes-for-furniture-and-product-businesses-in-iritty",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-174.json",
+      "id": "KL-174",
+      "slug": "udyam-registration-for-small-manufacturers-in-mattannur",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-175.json",
+      "id": "KL-175",
+      "slug": "fssai-and-trademark-planning-for-bakery-and-snack-brands-in-thalassery",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-176.json",
+      "id": "KL-176",
+      "slug": "brand-protection-for-tourism-businesses-near-muzhappilangad",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-177.json",
+      "id": "KL-177",
+      "slug": "gst-registration-checklist-for-traders-in-taliparamba",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-178.json",
+      "id": "KL-178",
+      "slug": "trademark-protection-for-online-sellers-in-kannur",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-179.json",
+      "id": "KL-179",
+      "slug": "business-name-vs-trademark-what-founders-in-kuthuparamba-should-know",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-180.json",
+      "id": "KL-180",
+      "slug": "how-local-food-product-brands-in-panoor-can-protect-their-names",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-181.json",
+      "id": "KL-181",
+      "slug": "business-registration-checklist-for-entrepreneurs-in-dharmadam",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-182.json",
+      "id": "KL-182",
+      "slug": "trademark-renewal-and-monitoring-for-established-businesses-in-kannur",
+      "district": "Kannur",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-183.json",
+      "id": "KL-183",
+      "slug": "trademark-registration-in-kasaragod-a-business-owners-guide",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-184.json",
+      "id": "KL-184",
+      "slug": "how-to-check-brand-name-availability-for-businesses-in-kanhangad",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-185.json",
+      "id": "KL-185",
+      "slug": "logo-trademark-registration-for-retailers-in-nileshwaram",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-186.json",
+      "id": "KL-186",
+      "slug": "trademark-protection-for-cashew-and-food-product-brands-in-kasaragod",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-187.json",
+      "id": "KL-187",
+      "slug": "udyam-registration-for-local-entrepreneurs-in-uppala",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-188.json",
+      "id": "KL-188",
+      "slug": "fssai-and-trademark-planning-for-food-businesses-in-manjeshwaram",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-189.json",
+      "id": "KL-189",
+      "slug": "trademark-protection-for-handloom-and-textile-businesses-in-kasaragod",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-190.json",
+      "id": "KL-190",
+      "slug": "brand-registration-considerations-for-homestays-and-tourism-businesses-in-bekal",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-191.json",
+      "id": "KL-191",
+      "slug": "how-businesses-in-kanhangad-can-respond-to-similar-brand-names",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-192.json",
+      "id": "KL-192",
+      "slug": "trademark-planning-for-e-commerce-sellers-in-kasaragod",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-193.json",
+      "id": "KL-193",
+      "slug": "choosing-trademark-classes-for-spice-product-brands-in-kasaragod",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-194.json",
+      "id": "KL-194",
+      "slug": "branding-and-trademark-checklist-for-local-product-manufacturers",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-195.json",
+      "id": "KL-195",
+      "slug": "gst-and-business-registration-questions-for-small-traders-in-cheruvathur",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-196.json",
+      "id": "KL-196",
+      "slug": "trademark-renewal-and-monitoring-for-businesses-across-kasaragod",
+      "district": "Kasaragod",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-197.json",
+      "id": "KL-197",
+      "slug": "trademark-registration-in-kerala-a-complete-guide-to-the-application-process-documents-and-fees",
+      "district": "Kerala-Wide",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-198.json",
+      "id": "KL-198",
+      "slug": "business-registration-across-kerala-a-checklist-for-gst-udyam-fssai-and-brand-protection",
+      "district": "Kerala-Wide",
+      "h2_count": 5,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-199.json",
+      "id": "KL-199",
+      "slug": "choosing-the-right-trademark-class-for-kerala-businesses-examples-from-food-fashion-technology-and-tourism",
+      "district": "Kerala-Wide",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    },
+    {
+      "file": "KL-200.json",
+      "id": "KL-200",
+      "slug": "starting-a-business-in-kerala-after-returning-from-the-gulf-brand-registration-and-business-setup-checklist",
+      "district": "Kerala-Wide",
+      "h2_count": 6,
+      "faq_count": 3,
+      "published": false,
+      "missing_fields": []
+    }
+  ],
+  "broken_internal_links": [],
+  "broken_images": [],
+  "heading_issues": [],
+  "meta_issues": [],
+  "empty_sections": [],
+  "short_pages": [],
+  "redirect_routes": [
+    "/blog/",
+    "/trademark/"
+  ]
+}

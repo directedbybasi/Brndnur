@@ -1,0 +1,16 @@
+{
+  "secretsCheck": {
+    "passed": true,
+    "exposedSecretsFound": 0,
+    "scannedFiles": 53
+  },
+  "javascriptProtocolLinks": 0,
+  "targetBlankNoopenerFailures": 0,
+  "htaccessHeadersConfigured": true,
+  "headersFound": [
+    "X-Frame-Options",
+    "X-Content-Type-Options",
+    "Referrer-Policy",
+    "Permissions-Policy"
+  ]
+}

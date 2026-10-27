@@ -1,11 +1,95 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/hero/PageHero.astro";
+import CardCarousel from "../../components/CardCarousel.astro";
+import FaqItem from "../../components/FaqItem.astro";
 
 const title = "Packages & Pricing | BRNDNUR Advisory LLP";
 const description =
   "Compare trademark and business support package options from BRNDNUR Advisory LLP. Understand indicative inclusions and request a personalised quotation.";
 const canonical = "https://brndnur.com/packages/";
 const ogImage = "/packages/assets/hero-packages.webp";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroQuoteUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Hero Section',
+  enquiryType: 'Personalised Package Quotation',
+  topic: 'I am exploring your packages and would like a personalised quotation tailored to my business requirements.',
+  details: 'Proposed brand name / business: [Please enter]\nServices needed: [Please specify]',
+  callToAction: 'Could you please advise on the most suitable package and fee breakdown?'
+});
+
+const starterPackUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Brand Starter Pack Card',
+  enquiryType: 'Brand Starter Package Enquiry',
+  topic: 'I am interested in the Brand Starter Pack displayed on your website.',
+  details: 'Proposed brand name: [Please enter your brand name if known]',
+  callToAction: 'Could you please share current package scope, applicable statutory fees, professional charges, and onboarding steps?'
+});
+
+const tmPackageUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Standard Trademark Package Card',
+  enquiryType: 'Trademark Registration Package Enquiry',
+  topic: 'I am interested in the comprehensive Trademark Registration Package displayed on your website.',
+  details: 'Applicant type: [Individual / MSME / Company]\nProposed brand name: [Please enter]',
+  callToAction: 'Could you please confirm the current package inclusions, government fees, and procedure to proceed?'
+});
+
+const foodBrandUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Food Brand Package Card',
+  enquiryType: 'Food Brand Package Enquiry',
+  topic: 'I am interested in the Food Brand Package combining Trademark Registration and FSSAI Licensing.',
+  details: 'Food brand / business concept: [Please describe]',
+  callToAction: 'Could you please confirm the package scope, statutory fees, and documents required?'
+});
+
+const gulfPackageUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Gulf Return Business Package Card',
+  enquiryType: 'Gulf Return Business Package Enquiry',
+  topic: 'I am an NRI interested in the Gulf-Return Business Package for establishing a business in Kerala.',
+  details: 'Current location / Gulf country: [e.g. UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain]',
+  callToAction: 'Could you please arrange a remote consultation and share complete package scope and pricing?'
+});
+
+const brandWatchAddonUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Brand Watch Add-on',
+  enquiryType: 'Brand Watch Monitoring Add-on',
+  topic: 'I would like more information on adding Brand Watch journal surveillance to my trademark services.',
+  callToAction: 'Could you please share monitoring durations, fee structures, and how conflicting marks are reported?'
+});
+
+const tmRenewalAddonUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Renewal Support Add-on',
+  enquiryType: 'Trademark Renewal Add-on',
+  topic: 'I would like to inquire about your Trademark Renewal and Maintenance support services.',
+  details: 'Registered mark or application number: [Please enter if known]',
+  callToAction: 'Could you please explain your renewal tracking protocol and charges?'
+});
+
+const bizRegAddonUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Business Registrations Add-on',
+  enquiryType: 'Business Registration Add-on',
+  topic: 'I would like assistance with statutory business registrations such as GST, Udyam MSME, or FSSAI alongside trademark protection.',
+  details: 'Registrations needed: [e.g. GST, Udyam, FSSAI]',
+  callToAction: 'Could you please explain bundle pricing and documentation requirements?'
+});
+
+const closingPackageQuoteUrl = buildWhatsAppUrl({
+  pageName: 'Packages Hub',
+  sectionName: 'Closing CTA Band',
+  enquiryType: 'Custom Package Quotation',
+  topic: 'I would like a customized quotation for integrated brand and business advisory services.',
+  details: 'Enterprise name / requirement: [Please describe]',
+  callToAction: 'Could you please connect me with an advisor to discuss a tailored service proposal?'
+});
 ---
 
 <BaseLayout
@@ -14,6 +98,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
   canonical={canonical}
   ogImage={ogImage}
   currentPath="/packages/"
+  hasCustomSchema={true}
 >
   <Fragment slot="head">
     <script type="application/ld+json">
@@ -93,53 +178,31 @@ const ogImage = "/packages/assets/hero-packages.webp";
   </Fragment>
 
   <main id="main-content">
-    <section class="hero">
-      <div
-        class="hero-image"
-        role="img"
-        aria-label="Warm ivory trademark portfolio, gold emblem and pen on a marble office desk"
-      >
-      </div>
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Packages &amp; Pricing</p>
-          <h1>
-            Clear Options.<br />Practical Support.<br /><span
-              >One Stronger Brand.</span>
-          </h1>
-          <p class="hero-text">
-            Compare our trademark and business support packages, understand
-            what's included, and choose the right starting point for your
-            business.
-          </p>
-          <div class="button-row">
-            <a class="button button-navy" href="#packages"
-              >Explore Packages <span aria-hidden="true">→</span></a
-            >
-            <a
-              class="button button-outline"
-              href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%27d%20like%20a%20personalised%20package%20quote."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true"
-                ><path
-                  d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.4-4.9a8.4 8.4 0 1 1 16.1-3.9Z"
-                ></path><path
-                  d="M8.4 8.3c.3-.6.6-.6.9-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.6 1 1.4 1.8 2.4 2.3.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.6-.2l1.7.8c.3.1.4.3.4.5 0 .4-.2 1.1-.7 1.5-.5.4-1.2.7-2 .5-1-.2-2.3-.7-3.8-2-1.2-1.1-2-2.5-2.2-3.4-.2-.8.1-1.6.4-2Z"
-                ></path></svg
-              >
-              Get a Personalised Quote
-            </a>
-          </div>
-          <div class="hero-assurances">
-            <span><i class="mini-icon">◇</i> Clear scope</span>
-            <span><i class="mini-icon">▱</i> Transparent pricing</span>
-            <span><i class="mini-icon">⌖</i> Personal guidance</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <PageHero
+      eyebrow="Packages & Pricing"
+      title="Clear Options.<br />Practical Support.<br /><span>One Stronger Brand.</span>"
+      description="Compare our trademark and business support packages, understand what's included, and choose the right starting point for your business."
+      primaryCta={{
+        text: "Explore Packages",
+        href: "#packages",
+        icon: "→"
+      }}
+      secondaryCta={{
+        text: "Get a Personalised Quote",
+        href: heroQuoteUrl,
+        icon: "◎",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      trustBadges={[
+        { icon: "◇", title: "Clear Scope", subtitle: "Inclusions" },
+        { icon: "▱", title: "Transparent", subtitle: "Pricing" },
+        { icon: "⌖", title: "Personal", subtitle: "Guidance" }
+      ]}
+      image="/packages/assets/hero-packages.webp"
+      imageAlt="Warm ivory trademark portfolio, gold emblem and pen on a marble office desk"
+      variant="package"
+    />
 
     <section class="finder section-compact" aria-labelledby="finder-heading">
       <div class="container">
@@ -222,11 +285,11 @@ const ogImage = "/packages/assets/hero-packages.webp";
             charges confirmed before you proceed.
           </p>
         </div>
-        <div class="package-grid">
+        <CardCarousel id="packages-cards-carousel" ariaLabel="Choose the Support That Fits Your Business">
           <article class="package-card">
             <div class="package-photo">
               <img
-                src="/packages/assets/brand-starter-pack.webp"
+                src="/packages/assets/packages-card-starter.webp"
                 alt="Navy portfolio and gold-trimmed pen on a marble desk"
                 width="1400"
                 height="1050"
@@ -245,7 +308,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
                 <strong>₹4,999</strong><span class="price-note"
                   >Indicative; confirm current quote</span>
               </div>
-              <p class="included-label">Possible inclusions</p>
+              <p class="eyebrow included-label">Possible inclusions</p>
               <ul class="check-list">
                 <li>Brand name search</li>
                 <li>Trademark guidance</li>
@@ -255,14 +318,14 @@ const ogImage = "/packages/assets/hero-packages.webp";
               <div style="display:flex; flex-direction:column; gap:8px;">
                 <a
                   class="button button-small button-outline-navy"
-                  href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20share%20the%20current%20Brand%20Starter%20Pack%20scope%20and%20price."
+                  href={starterPackUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   >Discuss This Package <span>→</span></a
                 >
                 <a
                   href="/packages/individual-msme/"
-                  style="font-size: 12px; font-weight: 700; color: #A8781A; text-decoration: none;"
+                  style="font-size: 15px; font-weight: 600; color: #A8781A; text-decoration: none;"
                   >View Individual / MSME Details &rarr;</a
                 >
               </div>
@@ -272,7 +335,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
           <article class="package-card package-featured">
             <div class="package-photo">
               <img
-                src="/packages/assets/trademark-registration.webp"
+                src="/packages/assets/packages-card-trademark.webp"
                 alt="Ivory trademark portfolio with a gold registered symbol and legal books"
                 width="1400"
                 height="1050"
@@ -291,7 +354,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
                 <strong>Get a Quote</strong><span class="price-note"
                   >Based on applicant and filing scope</span>
               </div>
-              <p class="included-label">Support may include</p>
+              <p class="eyebrow included-label">Support may include</p>
               <ul class="check-list">
                 <li>Trademark search and analysis</li>
                 <li>Class selection guidance</li>
@@ -301,14 +364,14 @@ const ogImage = "/packages/assets/hero-packages.webp";
               <div style="display:flex; flex-direction:column; gap:8px;">
                 <a
                   class="button button-small button-gold"
-                  href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%27d%20like%20a%20trademark%20registration%20quote."
+                  href={tmPackageUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   >Discuss This Package <span>→</span></a
                 >
                 <a
                   href="/packages/company-llp/"
-                  style="font-size: 12px; font-weight: 700; color: #A8781A; text-decoration: none;"
+                  style="font-size: 15px; font-weight: 600; color: #A8781A; text-decoration: none;"
                   >View Company / LLP Details &rarr;</a
                 >
               </div>
@@ -319,7 +382,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
           <article class="package-card" id="food-package">
             <div class="package-photo">
               <img
-                src="/packages/assets/food-brand-package.webp"
+                src="/packages/assets/packages-card-food.webp"
                 alt="Artisanal food jars, bakery items and blank product packaging in a sunlit kitchen"
                 width="1400"
                 height="1050"
@@ -338,7 +401,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
                 <strong>₹12,000</strong><span class="price-note"
                   >Indicative; confirm final quote</span>
               </div>
-              <p class="included-label">Listed support areas</p>
+              <p class="eyebrow included-label">Listed support areas</p>
               <ul class="check-list">
                 <li>Trademark support</li>
                 <li>Udyam/MSME assistance</li>
@@ -348,14 +411,14 @@ const ogImage = "/packages/assets/hero-packages.webp";
               <div style="display:flex; flex-direction:column; gap:8px;">
                 <a
                   class="button button-small button-outline-navy"
-                  href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20confirm%20the%20Food%20Brand%20Package%20scope%20and%20current%20price."
+                  href={foodBrandUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   >Discuss This Package <span>→</span></a
                 >
                 <a
                   href="/packages/food-brand/"
-                  style="font-size: 12px; font-weight: 700; color: #A8781A; text-decoration: none;"
+                  style="font-size: 15px; font-weight: 600; color: #A8781A; text-decoration: none;"
                   >View Food Brand Package Details &rarr;</a
                 >
               </div>
@@ -365,7 +428,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
           <article class="package-card" id="gulf-package">
             <div class="package-photo">
               <img
-                src="/packages/assets/gulf-business-package.webp"
+                src="/packages/assets/packages-card-gulf.webp"
                 alt="Navy business folio and documents overlooking a sunlit international business skyline"
                 width="1400"
                 height="1050"
@@ -386,7 +449,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
                 <strong>Starting at ₹18,000</strong><span class="price-note"
                   >Indicative; confirm final quote</span>
               </div>
-              <p class="included-label">Listed support areas</p>
+              <p class="eyebrow included-label">Listed support areas</p>
               <ul class="check-list">
                 <li>Brand name search</li>
                 <li>Trademark filing support</li>
@@ -396,20 +459,20 @@ const ogImage = "/packages/assets/hero-packages.webp";
               <div style="display:flex; flex-direction:column; gap:8px;">
                 <a
                   class="button button-small button-outline-navy"
-                  href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20confirm%20the%20Gulf%20Return%20Business%20Package%20scope%20and%20price."
+                  href={gulfPackageUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   >Discuss This Package <span>→</span></a
                 >
                 <a
                   href="/packages/gulf-return-business/"
-                  style="font-size: 12px; font-weight: 700; color: #A8781A; text-decoration: none;"
+                  style="font-size: 15px; font-weight: 600; color: #A8781A; text-decoration: none;"
                   >View Gulf Return Package Details &rarr;</a
                 >
               </div>
             </div>
           </article>
-        </div>
+        </CardCarousel>
         <p class="package-disclaimer">
           Package prices and inclusions are indicative planning information, not
           a final offer. Please confirm current pricing, eligibility, government
@@ -425,7 +488,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
       <div class="container split-section pricing-split">
         <div class="section-photo price-photo">
           <img
-            src="/packages/assets/pricing-breakdown.webp"
+            src="/packages/assets/packages-pricing-breakdown.webp"
             alt="Calculator, trademark documents and pen on a refined legal office desk"
             width="1400"
             height="1050"
@@ -453,12 +516,12 @@ const ogImage = "/packages/assets/hero-packages.webp";
               <tbody>
                 <tr
                   ><td>Individual / eligible small business</td><td>₹4,500</td
-                  ><td>From ₹3,000</td><td><strong>₹7,500–9,500</strong></td
+                  ><td>₹1,500</td><td><strong>₹6,000</strong></td
                   ></tr
                 >
                 <tr
-                  ><td>Company / LLP</td><td>₹9,000</td><td>From ₹4,000</td><td
-                    ><strong>₹13,000–15,000</strong></td
+                  ><td>Company / LLP</td><td>₹9,000</td><td>₹2,000</td><td
+                    ><strong>₹11,000</strong></td
                   ></tr
                 >
               </tbody>
@@ -482,7 +545,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
           <p class="eyebrow eyebrow-rule">What's included</p>
           <h2 id="included-heading">Know What's Included Before You Begin.</h2>
         </div>
-        <div class="included-grid">
+        <CardCarousel id="packages-included-carousel" class="dark-carousel" ariaLabel="Know What's Included Before You Begin">
           <article class="included-item">
             <span class="icon-tile"
               ><svg viewBox="0 0 24 24" aria-hidden="true"
@@ -523,7 +586,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
             <h3>Next Steps</h3>
             <p>Know what happens after you confirm the package.</p>
           </article>
-        </div>
+        </CardCarousel>
       </div>
     </section>
 
@@ -535,7 +598,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
       <div class="container split-section ongoing-split">
         <div class="section-photo ongoing-photo">
           <img
-            src="/packages/assets/brand-watch-support.webp"
+            src="/packages/assets/packages-watch-support.webp"
             alt="Navy document folio, magnifying glass and organised papers on a marble desk"
             width="1400"
             height="1050"
@@ -563,7 +626,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
               <span class="addon-price">Confirm current quote</span>
               <a
                 class="text-link"
-                href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20share%20Brand%20Watch%20service%20details."
+                href={brandWatchAddonUrl}
                 target="_blank"
                 rel="noopener noreferrer">Learn More <b>→</b></a
               >
@@ -581,7 +644,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
               <span class="addon-price">Custom quotation</span>
               <a
                 class="text-link"
-                href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20share%20trademark%20renewal%20support%20details."
+                href={tmRenewalAddonUrl}
                 target="_blank"
                 rel="noopener noreferrer">Learn More <b>→</b></a
               >
@@ -599,7 +662,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
               <span class="addon-price">Custom quotation</span>
               <a
                 class="text-link"
-                href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20share%20business%20registration%20assistance%20details."
+                href={bizRegAddonUrl}
                 target="_blank"
                 rel="noopener noreferrer">Learn More <b>→</b></a
               >
@@ -618,7 +681,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
           <p class="eyebrow eyebrow-rule">How to get started</p>
           <h2 id="steps-heading">Three Simple Steps to Get a Quote.</h2>
         </div>
-        <div class="steps-grid">
+        <CardCarousel id="packages-steps-carousel" class="dark-carousel" ariaLabel="Three Simple Steps to Get a Quote">
           <article class="step-item">
             <span class="step-number" aria-hidden="true">01</span>
             <div class="step-copy">
@@ -643,7 +706,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
               </p>
             </div>
           </article>
-        </div>
+        </CardCarousel>
       </div>
     </section>
 
@@ -651,7 +714,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
       <div class="container split-section faq-split">
         <div class="section-photo faq-photo">
           <img
-            src="/packages/assets/faq-legal-books.webp"
+            src="/packages/assets/packages-faq-legal.webp"
             alt="Navy legal books, cream portfolio and brass scales of justice in warm light"
             width="1400"
             height="788"
@@ -665,54 +728,39 @@ const ogImage = "/packages/assets/hero-packages.webp";
           <p class="section-intro">
             A few helpful answers before you choose your next step.
           </p>
-          <div class="faq-list">
-            <details>
-              <summary
-                >Are government fees included in the package price?</summary
-              ><p>
-                Not necessarily. Ask for a quotation that clearly separates
-                government charges from BRNDNUR's professional fees and any
-                additional services.
-              </p>
-            </details>
-            <details>
-              <summary
-                >Does trademark pricing depend on the number of classes?</summary
-              ><p>
-                Yes, the number of classes and your applicant category can
-                affect the overall cost. Confirm the exact scope before
-                proceeding.
-              </p>
-            </details>
-            <details>
-              <summary>What is included in the Food Brand Package?</summary><p>
-                The library describes trademark, Udyam/MSME and FSSAI-related
-                support. Confirm current inclusions and which registrations
-                apply to your business.
-              </p>
-            </details>
-            <details>
-              <summary>Can I get a package customised for my business?</summary
-              ><p>
-                Contact BRNDNUR to discuss your requirements and request a
-                scope-specific quotation.
-              </p>
-            </details>
-            <details>
-              <summary>Are renewal and Brand Watch services included?</summary
-              ><p>
-                These may be separate services unless your written quotation
-                states they are included.
-              </p>
-            </details>
-            <details>
-              <summary>How do I get a quotation before proceeding?</summary><p>
-                Share your brand name, business type and service needs over
-                WhatsApp. Review the scope and charges before confirming.
-              </p>
-            </details>
+          <div class="faq-editorial-list faq-list">
+            <FaqItem
+              num="01"
+              question="Are government fees included in the package price?"
+              answer="Not necessarily. Ask for a quotation that clearly separates government charges from BRNDNUR's professional fees and any additional services."
+            />
+            <FaqItem
+              num="02"
+              question="Does trademark pricing depend on the number of classes?"
+              answer="Yes, the number of classes and your applicant category can affect the overall cost. Confirm the exact scope before proceeding."
+            />
+            <FaqItem
+              num="03"
+              question="What is included in the Food Brand Package?"
+              answer="The library describes trademark, Udyam/MSME and FSSAI-related support. Confirm current inclusions and which registrations apply to your business."
+            />
+            <FaqItem
+              num="04"
+              question="Can I get a package customised for my business?"
+              answer="Contact BRNDNUR to discuss your requirements and request a scope-specific quotation."
+            />
+            <FaqItem
+              num="05"
+              question="Are renewal and Brand Watch services included?"
+              answer="These may be separate services unless your written quotation states they are included."
+            />
+            <FaqItem
+              num="06"
+              question="How do I get a quotation before proceeding?"
+              answer="Share your brand name, business type and service needs over WhatsApp. Review the scope and charges before confirming."
+            />
           </div>
-          <a class="text-link faq-link" href="../services/index.html#faqs"
+          <a class="text-link faq-link" href="/faqs/"
             >View All FAQs <b>→</b></a
           >
         </div>
@@ -730,7 +778,7 @@ const ogImage = "/packages/assets/hero-packages.webp";
           </p>
           <a
             class="button button-gold"
-            href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%27d%20like%20a%20personalised%20package%20quotation."
+            href={closingPackageQuoteUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -764,1430 +812,886 @@ const ogImage = "/packages/assets/hero-packages.webp";
 </script>
 
 <style is:global>
-  :root {
-    --ivory: #f4efe4;
-    --ivory-deep: #ede3d2;
-    --paper: #fbf8f1;
-    --navy: #13233a;
-    --navy-deep: #0d1d31;
-    --gold: #a8781a;
-    --gold-bright: #c28a28;
-    --ink: #172943;
-    --muted: #586478;
-    --line: #e2d5bd;
-    --serif: "Playfair Display", Georgia, "Times New Roman", serif;
-    --sans: "DM Sans", Arial, sans-serif;
-    --container: 1200px;
-    --gutter: 48px;
-    --section-y: 80px;
-    --section-compact: 54px;
-    --shadow: 0 12px 34px rgba(42, 34, 20, 0.06);
-    --radius: 9px;
+:root {
+  --ivory:#F4EFE4;--ivory-deep:#EDE3D2;--paper:#FBF8F1;--navy:#13233A;--navy-deep:#0D1D31;
+  --gold:#A8781A;--gold-bright:#C28A28;--ink:#172943;--muted:#586478;--line:#E2D5BD;
+  --serif:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --container:1200px;--gutter:48px;--section-y:80px;--section-compact:54px;
+  --shadow:0 12px 34px rgba(42,34,20,.06);--radius:9px
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth;scroll-padding-top:88px}
+body {margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img {display:block;max-width:100%;height:auto}
+a {color:inherit;text-decoration:none}
+button, a {-webkit-tap-highlight-color:transparent}
+button {font:inherit}
+.container {width:min(var(--container),calc(100% - var(--gutter)*2));margin-inline:auto}
+section {position:relative}
+.skip-link {position:absolute;left:-999px;top:8px;z-index:100;background:#fff;padding:10px 14px}
+.skip-link:focus {left:12px}
+.button svg {width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.button-gold:hover {background:#956614;transform:translateY(-1px)}
+.eyebrow {margin:0 0 10px;color:#A8781A;font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+h1, h2, h3, p {margin-top:0}
+h1, h2 {font-family:var(--sans);font-weight:600;letter-spacing:-.02em;color:var(--navy);line-height:1.15}
+h1 {font-size:clamp(40px,4vw,56px);margin:0 0 16px}
+h1 span {color:var(--gold)}
+h2 {font-size:clamp(30px,3vw,42px);margin:0 0 12px}
+h3 {font-size:clamp(19px,2vw,22px);line-height:1.35;font-weight:600;margin:0 0 7px;color:var(--navy)}
+p {margin-bottom:0}
+.hero {min-height:480px;position:relative;isolation:isolate;display:flex;align-items:center;overflow:hidden;background:var(--ivory)}
+.hero-media {position:absolute;z-index:0;right:0;top:0;bottom:0;width:58%;height:100%;overflow:hidden;pointer-events:none}
+.hero-media img {display:block;width:100%;height:100%;object-fit:cover;object-position:center right;-webkit-mask-image:none;mask-image:none}
+.hero-image {display:none}
+.hero-inner {position:relative;z-index:1;display:flex;align-items:center;min-height:480px}
+.hero-copy {width:min(530px,49%);padding:36px 0 28px}
+.hero-copy .eyebrow {margin-bottom:13px}
+.hero-text {max-width:440px;font-size:16px;line-height:1.65;color:#46536A}
+.button-row {display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.button {display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:0 20px;border:1px solid transparent;border-radius:5px;font-size:15px;font-weight:600;line-height:1.2;transition:all .2s ease;cursor:pointer}
+.button-navy {background:var(--navy);color:#fff}
+.button-navy:hover {background:var(--navy-deep);transform:translateY(-1px)}
+.button-outline {border-color:#C8B38D;background:rgba(251,248,241,.58);color:var(--navy)}
+.button-outline:hover, .button-outline-navy:hover {border-color:var(--gold);background:#fffaf0}
+.hero-assurances {display:flex;align-items:center;gap:23px;margin-top:26px;color:#37445B;font-size:14px;font-weight:600}
+.hero-assurances span {display:flex;align-items:center;gap:7px}
+.mini-icon {font-style:normal;color:var(--gold);font-size:21px;line-height:1}
+.section {padding:var(--section-y) 0}
+.section-compact {padding:var(--section-compact) 0}
+.section-heading {margin-bottom:26px}
+.section-heading.centered {text-align:center;margin-inline:auto}
+.section-heading h2 {margin-bottom:8px}
+.section-heading.centered h2 {text-align:center;margin-inline:auto}
+.section-heading>p:not(.eyebrow) {max-width:690px;color:var(--muted);font-size:16px;line-height:1.65;margin-inline:auto;text-align:center}
+.centered {text-align:center}
+.eyebrow-rule {display:flex;justify-content:center;align-items:center;gap:10px;width:100%;margin-inline:auto;text-align:center}
+.eyebrow-rule:before, .eyebrow-rule:after {content:"";height:1px;width:27px;background:var(--gold);opacity:.65}
+.finder {background:#F8F4EC;padding-top:33px;padding-bottom:30px;border-bottom:1px solid rgba(226,213,189,.6)}
+.finder .section-heading {margin-bottom:22px}
+.finder .section-heading h2 {font-size:clamp(27px,2.5vw,33px)}
+.finder-grid {display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.finder-item {padding:0 25px 18px;display:flex;flex-direction:column;align-items:flex-start;min-height:124px;border-right:1px solid var(--line);transition:background .2s}
+.finder-item:last-child {border-right:0}
+.finder-item:hover .text-link {color:var(--gold-bright)}
+.icon-tile {display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;background:#EFE1C8;color:var(--gold);border-radius:8px;flex:0 0 auto}
+.icon-tile svg, .addon-icon svg {width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.finder-title {display:block;font-size:19px;line-height:1.35;font-weight:700;margin-top:10px;color:var(--navy);text-align:left}
+.finder-desc {font-size:15px;color:var(--muted);line-height:1.6;margin-top:4px;max-width:215px;text-align:left}
+.text-link {display:inline-flex;align-items:center;gap:6px;color:#99600D;font-size:15px;font-weight:700;line-height:1.3;margin-top:10px}
+.text-link b {font-size:16px;font-weight:500;transition:transform .2s}
+.text-link:hover b {transform:translateX(3px)}
+.packages {padding-top:42px;padding-bottom:30px}
+.package-heading {margin-bottom:25px}
+.package-heading h2 {font-size:clamp(30px,3vw,38px)}
+.package-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.package-card {position:relative;display:grid;grid-template-columns:40% minmax(0,1fr);min-width:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:rgba(251,248,241,.72);box-shadow:0 3px 14px rgba(36,30,20,.025);transition:transform .2s,box-shadow .2s,border-color .2s}
+.package-card:hover {transform:translateY(-2px);box-shadow:var(--shadow);border-color:#D4BD91}
+.package-photo {padding:10px;display:flex;height:100%;min-height:100%}
+.package-photo img {width:100%;height:100%;object-fit:cover;object-position:center;border-radius:5px;min-height:0;display:block}
+.package-content {position:relative;padding:18px 17px 17px 12px;align-self:stretch;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.package-kicker {display:inline-block;color:#9A6A1A;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;text-align:left}
+.package-content h3 {font-family:var(--sans);font-weight:600;font-size:clamp(20px,2vw,24px);line-height:1.25;letter-spacing:-.02em;margin-bottom:7px;color:var(--navy);text-align:left}
+.package-desc {font-size:15px;line-height:1.6;color:var(--muted);margin-bottom:11px;text-align:left}
+.price-line {display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:12px;text-align:left}
+.price-line strong {font:600 24px/1.2 var(--sans);letter-spacing:-.04em;color:var(--navy)}
+.price-note {font-size:14px;line-height:1.4;color:#7C6747}
+.included-label {color:#8E631B;text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:700;margin-bottom:6px;text-align:left}
+.check-list {padding:0;margin:0 0 15px;list-style:none;display:grid;gap:6px;text-align:left}
+.check-list li {position:relative;padding-left:18px;font-size:15px;line-height:1.5;color:#3B485D;text-align:left}
+.check-list li:before {content:"✓";position:absolute;left:0;top:0;color:var(--gold);font-weight:800}
+.package-content .button {margin-top:auto}
+.button-small {min-height:42px;padding:0 16px;font-size:14px;gap:9px}
+.button-outline-navy {color:var(--navy);background:transparent;border-color:#8E9AAA}
+.button-gold {background:var(--gold);color:#fff}
+.package-featured {background:var(--navy);border-color:var(--navy);color:#fff}
+.package-featured .package-content h3, .package-featured .price-line strong {color:#fff}
+.package-featured .package-desc, .package-featured .check-list li, .package-featured .price-note {color:#E4E8EE}
+.package-featured .package-kicker, .package-featured .included-label {color:#E9BC66}
+.package-featured .button-gold {background:var(--gold-bright)}
+.package-featured .button-gold:hover {background:#D39A31}
+.featured-badge {position:absolute;right:0;top:0;background:var(--gold-bright);color:#fff;font-size:12px;font-weight:700;padding:6px 10px;border-bottom-left-radius:6px;white-space:normal;overflow-wrap:break-word;word-break:normal;max-width:100%}
+.package-disclaimer {font-size:14px;line-height:1.6;color:#5D564A;margin:16px 2px 0}
+.split-section {display:grid;grid-template-columns:clamp(340px,38%,440px) 1fr;gap:32px;align-items:center}
+.section-photo {min-width:0;width:100%;max-width:460px;aspect-ratio:4 / 3;overflow:hidden;border-radius:7px;background:#E8D8C0;align-self:center;margin-inline:auto}
+.section-photo img {width:100%;height:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:center;display:block}
+.price-breakdown {background:#F8F4EB}
+.pricing-split {grid-template-columns:clamp(340px,38%,440px) 1fr;gap:34px}
+.price-photo img {height:100%;aspect-ratio:4 / 3}
+.price-copy h2, .ongoing-copy h2, .faq-copy h2 {font-size:clamp(29px,2.8vw,36px);margin-bottom:10px}
+.section-intro {font-size:16px;line-height:1.65;color:var(--muted);margin-bottom:16px}
+.table-wrap {overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+.fee-table {width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;text-align:left;background:rgba(251,248,241,.72)}
+.fee-table th, .fee-table td {padding:10px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top}
+.fee-table th:last-child, .fee-table td:last-child {border-right:0}
+.fee-table tbody tr:last-child td {border-bottom:0}
+.fee-table th {font-weight:700;background:#EFE5D4;color:var(--navy)}
+.fee-table th span {font-size:13px;font-weight:500}
+.fee-table td {color:#475267}
+.fee-table td strong {color:#885D10}
+.table-note {font-size:13px;line-height:1.55;color:#5D564A;margin-top:8px}
+.included-section {padding-top:38px;padding-bottom:42px;background:#F8F4EC;border-block:1px solid rgba(226,213,189,.65)}
+.compact-heading {margin-bottom:25px}
+.compact-heading h2 {font-size:clamp(27px,2.5vw,33px)}
+.included-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.included-item {padding:0 25px;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.included-item:first-child {padding-left:12px}
+.included-item:last-child {border-right:0;padding-right:12px}
+.included-item .icon-tile {width:38px;height:38px;margin-bottom:10px}
+.included-item h3 {font-size:19px;line-height:1.35;margin-bottom:5px;color:var(--navy);text-align:left}
+.included-item p {font-size:15px;line-height:1.6;color:var(--muted);max-width:220px;text-align:left}
+.ongoing-section {padding-top:44px;padding-bottom:40px}
+.ongoing-split {grid-template-columns:1fr clamp(340px,38%,440px);gap:30px}
+.ongoing-copy {grid-column:1;grid-row:1}
+.ongoing-photo {grid-column:2;grid-row:1}
+.ongoing-photo img {height:100%;aspect-ratio:4 / 3}
+.ongoing-copy h2 {font-size:clamp(27px,2.6vw,34px)}
+.addon-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:22px}
+.addon-item {padding:0 14px;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.addon-item:first-child {padding-left:0}
+.addon-item:last-child {border:0;padding-right:0}
+.addon-icon {display:inline-flex;width:38px;height:38px;color:var(--gold);background:#F0E2C9;align-items:center;justify-content:center;border-radius:7px;margin-bottom:10px}
+.addon-icon svg {width:20px;height:20px}
+.addon-item h3 {font-size:clamp(18px,1.3vw,21px);line-height:1.35;margin-bottom:6px;color:var(--navy);text-align:left}
+.addon-item p {font-size:clamp(15px,1.1vw,16px);line-height:1.6;color:var(--muted);margin-bottom:8px;text-align:left}
+.addon-price {font-size:14px;font-weight:700;color:#8D611A;display:block;margin-bottom:4px;text-align:left}
+.addon-item .text-link {margin-top:auto;font-size:15px;font-weight:700;text-align:left}
+.steps-section {padding-top:48px;padding-bottom:48px;background:#F8F4EC;border-block:1px solid rgba(226,213,189,.65)}
+.steps-section .compact-heading {margin-bottom:34px}
+.steps-grid {position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;align-items:stretch}
+.steps-grid:before {content:"";position:absolute;z-index:0;left:16.666%;right:16.666%;top:25px;height:1px;background:linear-gradient(90deg,rgba(168,120,26,.3),rgba(168,120,26,.8),rgba(168,120,26,.3))}
+.step-item {position:relative;display:flex;flex-direction:column;align-items:center;gap:0;text-align:center;padding:0 34px 8px;min-width:0}
+.step-item:not(:last-child):after {content:"";position:absolute;right:0;top:78px;bottom:8px;width:1px;background:linear-gradient(180deg,transparent,var(--line) 15%,var(--line) 85%,transparent)}
+.step-number {position:relative;z-index:1;display:flex;align-items:center;justify-content:center;flex:0 0 50px;width:50px;height:50px;margin-bottom:18px;border-radius:50%;background:#F8F4EC;color:var(--gold);font:600 17px/1 var(--sans);border:1px solid #D8B77F;box-shadow:0 0 0 7px #F8F4EC}
+.step-copy {max-width:280px}
+.step-item h3 {font-size:20px;line-height:1.4;margin-bottom:7px;color:var(--navy)}
+.step-item p {font-size:15px;line-height:1.6;color:var(--muted)}
+.faq-section {padding-top:40px;padding-bottom:38px}
+.faq-split {grid-template-columns:clamp(340px,38%,440px) 1fr;gap:32px}
+.faq-photo img {height:100%;aspect-ratio:4 / 3;object-position:28% center}
+.faq-copy .eyebrow {margin-bottom:8px}
+.faq-copy h2 {font-size:clamp(27px,2.6vw,34px)}
+.faq-copy .section-intro {margin-bottom:13px}
+.faq-link {margin-top:13px}
+.final-cta {padding-top:0;padding-bottom:30px}
+.cta-panel {background:var(--navy);color:#fff;border-radius:8px;padding:30px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.cta-panel:after {content:"R";font:500 150px/1 var(--sans);position:absolute;right:5%;top:50%;transform:translateY(-50%) rotate(-9deg);color:rgba(255,255,255,.035);border:2px solid rgba(255,255,255,.035);width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.cta-panel .eyebrow {color:#D6A44F;margin-bottom:9px}
+.cta-panel h2 {color:#fff;font-size:clamp(28px,2.7vw,35px);margin-bottom:8px}
+.cta-panel>p:not(.eyebrow) {font-size:16px;line-height:1.6;color:#E0E5EC;max-width:620px;margin:0 auto}
+.cta-panel .button {margin-top:18px;position:relative;z-index:1}
+.cta-panel .button svg {height:15px;width:15px}
+:focus-visible {outline:3px solid #D19A3A;outline-offset:3px}
+@media (min-width:1440px) {
+.hero-media, .hero-image {width:59%}
+.hero-copy {width:48%}
+}
+@media (max-width:1100px) {
+:root {--gutter:32px;--section-y:68px;--section-compact:46px}
+.hero-copy {width:51%}
+.hero-media, .hero-image {width:58%}
+.package-card {grid-template-columns:38% minmax(0,1fr)}
+.package-content {padding:15px 13px 14px 8px}
+.package-content h3 {font-size:21px}
+.price-line strong {font-size:24px}
+.package-photo {padding:10px;display:flex;height:100%;min-height:100%}
+.package-photo img {width:100%;height:100%;object-fit:cover;min-height:0;border-radius:5px;display:block}
+.included-item {padding-inline:17px}
+}
+@media (max-width:900px) {
+.hero, .hero-inner {min-height:380px}
+.hero-media, .hero-image {width:57%}
+.hero-copy {width:53%}
+.hero-assurances {gap:12px;flex-wrap:wrap}
+.finder-item {padding-inline:15px}
+.package-grid {gap:16px}
+.package-card {grid-template-columns:1fr}
+.package-photo {padding:10px 10px 0;display:block;height:auto;min-height:0}
+.package-photo img {width:100%;height:auto;min-height:0;aspect-ratio:16/10;object-fit:cover;border-radius:5px;display:block}
+.package-content {padding:14px 15px 16px}
+.featured-badge {top:8px;right:8px;border-radius:4px}
+.split-section, .pricing-split, .ongoing-split, .faq-split {gap:24px}
+.price-copy h2, .ongoing-copy h2, .faq-copy h2 {font-size:30px}
+.addon-grid {gap:0}
+.addon-item {padding-inline:10px}
+.steps-section {padding-block:42px}
+.steps-section .compact-heading {margin-bottom:29px}
+.step-item {padding-inline:22px}
+.step-item h3 {font-size:19px}
+.step-item p {font-size:15px}
+}
+@media (max-width: 767px) {
+  .pricing-split > .section-photo, .ongoing-split > .section-photo, .faq-split > .section-photo, .ongoing-photo, .price-photo, .faq-photo {
+    aspect-ratio: 4 / 3 !important;
   }
-  * {
-    box-sizing: border-box;
+  .section-photo img, .price-photo img, .ongoing-photo img, .faq-photo img {
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
   }
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 88px;
+}
+@media (max-width:650px) {
+:root {--gutter:22px;--section-y:52px;--section-compact:38px}
+body {font-size:16px}
+.finder {padding-top:32px;padding-bottom:24px}
+.finder-grid {grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px;border-bottom:0}
+.finder-item {padding:0 12px 15px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:0}
+.finder-item:nth-child(2) {border-right:0}
+.finder-item:nth-child(3), .finder-item:nth-child(4) {border-bottom:0}
+.finder-title {font-size:18px}
+.finder-desc {font-size:15px}
+.section-heading {margin-bottom:20px}
+.section-heading h2 {font-size:clamp(28px,6vw,32px)}
+.packages {padding-top:34px;padding-bottom:28px}
+.package-heading h2 {font-size:clamp(28px,6vw,32px)}
+.package-grid {grid-template-columns:1fr;gap:16px}
+.package-card {grid-template-columns:1fr}
+.package-photo {padding:10px 10px 0;display:block;height:auto;min-height:0}
+.package-photo img {width:100%;height:auto;min-height:0;aspect-ratio:16/10;object-fit:cover;border-radius:5px;display:block}
+.package-content {padding:16px 18px}
+.package-content h3 {font-size:20px}
+.package-desc {font-size:15px}
+.price-line {gap:6px;margin-bottom:8px}
+.price-line strong {font-size:22px}
+.price-note {font-size:13.5px}
+.check-list {gap:5px;margin-bottom:12px}
+.check-list li {font-size:15px}
+.button-small {font-size:14px;min-height:42px;padding-inline:14px}
+.package-disclaimer {font-size:13.5px}
+.split-section, .pricing-split, .ongoing-split, .faq-split {display:flex !important;flex-direction:column !important;grid-template-columns:1fr;gap:22px}
+.pricing-split > .section-photo, .ongoing-split > .section-photo, .faq-split > .section-photo, .ongoing-photo, .price-photo, .faq-photo {order:1 !important;grid-column:auto;grid-row:auto;width:100% !important;max-width:420px !important;margin-inline:auto !important;aspect-ratio:4 / 3 !important}
+.pricing-split > .price-copy, .ongoing-split > .ongoing-copy, .faq-split > .faq-copy, .ongoing-copy, .price-copy, .faq-copy {order:2 !important;grid-column:auto;grid-row:auto;width:100% !important}
+.section-photo img, .price-photo img, .ongoing-photo img, .faq-photo img {width:100% !important;height:100% !important;aspect-ratio:4 / 3 !important;object-fit:cover !important}
+.price-copy h2, .ongoing-copy h2, .faq-copy h2 {font-size:clamp(28px,6vw,32px)}
+.price-breakdown {padding-block:36px}
+.fee-table {min-width:510px}
+.fee-table th, .fee-table td {padding:10px}
+.included-section {padding-block:35px}
+.included-grid {grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}
+.included-item, .included-item:first-child, .included-item:last-child {padding:0 14px;border-right:1px solid var(--line)}
+.included-item:nth-child(2n) {border-right:0}
+.included-item h3 {font-size:18px}
+.included-item p {font-size:15px}
+.ongoing-section {padding-block:35px}
+.addon-grid {grid-template-columns:1fr;gap:0;margin-top:16px}
+.addon-item, .addon-item:first-child, .addon-item:last-child {display:grid;grid-template-columns:40px minmax(0,1fr);gap:0 14px;padding:16px 0;border-right:0;border-bottom:1px solid var(--line);align-items:start;text-align:left}
+.addon-item:last-child {border-bottom:0}
+.addon-icon {grid-row:span 4;margin:0;width:38px;height:38px}
+.addon-item h3 {font-size:19px;line-height:1.35;margin:0 0 4px;color:var(--navy);text-align:left}
+.addon-item p {font-size:15px;line-height:1.6;color:var(--muted);margin-bottom:6px;text-align:left}
+.addon-price {font-size:14px;font-weight:700;color:#8D611A;display:block;margin-bottom:4px;text-align:left}
+.addon-item .text-link {margin-top:6px;font-size:15px;font-weight:700;text-align:left}
+.steps-section {padding-block:38px}
+.steps-section .compact-heading {margin-bottom:26px}
+.steps-grid {grid-template-columns:1fr;gap:0}
+.steps-grid:before {display:none}
+.step-item {display:grid;grid-template-columns:50px minmax(0,1fr);align-items:start;gap:16px;text-align:left;padding:18px 0;border-bottom:1px solid var(--line)}
+.step-item:first-child {padding-top:0}
+.step-item:last-child {border-bottom:0;padding-bottom:0}
+.step-item:not(:last-child):after {display:none}
+.step-number {margin:0;box-shadow:none}
+.step-copy {max-width:none;padding-top:3px}
+.step-item h3 {font-size:19px;margin-bottom:5px}
+.step-item p {font-size:15px}
+.faq-section {padding-block:35px}
+.faq-list summary {font-size:15px;padding-block:13px}
+.cta-panel {padding:29px 18px 30px}
+.cta-panel:after {font-size:100px;width:100px;height:100px;right:-15px;top:20%;opacity:.7}
+.cta-panel h2 {font-size:clamp(28px,6vw,32px)}
+.cta-panel>p:not(.eyebrow) {font-size:16px}
+}
+@media (max-width:380px) {
+:root {--gutter:17px}
+.hero-image {height:195px}
+.package-card {grid-template-columns:1fr}
+.package-photo {padding:9px 9px 0;display:block;height:auto;min-height:0}
+.package-photo img {width:100%;height:auto;aspect-ratio:16/10;border-radius:5px;display:block}
+.package-content {padding:14px}
+.finder-item {padding-inline:8px}
+}
+@media(prefers-reduced-motion:reduce) {
+html {scroll-behavior:auto}
+*, *::before, *::after {transition:none!important;animation:none!important}
+}
+/* merge fix: stop the fee table widening the grid on small screens */
+.split-section > *, .pricing-split > * { min-width: 0; }
+.table-wrap { max-width: 100%; }
+
+/* ========================================================
+   DARK NAVY TREATMENT FOR FINDER, INCLUDED & STEPS SECTIONS
+   ======================================================== */
+
+/* 1. FINDER SECTION ("What Do You Need Help With?") */
+.finder {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  padding: clamp(3.1rem, 5.2vw, 4.6rem) 0 clamp(3.3rem, 5.5vw, 4.8rem) !important;
+  background: #13233A !important;
+  border-top: 1px solid rgba(168, 120, 26, 0.28) !important;
+  border-bottom: 1px solid rgba(168, 120, 26, 0.28) !important;
+}
+.finder::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background: radial-gradient(ellipse at 50% 0%, rgba(55, 78, 108, 0.18), transparent 62%) !important;
+}
+.finder .container {
+  position: relative !important;
+  z-index: 1 !important;
+}
+.finder .section-heading {
+  margin-bottom: clamp(1.8rem, 3.5vw, 2.6rem) !important;
+  text-align: center !important;
+}
+.finder .section-heading .eyebrow {
+  color: #D8A64D !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.65rem !important;
+}
+.finder .section-heading .eyebrow:before,
+.finder .section-heading .eyebrow:after {
+  background: #D8A64D !important;
+  opacity: 0.7 !important;
+}
+.finder .section-heading h2 {
+  color: #FFFCF6 !important;
+  font-family: var(--sans) !important;
+  font-size: clamp(2.15rem, 3.5vw, 3rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0 !important;
+}
+.finder-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  align-items: stretch !important;
+  border-bottom: 0 !important;
+  margin: 0 !important;
+}
+.finder-item {
+  min-width: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  padding: 1.35rem 1.3rem 1.5rem !important;
+  background: #1B2D46 !important;
+  border: 1px solid rgba(244, 239, 228, 0.16) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22) !important;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+  /* coordinated dark card styling */
+}
+.finder-item:hover {
+  background: #223755 !important;
+  border-color: rgba(216, 166, 77, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32) !important;
+}
+.finder-item .icon-tile {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  flex: 0 0 2.75rem !important;
+  border-radius: 50% !important;
+  background: #D8A64D !important;
+  border: 1px solid #E3B75F !important;
+  color: #13233A !important;
+  display: grid !important;
+  place-items: center !important;
+  margin-bottom: 1rem !important;
+  box-shadow: 0 0 0 4px rgba(216, 166, 77, 0.09) !important;
+}
+.finder-item .icon-tile svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #13233A !important;
+  stroke-width: 2 !important;
+}
+.finder-title {
+  color: #FFFCF6 !important;
+  font-family: var(--sans) !important;
+  font-size: clamp(1.1875rem, 1.1rem + 0.35vw, 1.45rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 0 0.55rem 0 !important;
+  text-align: left !important;
+}
+.finder-desc {
+  color: #D1D9E4 !important;
+  font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem) !important;
+  line-height: 1.65 !important;
+  margin: 0 0 1rem 0 !important;
+  max-width: none !important;
+  text-align: left !important;
+}
+.finder-item .text-link {
+  color: #D8A64D !important;
+  font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem) !important;
+  font-weight: 700 !important;
+  margin-top: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+.finder-item:hover .text-link {
+  color: #F0E2C8 !important;
+}
+
+/* 2. INCLUDED SECTION ("Know What's Included Before You Begin.") */
+.included-section {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  padding: clamp(3.1rem, 5.2vw, 4.6rem) 0 clamp(3.3rem, 5.5vw, 4.8rem) !important;
+  background: #13233A !important;
+  border-top: 1px solid rgba(168, 120, 26, 0.28) !important;
+  border-bottom: 1px solid rgba(168, 120, 26, 0.28) !important;
+}
+.included-section::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background: radial-gradient(ellipse at 50% 0%, rgba(55, 78, 108, 0.18), transparent 62%) !important;
+}
+.included-section .container {
+  position: relative !important;
+  z-index: 1 !important;
+}
+.included-section .section-heading {
+  margin-bottom: clamp(1.8rem, 3.5vw, 2.6rem) !important;
+  text-align: center !important;
+}
+.included-section .section-heading .eyebrow {
+  color: #D8A64D !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.65rem !important;
+}
+.included-section .section-heading .eyebrow:before,
+.included-section .section-heading .eyebrow:after {
+  background: #D8A64D !important;
+  opacity: 0.7 !important;
+}
+.included-section .section-heading h2 {
+  color: #FFFCF6 !important;
+  font-family: var(--sans) !important;
+  font-size: clamp(2.15rem, 3.5vw, 3rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 0 !important;
+}
+.included-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  align-items: stretch !important;
+  margin: 0 !important;
+}
+.included-item {
+  min-width: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding: 1.35rem 1.3rem 1.5rem !important;
+  background: #1B2D46 !important;
+  border: 1px solid rgba(244, 239, 228, 0.16) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22) !important;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+  /* coordinated dark card styling */
+}
+.included-item:hover {
+  background: #223755 !important;
+  border-color: rgba(216, 166, 77, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32) !important;
+}
+.included-item .icon-tile {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  flex: 0 0 2.75rem !important;
+  border-radius: 50% !important;
+  background: #D8A64D !important;
+  border: 1px solid #E3B75F !important;
+  color: #13233A !important;
+  display: grid !important;
+  place-items: center !important;
+  margin-bottom: 1rem !important;
+  box-shadow: 0 0 0 4px rgba(216, 166, 77, 0.09) !important;
+}
+.included-item .icon-tile svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #13233A !important;
+  stroke-width: 2 !important;
+}
+.included-item h3 {
+  color: #FFFCF6 !important;
+  font-family: var(--sans) !important;
+  font-size: clamp(1.1875rem, 1.1rem + 0.35vw, 1.45rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 0 0.55rem 0 !important;
+  text-align: left !important;
+}
+.included-item p {
+  color: #D1D9E4 !important;
+  font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem) !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  text-align: left !important;
+}
+
+/* 3. STEPS SECTION ("Three Simple Steps to Get a Quote.") */
+.steps-section {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  padding: clamp(3.1rem, 5.2vw, 4.6rem) 0 clamp(3.3rem, 5.5vw, 4.8rem) !important;
+  background: #13233A !important;
+  border-top: 1px solid rgba(168, 120, 26, 0.28) !important;
+  border-bottom: 1px solid rgba(168, 120, 26, 0.28) !important;
+}
+.steps-section::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background: radial-gradient(ellipse at 50% 0%, rgba(55, 78, 108, 0.18), transparent 62%) !important;
+}
+.steps-section .container {
+  position: relative !important;
+  z-index: 1 !important;
+}
+.steps-section .section-heading {
+  margin-bottom: clamp(1.8rem, 3.5vw, 2.6rem) !important;
+  text-align: center !important;
+}
+.steps-section .section-heading .eyebrow {
+  color: #D8A64D !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.65rem !important;
+}
+.steps-section .section-heading .eyebrow:before,
+.steps-section .section-heading .eyebrow:after {
+  background: #D8A64D !important;
+  opacity: 0.7 !important;
+}
+.steps-section .section-heading h2 {
+  color: #FFFCF6 !important;
+  font-family: var(--sans) !important;
+  font-size: clamp(2.15rem, 3.5vw, 3rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 0 !important;
+}
+.steps-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  align-items: stretch !important;
+  margin: 0 !important;
+}
+.steps-grid:before {
+  display: none !important;
+}
+.step-item {
+  min-width: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding: 1.35rem 1.3rem 1.5rem !important;
+  background: #1B2D46 !important;
+  border: 1px solid rgba(244, 239, 228, 0.16) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22) !important;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+  /* coordinated dark card styling */
+}
+.step-item:not(:last-child):after {
+  display: none !important;
+}
+.step-item:hover {
+  background: #223755 !important;
+  border-color: rgba(216, 166, 77, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32) !important;
+}
+.step-number {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  flex: 0 0 2.75rem !important;
+  border-radius: 50% !important;
+  background: #D8A64D !important;
+  border: 1px solid #E3B75F !important;
+  color: #13233A !important;
+  font: 700 1.08rem/1 var(--sans) !important;
+  display: grid !important;
+  place-items: center !important;
+  margin: 0 0 1rem 0 !important;
+  box-shadow: 0 0 0 4px rgba(216, 166, 77, 0.09) !important;
+}
+.step-copy {
+  max-width: none !important;
+  padding-top: 0 !important;
+  text-align: left !important;
+}
+.step-item h3 {
+  color: #FFFCF6 !important;
+  font-family: var(--sans) !important;
+  font-size: clamp(1.1875rem, 1.1rem + 0.35vw, 1.45rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 0 0.6rem 0 !important;
+  text-align: left !important;
+}
+.step-item p {
+  color: #D1D9E4 !important;
+  font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem) !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 980px) {
+  .finder-grid,
+  .included-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
   }
-  body {
-    margin: 0;
-    background: var(--ivory);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
+  .finder-item,
+  .included-item,
+  .step-item {
+    padding: 1.2rem 1.1rem 1.35rem !important;
   }
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  .finder-title,
+  .included-item h3,
+  .step-item h3 {
+    font-size: 1.08rem !important;
   }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  button,
-  a {
-    -webkit-tap-highlight-color: transparent;
-  }
-  button {
-    font: inherit;
-  }
-  .container {
-    width: min(var(--container), calc(100% - var(--gutter) * 2));
-    margin-inline: auto;
-  }
-  section {
-    position: relative;
-  }
-  .skip-link {
-    position: absolute;
-    left: -999px;
-    top: 8px;
-    z-index: 100;
-    background: #fff;
-    padding: 10px 14px;
-  }
-  .skip-link:focus {
-    left: 12px;
-  }
-  .button svg {
-    width: 15px;
-    height: 15px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .button-gold:hover {
-    background: #956614;
-    transform: translateY(-1px);
-  }
-  .eyebrow {
-    margin: 0 0 10px;
-    color: #885d10;
-    font-size: 11px;
-    line-height: 1.4;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-  h1,
-  h2,
-  h3,
-  p {
-    margin-top: 0;
-  }
-  h1,
-  h2 {
-    font-family: var(--serif);
-    font-weight: 500;
-    letter-spacing: -0.035em;
-    color: var(--navy);
-    line-height: 1.12;
-  }
-  h1 {
-    font-size: clamp(40px, 4vw, 55px);
-    margin: 0 0 16px;
-  }
-  h1 span {
-    color: var(--gold);
-  }
-  h2 {
-    font-size: clamp(30px, 3vw, 39px);
-    margin: 0 0 12px;
-  }
-  h3 {
-    font-size: 16px;
-    line-height: 1.35;
-    font-weight: 700;
-    margin: 0 0 7px;
-    color: var(--navy);
-  }
-  p {
-    margin-bottom: 0;
-  }
-  .hero {
-    min-height: 388px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: var(--ivory);
-  }
-  .hero-image {
-    position: absolute;
-    inset: 0 0 0 auto;
-    width: 58%;
-    background-image:
-      linear-gradient(
-        90deg,
-        var(--ivory) 0%,
-        rgba(244, 239, 228, 0.88) 6%,
-        rgba(244, 239, 228, 0.24) 27%,
-        rgba(244, 239, 228, 0) 47%
-      ),
-      url("/packages/assets/hero-packages.webp");
-    background-size: cover;
-    background-position: center right;
-  }
-  .hero-inner {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    min-height: 388px;
-  }
-  .hero-copy {
-    width: min(530px, 49%);
-    padding: 36px 0 28px;
-  }
-  .hero-copy .eyebrow {
-    margin-bottom: 13px;
-  }
-  .hero-text {
-    max-width: 440px;
-    font-size: 15px;
-    line-height: 1.65;
-    color: #46536a;
-  }
-  .button-row {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 22px;
-  }
-  .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-height: 46px;
-    padding: 0 18px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1.2;
-    transition: all 0.2s ease;
-    cursor: pointer;
-  }
-  .button-navy {
-    background: var(--navy);
-    color: #fff;
-  }
-  .button-navy:hover {
-    background: var(--navy-deep);
-    transform: translateY(-1px);
-  }
-  .button-outline {
-    border-color: #c8b38d;
-    background: rgba(251, 248, 241, 0.58);
-    color: var(--navy);
-  }
-  .button-outline:hover,
-  .button-outline-navy:hover {
-    border-color: var(--gold);
-    background: #fffaf0;
-  }
-  .hero-assurances {
-    display: flex;
-    align-items: center;
-    gap: 23px;
-    margin-top: 26px;
-    color: #37445b;
-    font-size: 11px;
-    font-weight: 600;
-  }
-  .hero-assurances span {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .mini-icon {
-    font-style: normal;
-    color: var(--gold);
-    font-size: 21px;
-    line-height: 1;
-  }
-  .section {
-    padding: var(--section-y) 0;
-  }
-  .section-compact {
-    padding: var(--section-compact) 0;
-  }
-  .section-heading {
-    margin-bottom: 26px;
-  }
-  .section-heading.centered {
-    text-align: center;
-    margin-inline: auto;
-  }
-  .section-heading h2 {
-    margin-bottom: 8px;
-  }
-  .section-heading.centered h2 {
-    text-align: center;
-    margin-inline: auto;
-  }
-  .section-heading > p:not(.eyebrow) {
-    max-width: 690px;
-    color: var(--muted);
-    font-size: 14px;
-    margin-inline: auto;
-    text-align: center;
-  }
-  .centered {
-    text-align: center;
-  }
-  .eyebrow-rule {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    margin-inline: auto;
-    text-align: center;
-  }
-  .eyebrow-rule:before,
-  .eyebrow-rule:after {
-    content: "";
-    height: 1px;
-    width: 27px;
-    background: var(--gold);
-    opacity: 0.65;
+}
+
+@media (max-width: 720px) {
+  .finder,
+  .included-section,
+  .steps-section {
+    padding: clamp(34px, 4.5vw, 42px) 0 !important;
   }
   .finder {
-    background: #f8f4ec;
-    padding-top: 33px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(226, 213, 189, 0.6);
-  }
-  .finder .section-heading {
-    margin-bottom: 22px;
-  }
-  .finder .section-heading h2 {
-    font-size: clamp(27px, 2.5vw, 33px);
-  }
-  .finder-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-bottom: 1px solid var(--line);
-  }
-  .finder-item {
-    padding: 0 25px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 124px;
-    border-right: 1px solid var(--line);
-    transition: background 0.2s;
-  }
-  .finder-item:last-child {
-    border-right: 0;
-  }
-  .finder-item:hover .text-link {
-    color: var(--gold-bright);
-  }
-  .icon-tile {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    background: #efe1c8;
-    color: var(--gold);
-    border-radius: 8px;
-    flex: 0 0 auto;
-  }
-  .icon-tile svg,
-  .addon-icon svg {
-    width: 23px;
-    height: 23px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.7;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .finder-title {
-    display: block;
-    font-size: 13px;
-    line-height: 1.35;
-    font-weight: 700;
-    margin-top: 10px;
-    color: var(--navy);
-  }
-  .finder-desc {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.5;
-    margin-top: 4px;
-    max-width: 215px;
-  }
-  .text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: #99600d;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-top: 10px;
-  }
-  .text-link b {
-    font-size: 16px;
-    font-weight: 500;
-    transition: transform 0.2s;
-  }
-  .text-link:hover b {
-    transform: translateX(3px);
-  }
-  .packages {
-    padding-top: 42px;
-    padding-bottom: 30px;
-  }
-  .package-heading {
-    margin-bottom: 25px;
-  }
-  .package-heading h2 {
-    font-size: clamp(30px, 3vw, 38px);
-  }
-  .package-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-  .package-card {
-    position: relative;
-    display: grid;
-    grid-template-columns: 35% minmax(0, 1fr);
-    min-width: 0;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    overflow: hidden;
-    background: rgba(251, 248, 241, 0.72);
-    box-shadow: 0 3px 14px rgba(36, 30, 20, 0.025);
-    transition:
-      transform 0.2s,
-      box-shadow 0.2s,
-      border-color 0.2s;
-  }
-  .package-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-    border-color: #d4bd91;
-  }
-  .package-photo {
-    padding: 10px;
-    min-height: 100%;
-  }
-  .package-photo img {
-    height: 100%;
-    min-height: 245px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 5px;
-  }
-  .package-content {
-    position: relative;
-    padding: 18px 17px 17px 12px;
-    align-self: stretch;
-  }
-  .package-kicker {
-    display: inline-block;
-    color: #9a6a1a;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-  }
-  .package-content h3 {
-    font: 500 21px/1.22 var(--serif);
-    letter-spacing: -0.02em;
-    margin-bottom: 7px;
-  }
-  .package-desc {
-    font-size: 12px;
-    line-height: 1.5;
-    color: var(--muted);
-    margin-bottom: 11px;
-  }
-  .price-line {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 12px;
-  }
-  .price-line strong {
-    font: 600 24px/1.2 var(--sans);
-    letter-spacing: -0.04em;
-    color: var(--navy);
-  }
-  .price-note {
-    font-size: 10px;
-    line-height: 1.35;
-    color: #7c6747;
-  }
-  .included-label {
-    color: #8e631b;
-    text-transform: uppercase;
-    letter-spacing: 0.13em;
-    font-size: 9px;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-  .check-list {
-    padding: 0;
-    margin: 0 0 15px;
-    list-style: none;
-    display: grid;
-    gap: 5px;
-  }
-  .check-list li {
-    position: relative;
-    padding-left: 17px;
-    font-size: 11px;
-    line-height: 1.35;
-    color: #3b485d;
-  }
-  .check-list li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--gold);
-    font-weight: 800;
-  }
-  .package-content .button {
-    margin-top: auto;
-  }
-  .button-small {
-    min-height: 38px;
-    padding: 0 13px;
-    font-size: 11px;
-    gap: 9px;
-  }
-  .button-outline-navy {
-    color: var(--navy);
-    background: transparent;
-    border-color: #8e9aaa;
-  }
-  .button-gold {
-    background: var(--gold);
-    color: #fff;
-  }
-  .package-featured {
-    background: var(--navy);
-    border-color: var(--navy);
-    color: #fff;
-  }
-  .package-featured .package-content h3,
-  .package-featured .price-line strong {
-    color: #fff;
-  }
-  .package-featured .package-desc,
-  .package-featured .check-list li,
-  .package-featured .price-note {
-    color: #e4e8ee;
-  }
-  .package-featured .package-kicker,
-  .package-featured .included-label {
-    color: #e9bc66;
-  }
-  .package-featured .button-gold {
-    background: var(--gold-bright);
-  }
-  .package-featured .button-gold:hover {
-    background: #d39a31;
-  }
-  .featured-badge {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: var(--gold-bright);
-    color: #fff;
-    font-size: 9px;
-    font-weight: 700;
-    padding: 6px 9px;
-    border-bottom-left-radius: 6px;
-  }
-  .package-disclaimer {
-    font-size: 11px;
-    line-height: 1.6;
-    color: #5d564a;
-    margin: 16px 2px 0;
-  }
-  .split-section {
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-    gap: 32px;
-    align-items: center;
-  }
-  .section-photo {
-    min-width: 0;
-    overflow: hidden;
-    border-radius: 7px;
-    background: #e8d8c0;
-    align-self: center;
-  }
-  .section-photo img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-  .price-breakdown {
-    background: var(--ivory);
-  }
-  .pricing-split {
-    grid-template-columns: 4fr 7fr;
-    gap: 34px;
-  }
-  .price-photo img {
-    height: auto;
-    aspect-ratio: 1/1;
-  }
-  .price-copy h2,
-  .ongoing-copy h2,
-  .faq-copy h2 {
-    font-size: clamp(29px, 2.8vw, 36px);
-    margin-bottom: 10px;
-  }
-  .section-intro {
-    font-size: 13px;
-    line-height: 1.65;
-    color: var(--muted);
-    margin-bottom: 16px;
-  }
-  .table-wrap {
-    overflow-x: auto;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-  }
-  .fee-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 11px;
-    line-height: 1.5;
-    text-align: left;
-    background: rgba(251, 248, 241, 0.72);
-  }
-  .fee-table th,
-  .fee-table td {
-    padding: 10px 11px;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    vertical-align: top;
-  }
-  .fee-table th:last-child,
-  .fee-table td:last-child {
-    border-right: 0;
-  }
-  .fee-table tbody tr:last-child td {
-    border-bottom: 0;
-  }
-  .fee-table th {
-    font-weight: 700;
-    background: #efe5d4;
-    color: var(--navy);
-  }
-  .fee-table th span {
-    font-size: 10px;
-    font-weight: 500;
-  }
-  .fee-table td {
-    color: #475267;
-  }
-  .fee-table td strong {
-    color: #885d10;
-  }
-  .table-note {
-    font-size: 10px;
-    line-height: 1.55;
-    color: #5d564a;
-    margin-top: 8px;
-  }
-  .included-section {
-    padding-top: 38px;
-    padding-bottom: 42px;
-    background: #f8f4ec;
-    border-block: 1px solid rgba(226, 213, 189, 0.65);
-  }
-  .compact-heading {
-    margin-bottom: 25px;
-  }
-  .compact-heading h2 {
-    font-size: clamp(27px, 2.5vw, 33px);
-  }
-  .included-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-  .included-item {
-    padding: 0 25px;
-    border-right: 1px solid var(--line);
-  }
-  .included-item:first-child {
-    padding-left: 12px;
-  }
-  .included-item:last-child {
-    border-right: 0;
-    padding-right: 12px;
-  }
-  .included-item .icon-tile {
-    width: 38px;
-    height: 38px;
-    margin-bottom: 10px;
-  }
-  .included-item h3 {
-    font-size: 13px;
-    margin-bottom: 5px;
-  }
-  .included-item p {
-    font-size: 12px;
-    line-height: 1.55;
-    color: var(--muted);
-    max-width: 220px;
-  }
-  .ongoing-section {
-    padding-top: 44px;
-    padding-bottom: 40px;
-  }
-  .ongoing-split {
-    grid-template-columns: 7fr 4fr;
-    gap: 30px;
-  }
-  .ongoing-copy {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .ongoing-photo {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .ongoing-photo img {
-    height: auto;
-    aspect-ratio: 1/1;
-  }
-  .ongoing-copy h2 {
-    font-size: clamp(27px, 2.6vw, 34px);
-  }
-  .addon-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 22px;
-  }
-  .addon-item {
-    padding: 0 14px;
-    border-right: 1px solid var(--line);
-  }
-  .addon-item:first-child {
-    padding-left: 0;
-  }
-  .addon-item:last-child {
-    border: 0;
-    padding-right: 0;
-  }
-  .addon-icon {
-    display: inline-flex;
-    width: 31px;
-    height: 31px;
-    color: var(--gold);
-    background: #f0e2c9;
-    align-items: center;
-    justify-content: center;
-    border-radius: 7px;
-    margin-bottom: 7px;
-  }
-  .addon-icon svg {
-    width: 18px;
-    height: 18px;
-  }
-  .addon-item h3 {
-    font-size: 12px;
-    line-height: 1.35;
-    margin-bottom: 5px;
-  }
-  .addon-item p {
-    font-size: 11px;
-    line-height: 1.5;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-  .addon-price {
-    font-size: 10px;
-    font-weight: 700;
-    color: #8d611a;
-    display: block;
-  }
-  .addon-item .text-link {
-    margin-top: 8px;
-    font-size: 11px;
-  }
-  .steps-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    background: #f8f4ec;
-    border-block: 1px solid rgba(226, 213, 189, 0.65);
-  }
-  .steps-section .compact-heading {
-    margin-bottom: 34px;
-  }
+    padding-top: 32px !important;
+  }
+  .finder .section-heading,
+  .included-section .section-heading,
+  .steps-section .section-heading {
+    text-align: left !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .finder .section-heading .eyebrow,
+  .included-section .section-heading .eyebrow,
+  .steps-section .section-heading .eyebrow {
+    text-align: left !important;
+    margin-inline: 0 !important;
+    justify-content: flex-start !important;
+  }
+  .finder .section-heading h2,
+  .included-section .section-heading h2,
+  .steps-section .section-heading h2 {
+    text-align: left !important;
+    font-size: clamp(2rem, 7vw, 2.55rem) !important;
+  }
+  .finder-grid,
+  .included-grid,
   .steps-grid {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0;
-    align-items: stretch;
+    grid-template-columns: 1fr !important;
+    gap: 0.9rem !important;
   }
-  .steps-grid:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    left: 16.666%;
-    right: 16.666%;
-    top: 25px;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      rgba(168, 120, 26, 0.3),
-      rgba(168, 120, 26, 0.8),
-      rgba(168, 120, 26, 0.3)
-    );
-  }
+  .finder-item,
+  .included-item,
   .step-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    text-align: center;
-    padding: 0 34px 8px;
-    min-width: 0;
+    padding: 1.15rem 1rem 1.25rem !important;
   }
-  .step-item:not(:last-child):after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 78px;
-    bottom: 8px;
-    width: 1px;
-    background: linear-gradient(
-      180deg,
-      transparent,
-      var(--line) 15%,
-      var(--line) 85%,
-      transparent
-    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .finder-item,
+  .included-item,
+  .step-item {
+    transition: none !important;
+    transform: none !important;
   }
-  .step-number {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 50px;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 18px;
-    border-radius: 50%;
-    background: #f8f4ec;
-    color: var(--gold);
-    font: 600 17px/1 var(--serif);
-    border: 1px solid #d8b77f;
-    box-shadow: 0 0 0 7px #f8f4ec;
-  }
-  .step-copy {
-    max-width: 280px;
-  }
-  .step-item h3 {
-    font-size: 15px;
-    line-height: 1.4;
-    margin-bottom: 7px;
-    color: var(--navy);
-  }
-  .step-item p {
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--muted);
-  }
-  .faq-section {
-    padding-top: 40px;
-    padding-bottom: 38px;
-  }
-  .faq-split {
-    grid-template-columns: 4fr 7fr;
-    gap: 32px;
-  }
-  .faq-photo img {
-    height: auto;
-    aspect-ratio: 1/1;
-    object-position: 28% center;
-  }
-  .faq-copy .eyebrow {
-    margin-bottom: 8px;
-  }
-  .faq-copy h2 {
-    font-size: clamp(27px, 2.6vw, 34px);
-  }
-  .faq-copy .section-intro {
-    margin-bottom: 13px;
-  }
-  .faq-list {
-    border-top: 1px solid var(--line);
-  }
-  .faq-list details {
-    border-bottom: 1px solid var(--line);
-  }
-  .faq-list summary {
-    list-style: none;
-    position: relative;
-    padding: 11px 30px 11px 0;
-    font-size: 12px;
-    line-height: 1.45;
-    font-weight: 600;
-    color: #344259;
-    cursor: pointer;
-  }
-  .faq-list summary::-webkit-details-marker {
-    display: none;
-  }
-  .faq-list summary:after {
-    content: "+";
-    position: absolute;
-    right: 3px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--gold);
-    font-size: 20px;
-    font-weight: 400;
-  }
-  .faq-list details[open] summary:after {
-    content: "−";
-  }
-  .faq-list details p {
-    font-size: 12px;
-    line-height: 1.6;
-    color: var(--muted);
-    padding: 0 24px 13px 0;
-  }
-  .faq-link {
-    margin-top: 13px;
-  }
-  .final-cta {
-    padding-top: 0;
-    padding-bottom: 30px;
-  }
-  .cta-panel {
-    background: var(--navy);
-    color: #fff;
-    border-radius: 8px;
-    padding: 30px 24px 32px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .cta-panel:after {
-    content: "R";
-    font: 500 150px/1 var(--serif);
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%) rotate(-9deg);
-    color: rgba(255, 255, 255, 0.035);
-    border: 2px solid rgba(255, 255, 255, 0.035);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-  }
-  .cta-panel .eyebrow {
-    color: #d6a44f;
-    margin-bottom: 9px;
-  }
-  .cta-panel h2 {
-    color: #fff;
-    font-size: clamp(28px, 2.7vw, 35px);
-    margin-bottom: 8px;
-  }
-  .cta-panel > p:not(.eyebrow) {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #e0e5ec;
-    max-width: 620px;
-    margin: 0 auto;
-  }
-  .cta-panel .button {
-    margin-top: 18px;
-    position: relative;
-    z-index: 1;
-  }
-  .cta-panel .button svg {
-    height: 15px;
-    width: 15px;
-  }
-  :focus-visible {
-    outline: 3px solid #d19a3a;
-    outline-offset: 3px;
-  }
-  @media (min-width: 1440px) {
-    .hero-image {
-      width: 59%;
-    }
-    .hero-copy {
-      width: 48%;
-    }
-  }
-  @media (max-width: 1100px) {
-    :root {
-      --gutter: 32px;
-      --section-y: 68px;
-      --section-compact: 46px;
-    }
-    .hero-copy {
-      width: 51%;
-    }
-    .hero-image {
-      width: 58%;
-    }
-    .package-card {
-      grid-template-columns: 31% minmax(0, 1fr);
-    }
-    .package-content {
-      padding: 15px 13px 14px 8px;
-    }
-    .package-content h3 {
-      font-size: 19px;
-    }
-    .price-line strong {
-      font-size: 21px;
-    }
-    .package-photo {
-      padding: 8px;
-    }
-    .package-photo img {
-      min-height: 250px;
-    }
-    .included-item {
-      padding-inline: 17px;
-    }
-  }
-  @media (max-width: 900px) {
-    .hero,
-    .hero-inner {
-      min-height: 380px;
-    }
-    .hero-image {
-      width: 57%;
-      opacity: 0.95;
-      background-position: 60% center;
-    }
-    .hero-copy {
-      width: 53%;
-    }
-    .hero-assurances {
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .finder-item {
-      padding-inline: 15px;
-    }
+}
+
+  /* RESPONSIVE BREAKPOINTS (PRESERVING CARD & GRID FIXES) */
+  @media (min-width: 768px) and (max-width: 1023px) {
     .package-grid {
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 16px !important;
     }
     .package-card {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
     }
     .package-photo {
-      padding: 8px 8px 0;
+      padding: 10px 10px 0 !important;
+      display: block !important;
+      height: auto !important;
+      min-height: 0 !important;
     }
     .package-photo img {
-      height: auto;
-      min-height: 0;
-      aspect-ratio: 16/9;
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 10 !important;
+      object-fit: cover !important;
+      border-radius: 5px !important;
+      display: block !important;
     }
-    .package-content {
-      padding: 14px 15px 16px;
+    .finder-grid,
+    .included-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 1rem !important;
     }
-    .featured-badge {
-      top: 8px;
-      right: 8px;
-      border-radius: 4px;
-    }
-    .split-section,
-    .pricing-split,
-    .ongoing-split,
-    .faq-split {
-      gap: 24px;
-    }
-    .price-copy h2,
-    .ongoing-copy h2,
-    .faq-copy h2 {
-      font-size: 30px;
-    }
-    .addon-grid {
-      gap: 0;
-    }
-    .addon-item {
-      padding-inline: 10px;
-    }
-    .steps-section {
-      padding-block: 42px;
-    }
-    .steps-section .compact-heading {
-      margin-bottom: 29px;
-    }
+    .finder-item,
+    .included-item,
     .step-item {
-      padding-inline: 22px;
+      padding: 1.2rem 1.1rem 1.35rem !important;
+      align-items: flex-start !important;
+      text-align: left !important;
     }
+    .finder-title,
+    .included-item h3,
     .step-item h3 {
-      font-size: 14px;
+      font-size: var(--font-card-title, 1.2rem) !important;
+      text-align: left !important;
     }
+    .finder-desc,
+    .included-item p,
     .step-item p {
-      font-size: 12px;
+      font-size: var(--font-card-body, 0.95rem) !important;
+      text-align: left !important;
     }
   }
-  @media (max-width: 650px) {
-    :root {
-      --gutter: 22px;
-      --section-y: 52px;
-      --section-compact: 38px;
+
+  @media (max-width: 767px) {
+    .package-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+      width: 100% !important;
     }
-    body {
-      font-size: 16px;
+    .package-card {
+      grid-template-columns: 1fr !important;
+      width: 100% !important;
     }
-    .hero {
-      min-height: 0;
-      display: block;
-      padding-top: 0;
+    .package-photo {
+      padding: 10px 10px 0 !important;
+      display: block !important;
+      height: auto !important;
+      min-height: 0 !important;
     }
-    .hero-image {
-      position: relative;
-      display: block;
-      inset: auto;
-      width: 100%;
-      height: 230px;
-      background-image:
-        linear-gradient(180deg, rgba(244, 239, 228, 0) 62%, var(--ivory) 100%),
-        url("/packages/assets/hero-packages.webp");
-      background-position: center right;
+    .package-photo img {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 10 !important;
+      object-fit: cover !important;
+      border-radius: 5px !important;
+      display: block !important;
     }
-    .hero-inner {
-      min-height: 0;
-      margin-top: -20px;
+    .package-content {
+      padding: 16px 18px 18px !important;
+      align-items: flex-start !important;
+      text-align: left !important;
     }
-    .hero-copy {
-      width: 100%;
-      padding: 0 0 28px;
-    }
-    h1 {
-      font-size: clamp(37px, 10vw, 47px);
-      margin-bottom: 14px;
-    }
-    .hero-text {
-      font-size: 15px;
-      max-width: 100%;
-    }
-    .button-row {
-      gap: 10px;
-      margin-top: 18px;
-    }
-    .button {
-      min-height: 46px;
-      padding-inline: 14px;
-      font-size: 11px;
-    }
-    .hero-assurances {
-      margin-top: 19px;
-      gap: 13px;
-      font-size: 10px;
+    .finder,
+    .included-section,
+    .steps-section {
+      padding: clamp(34px, 4.5vw, 42px) 0 !important;
     }
     .finder {
-      padding-top: 32px;
-      padding-bottom: 24px;
+      padding-top: 32px !important;
     }
-    .finder-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      row-gap: 20px;
-      border-bottom: 0;
+    .finder .section-heading,
+    .included-section .section-heading,
+    .steps-section .section-heading {
+      text-align: left !important;
+      margin-bottom: 1.5rem !important;
     }
-    .finder-item {
-      padding: 0 12px 15px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      min-height: 0;
+    .finder .section-heading .eyebrow,
+    .included-section .section-heading .eyebrow,
+    .steps-section .section-heading .eyebrow {
+      text-align: left !important;
+      margin-inline: 0 !important;
+      justify-content: flex-start !important;
     }
-    .finder-item:nth-child(2) {
-      border-right: 0;
+    .finder .section-heading h2,
+    .included-section .section-heading h2,
+    .steps-section .section-heading h2 {
+      text-align: left !important;
+      font-size: clamp(28px, 6.5vw, 32px) !important;
     }
-    .finder-item:nth-child(3),
-    .finder-item:nth-child(4) {
-      border-bottom: 0;
-    }
-    .finder-title {
-      font-size: 13px;
-    }
-    .finder-desc {
-      font-size: 12px;
-    }
-    .section-heading {
-      margin-bottom: 20px;
-    }
-    .section-heading h2 {
-      font-size: 29px;
-    }
-    .packages {
-      padding-top: 34px;
-      padding-bottom: 28px;
-    }
-    .package-heading h2 {
-      font-size: 30px;
-    }
-    .package-grid {
-      grid-template-columns: 1fr;
-      gap: 13px;
-    }
-    .package-card {
-      grid-template-columns: 37% minmax(0, 1fr);
-    }
-    .package-photo {
-      padding: 9px 0 9px 9px;
-      display: flex;
-    }
-    .package-photo img {
-      height: 100%;
-      min-height: 0;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-    }
-    .package-content {
-      padding: 13px 12px 13px;
-    }
-    .package-content h3 {
-      font-size: 18px;
-    }
-    .package-desc {
-      font-size: 12px;
-    }
-    .price-line {
-      gap: 6px;
-      margin-bottom: 8px;
-    }
-    .price-line strong {
-      font-size: 21px;
-    }
-    .price-note {
-      font-size: 10px;
-    }
-    .check-list {
-      gap: 4px;
-      margin-bottom: 11px;
-    }
-    .check-list li {
-      font-size: 10.5px;
-    }
-    .button-small {
-      font-size: 10px;
-      min-height: 36px;
-      padding-inline: 10px;
-    }
-    .package-disclaimer {
-      font-size: 10px;
-    }
-    .split-section,
-    .pricing-split,
-    .ongoing-split,
-    .faq-split {
-      grid-template-columns: 1fr;
-      gap: 22px;
-    }
-    .ongoing-copy,
-    .ongoing-photo {
-      grid-column: auto;
-      grid-row: auto;
-    }
-    .section-photo img {
-      height: auto;
-      aspect-ratio: 1/1;
-    }
-    .faq-photo img {
-      height: auto;
-      aspect-ratio: 1/1;
-    }
-    .price-copy h2,
-    .ongoing-copy h2,
-    .faq-copy h2 {
-      font-size: 30px;
-    }
-    .price-breakdown {
-      padding-block: 36px;
-    }
-    .fee-table {
-      min-width: 510px;
-    }
-    .fee-table th,
-    .fee-table td {
-      padding: 9px;
-    }
-    .included-section {
-      padding-block: 35px;
-    }
-    .included-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      row-gap: 24px;
-    }
-    .included-item,
-    .included-item:first-child,
-    .included-item:last-child {
-      padding: 0 14px;
-      border-right: 1px solid var(--line);
-    }
-    .included-item:nth-child(2n) {
-      border-right: 0;
-    }
-    .included-item h3 {
-      font-size: 13px;
-    }
-    .included-item p {
-      font-size: 12px;
-    }
-    .ongoing-section {
-      padding-block: 35px;
-    }
-    .addon-grid {
-      grid-template-columns: 1fr;
-      gap: 0;
-      margin-top: 15px;
-    }
-    .addon-item,
-    .addon-item:first-child,
-    .addon-item:last-child {
-      display: grid;
-      grid-template-columns: 36px minmax(0, 1fr);
-      gap: 0 10px;
-      padding: 13px 0;
-      border-right: 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .addon-item:last-child {
-      border-bottom: 0;
-    }
-    .addon-icon {
-      grid-row: span 4;
-      margin: 0;
-    }
-    .addon-item h3 {
-      margin: 0 0 4px;
-    }
-    .addon-item p {
-      margin-bottom: 4px;
-    }
-    .addon-item .text-link {
-      margin-top: 5px;
-    }
-    .steps-section {
-      padding-block: 38px;
-    }
-    .steps-section .compact-heading {
-      margin-bottom: 26px;
-    }
+    .finder-grid,
+    .included-grid,
     .steps-grid {
-      grid-template-columns: 1fr;
-      gap: 0;
+      grid-template-columns: 1fr !important;
+      gap: 0.9rem !important;
     }
-    .steps-grid:before {
-      display: none;
-    }
+    .finder-item,
+    .included-item,
     .step-item {
-      display: grid;
-      grid-template-columns: 50px minmax(0, 1fr);
-      align-items: start;
-      gap: 16px;
-      text-align: left;
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
+      padding: 1.15rem 1rem 1.25rem !important;
+      align-items: flex-start !important;
+      text-align: left !important;
     }
-    .step-item:first-child {
-      padding-top: 0;
-    }
-    .step-item:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-    .step-item:not(:last-child):after {
-      display: none;
-    }
-    .step-number {
-      margin: 0;
-      box-shadow: none;
-    }
-    .step-copy {
-      max-width: none;
-      padding-top: 3px;
-    }
+    .finder-title,
+    .included-item h3,
     .step-item h3 {
-      font-size: 15px;
-      margin-bottom: 5px;
+      font-size: var(--font-card-title, 1.2rem) !important;
+      text-align: left !important;
     }
+    .finder-desc,
+    .included-item p,
     .step-item p {
-      font-size: 13px;
-    }
-    .faq-section {
-      padding-block: 35px;
-    }
-    .faq-list summary {
-      font-size: 12px;
-      padding-block: 13px;
-    }
-    .cta-panel {
-      padding: 29px 18px 30px;
-    }
-    .cta-panel:after {
-      font-size: 100px;
-      width: 100px;
-      height: 100px;
-      right: -15px;
-      top: 20%;
-      opacity: 0.7;
-    }
-    .cta-panel h2 {
-      font-size: 29px;
-    }
-    .cta-panel > p:not(.eyebrow) {
-      font-size: 13px;
+      font-size: var(--font-card-body, 0.95rem) !important;
+      text-align: left !important;
     }
   }
-  @media (max-width: 380px) {
-    :root {
-      --gutter: 17px;
-    }
-    .hero-image {
-      height: 195px;
-    }
-    .package-card {
-      grid-template-columns: 1fr;
-    }
-    .package-photo {
-      padding: 9px 9px 0;
-    }
-    .package-photo img {
-      aspect-ratio: 16/9;
-    }
-    .package-content {
-      padding: 14px;
-    }
-    .finder-item {
-      padding-inline: 8px;
-    }
-  }
+
   @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-    *,
-    *::before,
-    *::after {
+    .finder-item,
+    .included-item,
+    .step-item {
       transition: none !important;
-      animation: none !important;
+      transform: none !important;
     }
   }
-  /* merge fix: stop the fee table widening the grid on small screens */
-  .split-section > *,
-  .pricing-split > * {
-    min-width: 0;
-  }
-  .table-wrap {
-    max-width: 100%;
+
+  .package-disclaimer {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #5D564A !important;
   }
 </style>

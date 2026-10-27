@@ -1,0 +1,237 @@
+---
+export interface BenefitBadge {
+  icon: string;
+  title: string;
+  subtitle?: string;
+}
+
+export interface Props {
+  items?: BenefitBadge[];
+  className?: string;
+}
+
+export const DEFAULT_BENEFITS: BenefitBadge[] = [
+  {
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 19 6v5c0 4.5-3 7.8-7 10-4-2.2-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>',
+    title: "Brand",
+    subtitle: "Protection"
+  },
+  {
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21V8l8-5 8 5v13H4Z"/><path d="M9 21v-7h6v7M8 9h1m6 0h1"/></svg>',
+    title: "Business",
+    subtitle: "Registrations"
+  },
+  {
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3 20c0-3.2 2.4-5.5 6-5.5s6 2.3 6 5.5M15 15c3.5 0 5.5 1.7 6 4.5"/></svg>',
+    title: "Expert",
+    subtitle: "Guidance"
+  }
+];
+
+const { items, className = '' } = Astro.props;
+const displayItems = items !== undefined ? items : DEFAULT_BENEFITS;
+---
+
+{displayItems && displayItems.length > 0 && (
+  <div class={`trust-row ${className}`.trim()} aria-label="Key highlights">
+    {displayItems.map((badge) => (
+      <div class="trust-item">
+        <span class="trust-icon" aria-hidden="true" set:html={badge.icon} />
+        <span class="trust-label">
+          {badge.title}
+          {badge.subtitle && <><br />{badge.subtitle}</>}
+        </span>
+      </div>
+    ))}
+  </div>
+)}
+
+<style>
+  .trust-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    margin-top: 1.85rem;
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0 16px;
+    border-right: 1px solid var(--line, #DCCEB6);
+    flex: 0 0 auto;
+    box-sizing: border-box;
+  }
+
+  .trust-item:first-child {
+    padding-left: 0;
+  }
+
+  .trust-item:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .trust-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    flex: 0 0 32px;
+    background: rgba(168, 120, 26, 0.12);
+    color: var(--gold, #A8781A);
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    font-size: 15px;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+
+  .trust-icon :global(svg),
+  .trust-icon svg {
+    width: 17px;
+    height: 17px;
+    display: block;
+    stroke: currentColor;
+  }
+
+  .trust-label {
+    font-family: var(--sans, 'DM Sans', sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--navy, #13233A);
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .trust-row {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 0 !important;
+      margin-top: 1.5rem !important;
+      flex-wrap: nowrap !important;
+      width: auto !important;
+    }
+    .trust-item {
+      gap: 8px !important;
+      padding: 0 12px !important;
+      border-right: 1px solid var(--line, #DCCEB6) !important;
+    }
+    .trust-item:first-child {
+      padding-left: 0 !important;
+    }
+    .trust-item:last-child {
+      border-right: none !important;
+      padding-right: 0 !important;
+      grid-column: auto !important;
+    }
+    .trust-icon {
+      width: 30px !important;
+      height: 30px !important;
+      min-width: 30px !important;
+      flex: 0 0 30px !important;
+      border-radius: 6px !important;
+    }
+    .trust-icon :global(svg),
+    .trust-icon svg {
+      width: 16px !important;
+      height: 16px !important;
+    }
+    .trust-label {
+      font-size: 12.5px !important;
+      font-weight: 600 !important;
+      line-height: 1.3 !important;
+      white-space: normal !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .trust-row {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      align-items: center !important;
+      column-gap: 12px !important;
+      row-gap: 12px !important;
+      margin-top: 1.25rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    .trust-item {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      min-width: 0 !important;
+    }
+
+    .trust-item:first-child {
+      border-right: 1px solid var(--line, #DCCEB6) !important;
+      padding-right: 10px !important;
+    }
+
+    .trust-item:nth-child(2) {
+      border-right: 0 !important;
+      padding-left: 6px !important;
+    }
+
+    .trust-item:nth-child(3),
+    .trust-item:last-child {
+      grid-column: 1 / -1 !important;
+      justify-self: center !important;
+      max-width: 100% !important;
+      margin-inline: auto !important;
+      border: 0 !important;
+      padding: 0 !important;
+    }
+
+    .trust-icon {
+      width: 28px !important;
+      height: 28px !important;
+      min-width: 28px !important;
+      border-radius: 5px !important;
+      flex: 0 0 28px !important;
+      font-size: 13px !important;
+    }
+
+    .trust-icon :global(svg),
+    .trust-icon svg {
+      width: 15px !important;
+      height: 15px !important;
+    }
+
+    .trust-label {
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      line-height: 1.25 !important;
+      white-space: normal !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .trust-row {
+      gap: 8px 10px !important;
+    }
+    .trust-item {
+      gap: 6px !important;
+    }
+    .trust-label {
+      font-size: 11px !important;
+    }
+  }
+</style>

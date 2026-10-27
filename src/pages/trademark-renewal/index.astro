@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import CardCarousel from '../../components/CardCarousel.astro';
+import FaqItem from '../../components/FaqItem.astro';
 
-const title = "Trademark Renewal in India | 10-Year Maintenance Support";
+const title = "Trademark Renewal in India | 10-Year Maintenance | BRNDNUR";
 const description = "Renew your Indian registered trademark before expiry. Understand statutory renewal windows, restoration grace periods, and fees with BRNDNUR.";
 const canonical = "https://brndnur.com/trademark-renewal/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Trademark Renewal",
+  "sectionName": "Hero Section",
+  "enquiryType": "Trademark Renewal Advisory",
+  "topic": "I need assistance renewing my registered trademark under Section 25 of the Trade Marks Act.",
+  "details": "Registered mark name: [Please enter]\\nApplication or Registration number: [Please enter if known]",
+  "callToAction": "Could you please verify my renewal deadline and statutory fee requirements?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Trademark Renewal",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "Renewal Date Verification",
+  "topic": "I would like to check the expiry or renewal eligibility date for my registered trademark.",
+  "details": "Trademark / Application Number: [Please enter]",
+  "callToAction": "Could you please check my status on the Trade Marks Registry and advise on filing Form TM-R?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/trademark-renewal/";
   currentPath="/trademark-renewal/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/services/">Services</a>
-          <span class="sep">/</span>
-          <span class="current">Trademark Renewal</span>
-        </nav>
-        <p class="eyebrow">Continuous Brand Protection</p>
-        <h1>Trademark Renewal & Maintenance Support.</h1>
-        <p class="lead">Under Section 25 of the Trade Marks Act, a registered trademark remains valid for 10 years from the original application date. Renewing on time prevents lapse, removal from the register, or vulnerability to competitor registration.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
-            <span>Section 25 Statutory Renewal</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span>10-Year Indefinite Protection</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Restoration Defense Protocol</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Continuous Brand Protection"
+      title='Trademark Renewal<span class="hero-amp-desktop">&nbsp;&amp;</span><br class="hero-br-desktop"><br class="hero-br-mobile"><span class="hero-amp-mobile">&amp;&nbsp;</span>Maintenance <span>Support.</span>'
+      hasGoldRule={true}
+      description="Under Section 25 of the Trade Marks Act, a registered trademark remains valid for 10 years from the original application date. Renewing on time prevents lapse, removal from the register, or vulnerability to competitor registration."
+      primaryCta={{
+        text: "Renew Your Trademark",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "Explore Brand Monitoring",
+        href: "/trademark-monitoring/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Section 25 Statutory", subtitle: "Renewal Tracking" },
+        { icon: "▱", title: "10-Year Indefinite", subtitle: "Perpetual Rights" },
+        { icon: "⌖", title: "Restoration Defense", subtitle: "Protocol" }
+      ]}
+      image="/assets/renewal-hero-timeline.webp"
+      imageAlt="Executive desk arranged for trademark renewal with 10-year ledger book and milestone calendar"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20need%20to%20renew%20my%20trademark." target="_blank" rel="noopener noreferrer">Renew Your Trademark &rarr;</a>
-          <a class="btn btn-outline" href="/trademark-monitoring/">Explore Brand Monitoring</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual Section -->
+    <!-- Split Visual Section (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/packages/assets/pricing-breakdown.webp" alt="BRNDNUR Trademark renewal filings and statutory maintenance in Kerala" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Perpetual Equity</p>
-            <h2>Maintaining Perpetual Trademark Ownership</h2>
-            <p>Unlike patents or copyright which eventually enter the public domain, a registered trademark can be renewed indefinitely every 10 years. As long as renewal forms and prescribed statutory fees are remitted on schedule, your commercial monopoly continues perpetually.</p>
-            <p>Allowing a mark to lapse through administrative oversight is catastrophic: third-party competitors can immediately file for the abandoned mark, while reviving a removed trademark requires complex restoration proceedings with heavy government penalty surcharges.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/renewal-ownership-maintenance.webp" alt="BRNDNUR Trademark renewal filings and statutory maintenance in Kerala" width="800" height="600" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Perpetual Equity</p>
+          <h2>Maintaining Perpetual Trademark Ownership.</h2>
+          <div class="gold-rule"></div>
+          <p>Unlike patents or copyright which eventually enter the public domain, a registered trademark can be renewed indefinitely every 10 years. As long as renewal forms and prescribed statutory fees are remitted on schedule, your commercial monopoly continues perpetually.</p>
+          <p>Allowing a mark to lapse through administrative oversight is catastrophic: third-party competitors can immediately file for the abandoned mark, while reviving a removed trademark requires complex restoration proceedings with heavy government penalty surcharges.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Filing Date Calculation</strong>
+                <p>The 10-year validity is calculated from the original application filing date, not when the certificate was issued.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>Calculation of the 10-Year Term</h4>
-                <p>The 10-year validity period is calculated from the original date of application filing (Form TM-A), not the date the certificate was issued. Verify your filing date to ensure timely submission.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>Timely Form TM-R Remittance</strong>
+                <p>Filing within the 6-month pre-expiry window avoids severe late surcharge penalties imposed by the registry.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>Restoration Proceedings Support</strong>
+                <p>Strategic representation under Section 25(4) if your mark was inadvertently removed from the register.</p>
               </div>
             </div>
           </div>
@@ -75,59 +101,61 @@ const canonical = "https://brndnur.com/trademark-renewal/";
       </div>
     </section>
 
-    <!-- Critical Renewal Timelines with Clean SVGs -->
+    <!-- Critical Renewal Timelines (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">Statutory Windows</p>
-          <h2>Renewal Periods Under the Trade Marks Rules</h2>
-          <p>Be aware of statutory deadlines to avoid severe late surcharge penalties or mark abandonment:</p>
+          <h2>Renewal Periods Under the Trade Marks Rules.</h2>
+          <div class="gold-rule"></div>
+          <p>Be aware of statutory deadlines to avoid severe late surcharge penalties or mark abandonment.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <CardCarousel id="renewal-windows-carousel" ariaLabel="Trademark renewal statutory windows">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>Standard Renewal Window</h3>
+              <p>Renewal applications can be filed up to 6 months prior to the 10-year expiry date on Form TM-R with standard statutory government fees.</p>
             </div>
-            <h3>Standard Renewal Window</h3>
-            <p>Renewal applications can be filed up to 6 months prior to the 10-year expiry date on Form TM-R with standard statutory government fees.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>Grace Period Filing</h3>
+              <p>If the expiry date lapses, the Trade Marks Rules permit a 6-month grace period to renew upon payment of prescribed late surcharges.</p>
             </div>
-            <h3>Late Renewal (6-Month Grace)</h3>
-            <p>If you miss the expiry date, a 6-month statutory grace period permits renewal accompanied by additional prescribed government surcharge fees.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>Restoration Window</h3>
+              <p>Between 6 months and 1 year post-expiration, the mark may be restored to the register by filing Form TM-R with statutory restoration penalty fees.</p>
             </div>
-            <h3>Restoration (Within 1 Year)</h3>
-            <p>If removed from the register, a mark may be restored between 6 months and 1 year post-expiry by filing for restoration and renewal with statutory penalties.</p>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- Renewal Windows & Statutory Procedure Table -->
+    <!-- Timeline & Fee Schedule Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Filing Schedule</p>
-          <h2>Statutory Renewal & Restoration Schedule</h2>
-          <p>Official procedural timeline under Section 25 of the Trade Marks Act, 1999.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Statutory Timetable</p>
+          <h2>Renewal Windows &amp; Legal Status.</h2>
+          <div class="gold-rule"></div>
+          <p>Deadlines and regulatory outcomes governing trademark maintenance in India.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
-                <th>Period</th>
+                <th>Timeline Relative to 10-Year Mark</th>
                 <th>Prescribed Form</th>
-                <th>Government Statutory Surcharge</th>
+                <th>Government Statutory Fee Impact</th>
                 <th>Registry Status</th>
               </tr>
             </thead>
@@ -136,7 +164,7 @@ const canonical = "https://brndnur.com/trademark-renewal/";
                 <td><strong>6 Months Prior to Expiry</strong></td>
                 <td>Form TM-R</td>
                 <td>Standard Statutory Fee Only</td>
-                <td>Registered & Active</td>
+                <td>Registered &amp; Active</td>
               </tr>
               <tr>
                 <td><strong>Up to 6 Months After Expiry</strong></td>
@@ -154,7 +182,7 @@ const canonical = "https://brndnur.com/trademark-renewal/";
                 <td><strong>Beyond 1 Year Post-Expiry</strong></td>
                 <td>Fresh Form TM-A</td>
                 <td>New Application Statutory Fees</td>
-                <td>Lapsed & Abandoned; Open to Public Adoption</td>
+                <td>Lapsed &amp; Abandoned; Open to Public Adoption</td>
               </tr>
             </tbody>
           </table>
@@ -162,16 +190,113 @@ const canonical = "https://brndnur.com/trademark-renewal/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- Renewal Process (3-Step Workflow) -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Structured Support</p>
+          <h2>The 3-Step Renewal Process.</h2>
+          <div class="gold-rule"></div>
+          <p>Ensuring timely compliance and seamless renewal with the Indian Trade Marks Registry.</p>
+        </div>
+
+        <CardCarousel id="renewal-steps-carousel" ariaLabel="The 3-step renewal process">
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Registry Audit &amp; Status Check</h3>
+            <p>We verify your official application number, current registered proprietor name, and exact statutory expiration date on IP India.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Form TM-R Preparation &amp; E-Filing</h3>
+            <p>We assemble the statutory renewal documentation and e-file Form TM-R with direct electronic payment of government fees.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3>Renewal Certificate &amp; Journal Check</h3>
+            <p>We track the registry's renewal endorsement and deliver your official renewed certificate valid for the subsequent 10-year term.</p>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Renewal FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">Renewal FAQs</p>
+          <h2>Questions About Trademark Renewal.</h2>
+          <div class="gold-rule"></div>
+          <p>Key legal timelines and procedures under the Trade Marks Act, 1999.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="When is the optimal time to file for trademark renewal?"
+            answer="Under Section 25 of the Trade Marks Act, a renewal application (Form TM-R) can be filed within 6 months prior to the expiration date of the 10-year registration. Filing within this standard window avoids statutory late fee surcharges and ensures seamless legal continuity."
+          />
+          <FaqItem
+            num="02"
+            question="What happens if my trademark has already expired?"
+            answer="If the 10-year deadline has passed, Indian law provides a 6-month grace period from the expiration date to renew the mark by paying the prescribed statutory surcharge penalty. If more than 6 months have passed (up to 1 year post-expiry), the mark is removed from the register but may be restored by filing a combined restoration application."
+          />
+          <FaqItem
+            num="03"
+            question="Do I need to submit proof of ongoing commercial use during renewal?"
+            answer="Unlike some foreign jurisdictions, the Indian Trade Marks Registry generally does not require fresh commercial invoices or usage affidavits for standard renewal on Form TM-R, provided the proprietor details remain unchanged."
+          />
+          <FaqItem
+            num="04"
+            question="Can I change the logo or update the brand name during renewal?"
+            answer="No. Form TM-R renews the exact mark and specifications as originally registered. Any alterations to the brand name, emblem design, or expansion of classes requires filing a separate new trademark application."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Check Status</p>
-          <h2>Is Your Registered Trademark Approaching Its 10-Year Mark?</h2>
+          <h2>Is Your Registered Trademark<br>Approaching Its 10-Year Mark?</h2>
           <p>Share your trademark registration number. We will verify its status on the official registry and advise on the next steps.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20check%20my%20trademark%20renewal%20date." target="_blank" rel="noopener noreferrer">Check Expiry on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/contact/">Contact Our Office</a>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Check Expiry on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Registry Status Audit</strong>
+              <p>Instant verification of renewal deadlines and examination state.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Transparent Surcharges</strong>
+              <p>Itemized clarity on statutory fees and any applicable penalties.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Seamless Extension</strong>
+              <p>Protection renewed for another uninterrupted 10-year cycle.</p>
+            </div>
           </div>
         </div>
       </div>

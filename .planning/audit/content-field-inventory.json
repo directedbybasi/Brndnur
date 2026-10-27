@@ -1,0 +1,1692 @@
+{
+  "stats": {
+    "totalRecords": 201,
+    "validRecords": 0,
+    "missingFields": [
+      {
+        "file": "kerala-200-manifest.json",
+        "missing": [
+          "title",
+          "slug",
+          "service",
+          "location",
+          "district",
+          "quickAnswer",
+          "faqs",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-001.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-002.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-003.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-004.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-005.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-006.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-007.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-008.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-009.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-010.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-011.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-012.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-013.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-014.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-015.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-016.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-017.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-018.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-019.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-020.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-021.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-022.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-023.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-024.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-025.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-026.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-027.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-028.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-029.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-030.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-031.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-032.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-033.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-034.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-035.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-036.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-037.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-038.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-039.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-040.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-041.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-042.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-043.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-044.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-045.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-046.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-047.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-048.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-049.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-050.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-051.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-052.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-053.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-054.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-055.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-056.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-057.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-058.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-059.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-060.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-061.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-062.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-063.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-064.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-065.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-066.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-067.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-068.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-069.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-070.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-071.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-072.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-073.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-074.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-075.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-076.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-077.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-078.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-079.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-080.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-081.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-082.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-083.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-084.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-085.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-086.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-087.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-088.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-089.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-090.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-091.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-092.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-093.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-094.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-095.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-096.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-097.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-098.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-099.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-100.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-101.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-102.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-103.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-104.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-105.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-106.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-107.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-108.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-109.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-110.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-111.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-112.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-113.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-114.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-115.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-116.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-117.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-118.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-119.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-120.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-121.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-122.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-123.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-124.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-125.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-126.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-127.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-128.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-129.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-130.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-131.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-132.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-133.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-134.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-135.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-136.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-137.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-138.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-139.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-140.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-141.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-142.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-143.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-144.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-145.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-146.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-147.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-148.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-149.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-150.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-151.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-152.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-153.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-154.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-155.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-156.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-157.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-158.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-159.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-160.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-161.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-162.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-163.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-164.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-165.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-166.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-167.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-168.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-169.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-170.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-171.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-172.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-173.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-174.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-175.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-176.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-177.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-178.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-179.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-180.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-181.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-182.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-183.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-184.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-185.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-186.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-187.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-188.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-189.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-190.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-191.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-192.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-193.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-194.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-195.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-196.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-197.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-198.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-199.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      },
+      {
+        "file": "KL-200.json",
+        "missing": [
+          "service",
+          "location",
+          "steps"
+        ]
+      }
+    ]
+  },
+  "sampleRecords": [
+    {
+      "file": "kerala-200-manifest.json",
+      "faqCount": 0,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-001.json",
+      "slug": "trademark-registration-thiruvananthapuram-guide",
+      "district": "Thiruvananthapuram",
+      "faqCount": 3,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-002.json",
+      "slug": "brand-name-availability-kazhakkoottam",
+      "district": "Thiruvananthapuram",
+      "faqCount": 2,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-003.json",
+      "slug": "trademark-protection-it-startups-technopark",
+      "district": "Thiruvananthapuram",
+      "faqCount": 2,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-004.json",
+      "slug": "trademark-classes-saas-digital-businesses-thiruvananthapuram",
+      "district": "Thiruvananthapuram",
+      "faqCount": 2,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-005.json",
+      "slug": "fssai-registration-brand-protection-cloud-kitchens-kazhakkoottam",
+      "district": "Thiruvananthapuram",
+      "faqCount": 2,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-006.json",
+      "slug": "brand-protection-homestays-hospitality-varkala",
+      "district": "Thiruvananthapuram",
+      "faqCount": 2,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-007.json",
+      "slug": "choose-protect-brand-name-tourism-kovalam",
+      "district": "Thiruvananthapuram",
+      "faqCount": 2,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-008.json",
+      "slug": "trademark-registration-textile-brands-balaramapuram",
+      "district": "Thiruvananthapuram",
+      "faqCount": 2,
+      "stepCount": 0
+    },
+    {
+      "file": "KL-009.json",
+      "slug": "udyam-registration-small-businesses-attingal",
+      "district": "Thiruvananthapuram",
+      "faqCount": 2,
+      "stepCount": 0
+    }
+  ],
+  "totalRecordsLoaded": 201
+}

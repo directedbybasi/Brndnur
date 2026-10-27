@@ -1,0 +1,2361 @@
+{
+  "viewports": {
+    "Desktop (1536x900)": {
+      "viewport": {
+        "name": "Desktop (1536x900)",
+        "width": 1536,
+        "height": 900
+      },
+      "baselineHeight": 700,
+      "pages": [
+        {
+          "page": "Homepage",
+          "path": "/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 557.5,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Services Hub",
+          "path": "/services/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 505.9,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Packages Hub",
+          "path": "/packages/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 545.7,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Registration",
+          "path": "/trademark-registration/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 570.1,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "About BRNDNUR",
+          "path": "/about/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 624.5,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "How It Works",
+          "path": "/how-it-works/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 533.1,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Contact Page",
+          "path": "/contact/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 505.9,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Classes",
+          "path": "/trademark-classes/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 597.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Brand Name Search",
+          "path": "/brand-name-search/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 661.5,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Wordmark Registration",
+          "path": "/wordmark-registration/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 597.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Logo TM Registration",
+          "path": "/logo-trademark-registration/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 597.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Renewal",
+          "path": "/trademark-renewal/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 661.5,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Monitoring",
+          "path": "/trademark-monitoring/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 661.5,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "GST Registration",
+          "path": "/gst-registration/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 597.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Udyam MSME Registration",
+          "path": "/udyam-msme-registration/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 597.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "FSSAI Registration",
+          "path": "/fssai-registration/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 624.5,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Business Setup",
+          "path": "/business-setup/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 597.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Individual MSME",
+          "path": "/packages/individual-msme/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 505.9,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Company LLP",
+          "path": "/packages/company-llp/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 533.1,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Food Brand",
+          "path": "/packages/food-brand/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 597.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Gulf Return",
+          "path": "/packages/gulf-return-business/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 597.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Resources Hub",
+          "path": "/resources/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 570.1,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Registration",
+          "path": "/resources/trademark-registration-guide/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 607.1,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Class",
+          "path": "/resources/trademark-class-guide/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 570.1,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: Brand Search",
+          "path": "/resources/brand-name-search-guide/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 505.9,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Process",
+          "path": "/resources/trademark-application-process/",
+          "height": 700,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 700,
+            "width": 1536,
+            "computedHeight": "700px",
+            "copyHeight": 634.3,
+            "photoHeight": 700,
+            "hasOverflow": false
+          }
+        }
+      ]
+    },
+    "Laptop (1366x768)": {
+      "viewport": {
+        "name": "Laptop (1366x768)",
+        "width": 1366,
+        "height": 768
+      },
+      "baselineHeight": 696,
+      "pages": [
+        {
+          "page": "Homepage",
+          "path": "/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 557.2,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Services Hub",
+          "path": "/services/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 491.5,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Packages Hub",
+          "path": "/packages/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 524.2,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Registration",
+          "path": "/trademark-registration/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 491.5,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "About BRNDNUR",
+          "path": "/about/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 602.9,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "How It Works",
+          "path": "/how-it-works/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 518.7,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Contact Page",
+          "path": "/contact/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 491.5,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Classes",
+          "path": "/trademark-classes/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 575.8,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Brand Name Search",
+          "path": "/brand-name-search/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 632.9,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Wordmark Registration",
+          "path": "/wordmark-registration/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 518.7,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Logo TM Registration",
+          "path": "/logo-trademark-registration/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 518.7,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Renewal",
+          "path": "/trademark-renewal/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 518.7,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Monitoring",
+          "path": "/trademark-monitoring/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 575.8,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "GST Registration",
+          "path": "/gst-registration/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 575.8,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Udyam MSME Registration",
+          "path": "/udyam-msme-registration/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 575.8,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "FSSAI Registration",
+          "path": "/fssai-registration/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 602.9,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Business Setup",
+          "path": "/business-setup/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 575.8,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Individual MSME",
+          "path": "/packages/individual-msme/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 491.5,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Company LLP",
+          "path": "/packages/company-llp/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 518.7,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Food Brand",
+          "path": "/packages/food-brand/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 575.8,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Gulf Return",
+          "path": "/packages/gulf-return-business/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 575.8,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Resources Hub",
+          "path": "/resources/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 491.5,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Registration",
+          "path": "/resources/trademark-registration-guide/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 521.5,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Class",
+          "path": "/resources/trademark-class-guide/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 491.5,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: Brand Search",
+          "path": "/resources/brand-name-search-guide/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 491.5,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Process",
+          "path": "/resources/trademark-application-process/",
+          "height": 696,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 696,
+            "width": 1366,
+            "computedHeight": "696px",
+            "copyHeight": 548.6,
+            "photoHeight": 696,
+            "hasOverflow": false
+          }
+        }
+      ]
+    },
+    "Tablet (768x1024)": {
+      "viewport": {
+        "name": "Tablet (768x1024)",
+        "width": 768,
+        "height": 1024
+      },
+      "baselineHeight": 629,
+      "pages": [
+        {
+          "page": "Homepage",
+          "path": "/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 578.7,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Services Hub",
+          "path": "/services/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 411.4,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Packages Hub",
+          "path": "/packages/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 423.1,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Registration",
+          "path": "/trademark-registration/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 411.4,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "About BRNDNUR",
+          "path": "/about/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 460.6,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "How It Works",
+          "path": "/how-it-works/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Contact Page",
+          "path": "/contact/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 411.4,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Classes",
+          "path": "/trademark-classes/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Brand Name Search",
+          "path": "/brand-name-search/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Wordmark Registration",
+          "path": "/wordmark-registration/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Logo TM Registration",
+          "path": "/logo-trademark-registration/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Renewal",
+          "path": "/trademark-renewal/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Monitoring",
+          "path": "/trademark-monitoring/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "GST Registration",
+          "path": "/gst-registration/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Udyam MSME Registration",
+          "path": "/udyam-msme-registration/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 460.6,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "FSSAI Registration",
+          "path": "/fssai-registration/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 522.2,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Business Setup",
+          "path": "/business-setup/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 497.6,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Individual MSME",
+          "path": "/packages/individual-msme/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 411.4,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Company LLP",
+          "path": "/packages/company-llp/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 497.6,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Food Brand",
+          "path": "/packages/food-brand/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Gulf Return",
+          "path": "/packages/gulf-return-business/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 436,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Resources Hub",
+          "path": "/resources/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 411.4,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Registration",
+          "path": "/resources/trademark-registration-guide/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 386.8,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Class",
+          "path": "/resources/trademark-class-guide/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 411.4,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: Brand Search",
+          "path": "/resources/brand-name-search-guide/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 411.4,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Process",
+          "path": "/resources/trademark-application-process/",
+          "height": 629,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 629,
+            "width": 768,
+            "computedHeight": "629px",
+            "copyHeight": 447.5,
+            "photoHeight": 629,
+            "hasOverflow": false
+          }
+        }
+      ]
+    },
+    "Mobile (390x844)": {
+      "viewport": {
+        "name": "Mobile (390x844)",
+        "width": 390,
+        "height": 844
+      },
+      "baselineHeight": 876.2,
+      "pages": [
+        {
+          "page": "Homepage",
+          "path": "/",
+          "height": 876.2,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 876.2,
+            "width": 390,
+            "computedHeight": "876.234px",
+            "copyHeight": 587.7,
+            "photoHeight": 268.5,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Services Hub",
+          "path": "/services/",
+          "height": 741.7,
+          "diff": 134.5,
+          "isMatch": false,
+          "data": {
+            "height": 741.7,
+            "width": 390,
+            "computedHeight": "741.703px",
+            "copyHeight": 437.7,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Packages Hub",
+          "path": "/packages/",
+          "height": 726.9,
+          "diff": 149.30000000000007,
+          "isMatch": false,
+          "data": {
+            "height": 726.9,
+            "width": 390,
+            "computedHeight": "726.891px",
+            "copyHeight": 422.9,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Registration",
+          "path": "/trademark-registration/",
+          "height": 741.7,
+          "diff": 134.5,
+          "isMatch": false,
+          "data": {
+            "height": 741.7,
+            "width": 390,
+            "computedHeight": "741.703px",
+            "copyHeight": 437.7,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "About BRNDNUR",
+          "path": "/about/",
+          "height": 788.8,
+          "diff": 87.40000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 788.8,
+            "width": 390,
+            "computedHeight": "788.828px",
+            "copyHeight": 484.8,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "How It Works",
+          "path": "/how-it-works/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Contact Page",
+          "path": "/contact/",
+          "height": 741.7,
+          "diff": 134.5,
+          "isMatch": false,
+          "data": {
+            "height": 741.7,
+            "width": 390,
+            "computedHeight": "741.703px",
+            "copyHeight": 437.7,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Classes",
+          "path": "/trademark-classes/",
+          "height": 788.8,
+          "diff": 87.40000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 788.8,
+            "width": 390,
+            "computedHeight": "788.828px",
+            "copyHeight": 484.8,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Brand Name Search",
+          "path": "/brand-name-search/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Wordmark Registration",
+          "path": "/wordmark-registration/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Logo TM Registration",
+          "path": "/logo-trademark-registration/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Renewal",
+          "path": "/trademark-renewal/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Monitoring",
+          "path": "/trademark-monitoring/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "GST Registration",
+          "path": "/gst-registration/",
+          "height": 822,
+          "diff": 54.200000000000045,
+          "isMatch": false,
+          "data": {
+            "height": 822,
+            "width": 390,
+            "computedHeight": "821.969px",
+            "copyHeight": 518,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Udyam MSME Registration",
+          "path": "/udyam-msme-registration/",
+          "height": 822,
+          "diff": 54.200000000000045,
+          "isMatch": false,
+          "data": {
+            "height": 822,
+            "width": 390,
+            "computedHeight": "821.969px",
+            "copyHeight": 518,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "FSSAI Registration",
+          "path": "/fssai-registration/",
+          "height": 788.8,
+          "diff": 87.40000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 788.8,
+            "width": 390,
+            "computedHeight": "788.828px",
+            "copyHeight": 484.8,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Business Setup",
+          "path": "/business-setup/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Individual MSME",
+          "path": "/packages/individual-msme/",
+          "height": 741.7,
+          "diff": 134.5,
+          "isMatch": false,
+          "data": {
+            "height": 741.7,
+            "width": 390,
+            "computedHeight": "741.703px",
+            "copyHeight": 437.7,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Company LLP",
+          "path": "/packages/company-llp/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Food Brand",
+          "path": "/packages/food-brand/",
+          "height": 765.3,
+          "diff": 110.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 765.3,
+            "width": 390,
+            "computedHeight": "765.266px",
+            "copyHeight": 461.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Gulf Return",
+          "path": "/packages/gulf-return-business/",
+          "height": 798.4,
+          "diff": 77.80000000000007,
+          "isMatch": false,
+          "data": {
+            "height": 798.4,
+            "width": 390,
+            "computedHeight": "798.406px",
+            "copyHeight": 494.4,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Resources Hub",
+          "path": "/resources/",
+          "height": 741.7,
+          "diff": 134.5,
+          "isMatch": false,
+          "data": {
+            "height": 741.7,
+            "width": 390,
+            "computedHeight": "741.703px",
+            "copyHeight": 437.7,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Registration",
+          "path": "/resources/trademark-registration-guide/",
+          "height": 751.3,
+          "diff": 124.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 751.3,
+            "width": 390,
+            "computedHeight": "751.281px",
+            "copyHeight": 447.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Class",
+          "path": "/resources/trademark-class-guide/",
+          "height": 718.1,
+          "diff": 158.10000000000002,
+          "isMatch": false,
+          "data": {
+            "height": 718.1,
+            "width": 390,
+            "computedHeight": "718.141px",
+            "copyHeight": 414.1,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: Brand Search",
+          "path": "/resources/brand-name-search-guide/",
+          "height": 741.7,
+          "diff": 134.5,
+          "isMatch": false,
+          "data": {
+            "height": 741.7,
+            "width": 390,
+            "computedHeight": "741.703px",
+            "copyHeight": 437.7,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Process",
+          "path": "/resources/trademark-application-process/",
+          "height": 751.3,
+          "diff": 124.90000000000009,
+          "isMatch": false,
+          "data": {
+            "height": 751.3,
+            "width": 390,
+            "computedHeight": "751.281px",
+            "copyHeight": 447.3,
+            "photoHeight": 240,
+            "hasOverflow": false
+          }
+        }
+      ]
+    },
+    "Narrow Mobile (360x800)": {
+      "viewport": {
+        "name": "Narrow Mobile (360x800)",
+        "width": 360,
+        "height": 800
+      },
+      "baselineHeight": 905.9,
+      "pages": [
+        {
+          "page": "Homepage",
+          "path": "/",
+          "height": 905.9,
+          "diff": 0,
+          "isMatch": true,
+          "data": {
+            "height": 905.9,
+            "width": 360,
+            "computedHeight": "905.906px",
+            "copyHeight": 639.9,
+            "photoHeight": 246,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Services Hub",
+          "path": "/services/",
+          "height": 725,
+          "diff": 180.89999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 725,
+            "width": 360,
+            "computedHeight": "724.984px",
+            "copyHeight": 451,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Packages Hub",
+          "path": "/packages/",
+          "height": 708,
+          "diff": 197.89999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 708,
+            "width": 360,
+            "computedHeight": "708.031px",
+            "copyHeight": 434,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Registration",
+          "path": "/trademark-registration/",
+          "height": 725,
+          "diff": 180.89999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 725,
+            "width": 360,
+            "computedHeight": "724.984px",
+            "copyHeight": 451,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "About BRNDNUR",
+          "path": "/about/",
+          "height": 772.1,
+          "diff": 133.79999999999995,
+          "isMatch": false,
+          "data": {
+            "height": 772.1,
+            "width": 360,
+            "computedHeight": "772.109px",
+            "copyHeight": 498.1,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "How It Works",
+          "path": "/how-it-works/",
+          "height": 725,
+          "diff": 180.89999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 725,
+            "width": 360,
+            "computedHeight": "724.984px",
+            "copyHeight": 451,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Contact Page",
+          "path": "/contact/",
+          "height": 725,
+          "diff": 180.89999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 725,
+            "width": 360,
+            "computedHeight": "724.984px",
+            "copyHeight": 451,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Classes",
+          "path": "/trademark-classes/",
+          "height": 748.5,
+          "diff": 157.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 748.5,
+            "width": 360,
+            "computedHeight": "748.547px",
+            "copyHeight": 474.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Brand Name Search",
+          "path": "/brand-name-search/",
+          "height": 725,
+          "diff": 180.89999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 725,
+            "width": 360,
+            "computedHeight": "724.984px",
+            "copyHeight": 451,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Wordmark Registration",
+          "path": "/wordmark-registration/",
+          "height": 748.5,
+          "diff": 157.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 748.5,
+            "width": 360,
+            "computedHeight": "748.547px",
+            "copyHeight": 474.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Logo TM Registration",
+          "path": "/logo-trademark-registration/",
+          "height": 725,
+          "diff": 180.89999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 725,
+            "width": 360,
+            "computedHeight": "724.984px",
+            "copyHeight": 451,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Renewal",
+          "path": "/trademark-renewal/",
+          "height": 748.5,
+          "diff": 157.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 748.5,
+            "width": 360,
+            "computedHeight": "748.547px",
+            "copyHeight": 474.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Trademark Monitoring",
+          "path": "/trademark-monitoring/",
+          "height": 748.5,
+          "diff": 157.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 748.5,
+            "width": 360,
+            "computedHeight": "748.547px",
+            "copyHeight": 474.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "GST Registration",
+          "path": "/gst-registration/",
+          "height": 779.5,
+          "diff": 126.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 779.5,
+            "width": 360,
+            "computedHeight": "779.547px",
+            "copyHeight": 505.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Udyam MSME Registration",
+          "path": "/udyam-msme-registration/",
+          "height": 803.1,
+          "diff": 102.79999999999995,
+          "isMatch": false,
+          "data": {
+            "height": 803.1,
+            "width": 360,
+            "computedHeight": "803.109px",
+            "copyHeight": 529.1,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "FSSAI Registration",
+          "path": "/fssai-registration/",
+          "height": 748.5,
+          "diff": 157.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 748.5,
+            "width": 360,
+            "computedHeight": "748.547px",
+            "copyHeight": 474.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Business Setup",
+          "path": "/business-setup/",
+          "height": 748.5,
+          "diff": 157.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 748.5,
+            "width": 360,
+            "computedHeight": "748.547px",
+            "copyHeight": 474.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Individual MSME",
+          "path": "/packages/individual-msme/",
+          "height": 701.4,
+          "diff": 204.5,
+          "isMatch": false,
+          "data": {
+            "height": 701.4,
+            "width": 360,
+            "computedHeight": "701.422px",
+            "copyHeight": 427.4,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Company LLP",
+          "path": "/packages/company-llp/",
+          "height": 725,
+          "diff": 180.89999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 725,
+            "width": 360,
+            "computedHeight": "724.984px",
+            "copyHeight": 451,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Food Brand",
+          "path": "/packages/food-brand/",
+          "height": 748.5,
+          "diff": 157.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 748.5,
+            "width": 360,
+            "computedHeight": "748.547px",
+            "copyHeight": 474.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Package: Gulf Return",
+          "path": "/packages/gulf-return-business/",
+          "height": 779.5,
+          "diff": 126.39999999999998,
+          "isMatch": false,
+          "data": {
+            "height": 779.5,
+            "width": 360,
+            "computedHeight": "779.547px",
+            "copyHeight": 505.5,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Resources Hub",
+          "path": "/resources/",
+          "height": 701.4,
+          "diff": 204.5,
+          "isMatch": false,
+          "data": {
+            "height": 701.4,
+            "width": 360,
+            "computedHeight": "701.422px",
+            "copyHeight": 427.4,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Registration",
+          "path": "/resources/trademark-registration-guide/",
+          "height": 708.9,
+          "diff": 197,
+          "isMatch": false,
+          "data": {
+            "height": 708.9,
+            "width": 360,
+            "computedHeight": "708.859px",
+            "copyHeight": 434.9,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Class",
+          "path": "/resources/trademark-class-guide/",
+          "height": 677.9,
+          "diff": 228,
+          "isMatch": false,
+          "data": {
+            "height": 677.9,
+            "width": 360,
+            "computedHeight": "677.859px",
+            "copyHeight": 403.9,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: Brand Search",
+          "path": "/resources/brand-name-search-guide/",
+          "height": 701.4,
+          "diff": 204.5,
+          "isMatch": false,
+          "data": {
+            "height": 701.4,
+            "width": 360,
+            "computedHeight": "701.422px",
+            "copyHeight": 427.4,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        },
+        {
+          "page": "Guide: TM Process",
+          "path": "/resources/trademark-application-process/",
+          "height": 732.4,
+          "diff": 173.5,
+          "isMatch": false,
+          "data": {
+            "height": 732.4,
+            "width": 360,
+            "computedHeight": "732.422px",
+            "copyHeight": 458.4,
+            "photoHeight": 210,
+            "hasOverflow": false
+          }
+        }
+      ]
+    }
+  },
+  "summary": {
+    "totalAssertions": 130,
+    "passed": 80,
+    "failed": 50,
+    "mismatches": [
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Services Hub",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Packages Hub",
+        "pageHeight": 726.9,
+        "baselineHeight": 876.2,
+        "diff": 149.30000000000007
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Trademark Registration",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "About BRNDNUR",
+        "pageHeight": 788.8,
+        "baselineHeight": 876.2,
+        "diff": 87.40000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "How It Works",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Contact Page",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Trademark Classes",
+        "pageHeight": 788.8,
+        "baselineHeight": 876.2,
+        "diff": 87.40000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Brand Name Search",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Wordmark Registration",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Logo TM Registration",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Trademark Renewal",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Trademark Monitoring",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "GST Registration",
+        "pageHeight": 822,
+        "baselineHeight": 876.2,
+        "diff": 54.200000000000045
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Udyam MSME Registration",
+        "pageHeight": 822,
+        "baselineHeight": 876.2,
+        "diff": 54.200000000000045
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "FSSAI Registration",
+        "pageHeight": 788.8,
+        "baselineHeight": 876.2,
+        "diff": 87.40000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Business Setup",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Package: Individual MSME",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Package: Company LLP",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Package: Food Brand",
+        "pageHeight": 765.3,
+        "baselineHeight": 876.2,
+        "diff": 110.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Package: Gulf Return",
+        "pageHeight": 798.4,
+        "baselineHeight": 876.2,
+        "diff": 77.80000000000007
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Resources Hub",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Guide: TM Registration",
+        "pageHeight": 751.3,
+        "baselineHeight": 876.2,
+        "diff": 124.90000000000009
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Guide: TM Class",
+        "pageHeight": 718.1,
+        "baselineHeight": 876.2,
+        "diff": 158.10000000000002
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Guide: Brand Search",
+        "pageHeight": 741.7,
+        "baselineHeight": 876.2,
+        "diff": 134.5
+      },
+      {
+        "viewport": "Mobile (390x844)",
+        "page": "Guide: TM Process",
+        "pageHeight": 751.3,
+        "baselineHeight": 876.2,
+        "diff": 124.90000000000009
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Services Hub",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Packages Hub",
+        "pageHeight": 708,
+        "baselineHeight": 905.9,
+        "diff": 197.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Trademark Registration",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "About BRNDNUR",
+        "pageHeight": 772.1,
+        "baselineHeight": 905.9,
+        "diff": 133.79999999999995
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "How It Works",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Contact Page",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Trademark Classes",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Brand Name Search",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Wordmark Registration",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Logo TM Registration",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Trademark Renewal",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Trademark Monitoring",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "GST Registration",
+        "pageHeight": 779.5,
+        "baselineHeight": 905.9,
+        "diff": 126.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Udyam MSME Registration",
+        "pageHeight": 803.1,
+        "baselineHeight": 905.9,
+        "diff": 102.79999999999995
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "FSSAI Registration",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Business Setup",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Package: Individual MSME",
+        "pageHeight": 701.4,
+        "baselineHeight": 905.9,
+        "diff": 204.5
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Package: Company LLP",
+        "pageHeight": 725,
+        "baselineHeight": 905.9,
+        "diff": 180.89999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Package: Food Brand",
+        "pageHeight": 748.5,
+        "baselineHeight": 905.9,
+        "diff": 157.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Package: Gulf Return",
+        "pageHeight": 779.5,
+        "baselineHeight": 905.9,
+        "diff": 126.39999999999998
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Resources Hub",
+        "pageHeight": 701.4,
+        "baselineHeight": 905.9,
+        "diff": 204.5
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Guide: TM Registration",
+        "pageHeight": 708.9,
+        "baselineHeight": 905.9,
+        "diff": 197
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Guide: TM Class",
+        "pageHeight": 677.9,
+        "baselineHeight": 905.9,
+        "diff": 228
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Guide: Brand Search",
+        "pageHeight": 701.4,
+        "baselineHeight": 905.9,
+        "diff": 204.5
+      },
+      {
+        "viewport": "Narrow Mobile (360x800)",
+        "page": "Guide: TM Process",
+        "pageHeight": 732.4,
+        "baselineHeight": 905.9,
+        "diff": 173.5
+      }
+    ]
+  }
+}

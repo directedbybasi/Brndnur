@@ -1,61 +1,339 @@
 ---
+import Logo from './Logo.astro';
+import { getHeaderWhatsAppUrl } from '../utils/whatsapp';
+
 interface Props {
   currentPath?: string;
 }
 
 const { currentPath = '/' } = Astro.props;
+const headerWhatsAppUrl = getHeaderWhatsAppUrl(currentPath);
+
+// Determine active state for dropdown categories
+const isServicesActive = [
+  '/services/',
+  '/trademark-registration/',
+  '/trademark/',
+  '/brand-name-search/',
+  '/trademark-classes/',
+  '/wordmark-registration/',
+  '/logo-trademark-registration/',
+  '/trademark-renewal/',
+  '/trademark-monitoring/',
+  '/gst-registration/',
+  '/udyam-msme-registration/',
+  '/fssai-registration/',
+  '/business-setup/'
+].includes(currentPath);
+
+const isPackagesActive = currentPath === '/packages/' || currentPath.startsWith('/packages/');
+
+const isResourcesActive = currentPath?.startsWith('/resources/') || currentPath?.startsWith('/blog/');
+
+const isAboutActive = currentPath === '/about/' || currentPath === '/how-it-works/' || currentPath === '/contact/';
 ---
 
 <a class="bn-skip" href="#main-content">Skip to content</a>
-<header class="bn-header">
+<header class="bn-header" id="site-header">
   <div class="bn-header-inner container">
-    <a class="bn-brand" href="/" aria-label="BRNDNUR Advisory LLP home">
-      <span class="bn-brand-name">BRNDNUR</span>
-      <span class="bn-brand-sub">ADVISORY LLP</span>
-      <span class="bn-brand-tag">LIGHT UP YOUR BRAND &trade;</span>
+    <!-- Left: Official BRNDNUR Logo -->
+    <a class="bn-brand header-logo" href="/" aria-label="BRNDNUR Advisory LLP - Light Up Your Brand">
+      <Logo variant="transparent" loading="eager" fetchpriority="high" />
+      <span class="sr-only">BRNDNUR Advisory LLP - Light Up Your Brand</span>
     </a>
+
+    <!-- Center: Streamlined Primary Navigation (Max 5 destinations) -->
     <nav class="bn-nav" id="bn-nav" aria-label="Main navigation">
-      <a href="/" aria-current={currentPath === '/' ? 'page' : undefined}>Home</a>
-      <a href="/trademark-registration/" aria-current={currentPath === '/trademark-registration/' ? 'page' : undefined}>Trademark Registration</a>
-      <a href="/services/" aria-current={currentPath === '/services/' ? 'page' : undefined}>Services</a>
-      <a href="/packages/" aria-current={currentPath === '/packages/' ? 'page' : undefined}>Packages</a>
-      <a href="/about/" aria-current={currentPath === '/about/' ? 'page' : undefined}>About</a>
-      <a href="/how-it-works/" aria-current={currentPath === '/how-it-works/' ? 'page' : undefined}>How It Works</a>
-      <a href="/faqs/" aria-current={currentPath === '/faqs/' ? 'page' : undefined}>FAQs</a>
-      <a href="/contact/" aria-current={currentPath === '/contact/' ? 'page' : undefined}>Contact</a>
-      <a class="bn-nav-cta" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%20Advisory%2C%20I%20would%20like%20to%20discuss%20your%20services." target="_blank" rel="noopener noreferrer">Get in Touch &rarr;</a>
+      <!-- 1. Home -->
+      <a class="bn-nav-link" href="/" aria-current={currentPath === '/' ? 'page' : undefined}><span>Home</span></a>
+
+      <!-- 2. Services Dropdown -->
+      <div class="bn-dropdown" data-dropdown="services">
+        <button
+          class="bn-dropdown-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-controls="dropdown-services"
+          aria-current={isServicesActive ? 'page' : undefined}
+        >
+          <span>Services</span>
+          <svg class="bn-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="bn-dropdown-panel bn-dropdown-services" id="dropdown-services" role="region" aria-label="Services Submenu">
+          <div class="bn-dropdown-grid">
+            <div class="bn-dropdown-col">
+              <span class="bn-dropdown-heading">Brand &amp; Trademark Protection</span>
+              <ul class="bn-dropdown-list">
+                <li><a href="/trademark-registration/">Trademark Registration</a></li>
+                <li><a href="/brand-name-search/">Brand Name Search</a></li>
+                <li><a href="/trademark-classes/">Trademark Classes</a></li>
+                <li><a href="/wordmark-registration/">Wordmark Registration</a></li>
+                <li><a href="/logo-trademark-registration/">Logo Trademark Registration</a></li>
+                <li><a href="/trademark-renewal/">Trademark Renewal</a></li>
+                <li><a href="/trademark-monitoring/">Trademark Monitoring</a></li>
+              </ul>
+            </div>
+            <div class="bn-dropdown-col">
+              <span class="bn-dropdown-heading">Business Registrations</span>
+              <ul class="bn-dropdown-list">
+                <li><a href="/gst-registration/">GST Registration</a></li>
+                <li><a href="/udyam-msme-registration/">Udyam / MSME Registration</a></li>
+                <li><a href="/fssai-registration/">FSSAI Registration</a></li>
+                <li><a href="/business-setup/">Business Setup</a></li>
+              </ul>
+              <div class="bn-dropdown-footer-link">
+                <a href="/services/" class="bn-view-all-link">
+                  <span>Explore All Services</span>
+                  <span class="bn-view-all-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Packages Direct Link -->
+      <a class="bn-nav-link" href="/packages/" aria-current={isPackagesActive ? 'page' : undefined}><span>Packages</span></a>
+
+      <!-- 4. Resources Dropdown -->
+      <div class="bn-dropdown" data-dropdown="resources">
+        <button
+          class="bn-dropdown-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-controls="dropdown-resources"
+          aria-current={isResourcesActive ? 'page' : undefined}
+        >
+          <span>Resources</span>
+          <svg class="bn-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="bn-dropdown-panel bn-dropdown-resources" id="dropdown-resources" role="region" aria-label="Resources Submenu">
+          <ul class="bn-dropdown-list">
+            <li><a href="/resources/">Resources Hub</a></li>
+            <li><a href="/resources/trademark-registration-guide/">Trademark Registration Guide</a></li>
+            <li><a href="/resources/trademark-class-guide/">Trademark Class Guide</a></li>
+            <li><a href="/resources/brand-name-search-guide/">Brand Name Search Guide</a></li>
+            <li><a href="/resources/trademark-application-process/">Trademark Application Process</a></li>
+            <li><a href="/faqs/">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5. About Dropdown -->
+      <div class="bn-dropdown" data-dropdown="about">
+        <button
+          class="bn-dropdown-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-controls="dropdown-about"
+          aria-current={isAboutActive ? 'page' : undefined}
+        >
+          <span>About</span>
+          <svg class="bn-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="bn-dropdown-panel bn-dropdown-about" id="dropdown-about" role="region" aria-label="About Submenu">
+          <ul class="bn-dropdown-list">
+            <li><a href="/about/">About BRNDNUR</a></li>
+            <li><a href="/how-it-works/">How It Works</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mobile CTA Action inside Drawer -->
+      <div class="bn-mobile-cta-wrap">
+        <a class="bn-cta bn-nav-cta" href={headerWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+          <span>Get in Touch</span>
+          <span class="bn-cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
     </nav>
-    <a class="bn-cta" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%20Advisory%2C%20I%20would%20like%20to%20discuss%20your%20services." target="_blank" rel="noopener noreferrer">&#9673;&nbsp; Get in Touch <span aria-hidden="true">&rarr;</span></a>
+
+    <!-- Right: Prominent Desktop CTA -->
+    <a class="bn-cta" href={headerWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+      <span>Get in Touch</span>
+      <span class="bn-cta-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <!-- Mobile Hamburger Toggle -->
     <button class="bn-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="bn-nav">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="bn-icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+      <svg class="bn-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
     </button>
   </div>
 </header>
 
 <script>
-  // Shared navigation behaviour for mobile menu
-  const toggle = document.querySelector('.bn-toggle');
-  const nav = document.getElementById('bn-nav');
-  if (toggle && nav) {
-    const setOpen = (open: boolean) => {
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-      nav.classList.toggle('is-open', open);
+  function initHeader() {
+    const toggle = document.querySelector<HTMLButtonElement>('.bn-toggle');
+    const nav = document.getElementById('bn-nav');
+    const dropdowns = document.querySelectorAll<HTMLElement>('.bn-dropdown');
+
+    const closeAllDropdowns = (except?: HTMLElement) => {
+      dropdowns.forEach((dd) => {
+        if (dd !== except) {
+          dd.classList.remove('is-open');
+          const trigger = dd.querySelector<HTMLButtonElement>('.bn-dropdown-trigger');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        }
+      });
     };
-    toggle.addEventListener('click', () => {
-      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+
+    if (toggle && nav) {
+      const setNavOpen = (open: boolean) => {
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        nav.classList.toggle('is-open', open);
+        document.body.classList.toggle('bn-nav-open', open);
+        if (!open) {
+          closeAllDropdowns();
+        }
+      };
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setNavOpen(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+
+      // Close mobile drawer when clicking regular navigation links
+      nav.querySelectorAll<HTMLAnchorElement>('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 1024) {
+            setNavOpen(false);
+          }
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        const target = e.target as Node;
+        if (nav.classList.contains('is-open') && !nav.contains(target) && !toggle.contains(target)) {
+          setNavOpen(false);
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          setNavOpen(false);
+          closeAllDropdowns();
+        }
+      });
+    }
+
+    // Dropdown triggers
+    dropdowns.forEach((dd) => {
+      const trigger = dd.querySelector<HTMLButtonElement>('.bn-dropdown-trigger');
+      const panel = dd.querySelector<HTMLElement>('.bn-dropdown-panel');
+      if (!trigger || !panel) return;
+
+      // Click / Keyboard activation (works cleanly on desktop, tablet & mobile)
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = dd.classList.contains('is-open');
+        closeAllDropdowns(isOpen ? undefined : dd);
+        const nextState = !isOpen;
+        dd.classList.toggle('is-open', nextState);
+        trigger.setAttribute('aria-expanded', String(nextState));
+      });
     });
-    nav.querySelectorAll('a').forEach((a) => {
-      a.addEventListener('click', () => setOpen(false));
-    });
+
+    // Global click outside closes any dropdown
     document.addEventListener('click', (e) => {
-      const target = e.target as Node;
-      if (nav.classList.contains('is-open') && !nav.contains(target) && !toggle.contains(target)) {
-        setOpen(false);
+      const target = e.target as HTMLElement;
+      if (!target.closest('.bn-dropdown')) {
+        closeAllDropdowns();
       }
     });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') setOpen(false);
-    });
+
+    // --- SMART ANIMATED HEADER SCROLL LOGIC ---
+    const header = document.getElementById('site-header');
+    if (header) {
+      let lastScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+      let ticking = false;
+      const SCROLL_THRESHOLD = 90; // Pixels from top before header can hide (between 80-120px)
+      const INTENT_DELTA = 6;      // Minimum intentional scroll delta in px
+
+      const updateHeaderScroll = () => {
+        const currentScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+        const deltaY = currentScrollY - lastScrollY;
+        const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. If mobile drawer is open, or a dropdown is open, or header has focus, keep visible
+        const isNavOpen = document.body.classList.contains('bn-nav-open') || 
+                          (nav && nav.classList.contains('is-open')) ||
+                          (toggle && toggle.getAttribute('aria-expanded') === 'true');
+        const isDropdownOpen = document.querySelector('.bn-dropdown.is-open') !== null;
+        const isFocusWithin = header.matches(':focus-within');
+
+        if (isNavOpen || isDropdownOpen || isFocusWithin) {
+          header.classList.remove('bn-header--hidden');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        // 2. Ignore mobile rubber-banding / overscroll bounce near bottom
+        if (maxScrollY > 0 && currentScrollY >= maxScrollY - 10) {
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        // 3. At top of page: always restore to visible
+        if (currentScrollY <= SCROLL_THRESHOLD) {
+          header.classList.remove('bn-header--hidden');
+          header.classList.remove('bn-header--scrolled');
+        } 
+        // 4. Scrolling Down past threshold with intentional delta
+        else if (deltaY > INTENT_DELTA) {
+          header.classList.add('bn-header--hidden');
+          header.classList.add('bn-header--scrolled');
+        } 
+        // 5. Scrolling Up with intentional delta
+        else if (deltaY < -INTENT_DELTA) {
+          header.classList.remove('bn-header--hidden');
+          header.classList.add('bn-header--scrolled');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      };
+
+      const onScroll = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateHeaderScroll);
+          ticking = true;
+        }
+      };
+
+      // Keyboard focus management: reveal header on focus
+      header.addEventListener('focusin', () => {
+        header.classList.remove('bn-header--hidden');
+      });
+
+      // Detach any previous scroll listener to prevent duplicate handlers across transitions
+      if ((window as any).__bnHeaderScrollHandler) {
+        window.removeEventListener('scroll', (window as any).__bnHeaderScrollHandler);
+      }
+      (window as any).__bnHeaderScrollHandler = onScroll;
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
   }
+
+  // Initialize on load and on astro page transitions
+  initHeader();
+  document.addEventListener('astro:page-load', initHeader);
 </script>

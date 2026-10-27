@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "p0Critical": 0,
+    "p1High": 0,
+    "p2Medium": 0,
+    "p3Low": 0,
+    "totalFixedAndVerified": 7
+  },
+  "resolvedBugs": [
+    {
+      "id": "BUG-01",
+      "category": "A05 Shared Hero Fixed Height",
+      "priority": "P1",
+      "title": "Hero height divergence across page families on desktop and tablet",
+      "rootCause": "Individual page templates had conflicting scoped CSS with ad-hoc padding and min-height rules.",
+      "fix": "Consolidated all 26 inner pages to src/components/hero/PageHero.astro bound to shared tokens in tokens.css.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "BUG-02",
+      "category": "A06 CTAs and Interactions",
+      "priority": "P1",
+      "title": "Homepage Section 7 unrequested decorative column icon",
+      "rootCause": "Leftover decorative column icon in 'What to Prepare Before You Begin' section.",
+      "fix": "Surgically removed unwanted decorative icon and rebalanced padding and grid layout.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "BUG-03",
+      "category": "A16 WhatsApp Enquiry Links",
+      "priority": "P1",
+      "title": "Generic WhatsApp enquiries lacked page, section, and service context",
+      "rootCause": "Hardcoded WhatsApp URLs across templates without dynamic context parameters.",
+      "fix": "Standardized all buttons via src/utils/whatsapp.ts with automated context prefilling to 919048188899.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "BUG-04",
+      "category": "A09 Technical SEO",
+      "priority": "P1",
+      "title": "Localhost URLs in canonical and Open Graph metadata",
+      "rootCause": "Default Astro site parameter unset during local preview builds.",
+      "fix": "Hardcoded canonical domain https://brndnur.com/ across BaseLayout.astro and all page templates.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "BUG-05",
+      "category": "A12 Internal Links",
+      "priority": "P2",
+      "title": "Missing trailing slashes causing redirect hops on Hostinger static hosting",
+      "rootCause": "Relative links lacking trailing slashes.",
+      "fix": "Audited all 234 routes; verified 0 broken links and uniform trailing-slash canonical URLs.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "BUG-06",
+      "category": "A08 Accessibility",
+      "priority": "P2",
+      "title": "Missing skip-to-content links and landmarks on standalone pages",
+      "rootCause": "Some utility pages omitted the skip-link navigation component.",
+      "fix": "Centralized skip-link in BaseLayout.astro wrapping all 234 static routes.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "BUG-07",
+      "category": "A18 Hostinger Release Readiness",
+      "priority": "P1",
+      "title": "Missing HTTP security headers on static hosting",
+      "rootCause": "Static web servers do not automatically apply security headers without .htaccess.",
+      "fix": "Configured public/.htaccess with HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy.",
+      "status": "VERIFIED"
+    }
+  ]
+}

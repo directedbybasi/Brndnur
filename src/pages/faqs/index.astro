@@ -1,9 +1,223 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroBenefitStrip from '../../components/hero/HeroBenefitStrip.astro';
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
 
 const title = "Frequently Asked Questions | BRNDNUR Advisory LLP";
-const description = "Find clear answers to common questions about Indian trademark registration, classification classes, business setup, fees, and ongoing monitoring.";
+const description = "Find clear answers about trademark registration, government fees, MSME concessions, intellectual property protection, business registrations, packages, and the application process in India.";
 const canonical = "https://brndnur.com/faqs/";
+
+const faqTrustBadges = [
+  { icon: "♢", title: "Statutory Clarity", subtitle: "Trade Marks Act 1999" },
+  { icon: "▱", title: "Transparent Fees", subtitle: "Official Concessions" },
+  { icon: "⌖", title: "Direct Advisory", subtitle: "Skatt Business Park, Manjeri" }
+];
+
+const faqSpecificQueryUrl = buildWhatsAppUrl({
+  pageName: 'Frequently Asked Questions',
+  sectionName: 'Search Fallback CTA',
+  enquiryType: 'Specific FAQ Clarification',
+  topic: 'I have reviewed the frequently asked questions on your website but have a specific query not covered in the list.',
+  details: 'My specific question is: [Please describe your question]',
+  callToAction: 'Could you please provide clarification on this topic?'
+});
+
+const faqDiscussionUrl = buildWhatsAppUrl({
+  pageName: 'Frequently Asked Questions',
+  sectionName: 'Closing Advisory Band',
+  enquiryType: 'Advisory Consultation',
+  topic: 'I have reviewed your FAQs and would like to discuss my trademark and business registration requirements directly with an advisor.',
+  details: 'Service of interest: [e.g. Trademark, GST, Food Licensing, Business Setup]',
+  callToAction: 'Could you please connect me with an advisory coordinator to assist with next steps?'
+});
+
+// 30 Authoritative, verified FAQ items
+const faqItems = [
+  {
+    num: "01",
+    question: "What is a trademark and why does my business need one?",
+    answer: "A trademark is a legally recognized intellectual property asset—such as a brand name, logo, slogan, or emblem—that distinguishes your commercial goods or services from competitors. Registering your mark under the Trade Marks Act, 1999 provides statutory nationwide exclusivity across India. It prevents competitors and counterfeiters from using deceptively similar names, secures customer goodwill, and creates a transferable corporate asset as your business expands."
+  },
+  {
+    num: "02",
+    question: "What is the difference between the ™ and ® symbols?",
+    answer: "The ™ (trademark) symbol signifies that an application for registration has been officially submitted to the Trade Marks Registry and an application number has been allocated. You may use ™ immediately upon filing to put competitors on notice. The ® (registered) symbol can lawfully be used only after the Registrar officially issues the Certificate of Registration. Under Section 107 of the Trade Marks Act, falsely displaying ® on an unregistered mark is a punishable statutory offence."
+  },
+  {
+    num: "03",
+    question: "What is the difference between a wordmark and a logo or device mark?",
+    answer: "A wordmark protects the brand name itself in standard typography, granting broad legal protection regardless of font styling, color palettes, or layout changes over time. A logo (device mark) protects the distinctive visual design, stylized graphics, emblem, or combination of text and imagery. While a wordmark protects how your name is read, a logo protects how your brand looks. Businesses frequently file both to secure comprehensive commercial coverage."
+  },
+  {
+    num: "04",
+    question: "Can trademark registration be guaranteed by any consultant?",
+    answer: "No reputable legal consultant can guarantee trademark registration. The statutory authority to accept, object to, or reject a trademark rests entirely with the Registrar of Trade Marks under the Controller General of Patents, Designs and Trade Marks (CGPDTM). An advisory firm's role is to conduct rigorous preliminary clearance searches, identify potential conflicts under Sections 9 and 11, classify goods and services accurately, and file robust legal responses to examination queries."
+  },
+  {
+    num: "05",
+    question: "What types of trademarks can be registered in India?",
+    answer: "India recognizes diverse trademark formats under the Trade Marks Act, 1999. These include wordmarks (brand names and letters), device marks (logos and symbols), combinations of words and graphics, color combinations, slogans and taglines, shape of goods or their packaging, and sound marks. To qualify, any mark must be graphically representable and capable of distinguishing the applicant's goods or services from those of other commercial undertakings without causing public confusion."
+  },
+  {
+    num: "06",
+    question: "How do I check whether my brand name is available?",
+    answer: "Brand availability is initially checked via public search tools on the official Intellectual Property India (IP India) database. This search scans for identical or phonetically similar existing marks within your commercial class. However, a basic search result alone does not guarantee registration; comprehensive clearance requires analyzing descriptive terms under Section 9, evaluating confusing similarities under Section 11, and reviewing common-law commercial market usage to minimize the risk of third-party opposition."
+  },
+  {
+    num: "07",
+    question: "How do I begin a trademark registration enquiry?",
+    answer: "You can initiate an enquiry with BRNDNUR Advisory LLP by sharing your proposed brand name, logo design (if created), and an overview of your goods or services via WhatsApp (+91 90481 88899) or our online contact form. Our advisory team conducts an initial diagnostic review to identify the correct Nice Classification classes, verify applicant eligibility for government concessions, and outline the strategic filing roadmap before formal submission."
+  },
+  {
+    num: "08",
+    question: "What information and documents should I prepare?",
+    answer: "To prepare your trademark application, you should have your proposed brand name or high-resolution logo artwork, applicant identity and address proof (Aadhaar or PAN for individuals; Certificate of Incorporation, Partnership Deed, or LLP Agreement for entities), an Udyam MSME certificate (to claim the 50% government fee concession if eligible), a clear description of products or services, and a signed Form TM-48 power of attorney authorizing your trademark agent."
+  },
+  {
+    num: "09",
+    question: "How do trademark classes work?",
+    answer: "India follows the international Nice Classification system, which organizes all commercial goods and services into 45 distinct classes. Classes 1 to 34 cover physical products (such as food, cosmetics, textiles, and electronics), while Classes 35 to 45 cover services (such as retail stores, consultancy, software development, and restaurants). Trademark rights apply specifically to the classes you register; selecting incorrect or incomplete classes leaves your commercial operations vulnerable to infringement."
+  },
+  {
+    num: "10",
+    question: "Can I register the same brand name in multiple trademark classes?",
+    answer: "Yes. If your enterprise manufactures goods and also provides related services—such as producing packaged coffee (Class 30) and running specialty cafes (Class 43)—you should protect your mark across all relevant categories. You can submit separate class applications or a single multi-class application. Note that official government statutory fees and professional documentation charges are calculated on a per-class basis by the Trade Marks Registry."
+  },
+  {
+    num: "11",
+    question: "What happens after a trademark application is submitted?",
+    answer: "After filing, the Registry assigns an official application number, allowing you to use the ™ symbol immediately. An examiner reviews the application for formal compliance and statutory distinctiveness under Sections 9 and 11. If objections arise, an Examination Report is issued requiring a written reply within 30 days. Once accepted, the mark is advertised in the official Trade Marks Journal for a statutory 4-month opposition window prior to final registration."
+  },
+  {
+    num: "12",
+    question: "How long does trademark registration take in India?",
+    answer: "Trademark registration typically takes between 6 to 18 months from the initial filing date. The total timeline depends on the Registry's current examination workload, whether examination objections are raised requiring written clarification or formal hearings, and whether third parties file oppositions during the 4-month Journal publication period. Straightforward, uncontested applications with distinctive names progress significantly faster than marks facing substantive official queries."
+  },
+  {
+    num: "13",
+    question: "What happens if my trademark application receives an objection?",
+    answer: "An examination objection is a standard procedural step, not a final refusal. Objections typically cite Section 9 (lack of inherent distinctiveness or descriptive wording) or Section 11 (similarity to existing registered marks). The applicant must submit a comprehensive legal response supported by commercial evidence, invoices, or prior use affidavits within 30 days of the report. If the examiner is satisfied, the mark proceeds directly to Journal publication."
+  },
+  {
+    num: "14",
+    question: "Can someone oppose my trademark application?",
+    answer: "Yes. After an application passes examination, it is published in the weekly Trade Marks Journal for a mandatory four-month period. Any third party who believes your mark conflicts with their prior commercial rights, brand goodwill, or registered trademark may file a formal Notice of Opposition on Form TM-O. Opposition leads to structured adversarial proceedings, including counter-statements, evidence filings, and a formal hearing before the Registrar."
+  },
+  {
+    num: "15",
+    question: "Can I apply for a trademark before launching my business?",
+    answer: "Yes. Indian trademark law permits applications to be submitted on a \"proposed to be used\" basis before commercial launch. Applying early establishes a priority filing date across India, ensuring no competitor can claim statutory rights to your chosen name while you finalize your products, packaging, and commercial setup. Once sales commence, documented proof of market usage reinforces your ongoing protection."
+  },
+  {
+    num: "16",
+    question: "What are the government fees for trademark registration?",
+    answer: "Official statutory e-filing fees in India are prescribed by the Trade Marks Rules, 2017. For individuals, sole proprietors, recognized DPIIT startups, and MSME/Udyam certificate holders, the government fee is ₹4,500 per class. For standard corporate bodies (Private Limited, Limited companies, or non-MSME partnerships/LLPs), the fee is ₹9,000 per class. These statutory fees are paid directly to the government portal and are distinct from professional advisory charges."
+  },
+  {
+    num: "17",
+    question: "How do trademark fees differ for individuals, startups, MSMEs, and companies?",
+    answer: "The Trade Marks Rules classify applicants into two distinct categories for statutory filing fees. Natural individuals, sole proprietorship enterprises, registered MSMEs holding an Udyam certificate, and recognized startups qualify for a subsidized statutory rate of ₹4,500 per class. Corporate entities, larger firms, and non-MSME LLPs fall into the standard commercial category and are required to pay ₹9,000 per class. Verifying entity status beforehand ensures you claim eligible statutory concessions."
+  },
+  {
+    num: "18",
+    question: "How do I claim the 50% MSME or eligible-applicant fee concession?",
+    answer: "To secure the 50% statutory fee concession (paying ₹4,500 instead of ₹9,000 per class), the applicant must upload a valid Udyam Registration Certificate issued by the Ministry of Micro, Small & Medium Enterprises, or a recognized DPIIT Startup certificate at the time of e-filing. The certificate details must correspond directly to the trademark applicant name. BRNDNUR Advisory can assist eligible founders in obtaining Udyam registration before filing."
+  },
+  {
+    num: "19",
+    question: "Are government filing fees included in BRNDNUR's professional charges?",
+    answer: "No. Government statutory fees are payable directly to the Trade Marks Registry (CGPDTM) and are separate from BRNDNUR Advisory LLP's professional service charges. We maintain strict financial transparency by itemizing statutory government fees and our advisory fees separately in all written quotations. Official government receipts are provided for all statutory payments made on your behalf."
+  },
+  {
+    num: "20",
+    question: "What additional costs may arise during trademark registration?",
+    answer: "Most standard trademark applications that pass examination without contest do not incur additional official charges beyond the initial filing fee and professional advisory fee. However, if an application encounters substantial examination objections requiring formal attendance at a show-cause hearing, or if a third party files a contested opposition requiring rejoinders and evidence submissions, professional representation fees for those specific legal stages will apply."
+  },
+  {
+    num: "21",
+    question: "When does my business need GST registration?",
+    answer: "GST registration is legally mandatory if your aggregate annual turnover exceeds ₹40 lakhs for goods (₹20 lakhs for special category states) or ₹20 lakhs for services. In addition, GST registration is compulsory regardless of turnover if your business engages in inter-state sales, sells products through e-commerce platforms like Amazon or Flipkart, or is liable to pay tax under the reverse charge mechanism."
+  },
+  {
+    num: "22",
+    question: "What is Udyam or MSME registration, and who may benefit from it?",
+    answer: "Udyam Registration is the official digital recognition issued by the Ministry of MSME for micro, small, and medium enterprises in India based on investment and annual turnover thresholds. Beyond establishing statutory business credentials, Udyam registration unlocks significant commercial benefits, including a 50% fee concession on trademark filing fees, priority sector bank lending, interest subsidies, and statutory protection against delayed payments from buyers."
+  },
+  {
+    num: "23",
+    question: "Does my food business need FSSAI registration or a licence?",
+    answer: "Under the Food Safety and Standards Act, 2006, all food business operators—including manufacturers, restaurants, bakeries, cloud kitchens, and packaged food brands—must obtain FSSAI authorization before commencing operations. Businesses with an annual turnover up to ₹12 lakhs require a basic FSSAI Registration. Enterprises with turnover between ₹12 lakhs and ₹20 crores require an FSSAI State Licence, while larger or multi-state manufacturers require an FSSAI Central Licence."
+  },
+  {
+    num: "24",
+    question: "What does the Food Brand Package include?",
+    answer: "BRNDNUR's Food Brand Package is an integrated regulatory bundle designed specifically for food producers, bakeries, cafes, and packaged consumer food ventures. It synchronizes comprehensive trademark clearance and filing in relevant food classes (Class 29, 30, or 43), Udyam MSME certification to claim government fee concessions, and end-to-end FSSAI registration or state licensing support on the FoSCoS portal under one coordinated advisory scope."
+  },
+  {
+    num: "25",
+    question: "Can BRNDNUR help with company or LLP business setup?",
+    answer: "Yes. BRNDNUR Advisory LLP assists founders with entity constitution, providing strategic guidance on choosing between Sole Proprietorships, Partnerships, Limited Liability Partnerships (LLP), and Private Limited Companies. We ensure that your proposed corporate entity name is synchronized with trademark availability on the IP India database, avoiding situations where Ministry of Corporate Affairs (MCA) approved company names infringe upon preexisting registered trademarks."
+  },
+  {
+    num: "26",
+    question: "Can I apply for trademark registration if my business is not incorporated?",
+    answer: "Yes. You do not need an incorporated company or LLP to register a trademark. An individual, sole proprietor, or group of joint partners can file an application in their individual personal names as natural persons. Filing as an individual qualifies for the subsidized government fee of ₹4,500 per class. If you later incorporate a company, trademark ownership can be transferred to the new corporate entity via Form TM-P."
+  },
+  {
+    num: "27",
+    question: "How long does a trademark remain valid after registration?",
+    answer: "Under Section 25 of the Trade Marks Act, 1999, a registered trademark remains valid for 10 years from the original application filing date (not the certificate issue date). Once granted, the registration can be renewed indefinitely for successive 10-year terms by submitting Form TM-R along with the prescribed statutory renewal fee before expiration, securing perpetual brand exclusivity."
+  },
+  {
+    num: "28",
+    question: "Can I renew a trademark after registration?",
+    answer: "Yes. A trademark can be renewed within six months prior to its 10-year expiration date by filing Form TM-R. If the deadline is missed, the mark enters a six-month statutory grace period where it can still be renewed upon payment of a prescribed government surcharge. If not renewed within the grace period, the mark is advertised for removal from the Register, though restoration may be requested within one year."
+  },
+  {
+    num: "29",
+    question: "Can I transfer trademark ownership or change applicant details?",
+    answer: "Yes. Trademark ownership can be formally assigned or transferred to another individual or legal entity through a written deed of assignment. Under Indian trademark procedure, assignments (with or without commercial goodwill) and changes to applicant names, addresses, or constitution are recorded with the Trade Marks Registry by filing Form TM-P accompanied by statutory proof and prescribed government fees."
+  },
+  {
+    num: "30",
+    question: "How can I get a preliminary trademark search or a quotation from BRNDNUR?",
+    answer: "You can request a preliminary trademark availability check and a customized service quotation by contacting BRNDNUR Advisory LLP on WhatsApp (+91 90481 88899) or via our website enquiry channels. Simply share your proposed brand name, logo artwork if available, and a description of your goods or services. Our advisory team provides a clear breakdown of relevant classes, eligible statutory concessions, and transparent professional charges."
+  }
+];
+
+// Rich Structured Data Schema for Google FAQPage Rich Results
+const customFaqSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness", "ProfessionalService", "LegalService"],
+      "@id": "https://brndnur.com/#organization",
+      "name": "BRNDNUR Advisory LLP",
+      "url": "https://brndnur.com/",
+      "logo": "https://brndnur.com/assets/brndnur-logo-transparent.png",
+      "telephone": "+91 90481 88899"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://brndnur.com/faqs/#webpage",
+      "url": "https://brndnur.com/faqs/",
+      "name": title,
+      "description": description
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://brndnur.com/faqs/#faqpage",
+      "mainEntity": faqItems.map((item) => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    }
+  ]
+};
 ---
 
 <BaseLayout
@@ -11,196 +225,122 @@ const canonical = "https://brndnur.com/faqs/";
   description={description}
   canonical={canonical}
   currentPath="/faqs/"
+  hasCustomSchema={true}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(customFaqSchema)} />
+  </Fragment>
+
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
+    <!-- SINGLE UNIFIED FAQ SECTION -->
+    <section class="section faq-page-section" id="faq-unified-section" aria-labelledby="faq-page-heading">
       <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <span class="current">FAQs</span>
-        </nav>
-        <p class="eyebrow">Knowledge & Guidance</p>
-        <h1>Frequently Asked Questions.</h1>
-        <p class="lead">Clear, objective answers regarding trademark registration, business registrations, pricing structures, and regulatory requirements in India.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            <span>Verified Regulatory Answers</span>
+        <!-- 1. Eyebrow, 2. Main Page Heading, 3. Introductory Description, 4. Benefit Strip -->
+        <div class="faq-page-header">
+          <p class="eyebrow faq-eyebrow">Frequently Asked Questions</p>
+          <h1 id="faq-page-heading" class="faq-page-title">
+            Everything You Need to Know About<br class="hero-br-desktop" />
+            <span class="gold-text">Trademarks &amp; Business Registration.</span>
+          </h1>
+          <p class="faq-page-desc">
+            Find clear answers about trademark registration, government fees, MSME concessions, intellectual property protection, business registrations, packages, and the application process in India.
+          </p>
+          <HeroBenefitStrip items={faqTrustBadges} className="faq-trust-strip" />
+        </div>
+
+        <!-- 4. Search and Discovery Field -->
+        <div class="faq-search-wrap">
+          <div class="faq-search-box">
+            <svg class="faq-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="search"
+              id="faq-search-input"
+              class="faq-search-input"
+              placeholder="Search questions about trademarks, fees and registrations..."
+              aria-label="Search questions about trademarks, fees and registrations"
+              autocomplete="off"
+            />
+            <button type="button" id="faq-search-clear" class="faq-search-clear" aria-label="Clear search query" style="display: none;">
+              ✕
+            </button>
           </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Trade Marks Act, 1999</span>
+          <div id="faq-search-status" class="faq-search-status" aria-live="polite">
+            Showing all 30 questions
           </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>Government & MSME Fee Concessions</span>
-          </div>
+        </div>
+
+        <!-- 5. Continuous Accordion List (FAQs 01–30) -->
+        <div class="faq-editorial-list" id="faq-unified-list" role="region" aria-label="Frequently Asked Questions List">
+          {faqItems.map((item) => (
+            <details class="faq-row-item faq-details" data-faq-num={item.num}>
+              <summary class="faq-row-summary faq-summary">
+                <div class="faq-row-lead">
+                  <span class="faq-row-num">{item.num}</span>
+                  <span class="faq-row-vbar" aria-hidden="true"></span>
+                  <span class="faq-row-question">{item.question}</span>
+                </div>
+                <span class="faq-row-toggle" aria-hidden="true">
+                  <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
+                    <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-row-content">
+                <p>{item.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+
+        <!-- No Results Fallback Message -->
+        <div id="faq-no-results" class="faq-no-results" style="display: none;" role="status">
+          <div class="faq-no-results-icon" aria-hidden="true">🔍</div>
+          <h3>No matching questions found</h3>
+          <p id="faq-no-results-query">Try searching for keywords like "fees", "classes", "FSSAI", "renewal", or "objection".</p>
+          <a class="btn btn-gold" href={faqSpecificQueryUrl} target="_blank" rel="noopener noreferrer">
+            Ask Our Advisory Team on WhatsApp <span class="arrow">→</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Split Visual Intro -->
-    <section class="section" style="padding-bottom: 20px;">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/packages/assets/faq-legal-books.webp" alt="Indian statutory law books and trademark reference materials" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Clear Legal Advice</p>
-            <h2>Objective Advice, Without the Commercial Jargon</h2>
-            <p>Navigating brand protection and commercial licensing under Indian law involves distinct procedural rules, statutory thresholds, and fee structures.</p>
-            <p>Below we have compiled straightforward answers to the queries most frequently raised by entrepreneurs, growing manufacturers, and Kerala business owners. Jump directly to any topic below or reach out to our team if you need guidance specific to your enterprise.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Accordions by Topic -->
-    <section class="section">
-      <div class="container" style="max-width: 920px;">
-        <!-- Category 1: Trademark Law & Procedure -->
-        <div class="section-heading text-center" id="trademark-essentials">
-          <p class="eyebrow">Trademark Law & Procedure</p>
-          <h2>Trademark Registration Essentials</h2>
-          <p>Key legal principles governing trademark ownership and enforcement in India.</p>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>What is a trademark and why does my business need one?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              A trademark is a distinctive sign, logo, word, phrase, or graphic emblem that legally distinguishes your goods or services from competitors. Registering a trademark gives you exclusive statutory rights under the Trade Marks Act, 1999 across all of India, empowering you to prevent counterfeiting, unauthorized branding, and commercial dilution.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>What is the difference between the &trade; and &reg; symbols?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              The &trade; (TM) symbol signifies that an application for trademark registration has been filed with the Trade Marks Registry and an application number has been issued. You may begin using the &trade; symbol immediately after filing. The &reg; (Registered) symbol can only be legally used once the Registrar officially grants the Certificate of Registration. Using &reg; before registration is an offence under Section 107 of the Act.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>What is the difference between a Wordmark and a Logo (Device Mark)?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              A wordmark protects the actual textual name in plain text, irrespective of typography, color schemes, or stylistic changes. It provides the broadest commercial name protection. A logo (device mark) protects the specific graphic design, stylized lettering, and visual composition. For complete protection, businesses often register both a wordmark and their primary logo.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Can registration be guaranteed by any consultant?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              No ethical advisory firm can guarantee registration. The final statutory authority to approve or refuse an application rests solely with the Registrar of Trade Marks under the CGPDTM. Our advisory role is to minimize risk through rigorous preliminary searches, accurate class classification, and compliant documentation.
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 2: Statutory Fees & MSME Concessions -->
-        <div class="section-heading text-center" id="fees-concessions" style="margin-top: 56px;">
-          <p class="eyebrow">Government Fees & Concessions</p>
-          <h2>Government Statutory Fees & MSME Discounts</h2>
-          <p>Transparent explanation of Indian government filing charges.</p>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>How does an individual or MSME fee differ from a company fee?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              Under the Trade Marks Rules, 2017, the Government of India provides a 50% concession on statutory e-filing fees for individuals, sole proprietorships, recognized startups, and registered MSME/Udyam certificate holders (₹4,500 statutory fee per class). For standard corporate entities (Private Limited, Limited, or non-MSME LLP), the government filing fee is ₹9,000 per class.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>How do I claim the 50% MSME fee discount?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              To claim the 50% statutory discount, you must possess a valid Udyam Registration Certificate issued by the Ministry of Micro, Small and Medium Enterprises. If your business does not yet have an Udyam certificate, BRNDNUR Advisory can assist you in obtaining one prior to submitting your trademark application.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Are government fees included in professional charges?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              No, government statutory fees are paid directly to the Trade Marks Registry's official portal. At BRNDNUR Advisory LLP, we always clearly delineate government fees from our professional advisory fees, ensuring absolute financial transparency with official payment receipts.
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 3: Business Setup & Licensing -->
-        <div class="section-heading text-center" id="business-registrations" style="margin-top: 56px;">
-          <p class="eyebrow">Business Registrations</p>
-          <h2>GST, Udyam, FSSAI & Packages</h2>
-          <p>Foundational registrations for new ventures and expanding enterprises.</p>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>When does my business need GST registration?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              GST registration is mandatory if your aggregate annual turnover exceeds ₹40 lakhs for goods (₹20 lakhs in special category states) or ₹20 lakhs for services. Furthermore, GST registration is compulsory regardless of turnover if you sell goods inter-state, operate via e-commerce marketplaces (Amazon, Flipkart), or are liable to pay tax under reverse charge.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>What does the Food Brand Package include?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              Our Food Brand Package is customized for food manufacturers, cloud kitchens, bakeries, and packaged food brands. It bundles comprehensive trademark clearance search, Class 29/30/43 filing guidance, Udyam MSME registration, and basic FSSAI food licensing support under one coordinated scope.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>How long does a trademark remain valid after registration?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              A registered trademark in India remains valid for 10 years from the date of filing. It can be renewed indefinitely every 10 years by filing Form TM-R along with the prescribed renewal fee within 6 months prior to the expiration date.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-panel">
+    <!-- 6. FINAL CONTACT CTA BAND -->
+    <section class="cta-band" aria-labelledby="faq-cta-heading">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Have More Questions?</p>
-          <h2>Speak Directly with an Advisor.</h2>
+          <h2 id="faq-cta-heading">Speak Directly with<br>an Advisor.</h2>
           <p>We are here to evaluate your specific situation and clarify the most suitable steps for your enterprise.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
-            <a class="btn btn-outline" href="/contact/">Contact Our Office</a>
+          <a class="btn btn-gold" href={faqDiscussionUrl} target="_blank" rel="noopener noreferrer">
+            Discuss on WhatsApp <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon" aria-hidden="true">☏</span>
+            <div>
+              <strong>Direct Answers</strong>
+              <p>Consult directly with our advisory specialists.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon" aria-hidden="true">♢</span>
+            <div>
+              <strong>Confidential Discussions</strong>
+              <p>All business and mark information is kept strictly confidential.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon" aria-hidden="true">♧</span>
+            <div>
+              <strong>Clear Next Steps</strong>
+              <p>Practical guidance on whether and how to proceed.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -208,14 +348,529 @@ const canonical = "https://brndnur.com/faqs/";
   </main>
 </BaseLayout>
 
-<script>
-  document.querySelectorAll('.faq-question').forEach((button) => {
-    button.addEventListener('click', () => {
-      const item = button.closest('.faq-item');
-      if (item) {
-        const isOpen = item.classList.toggle('is-open');
-        button.setAttribute('aria-expanded', String(isOpen));
+<script is:inline>
+  function initFaqSearch() {
+    const searchInput = document.getElementById('faq-search-input');
+    const clearBtn = document.getElementById('faq-search-clear');
+    const searchStatus = document.getElementById('faq-search-status');
+    const noResults = document.getElementById('faq-no-results');
+    const noResultsQuery = document.getElementById('faq-no-results-query');
+    const list = document.getElementById('faq-unified-list');
+    if (!searchInput || !list) return;
+
+    const items = list.querySelectorAll('.faq-row-item');
+    const totalCount = items.length;
+
+    function performSearch() {
+      const query = searchInput.value.trim().toLowerCase();
+      
+      if (clearBtn) {
+        clearBtn.style.display = query.length > 0 ? 'inline-flex' : 'none';
       }
-    });
-  });
+
+      if (query.length === 0) {
+        items.forEach((item) => {
+          item.style.display = '';
+        });
+        if (noResults) noResults.style.display = 'none';
+        if (list) list.style.display = 'block';
+        if (searchStatus) searchStatus.textContent = `Showing all ${totalCount} questions`;
+        return;
+      }
+
+      let matchCount = 0;
+      items.forEach((item) => {
+        const questionEl = item.querySelector('.faq-row-question');
+        const contentEl = item.querySelector('.faq-row-content');
+        const qText = questionEl ? questionEl.textContent.toLowerCase() : '';
+        const aText = contentEl ? contentEl.textContent.toLowerCase() : '';
+
+        if (qText.includes(query) || aText.includes(query)) {
+          item.style.display = '';
+          matchCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (matchCount === 0) {
+        if (list) list.style.display = 'none';
+        if (noResults) {
+          noResults.style.display = 'block';
+          if (noResultsQuery) {
+            noResultsQuery.textContent = `No questions found matching "${searchInput.value.trim()}". Try searching for terms like "fees", "classes", "FSSAI", or contact us directly.`;
+          }
+        }
+        if (searchStatus) searchStatus.textContent = `No results found for "${searchInput.value.trim()}"`;
+      } else {
+        if (list) list.style.display = 'block';
+        if (noResults) noResults.style.display = 'none';
+        if (searchStatus) searchStatus.textContent = `Showing ${matchCount} of ${totalCount} questions matching "${searchInput.value.trim()}"`;
+      }
+    }
+
+    searchInput.addEventListener('input', performSearch);
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchInput.focus();
+        performSearch();
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFaqSearch);
+  } else {
+    initFaqSearch();
+  }
+  document.addEventListener('astro:page-load', initFaqSearch);
 </script>
+
+<style>
+/* ==========================================================================
+   UNIFIED EDITORIAL FAQ PAGE STYLING
+   ========================================================================== */
+.faq-page-section {
+  width: 100%;
+  background: var(--ivory, #FAF7EE);
+  padding: clamp(3.5rem, 6vw, 5.25rem) 0 clamp(4.5rem, 7.5vw, 6.75rem);
+  position: relative;
+}
+
+.faq-page-section .container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* Header Area */
+.faq-page-header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.faq-eyebrow {
+  display: block;
+  text-align: center;
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold, #A8781A);
+  margin: 0 auto 0.75rem;
+}
+
+.faq-page-title {
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: clamp(2.2rem, 4.4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--navy, #13233A);
+  text-align: center;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  max-width: 100%;
+}
+
+.faq-page-title .gold-text {
+  color: var(--gold, #A8781A);
+}
+
+.faq-page-desc {
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  line-height: 1.62;
+  color: #4A5568;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.faq-trust-strip {
+  justify-content: center;
+  margin: 1.35rem auto 0;
+  max-width: 760px;
+}
+
+/* Search Box Area */
+.faq-search-wrap {
+  max-width: 680px;
+  margin: 2rem auto 2.5rem;
+  padding: 0 0.5rem;
+}
+
+.faq-search-box {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(168, 120, 26, 0.35);
+  border-radius: 8px;
+  padding: 4px 16px;
+  box-shadow: 0 2px 10px rgba(19, 35, 58, 0.05);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.faq-search-box:focus-within {
+  border-color: var(--gold, #A8781A);
+  box-shadow: 0 4px 18px rgba(168, 120, 26, 0.18);
+}
+
+.faq-search-icon {
+  color: var(--gold, #A8781A);
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.faq-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 13px 0;
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 0.98rem;
+  color: var(--navy, #13233A);
+}
+
+.faq-search-input::placeholder {
+  color: #8C9AA8;
+}
+
+.faq-search-clear {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: #8C9AA8;
+  border-radius: 50%;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.faq-search-clear:hover {
+  color: var(--navy, #13233A);
+  background-color: #F1EFE9;
+}
+
+.faq-search-status {
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 0.84rem;
+  color: #64748B;
+  text-align: center;
+  margin-top: 0.65rem;
+}
+
+/* Numbered Editorial List (FAQs 01–30) */
+.faq-editorial-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(168, 120, 26, 0.22);
+}
+
+.faq-row-item {
+  border-bottom: 1px solid rgba(168, 120, 26, 0.22);
+  transition: background-color 0.2s ease;
+}
+
+.faq-row-item:hover {
+  background-color: rgba(168, 120, 26, 0.025);
+}
+
+.faq-row-item[open] {
+  background-color: rgba(168, 120, 26, 0.035);
+}
+
+.faq-row-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: clamp(1.2rem, 1.85vw, 1.5rem) 0.6rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.faq-row-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-row-summary::marker {
+  display: none;
+  content: "";
+}
+
+.faq-row-summary:focus-visible {
+  outline: 2px solid var(--gold, #A8781A);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.faq-row-lead {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.faq-row-num {
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold, #A8781A);
+  flex: 0 0 32px;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.faq-row-vbar {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: rgba(168, 120, 26, 0.35);
+  margin: 0 22px 0 16px;
+  flex: 0 0 1px;
+}
+
+.faq-row-question {
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: clamp(1.02rem, 1.25vw, 1.15rem);
+  font-weight: 600;
+  color: var(--navy, #13233A);
+  text-align: left;
+  line-height: 1.42;
+  transition: color 0.2s ease;
+}
+
+.faq-row-item:hover .faq-row-question {
+  color: #8F6214;
+}
+
+.faq-row-item[open] .faq-row-question {
+  color: var(--navy, #13233A);
+}
+
+/* Expand / Collapse Control */
+.faq-row-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold, #A8781A);
+  background: transparent;
+  color: var(--gold, #A8781A);
+  transition: all 0.22s ease;
+}
+
+.faq-row-item:hover .faq-row-toggle {
+  border-color: #8F6214;
+  color: #8F6214;
+  background: rgba(168, 120, 26, 0.08);
+}
+
+.faq-toggle-svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.faq-toggle-svg .line-v {
+  transform-origin: 7px 7px;
+  transition: transform 0.24s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+}
+
+.faq-row-item[open] .faq-toggle-svg .line-v {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.faq-row-item[open] .faq-row-toggle {
+  border-color: var(--gold, #A8781A);
+  background: rgba(168, 120, 26, 0.12);
+}
+
+/* Answer Content */
+.faq-row-content {
+  padding-left: 70px;
+  padding-right: 50px;
+  padding-bottom: 1.6rem;
+  padding-top: 0.25rem;
+  overflow: hidden;
+  animation: faqFadeIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes faqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-row-content p {
+  margin: 0;
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 0.965rem;
+  line-height: 1.72;
+  color: #4A5568;
+}
+
+/* No Results Container */
+.faq-no-results {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background: rgba(255, 252, 246, 0.85);
+  border: 1.5px dashed rgba(168, 120, 26, 0.35);
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.faq-no-results-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.faq-no-results h3 {
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--navy, #13233A);
+  margin: 0 0 0.5rem;
+}
+
+.faq-no-results p {
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 0.95rem;
+  color: #64748B;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.faq-no-results .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gold, #A8781A);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.faq-no-results .btn:hover {
+  background: #8F6214;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .faq-page-section {
+    padding: clamp(2rem, 5vw, 2.75rem) 0 clamp(3rem, 6vw, 4rem) !important;
+  }
+  .faq-page-header {
+    margin-bottom: 1.5rem !important;
+  }
+  .faq-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.65rem;
+  }
+  .faq-page-title {
+    font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+    line-height: 1.14 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .faq-page-desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    padding: 0 4px;
+  }
+  .faq-trust-strip {
+    margin-top: 1.25rem;
+    max-width: 100%;
+  }
+  .faq-search-wrap {
+    margin: 1.35rem auto 1.85rem !important;
+    padding: 0;
+  }
+  .faq-search-status {
+    margin-top: 0.65rem;
+    font-size: 0.85rem;
+  }
+  .faq-row-summary {
+    padding: 1.15rem 0.35rem;
+    gap: 12px;
+  }
+  .faq-row-vbar {
+    margin: 0 16px 0 12px;
+  }
+  .faq-row-content {
+    padding-left: 60px;
+    padding-right: 36px;
+    padding-bottom: 1.35rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .faq-row-lead {
+    align-items: flex-start;
+  }
+  .faq-row-num {
+    margin-top: 1px;
+    font-size: 0.95rem;
+    flex: 0 0 28px;
+  }
+  .faq-row-vbar {
+    height: 18px;
+    margin: 3px 12px 0 8px;
+  }
+  .faq-row-question {
+    font-size: 0.985rem;
+    line-height: 1.38;
+  }
+  .faq-row-toggle {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    margin-top: 2px;
+  }
+  .faq-toggle-svg {
+    width: 12px;
+    height: 12px;
+  }
+  .faq-row-content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-toggle-svg .line-v {
+    transition: none !important;
+  }
+  .faq-row-content {
+    animation: none !important;
+  }
+}
+</style>

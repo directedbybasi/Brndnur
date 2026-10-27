@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import CardCarousel from '../../components/CardCarousel.astro';
+import FaqItem from '../../components/FaqItem.astro';
 
-const title = "Brand Name Search in India | Preliminary Trademark Check";
+const title = "Brand Name Search in India | Trademark Check | BRNDNUR";
 const description = "Conduct a preliminary brand name search on the Indian trademark database before filing. Identify phonetic, visual, and conceptual similarities with BRNDNUR.";
 const canonical = "https://brndnur.com/brand-name-search/";
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Brand Name Search",
+  "sectionName": "Hero Section",
+  "enquiryType": "Preliminary Trademark Search",
+  "topic": "I would like assistance with a preliminary trademark search for my proposed brand name.",
+  "details": "Proposed brand name: [Please enter your brand name]",
+  "callToAction": "Could you please guide me on the availability assessment and next steps?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  "pageName": "Brand Name Search",
+  "sectionName": "Closing CTA Band",
+  "enquiryType": "Brand Name Clearance Check",
+  "topic": "I have a proposed brand name in mind and would like to request an initial clearance check on the IP India registry.",
+  "details": "Proposed mark: [Please enter mark]\\nProduct / service category: [Please describe category]",
+  "callToAction": "Could you please conduct a preliminary check and advise on registration prospects?"
+});
 ---
 
 <BaseLayout
@@ -13,61 +35,65 @@ const canonical = "https://brndnur.com/brand-name-search/";
   currentPath="/brand-name-search/"
 >
   <main id="main-content">
-    <!-- Breadcrumb & Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="bn-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">/</span>
-          <a href="/services/">Services</a>
-          <span class="sep">/</span>
-          <span class="current">Brand Name Search</span>
-        </nav>
-        <p class="eyebrow">Pre-Filing Trademark Clearance</p>
-        <h1>Check Your Brand Name Before You Move Forward.</h1>
-        <p class="lead">A preliminary trademark search is the most critical first step before launching a brand or investing in packaging, signage, and marketing. We inspect the official Indian IP database to identify potentially conflicting marks.</p>
-        
-        <div class="hero-badges">
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <span>Official IP India Database Check</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Section 9 & 11 Risk Screening</span>
-          </div>
-          <div class="hero-badge-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Phonetic & Semantic Analysis</span>
-          </div>
-        </div>
+    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <PageHero
+      eyebrow="Pre-Filing Trademark Clearance"
+      title="Check Your Brand Name<br>Before You <span>Move Forward.</span>"
+      hasGoldRule={true}
+      description="A preliminary trademark search is the most critical first step before launching a brand or investing in packaging, signage, and marketing. We inspect the official Indian IP database to identify potentially conflicting marks."
+      primaryCta={{
+        text: "Request a Preliminary Search",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "Understand Classes",
+        href: "/trademark-classes/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Official IP India", subtitle: "Database Check" },
+        { icon: "▱", title: "Section 9 & 11", subtitle: "Risk Screening" },
+        { icon: "⌖", title: "Phonetic & Class", subtitle: "Analysis" }
+      ]}
+      image="/assets/search-hero-preclearance.webp"
+      imageAlt="Laptop, notebook, and stationery arranged for preliminary brand name research"
+    />
 
-        <div class="actions" style="margin-top: 28px;">
-          <a class="btn btn-primary" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20I%20would%20like%20a%20preliminary%20brand-name%20search." target="_blank" rel="noopener noreferrer">Request a Free Search &rarr;</a>
-          <a class="btn btn-outline" href="/trademark-classes/">Understand Classes</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split Visual: Why Clearance Matters -->
+    <!-- Split Section: Why Clearance Matters (Harmonized with Reference Layout) -->
     <section class="section">
-      <div class="container">
-        <div class="split-row">
-          <div class="split-photo">
-            <img src="/assets/service-search.webp" alt="BRNDNUR trademark search and database clearance in Kerala" width="800" height="600" loading="lazy" />
-          </div>
-          <div class="split-copy">
-            <p class="eyebrow">Strategic Due Diligence</p>
-            <h2>Why Pre-Filing Clearance Protects Your Capital</h2>
-            <p>Every year, hundreds of Indian business owners invest heavily in branding, product packaging, domain registrations, and signage—only to receive an objection or an infringement cease-and-desist letter within months.</p>
-            <p>Under the Trade Marks Act, 1999, prior adoption and registration grant senior rights. A preliminary clearance check verifies whether similar names exist in your intended classification before you commit non-refundable statutory government fees.</p>
-            <div class="advisory-notice" style="margin-top: 16px;">
-              <div class="advisory-notice-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/search-why-clearance.webp" alt="BRNDNUR trademark search and database clearance in Kerala" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Strategic Due Diligence</p>
+          <h2>Why Pre-Filing Clearance Protects Your Capital.</h2>
+          <div class="gold-rule"></div>
+          <p>Every year, hundreds of Indian business owners invest heavily in branding, product packaging, domain registrations, and signage—only to receive an objection or an infringement cease-and-desist letter within months.</p>
+          <p>Under the Trade Marks Act, 1999, prior adoption and registration grant senior rights. A preliminary clearance check verifies whether similar names exist in your intended classification before you commit non-refundable statutory government fees.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value-icon">♙</span>
+              <div>
+                <strong>Section 9 Absolute Grounds</strong>
+                <p>Ensuring your mark is sufficiently distinctive and not purely descriptive of your products or services.</p>
               </div>
-              <div class="advisory-notice-content">
-                <h4>Statutory Distinction</h4>
-                <p>The Trade Marks Registry checks both active registrations and pending applications across the country. Our preliminary search evaluates existing filings to assess registration viability objectively.</p>
+            </div>
+            <div class="value">
+              <span class="value-icon">▤</span>
+              <div>
+                <strong>Section 11 Relative Grounds</strong>
+                <p>Verifying there are no identical or deceptively similar marks already on register in the same or allied classes.</p>
+              </div>
+            </div>
+            <div class="value">
+              <span class="value-icon">▥</span>
+              <div>
+                <strong>Objective Viability Appraisal</strong>
+                <p>Honest risk classification so you know if your mark is low, medium, or high risk before filing Form TM-A.</p>
               </div>
             </div>
           </div>
@@ -75,66 +101,68 @@ const canonical = "https://brndnur.com/brand-name-search/";
       </div>
     </section>
 
-    <!-- 4 Search Dimensions with Clean SVGs -->
+    <!-- 4 Search Dimensions (Editorial Cards) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="section-heading">
           <p class="eyebrow">Search Depth</p>
-          <h2>What a Comprehensive Search Examines</h2>
-          <p>A basic word search is rarely sufficient. Trade mark examiners evaluate marks across multiple dimensions under Section 11 of the Trade Marks Act:</p>
+          <h2>What a Comprehensive Search Examines.</h2>
+          <div class="gold-rule"></div>
+          <p>A basic word search is rarely sufficient. Trade mark examiners evaluate marks across multiple dimensions under Section 11 of the Trade Marks Act, 1999.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        <CardCarousel id="search-depth-carousel" ariaLabel="Search depth dimensions">
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">01</div>
+              <h3>Phonetic Similarity</h3>
+              <p>Marks that sound identical or confusingly similar when spoken aloud (e.g., 'Kool' vs 'Cool') face immediate objections even if spelling differs substantially.</p>
             </div>
-            <h3>Phonetic Similarity</h3>
-            <p>Marks that sound identical or very similar when spoken aloud (e.g., 'Kool' vs 'Cool') can face immediate objections even if spelling differs substantially.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">02</div>
+              <h3>Visual &amp; Graphic Resemblance</h3>
+              <p>Evaluating visual styling, typography, logo layout, and device mark elements to prevent conflicts with prior graphical trademark filings.</p>
             </div>
-            <h3>Visual & Structural Similarity</h3>
-            <p>Similar letter arrangements, prefixes, suffixes, or logo emblems that create a deceptive visual impression to the ordinary consumer in the marketplace.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">03</div>
+              <h3>Conceptual Similarity</h3>
+              <p>Marks conveying synonymous meaning or identical commercial impressions, even in different languages or dialects within Indian commerce.</p>
             </div>
-            <h3>Conceptual & Semantic Overlap</h3>
-            <p>Names that convey the identical commercial idea, connotations, or direct translations across different languages within the same market category.</p>
-          </div>
+          </article>
 
-          <div class="bn-card">
-            <div class="card-icon" style="color: #A8781A;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+          <article class="service-card">
+            <div class="service-body">
+              <div class="step-num" style="margin-bottom: 14px;">04</div>
+              <h3>Cross-Class Relevance</h3>
+              <p>Checking allied and complementary goods and services classes (such as Class 29 and Class 30 for foods, or Class 25 and Class 35 for apparel and retail).</p>
             </div>
-            <h3>Absolute Grounds (Section 9)</h3>
-            <p>Evaluating whether the name is purely descriptive (e.g., 'Pure Honey'), generic, deceptive, or lacks inherent distinctiveness needed for registration.</p>
-          </div>
-        </div>
+          </article>
+        </CardCarousel>
       </div>
     </section>
 
-    <!-- 3-Tier Clearance Search Matrix -->
+    <!-- Clearance Tiers Table -->
     <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">Clearance Framework</p>
-          <h2>3-Tier Clearance Search Matrix</h2>
-          <p>How we evaluate your proposed mark against the official IP India registry.</p>
+      <div class="container" style="max-width: 960px;">
+        <div class="section-heading">
+          <p class="eyebrow">Clearance Methodology</p>
+          <h2>Our Multi-Tier Verification Process.</h2>
+          <div class="gold-rule"></div>
+          <p>We review official registry records to provide actionable recommendations before application drafting.</p>
         </div>
 
-        <div class="bn-table-wrap">
+        <div class="table-wrap">
           <table class="bn-table">
             <thead>
               <tr>
-                <th>Search Level</th>
-                <th>Database Scope</th>
+                <th>Verification Level</th>
+                <th>Search Scope</th>
                 <th>Key Criteria Checked</th>
                 <th>Strategic Outcome</th>
               </tr>
@@ -147,15 +175,15 @@ const canonical = "https://brndnur.com/brand-name-search/";
                 <td>Identifies direct roadblocks immediately</td>
               </tr>
               <tr>
-                <td><strong>Tier 2: Phonetic & Prefix Check</strong></td>
-                <td>Sounds-alike & variant spellings</td>
+                <td><strong>Tier 2: Phonetic &amp; Prefix Check</strong></td>
+                <td>Sounds-alike &amp; variant spellings</td>
                 <td>Phonetic algorithms, truncated stems, and compound words</td>
                 <td>Uncovers hidden phonetic conflicts</td>
               </tr>
               <tr>
-                <td><strong>Tier 3: Cross-Class & Well-Known Marks</strong></td>
-                <td>Allied goods & services classes</td>
-                <td>Co-related classes (e.g. Class 29 & 30, Class 35 & 25) + list of Well-Known marks</td>
+                <td><strong>Tier 3: Cross-Class &amp; Well-Known Marks</strong></td>
+                <td>Allied goods &amp; services classes</td>
+                <td>Co-related classes (e.g. Class 29 &amp; 30, Class 35 &amp; 25) + list of Well-Known marks</td>
                 <td>Prevents infringement disputes from established conglomerates</td>
               </tr>
             </tbody>
@@ -164,16 +192,107 @@ const canonical = "https://brndnur.com/brand-name-search/";
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- Search Outcomes & Risk Appraisal -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Risk Classification</p>
+          <h2>How We Interpret Search Results.</h2>
+          <div class="gold-rule"></div>
+          <p>Every brand clearance review produces one of three distinct statutory appraisals.</p>
+        </div>
+
+        <CardCarousel id="risk-classification-carousel" ariaLabel="Risk classification appraisals">
+          <article class="service-card" style="padding: 1.75rem;">
+            <div class="step-num" style="margin-bottom: 12px; font-size: 1.15rem; color: #2e7d32;">✓</div>
+            <h3 style="font-family: var(--sans); font-weight: 600; font-size: 1.35rem; color: var(--navy); margin-bottom: .6rem;">Low Risk / Prima Facie Clear</h3>
+            <p style="font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem); line-height: 1.6; color: var(--body); margin-bottom: 1rem;">No identical or phonetically conflicting marks found in your active or allied classes. The mark appears distinctive under Section 9 and eligible for straightforward TM-A filing.</p>
+            <a class="text-link" href="/trademark-registration/">Proceed to Filing <span>→</span></a>
+          </article>
+
+          <article class="service-card" style="padding: 1.75rem;">
+            <div class="step-num" style="margin-bottom: 12px; font-size: 1.15rem; color: var(--gold);">⚠</div>
+            <h3 style="font-family: var(--sans); font-weight: 600; font-size: 1.35rem; color: var(--navy); margin-bottom: .6rem;">Moderate Risk / Phonetic Similarity</h3>
+            <p style="font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem); line-height: 1.6; color: var(--body); margin-bottom: 1rem;">Similar marks exist but differences in commercial goods, prior use affidavits, or distinct visual device styling may overcome Section 11 objections. Strategic filing required.</p>
+            <a class="text-link" href="/wordmark-registration/">Explore Strategy <span>→</span></a>
+          </article>
+
+          <article class="service-card" style="padding: 1.75rem;">
+            <div class="step-num" style="margin-bottom: 12px; font-size: 1.15rem; color: #c62828;">✕</div>
+            <h3 style="font-family: var(--sans); font-weight: 600; font-size: 1.35rem; color: var(--navy); margin-bottom: .6rem;">High Risk / Direct Conflict</h3>
+            <p style="font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem); line-height: 1.6; color: var(--body); margin-bottom: 1rem;">Identical or deceptively similar marks are actively registered for identical goods. We advise modifying the name or coining a distinctive prefix before capital is spent on branding.</p>
+            <a class="text-link" href="/resources/brand-name-search-guide/">Read Search Guide <span>→</span></a>
+          </article>
+        </CardCarousel>
+      </div>
+    </section>
+
+    <!-- Search FAQs -->
+    <section class="section">
+      <div class="container" style="max-width: 880px;">
+        <div class="section-heading">
+          <p class="eyebrow">Search FAQs</p>
+          <h2>Questions About Name Clearance.</h2>
+          <div class="gold-rule"></div>
+          <p>Important legal realities regarding registry searches and brand clearance in India.</p>
+        </div>
+
+        <div class="faq-editorial-list faq-list">
+          <FaqItem
+            num="01"
+            question="Does a clear search result guarantee that my trademark will be accepted?"
+            answer="No ethical advisory firm can guarantee registration. A preliminary search checks for existing identical or similar marks on the public registry. However, the Registrar of Trade Marks conducts an independent examination and may raise queries regarding distinctiveness (Section 9) or newly filed applications."
+          />
+          <FaqItem
+            num="02"
+            question="Why is a simple Google search not sufficient for trademark clearance?"
+            answer="A Google search only shows active commercial websites, not registered or pending trademarks on the official Indian Trade Marks Registry. Many businesses own registered marks that have not yet launched websites, or hold defensive registrations in specific classes that will block your application."
+          />
+          <FaqItem
+            num="03"
+            question="What is phonetic similarity under Section 11?"
+            answer="Section 11 of the Trade Marks Act prohibits marks that sound identical or confusingly similar when spoken aloud, even if spelled differently (e.g., &quot;Kool&quot; vs &quot;Cool&quot;, or &quot;Phast&quot; vs &quot;Fast&quot;). Our search examines phonetic match algorithms to detect these potential conflicts."
+          />
+          <FaqItem
+            num="04"
+            question="How quickly can BRNDNUR complete a preliminary search?"
+            answer="Preliminary search reviews are typically completed within 24 to 48 hours once we have your exact brand name and product/service description. We deliver an objective written summary and discuss practical next steps."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
           <p class="eyebrow">Start Early</p>
-          <h2>Have a Name in Mind?</h2>
-          <p>Send us your proposed brand name and products. We will conduct an initial check and share an objective appraisal.</p>
-          <div class="cta-actions">
-            <a class="btn btn-gold" href="https://wa.me/919048188899?text=Hello%20BRNDNUR%2C%20please%20check%20this%20brand%20name." target="_blank" rel="noopener noreferrer">Check Your Name on WhatsApp &rarr;</a>
-            <a class="btn btn-outline" href="/wordmark-registration/">Explore Wordmark Filing</a>
+          <h2>Have a Brand Name<br>in Mind?</h2>
+          <p>Share your proposed mark and product category. We will conduct an initial check on the IP India registry and provide an objective appraisal.</p>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Check Your Name on WhatsApp <span>→</span></a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">☏</span>
+            <div>
+              <strong>Quick Turnaround</strong>
+              <p>Preliminary search results delivered promptly.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Confidential Inquiries</strong>
+              <p>Your proposed brand names remain strictly private.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">♧</span>
+            <div>
+              <strong>Practical Guidance</strong>
+              <p>Clear guidance on registration viability and next steps.</p>
+            </div>
           </div>
         </div>
       </div>
