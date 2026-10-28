@@ -43,7 +43,7 @@ Prior to this optimization, only 4 pages had structured data. Through an enhance
 ### 2.1 Applied Schema Types
 1. **`Organization` & `WebSite` (`/`):**
    - Declares `BRNDNUR Advisory LLP` as a Legal/Business Advisory entity.
-   - Provides official contact telephone `+91 90481 88899`, email `advisory@brndnur.com`, address in Calicut, Kerala, and official URL.
+   - Provides official contact telephone `+91 90481 88899`, email `brndnuradvisoryllp@gmail.com`, address in Calicut, Kerala, and official URL.
 2. **`WebPage` & `BreadcrumbList` (All 31 indexable routes):**
    - Injected automatically via `BaseLayout.astro`.
    - Links each page back to `https://brndnur.com/#website`.
