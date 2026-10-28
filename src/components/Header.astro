@@ -15,6 +15,8 @@ const isServicesActive = [
   '/trademark-registration/',
   '/trademark/',
   '/brand-name-search/',
+  '/trademark-renewal-monitoring/',
+  '/business-registration/',
   '/trademark-classes/',
   '/wordmark-registration/',
   '/logo-trademark-registration/',
@@ -37,9 +39,8 @@ const isAboutActive = currentPath === '/about/' || currentPath === '/how-it-work
 <header class="bn-header" id="site-header">
   <div class="bn-header-inner container">
     <!-- Left: Official BRNDNUR Logo -->
-    <a class="bn-brand header-logo" href="/" aria-label="BRNDNUR Advisory LLP - Light Up Your Brand">
-      <Logo variant="transparent" loading="eager" fetchpriority="high" />
-      <span class="sr-only">BRNDNUR Advisory LLP - Light Up Your Brand</span>
+    <a class="bn-brand header-logo" href="/" aria-label="BRNDNUR Advisory LLP">
+      <Logo variant="transparent" loading="eager" fetchpriority="auto" alt="BRNDNUR Advisory LLP" />
     </a>
 
     <!-- Center: Streamlined Primary Navigation (Max 5 destinations) -->
@@ -65,26 +66,20 @@ const isAboutActive = currentPath === '/about/' || currentPath === '/how-it-work
         <div class="bn-dropdown-panel bn-dropdown-services" id="dropdown-services" role="region" aria-label="Services Submenu">
           <div class="bn-dropdown-grid">
             <div class="bn-dropdown-col">
-              <span class="bn-dropdown-heading">Brand &amp; Trademark Protection</span>
+              <span class="bn-dropdown-heading">Brand &amp; Trademark</span>
               <ul class="bn-dropdown-list">
                 <li><a href="/trademark-registration/">Trademark Registration</a></li>
                 <li><a href="/brand-name-search/">Brand Name Search</a></li>
-                <li><a href="/trademark-classes/">Trademark Classes</a></li>
-                <li><a href="/wordmark-registration/">Wordmark Registration</a></li>
-                <li><a href="/logo-trademark-registration/">Logo Trademark Registration</a></li>
-                <li><a href="/trademark-renewal/">Trademark Renewal</a></li>
-                <li><a href="/trademark-monitoring/">Trademark Monitoring</a></li>
+                <li><a href="/trademark-renewal-monitoring/">Trademark Renewal &amp; Monitoring</a></li>
+                <li><a href="/services/#trademark-services" style="color:#A8781A; font-weight: 600;">Explore All Trademark Services &rarr;</a></li>
               </ul>
             </div>
             <div class="bn-dropdown-col">
-              <span class="bn-dropdown-heading">Business Registrations</span>
+              <span class="bn-dropdown-heading">Business Services</span>
               <ul class="bn-dropdown-list">
-                <li><a href="/gst-registration/">GST Registration</a></li>
-                <li><a href="/udyam-msme-registration/">Udyam / MSME Registration</a></li>
-                <li><a href="/fssai-registration/">FSSAI Registration</a></li>
-                <li><a href="/business-setup/">Business Setup</a></li>
+                <li><a href="/business-registration/">Business Registration</a></li>
               </ul>
-              <div class="bn-dropdown-footer-link">
+              <div class="bn-dropdown-footer-link" style="margin-top: 14px;">
                 <a href="/services/" class="bn-view-all-link">
                   <span>Explore All Services</span>
                   <span class="bn-view-all-arrow" aria-hidden="true">&rarr;</span>
@@ -152,7 +147,7 @@ const isAboutActive = currentPath === '/about/' || currentPath === '/how-it-work
       <!-- Mobile CTA Action inside Drawer -->
       <div class="bn-mobile-cta-wrap">
         <a class="bn-cta bn-nav-cta" href={headerWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-          <span>Get in Touch</span>
+          <span>Free Name Check</span>
           <span class="bn-cta-arrow" aria-hidden="true">&rarr;</span>
         </a>
       </div>
@@ -160,7 +155,7 @@ const isAboutActive = currentPath === '/about/' || currentPath === '/how-it-work
 
     <!-- Right: Prominent Desktop CTA -->
     <a class="bn-cta" href={headerWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-      <span>Get in Touch</span>
+      <span>Free Name Check</span>
       <span class="bn-cta-arrow" aria-hidden="true">&rarr;</span>
     </a>
 

@@ -29,6 +29,7 @@ const {
 } = Astro.props;
 
 const siteName = 'BRNDNUR Advisory LLP';
+const isHome = currentPath === '/' || currentPath === '' || currentPath === '/index.html';
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://brndnur.com${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
 
 const isIndexable = !robots.includes('noindex');
@@ -196,37 +197,49 @@ const defaultSchema = isIndexable && !hasCustomSchema ? {
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={fullOgImage}>
 
-  <!-- Typography & Preconnect -->
+  <!-- Typography & Preconnect (Optimized Non-Render-Blocking Google Fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap">
+  </noscript>
 
   {defaultSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(defaultSchema)} />
   )}
 
-  <!-- First-Visit Intro Detection Script (Synchronous in <head> to prevent flash of content) -->
-  <script is:inline>
-    (function() {
-      try {
-        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var isReplay = window.location.search.indexOf('replay=') !== -1;
-        var introPlayed = false;
+  <!-- First-Visit Intro Detection Script: Homepage-only desktop progressive enhancement -->
+  {isHome && (
+    <script is:inline>
+      (function() {
         try {
-          introPlayed = sessionStorage.getItem('brndnur_intro_played') === 'true';
-        } catch(e) {}
+          var pathname = window.location.pathname;
+          var isHomeUrl = pathname === '/' || pathname === '' || pathname === '/index.html';
+          if (!isHomeUrl) return;
 
-        if ((!introPlayed && !prefersReduced) || isReplay) {
-          document.documentElement.classList.add('bn-show-intro');
-          document.addEventListener('DOMContentLoaded', function() {
-            if (document.documentElement.classList.contains('bn-show-intro')) {
-              document.body.classList.add('bn-intro-active');
-            }
-          });
-        }
-      } catch(e) {}
-    })();
-  </script>
+          var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var isMobile = window.matchMedia('(max-width: 768px)').matches;
+          var isReplay = window.location.search.indexOf('replay=') !== -1;
+          var introPlayed = false;
+          try {
+            introPlayed = sessionStorage.getItem('brndnur_intro_played') === 'true';
+          } catch(e) {}
+
+          // Run intro overlay only on desktop screens when motion is enabled, or on explicit replay
+          if ((!isMobile && !introPlayed && !prefersReduced) || (isReplay && !prefersReduced)) {
+            document.documentElement.classList.add('bn-show-intro');
+            document.addEventListener('DOMContentLoaded', function() {
+              if (document.documentElement.classList.contains('bn-show-intro')) {
+                document.body.classList.add('bn-intro-active');
+              }
+            });
+          }
+        } catch(e) {}
+      })();
+    </script>
+  )}
 
   <slot name="head" />
 </head>
@@ -234,7 +247,7 @@ const defaultSchema = isIndexable && !hasCustomSchema ? {
   <!-- Accessible Skip Link for Keyboard & Screen Reader Users (WCAG 2.4.1 Bypass Blocks) -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <IntroAnimation />
+  {isHome && <IntroAnimation />}
 
   <Header currentPath={currentPath} />
   <slot />

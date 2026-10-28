@@ -4,7 +4,7 @@ import CardCarousel from '../components/CardCarousel.astro';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 
 const title = "BRNDNUR Advisory LLP | Trademark & Business Advisory";
-const description = "Trademark registration guidance, preliminary brand-name searches, class selection, and business advisory services with BRNDNUR Advisory LLP in Manjeri, Malappuram, Kerala.";
+const description = "Trademark registration, brand-name searches and business advisory in Manjeri, Kerala. Get practical guidance from BRNDNUR Advisory LLP.";
 const canonical = "https://brndnur.com/";
 const ogImage = "/assets/hero-brand-desk.png";
 
@@ -12,18 +12,14 @@ const heroWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'Homepage',
   sectionName: 'Hero Section',
   enquiryType: 'Preliminary Brand Name Search',
-  topic: 'I visited your homepage and would like assistance with a preliminary trademark search for my proposed brand name.',
-  details: 'Proposed brand name: [Please enter your brand name]',
-  callToAction: 'Could you please guide me on the availability assessment and next steps?'
+  message: 'Hi BRNDNUR, I would like to check whether my proposed brand name is available for trademark registration. Could you please guide me on conducting a preliminary name clearance search and advise on the next steps?'
 });
 
 const closingWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'Homepage',
   sectionName: 'Closing Consultation Section',
-  enquiryType: 'General Advisory Consultation',
-  topic: 'I visited your homepage and would like to discuss my brand and business requirements with your advisory team.',
-  details: 'My requirement is: [Please describe your brand name or service requirement]',
-  callToAction: 'Could you please explain the suitable options and next steps?'
+  enquiryType: '24-Hour Brand Name Clearance',
+  message: 'Hi BRNDNUR, I would like to request a 24-hour brand name clearance search. Could you please check my proposed business name against IP India trademark records, explain any conflicting marks, and guide me on the next steps?'
 });
 ---
 
@@ -192,6 +188,8 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
   ]
 }
     </script>
+    <link rel="preload" as="image" href="/assets/hero-brand-desk-mobile.webp" media="(max-width: 768px)" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/hero-brand-desk.webp" media="(min-width: 769px)" type="image/webp" fetchpriority="high">
   </Fragment>
 
   <main id="main-content">
@@ -200,37 +198,29 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow hero-stagger-1">Trademark Registration &amp; Business Advisory</p>
-          <h1 id="hero-heading" class="hero-stagger-2">Your Brand Deserves<br>a <span>Stronger Tomorrow.</span></h1>
-          <p class="hero-stagger-3">Your brand reflects your ideas, your hard work and the trust you build with customers. BRNDNUR helps you understand trademark registration and relevant business advisory services, so you can take informed steps towards building your brand.</p>
+          <p class="eyebrow hero-stagger-1">Trademark Registration &middot; Kerala &amp; India-Wide</p>
+          <h1 id="hero-heading" class="hero-stagger-2">If Your Brand Name Isn't Registered,<br><span>Anyone Can Take It.</span></h1>
           
-          <div class="actions hero-stagger-4">
-            <a class="btn btn-primary" href={heroWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-              Request a Preliminary Search <span class="arrow">→</span>
-            </a>
-            <a class="btn btn-secondary" href="#services">
-              Explore Our Services <span class="arrow">→</span>
-            </a>
+          <div class="hero-quote hero-stagger-3" aria-label="Brand Philosophy">
+            <span class="hero-quote-bar" aria-hidden="true"></span>
+            <blockquote class="hero-quote-text">&ldquo;Register first. Regret never.&rdquo;</blockquote>
           </div>
 
-          <div class="trust-row hero-stagger-5" aria-label="Key Highlights">
-            <div class="trust-item">
-              <span class="trust-icon" aria-hidden="true">♢</span>
-              <span class="trust-label">Brand<br>Protection Guidance</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-icon" aria-hidden="true">▱</span>
-              <span class="trust-label">Business-Focused<br>Support</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-icon" aria-hidden="true">⌖</span>
-              <span class="trust-label">Based in<br>Manjeri, Kerala</span>
-            </div>
+          <p class="hero-stagger-4">IP India registration takes 12–18 months. Every day without it is a day someone else can legally file your name first. BRNDNUR Advisory LLP provides clear guidance across preliminary brand-name searches, trademark registration, and business advisory services.</p>
+          
+          <div class="actions hero-stagger-5">
+            <a class="btn btn-primary" href={heroWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+              Check If My Brand Name Is Safe <span class="arrow">&rarr;</span>
+            </a>
+            <a class="btn btn-secondary" href="#services">
+              Explore Our Services <span class="arrow">&rarr;</span>
+            </a>
           </div>
         </div>
       </div>
       <picture class="hero-photo-wrap hero-photo-animate">
-        <source srcset="/assets/hero-brand-desk-mobile.webp 768w, /assets/hero-brand-desk.webp 1448w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp" />
+        <source media="(max-width: 768px)" srcset="/assets/hero-brand-desk-mobile.webp" type="image/webp" />
+        <source media="(min-width: 769px)" srcset="/assets/hero-brand-desk.webp" type="image/webp" />
         <img
           class="hero-photo"
           src="/assets/hero-brand-desk.webp"
@@ -244,127 +234,70 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
       </picture>
     </section>
 
-    <!-- 2. SECTION 2: INFORMED DECISIONS (EDITORIAL IMAGE & TEXT SPLIT) -->
-    <section class="section informed-section" id="informed" aria-labelledby="informed-heading">
+    <!-- CREDIBILITY STRIP -->
+    <section class="credibility-section" aria-label="Key Credibility Indicators">
       <div class="container">
-        <div class="informed-split">
-          <div class="informed-media reveal-on-scroll">
-            <img
-              src="/assets/home-card-trademark.webp"
-              alt="Close-up of a bronze trademark registration symbol embossed on a cream portfolio beside legal reference documents and gold pen"
-              width="1000"
-              height="1000"
-              loading="lazy"
-              decoding="async"
-              class="informed-photo"
-            />
+        <div class="credibility-strip">
+          <div class="credibility-item">
+            <span class="cred-num">50+</span>
+            <span class="cred-label">Applications Filed</span>
           </div>
-          <div class="informed-content reveal-on-scroll">
-            <p class="eyebrow">A Stronger Brand Starts With</p>
-            <h2 id="informed-heading">Informed Decisions.</h2>
-            <div class="rule-left" aria-hidden="true"></div>
-            <p class="informed-lead">Choosing a brand name is an important business decision. Understanding trademark protection, relevant classes and the registration process can help you plan the next steps with greater clarity.</p>
-            
-            <div class="informed-pillars reveal-group">
-              <div class="informed-pillar reveal-item">
-                <span class="pillar-bullet" aria-hidden="true">♢</span>
-                <div>
-                  <strong>Brand Protection Clarity</strong>
-                  <p>Understand the statutory differences between business name registration and nationwide trademark ownership.</p>
-                </div>
-              </div>
-              <div class="informed-pillar reveal-item">
-                <span class="pillar-bullet" aria-hidden="true">▱</span>
-                <div>
-                  <strong>Precise Class Alignment</strong>
-                  <p>Identify the relevant goods and services categories across the 45 Nice Classification classes before filing.</p>
-                </div>
-              </div>
-              <div class="informed-pillar reveal-item">
-                <span class="pillar-bullet" aria-hidden="true">⌖</span>
-                <div>
-                  <strong>Clear Commercial Roadmap</strong>
-                  <p>Review preliminary search findings, filing prerequisites, and applicable fees before committing resources.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="informed-action">
-              <a class="btn btn-primary" href="/trademark-registration/">
-                Explore Trademark Registration <span class="arrow">→</span>
-              </a>
-            </div>
+          <div class="credibility-item">
+            <span class="cred-num">45</span>
+            <span class="cred-label">Classes Covered</span>
+          </div>
+          <div class="credibility-item">
+            <span class="cred-num">100%</span>
+            <span class="cred-label">IP India Compliant</span>
+          </div>
+          <div class="credibility-item">
+            <span class="cred-num">24h</span>
+            <span class="cred-label">Initial Name Check</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. SECTION 3: COMPREHENSIVE SERVICES (INTERACTIVE LUXURY SUITE) -->
+    <!-- 2. SECTION: WHAT WE DO (6 TRADEMARK SERVICES) -->
     <section class="section service-directory" id="services" aria-labelledby="directory-heading">
       <div class="container">
         <div class="section-heading text-center reveal-on-scroll">
-          <p class="eyebrow">Our Advisory Services</p>
-          <h2 id="directory-heading">Comprehensive Support for Your Brand and Business.</h2>
+          <p class="eyebrow">What We Do</p>
+          <h2 id="directory-heading">Every Service Built Around One Goal:<br><span>Your Brand Is Legally Yours.</span></h2>
           <div class="rule" aria-hidden="true"></div>
           <p class="section-lead">
-            From statutory trademark clearance and nationwide registration to corporate structuring and regulatory licensing, explore our core advisory capabilities.
+            From search to registration to renewal &mdash; we handle the entire trademark process so you don't lose your name to a filing mistake or a missed deadline.
           </p>
         </div>
 
-        <!-- Interactive Category Filter Bar -->
-        <div class="services-filter-bar reveal-on-scroll" role="tablist" aria-label="Filter services by category">
-          <button
-            type="button"
-            role="tab"
-            class="filter-tab active"
-            id="tab-all"
-            aria-selected="true"
-            aria-controls="services-grid"
-            data-filter="all"
-          >
-            <span class="tab-label">All Services</span>
-            <span class="tab-badge">9</span>
-          </button>
-
-          <button
-            type="button"
-            role="tab"
-            class="filter-tab"
-            id="tab-trademark"
-            aria-selected="false"
-            aria-controls="services-grid"
-            data-filter="trademark"
-          >
-            <span class="tab-icon" aria-hidden="true">🛡️</span>
-            <span class="tab-label">Trademark &amp; Brand Protection</span>
-            <span class="tab-badge">5</span>
-          </button>
-
-          <button
-            type="button"
-            role="tab"
-            class="filter-tab"
-            id="tab-business"
-            aria-selected="false"
-            aria-controls="services-grid"
-            data-filter="business"
-          >
-            <span class="tab-icon" aria-hidden="true">🏛️</span>
-            <span class="tab-label">Business Registration &amp; Setup</span>
-            <span class="tab-badge">4</span>
-          </button>
-        </div>
-
-        <!-- Screen reader status live region -->
-        <div id="services-filter-status" class="sr-only" aria-live="polite">
-          Showing all 9 advisory services
-        </div>
-
-        <!-- Unified 4-Column Luxury Horizontal Service Carousel -->
+        <!-- 6-Card Services Track -->
         <div class="services-carousel" id="services-carousel">
           <div class="services-carousel__viewport" id="services-carousel-viewport" tabindex="0" role="region" aria-label="Services carousel track">
             <div class="services-carousel__track services-grid" id="services-grid">
-              <!-- Card 1 — Trademark Registration (Trademark) -->
+              <!-- Card 1 — Trademark Search -->
+              <article class="service-card services-carousel__card" data-category="trademark">
+                <div class="card-media">
+                  <img
+                    src="/assets/home-card-search.webp"
+                    alt="Magnifying glass over a notebook beside a laptop displaying a neutral trademark search interface"
+                    width="900"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="card-tag">Clearance Search</span>
+                </div>
+                <div class="card-content">
+                  <h3>Is Your Brand Name Already Taken?</h3>
+                  <p>Comprehensive search across IP India's database &mdash; Classes 1–45, phonetic and visual similarity &mdash; before you invest in a name someone else may own.</p>
+                  <a class="service-btn" href="/brand-name-search/">
+                    <span>Check My Brand Name</span>
+                    <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 2 — Filing & Registration -->
               <article class="service-card services-carousel__card" data-category="trademark">
                 <div class="card-media">
                   <img
@@ -378,39 +311,39 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
                   <span class="card-tag">Statutory Filing</span>
                 </div>
                 <div class="card-content">
-                  <h3>Trademark Registration</h3>
-                  <p>End-to-end guidance for filing wordmarks and logos under the Trade Marks Act, including applicant vetting, documentation, and class selection.</p>
-                  <a class="service-btn" href="/trademark-registration/">
+                  <h3>File in the Wrong Class and Your Registration Protects Nothing.</h3>
+                  <p>We identify your exact trademark class, prepare Form TM-A, and file with IP India. Wrong-class filings are a common, expensive mistake we prevent.</p>
+                  <a class="service-btn" href="/trademark-registration/#classes">
                     <span>Explore Registration</span>
-                    <span class="btn-arrow" aria-hidden="true">→</span>
+                    <span class="btn-arrow" aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </article>
 
-              <!-- Card 2 — Brand Name Search (Trademark) -->
+              <!-- Card 3 — Infringement Action -->
               <article class="service-card services-carousel__card" data-category="trademark">
                 <div class="card-media">
                   <img
-                    src="/assets/home-card-search.webp"
-                    alt="Magnifying glass over a notebook beside a laptop displaying a neutral trademark search interface"
+                    src="/assets/home-card-trademark.webp"
+                    alt="Close-up of a bronze trademark registration symbol embossed on a cream portfolio beside legal reference documents and gold pen"
                     width="900"
                     height="600"
                     loading="lazy"
                     decoding="async"
                   />
-                  <span class="card-tag">Pre-Filing Clearance</span>
+                  <span class="card-tag">Legal Standing</span>
                 </div>
                 <div class="card-content">
-                  <h3>Brand Name Search</h3>
-                  <p>Preliminary clearance on the IP India database to evaluate phonetic and visual conflict risks under Sections 9 and 11 before committing capital.</p>
-                  <a class="service-btn" href="/brand-name-search/">
-                    <span>Request Search</span>
-                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  <h3>Someone Copies Your Brand. Can You Stop Them?</h3>
+                  <p>Only a registered trademark gives you legal standing to send a cease-and-desist, file a police complaint, or pursue damages in court.</p>
+                  <a class="service-btn" href="/services/#infringement">
+                    <span>Infringement Action</span>
+                    <span class="btn-arrow" aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </article>
 
-              <!-- Card 3 — Trademark Classes (Trademark) -->
+              <!-- Card 4 — Class Extension -->
               <article class="service-card services-carousel__card" data-category="trademark">
                 <div class="card-media">
                   <img
@@ -421,48 +354,42 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
                     loading="lazy"
                     decoding="async"
                   />
-                  <span class="card-tag">Classification</span>
+                  <span class="card-tag">Portfolio Audit</span>
                 </div>
                 <div class="card-content">
-                  <h3>Trademark Classes</h3>
-                  <p>Navigate the 45 Nice Classification categories to pinpoint precisely which goods and services your business must protect without overfiling.</p>
-                  <a class="service-btn" href="/trademark-classes/">
-                    <span>Class Guidance</span>
-                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  <h3>Your Business Expanded. Your Old Registration May Not Cover It.</h3>
+                  <p>New product line, new state, new service category &mdash; we audit your existing registration and file the classes your growth requires.</p>
+                  <a class="service-btn" href="/services/#class-extension">
+                    <span>Audit My Coverage</span>
+                    <span class="btn-arrow" aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </article>
 
-              <!-- Card 4 — Wordmark and Logo Protection (Trademark) -->
+              <!-- Card 5 — Opposition & Disputes -->
               <article class="service-card services-carousel__card" data-category="trademark">
                 <div class="card-media">
                   <img
-                    src="/assets/wordmark-foundation-exclusivity.webp"
-                    alt="Two elegant sheets displaying a wordmark design and a separate logo concept side by side"
+                    src="/services/assets/services-trademark-filing.webp"
+                    alt="Trademark application folder, legal books, and gold scales on a sunlit desk"
                     width="900"
                     height="600"
                     loading="lazy"
                     decoding="async"
                   />
-                  <span class="card-tag">Mark Types</span>
+                  <span class="card-tag">Dispute Defense</span>
                 </div>
                 <div class="card-content">
-                  <h3>Wordmark &amp; Logo Protection</h3>
-                  <p>Understand the statutory distinctions between name-only text exclusivity and visual logo symbol protection to secure broad commercial coverage.</p>
-                  <div class="card-dual-actions">
-                    <a class="service-btn service-btn-split" href="/wordmark-registration/">
-                      <span>Wordmark</span>
-                      <span class="btn-arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="service-btn service-btn-subtle" href="/logo-trademark-registration/">
-                      <span>Logo</span>
-                      <span class="btn-arrow" aria-hidden="true">→</span>
-                    </a>
-                  </div>
+                  <h3>Another Brand Is Using Your Name. What Do You Do?</h3>
+                  <p>Trademark opposition notices, cease-and-desist letters, IP India dispute representation &mdash; we handle infringement so you can focus on your business.</p>
+                  <a class="service-btn" href="/services/#opposition">
+                    <span>Opposition &amp; Disputes</span>
+                    <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                  </a>
                 </div>
               </article>
 
-              <!-- Card 5 — Trademark Renewal & Monitoring (Trademark) -->
+              <!-- Card 6 — Renewal & Monitoring -->
               <article class="service-card services-carousel__card" data-category="trademark">
                 <div class="card-media">
                   <img
@@ -473,280 +400,63 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
                     loading="lazy"
                     decoding="async"
                   />
-                  <span class="card-tag">Ongoing Maintenance</span>
+                  <span class="card-tag">10-Year Maintenance</span>
                 </div>
                 <div class="card-content">
-                  <h3>Trademark Renewal &amp; Monitoring</h3>
-                  <p>Protect registered marks through 10-year statutory renewals on Form TM-R and ongoing surveillance of the Trade Marks Journal for conflicting marks.</p>
-                  <div class="card-dual-actions">
-                    <a class="service-btn service-btn-split" href="/trademark-renewal/">
-                      <span>Renewal</span>
-                      <span class="btn-arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="service-btn service-btn-subtle" href="/trademark-monitoring/">
-                      <span>Monitoring</span>
-                      <span class="btn-arrow" aria-hidden="true">→</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Card 6 — GST Registration (Business) -->
-              <article class="service-card services-carousel__card" data-category="business">
-                <div class="card-media">
-                  <img
-                    src="/assets/gst-tax-credibility.webp"
-                    alt="Professional accounting documents, a calculator, and organised business paperwork"
-                    width="900"
-                    height="600"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <span class="card-tag">Taxation &amp; Commerce</span>
-                </div>
-                <div class="card-content">
-                  <h3>GST Registration</h3>
-                  <p>Assistance with Goods &amp; Services Tax registration, document verification, and compliance alignment for manufacturers, traders, and service providers.</p>
-                  <a class="service-btn" href="/gst-registration/">
-                    <span>GST Assistance</span>
-                    <span class="btn-arrow" aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </article>
-
-              <!-- Card 7 — Udyam / MSME Registration (Business) -->
-              <article class="service-card services-carousel__card" data-category="business">
-                <div class="card-media">
-                  <img
-                    src="/assets/udyam-growth-catalyst.webp"
-                    alt="Small-business workspace featuring an organised business file and laptop"
-                    width="900"
-                    height="600"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <span class="card-tag">MSME Concessions</span>
-                </div>
-                <div class="card-content">
-                  <h3>Udyam / MSME Registration</h3>
-                  <p>Official digital MSME certification to unlock the statutory 50% government fee concession on trademark filings, priority credit, and subsidy schemes.</p>
-                  <a class="service-btn" href="/udyam-msme-registration/">
-                    <span>MSME Assistance</span>
-                    <span class="btn-arrow" aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </article>
-
-              <!-- Card 8 — FSSAI Registration (Business) -->
-              <article class="service-card services-carousel__card" data-category="business">
-                <div class="card-media">
-                  <img
-                    src="/assets/fssai-packaging-standards.webp"
-                    alt="Clean food-brand workspace featuring packaged food products, ingredient labels, and regulatory paperwork"
-                    width="900"
-                    height="600"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <span class="card-tag">Food Licensing</span>
-                </div>
-                <div class="card-content">
-                  <h3>FSSAI Registration</h3>
-                  <p>Regulatory food business licensing and basic registration assistance on the FoSCoS portal for restaurants, bakeries, cloud kitchens, and packaged foods.</p>
-                  <a class="service-btn" href="/fssai-registration/">
-                    <span>FSSAI Assistance</span>
-                    <span class="btn-arrow" aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </article>
-
-              <!-- Card 9 — Business Setup Advisory (Business) -->
-              <article class="service-card services-carousel__card" data-category="business">
-                <div class="card-media">
-                  <img
-                    src="/assets/setup-startup-readiness.webp"
-                    alt="Professional business planning documents, a notebook, and architectural details of a modern business workspace"
-                    width="900"
-                    height="600"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <span class="card-tag">Entity Structuring</span>
-                </div>
-                <div class="card-content">
-                  <h3>Business Setup Advisory</h3>
-                  <p>Strategic constitution advice for founders choosing between Sole Proprietorships, Partnerships, LLPs, and Private Limited Companies synchronized with trademark clearance.</p>
-                  <a class="service-btn" href="/business-setup/">
-                    <span>Setup Advisory</span>
-                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  <h3>Your Trademark Expires. Your Protection Disappears.</h3>
+                  <p>Trademarks last 10 years. We track your renewal dates and file Form TM-R before the deadline &mdash; because a lapsed registration means starting over.</p>
+                  <a class="service-btn" href="/trademark-renewal-monitoring/">
+                    <span>Renewal &amp; Monitoring</span>
+                    <span class="btn-arrow" aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </article>
             </div>
           </div>
 
-          <!-- Carousel Navigation Controls (Dot-Only Standard) -->
+          <!-- Carousel Navigation Controls -->
           <div class="services-carousel__controls" aria-label="Services carousel navigation">
             <div class="services-carousel__dots" id="services-dots" role="tablist" aria-label="Services pagination"></div>
           </div>
         </div>
-
-        <!-- Section Footer Callout -->
-        <div class="services-footer-banner">
-          <div class="services-footer-content">
-            <div class="services-footer-text">
-              <h4>Looking for an Integrated Regulatory Solution?</h4>
-              <p>Explore our bundled advisory packages designed for first-time founders, food brands, and Gulf-return entrepreneurs.</p>
-            </div>
-            <a class="btn btn-secondary" href="/packages/">
-              <span>Explore All Packages</span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- 4. SECTION 4: HOW IT WORKS (A CLEARER WAY FORWARD) -->
+    <!-- 3. SECTION: THE PROCESS (THREE STEPS) -->
     <section class="process" id="process" aria-labelledby="process-heading">
       <div class="container">
-        <div class="section-heading reveal-on-scroll">
-          <p class="eyebrow">How It Works</p>
-          <h2 id="process-heading">A Clearer Way Forward.</h2>
-          <p>A straightforward process to understand your requirements, discuss relevant options, and agree on the next steps.</p>
+        <div class="section-heading text-center reveal-on-scroll">
+          <p class="eyebrow">The Process</p>
+          <h2 id="process-heading">Three Steps. Your Brand Protected.</h2>
+          <div class="rule" aria-hidden="true"></div>
+          <p class="section-lead">No legal jargon. No surprises. We handle the complexity so you don't have to.</p>
         </div>
         
-        <CardCarousel id="home-process-carousel" ariaLabel="A Clearer Way Forward">
-          <article class="step">
-            <div class="step-top">
-              <span class="step-num">01</span>
-              <span class="step-line"></span>
-            </div>
-            <h3>Tell Us About Your Brand</h3>
-            <p>Share your proposed brand name, business type, products or services, and the assistance you are looking for.</p>
+        <div class="three-steps-grid">
+          <article class="step-card">
+            <div class="step-badge">1</div>
+            <h3>Share Your Brand Name</h3>
+            <p>WhatsApp us your brand name and the products or services it covers. Takes two minutes.</p>
           </article>
           
-          <article class="step">
-            <div class="step-top">
-              <span class="step-num">02</span>
-              <span class="step-line"></span>
-            </div>
-            <h3>Discuss Your Options</h3>
-            <p>Understand relevant services, possible trademark classes, requirements, and practical considerations.</p>
+          <article class="step-card">
+            <div class="step-badge">2</div>
+            <h3>We Clear and File</h3>
+            <p>We run a full IP India search, confirm the right class, and submit Form TM-A. You get the filing receipt within 24 hours.</p>
           </article>
           
-          <article class="step">
-            <div class="step-top">
-              <span class="step-num">03</span>
-              <span class="step-line"></span>
-            </div>
-            <h3>Confirm the Scope</h3>
-            <p>Review the proposed work, applicable charges, and relevant documents before proceeding.</p>
+          <article class="step-card">
+            <div class="step-badge">3</div>
+            <h3>Your Brand Is Protected</h3>
+            <p>You have legal priority from the filing date. We track the 12–18 month process and handle any IP India queries.</p>
           </article>
-
-          <article class="step">
-            <div class="step-top">
-              <span class="step-num">04</span>
-              <span class="step-line"></span>
-            </div>
-            <h3>Proceed with Support</h3>
-            <p>Proceed with the agreed scope of work and receive relevant communication and updates where applicable.</p>
-          </article>
-        </CardCarousel>
-      </div>
-    </section>
-
-    <!-- 5. SECTION 5: WHO WE HELP (IMAGE-LED AUDIENCE CARDS) -->
-    <section class="section audiences" id="audiences" aria-labelledby="audiences-heading">
-      <div class="container">
-        <div class="section-heading reveal-on-scroll">
-          <p class="eyebrow">Guidance for Every Stage</p>
-          <h2 id="audiences-heading">Support for Every Stage of Your Business Journey.</h2>
-          <div class="rule" aria-hidden="true"></div>
-          <p>Whether you are choosing your first brand name or expanding an established business, explore the services relevant to your needs.</p>
         </div>
 
-        <CardCarousel id="home-audiences-carousel" ariaLabel="Support for Every Stage of Your Business Journey">
-          <!-- Audience 1: First-Time Founders -->
-          <article class="audience-photo-card">
-            <div class="audience-media">
-              <img
-                src="/assets/audience-first-time-founders.webp"
-                alt="Modern entrepreneur minimalist desk with laptop, open cream notebook, and brass pen in warm daylight"
-                width="1200"
-                height="675"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="audience-body">
-              <span class="audience-tag">Founders &amp; Solopreneurs</span>
-              <h3>First-Time Founders</h3>
-              <p>Explore preliminary brand-name search, trademark registration guidance, and relevant business registration support tailored to early-stage ventures.</p>
-              <a class="text-link" href="/packages/individual-msme/">View Founder Package <span>→</span></a>
-            </div>
-          </article>
-
-          <!-- Audience 2: Food and Consumer Brands -->
-          <article class="audience-photo-card">
-            <div class="audience-media">
-              <img
-                src="/assets/audience-food-brands.webp"
-                alt="Artisanal food and beverage products, specialty olive oils, and gourmet packaging on a sunlit marble board"
-                width="1200"
-                height="675"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="audience-body">
-              <span class="audience-tag">Food &amp; Consumer Goods</span>
-              <h3>Food &amp; Consumer Brands</h3>
-              <p>Explore how trademark protection and applicable FSSAI registration assistance fit the statutory needs of packaged foods, cafes, and consumer products.</p>
-              <a class="text-link" href="/packages/food-brand/">View Food Package <span>→</span></a>
-            </div>
-          </article>
-
-          <!-- Audience 3: Growing Businesses -->
-          <article class="audience-photo-card">
-            <div class="audience-media">
-              <img
-                src="/assets/audience-growing-businesses.webp"
-                alt="Corporate boardroom with legal files, blueprints, and executive team overlooking a modern city skyline"
-                width="1200"
-                height="675"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="audience-body">
-              <span class="audience-tag">Companies &amp; LLPs</span>
-              <h3>Growing Businesses</h3>
-              <p>Explore assistance relating to trademark portfolios, multi-class filings, relevant renewals, brand monitoring, and business registration requirements.</p>
-              <a class="text-link" href="/packages/company-llp/">View Company Package <span>→</span></a>
-            </div>
-          </article>
-
-          <!-- Audience 4: Gulf-Return Entrepreneurs -->
-          <article class="audience-photo-card">
-            <div class="audience-media">
-              <img
-                src="/assets/audience-gulf-return.webp"
-                alt="Executive desk with vintage brass globe, embossed BRNDNUR portfolio, and tropical Kerala garden view"
-                width="1200"
-                height="675"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="audience-body">
-              <span class="audience-tag">Kerala &amp; NRI Ventures</span>
-              <h3>Gulf-Return Entrepreneurs</h3>
-              <p>Returning to Kerala to start a new venture? Explore relevant business setup, commercial entity structuring, trademark security, and licensing assistance.</p>
-              <a class="text-link" href="/packages/gulf-return-business/">View Gulf Return Package <span>→</span></a>
-            </div>
-          </article>
-        </CardCarousel>
+        <div class="process-cta-wrap text-center" style="margin-top: 36px;">
+          <a class="btn btn-primary" href={heroWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+            Start With a Free Name Check <span class="arrow">&rarr;</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -803,8 +513,8 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
         <div class="prep-banner-wrapper reveal-on-scroll">
           <div class="prep-banner-card">
             <img
-              src="/assets/prep-hero-plain.webp"
-              alt="What to Prepare Before You Begin - desk with notebook, fountain pen and legal materials"
+              src="/assets/prep-hero-branded.webp"
+              alt="What to Prepare Before You Begin - desk with BRNDNUR notebook, fountain pen and legal materials"
               width="1024"
               height="440"
               loading="lazy"
@@ -827,139 +537,37 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
           </div>
         </div>
 
-        <!-- Interactive 6-Card Slider with Dot-Only Navigation -->
-        <div class="prep-slider-wrapper">
-          <div class="prep-cards-track" id="prep-slider" tabindex="0" role="region" aria-label="Preparation steps slider">
-            <!-- Card 1 -->
-            <article class="prep-card">
-              <div class="prep-card-media">
-                <img
-                  src="/assets/prep-card-brand-logo.webp"
-                  alt="Proposed Brand Name & Existing Logo - trademark sketches and notebook"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="prep-card-body">
-                <h3>Proposed Brand Name &amp; Existing Logo</h3>
-                <p>The exact spelling, variations, or logo graphic you intend to protect in commerce.</p>
-                <div class="prep-card-divider" aria-hidden="true"></div>
-                <a href="/trademark-registration/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
-              </div>
-            </article>
-
-            <!-- Card 2 -->
-            <article class="prep-card">
-              <div class="prep-card-media">
-                <img
-                  src="/assets/prep-card-products.webp"
-                  alt="Description of Products or Services - trademark classification review"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="prep-card-body">
-                <h3>Description of Products or Services</h3>
-                <p>A plain-language summary of what your business sells, manufactures, or provides.</p>
-                <div class="prep-card-divider" aria-hidden="true"></div>
-                <a href="/trademark-classes/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
-              </div>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="prep-card">
-              <div class="prep-card-media">
-                <img
-                  src="/assets/prep-card-applicant.webp"
-                  alt="Applicant Name & Applicant Type - applicant identity details form"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="prep-card-body">
-                <h3>Applicant Name &amp; Applicant Type</h3>
-                <p>Whether filing as an individual, sole proprietorship, partnership firm, LLP, or private limited company.</p>
-                <div class="prep-card-divider" aria-hidden="true"></div>
-                <a href="/packages/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
-              </div>
-            </article>
-
-            <!-- Card 4 -->
-            <article class="prep-card">
-              <div class="prep-card-media">
-                <img
-                  src="/assets/prep-card-business-info.webp"
-                  alt="Relevant Business Information - business registration and compliance certificates"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="prep-card-body">
-                <h3>Relevant Business Information</h3>
-                <p>GST details, MSME/Udyam certificates (for fee concessions), or local trade licenses where applicable.</p>
-                <div class="prep-card-divider" aria-hidden="true"></div>
-                <a href="/udyam-msme-registration/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
-              </div>
-            </article>
-
-            <!-- Card 5 -->
-            <article class="prep-card">
-              <div class="prep-card-media">
-                <img
-                  src="/assets/prep-card-existing-tm.webp"
-                  alt="Existing Trademark Details, If Any - prior trademark registry search and records"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="prep-card-body">
-                <h3>Existing Trademark Details, If Any</h3>
-                <p>Any prior application numbers, user-date commercial evidence, or previous clearance records.</p>
-                <div class="prep-card-divider" aria-hidden="true"></div>
-                <a href="/brand-name-search/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
-              </div>
-            </article>
-
-            <!-- Card 6 -->
-            <article class="prep-card">
-              <div class="prep-card-media">
-                <img
-                  src="/assets/prep-card-deadlines.webp"
-                  alt="Known Deadlines or Immediate Concerns - timeline and schedule planning"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="prep-card-body">
-                <h3>Known Deadlines or Immediate Concerns</h3>
-                <p>Upcoming product launches, domain registration deadlines, packaging print runs, or marketing schedules.</p>
-                <div class="prep-card-divider" aria-hidden="true"></div>
-                <a href="/contact/" class="prep-card-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
-              </div>
-            </article>
+        <!-- Compact Inline Enquiry Checklist (3 Core Requirements per Section 4.G) -->
+        <div class="prep-checklist-grid" role="list" aria-label="Enquiry preparation checklist">
+          <!-- Item 1: Description of Products or Services -->
+          <div class="prep-checklist-item" role="listitem">
+            <div class="prep-checklist-header">
+              <span class="prep-checklist-num" aria-hidden="true">01</span>
+              <span class="prep-checklist-badge">Class Scoping</span>
+            </div>
+            <h3 class="prep-checklist-title">Description of Products or Services</h3>
+            <p class="prep-checklist-text">A plain-language summary of what your business sells, manufactures, or delivers so we can accurately classify your trademark under the NICE classification.</p>
           </div>
-        </div>
 
-        <!-- 6 Pagination Dots matching user mockup -->
-        <div class="prep-dots" id="prep-dots" role="tablist" aria-label="Preparation steps pagination">
-          <button type="button" class="prep-dot active" role="tab" aria-selected="true" aria-label="Step 1: Brand Name & Logo" data-index="0"></button>
-          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 2: Products or Services" data-index="1"></button>
-          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 3: Applicant Details" data-index="2"></button>
-          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 4: Business Information" data-index="3"></button>
-          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 5: Existing Trademark" data-index="4"></button>
-          <button type="button" class="prep-dot" role="tab" aria-selected="false" aria-label="Step 6: Known Deadlines" data-index="5"></button>
+          <!-- Item 2: Applicant Name & Applicant Type -->
+          <div class="prep-checklist-item" role="listitem">
+            <div class="prep-checklist-header">
+              <span class="prep-checklist-num" aria-hidden="true">02</span>
+              <span class="prep-checklist-badge">Entity Classification</span>
+            </div>
+            <h3 class="prep-checklist-title">Applicant Name &amp; Applicant Type</h3>
+            <p class="prep-checklist-text">Whether you are filing as an individual founder, sole proprietorship, partnership, LLP, or private limited company to determine correct statutory government fees.</p>
+          </div>
+
+          <!-- Item 3: Relevant Business Information -->
+          <div class="prep-checklist-item" role="listitem">
+            <div class="prep-checklist-header">
+              <span class="prep-checklist-num" aria-hidden="true">03</span>
+              <span class="prep-checklist-badge">Fee Concessions</span>
+            </div>
+            <h3 class="prep-checklist-title">Relevant Business Information</h3>
+            <p class="prep-checklist-text">Your GST certificate, MSME/Udyam registration for up to 50% government fee concessions, and your date of first commercial use if already trading.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -991,7 +599,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <div class="faq-row-lead">
                 <span class="faq-row-num">01</span>
                 <span class="faq-row-vbar" aria-hidden="true"></span>
-                <span class="faq-row-question">What is a trademark?</span>
+                <span class="faq-row-question">Can someone else take my brand name before I register it?</span>
               </div>
               <span class="faq-row-toggle" aria-hidden="true">
                 <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1001,7 +609,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               </span>
             </summary>
             <div class="faq-row-content">
-              <p>A trademark protects your distinctive brand name, logo, slogan, or commercial symbol used in connection with goods or services. Registration under the Trade Marks Act grants statutory nationwide exclusive rights, deters deceptive imitation, and secures brand equity as your business grows.</p>
+              <p>Yes. Under Indian trademark law, rights are established primarily by filing priority date. If a competitor files an identical or deceptively similar name before you, they gain statutory priority to that name in commerce across India.</p>
             </div>
           </details>
 
@@ -1011,7 +619,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <div class="faq-row-lead">
                 <span class="faq-row-num">02</span>
                 <span class="faq-row-vbar" aria-hidden="true"></span>
-                <span class="faq-row-question">How do I begin a trademark registration enquiry?</span>
+                <span class="faq-row-question">I've been using this name for years. Doesn't that protect me?</span>
               </div>
               <span class="faq-row-toggle" aria-hidden="true">
                 <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1021,7 +629,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               </span>
             </summary>
             <div class="faq-row-content">
-              <p>You can begin by sharing your proposed brand name, logo concept, and a brief description of your products or services via WhatsApp or our enquiry channels. We conduct a preliminary discussion to assess relevant classes and identify potentially conflicting marks before filing.</p>
+              <p>Prior use provides limited common law rights under &ldquo;passing off&rdquo;, but proving it in court requires extensive historical invoices, turnover evidence, and expensive litigation. A registered trademark gives you immediate nationwide statutory ownership.</p>
             </div>
           </details>
 
@@ -1031,7 +639,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <div class="faq-row-lead">
                 <span class="faq-row-num">03</span>
                 <span class="faq-row-vbar" aria-hidden="true"></span>
-                <span class="faq-row-question">How do trademark classes work?</span>
+                <span class="faq-row-question">How long does registration take?</span>
               </div>
               <span class="faq-row-toggle" aria-hidden="true">
                 <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1041,7 +649,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               </span>
             </summary>
             <div class="faq-row-content">
-              <p>India follows the international Nice Classification system of 45 classes: Classes 1 to 34 cover physical goods (e.g. food, clothing, cosmetics), while Classes 35 to 45 cover services (e.g. retail, consulting, software). Applications must specify the exact classes that correspond to your commercial activities.</p>
+              <p>The standard IP India registration lifecycle typically spans 12 to 18 months through examination, journal publication, and final certificate issuance. However, your legal priority date is locked the exact day Form TM-A is submitted.</p>
             </div>
           </details>
 
@@ -1051,7 +659,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <div class="faq-row-lead">
                 <span class="faq-row-num">04</span>
                 <span class="faq-row-vbar" aria-hidden="true"></span>
-                <span class="faq-row-question">What is the difference between a wordmark and a logo trademark?</span>
+                <span class="faq-row-question">What is a trademark class, and why does it matter?</span>
               </div>
               <span class="faq-row-toggle" aria-hidden="true">
                 <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1061,7 +669,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               </span>
             </summary>
             <div class="faq-row-content">
-              <p>A wordmark protects the brand name itself in standard text, offering broad protection regardless of typography or styling. A logo (device mark) protects the distinctive visual symbol, stylized lettering, or emblem. Many businesses file both to secure comprehensive coverage.</p>
+              <p>India follows the international Nice Classification of 45 classes (1–34 for goods, 35–45 for services). A Class 35 retail filing does not protect software development or food manufacturing. Selecting the right classes ensures real protection for what you sell.</p>
             </div>
           </details>
 
@@ -1071,7 +679,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <div class="faq-row-lead">
                 <span class="faq-row-num">05</span>
                 <span class="faq-row-vbar" aria-hidden="true"></span>
-                <span class="faq-row-question">What information should I prepare?</span>
+                <span class="faq-row-question">How much does it cost?</span>
               </div>
               <span class="faq-row-toggle" aria-hidden="true">
                 <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1081,67 +689,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               </span>
             </summary>
             <div class="faq-row-content">
-              <p>Having your proposed brand name, logo file (if available), a brief description of products or services, applicant details (individual, proprietorship, LLP, or company), and commercial usage status helps ensure an efficient initial assessment.</p>
-            </div>
-          </details>
-
-          <!-- Item 06 -->
-          <details class="faq-row-item faq-details">
-            <summary class="faq-row-summary faq-summary">
-              <div class="faq-row-lead">
-                <span class="faq-row-num">06</span>
-                <span class="faq-row-vbar" aria-hidden="true"></span>
-                <span class="faq-row-question">Is trademark registration the same as company registration?</span>
-              </div>
-              <span class="faq-row-toggle" aria-hidden="true">
-                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
-                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
-                </svg>
-              </span>
-            </summary>
-            <div class="faq-row-content">
-              <p>No. Registering a company, LLP, or GST establishes your legal commercial entity and tax compliance, but does not grant proprietary trademark protection over your brand name. Trademark registration is a separate statutory intellectual property procedure.</p>
-            </div>
-          </details>
-
-          <!-- Item 07 -->
-          <details class="faq-row-item faq-details">
-            <summary class="faq-row-summary faq-summary">
-              <div class="faq-row-lead">
-                <span class="faq-row-num">07</span>
-                <span class="faq-row-vbar" aria-hidden="true"></span>
-                <span class="faq-row-question">What can affect the time required for an application?</span>
-              </div>
-              <span class="faq-row-toggle" aria-hidden="true">
-                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
-                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
-                </svg>
-              </span>
-            </summary>
-            <div class="faq-row-content">
-              <p>Trademark timelines depend on Trade Marks Registry examination workloads, whether the examiner issues examination report objections, whether third parties file oppositions during publication, and the promptness of responses to official queries. We monitor every stage to avoid avoidable administrative delays.</p>
-            </div>
-          </details>
-
-          <!-- Item 08 -->
-          <details class="faq-row-item faq-details">
-            <summary class="faq-row-summary faq-summary">
-              <div class="faq-row-lead">
-                <span class="faq-row-num">08</span>
-                <span class="faq-row-vbar" aria-hidden="true"></span>
-                <span class="faq-row-question">How can I enquire about service charges?</span>
-              </div>
-              <span class="faq-row-toggle" aria-hidden="true">
-                <svg class="faq-toggle-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <line class="line-h" x1="2" y1="7" x2="12" y2="7"></line>
-                  <line class="line-v" x1="7" y1="2" x2="7" y2="12"></line>
-                </svg>
-              </span>
-            </summary>
-            <div class="faq-row-content">
-              <p>Statutory official government fees are prescribed by the Trade Marks Registry (with a 50% concession for individuals, startups, and MSMEs). BRNDNUR provides a transparent, itemised breakdown of official fees and our professional advisory charges before any work begins, so you know the full scope upfront.</p>
+              <p>The statutory government fee is &pound;4,500 (₹4,500) per class for individuals, startups, and registered MSMEs (50% concession), and ₹9,000 for standard corporate applicants. Professional advisory charges are quoted separately and transparently upfront.</p>
             </div>
           </details>
         </div>
@@ -1150,7 +698,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
         <div class="faq-editorial-footer">
           <a class="faq-editorial-btn" href="/faqs/">
             <span>View All Frequently Asked Questions</span>
-            <span class="faq-btn-arrow" aria-hidden="true">→</span>
+            <span class="faq-btn-arrow" aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </div>
@@ -1181,7 +729,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <span class="resource-tag">Core Guide</span>
               <h3>Trademark Registration Guide</h3>
               <p>A comprehensive walk-through of the Indian trademark application process, statutory requirements, and key milestones.</p>
-              <a class="resource-link" href="/resources/trademark-registration-guide/">Read Guide <span>→</span></a>
+              <a class="resource-link" href="/resources/trademark-registration-guide/" aria-label="Read our Trademark Registration Guide">Read Guide <span>→</span></a>
             </div>
           </article>
 
@@ -1199,7 +747,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <span class="resource-tag">Classification</span>
               <h3>Trademark Class Guide</h3>
               <p>Learn how the 45 Nice Classification classes work and how to select the right categories for your products and services.</p>
-              <a class="resource-link" href="/resources/trademark-class-guide/">Read Guide <span>→</span></a>
+              <a class="resource-link" href="/resources/trademark-class-guide/" aria-label="Read our Trademark Class Guide">Read Guide <span>→</span></a>
             </div>
           </article>
 
@@ -1217,7 +765,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <span class="resource-tag">Clearance</span>
               <h3>Brand Name Search Guide</h3>
               <p>Understand phonetic clearance, visual conflict checks, and how to verify brand availability before filing.</p>
-              <a class="resource-link" href="/resources/brand-name-search-guide/">Read Guide <span>→</span></a>
+              <a class="resource-link" href="/resources/brand-name-search-guide/" aria-label="Read our Brand Name Search Guide">Read Guide <span>→</span></a>
             </div>
           </article>
 
@@ -1235,7 +783,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <span class="resource-tag">Procedure</span>
               <h3>Trademark Application Process</h3>
               <p>Detailed stage-by-stage explanation of what happens after application filing, from examination to registration.</p>
-              <a class="resource-link" href="/resources/trademark-application-process/">Read Guide <span>→</span></a>
+              <a class="resource-link" href="/resources/trademark-application-process/" aria-label="Read our Trademark Application Process Guide">Read Guide <span>→</span></a>
             </div>
           </article>
         </CardCarousel>
@@ -1261,34 +809,34 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
       />
       <div class="container cta-inner reveal-on-scroll">
         <div class="cta-copy">
-          <p class="eyebrow">Let's Talk</p>
-          <h2 id="cta-heading">Take the Next Step<br>for Your Brand.</h2>
-          <p>Share your brand name and tell us what you need help with. We will discuss the relevant options and the next steps.</p>
+          <p class="eyebrow">Act Before Someone Else Does</p>
+          <h2 id="cta-heading">Your Brand Name Might Already Be Taken.<br><span>Find Out in 24 Hours.</span></h2>
+          <p>Send us your brand name on WhatsApp. We'll run a full IP India search and tell you exactly where you stand &mdash; at no cost.</p>
           <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-            Discuss Your Requirements on WhatsApp <span class="arrow">→</span>
+            Check My Brand Name on WhatsApp <span class="arrow">&rarr;</span>
           </a>
         </div>
         
         <div class="cta-benefits reveal-group">
           <div class="cta-benefit reveal-item">
-            <span class="value-icon" aria-hidden="true">☏</span>
+            <span class="value-icon" aria-hidden="true">&#9742;</span>
             <div>
               <strong>Quick Response</strong>
-              <p>Discuss your enquiry directly with our advisory team.</p>
+              <p>WhatsApp response within the same business day.</p>
             </div>
           </div>
           <div class="cta-benefit reveal-item">
-            <span class="value-icon" aria-hidden="true">♢</span>
+            <span class="value-icon" aria-hidden="true">&#9671;</span>
             <div>
-              <strong>Confidential Discussions</strong>
-              <p>Your brand concepts and business plans are handled with strict care.</p>
+              <strong>24-Hour Clearance</strong>
+              <p>Preliminary conflict search delivered within 24 hours.</p>
             </div>
           </div>
           <div class="cta-benefit reveal-item">
-            <span class="value-icon" aria-hidden="true">♧</span>
+            <span class="value-icon" aria-hidden="true">&#9827;</span>
             <div>
-              <strong>Support at Every Stage</strong>
-              <p>Clear guidance from pre-filing clearance to ongoing renewal.</p>
+              <strong>Strict Confidentiality</strong>
+              <p>Your proposed marks and trade secrets handled securely.</p>
             </div>
           </div>
         </div>
@@ -1460,16 +1008,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
       }
 
       function initAllSliders() {
-        // Section 7: Preparation Checklist (3 columns in a row, auto-infinity 5s + dots)
-        setupInfiniteSlider({
-          sliderId: 'prep-slider',
-          prevId: 'prep-prev',
-          nextId: 'prep-next',
-          containerSelector: '.prep-slider-wrapper',
-          dotsId: 'prep-dots',
-          cardSelector: '.prep-card',
-          interval: 5000
-        });
+        // Section 7: Preparation Checklist converted to static inline grid per Section 4.G
       }
 
       function initServicesCarousel() {
@@ -1527,7 +1066,6 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
 
         function getCardsPerView() {
           const w = window.innerWidth;
-          if (w >= 1200) return 4;
           if (w >= 1024) return 3;
           if (w >= 768) return 2;
           return 1;
@@ -1909,86 +1447,123 @@ p { color: var(--body); }
 .rule-left { width: 2.25rem; height: 2px; background: var(--gold); margin: 0 0 1.15rem; }
 .section-heading p { font-size: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem); line-height: 1.65; margin: 0 auto; max-width: 720px; }
 
-/* 2. SECTION 2: INFORMED DECISIONS (EDITORIAL IMAGE & TEXT SPLIT) */
-.informed-section {
-  background: var(--ivory);
-  border-bottom: 1px solid var(--line);
-}
-.informed-split {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
+/* INTEGRATED HERO QUOTATION */
+.hero-quote {
+  display: inline-flex;
   align-items: center;
-}
-.informed-media {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 12px 32px rgba(19, 35, 58, 0.09);
-  border: 1px solid var(--line);
-  background: #F8F3E9;
-}
-.informed-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center;
-  transition: transform .4s ease;
-}
-.informed-media:hover .informed-photo {
-  transform: scale(1.02);
-}
-.informed-content {
-  display: flex;
-  flex-direction: column;
-}
-.informed-lead {
-  font-size: clamp(1rem, 1.05vw, 1.12rem);
-  line-height: 1.68;
-  color: #2D3A4B;
-  margin-bottom: 1.5rem;
-}
-.informed-pillars {
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
-  margin-bottom: 1.85rem;
-}
-.informed-pillar {
-  display: flex;
   gap: 14px;
-  align-items: flex-start;
+  margin: 0.1rem 0 1.25rem 0;
+  padding: 0;
 }
-.pillar-bullet {
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
-  border-radius: 6px;
-  background: rgba(168, 120, 26, 0.12);
-  color: var(--gold);
-  display: grid;
-  place-items: center;
-  font-size: 13px;
-  font-weight: 700;
-  margin-top: 2px;
+.hero-quote-bar {
+  width: 30px;
+  height: 2px;
+  background: var(--gold, #A8781A);
+  flex-shrink: 0;
 }
-.informed-pillar strong {
-  display: block;
-  font-size: 1rem;
+.hero-quote-text {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-style: italic;
   font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 0.2rem;
-}
-.informed-pillar p {
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: #475569;
+  font-size: clamp(1.28rem, 1.6vw, 1.6rem);
+  color: var(--gold, #A8781A);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
   margin: 0;
 }
-.informed-action {
-  margin-top: 0.5rem;
+
+/* CREDIBILITY STRIP */
+.credibility-section {
+  background: #13233A;
+  color: #F4EFE4;
+  padding: 2.25rem 0;
+  border-top: 1px solid rgba(168, 120, 26, 0.25);
+  border-bottom: 1px solid rgba(168, 120, 26, 0.25);
+}
+.credibility-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+.credibility-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.cred-num {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  font-weight: 700;
+  color: #D4A647;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+.cred-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 228, 0.85);
+}
+
+/* THREE STEPS PROCESS GRID */
+.three-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.step-card {
+  background: #FFFCF6;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2.25rem 1.75rem;
+  box-shadow: 0 4px 14px rgba(19, 35, 58, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(19, 35, 58, 0.08);
+}
+.step-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.step-card h3 {
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-bottom: 0.65rem;
+}
+.step-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--body);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .credibility-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 1rem;
+  }
+  .three-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
 }
 
 /* 3. SECTION 3: COMPREHENSIVE SERVICES (INTERACTIVE LUXURY SUITE) */
@@ -2109,24 +1684,14 @@ p { color: var(--body); }
 }
 
 /* Card sizing per breakpoint */
-/* Desktop (>= 1200px): Exactly 4 cards visible in one row */
+/* Desktop (>= 1024px): Exactly 3 cards visible in one row */
 .service-card,
 .services-carousel__card {
-  flex: 0 0 calc((100% - 60px) / 4) !important;
-  width: calc((100% - 60px) / 4) !important;
-  max-width: calc((100% - 60px) / 4) !important;
+  flex: 0 0 calc((100% - 40px) / 3) !important;
+  width: calc((100% - 40px) / 3) !important;
+  max-width: calc((100% - 40px) / 3) !important;
   min-width: 0 !important;
   box-sizing: border-box;
-}
-
-/* Small Desktop (1024px to 1199px): 3 cards visible in one row */
-@media (max-width: 1199px) {
-  .service-card,
-  .services-carousel__card {
-    flex: 0 0 calc((100% - 40px) / 3) !important;
-    width: calc((100% - 40px) / 3) !important;
-    max-width: calc((100% - 40px) / 3) !important;
-  }
 }
 
 /* Tablet (768px to 1023px): 2 cards visible in one row */
@@ -2182,47 +1747,46 @@ p { color: var(--body); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 4px;
 }
 
 .services-carousel__dot {
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50% !important;
-  border: none;
-  background: rgba(19, 35, 58, 0.22);
-  padding: 0;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
   cursor: pointer;
   position: relative;
-  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-  min-height: 0;
 }
 
-.services-carousel__dot::before {
+.services-carousel__dot::after {
   content: '';
-  position: absolute;
-  top: -8px;
-  bottom: -8px;
-  left: -8px;
-  right: -8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(19, 35, 58, 0.28);
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
 
-.services-carousel__dot:hover {
+.services-carousel__dot:hover::after {
   background: rgba(168, 120, 26, 0.65);
 }
 
-.services-carousel__dot.active {
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50% !important;
+.services-carousel__dot.active::after {
   background: var(--gold, #A8781A) !important;
-  transform: scale(1.15);
+  transform: scale(1.2);
   box-shadow: 0 1px 4px rgba(168, 120, 26, 0.35);
 }
 
 .services-carousel__dot:focus-visible {
   outline: 2px solid var(--gold, #A8781A);
-  outline-offset: 3px;
+  outline-offset: 2px;
 }
 
 /* Service Card */
@@ -2515,38 +2079,33 @@ p { color: var(--body); }
   outline-offset: 3px !important;
 }
 
-/* 4. SECTION 4: PROCESS (HOW IT WORKS - 4 STEPS) */
+/* 4. SECTION 4: PROCESS (HOW IT WORKS - THREE STEPS) */
 .process {
   position: relative;
   isolation: isolate;
   overflow: hidden;
   padding: clamp(3.2rem, 5.2vw, 4.8rem) 0;
-  background: #13233A;
-  border-top: 1px solid rgba(168,120,26,.28);
-  border-bottom: 1px solid rgba(168,120,26,.28);
+  background: var(--ivory);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 .process::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse at 50% 0%, rgba(55,78,108,.24), transparent 65%);
+  display: none;
 }
 .process .container { position: relative; z-index: 1; }
 .process .section-heading { margin-bottom: clamp(1.8rem, 3.5vw, 2.6rem); }
 .process .section-heading .eyebrow {
-  color: #D4A647 !important;
+  color: var(--gold) !important;
   letter-spacing: .16em;
   margin-bottom: .65rem;
 }
 .process .section-heading h2 {
-  color: #F4EFE4 !important;
+  color: var(--navy) !important;
   font-size: clamp(2.15rem, 3.5vw, 3rem);
   margin-bottom: 0.6rem;
 }
 .process .section-heading p:not(.eyebrow) {
-  color: #D9DFE8 !important;
+  color: var(--body) !important;
   font-size: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem);
   line-height: 1.65;
   margin: 0 auto;
@@ -2882,150 +2441,83 @@ p { color: var(--body); }
   max-width: 430px;
 }
 
-.prep-slider-wrapper {
-  position: relative;
-  width: 100%;
+/* Compact Inline Preparation Checklist (Section 4.G) */
+.prep-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.25rem;
 }
-.prep-slider-arrow {
-  display: none !important;
-}
-
-
-.prep-cards-track {
-  display: flex;
-  gap: 1.25rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 4px 2px 14px;
-  margin: -4px -2px -14px;
-}
-.prep-cards-track::-webkit-scrollbar {
-  display: none;
-}
-
-.prep-card {
-  flex: 0 0 calc((100% - (2 * 1.25rem)) / 3);
-  min-width: 0;
-  scroll-snap-align: start;
+.prep-checklist-item {
   background: #FAF7EE;
   border: 1px solid rgba(220, 208, 190, 0.7);
   border-radius: 12px;
-  overflow: hidden;
+  padding: 1.6rem 1.4rem 1.7rem;
+  box-shadow: 0 4px 16px rgba(19, 35, 58, 0.04);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 16px rgba(19, 35, 58, 0.04);
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
-.prep-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(168, 120, 26, 0.5);
-  box-shadow: 0 12px 28px rgba(19, 35, 58, 0.10);
+.prep-checklist-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(168, 120, 26, 0.45);
+  box-shadow: 0 10px 24px rgba(19, 35, 58, 0.08);
 }
-.prep-card-media {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: #EADEC9;
-}
-.prep-card-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
-}
-.prep-card:hover .prep-card-media img {
-  transform: scale(1.04);
-}
-.prep-card-body {
-  padding: 1.35rem 1.25rem 1.45rem;
+.prep-checklist-header {
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
 }
-.prep-card-body h3 {
+.prep-checklist-num {
+  font-family: var(--serif, "Playfair Display", Georgia, serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--gold, #A8781A);
+  line-height: 1;
+}
+.prep-checklist-badge {
   font-family: var(--sans, "DM Sans", sans-serif);
-  font-size: 1.14rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.34;
-  color: var(--navy);
-  margin: 0 0 0.6rem;
-  min-height: 2.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748B;
+  background: rgba(19, 35, 58, 0.05);
+  padding: 3px 8px;
+  border-radius: 4px;
 }
-.prep-card-body p {
-  font-size: 0.875rem;
-  line-height: 1.55;
+.prep-checklist-title {
+  font-family: var(--sans, "DM Sans", sans-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  color: var(--navy, #13233A);
+  margin: 0 0 0.65rem;
+}
+.prep-checklist-text {
+  font-size: 0.88rem;
+  line-height: 1.58;
   color: #475569;
-  margin: 0 0 1.25rem;
+  margin: 0;
   flex-grow: 1;
 }
-.prep-card-divider {
-  width: 32px;
-  height: 2px;
-  background: var(--gold);
-  margin-bottom: 0.85rem;
-  border-radius: 1px;
+@media (max-width: 980px) {
+  .prep-checklist-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
 }
-.prep-card-link {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--gold);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  transition: gap 0.2s ease, color 0.2s ease;
-  margin-top: auto;
-}
-.prep-card-link:hover {
-  gap: 9px;
-  color: #8A6012;
-}
-
-.prep-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 1.85rem auto 0;
-}
-.prep-dot {
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50% !important;
-  background: rgba(19, 35, 58, 0.22);
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  position: relative;
-  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-}
-.prep-dot::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  bottom: -8px;
-  left: -8px;
-  right: -8px;
-}
-.prep-dot:hover {
-  background: rgba(168, 120, 26, 0.65);
-}
-.prep-dot.active {
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50% !important;
-  background: var(--gold, #A8781A) !important;
-  transform: scale(1.15);
-  box-shadow: 0 1px 4px rgba(168, 120, 26, 0.35);
-}
-.prep-dot:focus-visible {
-  outline: 2px solid var(--gold, #A8781A);
-  outline-offset: 3px;
+@media (max-width: 640px) {
+  .prep-checklist-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .prep-checklist-item {
+    padding: 1.35rem 1.15rem;
+  }
 }
 
 /* 8. SECTION 8: FAQ EDITORIAL PREVIEW (MINIMALIST NUMBERED ACCORDION) - NAVY BLUE THEME */
@@ -3142,7 +2634,7 @@ p { color: var(--body); }
   font-family: var(--sans);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--gold, #A8781A);
+  color: #D6A44F;
   flex: 0 0 28px;
   text-align: left;
   font-variant-numeric: tabular-nums;
@@ -3490,13 +2982,53 @@ p { color: var(--body); }
 }
 
 @media (max-width: 980px) {
-  .hero { min-height: 550px; }
-  .hero-inner { min-height: inherit; }
-  .hero-photo { inset: 0; width: 100%; height: 100%; }
-  .hero-copy { width: 64%; padding: 3rem 0 2.5rem; }
+  .hero { display: flex !important; flex-direction: column !important; height: auto !important; min-height: 0 !important; padding-bottom: 2rem !important; }
+  .hero-photo-wrap {
+    order: 1 !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    inset: auto !important;
+    width: calc(100% - 48px) !important;
+    max-width: 680px !important;
+    height: auto !important;
+    margin: 1.5rem auto 0 !important;
+    display: block !important;
+    z-index: 1 !important;
+    pointer-events: auto !important;
+  }
+  .hero-photo {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+    object-position: 57% 54% !important;
+    margin: 0 !important;
+    border-radius: 10px !important;
+    display: block !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+  .hero-inner {
+    order: 2 !important;
+    width: calc(100% - 48px) !important;
+    max-width: 680px !important;
+    flex: 0 0 auto !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    min-height: 0 !important;
+    display: block !important;
+  }
+  .hero-copy { width: 100% !important; max-width: none !important; padding: 1.5rem 0 0 !important; }
   .hero h1 { font-size: clamp(2.45rem, 5vw, 3.25rem); }
-  .hero-copy > p:not(.eyebrow) { font-size: 1rem; max-width: 500px; }
-  .prep-card { flex: 0 0 calc((100% - 1.25rem) / 2) !important; }
+  .hero-copy > p:not(.eyebrow) { font-size: 1rem; max-width: 620px; }
   .about { grid-template-columns: minmax(0, 1fr); padding: 2.5rem 0; row-gap: 1.5rem; width: calc(100% - 48px); }
   .about-photo { width: 100%; max-width: min(calc(100% - 24px), 520px); height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center center; margin: 0 auto; }
   .about-copy { max-width: 680px; margin: 0 auto; padding: 1.5rem 0; }
@@ -3720,12 +3252,6 @@ p { color: var(--body); }
     white-space: normal !important;
     word-break: normal !important;
     box-sizing: border-box !important;
-  }
-  .prep-card {
-    flex: 0 0 85% !important;
-  }
-  .prep-slider-arrow {
-    display: none !important;
   }
   .card-dual-actions {
     flex-direction: column !important;

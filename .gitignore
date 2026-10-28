@@ -20,9 +20,30 @@ Thumbs.db
 # Scratch and test artifacts
 scratch/
 .lighthouseci/
+tests/screenshots/
+tests/screenshots_*/
+tests/*.png
+.planning/screenshots/
+*.png_*.jpg
+*.zip
+
+# Root test/QA screenshots and scratch captures
+screenshot_*.png
+scratch_*.png
+whatsapp (1).png
+
+# Temporary audit outputs
+audit/
+audit_results.json
+SEO-REPORT.html
+
+# Archived legacy folders (backed up in BRNDNUR-ARCHIVES)
+78 IMAGES/
+_backup_static_v1/
 
 # Python cache
 __pycache__/
 *.py[cod]
 *$py.class
+
 

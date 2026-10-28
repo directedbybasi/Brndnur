@@ -17,18 +17,14 @@ const faqSpecificQueryUrl = buildWhatsAppUrl({
   pageName: 'Frequently Asked Questions',
   sectionName: 'Search Fallback CTA',
   enquiryType: 'Specific FAQ Clarification',
-  topic: 'I have reviewed the frequently asked questions on your website but have a specific query not covered in the list.',
-  details: 'My specific question is: [Please describe your question]',
-  callToAction: 'Could you please provide clarification on this topic?'
+  message: 'Hi BRNDNUR, I was reading your frequently asked questions and have a specific question about trademark filing or business registration. Could you please help clarify this requirement and explain the next steps?'
 });
 
 const faqDiscussionUrl = buildWhatsAppUrl({
   pageName: 'Frequently Asked Questions',
   sectionName: 'Closing Advisory Band',
   enquiryType: 'Advisory Consultation',
-  topic: 'I have reviewed your FAQs and would like to discuss my trademark and business registration requirements directly with an advisor.',
-  details: 'Service of interest: [e.g. Trademark, GST, Food Licensing, Business Setup]',
-  callToAction: 'Could you please connect me with an advisory coordinator to assist with next steps?'
+  message: 'Hi BRNDNUR, I have reviewed your FAQs and would like to discuss my trademark or business registration requirement directly with an advisor. Could you please guide me on how to proceed?'
 });
 
 // 30 Authoritative, verified FAQ items
@@ -245,7 +241,9 @@ const customFaqSchema = {
           <p class="faq-page-desc">
             Find clear answers about trademark registration, government fees, MSME concessions, intellectual property protection, business registrations, packages, and the application process in India.
           </p>
-          <HeroBenefitStrip items={faqTrustBadges} className="faq-trust-strip" />
+          <div class="faq-trust-wrapper">
+            <HeroBenefitStrip items={faqTrustBadges} className="faq-trust-strip" centered={true} />
+          </div>
         </div>
 
         <!-- 4. Search and Discovery Field -->
@@ -490,10 +488,22 @@ const customFaqSchema = {
   margin: 0 auto;
 }
 
-.faq-trust-strip {
+.faq-trust-wrapper {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   margin: 1.35rem auto 0;
-  max-width: 760px;
+}
+
+.faq-trust-wrapper :global(.trust-row),
+:global(.faq-trust-strip) {
+  justify-content: center !important;
+  margin-top: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: fit-content !important;
+  max-width: 100% !important;
 }
 
 /* Search Box Area */
@@ -625,7 +635,7 @@ const customFaqSchema = {
   font-family: var(--sans, 'DM Sans', sans-serif);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--gold, #A8781A);
+  color: #D6A44F;
   flex: 0 0 32px;
   text-align: left;
   font-variant-numeric: tabular-nums;
@@ -804,9 +814,14 @@ const customFaqSchema = {
     line-height: 1.55;
     padding: 0 4px;
   }
-  .faq-trust-strip {
-    margin-top: 1.25rem;
-    max-width: 100%;
+  .faq-trust-wrapper {
+    margin-top: 1.15rem;
+  }
+  .faq-trust-wrapper :global(.trust-row),
+  :global(.faq-trust-strip) {
+    max-width: 380px !important;
+    width: 100% !important;
+    margin-inline: auto !important;
   }
   .faq-search-wrap {
     margin: 1.35rem auto 1.85rem !important;

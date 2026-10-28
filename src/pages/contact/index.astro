@@ -11,26 +11,21 @@ const contactHeroWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'Contact Page',
   sectionName: 'Hero Section',
   enquiryType: 'General Enquiry',
-  topic: 'I visited your contact page and would like to discuss my business requirements.',
-  callToAction: 'Could you please help me identify the appropriate service and explain how to proceed?'
+  message: 'Hi BRNDNUR, I visited your contact page and would like to discuss my brand protection or business registration requirement directly with an advisor. Could you please guide me on how to proceed?'
 });
 
 const contactChannelWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'Contact Page',
   sectionName: 'Direct WhatsApp Channel Card',
   enquiryType: 'Direct WhatsApp Consultation',
-  topic: 'I am reaching out via your direct WhatsApp consultation channel on the contact page.',
-  details: 'My enquiry is regarding: [Please describe your requirement or brand name]',
-  callToAction: 'Could you please assist me with the next steps?'
+  message: 'Hi BRNDNUR, I am reaching out through your direct WhatsApp channel to enquire about trademark registration and business advisory services. Could you please explain how we can get started?'
 });
 
 const contactClosingWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'Contact Page',
   sectionName: 'Closing Consultation Section',
   enquiryType: 'Immediate Advisory Consultation',
-  topic: 'I visited your contact page and would like an immediate WhatsApp consultation regarding brand protection.',
-  details: 'My brand name / requirement: [Please describe]',
-  callToAction: 'Could you please connect me with an advisory coordinator?'
+  message: 'Hi BRNDNUR, I would like an immediate WhatsApp consultation regarding brand protection or business registration. Could you please review my requirement and guide me towards the suitable service, fees, and next steps?'
 });
 ---
 
@@ -280,17 +275,9 @@ const contactClosingWhatsAppUrl = buildWhatsAppUrl({
       const service = document.getElementById('client-service').value;
       const details = document.getElementById('client-details').value;
 
+      const notesLine = details ? ` Requirement notes: ${details}.` : '';
       const message = encodeURIComponent(
-        `Hello BRNDNUR Team,\n\n` +
-        `I visited your contact page and filled out the consultation form.\n\n` +
-        `Client details:\n` +
-        `• Name / Enterprise: ${name}\n` +
-        `• Contact Phone: ${phone}\n` +
-        `• Service Required: ${service}\n` +
-        (details ? `• Brand / Specific Notes: ${details}\n\n` : '\n') +
-        `Could you please review my enquiry and advise on the next steps?\n\n` +
-        `Website source: Contact Page — Quick Inquiry Form\n` +
-        `Enquiry type: Direct Consultation Request`
+        `Hi BRNDNUR, my name is ${name}. I am contacting you regarding ${service} for my business.${notesLine} Could you please review my enquiry, explain the applicable documents and fees, and advise on the next steps?`
       );
 
       window.open(`https://wa.me/919048188899?text=${message}`, '_blank');

@@ -1,37 +1,59 @@
 /**
  * BRNDNUR Advisory LLP — Context-Aware WhatsApp Enquiry System
- * Generates structured, professional, context-specific WhatsApp click-to-chat URLs.
+ * Generates natural, professional, context-specific WhatsApp click-to-chat URLs.
  */
 
 export const WHATSAPP_PHONE = '919048188899';
 
 export interface WhatsAppMessageOptions {
-  pageName: string;
-  sectionName: string;
-  enquiryType: string;
+  pageName?: string;
+  sectionName?: string;
+  enquiryType?: string;
   greeting?: string;
-  topic: string;
+  topic?: string;
   details?: string;
   callToAction?: string;
   phone?: string;
+  message?: string;
+  directMessage?: string;
 }
 
 /**
  * Builds the human-readable multi-line WhatsApp message.
+ * Strict conversion quality:
+ * - 20–50 words (aims for 25–35 words)
+ * - Professional, polite, customer perspective
+ * - No bracketed placeholders ([Please enter...])
+ * - No robotic metadata (Website source: ..., Enquiry type: ...)
  */
 export function buildWhatsAppMessage(options: WhatsAppMessageOptions): string {
-  const greeting = options.greeting || 'Hello BRNDNUR Team,';
-  const cta = options.callToAction || 'Could you please guide me on the suitable service for my requirements and the next steps?';
-
-  const parts: string[] = [greeting, '', options.topic];
-
-  if (options.details && options.details.trim().length > 0) {
-    parts.push('', options.details.trim());
+  if (options.message && options.message.trim().length > 0) {
+    return options.message.trim();
+  }
+  if (options.directMessage && options.directMessage.trim().length > 0) {
+    return options.directMessage.trim();
   }
 
-  parts.push('', cta);
-  parts.push('', `Website source: ${options.pageName} — ${options.sectionName}`);
-  parts.push(`Enquiry type: ${options.enquiryType}`);
+  const greeting = options.greeting || 'Hi BRNDNUR,';
+  const cta = options.callToAction || 'Could you please guide me on the suitable service for my requirements and the next steps?';
+
+  const parts: string[] = [greeting];
+
+  if (options.topic && options.topic.trim().length > 0) {
+    parts.push('', options.topic.trim());
+  }
+
+  if (options.details && options.details.trim().length > 0) {
+    // Strip any bracketed placeholders if present
+    const cleanDetails = options.details.trim().replace(/\[.*?\]/g, '').trim();
+    if (cleanDetails.length > 0) {
+      parts.push('', cleanDetails);
+    }
+  }
+
+  if (cta && cta.trim().length > 0) {
+    parts.push('', cta.trim());
+  }
 
   return parts.join('\n');
 }
@@ -57,8 +79,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Trademark Registration Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'General Trademark Assistance',
-        topic: 'I am currently viewing your Trademark Registration page and would like assistance with my enquiry.',
-        callToAction: 'Could you please guide me on the process and suitable next steps?'
+        message: 'Hi BRNDNUR, I am looking into trademark registration for my brand. Could you please guide me on conducting a clearance search, required documents, government filing fees, and the overall registration process?'
       });
 
     case '/brand-name-search':
@@ -66,9 +87,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Brand Name Search Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Trademark Clearance Search',
-        topic: 'I am currently viewing your Brand Name Search page and would like assistance checking trademark availability for my brand.',
-        details: 'Proposed brand name: [Please enter your brand name]',
-        callToAction: 'Could you please guide me on the availability assessment and next steps?'
+        message: 'Hi BRNDNUR, I would like to check whether my proposed business name may conflict with existing trademarks. Please guide me on the name-search process, the information you need, and the available options before I proceed with registration.'
       });
 
     case '/trademark-classes':
@@ -76,9 +95,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Trademark Classes Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Trademark Class Selection',
-        topic: 'I am currently viewing your Trademark Classes page and need assistance identifying the appropriate class or classes for my business.',
-        details: 'Business or brand name: [Please enter]\nProducts or services: [Please describe]',
-        callToAction: 'Could you please guide me on the suitable classes and registration process?'
+        message: 'Hi BRNDNUR, I need guidance on selecting the correct trademark classes for my business goods and services. Could you please explain the classification under NICE guidelines, multi-class filing fees, and the next steps?'
       });
 
     case '/wordmark-registration':
@@ -86,9 +103,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Wordmark Registration Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Wordmark Registration',
-        topic: 'I am currently viewing your Wordmark Registration page and would like assistance protecting my brand name as a wordmark.',
-        details: 'Proposed wordmark: [Please enter your brand name]',
-        callToAction: 'Could you please explain the wordmark filing process, government fees, and next steps?'
+        message: 'Hi BRNDNUR, I am interested in wordmark registration for my brand. Could you please guide me through the name availability check, required documents, applicable government fees, professional service charges, and the next steps for applying?'
       });
 
     case '/logo-trademark-registration':
@@ -96,9 +111,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Logo Trademark Registration Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Logo & Device Mark Protection',
-        topic: 'I am currently viewing your Logo Trademark Registration page and would like guidance on protecting my logo or device mark.',
-        details: 'Brand / logo concept: [Please describe your logo]',
-        callToAction: 'Could you please explain how to submit my logo for diagnostic review and the applicable fees?'
+        message: 'Hi BRNDNUR, I would like to understand the registration process for my brand logo. Could you please explain the required artwork, relevant trademark class, application documents, applicable fees, and the next steps for protecting my visual brand identity?'
       });
 
     case '/trademark-renewal':
@@ -106,9 +119,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Trademark Renewal Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Trademark Renewal & Maintenance',
-        topic: 'I am currently viewing your Trademark Renewal page and need assistance checking renewal dates or filing for renewal.',
-        details: 'Trademark / Application Number: [Please enter if known]',
-        callToAction: 'Could you please verify my renewal status and advise on statutory procedures?'
+        message: 'Hi BRNDNUR, I need guidance on renewing my trademark registration. Could you please help me understand the renewal timeline, information and documents required, applicable government fees, professional charges, and the next steps based on my trademark\'s current status?'
       });
 
     case '/trademark-monitoring':
@@ -116,8 +127,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Trademark Monitoring Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Brand Watch Surveillance',
-        topic: 'I am currently viewing your Trademark Monitoring page and would like to learn more about Brand Watch surveillance.',
-        callToAction: 'Could you please share monitoring scope, weekly journal surveillance details, and pricing?'
+        message: 'Hi BRNDNUR, I would like to enquire about Brand Watch trademark surveillance for my brand. Could you please explain your Trade Marks Journal monitoring process, weekly conflict alerts, subscription terms, and how to get started?'
       });
 
     case '/gst-registration':
@@ -125,9 +135,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'GST Registration Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'GST Registration',
-        topic: 'I am currently viewing your GST Registration page and would like assistance with GST registration for my business.',
-        details: 'Nature of business: [e.g. Retail, Trading, Services, Manufacturing]',
-        callToAction: 'Could you please explain the applicable requirements, documents, service charges, and next steps?'
+        message: 'Hi BRNDNUR, I am enquiring about GST registration for my business. Could you please explain the applicable eligibility requirements, documents needed, service charges, government fees if applicable, and the steps required to complete the registration?'
       });
 
     case '/udyam-msme-registration':
@@ -135,9 +143,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Udyam MSME Registration Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Udyam MSME Registration',
-        topic: 'I am currently viewing your Udyam MSME Registration page and need assistance securing MSME registration.',
-        details: 'Business enterprise type: [e.g. Proprietorship, Partnership, LLP, Pvt Ltd]',
-        callToAction: 'Could you please explain the required documents, 50% trademark fee discount eligibility, and next steps?'
+        message: 'Hi BRNDNUR, I would like assistance with Udyam MSME registration for my enterprise. Could you please explain the eligibility requirements, required documentation, the 50% statutory trademark fee concession, and the next steps?'
       });
 
     case '/fssai-registration':
@@ -145,9 +151,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'FSSAI Registration Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'FSSAI Food Business Licensing',
-        topic: 'I am currently viewing your FSSAI Registration page and need assistance with food business registration or licensing.',
-        details: 'Food business category: [e.g. Restaurant, Packaged Food, Cloud Kitchen, Distributor]',
-        callToAction: 'Could you please guide me on the applicable license type, required documents, and next steps?'
+        message: 'Hi BRNDNUR, I am seeking guidance on FSSAI registration and licensing for my food business. Could you please advise me on basic registration versus state license requirements, necessary documents, fee structures, and the application timeline?'
       });
 
     case '/business-setup':
@@ -155,9 +159,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Business Setup Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Business Setup Advisory',
-        topic: 'I am currently viewing your Business Setup Advisory page and would like assistance structuring and registering my business in Kerala.',
-        details: 'Proposed business model: [Please describe briefly]',
-        callToAction: 'Could you please guide me on suitable entity forms, required licenses, and the advisory roadmap?'
+        message: 'Hi BRNDNUR, I would like advisory assistance with setting up a new business entity in Kerala. Could you please guide me on choosing between a proprietorship, partnership, LLP, or private limited company, along with statutory registrations and estimated timelines?'
       });
 
     case '/services':
@@ -165,9 +167,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Services Hub',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Services Portfolio Enquiry',
-        topic: 'I am reviewing your complete services portfolio and would like guidance on the most suitable service package for my enterprise.',
-        details: 'My primary interest is: [e.g. Trademark, GST, Food Licensing, Startup Setup]',
-        callToAction: 'Could you please advise me on how to get started?'
+        message: 'Hi BRNDNUR, I am reviewing your advisory services portfolio and would like guidance on the most suitable service for my enterprise. Could you please advise on preliminary consultation steps, professional charges, and how we can get started?'
       });
 
     case '/packages':
@@ -175,9 +175,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Packages & Pricing Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Package Pricing & Scope',
-        topic: 'I am viewing your Packages & Pricing page and would like assistance selecting the right package for my business.',
-        details: 'Package of interest: [e.g. Brand Starter, Trademark, Food Brand, Gulf Return]',
-        callToAction: 'Could you please share current package inclusions, government fees, and the onboarding process?'
+        message: 'Hi BRNDNUR, I am reviewing your fixed-fee packages and would like help selecting the right package for my business. Could you please share the current scope of inclusions, statutory fee breakdown, and onboarding procedure?'
       });
 
     case '/packages/individual-msme':
@@ -185,9 +183,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Packages — Individual & MSME',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Individual & MSME Package',
-        topic: 'I am reviewing the Individual & MSME Trademark Package and would like to request a formal quotation.',
-        details: 'Business / Brand name: [Please enter]',
-        callToAction: 'Could you please share the complete fee breakdown, government fee concessions, and documents needed?'
+        message: 'Hi BRNDNUR, I would like to enquire about your Individual and MSME Trademark Package. Could you please explain the package inclusions, government fee concession eligibility, documentation needed, and the steps to begin my filing?'
       });
 
     case '/packages/company-llp':
@@ -195,9 +191,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Packages — Company & LLP',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Company & LLP Package',
-        topic: 'I am reviewing the Company & LLP Trademark Package and would like to request a corporate quotation.',
-        details: 'Company / LLP Name: [Please enter]',
-        callToAction: 'Could you please share the corporate scope, multi-class support, statutory fee schedule, and next steps?'
+        message: 'Hi BRNDNUR, I am enquiring about your Company and LLP Trademark Package. Could you please share the corporate filing scope, statutory fee schedules, multi-class support options, and the onboarding process for corporate entities?'
       });
 
     case '/packages/food-brand':
@@ -205,9 +199,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Packages — Food Brand Package',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Food Brand Setup & Licensing',
-        topic: 'I am reviewing the Food Brand Package and would like assistance with integrated Trademark and FSSAI licensing.',
-        details: 'Food product / brand concept: [Please describe]',
-        callToAction: 'Could you please share the complete package scope, statutory fees, and timelines?'
+        message: 'Hi BRNDNUR, I am interested in your integrated Food Brand Package combining trademark registration and FSSAI licensing. Could you please explain the package deliverables, statutory fees, required documents, and expected processing timelines?'
       });
 
     case '/packages/gulf-return-business':
@@ -215,9 +207,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Packages — Gulf Return Business',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Gulf Return NRI Business Setup',
-        topic: 'I am reviewing the Gulf-Return Business Package and would like to discuss launching a commercial venture in Kerala.',
-        details: 'Current location / Gulf country: [e.g. UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain]',
-        callToAction: 'Could you please arrange a remote advisory consultation to discuss entity setup and brand clearance?'
+        message: 'Hi BRNDNUR, I am an NRI planning to establish a commercial venture in Kerala and would like guidance on your Gulf Return Business Package. Could you please explain your remote advisory setup, entity formation, and brand protection roadmaps?'
       });
 
     case '/how-it-works':
@@ -225,8 +215,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'How It Works Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Service Process Guidance',
-        topic: 'I have reviewed your 4-step advisory process and would like guidance on getting started with my enquiry.',
-        callToAction: 'Could you please explain the first step and the initial information I should prepare?'
+        message: 'Hi BRNDNUR, I have reviewed your 4-stage advisory workflow and would like to get started with my business enquiry. Could you please explain the initial consultation step and what specific information I should have ready?'
       });
 
     case '/faqs':
@@ -234,9 +223,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Frequently Asked Questions',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'FAQ Follow-up Enquiry',
-        topic: 'I have reviewed the frequently asked questions on your website but need some additional clarification.',
-        details: 'My question or requirement is: [Please describe your question]',
-        callToAction: 'Could you please provide clarification on this requirement?'
+        message: 'Hi BRNDNUR, I have reviewed your frequently asked questions but have a specific query regarding trademark registration and business setup. Could you please connect me with an advisor to discuss my requirement?'
       });
 
     case '/contact':
@@ -244,8 +231,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'Contact Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'General Advisory Enquiry',
-        topic: 'I visited your contact page and would like to discuss my business requirements directly with an advisor.',
-        callToAction: 'Could you please help me identify the appropriate service and explain how to proceed?'
+        message: 'Hi BRNDNUR, I visited your contact page and would like to speak directly with an advisor regarding my business registration or brand protection requirement. Could you please advise on how to proceed?'
       });
 
     case '/about':
@@ -253,8 +239,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: 'About BRNDNUR Page',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'Advisory Consultation',
-        topic: 'I read about BRNDNUR Advisory LLP and would like to discuss brand protection and statutory registrations.',
-        callToAction: 'Could you please explain how your advisory practice assists businesses like mine?'
+        message: 'Hi BRNDNUR, I read about BRNDNUR Advisory LLP and would like to discuss brand protection and statutory registrations. Could you please explain how your advisory practice assists businesses like mine and the next steps?'
       });
 
     default:
@@ -264,9 +249,7 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
           pageName: pageTitle || 'Resources Hub',
           sectionName: 'Floating WhatsApp Button',
           enquiryType: 'Resource Advisory Guidance',
-          topic: `I am currently reading ${title} on your website and would like guidance on this topic for my business.`,
-          details: 'My specific requirement is: [Please describe briefly]',
-          callToAction: 'Could you please assist me with the advisory process and next steps?'
+          message: `Hi BRNDNUR, I am reading ${title} on your website and would like guidance on this topic for my business. Could you please explain the applicable requirements, advisory process, and next steps?`
         });
       }
 
@@ -274,14 +257,13 @@ export function getFloatingWhatsAppUrl(currentPath: string = '/', pageTitle?: st
         pageName: pageTitle || 'Website',
         sectionName: 'Floating WhatsApp Button',
         enquiryType: 'General Consultation',
-        topic: 'I visited your website and would like to enquire about your trademark and business registration services.',
-        callToAction: 'Could you please guide me on the suitable service for my requirements and the next steps?'
+        message: 'Hi BRNDNUR, I would like to discuss a business registration or brand-protection requirement. Could you please understand my requirement and guide me towards the relevant service, required information, applicable fees, and the next steps?'
       });
   }
 }
 
 /**
- * Resolves context-aware WhatsApp URL for the Navigation Header CTA ("Get in Touch").
+ * Resolves context-aware WhatsApp URL for the Navigation Header CTA ("Free Name Check").
  */
 export function getHeaderWhatsAppUrl(currentPath: string = '/'): string {
   const cleanPath = currentPath.replace(/\/+$/, '') || '/';
@@ -294,14 +276,15 @@ export function getHeaderWhatsAppUrl(currentPath: string = '/'): string {
     case '/logo-trademark-registration':
     case '/trademark-renewal':
     case '/trademark-monitoring':
+    case '/trademark-renewal-monitoring':
       return buildWhatsAppUrl({
         pageName: 'Site Header',
         sectionName: 'Main Navigation CTA',
         enquiryType: 'Trademark Advisory Enquiry',
-        topic: 'I am browsing your brand and trademark protection services and would like to speak with an advisor.',
-        callToAction: 'Could you please guide me on trademark filing procedures, class selection, and professional charges?'
+        message: 'Hi BRNDNUR, I would like to request a free preliminary brand name check to verify whether my proposed name conflicts with existing trademarks. Could you please guide me on the search process and next steps?'
       });
 
+    case '/business-registration':
     case '/gst-registration':
     case '/udyam-msme-registration':
     case '/fssai-registration':
@@ -310,8 +293,7 @@ export function getHeaderWhatsAppUrl(currentPath: string = '/'): string {
         pageName: 'Site Header',
         sectionName: 'Main Navigation CTA',
         enquiryType: 'Business Registration Enquiry',
-        topic: 'I am browsing your business registration services and would like assistance with statutory licensing.',
-        callToAction: 'Could you please explain the document requirements, government timelines, and next steps?'
+        message: 'Hi BRNDNUR, I am browsing your business registration services and would like guidance on GST, MSME, or FSSAI licensing for my business. Could you please explain the required documents, charges, and next steps?'
       });
 
     case '/packages':
@@ -323,8 +305,7 @@ export function getHeaderWhatsAppUrl(currentPath: string = '/'): string {
         pageName: 'Site Header',
         sectionName: 'Main Navigation CTA',
         enquiryType: 'Package Consultation',
-        topic: 'I am reviewing your service packages and would like to discuss a customized scope for my business.',
-        callToAction: 'Could you please share current package pricing, government fee concessions, and onboarding steps?'
+        message: 'Hi BRNDNUR, I am reviewing your fixed-fee service packages and would like assistance selecting the right package for my enterprise. Could you please share package details, government fee concessions, and next steps?'
       });
 
     default:
@@ -332,8 +313,7 @@ export function getHeaderWhatsAppUrl(currentPath: string = '/'): string {
         pageName: 'Site Header',
         sectionName: 'Main Navigation CTA',
         enquiryType: 'General Advisory Consultation',
-        topic: 'I visited your website and would like to get in touch regarding your trademark and business registration services.',
-        callToAction: 'Could you please guide me on the suitable service for my requirements and how to proceed?'
+        message: 'Hi BRNDNUR, I would like to request a free preliminary brand name check for my business. Could you please guide me through the availability check, required details, and the next steps for protecting my brand?'
       });
   }
 }
@@ -346,8 +326,6 @@ export function getFooterWhatsAppUrl(): string {
     pageName: 'Website Footer',
     sectionName: 'Direct WhatsApp Contact',
     enquiryType: 'General Enquiry',
-    topic: 'I visited your website and would like more information about your advisory services.',
-    details: 'My enquiry is regarding: [Please describe your requirement]',
-    callToAction: 'Could you please connect me with an advisory coordinator to discuss next steps?'
+    message: 'Hi BRNDNUR, I visited your website and would like to speak with an advisor regarding brand protection and business registration. Could you please guide me towards the relevant service, applicable fees, and the next steps?'
   });
 }

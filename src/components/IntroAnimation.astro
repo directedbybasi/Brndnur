@@ -26,13 +26,12 @@
         <source srcset="/assets/brndnur-logo-transparent.webp" type="image/webp" />
         <img
           id="bn-intro-logo-img"
-          src="/assets/brndnur-logo-transparent.png"
+          src="/assets/brndnur-logo-transparent.webp"
           alt="BRNDNUR Advisory LLP"
           width="2170"
           height="725"
-          fetchpriority="high"
           loading="eager"
-          decoding="sync"
+          decoding="async"
           class="bn-intro-logo"
         />
       </picture>
@@ -116,6 +115,14 @@
     display: none !important;
     visibility: hidden !important;
     pointer-events: none !important;
+  }
+
+  @media print {
+    .bn-intro-overlay,
+    #bn-intro-overlay {
+      display: none !important;
+      visibility: hidden !important;
+    }
   }
 
   /* Ambient radial gradient for a warm, luxurious depth */
@@ -273,7 +280,9 @@
       #A8781A 85%,
       transparent 100%
     );
-    left: -70px;
+    left: 0;
+    transform: translateX(-70px);
+    will-change: transform, opacity;
     animation: bnLightSweep 0.9s cubic-bezier(0.4, 0, 0.2, 1) 1.05s forwards;
   }
 
@@ -369,10 +378,10 @@
     }
   }
 
-  /* Soft gold light sweep across divider */
+  /* Soft gold light sweep across divider (GPU Composited with transform) */
   @keyframes bnLightSweep {
     0% {
-      left: -70px;
+      transform: translateX(-70px);
       opacity: 0;
     }
     20% {
@@ -382,7 +391,7 @@
       opacity: 1;
     }
     100% {
-      left: 200px;
+      transform: translateX(200px);
       opacity: 0;
     }
   }
@@ -408,7 +417,7 @@
   }
 
   /* ==========================================================================
-     ACCESSIBILITY: PREFERS REDUCED MOTION
+     ACCESSIBILITY & RESPONSIVE: REDUCED MOTION & MOBILE BYPASS
      ========================================================================== */
   @media (prefers-reduced-motion: reduce) {
     .bn-intro-overlay {
@@ -420,17 +429,31 @@
       display: none !important;
     }
   }
+
+  @media (max-width: 768px) {
+    .bn-intro-overlay {
+      display: none !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+    :global(html.bn-show-intro) .bn-intro-overlay {
+      display: none !important;
+    }
+  }
 </style>
 
 <script is:inline>
   (function() {
     // Check if reduced motion is requested
     var prefersReduced = false;
+    var isMobile = false;
     try {
       prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      isMobile = window.matchMedia('(max-width: 768px)').matches;
     } catch(e) {}
 
-    if (prefersReduced) {
+    var isReplay = window.location.search.indexOf('replay=') !== -1;
+    if (prefersReduced || (isMobile && !isReplay)) {
       return;
     }
 

@@ -14,18 +14,28 @@ const tmHeroWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'Trademark Registration',
   sectionName: 'Hero Section',
   enquiryType: 'Trademark Registration Advisory',
-  topic: 'I am visiting your Trademark Registration page and would like to speak with an advisor regarding brand protection.',
-  details: 'Proposed brand name: [Please enter your brand name if known]',
-  callToAction: 'Could you please explain the registration process, required documents, applicable government fees, and professional charges?'
+  message: 'Hi BRNDNUR, I am interested in trademark registration for my brand. Could you please guide me through the name availability search, required application documents, applicable government fees, and the next steps for filing with IP India?'
+});
+
+const wordmarkWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'Trademark Registration',
+  sectionName: 'Wordmark Section',
+  enquiryType: 'Wordmark Registration',
+  message: 'Hi BRNDNUR, I am interested in wordmark registration for my brand. Could you please guide me through the name availability check, required documents, applicable government fees, professional service charges, and the next steps for applying?'
+});
+
+const logoWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'Trademark Registration',
+  sectionName: 'Logo & Device Mark Section',
+  enquiryType: 'Logo & Device Mark Protection',
+  message: 'Hi BRNDNUR, I would like to understand the registration process for my brand logo. Could you please explain the required artwork, relevant trademark class, application documents, applicable fees, and the next steps for protecting my visual brand identity?'
 });
 
 const tmClosingWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'Trademark Registration',
   sectionName: 'Closing CTA Section',
   enquiryType: 'Trademark Search Request',
-  topic: 'I would like to request a preliminary trademark search for my proposed brand name before filing Form TM-A.',
-  details: 'Proposed brand name: [Please enter your brand name]\nProducts or services: [Please describe your goods or services]',
-  callToAction: 'Could you please check availability on the Trade Marks Registry database and guide me on next steps?'
+  message: 'Hi BRNDNUR, I would like to request a preliminary trademark clearance search for my proposed brand name before filing Form TM-A. Could you please guide me on the database search, information required, and next steps?'
 });
 ---
 
@@ -169,7 +179,111 @@ const tmClosingWhatsAppUrl = buildWhatsAppUrl({
 />
 <section class="section benefits" id="why"><div class="container benefits-grid"><div class="rounded-photo benefit-photo"><img src="/trademark-registration/assets/tm-benefits-foundation.webp" alt="Trademark registration certificate with gold scales of justice and legal books" width="1303" height="1086" loading="lazy" decoding="async"></div><div class="benefit-content"><p class="eyebrow">Why Trademark Registration Matters</p><h2 class="section-title">Give Your Brand a<br>Stronger Foundation.</h2><p class="lead">A trademark is more than a name or logo. It represents your reputation, helps build trust and protects your business identity in the market.</p><div class="feature-grid"><article class="feature"><div class="feature-icon" aria-hidden="true">◎</div><h3>Unique Identity</h3><p>Helps distinguish your brand from others in the market.</p></article><article class="feature"><div class="feature-icon" aria-hidden="true">♢</div><h3>Legal Protection</h3><p>Provides legal rights against unauthorised use, where applicable.</p></article><article class="feature"><div class="feature-icon" aria-hidden="true">↗</div><h3>Business Credibility</h3><p>Builds trust and value for your business over time.</p></article></div></div></div></section>
 <section class="section" id="support"><div class="container support-grid"><div class="support-copy"><p class="eyebrow">What We Help You With</p><h2 class="section-title">Trademark Support,<br>Step by Step.</h2><p class="lead">We provide end-to-end guidance for trademark registration in India, helping you understand each stage of the process.</p><ul class="check-list"><li><span class="check">✓</span><span><a href="/wordmark-registration/" style="color:inherit;text-decoration:none;"><strong>Wordmark and logo application guidance &rarr;</strong></a></span></li><li><span class="check">✓</span><span><a href="/brand-name-search/" style="color:inherit;text-decoration:none;"><strong>Preliminary trademark search &rarr;</strong></a></span></li><li><span class="check">✓</span><span><a href="/trademark-classes/" style="color:inherit;text-decoration:none;"><strong>Class identification guidance &rarr;</strong></a></span></li><li><span class="check">✓</span><span>Application documentation support</span></li><li><span class="check">✓</span><span>Examination and objection guidance, where applicable</span></li><li><span class="check">✓</span><span><a href="/trademark-renewal/" style="color:inherit;text-decoration:none;"><strong>Renewal and ongoing support &rarr;</strong></a></span></li></ul></div><div class="rounded-photo support-photo"><img src="/trademark-registration/assets/tm-support-steps.webp" alt="Trademark registration folio, legal books, gold seal and pen on a sunlit desk" width="1448" height="965" loading="lazy" decoding="async"></div></div></section>
-<section class="section process" id="process"><div class="container process-grid"><div class="process-photo"><img src="/trademark-registration/assets/tm-process-path.webp" alt="Trademark registration document with legal books, gavel and scales of justice" width="905" height="1086" loading="lazy" decoding="async"></div><div class="process-copy"><p class="eyebrow">The Registration Process</p><h2 class="section-title">A Clearer Path to<br>Trademark Registration.</h2><p class="lead">We help you understand the key steps and what may be required before moving forward.</p><div class="steps"><article class="step"><div class="step-number">01</div><div><h3>Share Your Brand Details</h3><p>Provide your brand name, logo and basic business information.</p></div></article><article class="step"><div class="step-number">02</div><div><h3>Review Search Findings</h3><p>We conduct a preliminary search and explain the results.</p></div></article><article class="step"><div class="step-number">03</div><div><h3>Discuss Classes &amp; Requirements</h3><p>We help you identify relevant classes and documentation.</p></div></article><article class="step"><div class="step-number">04</div><div><h3>File the Application</h3><p>The application is prepared and submitted through the appropriate process.</p></div></article><article class="step"><div class="step-number">05</div><div><h3>Track and Respond</h3><p>We keep you informed and guide you through examination updates, objections or other requirements, where applicable.</p></div></article></div></div></div></section>
+<section class="section process" id="process"><div id="filing" style="position: relative; top: -100px;"></div><div class="container process-grid"><div class="process-photo"><img src="/trademark-registration/assets/tm-process-path.webp" alt="Trademark registration document with legal books, gavel and scales of justice" width="905" height="1086" loading="lazy" decoding="async"></div><div class="process-copy"><p class="eyebrow">The Registration Process</p><h2 class="section-title">A Clearer Path to<br>Trademark Registration.</h2><p class="lead">We help you understand the key steps and what may be required before moving forward.</p><div class="steps"><article class="step"><div class="step-number">01</div><div><h3>Share Your Brand Details</h3><p>Provide your brand name, logo and basic business information.</p></div></article><article class="step"><div class="step-number">02</div><div><h3>Review Search Findings</h3><p>We conduct a preliminary search and explain the results.</p></div></article><article class="step"><div class="step-number">03</div><div><h3>Discuss Classes &amp; Requirements</h3><p>We help you identify relevant classes and documentation.</p></div></article><article class="step"><div class="step-number">04</div><div><h3>File the Application</h3><p>The application is prepared and submitted through the appropriate process.</p></div></article><article class="step"><div class="step-number">05</div><div><h3>Track and Respond</h3><p>We keep you informed and guide you through examination updates, objections or other requirements, where applicable.</p></div></article></div></div></div></section>
+
+<!-- Wordmark & Logo Mark Distinction Section -->
+<section class="section marks-distinction-section" id="marks-distinction">
+  <div class="container marks-distinction-container">
+    <div class="marks-distinction-grid">
+      <!-- Left Column: Brand Trademark Specimen Image -->
+      <div class="marks-photo-col">
+        <div class="marks-photo-frame">
+          <img
+            src="/assets/wordmark-hero-typography.webp"
+            alt="BRNDNUR wordmark and device mark trademark registration specimen sheets with typography grid"
+            width="1200"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+
+      <!-- Right Column: Information & Comparison -->
+      <div class="marks-content-col">
+        <div class="marks-header">
+          <p class="eyebrow marks-eyebrow">Types of Trademark Applications</p>
+          <h2 class="marks-heading">Wordmark vs. Device Mark <span class="gold-text">Registration.</span></h2>
+          <div class="gold-rule marks-rule"></div>
+          <p class="marks-intro">Most businesses in India need both to protect their brand name and their visual identity.</p>
+        </div>
+
+        <div class="marks-options-grid">
+          <!-- Option A: Wordmark Registration -->
+          <div class="mark-option" id="wordmark">
+            <span class="option-eyebrow">Text-Only Protection</span>
+            <h3 class="option-title">Wordmark Registration</h3>
+            <p class="option-desc">
+              A wordmark protects the actual words, letters, and spelling of your brand name itself. Once registered, your name is legally protected regardless of font, style, color, capitalization, or layout.
+            </p>
+            <ul class="option-benefits">
+              <li><strong>Broadest Defense:</strong> Prevents competitors from using confusingly similar names in any typography.</li>
+              <li><strong>Flexible Rebranding:</strong> If you redesign your logo in the future, your wordmark protection remains 100% intact.</li>
+              <li><strong>Phonetic Exclusivity:</strong> Stops copycats using names that sound identical in speech.</li>
+            </ul>
+            <div class="option-cta">
+              <a href={wordmarkWhatsAppUrl} class="btn-mark btn-gold-outline" target="_blank" rel="noopener noreferrer">
+                <span>Register Wordmark</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Option B: Logo & Device Mark -->
+          <div class="mark-option" id="logo-mark">
+            <span class="option-eyebrow">Visual Identity &amp; Artwork</span>
+            <h3 class="option-title">Logo &amp; Device Mark</h3>
+            <p class="option-desc">
+              A device mark protects the specific graphic composition, artistic symbol, emblem, custom stylized lettering, or packaging artwork submitted on your application.
+            </p>
+            <ul class="option-benefits">
+              <li><strong>Emblem &amp; Icon Exclusivity:</strong> Stops visual lookalikes from imitating your brand badge or app icon.</li>
+              <li><strong>Vienna Codification:</strong> Indexed under international graphic codes for comprehensive visual clearance.</li>
+              <li><strong>Packaging Standards:</strong> Crucial for consumer goods, food packaging, and retail storefronts.</li>
+            </ul>
+            <div class="option-cta">
+              <a href={logoWhatsAppUrl} class="btn-mark btn-gold-primary" target="_blank" rel="noopener noreferrer">
+                <span>Protect Logo Mark</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trademark Classes (NICE Classification) Section -->
+<section class="section section-alt" id="classes">
+  <div class="container split-section">
+    <div class="split-photo">
+      <img src="/assets/resources-card-classes-169.webp" alt="NICE trademark classification system 45 classes" width="1200" height="675" loading="lazy" style="border-radius: 8px; border: 1px solid #DDCFB8; aspect-ratio: 16/9; object-fit: cover;" />
+    </div>
+    <div class="split-copy">
+      <p class="eyebrow">NICE Classification</p>
+      <h2 class="section-title">Trademark Classes (1 to 45).</h2>
+      <div class="accent-line"></div>
+      <p class="lead" style="margin-bottom: 20px;">The class you file defines exactly what business activities your trademark protects. Filing in the wrong class leaves your actual commercial operations completely exposed to competitors.</p>
+      
+      <div class="feature-grid classes-feature-grid">
+        <article class="feature class-mini-card">
+          <h4>Classes 1 to 34</h4>
+          <p>Manufactured physical products, apparel, electronics, cosmetics, packaged food &amp; beverages.</p>
+        </article>
+        <article class="feature class-mini-card">
+          <h4>Classes 35 to 45</h4>
+          <p>Commercial services, retail stores, IT/software, restaurants, healthcare, education &amp; consulting.</p>
+        </article>
+      </div>
+
+      <a href="/brand-name-search/" class="btn btn-navy">
+        <span>Check Your Trademark Class</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
 <section class="section" id="documents">
   <div class="container documents-grid documents-centered">
     <div class="documents-content">
@@ -266,16 +380,45 @@ button {font:inherit}
 .btn:hover .arrow {transform:translateX(3px) !important;color:#C28A25 !important;}
 
 .section {padding:62px 0}
-.benefits {border-top:1px solid rgba(19,35,58,.04);border-bottom:1px solid rgba(19,35,58,.04)}
+.benefits {
+  background: var(--navy, #13233A) !important;
+  color: #FFFFFF;
+  border-top: 1px solid rgba(168, 120, 26, 0.25);
+  border-bottom: 1px solid rgba(168, 120, 26, 0.25);
+}
+.benefits .eyebrow {
+  color: #D4A647 !important;
+}
+.benefits .section-title {
+  color: #FFFFFF !important;
+}
+.benefits .lead {
+  color: rgba(244, 239, 228, 0.88) !important;
+}
 .benefits-grid {display:grid;grid-template-columns:clamp(340px,38%,440px) minmax(0, 1fr);gap:48px;align-items:center}
 .rounded-photo {overflow:hidden;border-radius:12px;background:#e5d4b8;box-shadow:0 10px 24px rgba(44,32,14,.07);width:100%;max-width:460px;aspect-ratio:4 / 3;margin-inline:auto}
 .rounded-photo img {width:100%;height:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:center;display:block}
 .benefit-photo {aspect-ratio:4 / 3;height:auto}
+.benefits .benefit-photo {
+  border: 1px solid rgba(168, 120, 26, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
 .benefit-content .section-title {max-width:570px}
 .feature-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
 .feature-icon {width:48px;height:48px;border-radius:10px;background:#efe2cb;display:grid;place-items:center;color:var(--gold-dark);font-size:23px;margin-bottom:12px}
+.benefits .feature-icon {
+  background: rgba(168, 120, 26, 0.18) !important;
+  border: 1px solid rgba(168, 120, 26, 0.4) !important;
+  color: #E8C982 !important;
+}
 .feature h3 {font-size:clamp(17px, 1.2vw, 19px);line-height:1.35;margin:0 0 6px;color:var(--navy)}
+.benefits .feature h3 {
+  color: #FFFFFF !important;
+}
 .feature p {font-size:15px;line-height:1.6;color:var(--muted);margin:0}
+.benefits .feature p {
+  color: rgba(244, 239, 228, 0.78) !important;
+}
 .support-grid {display:grid;grid-template-columns:minmax(0, 1fr) clamp(340px,38%,440px);gap:64px;align-items:center}
 .support-copy .lead {max-width:500px}
 .check-list {padding:0;margin:24px 0 0;list-style:none;display:grid;gap:10px}
@@ -1107,11 +1250,314 @@ html { scroll-behavior: auto; }
   justify-content: center !important;
 }
 @media (max-width: 680px) {
-.cta-section .cta-panel {
+  .cta-section .cta-panel {
     width: 100% !important;
     max-width: none !important;
     padding: 28px 20px 30px !important;
   }
 }
 
+  /* ==========================================================================
+     WORDMARK VS DEVICE MARK SECTION (Redesigned Editorial Navy Split)
+     ========================================================================== */
+  .marks-distinction-section {
+    background: #13233A !important;
+    color: #FFFFFF;
+    padding: clamp(60px, 7vw, 90px) 0;
+    border-block: 1px solid rgba(168, 120, 26, 0.25);
+    scroll-margin-top: 80px;
+  }
+  .marks-distinction-container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .marks-distinction-grid {
+    display: grid;
+    grid-template-columns: clamp(320px, 37%, 420px) minmax(0, 1fr);
+    gap: clamp(36px, 4.5vw, 60px);
+    align-items: center;
+  }
+
+  /* Left Photo Column */
+  .marks-photo-col {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .marks-photo-frame {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(168, 120, 26, 0.35);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.38);
+    aspect-ratio: 4 / 3;
+    background: #0E1A2B;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .marks-photo-frame img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* Right Content Column */
+  .marks-content-col {
+    display: flex;
+    flex-direction: column;
+  }
+  .marks-header {
+    margin-bottom: 28px;
+  }
+  .marks-eyebrow {
+    color: #D4A647 !important;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 8px 0;
+  }
+  .marks-heading {
+    color: #FFFFFF !important;
+    font-family: var(--serif, 'Playfair Display', serif);
+    font-size: clamp(2rem, 2.5vw, 2.7rem) !important;
+    font-weight: 600;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px 0;
+  }
+  .marks-heading .gold-text {
+    color: #D4A647;
+  }
+  .marks-rule {
+    width: 36px;
+    height: 2px;
+    background: var(--gold, #A8781A);
+    margin: 0 0 14px 0;
+  }
+  .marks-intro {
+    font-size: clamp(15px, 1.05vw, 16px);
+    line-height: 1.6;
+    color: rgba(244, 239, 228, 0.88);
+    margin: 0;
+    max-width: 620px;
+  }
+
+  /* Two-Option Comparison Grid */
+  .marks-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin-top: 4px;
+  }
+  .mark-option {
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 100px;
+  }
+  .mark-option:first-child {
+    padding-right: clamp(1.25rem, 2.2vw, 2.25rem);
+    border-right: 1px solid rgba(220, 206, 182, 0.18);
+  }
+  .mark-option:last-child {
+    padding-left: clamp(1.25rem, 2.2vw, 2.25rem);
+  }
+  .option-eyebrow {
+    color: #D4A647;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .option-title {
+    color: #FFFFFF !important;
+    font-family: var(--serif, 'Playfair Display', serif);
+    font-size: clamp(1.22rem, 1.35vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 10px 0;
+  }
+  .option-desc {
+    color: rgba(244, 239, 228, 0.8);
+    font-size: 14px;
+    line-height: 1.58;
+    margin: 0 0 18px 0;
+    flex-grow: 1;
+  }
+  .option-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .option-benefits li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 13.5px;
+    line-height: 1.52;
+    color: rgba(244, 239, 228, 0.85);
+  }
+  .option-benefits li::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    top: -1px;
+    color: #D4A647;
+    font-size: 17px;
+    line-height: 1;
+  }
+  .option-benefits strong {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  .option-cta {
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  /* Specific Button Styles */
+  .btn-mark {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    font-family: var(--sans, 'DM Sans', sans-serif) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease !important;
+  }
+  .btn-mark:hover {
+    transform: translateY(-1px) !important;
+  }
+
+  /* Primary Button: Solid Gold with Dark Navy Text */
+  .btn-gold-primary {
+    background: var(--gold, #A8781A) !important;
+    color: #13233A !important;
+    border: 1.5px solid var(--gold, #A8781A) !important;
+    box-shadow: 0 4px 12px rgba(168, 120, 26, 0.22) !important;
+  }
+  .btn-gold-primary:hover {
+    background: #C28A25 !important;
+    border-color: #C28A25 !important;
+    color: #0E1A2B !important;
+    box-shadow: 0 6px 16px rgba(168, 120, 26, 0.32) !important;
+  }
+  .btn-gold-primary .arrow {
+    color: #13233A !important;
+    font-size: 15px !important;
+    transition: transform 0.2s ease !important;
+  }
+  .btn-gold-primary:hover .arrow {
+    transform: translateX(3px) !important;
+    color: #0E1A2B !important;
+  }
+
+  /* Secondary Button: Transparent with Thin Gold Outline and Gold Text */
+  .btn-gold-outline {
+    background: transparent !important;
+    color: #D4A647 !important;
+    border: 1.5px solid rgba(168, 120, 26, 0.75) !important;
+  }
+  .btn-gold-outline:hover {
+    background: rgba(168, 120, 26, 0.12) !important;
+    border-color: #D4A647 !important;
+    color: #FFFFFF !important;
+  }
+  .btn-gold-outline .arrow {
+    color: #D4A647 !important;
+    font-size: 15px !important;
+    transition: transform 0.2s ease !important;
+  }
+  .btn-gold-outline:hover .arrow {
+    transform: translateX(3px) !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Responsive Rules */
+  @media (max-width: 1024px) {
+    .marks-distinction-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+    .marks-photo-col {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .marks-distinction-section {
+      padding: 50px 0;
+    }
+    .marks-photo-col {
+      max-width: 100%;
+    }
+    .marks-options-grid {
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+    .mark-option:first-child {
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 1px solid rgba(220, 206, 182, 0.18);
+      padding-bottom: 26px;
+    }
+    .mark-option:last-child {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .marks-heading {
+      font-size: 1.85rem !important;
+    }
+    .btn-mark {
+      font-size: 13.5px !important;
+      padding: 10px 16px !important;
+    }
+  }
+  .classes-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 640px) {
+    .classes-feature-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .class-mini-card {
+    background: #FFFFFF;
+    border: 1px solid #DDCFB8;
+    border-radius: 8px;
+    padding: 18px !important;
+  }
+  .class-mini-card h4 {
+    font-size: 16px;
+    color: #13233A;
+    margin: 0 0 6px 0;
+  }
+  .class-mini-card p {
+    font-size: 13.5px;
+    color: #526075;
+    margin: 0;
+    line-height: 1.5;
+  }
 </style>

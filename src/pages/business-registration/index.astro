@@ -1,0 +1,390 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const title = "Business Registration & Startup Advisory | GST, MSME, FSSAI | BRNDNUR";
+const description = "Comprehensive business registration in Kerala and India: GST registration, Udyam MSME certification, FSSAI food licensing, and startup entity setup with BRNDNUR Advisory LLP.";
+const canonical = "https://brndnur.com/business-registration/";
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Business Registration",
+  sectionName: "Hero Section",
+  enquiryType: "Business Registration Advisory",
+  message: "Hi BRNDNUR, I would like guidance on registering my business in Kerala. Could you please explain the applicable entity options, statutory licenses such as GST, MSME, and FSSAI, professional fees, and the next steps?"
+});
+
+const gstWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Business Registration",
+  sectionName: "GST Section",
+  enquiryType: "GST Registration Assistance",
+  message: "Hi BRNDNUR, I am enquiring about GST registration for my business. Could you please explain the applicable eligibility requirements, documents needed, service charges, government fees if applicable, and the steps required to complete the registration?"
+});
+
+const udyamWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Business Registration",
+  sectionName: "Udyam MSME Section",
+  enquiryType: "Udyam MSME Registration",
+  message: "Hi BRNDNUR, I would like assistance with Udyam MSME registration for my business. Could you please explain the required documentation, the 50% statutory trademark fee concession for MSMEs, and how to proceed?"
+});
+
+const fssaiWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Business Registration",
+  sectionName: "FSSAI Section",
+  enquiryType: "FSSAI Food Licensing",
+  message: "Hi BRNDNUR, I am seeking guidance on FSSAI registration or licensing for my food business. Could you please explain the applicable license category, required documents, service charges, and application timeline?"
+});
+
+const setupWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Business Registration",
+  sectionName: "Business Setup Section",
+  enquiryType: "Startup Entity Setup",
+  message: "Hi BRNDNUR, I would like advisory support on business setup and entity formation in Kerala. Could you please explain the differences between proprietorship, partnership, LLP, and private limited company, and guide me on next steps?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Business Registration",
+  sectionName: "Closing CTA Band",
+  enquiryType: "All-in-One Registration Quote",
+  message: "Hi BRNDNUR, I would like a consolidated quotation for business registration and brand protection services for my new enterprise. Could you please explain the integrated scope, timelines, applicable government fees, and how to get started?"
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  currentPath="/business-registration/"
+>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <PageHero
+      eyebrow="Commercial Compliance & Setup"
+      title="Business Registration<br>&amp; Startup <span>Advisory.</span>"
+      hasGoldRule={true}
+      description="Launch your business on a solid legal foundation. We handle GST, Udyam MSME certification, FSSAI food licensing, and foundational entity setup — coordinated directly with your trademark protection."
+      primaryCta={{
+        text: "Discuss Business Registration",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "Explore All Services",
+        href: "/services/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Statutory Tax &", subtitle: "MSME Recognition" },
+        { icon: "▱", title: "50% TM Concession", subtitle: "Via Udyam" },
+        { icon: "⌖", title: "Kerala & Pan-India", subtitle: "Filing Support" }
+      ]}
+      image="/assets/setup-hero-foundations.webp"
+      imageAlt="Business constitution blueprints, registration folios, and brass compass on an executive desk"
+      variant="service"
+    />
+
+    <!-- Section 1: GST Registration -->
+    <section class="section service-section" id="gst">
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/gst-tax-credibility.webp" alt="GST tax registration documents and filing portfolio" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Tax Compliance</p>
+          <h2 class="section-title">GST Registration Assistance.</h2>
+          <div class="gold-rule"></div>
+          <p class="service-lead">Goods and Services Tax (GST) is mandatory for businesses exceeding turnover thresholds (₹40 Lakhs for goods / ₹20 Lakhs for services in Kerala), e-commerce sellers, and interstate traders.</p>
+          
+          <div class="deliverables-box">
+            <h4>What We Handle</h4>
+            <ul class="clean-bullets">
+              <li><strong>Threshold Assessment:</strong> Evaluating voluntary vs. compulsory registration requirements.</li>
+              <li><strong>GSTIN Application:</strong> End-to-end documentation, filing on the GST portal, and verification response.</li>
+              <li><strong>Input Tax Credit (ITC) Advisory:</strong> Structuring setup to preserve credit eligibility on capital assets.</li>
+            </ul>
+          </div>
+
+          <div class="action-row">
+            <a href={gstWhatsAppUrl} class="btn btn-navy" target="_blank" rel="noopener noreferrer">
+              <span>Get GST Assistance</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Udyam / MSME Registration -->
+    <section class="section service-section section-navy" id="udyam">
+      <div class="container split-section split-reverse">
+        <div class="split-photo">
+          <img src="/assets/udyam-growth-catalyst.webp" alt="MSME and Udyam certification support for small enterprises" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Enterprise Recognition &amp; Concessions</p>
+          <h2 class="section-title">Udyam / MSME Registration.</h2>
+          <div class="gold-rule"></div>
+          <p class="service-lead">Udyam Registration from the Ministry of MSME officially certifies your enterprise as Micro, Small, or Medium. Crucially, it qualifies your business for a 50% statutory fee discount on every Indian trademark application (saving ₹4,500 per class).</p>
+          
+          <div class="deliverables-box">
+            <h4>Key Benefits &amp; Deliverables</h4>
+            <ul class="clean-bullets">
+              <li><strong>50% Trademark Discount:</strong> Lowers government filing fee from ₹9,000 to ₹4,500 per class.</li>
+              <li><strong>Official Udyam Certificate:</strong> Permanent MSME registration number with QR verification code.</li>
+              <li><strong>Priority Banking &amp; Subsidy Access:</strong> Collateral-free lending eligibility and government tender preferences.</li>
+            </ul>
+          </div>
+
+          <div class="action-row">
+            <a href={udyamWhatsAppUrl} class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+              <span>Apply for Udyam Registration</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: FSSAI Food Business Registration -->
+    <section class="section service-section" id="fssai">
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/fssai-packaging-standards.webp" alt="FSSAI food licensing and statutory packaging standards" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Food Safety Compliance</p>
+          <h2 class="section-title">FSSAI Registration &amp; Licensing.</h2>
+          <div class="gold-rule"></div>
+          <p class="service-lead">Under the Food Safety and Standards Act, 2006, every food business operator (FBO)—including restaurants, cafes, cloud kitchens, bakeries, spice processors, and packaged food brands—must hold an FSSAI registration or license before starting operations.</p>
+          
+          <div class="deliverables-box">
+            <h4>What We Deliver</h4>
+            <ul class="clean-bullets">
+              <li><strong>License Tier Matching:</strong> Determining whether Basic Registration (under ₹12L) or State License applies.</li>
+              <li><strong>FoSCoS Portal Filing:</strong> Submitting premises plans, food category listings, and water test reports.</li>
+              <li><strong>14-Digit License Issuance:</strong> Mandatory display number for packaging, signage, and online delivery portals.</li>
+            </ul>
+          </div>
+
+          <div class="action-row">
+            <a href={fssaiWhatsAppUrl} class="btn btn-navy" target="_blank" rel="noopener noreferrer">
+              <span>Inquire for FSSAI License</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Business Setup Advisory -->
+    <section class="section service-section section-navy" id="setup">
+      <div class="container split-section split-reverse">
+        <div class="split-photo">
+          <img src="/assets/setup-startup-readiness.webp" alt="Entity formation and strategic business setup advisory in Kerala" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Foundational Constitution</p>
+          <h2 class="section-title">Business Setup Advisory.</h2>
+          <div class="gold-rule"></div>
+          <p class="service-lead">Choosing the right legal structure affects founder liability, taxation, bank accounts, and investor readiness. We guide Kerala entrepreneurs and Gulf-return founders through entity constitution and commercial launch requirements.</p>
+          
+          <div class="deliverables-box">
+            <h4>Advisory Scope</h4>
+            <ul class="clean-bullets">
+              <li><strong>Entity Selection:</strong> Comparing Sole Proprietorship, Partnership Firm, LLP, and Private Limited Company.</li>
+              <li><strong>Name Alignment:</strong> Verifying proposed corporate names against MCA records and Trade Marks Registry simultaneously.</li>
+              <li><strong>Foundational Registrations:</strong> Coordinated PAN/TAN, shop establishment, local trade permits, and initial compliance.</li>
+            </ul>
+          </div>
+
+          <div class="action-row">
+            <a href={setupWhatsAppUrl} class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+              <span>Discuss Business Setup</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common FAQs -->
+    <section class="section" id="faqs">
+      <div class="container" style="max-width: 840px;">
+        <div class="section-heading centered">
+          <p class="eyebrow">Questions &amp; Answers</p>
+          <h2>Business Registration FAQs.</h2>
+          <div class="gold-rule" style="margin-inline: auto;"></div>
+        </div>
+        <div class="faq-list">
+          <FaqItem
+            num="01"
+            question="Can I register a trademark before registering my business entity?"
+            answer="Yes. Under Indian law, an individual can file a trademark application in their personal name. Once your company or LLP is incorporated, the trademark can be easily assigned or transferred to the corporate entity."
+          />
+          <FaqItem
+            num="02"
+            question="How does Udyam registration save money on trademark filing?"
+            answer="The Government of India provides a 50% statutory fee concession for registered MSMEs. Instead of paying the standard company government fee of ₹9,000 per class, an Udyam-certified business pays only ₹4,500 per class on Form TM-A."
+          />
+          <FaqItem
+            num="03"
+            question="Do I need both GST and FSSAI for a food business?"
+            answer="FSSAI is mandatory for any food-handling business regardless of turnover. GST is required once your turnover crosses statutory thresholds (₹20 Lakhs for services / ₹40 Lakhs for goods) or if you sell across state lines or through online platforms."
+          />
+          <FaqItem
+            num="04"
+            question="How long does it take to obtain GST and Udyam certificates?"
+            answer="Udyam registration is typically issued within 1–2 working days after Aadhaar OTP verification. GST registration generally takes 3–7 working days subject to tax department verification."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing WhatsApp CTA -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="eyebrow">Ready to Launch?</p>
+          <h2>Start Your Business with Complete Legal Clarity.</h2>
+          <p>Get professional assistance with GST, MSME, FSSAI, and trademark protection in one coordinated engagement.</p>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+            <span>Inquire on WhatsApp</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Coordinated Filings</strong>
+              <p>Align corporate name, brand trademark, and tax registrations seamlessly.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">▱</span>
+            <div>
+              <strong>Government Fee Concessions</strong>
+              <p>Maximal statutory cost savings applied for startups and MSMEs.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">⌖</span>
+            <div>
+              <strong>Direct Kerala Advisory</strong>
+              <p>Local office in Manjeri, Malappuram serving founders statewide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .service-section {
+    padding: 72px 0;
+    scroll-margin-top: 80px;
+  }
+  .section-navy {
+    background: #13233A !important;
+    color: #FFFFFF;
+    border-block: 1px solid rgba(168, 120, 26, 0.3);
+  }
+  .section-navy .eyebrow {
+    color: #D4A647 !important;
+  }
+  .section-navy .section-title {
+    color: #FFFFFF !important;
+  }
+  .section-navy .service-lead {
+    color: rgba(244, 239, 228, 0.9) !important;
+  }
+  .section-navy .deliverables-box {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(220, 206, 182, 0.25) !important;
+  }
+  .section-navy .deliverables-box h4 {
+    color: #FFFFFF !important;
+  }
+  .section-navy .clean-bullets li {
+    color: rgba(244, 239, 228, 0.88) !important;
+  }
+  .section-navy .clean-bullets strong {
+    color: #FFFFFF !important;
+  }
+  .section-navy .clean-bullets li::before {
+    color: #E8C982 !important;
+  }
+  .section-navy .split-photo img {
+    border-radius: 8px;
+    border: 1px solid rgba(168, 120, 26, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+  .split-reverse {
+    direction: rtl;
+  }
+  .split-reverse > * {
+    direction: ltr;
+  }
+  .service-lead {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #384860;
+    margin-bottom: 24px;
+  }
+  .deliverables-box {
+    background: #FAF6EE;
+    border: 1px solid #DDCFB8;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+  .deliverables-box h4 {
+    font-family: var(--serif, 'Playfair Display', serif);
+    font-size: 18px;
+    color: #13233A;
+    margin: 0 0 12px 0;
+  }
+  .clean-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .clean-bullets li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: #4A5568;
+  }
+  .clean-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    top: -1px;
+    color: #A8781A;
+    font-size: 18px;
+  }
+  .clean-bullets strong {
+    color: #13233A;
+  }
+  .action-row {
+    margin-top: 20px;
+  }
+  .btn-navy {
+    background: #13233A;
+    color: #F4EFE4;
+    border-color: #13233A;
+  }
+  .btn-navy:hover {
+    background: #1B2F4A;
+    color: #FFFFFF;
+  }
+</style>

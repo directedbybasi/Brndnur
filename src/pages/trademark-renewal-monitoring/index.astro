@@ -1,0 +1,480 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const title = "Trademark Renewal & Monitoring Services in India | BRNDNUR";
+const description = "Comprehensive trademark maintenance in India: 10-year Form TM-R renewal tracking, grace period restoration, and weekly Trade Marks Journal Brand Watch monitoring with BRNDNUR Advisory LLP.";
+const canonical = "https://brndnur.com/trademark-renewal-monitoring/";
+
+const heroWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Renewal & Monitoring",
+  sectionName: "Hero Section",
+  enquiryType: "Trademark Maintenance Enquiry",
+  message: "Hi BRNDNUR, I need guidance on renewing my trademark registration or verifying my current filing status. Could you please guide me on the statutory timeline, information needed, fees, and next steps?"
+});
+
+const renewalWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Renewal & Monitoring",
+  sectionName: "Renewal Section",
+  enquiryType: "Form TM-R Renewal Filing",
+  message: "Hi BRNDNUR, I need guidance on renewing my trademark registration. Could you please help me understand the renewal timeline, information and documents required, applicable government fees, professional charges, and the next steps based on my trademark's current status?"
+});
+
+const monitoringWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Renewal & Monitoring",
+  sectionName: "Monitoring Section",
+  enquiryType: "Brand Watch Journal Surveillance",
+  message: "Hi BRNDNUR, I would like to subscribe to Brand Watch surveillance to monitor the Trade Marks Journal for conflicting filings. Could you please explain the weekly monitoring scope, opposition window alerts, and subscription details?"
+});
+
+const closingWhatsAppUrl = buildWhatsAppUrl({
+  pageName: "Renewal & Monitoring",
+  sectionName: "Closing CTA Band",
+  enquiryType: "Trademark Status Verification",
+  message: "Hi BRNDNUR, I would like to verify the renewal timeline and legal status of my registered trademark. Could you please check the official records and advise on maintenance or protection requirements?"
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  currentPath="/trademark-renewal-monitoring/"
+>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <PageHero
+      eyebrow="Lifecycle Protection & Brand Watch"
+      title="Trademark Renewal<br>&amp; Brand Watch <span>Monitoring.</span>"
+      hasGoldRule={true}
+      description="A registered trademark lasts 10 years, but protection requires active defense. We track your renewal deadlines under Section 25, manage Form TM-R filings, and continuously monitor the Trade Marks Journal to stop copycats before they register."
+      primaryCta={{
+        text: "Check Trademark Status",
+        href: heroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      secondaryCta={{
+        text: "Explore All Services",
+        href: "/services/",
+        icon: "→"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Section 25 Statutory", subtitle: "10-Year Renewals" },
+        { icon: "▱", title: "Weekly Journal", subtitle: "Surveillance" },
+        { icon: "⌖", title: "4-Month Opposition", subtitle: "Window Defense" }
+      ]}
+      image="/assets/renewal-hero-timeline.webp"
+      imageAlt="Trademark renewal docket book and milestone calendar on an executive desk"
+      variant="service"
+    />
+
+    <!-- Section 1: Trademark Renewal -->
+    <section class="section service-section" id="renewal">
+      <div class="container split-section">
+        <div class="split-photo">
+          <img src="/assets/renewal-ownership-maintenance.webp" alt="Trademark renewal certificate and statutory legal folios" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">10-Year Statutory Maintenance</p>
+          <h2 class="section-title">Trademark Renewal (Form TM-R).</h2>
+          <div class="gold-rule"></div>
+          <p class="service-lead">Under Section 25 of the Trade Marks Act, 1999, trademark registration remains valid for 10 years from the original application date. It must be renewed with Form TM-R before it lapses to preserve your continuous legal priority.</p>
+          
+          <div class="deliverables-box">
+            <h4>Renewal Protocols</h4>
+            <ul class="clean-bullets">
+              <li><strong>Timely Renewal (Within 6 Months Prior to Expiry):</strong> Government fee is ₹9,000 per class with standard processing.</li>
+              <li><strong>Grace Period Renewal (Up to 6 Months After Expiry):</strong> Permitted with a statutory surcharge of ₹4,500 additional per class.</li>
+              <li><strong>Restoration Support:</strong> If a mark has lapsed past the grace period, we evaluate Section 25(4) restoration petitions where viable.</li>
+            </ul>
+          </div>
+
+          <div class="fee-badge-box">
+            <span class="fee-tag">Government Fee</span>
+            <span class="fee-amount">₹9,000 / class</span>
+            <span class="fee-note">Grace period surcharge: ₹4,500 additional · Professional fee quoted separately</span>
+          </div>
+
+          <div class="action-row">
+            <a href={renewalWhatsAppUrl} class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+              <span>Renew My Trademark</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Trademark Monitoring & Brand Watch -->
+    <section class="section service-section section-navy" id="monitoring">
+      <div class="container split-section split-reverse">
+        <div class="split-photo">
+          <img src="/assets/monitoring-hero-watch.webp" alt="Trade marks journal monitoring and brand watch conflict research" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Proactive Brand Surveillance</p>
+          <h2 class="section-title">Trade Marks Journal Monitoring.</h2>
+          <div class="gold-rule"></div>
+          <p class="service-lead">The Trade Marks Registry publishes newly accepted applications every week in the Trade Marks Journal. If a competitor files a name confusingly similar to yours, you have exactly 4 months from publication to oppose it before it is granted registration.</p>
+          
+          <div class="deliverables-box">
+            <h4>Brand Watch Inclusions</h4>
+            <ul class="clean-bullets">
+              <li><strong>Weekly Journal Surveillance:</strong> Systematic automated and manual screening across relevant classes.</li>
+              <li><strong>Phonetic &amp; Visual Conflict Alerts:</strong> Immediate notification if a deceptively similar mark is advertised.</li>
+              <li><strong>Opposition Filing (Form TM-O):</strong> Timely drafting and submission of Notice of Opposition within the 4-month statutory deadline.</li>
+            </ul>
+          </div>
+
+          <div class="fee-badge-box">
+            <span class="fee-tag">Engagement</span>
+            <span class="fee-amount">Quoted per Mark / Matter</span>
+            <span class="fee-note">Annual surveillance packages available · Opposition support quoted per proceeding</span>
+          </div>
+
+          <div class="action-row">
+            <a href={monitoringWhatsAppUrl} class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+              <span>Start Brand Watch Monitoring</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Fee Transparency Summary -->
+    <section class="section" id="pricing">
+      <div class="container" style="max-width: 920px;">
+        <div class="section-heading centered">
+          <p class="eyebrow">Statutory Fee Schedule</p>
+          <h2>Clear, Transparent Maintenance Costs.</h2>
+          <div class="gold-rule" style="margin-inline: auto;"></div>
+          <p>All government fees are paid directly to the Trade Marks Registry. We ensure exact deadlines and statutory compliance.</p>
+        </div>
+
+        <div class="pricing-summary-grid">
+          <div class="pricing-col">
+            <div class="pricing-card">
+              <h3>Standard Renewal</h3>
+              <p class="card-timeline">Filed within 6 months prior to 10-year expiry</p>
+              <div class="price-highlight">₹9,000</div>
+              <p class="price-sub">Government fee per class (Individual / Startup)</p>
+              <ul class="clean-bullets">
+                <li>Form TM-R preparation &amp; submission</li>
+                <li>Registry acknowledgement certificate</li>
+                <li>10-year extension of exclusive rights</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pricing-col">
+            <div class="pricing-card card-featured">
+              <span class="card-badge">Grace Period</span>
+              <h3>Late Renewal / Grace Period</h3>
+              <p class="card-timeline">Filed within 6 months after expiry date</p>
+              <div class="price-highlight">₹13,500</div>
+              <p class="price-sub">₹9,000 standard + ₹4,500 statutory surcharge</p>
+              <ul class="clean-bullets">
+                <li>Form TM-R filing with late petition</li>
+                <li>Prevents complete removal from Registry</li>
+                <li>Preserves original filing priority date</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="disclaimer-text">Note: Professional fees are quoted separately based on mark history. Confirm exact eligibility and registry fee schedules prior to submission.</p>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section section-alt" id="faqs">
+      <div class="container" style="max-width: 840px;">
+        <div class="section-heading centered">
+          <p class="eyebrow">Frequently Asked Questions</p>
+          <h2>Renewal &amp; Monitoring FAQs.</h2>
+          <div class="gold-rule" style="margin-inline: auto;"></div>
+        </div>
+        <div class="faq-list">
+          <FaqItem
+            num="01"
+            question="When does my trademark need to be renewed?"
+            answer="In India, a registered trademark is valid for 10 years from the original application date (priority date), not the certificate issuance date. You can file Form TM-R within the 6-month window prior to the 10-year expiry."
+          />
+          <FaqItem
+            num="02"
+            question="What happens if I miss the renewal deadline?"
+            answer="If you miss the expiry date, IP India provides a 6-month grace period to renew the mark upon payment of an additional ₹4,500 government surcharge. If both windows pass, the mark is marked 'Removed' from the register, making it vulnerable to competitors."
+          />
+          <FaqItem
+            num="03"
+            question="Why is journal monitoring necessary if my mark is already registered?"
+            answer="The Trade Marks Registry examines thousands of applications monthly. Sometimes conflicting or identical marks pass examination and are published. If you do not file a Notice of Opposition within 4 months of publication, the competing mark will register, diminishing your brand monopoly."
+          />
+          <FaqItem
+            num="04"
+            question="How far in advance will BRNDNUR alert me before my mark expires?"
+            answer="We maintain an internal docket calendar and notify clients 12 months, 6 months, and 60 days before the statutory renewal deadline to ensure timely Form TM-R filing without late surcharges."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing WhatsApp CTA -->
+    <section class="cta-band">
+      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="eyebrow">Protect What You Built</p>
+          <h2>Don't Lose 10 Years of Goodwill to a Missed Deadline.</h2>
+          <p>Send us your brand name or registration number. We will check your exact renewal status and journal exposure for free.</p>
+          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+            <span>Verify Status on WhatsApp</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <span class="value-icon">♢</span>
+            <div>
+              <strong>Section 25 Compliance</strong>
+              <p>Accurate Form TM-R drafting and priority protection.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">▱</span>
+            <div>
+              <strong>No Lapsed Rights</strong>
+              <p>Advance reminder calendar avoids costly ₹4,500 surcharges.</p>
+            </div>
+          </div>
+          <div class="cta-benefit">
+            <span class="value-icon">⌖</span>
+            <div>
+              <strong>Active Journal Watch</strong>
+              <p>Catch and stop conflicting applications within 4 months.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .service-section {
+    padding: 72px 0;
+    scroll-margin-top: 80px;
+  }
+  .section-navy {
+    background: #13233A !important;
+    color: #FFFFFF;
+    border-block: 1px solid rgba(168, 120, 26, 0.3);
+  }
+  .section-navy .eyebrow {
+    color: #D4A647 !important;
+  }
+  .section-navy .section-title {
+    color: #FFFFFF !important;
+  }
+  .section-navy .service-lead {
+    color: rgba(244, 239, 228, 0.9) !important;
+  }
+  .section-navy .deliverables-box {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(220, 206, 182, 0.25) !important;
+  }
+  .section-navy .deliverables-box h4 {
+    color: #FFFFFF !important;
+  }
+  .section-navy .clean-bullets li {
+    color: rgba(244, 239, 228, 0.88) !important;
+  }
+  .section-navy .clean-bullets strong {
+    color: #FFFFFF !important;
+  }
+  .section-navy .clean-bullets li::before {
+    color: #E8C982 !important;
+  }
+  .section-navy .fee-badge-box {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(168, 120, 26, 0.4) !important;
+  }
+  .section-navy .fee-tag {
+    color: #D4A647 !important;
+  }
+  .section-navy .fee-amount {
+    color: #FFFFFF !important;
+  }
+  .section-navy .fee-note {
+    color: rgba(244, 239, 228, 0.8) !important;
+  }
+  .section-navy .split-photo img {
+    border-radius: 8px;
+    border: 1px solid rgba(168, 120, 26, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+  .split-reverse {
+    direction: rtl;
+  }
+  .split-reverse > * {
+    direction: ltr;
+  }
+  .service-lead {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #384860;
+    margin-bottom: 24px;
+  }
+  .deliverables-box {
+    background: #FAF6EE;
+    border: 1px solid #DDCFB8;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  .deliverables-box h4 {
+    font-family: var(--serif, 'Playfair Display', serif);
+    font-size: 18px;
+    color: #13233A;
+    margin: 0 0 12px 0;
+  }
+  .clean-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .clean-bullets li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: #4A5568;
+  }
+  .clean-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    top: -1px;
+    color: #A8781A;
+    font-size: 18px;
+  }
+  .clean-bullets strong {
+    color: #13233A;
+  }
+
+  .fee-badge-box {
+    background: #FFFFFF;
+    border: 1px solid #DDCFB8;
+    border-radius: 6px;
+    padding: 12px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+  .fee-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #A8781A;
+  }
+  .fee-amount {
+    font-family: var(--serif, 'Playfair Display', serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: #13233A;
+  }
+  .fee-note {
+    font-size: 12.5px;
+    color: #6C7A8D;
+  }
+
+  .pricing-summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 36px;
+  }
+  @media (max-width: 768px) {
+    .pricing-summary-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .pricing-card {
+    background: #FFFFFF;
+    border: 1px solid #DDCFB8;
+    border-radius: 8px;
+    padding: 28px 24px;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(19, 35, 58, 0.04);
+  }
+  .card-featured {
+    border-color: #A8781A;
+    position: relative;
+    background: #FAF7F0;
+  }
+  .card-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #A8781A;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+  .pricing-card h3 {
+    font-family: var(--serif, 'Playfair Display', serif);
+    font-size: 20px;
+    color: #13233A;
+    margin: 0 0 6px 0;
+  }
+  .card-timeline {
+    font-size: 13px;
+    color: #6C7A8D;
+    margin: 0 0 16px 0;
+  }
+  .price-highlight {
+    font-family: var(--serif, 'Playfair Display', serif);
+    font-size: 32px;
+    font-weight: 700;
+    color: #13233A;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .price-sub {
+    font-size: 13px;
+    color: #4A5568;
+    margin: 0 0 20px 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #EAE0D0;
+  }
+  .disclaimer-text {
+    font-size: 12.5px;
+    color: #718096;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .action-row {
+    margin-top: 20px;
+  }
+  .btn-navy {
+    background: #13233A;
+    color: #F4EFE4;
+    border-color: #13233A;
+  }
+  .btn-navy:hover {
+    background: #1B2F4A;
+    color: #FFFFFF;
+  }
+</style>

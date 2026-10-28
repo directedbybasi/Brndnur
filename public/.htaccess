@@ -2,20 +2,68 @@
 # Website: https://brndnur.com/
 # Production Canonical Configuration
 
-# 1. Force HTTPS
+# 1. Default Character Encoding & Explicit MIME Types
+AddDefaultCharset UTF-8
+
+<IfModule mod_mime.c>
+  AddType text/css .css
+  AddType application/javascript .js .mjs
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+  AddType application/json .json .webmanifest
+</IfModule>
+
+# 2. Canonical Host, HTTPS & URL Normalization
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  Options -MultiViews +FollowSymLinks
 
-  # Enforce Canonical Trailing Slash on Directory URLs (Prevents Duplicate Content)
+  # Step A: Canonical Host & HTTPS Normalization (Applies only for brndnur.com production requests)
+  RewriteCond %{HTTP_HOST} ^(www\.)?brndnur\.com$ [NC]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://brndnur.com%{REQUEST_URI} [L,R=301,NE]
+
+  # Step B: Direct File & Directory Passthrough (Static files/assets bypass all further rewrites)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Step C: Consolidated Page 301 Permanent Redirects
+  RewriteRule ^blog/?$ https://brndnur.com/resources/ [L,R=301,NE]
+  RewriteRule ^trademark/?$ https://brndnur.com/trademark-registration/ [L,R=301,NE]
+  
+  # Consolidated Trademark Sub-Pages -> Trademark Registration
+  RewriteRule ^trademark-classes/?$ https://brndnur.com/trademark-registration/#classes [L,R=301,NE]
+  RewriteRule ^wordmark-registration/?$ https://brndnur.com/trademark-registration/#wordmark [L,R=301,NE]
+  RewriteRule ^logo-trademark-registration/?$ https://brndnur.com/trademark-registration/#logo-mark [L,R=301,NE]
+  
+  # Consolidated Renewal & Monitoring -> Trademark Renewal & Monitoring
+  RewriteRule ^trademark-renewal/?$ https://brndnur.com/trademark-renewal-monitoring/#renewal [L,R=301,NE]
+  RewriteRule ^trademark-monitoring/?$ https://brndnur.com/trademark-renewal-monitoring/#monitoring [L,R=301,NE]
+  
+  # Consolidated Business Services -> Business Registration
+  RewriteRule ^gst-registration/?$ https://brndnur.com/business-registration/#gst [L,R=301,NE]
+  RewriteRule ^udyam-msme-registration/?$ https://brndnur.com/business-registration/#udyam [L,R=301,NE]
+  RewriteRule ^fssai-registration/?$ https://brndnur.com/business-registration/#fssai [L,R=301,NE]
+  RewriteRule ^business-setup/?$ https://brndnur.com/business-registration/#setup [L,R=301,NE]
+
+  # Consolidated Packages Sub-Pages -> Packages & Pricing
+  RewriteRule ^packages/individual-msme/?$ https://brndnur.com/packages/#individual-msme [L,R=301,NE]
+  RewriteRule ^packages/company-llp/?$ https://brndnur.com/packages/#company-llp [L,R=301,NE]
+  RewriteRule ^packages/food-brand/?$ https://brndnur.com/packages/#food-brand [L,R=301,NE]
+  RewriteRule ^packages/gulf-return-business/?$ https://brndnur.com/packages/#gulf-return-business [L,R=301,NE]
+
+  # Step C: Enforce Canonical Trailing Slash on Directory URLs (Prevents Duplicate Content)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_URI} !(.[a-zA-Z0-9]+)$
   RewriteCond %{REQUEST_URI} !/$
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+  RewriteRule ^(.*)$ https://brndnur.com/$1/ [L,R=301,NE]
 </IfModule>
 
-# 2. Production Security Headers
+# 3. Production Security Headers
 <IfModule mod_headers.c>
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
   Header always set X-Content-Type-Options "nosniff"
@@ -25,12 +73,12 @@
   Header always set X-XSS-Protection "1; mode=block"
 </IfModule>
 
-# 3. Compression (Gzip / Deflate for Text & Fonts)
+# 4. Compression (Gzip / Deflate for Text & Fonts)
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml font/woff2 font/woff
 </IfModule>
 
-# 4. Long-Term Static Browser Caching & Immutability
+# 5. Long-Term Static Browser Caching & Immutability
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/webp "access plus 1 year"
@@ -46,10 +94,5 @@
   ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
-# 5. Canonical Redirects & 404 Error Handling
+# 6. Error Handling
 ErrorDocument 404 /404.html
-
-<IfModule mod_rewrite.c>
-  RewriteRule ^blog/?$ /resources/ [R=301,L]
-  RewriteRule ^trademark/?$ /trademark-registration/ [R=301,L]
-</IfModule>

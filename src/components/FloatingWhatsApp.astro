@@ -18,15 +18,18 @@ const whatsappUrl = getFloatingWhatsAppUrl(currentPath, pageTitle);
     rel="noopener noreferrer"
     aria-label="Chat directly with BRNDNUR Advisory on WhatsApp"
   >
-    <img
-      src="/assets/whatsapp-icon.png"
-      alt="WhatsApp"
-      width="60"
-      height="60"
-      loading="eager"
-      decoding="async"
-      class="bn-floating-wa-img"
-    />
+    <picture>
+      <source srcset="/assets/whatsapp-icon.webp" type="image/webp" />
+      <img
+        src="/assets/whatsapp-icon.png"
+        alt="WhatsApp"
+        width="60"
+        height="60"
+        loading="lazy"
+        decoding="async"
+        class="bn-floating-wa-img"
+      />
+    </picture>
     <span class="bn-floating-wa-tooltip" role="tooltip">Chat on WhatsApp</span>
   </a>
 </aside>

@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/hero/PageHero.astro';
-import CardCarousel from '../../components/CardCarousel.astro';
 import FaqItem from '../../components/FaqItem.astro';
 
 const title = "Brand Name Search in India | Trademark Check | BRNDNUR";
@@ -10,21 +9,17 @@ const canonical = "https://brndnur.com/brand-name-search/";
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
 
 const heroWhatsAppUrl = buildWhatsAppUrl({
-  "pageName": "Brand Name Search",
-  "sectionName": "Hero Section",
-  "enquiryType": "Preliminary Trademark Search",
-  "topic": "I would like assistance with a preliminary trademark search for my proposed brand name.",
-  "details": "Proposed brand name: [Please enter your brand name]",
-  "callToAction": "Could you please guide me on the availability assessment and next steps?"
+  pageName: "Brand Name Search",
+  sectionName: "Hero Section",
+  enquiryType: "Preliminary Trademark Search",
+  message: "Hi BRNDNUR, I would like to check whether my proposed business name may conflict with existing trademarks. Please guide me on the name-search process, the information you need, and the available options before I proceed with registration."
 });
 
 const closingWhatsAppUrl = buildWhatsAppUrl({
-  "pageName": "Brand Name Search",
-  "sectionName": "Closing CTA Band",
-  "enquiryType": "Brand Name Clearance Check",
-  "topic": "I have a proposed brand name in mind and would like to request an initial clearance check on the IP India registry.",
-  "details": "Proposed mark: [Please enter mark]\\nProduct / service category: [Please describe category]",
-  "callToAction": "Could you please conduct a preliminary check and advise on registration prospects?"
+  pageName: "Brand Name Search",
+  sectionName: "Closing CTA Band",
+  enquiryType: "Brand Name Clearance Check",
+  message: "Hi BRNDNUR, I would like to request a complimentary preliminary trademark clearance check for my brand. Could you please verify name availability across relevant classes on IP India and guide me on the next steps?"
 });
 ---
 
@@ -71,9 +66,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
         <div class="split-copy">
           <p class="eyebrow">Strategic Due Diligence</p>
           <h2>Why Pre-Filing Clearance Protects Your Capital.</h2>
-          <div class="gold-rule"></div>
-          <p>Every year, hundreds of Indian business owners invest heavily in branding, product packaging, domain registrations, and signage—only to receive an objection or an infringement cease-and-desist letter within months.</p>
-          <p>Under the Trade Marks Act, 1999, prior adoption and registration grant senior rights. A preliminary clearance check verifies whether similar names exist in your intended classification before you commit non-refundable statutory government fees.</p>
+          <p class="clearance-lead">Investing in branding, packaging, and domains without clearance risks costly objections or infringement notices. A preliminary check verifies name availability across your class before committing non-refundable government fees.</p>
           <div class="values">
             <div class="value">
               <span class="value-icon">♙</span>
@@ -101,8 +94,8 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
       </div>
     </section>
 
-    <!-- 4 Search Dimensions (Editorial Cards) -->
-    <section class="section section-alt">
+    <!-- Search Dimensions (Editorial Cards) -->
+    <section class="section section-search-dimensions">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Search Depth</p>
@@ -111,119 +104,28 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
           <p>A basic word search is rarely sufficient. Trade mark examiners evaluate marks across multiple dimensions under Section 11 of the Trade Marks Act, 1999.</p>
         </div>
 
-        <CardCarousel id="search-depth-carousel" ariaLabel="Search depth dimensions">
-          <article class="service-card">
+        <div class="search-dimensions-grid">
+          <article class="service-card search-dimension-card">
             <div class="service-body">
               <div class="step-num" style="margin-bottom: 14px;">01</div>
               <h3>Phonetic Similarity</h3>
-              <p>Marks that sound identical or confusingly similar when spoken aloud (e.g., 'Kool' vs 'Cool') face immediate objections even if spelling differs substantially.</p>
             </div>
           </article>
 
-          <article class="service-card">
+          <article class="service-card search-dimension-card">
             <div class="service-body">
               <div class="step-num" style="margin-bottom: 14px;">02</div>
               <h3>Visual &amp; Graphic Resemblance</h3>
-              <p>Evaluating visual styling, typography, logo layout, and device mark elements to prevent conflicts with prior graphical trademark filings.</p>
             </div>
           </article>
 
-          <article class="service-card">
+          <article class="service-card search-dimension-card">
             <div class="service-body">
               <div class="step-num" style="margin-bottom: 14px;">03</div>
               <h3>Conceptual Similarity</h3>
-              <p>Marks conveying synonymous meaning or identical commercial impressions, even in different languages or dialects within Indian commerce.</p>
             </div>
           </article>
-
-          <article class="service-card">
-            <div class="service-body">
-              <div class="step-num" style="margin-bottom: 14px;">04</div>
-              <h3>Cross-Class Relevance</h3>
-              <p>Checking allied and complementary goods and services classes (such as Class 29 and Class 30 for foods, or Class 25 and Class 35 for apparel and retail).</p>
-            </div>
-          </article>
-        </CardCarousel>
-      </div>
-    </section>
-
-    <!-- Clearance Tiers Table -->
-    <section class="section">
-      <div class="container" style="max-width: 960px;">
-        <div class="section-heading">
-          <p class="eyebrow">Clearance Methodology</p>
-          <h2>Our Multi-Tier Verification Process.</h2>
-          <div class="gold-rule"></div>
-          <p>We review official registry records to provide actionable recommendations before application drafting.</p>
         </div>
-
-        <div class="table-wrap">
-          <table class="bn-table">
-            <thead>
-              <tr>
-                <th>Verification Level</th>
-                <th>Search Scope</th>
-                <th>Key Criteria Checked</th>
-                <th>Strategic Outcome</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Tier 1: Direct Identity Search</strong></td>
-                <td>Exact text in target class</td>
-                <td>Exact spelling matches and active registrations</td>
-                <td>Identifies direct roadblocks immediately</td>
-              </tr>
-              <tr>
-                <td><strong>Tier 2: Phonetic &amp; Prefix Check</strong></td>
-                <td>Sounds-alike &amp; variant spellings</td>
-                <td>Phonetic algorithms, truncated stems, and compound words</td>
-                <td>Uncovers hidden phonetic conflicts</td>
-              </tr>
-              <tr>
-                <td><strong>Tier 3: Cross-Class &amp; Well-Known Marks</strong></td>
-                <td>Allied goods &amp; services classes</td>
-                <td>Co-related classes (e.g. Class 29 &amp; 30, Class 35 &amp; 25) + list of Well-Known marks</td>
-                <td>Prevents infringement disputes from established conglomerates</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Search Outcomes & Risk Appraisal -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Risk Classification</p>
-          <h2>How We Interpret Search Results.</h2>
-          <div class="gold-rule"></div>
-          <p>Every brand clearance review produces one of three distinct statutory appraisals.</p>
-        </div>
-
-        <CardCarousel id="risk-classification-carousel" ariaLabel="Risk classification appraisals">
-          <article class="service-card" style="padding: 1.75rem;">
-            <div class="step-num" style="margin-bottom: 12px; font-size: 1.15rem; color: #2e7d32;">✓</div>
-            <h3 style="font-family: var(--sans); font-weight: 600; font-size: 1.35rem; color: var(--navy); margin-bottom: .6rem;">Low Risk / Prima Facie Clear</h3>
-            <p style="font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem); line-height: 1.6; color: var(--body); margin-bottom: 1rem;">No identical or phonetically conflicting marks found in your active or allied classes. The mark appears distinctive under Section 9 and eligible for straightforward TM-A filing.</p>
-            <a class="text-link" href="/trademark-registration/">Proceed to Filing <span>→</span></a>
-          </article>
-
-          <article class="service-card" style="padding: 1.75rem;">
-            <div class="step-num" style="margin-bottom: 12px; font-size: 1.15rem; color: var(--gold);">⚠</div>
-            <h3 style="font-family: var(--sans); font-weight: 600; font-size: 1.35rem; color: var(--navy); margin-bottom: .6rem;">Moderate Risk / Phonetic Similarity</h3>
-            <p style="font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem); line-height: 1.6; color: var(--body); margin-bottom: 1rem;">Similar marks exist but differences in commercial goods, prior use affidavits, or distinct visual device styling may overcome Section 11 objections. Strategic filing required.</p>
-            <a class="text-link" href="/wordmark-registration/">Explore Strategy <span>→</span></a>
-          </article>
-
-          <article class="service-card" style="padding: 1.75rem;">
-            <div class="step-num" style="margin-bottom: 12px; font-size: 1.15rem; color: #c62828;">✕</div>
-            <h3 style="font-family: var(--sans); font-weight: 600; font-size: 1.35rem; color: var(--navy); margin-bottom: .6rem;">High Risk / Direct Conflict</h3>
-            <p style="font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem); line-height: 1.6; color: var(--body); margin-bottom: 1rem;">Identical or deceptively similar marks are actively registered for identical goods. We advise modifying the name or coining a distinctive prefix before capital is spent on branding.</p>
-            <a class="text-link" href="/resources/brand-name-search-guide/">Read Search Guide <span>→</span></a>
-          </article>
-        </CardCarousel>
       </div>
     </section>
 
@@ -298,4 +200,82 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
       </div>
     </section>
   </main>
+
+<style>
+  .clearance-lead {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--body);
+    margin: 14px 0 20px;
+    max-width: 580px;
+  }
+
+  /* Search Dimensions Navy Blue Section */
+  .section-search-dimensions {
+    background-color: #13233A !important;
+    color: #F4EFE4 !important;
+    padding: clamp(60px, 6vw, 84px) 0 !important;
+    border-block: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .section-search-dimensions .section-heading .eyebrow {
+    color: #D4A647 !important;
+  }
+  .section-search-dimensions .section-heading h2 {
+    color: #F4EFE4 !important;
+  }
+  .section-search-dimensions .section-heading .gold-rule {
+    background: #D4A647 !important;
+  }
+  .section-search-dimensions .section-heading p {
+    color: #D9DFE8 !important;
+  }
+
+  .search-dimensions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .search-dimension-card {
+    background: #1C2D46 !important;
+    border: 1px solid #3A4B61 !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .search-dimension-card:hover {
+    transform: translateY(-3px) !important;
+    border-color: #A8781A !important;
+    box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.45) !important;
+  }
+  .search-dimension-card .service-body {
+    padding: clamp(1.4rem, 2vw, 1.75rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-dimension-card .step-num {
+    margin-bottom: 14px;
+    background: rgba(168, 120, 26, 0.22) !important;
+    color: #D4A647 !important;
+    border: 1.5px solid rgba(212, 166, 71, 0.45) !important;
+  }
+  .search-dimension-card h3 {
+    margin: 0;
+    font-family: var(--sans);
+    font-size: clamp(1.15rem, 1.4vw, 1.3rem);
+    font-weight: 600;
+    line-height: 1.35;
+    color: #F4EFE4 !important;
+  }
+  @media (max-width: 860px) {
+    .search-dimensions-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  }
+</style>
+
 </BaseLayout>

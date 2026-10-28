@@ -729,7 +729,9 @@ body.bn-nav-open .bn-header,
   margin-top: 5px !important;
   stroke: var(--bn-gold) !important;
 }
-.bn-footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 20px; padding: 15px 0 17px; border-top: 1px solid var(--bn-line); font-size: var(--font-meta, 14px); color: #697486; }
+.bn-footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 20px; padding: 15px 0 17px; border-top: 1px solid var(--bn-line); font-size: var(--font-meta, 14px); color: #475569; }
+.bn-legal { display: inline-flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.bn-legal a { color: #475569; text-decoration: none; }
 .bn-legal a:hover { color: var(--bn-gold); }
 
 @media (max-width: 1100px) {
@@ -1025,7 +1027,7 @@ p.eyebrow,
 .hero-copy p.eyebrow {
   display: block;
   font-family: var(--sans);
-  color: var(--gold) !important;
+  color: var(--gold-dark, #8F6214) !important;
   font-size: var(--font-eyebrow);
   font-weight: 700;
   letter-spacing: .16em;
@@ -1172,6 +1174,20 @@ button:focus-visible {
   color: #FFFFFF !important;
 }
 
+.btn-gold .arrow,
+.btn-gold span.arrow,
+.button-gold .arrow,
+.button-gold span.arrow {
+  color: #FFFFFF !important;
+}
+
+.btn-gold:hover .arrow,
+.btn-gold:hover span.arrow,
+.button-gold:hover .arrow,
+.button-gold:hover span.arrow {
+  color: #FFFFFF !important;
+}
+
 /* 4. Inside Dark Panels (Navy CTA Cards) */
 .cta-panel .btn-outline,
 .cta-panel .btn-secondary,
@@ -1213,6 +1229,17 @@ button:focus-visible {
 .button:hover .arrow {
   transform: translateX(3px) !important;
   color: #C28A25 !important;
+}
+
+.btn-gold .arrow,
+.btn-gold span.arrow,
+.button-gold .arrow,
+.button-gold span.arrow,
+.btn-gold:hover .arrow,
+.btn-gold:hover span.arrow,
+.button-gold:hover .arrow,
+.button-gold:hover span.arrow {
+  color: #FFFFFF !important;
 }
 
 .btn svg,
@@ -1766,16 +1793,16 @@ button:focus-visible {
 }
 
 .process .section-heading .eyebrow {
-  color: #D4A647 !important;
+  color: var(--gold, #A8781A) !important;
   letter-spacing: .16em;
 }
 
 .process .section-heading h2 {
-  color: #F4EFE4 !important;
+  color: var(--navy, #13233A) !important;
 }
 
 .process .section-heading p:not(.eyebrow) {
-  color: #D9DFE8 !important;
+  color: var(--body, #334155) !important;
 }
 
 /* ==========================================================================
@@ -3298,8 +3325,6 @@ input:focus, select:focus, textarea:focus {
   flex-wrap: nowrap !important;
   gap: var(--bn-carousel-gap) !important;
   overflow-x: auto !important;
-  scroll-snap-type: x mandatory !important;
-  scroll-behavior: smooth !important;
   -webkit-overflow-scrolling: touch !important;
   scrollbar-width: none !important;
   margin: 0 !important;
@@ -3319,7 +3344,6 @@ input:focus, select:focus, textarea:focus {
   display: flex !important;
   flex-direction: column !important;
   box-sizing: border-box !important;
-  scroll-snap-align: start !important;
   flex-shrink: 0 !important;
 }
 
@@ -3455,27 +3479,31 @@ input:focus, select:focus, textarea:focus {
 }
 
 .bn-carousel-dot {
-  width: 8px !important;
-  height: 8px !important;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  background: transparent !important;
+  border: none !important;
   border-radius: 50% !important;
-  background: rgba(19, 35, 58, 0.22);
-  border: none;
-  padding: 0;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
   cursor: pointer;
   position: relative;
+}
+
+.bn-carousel-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(19, 35, 58, 0.22);
   transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
 
-.bn-carousel-dot::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  bottom: -8px;
-  left: -8px;
-  right: -8px;
-}
-
-.bn-carousel-dot:hover {
+.bn-carousel-dot:hover::after {
   background: rgba(19, 35, 58, 0.55);
 }
 
@@ -3484,32 +3512,40 @@ input:focus, select:focus, textarea:focus {
   outline-offset: 3px;
 }
 
-.bn-carousel-dot.active {
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50% !important;
+.bn-carousel-dot.active::after {
   background: var(--gold, #A8781A) !important;
   transform: scale(1.15);
   box-shadow: 0 1px 4px rgba(168, 120, 26, 0.35);
 }
 
 /* Dark Theme Sections Support for Carousel Dots */
+.included-section .bn-carousel-dot::after,
+.steps-section .bn-carousel-dot::after,
+#documents .bn-carousel-dot::after,
+.section-dark-advise .bn-carousel-dot::after,
+.section-dark .bn-carousel-dot::after,
+.dark-carousel .bn-carousel-dot::after {
+  background: rgba(244, 239, 228, 0.3) !important;
+}
+
+.included-section .bn-carousel-dot:hover::after,
+.steps-section .bn-carousel-dot:hover::after,
+#documents .bn-carousel-dot:hover::after,
+.section-dark-advise .bn-carousel-dot:hover::after,
+.section-dark .bn-carousel-dot:hover::after,
+.dark-carousel .bn-carousel-dot:hover::after {
+  background: rgba(244, 239, 228, 0.6) !important;
+}
+
 .included-section .bn-carousel-dot,
 .steps-section .bn-carousel-dot,
 #documents .bn-carousel-dot,
 .section-dark-advise .bn-carousel-dot,
 .section-dark .bn-carousel-dot,
 .dark-carousel .bn-carousel-dot {
-  background: rgba(244, 239, 228, 0.3) !important;
-}
-
-.included-section .bn-carousel-dot:hover,
-.steps-section .bn-carousel-dot:hover,
-#documents .bn-carousel-dot:hover,
-.section-dark-advise .bn-carousel-dot:hover,
-.section-dark .bn-carousel-dot:hover,
-.dark-carousel .bn-carousel-dot:hover {
-  background: rgba(244, 239, 228, 0.6) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 50% !important;
 }
 
 .included-section .bn-carousel-dot.active,
@@ -3518,8 +3554,32 @@ input:focus, select:focus, textarea:focus {
 .section-dark-advise .bn-carousel-dot.active,
 .section-dark .bn-carousel-dot.active,
 .dark-carousel .bn-carousel-dot.active {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.included-section .bn-carousel-dot.active::after,
+.steps-section .bn-carousel-dot.active::after,
+#documents .bn-carousel-dot.active::after,
+.section-dark-advise .bn-carousel-dot.active::after,
+.section-dark .bn-carousel-dot.active::after,
+.dark-carousel .bn-carousel-dot.active::after {
   background: #D4A647 !important;
+  border-radius: 50% !important;
+  transform: scale(1.15);
   box-shadow: 0 1px 4px rgba(212, 166, 71, 0.4) !important;
+}
+
+.included-section .bn-carousel-dot:focus-visible,
+.steps-section .bn-carousel-dot:focus-visible,
+#documents .bn-carousel-dot:focus-visible,
+.section-dark-advise .bn-carousel-dot:focus-visible,
+.section-dark .bn-carousel-dot:focus-visible,
+.dark-carousel .bn-carousel-dot:focus-visible {
+  outline: 2px solid #D4A647 !important;
+  outline-offset: 2px !important;
+  border-radius: 50% !important;
 }
 
 /* Desktop Hide when No Scroll Required */
@@ -3606,7 +3666,7 @@ input:focus, select:focus, textarea:focus {
   font-family: var(--sans, 'DM Sans', sans-serif) !important;
   font-size: 1.05rem !important;
   font-weight: 700 !important;
-  color: var(--gold, #A8781A) !important;
+  color: #D6A44F !important;
   flex: 0 0 32px !important;
   text-align: left !important;
   font-variant-numeric: tabular-nums !important;
@@ -3879,7 +3939,7 @@ input:focus, select:focus, textarea:focus {
     flex: 0 0 28px !important;
     min-width: 28px !important;
     line-height: 1.4 !important;
-    color: var(--gold, #A8781A) !important;
+    color: #D6A44F !important;
   }
 
   .faq-row-vbar {
@@ -3986,5 +4046,42 @@ input:focus, select:focus, textarea:focus {
   .faq-row-item .faq-row-content,
   .faq-row-item[open] .faq-row-content {
     animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   PRINT MEDIA RULES — CLEAN PRINTING & PDF EXPORT
+   ========================================================================== */
+@media print {
+  #bn-intro-overlay,
+  .bn-intro-overlay,
+  .bn-floating-whatsapp,
+  .skip-link,
+  .mobile-drawer,
+  .bn-mobile-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+  }
+
+  body.bn-intro-active,
+  html.bn-show-intro {
+    overflow: visible !important;
+    touch-action: auto !important;
+  }
+
+  /* Prevent SVG icon explosion in print */
+  svg {
+    max-width: 100%;
+  }
+
+  .bn-contact-line svg {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
   }
 }

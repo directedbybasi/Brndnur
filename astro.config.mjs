@@ -8,6 +8,7 @@ export default defineConfig({
   trailingSlash: 'always',
   build: {
     format: 'directory',
+    assets: 'site-assets',
   },
   integrations: [
     tailwind({

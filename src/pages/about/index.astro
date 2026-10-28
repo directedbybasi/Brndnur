@@ -1,20 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/hero/PageHero.astro';
-import CardCarousel from '../../components/CardCarousel.astro';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
 
 const title = "About BRNDNUR | Brand & Business Advisory LLP";
-const description = "Learn about BRNDNUR Advisory LLP: our client-focused approach to trademark registration guidance and practical business advisory in Kerala, India.";
+const description = "Learn about BRNDNUR Advisory LLP: our advisory-first approach to trademark registration, IP clearance, and business protection in Malappuram, Kerala.";
 const canonical = "https://brndnur.com/about/";
+const ogImage = "/assets/about-hero-guidance.webp";
+
+const aboutWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'About BRNDNUR',
+  sectionName: 'Hero Section',
+  enquiryType: 'Free Name Check Consultation',
+  message: 'Hi BRNDNUR, I would like to request a free preliminary brand name check to verify trademark availability. Could you please guide me through the search process, required details, and next steps?'
+});
 
 const aboutClosingWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'About BRNDNUR',
-  sectionName: 'Closing CTA Band',
-  enquiryType: 'General Advisory Consultation',
-  topic: 'I have reviewed your firm background and would like to discuss brand protection and advisory support for my business.',
-  details: 'My venture / requirement: [Please describe briefly]',
-  callToAction: 'Could you please explain how we can initiate an advisory consultation?'
+  sectionName: 'Closing Free Name Check Band',
+  enquiryType: 'Free Name Check Request',
+  message: 'Hi BRNDNUR, I would like to send my proposed brand name for an availability check and initial consultation. Could you please explain the clearance process, applicable fees, and the next steps?'
 });
 ---
 
@@ -22,19 +27,23 @@ const aboutClosingWhatsAppUrl = buildWhatsAppUrl({
   title={title}
   description={description}
   canonical={canonical}
+  ogImage={ogImage}
   currentPath="/about/"
+  hasCustomSchema={true}
 >
   <main id="main-content">
-    <!-- Hero Section (Harmonized with Reference Layout) -->
+    <!-- Hero Section -->
     <PageHero
-      eyebrow="About BRNDNUR Advisory LLP"
-      title="Guidance for Your Brand’s<br><span>Next Chapter.</span>"
+      eyebrow="ABOUT BRNDNUR ADVISORY LLP"
+      title="Your Brand Name.<br><span>Legally Yours.</span>"
       hasGoldRule={true}
-      description="BRNDNUR Advisory LLP is an independent business and brand advisory firm based in Manjeri, Malappuram, Kerala. We provide structured guidance to entrepreneurs, growing enterprises, and NRI founders seeking clear trademark protection and regulatory compliance."
+      description="We are a specialist trademark and IP advisory firm based in Malappuram. Our job is to make sure your brand is legally yours &mdash; before someone else makes it theirs."
       primaryCta={{
-        text: "Get in Touch",
-        href: "/contact/",
-        icon: "→"
+        text: "WhatsApp Free Name Check",
+        href: aboutWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
       }}
       secondaryCta={{
         text: "Explore Our Services",
@@ -43,210 +52,137 @@ const aboutClosingWhatsAppUrl = buildWhatsAppUrl({
       }}
       trustBadges={[
         { icon: "♢", title: "Trade Marks Act", subtitle: "1999 Guidance" },
-        { icon: "▱", title: "Based in", subtitle: "Manjeri, Kerala" },
-        { icon: "⌖", title: "Transparent", subtitle: "Statutory Scope" }
+        { icon: "▱", title: "Based in", subtitle: "Manjeri, Malappuram" },
+        { icon: "⌖", title: "Advisory-First", subtitle: "Not a Filing Agent" }
       ]}
       image="/assets/about-hero-guidance.webp"
-      imageAlt="BRNDNUR Advisory executive workspace in Manjeri, Kerala"
+      imageAlt="BRNDNUR Advisory executive workspace in Manjeri, Malappuram"
     />
 
-    <!-- Story Split Section (Harmonized with Homepage Why BRNDNUR) -->
-    <section class="section">
+    <!-- Who We Are (Condensed Single-Paragraph Advisory Section) -->
+    <section class="section about-story-section">
       <div class="container split-section">
         <div class="split-photo split-photo--portrait" data-ratio="portrait">
           <img src="/assets/about-values-integrity.webp" alt="BRNDNUR Advisory consultation scene and client portfolio" width="1000" height="1500" loading="lazy" decoding="async" />
         </div>
         <div class="split-copy">
-          <p class="eyebrow">Our Heritage &amp; Mission</p>
-          <h2>Clarity, Integrity, and Protection from Day One.</h2>
+          <p class="eyebrow">WHO WE ARE</p>
+          <h2>A Trademark Firm That Thinks About Consequences</h2>
           <div class="gold-rule"></div>
-          <p>Starting or expanding an enterprise brings a storm of questions: Is your brand name legally clear? What classes of the NICE classification protect your specific products? How do statutory concessions apply to your startup or MSME?</p>
-          <p>At BRNDNUR Advisory LLP, we bridge the gap between complex regulatory statutes and day-to-day business reality. Founded in Malabar, we advise local Kerala businesses, consumer brands, food ventures, and Gulf-return entrepreneurs with objective, transparent guidance before significant capital is committed.</p>
-          <div class="values">
-            <div class="value">
-              <span class="value-icon">♙</span>
-              <div>
-                <strong>Objective Risk Assessment</strong>
-                <p>Rigorous research, honest risk appraisal, and transparent filing preparation without false guarantees.</p>
-              </div>
-            </div>
-            <div class="value">
-              <span class="value-icon">▤</span>
-              <div>
-                <strong>Transparent Statutory Delineation</strong>
-                <p>Direct government receipts and an upfront separation of official statutory fees from professional advisory.</p>
-              </div>
-            </div>
-            <div class="value">
-              <span class="value-icon">▥</span>
-              <div>
-                <strong>Client-Focused Partnership</strong>
-                <p>Clear, responsive advisory built for long-term brand protection and commercial growth.</p>
-              </div>
-            </div>
+          
+          <blockquote class="about-quote">
+            <p>&ldquo;A trademark is not a formality. It is the only legal instrument that gives you the right to stop someone else from profiting from your brand.&rdquo;</p>
+          </blockquote>
+
+          <p class="story-lead">
+            BRNDNUR Advisory LLP was built around one observation: most businesses in Kerala seek trademark protection only after something goes wrong &mdash; a copycat surfaces, a bank flags a name conflict, or a franchise deal falls through because the brand isn't registered. By then, the options are expensive and the outcomes uncertain.
+          </p>
+          <p class="story-lead">
+            We work the other way. We help you understand your exposure before you have a problem, file in the right classes before a competitor does, and keep your registration current so you never lose rights you built. We are not a filing agent. We are an advisory firm. That means every engagement starts with a legal assessment of your situation &mdash; your business, your market, your risk &mdash; not a form submission.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Information Card Area -->
+    <section class="section company-details-section">
+      <div class="container">
+        <div class="section-heading text-center">
+          <p class="eyebrow">STATUTORY ENTITY DETAILS</p>
+          <h2>Company Information &amp; Jurisdiction</h2>
+          <div class="gold-rule" style="margin-inline: auto;"></div>
+        </div>
+
+        <div class="company-details-grid">
+          <div class="detail-card">
+            <span class="detail-kicker">ENTITY</span>
+            <h3>BRNDNUR Advisory LLP</h3>
+            <p>Registered Limited Liability Partnership &middot; <strong>IN ADC-8614</strong></p>
+          </div>
+
+          <div class="detail-card">
+            <span class="detail-kicker">REGISTERED OFFICE</span>
+            <h3>Manjeri, Malappuram</h3>
+            <p>MM33/2259, Durrah Tower, Industrial Estate Road, Manjeri Bazar, Malappuram, Kerala &ndash; 676121</p>
+          </div>
+
+          <div class="detail-card">
+            <span class="detail-kicker">PAN / TAN</span>
+            <h3>Tax Identifiers</h3>
+            <p>PAN: <strong>ABHFB7127R</strong> &middot; TAN: <strong>CHNB08136C</strong></p>
+          </div>
+
+          <div class="detail-card">
+            <span class="detail-kicker">CONTACT</span>
+            <h3>Client Coordination</h3>
+            <p>hello@brndnur.com &middot; WhatsApp responses within the same business day</p>
+          </div>
+
+          <div class="detail-card full-span">
+            <span class="detail-kicker">FILING JURISDICTION</span>
+            <h3>IP India &middot; Trade Marks Registry</h3>
+            <p>All 45 Nice Classification classes &middot; Pan-India Registry Representation</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Core Advisory Areas (Harmonized with Homepage Service Grid) -->
-    <section class="section section-alt">
+    <!-- Why BRNDNUR (3 Differentiators in 1 sentence each) -->
+    <section class="section why-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">What We Do</p>
-          <h2>Comprehensive Brand &amp; Regulatory Advisory.</h2>
-          <div class="gold-rule"></div>
-          <p>We focus on critical foundational legal steps that protect your identity and establish compliance across India.</p>
+        <div class="section-heading text-center">
+          <p class="eyebrow">WHY BRNDNUR</p>
+          <h2>What Sets Us Apart from a Filing Agent</h2>
+          <div class="gold-rule" style="margin-inline: auto;"></div>
         </div>
 
-        <CardCarousel id="about-services-carousel" ariaLabel="Core advisory services">
-          <article class="service-card">
-            <img src="/assets/about-card-trademark.webp" alt="Trademark registration services" width="1000" height="750" loading="lazy" />
-            <div class="service-body">
-              <h3>Trademark Guidance</h3>
-              <p>Comprehensive availability searches, classification across 45 NICE classes, application drafting, and monitoring under the Trade Marks Act, 1999.</p>
-              <a class="text-link" href="/trademark-registration/">Learn More <span>→</span></a>
-            </div>
+        <div class="differentiators-grid">
+          <article class="diff-card">
+            <span class="diff-num">01</span>
+            <h3>Legal Opinion, Not a Receipt</h3>
+            <p>A filing agent enters your data and submits a form. We analyse your business, identify the classes that actually protect you, and give you a written legal assessment &mdash; not a transaction confirmation.</p>
           </article>
 
-          <article class="service-card">
-            <img src="/assets/about-card-corporate.webp" alt="Business registration support" width="1000" height="750" loading="lazy" />
-            <div class="service-body">
-              <h3>Business Registration</h3>
-              <p>Structured onboarding for GST registrations, Udyam MSME certificates for 50% government fee benefits, and FSSAI licensing for food enterprises.</p>
-              <a class="text-link" href="/services/">Learn More <span>→</span></a>
-            </div>
+          <article class="diff-card">
+            <span class="diff-num">02</span>
+            <h3>Examination Reports Handled Properly</h3>
+            <p>An IP India Examination Report objection has a 30-day window. We draft a full legal reply with evidence &mdash; not an extension request followed by silence.</p>
           </article>
 
-          <article class="service-card">
-            <img src="/assets/about-card-search.webp" alt="Transparent pricing packages" width="1000" height="750" loading="lazy" />
-            <div class="service-body">
-              <h3>Transparent Pricing</h3>
-              <p>Every proposal clearly itemizes statutory Government fees versus BRNDNUR professional charges so you never encounter unexpected surprise billing.</p>
-              <a class="text-link" href="/packages/">Learn More <span>→</span></a>
-            </div>
+          <article class="diff-card">
+            <span class="diff-num">03</span>
+            <h3>Class Strategy, Not Class Guessing</h3>
+            <p>The wrong class gives you a registration that protects nothing. We map your business to every class a competitor could exploit &mdash; now and as you grow.</p>
           </article>
-        </CardCarousel>
-      </div>
-    </section>
-
-    <!-- Who We Help Section (Per BRAIN/03_PAGE_SPECS/01_MAIN_PAGES.md) -->
-    <section class="section section-dark-advise" id="who-we-advise">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Tailored Engagement</p>
-          <h2>Who We Advise &amp; Support.</h2>
-          <div class="gold-rule"></div>
-          <p>We tailor our advisory scope to the exact commercial stage and legal requirements of each client.</p>
-        </div>
-
-        <CardCarousel id="about-advise-carousel" class="dark-carousel" ariaLabel="Who we advise and support">
-          <article class="service-card advise-card">
-            <div class="advise-icon-circle" aria-hidden="true">♙</div>
-            <h3>Early-Stage Founders</h3>
-            <p>Preliminary brand clearance, conflict-free name validation, and cost-effective individual/startup filing under the Trade Marks Act, 1999.</p>
-            <a class="text-link" href="/packages/individual-msme/">Individual / MSME Package <span>→</span></a>
-          </article>
-
-          <article class="service-card advise-card">
-            <div class="advise-icon-circle" aria-hidden="true">▥</div>
-            <h3>Food &amp; Consumer Brands</h3>
-            <p>Multi-class protection across NICE Classes 29, 30, and 43 combined with mandatory FSSAI food licensing and packaging compliance.</p>
-            <a class="text-link" href="/packages/food-brand/">Food Brand Package <span>→</span></a>
-          </article>
-
-          <article class="service-card advise-card">
-            <div class="advise-icon-circle" aria-hidden="true">▤</div>
-            <h3>Growing Enterprises &amp; LLPs</h3>
-            <p>Corporate trademark holdings, brand portfolio restructuring, multi-class filings, and ongoing registry brand watch surveillance.</p>
-            <a class="text-link" href="/packages/company-llp/">Company &amp; LLP Package <span>→</span></a>
-          </article>
-
-          <article class="service-card advise-card">
-            <div class="advise-icon-circle" aria-hidden="true">⌖</div>
-            <h3>Gulf-Return Entrepreneurs</h3>
-            <p>Local advisory in Malabar for NRI founders launching manufacturing, hospitality, or retail ventures in Kerala with end-to-end setup.</p>
-            <a class="text-link" href="/packages/gulf-return-business/">Gulf-Return Package <span>→</span></a>
-          </article>
-        </CardCarousel>
-      </div>
-    </section>
-
-    <!-- Working Principles (Harmonized with Homepage Process Steps) -->
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Our Working Principles</p>
-          <h2>How We Build Enduring Partnerships.</h2>
-          <div class="gold-rule"></div>
-          <p>Our advisory philosophy is governed by three non-negotiable standards of professional practice.</p>
-        </div>
-
-        <CardCarousel id="about-principles-carousel" ariaLabel="Our working principles">
-          <article class="step">
-            <div class="step-top">
-              <span class="step-num">01</span>
-              <span class="step-line"></span>
-            </div>
-            <h3>Commercial Understanding</h3>
-            <p>We evaluate your long-term business roadmap, distribution channels, and export goals before recommending classes or corporate structures.</p>
-          </article>
-
-          <article class="step">
-            <div class="step-top">
-              <span class="step-num">02</span>
-              <span class="step-line"></span>
-            </div>
-            <h3>Complete Transparency</h3>
-            <p>Government fees and professional fees are distinctly separated. You receive official e-filing receipts directly from government portals.</p>
-          </article>
-
-          <article class="step">
-            <div class="step-top">
-              <span class="step-num">03</span>
-              <span class="step-line"></span>
-            </div>
-            <h3>Diligence &amp; Accuracy</h3>
-            <p>We meticulously verify entity constitutions, user date affidavits, and power of attorney documents to avoid avoidable registry objections.</p>
-          </article>
-        </CardCarousel>
-
-        <div style="text-align: center; margin-top: 2.5rem;">
-          <a class="btn btn-navy" href="/how-it-works/">See How Our Process Works <span class="arrow">→</span></a>
         </div>
       </div>
     </section>
 
-    <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
-    <section class="cta-band">
-      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
-      <div class="container cta-inner">
-        <div class="cta-copy">
-          <p class="eyebrow">Partner With Us</p>
-          <h2>Ready to Take the Next Step<br>for Your Brand?</h2>
-          <p>Whether you need a preliminary brand search or comprehensive business setup advisory, our team in Kerala is ready to assist you.</p>
-          <a class="btn btn-gold" href={aboutClosingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Discuss Your Requirements on WhatsApp <span>→</span></a>
-        </div>
-        <div class="cta-benefits">
-          <div class="cta-benefit">
-            <span class="value-icon">☏</span>
-            <div>
-              <strong>Direct Advisory</strong>
-              <p>Speak directly with our team in Manjeri.</p>
+    <!-- Final Free Name Check CTA -->
+    <section class="section about-cta-section">
+      <div class="container">
+        <div class="about-cta-box">
+          <div class="about-cta-main">
+            <h2>Start with a Free Name Check.</h2>
+            <p>Send us your brand name via WhatsApp. We search IP India across all relevant classes and tell you exactly what's at risk &mdash; free, with no obligation.</p>
+            <div style="margin-top: 24px;">
+              <a class="btn btn-gold" href={aboutClosingWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+                WhatsApp Free Name Check <span class="arrow">&rarr;</span>
+              </a>
             </div>
           </div>
-          <div class="cta-benefit">
-            <span class="value-icon">♢</span>
-            <div>
-              <strong>Confidential Discussions</strong>
-              <p>Your business assets are handled with strict care.</p>
+          <div class="about-cta-meta">
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">&#128205;</span>
+              <span>Durrah Tower, Industrial Estate Road, Manjeri Bazar, Malappuram &ndash; 676121</span>
             </div>
-          </div>
-          <div class="cta-benefit">
-            <span class="value-icon">♧</span>
-            <div>
-              <strong>Comprehensive Support</strong>
-              <p>Guidance from preliminary search to final certificate.</p>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">&#9993;</span>
+              <span>hello@brndnur.com</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">&#128336;</span>
+              <span>Name search in 24 hours &middot; WhatsApp: same business day.</span>
             </div>
           </div>
         </div>
@@ -255,22 +191,225 @@ const aboutClosingWhatsAppUrl = buildWhatsAppUrl({
   </main>
 </BaseLayout>
 
-<style>
+<style is:global>
+:root {
+  --ivory: #F4EFE4;
+  --ivory-soft: #F8F4EB;
+  --ivory-deep: #EDE3D1;
+  --navy: #13233A;
+  --navy-deep: #0C1C2C;
+  --gold: #A8781A;
+  --gold-pale: #F0E2C8;
+  --line: #DCCEB6;
+  --body: #334155;
+  --serif: "DM Sans", Arial, Helvetica, sans-serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ivory); color: var(--navy); font-family: var(--sans); }
+.container { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
+.section { padding-block: 72px; }
+.text-center { text-align: center; }
+
+.eyebrow {
+  display: block; color: var(--gold); font-size: 11.5px; line-height: 1.45; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; margin: 0 0 10px;
+}
+h2 { font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin-bottom: 12px; }
+.gold-rule { width: 36px; height: 2px; background: var(--gold); margin: 14px 0 18px; }
+
+/* Story Split */
+.split-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 4vw, 56px);
+  align-items: center;
+}
+.split-photo {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(19, 35, 58, 0.08);
+  aspect-ratio: 3 / 4;
+  max-width: 420px;
+}
+.split-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.about-quote {
+  border-left: 3px solid var(--gold);
+  margin: 0 0 20px 0;
+  padding: 8px 0 8px 18px;
+  background: rgba(168, 120, 26, 0.05);
+  border-radius: 0 6px 6px 0;
+}
+.about-quote p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--navy);
+  margin: 0;
+}
+.story-lead {
+  font-size: 1.05rem;
+  line-height: 1.68;
+  color: #2D3A4B;
+  margin-bottom: 16px;
+}
+
+/* Company Details Grid */
+.company-details-section {
+  background: #FAF6EF;
+  border-block: 1px solid var(--line);
+}
+.company-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 36px;
+}
+.detail-card {
+  background: #FFFCF6;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px 24px;
+}
+.detail-card.full-span {
+  grid-column: span 2;
+}
+.detail-kicker {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.detail-card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 6px;
+  color: var(--navy);
+}
+.detail-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4A5568;
+  margin: 0;
+}
+
+/* Differentiators Grid */
+.why-section {
+  background: var(--ivory);
+}
+.differentiators-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+.diff-card {
+  background: #FFFCF6;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 12px rgba(19, 35, 58, 0.03);
+}
+.diff-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 12px;
+}
+.diff-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 0 0 10px;
+  color: var(--navy);
+}
+.diff-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4A5568;
+  margin: 0;
+}
+
+/* About CTA Box */
+.about-cta-section {
+  padding-bottom: 80px;
+}
+.about-cta-box {
+  background: var(--navy);
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 44px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+}
+.about-cta-main h2 {
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+.about-cta-main p {
+  color: rgba(244, 239, 228, 0.88);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.about-cta-meta {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(168, 120, 26, 0.3);
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(244, 239, 228, 0.9);
+}
+.meta-icon {
+  font-size: 16px;
+  line-height: 1;
+  color: #D4A647;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px;
+  padding: 12px 22px; border-radius: 6px; font-size: 14.5px; font-weight: 600; line-height: 1.3;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease; cursor: pointer; text-decoration: none;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-gold { background: var(--gold); color: #FFFFFF; border: 1.5px solid var(--gold); }
+.btn-gold:hover { background: #8F6214; border-color: #8F6214; }
+
+@media (max-width: 900px) {
+  .split-section, .about-cta-box {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
   .split-photo {
-    aspect-ratio: 3 / 4;
-    max-width: 380px;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
   }
-  .split-photo img {
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center 35%;
+  .company-details-grid {
+    grid-template-columns: 1fr;
   }
-  @media (max-width: 767px) {
-    .split-photo,
-    .split-photo img {
-      aspect-ratio: 3 / 4 !important;
-      max-width: 340px !important;
-      object-position: center 35% !important;
-    }
+  .detail-card.full-span {
+    grid-column: span 1;
   }
+  .differentiators-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
