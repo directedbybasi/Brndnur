@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/hero/PageHero.astro';
 import { getAllArticles, type ArticleData } from '../../utils/blog';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
 
@@ -59,6 +60,13 @@ const title = "Trademark Knowledge Hub & Guides | BRNDNUR Resources";
 const description = "Plain-language guides, checklists, and timelines on Indian trademark law and business compliance, written for business owners by BRNDNUR Advisory LLP.";
 const canonical = "https://brndnur.com/resources/";
 
+const resourcesHeroWhatsAppUrl = buildWhatsAppUrl({
+  pageName: 'Resources Hub',
+  sectionName: 'Hero Section',
+  enquiryType: 'Knowledge Center Advisory',
+  message: 'Hi BRNDNUR, I am exploring your trademark resources and would like advisory assistance for my brand registration.'
+});
+
 const resourcesClosingWhatsAppUrl = buildWhatsAppUrl({
   pageName: 'Resources Hub',
   sectionName: 'Closing CTA Band',
@@ -74,14 +82,32 @@ const resourcesClosingWhatsAppUrl = buildWhatsAppUrl({
   currentPath="/resources/"
 >
   <main id="main-content">
-    <!-- Header Section (Harmonized with Reference PDF) -->
-    <section class="resources-hero-section">
-      <div class="container">
-        <p class="hub-eyebrow">TRADEMARK KNOWLEDGE HUB</p>
-        <h1 class="hub-title">Everything You Need to Know<br>Before <em>Someone Else Files Your Name.</em></h1>
-        <p class="hub-subtitle">Plain-language guides, checklists, and timelines on Indian trademark law — written for business owners, not lawyers.</p>
-      </div>
-    </section>
+    <!-- Hero Section (Harmonized with PageHero Design System) -->
+    <PageHero
+      eyebrow="TRADEMARK KNOWLEDGE HUB"
+      title="Everything You Need to Know<br>Before <span>Someone Else Files Your Name.</span>"
+      hasGoldRule={true}
+      description="Plain-language guides, checklists, and timelines on Indian trademark law — written for business owners, not lawyers."
+      primaryCta={{
+        text: "Explore Kerala Guides",
+        href: "#kerala-guides",
+        icon: "↓"
+      }}
+      secondaryCta={{
+        text: "WhatsApp Inquiry",
+        href: resourcesHeroWhatsAppUrl,
+        icon: "→",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }}
+      trustBadges={[
+        { icon: "♢", title: "Trade Marks Act", subtitle: "1999 Guidance" },
+        { icon: "▱", title: "14 Kerala Districts", subtitle: "Local Guides" },
+        { icon: "⌖", title: "Statutory Insights", subtitle: "Clear & Objective" }
+      ]}
+      image="/assets/resources-hero-knowledge.webp"
+      imageAlt="BRNDNUR Trademark Knowledge Hub and Legal Reference Library"
+    />
 
     <!-- Kerala Regional Location Guides Directory (Preserved Comprehensive Database) -->
     <section class="section regional-archive-section" id="kerala-guides">
@@ -440,39 +466,6 @@ const resourcesClosingWhatsAppUrl = buildWhatsAppUrl({
 </script>
 
 <style>
-  /* Resources Hero (Harmonized with Reference PDF) */
-  .resources-hero-section {
-    padding: clamp(48px, 6vw, 72px) 0;
-    background: #F4EFE4;
-    border-bottom: 1px solid #EAE0D0;
-  }
-  .hub-eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    color: #A8781A;
-    text-transform: uppercase;
-    margin: 0 0 14px 0;
-  }
-  .hub-title {
-    font-family: var(--serif, 'Playfair Display', Georgia, serif);
-    font-size: clamp(32px, 4.5vw, 48px);
-    line-height: 1.15;
-    color: #13233A;
-    margin: 0 0 16px 0;
-  }
-  .hub-title em {
-    font-style: italic;
-    color: #A8781A;
-  }
-  .hub-subtitle {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #566174;
-    max-width: 660px;
-    margin: 0;
-  }
-
   /* Regional Archive Section */
   .regional-archive-section {
     padding: 60px 0;
