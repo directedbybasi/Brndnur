@@ -84,48 +84,6 @@ const aboutClosingWhatsAppUrl = buildWhatsAppUrl({
       </div>
     </section>
 
-    <!-- Company Information Card Area -->
-    <section class="section company-details-section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <p class="eyebrow">STATUTORY ENTITY DETAILS</p>
-          <h2>Company Information &amp; Jurisdiction</h2>
-          <div class="gold-rule" style="margin-inline: auto;"></div>
-        </div>
-
-        <div class="company-details-grid">
-          <div class="detail-card">
-            <span class="detail-kicker">ENTITY</span>
-            <h3>BRNDNUR Advisory LLP</h3>
-            <p>Registered Limited Liability Partnership &middot; <strong>IN ADC-8614</strong></p>
-          </div>
-
-          <div class="detail-card">
-            <span class="detail-kicker">REGISTERED OFFICE</span>
-            <h3>Manjeri, Malappuram</h3>
-            <p>MM33/2259, Durrah Tower, Industrial Estate Road, Manjeri Bazar, Malappuram, Kerala &ndash; 676121</p>
-          </div>
-
-          <div class="detail-card">
-            <span class="detail-kicker">PAN / TAN</span>
-            <h3>Tax Identifiers</h3>
-            <p>PAN: <strong>ABHFB7127R</strong> &middot; TAN: <strong>CHNB08136C</strong></p>
-          </div>
-
-          <div class="detail-card">
-            <span class="detail-kicker">CONTACT</span>
-            <h3>Client Coordination</h3>
-            <p><a href="mailto:brndnuradvisoryllp@gmail.com" class="about-contact-email">brndnuradvisoryllp@gmail.com</a> &middot; WhatsApp responses within the same business day</p>
-          </div>
-
-          <div class="detail-card full-span">
-            <span class="detail-kicker">FILING JURISDICTION</span>
-            <h3>IP India &middot; Trade Marks Registry</h3>
-            <p>All 45 Nice Classification classes &middot; Pan-India Registry Representation</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Why BRNDNUR (3 Differentiators in 1 sentence each) -->
     <section class="section why-section">
@@ -256,45 +214,6 @@ h2 { font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin-bottom: 12
   margin-bottom: 16px;
 }
 
-/* Company Details Grid */
-.company-details-section {
-  background: #FAF6EF;
-  border-block: 1px solid var(--line);
-}
-.company-details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-top: 36px;
-}
-.detail-card {
-  background: #FFFCF6;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 22px 24px;
-}
-.detail-card.full-span {
-  grid-column: span 2;
-}
-.detail-kicker {
-  display: block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--gold);
-  margin-bottom: 6px;
-}
-.detail-card h3 {
-  font-size: 1.25rem;
-  margin: 0 0 6px;
-  color: var(--navy);
-}
-.detail-card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #4A5568;
-  margin: 0;
-}
 
 /* Differentiators Grid */
 .why-section {
@@ -383,16 +302,6 @@ h2 { font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin-bottom: 12
   flex-shrink: 0;
 }
 
-.about-contact-email {
-  color: var(--navy);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.2s ease;
-}
-.about-contact-email:hover {
-  color: var(--gold);
-}
 
 .about-meta-email {
   color: inherit;
@@ -422,12 +331,6 @@ h2 { font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin-bottom: 12
   .split-photo {
     max-width: 100%;
     aspect-ratio: 4 / 3;
-  }
-  .company-details-grid {
-    grid-template-columns: 1fr;
-  }
-  .detail-card.full-span {
-    grid-column: span 1;
   }
   .differentiators-grid {
     grid-template-columns: 1fr;
