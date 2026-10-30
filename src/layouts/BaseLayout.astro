@@ -3,6 +3,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import IntroAnimation from '../components/IntroAnimation.astro';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import fs from 'node:fs';
+import path from 'node:path';
 import '../styles/global.css';
 import '../styles/motion.css';
 
@@ -15,6 +17,8 @@ interface Props {
   currentPath?: string;
   robots?: string;
   hasCustomSchema?: boolean;
+  heroImage?: string;
+  heroImageMobile?: string;
 }
 
 const {
@@ -26,6 +30,8 @@ const {
   currentPath = '/',
   robots = 'index, follow, max-image-preview:large',
   hasCustomSchema = false,
+  heroImage,
+  heroImageMobile,
 } = Astro.props;
 
 const siteName = 'BRNDNUR Advisory LLP';
@@ -33,6 +39,21 @@ const isHome = currentPath === '/' || currentPath === '' || currentPath === '/in
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://brndnur.com${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
 
 const isIndexable = !robots.includes('noindex');
+
+// Responsive hero image preloading computation
+const desktopHero = heroImage ? (heroImage.endsWith('.webp') ? heroImage : heroImage.replace(/\.(png|jpe?g)$/i, '.webp')) : '';
+const candidateMobileHero = heroImageMobile || (desktopHero ? desktopHero.replace(/\.webp$/i, '-mobile.webp') : '');
+let hasMobileHero = false;
+let mobileHero = desktopHero;
+if (candidateMobileHero) {
+  try {
+    const localMobile = path.join(process.cwd(), 'public', candidateMobileHero.replace(/^\//, ''));
+    if (fs.existsSync(localMobile)) {
+      hasMobileHero = true;
+      mobileHero = candidateMobileHero;
+    }
+  } catch(e) {}
+}
 
 // High-fidelity structured data incorporating WebPage, WebSite, Breadcrumbs, and ProfessionalService/LegalService entity
 const defaultSchema = isIndexable && !hasCustomSchema ? {
@@ -65,16 +86,17 @@ const defaultSchema = isIndexable && !hasCustomSchema ? {
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Skatt Business Park",
-        "addressLocality": "Manjeri",
+        "addressLocality": "Manjeri, Malappuram",
         "addressRegion": "Kerala",
         "postalCode": "676121",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 11.1219,
-        "longitude": 76.1210
+        "latitude": 11.117737,
+        "longitude": 76.1179931
       },
+      "hasMap": "https://www.google.com/maps/place/Skatt+Business+Park+Manjeri/@11.117737,76.1154182,17z/data=!4m7!3m6!1s0x3ba637bf4f77ff6f:0xbda0700b92d1cffc!4b1!8m2!3d11.117737!4d76.1179931!16s%2Fg%2F11xh27nsrc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -168,9 +190,9 @@ const defaultSchema = isIndexable && !hasCustomSchema ? {
 
   <!-- Geographic & Local Entity Metadata -->
   <meta name="geo.region" content="IN-KL">
-  <meta name="geo.placename" content="Manjeri, Malappuram, Kerala">
-  <meta name="geo.position" content="11.1219;76.1210">
-  <meta name="ICBM" content="11.1219, 76.1210">
+  <meta name="geo.placename" content="Skatt Business Park, Manjeri, Malappuram, Kerala - 676121">
+  <meta name="geo.position" content="11.117737;76.1179931">
+  <meta name="ICBM" content="11.117737, 76.1179931">
   <meta name="author" content="BRNDNUR Advisory LLP">
   <meta name="theme-color" content="#13233A">
 
@@ -201,11 +223,23 @@ const defaultSchema = isIndexable && !hasCustomSchema ? {
   <!-- Typography & Preconnect (Optimized Non-Render-Blocking Google Fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" media="print" onload="this.media='all'">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" media="print" onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
   </noscript>
+
+  <!-- Above-the-Fold LCP Hero Image Preload -->
+  {desktopHero && (
+    hasMobileHero ? (
+      <>
+        <link rel="preload" as="image" href={mobileHero} media="(max-width: 768px)" type="image/webp" fetchpriority="high" />
+        <link rel="preload" as="image" href={desktopHero} media="(min-width: 769px)" type="image/webp" fetchpriority="high" />
+      </>
+    ) : (
+      <link rel="preload" as="image" href={desktopHero} type="image/webp" fetchpriority="high" />
+    )
+  )}
 
   {defaultSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(defaultSchema)} />
@@ -268,7 +302,9 @@ const defaultSchema = isIndexable && !hasCustomSchema ? {
       }
     });
   </script>
-  <script is:inline src="/scripts/carousel.js" defer></script>
+  {['/', '/packages/', '/how-it-works/', '/trademark-registration/'].some(p => currentPath === p || currentPath === p.slice(0, -1)) && (
+    <script is:inline src="/scripts/carousel.js" defer></script>
+  )}
   <script is:inline src="/scripts/motion.js" defer></script>
 </body>
 </html>

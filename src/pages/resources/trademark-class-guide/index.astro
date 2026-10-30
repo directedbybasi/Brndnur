@@ -1,17 +1,19 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import PageHero from '../../../components/hero/PageHero.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/hero/PageHero.astro";
 
 const title = "Trademark Class Guide (Classes 1–45) | BRNDNUR Advisory LLP";
-const description = "Understand the Nice Classification system for Indian trademarks. Learn how to identify goods and services classes and avoid misclassification mistakes.";
+const description =
+  "Understand the Nice Classification system for Indian trademarks. Learn how to identify goods and services classes and avoid misclassification mistakes.";
 const canonical = "https://brndnur.com/resources/trademark-class-guide/";
-import { buildWhatsAppUrl } from '../../../utils/whatsapp';
+import { buildWhatsAppUrl } from "../../../utils/whatsapp";
 
 const closingWhatsAppUrl = buildWhatsAppUrl({
   pageName: "Trademark Class Guide",
   sectionName: "Guide Closing CTA",
   enquiryType: "Trademark Class Mapping",
-  message: "Hi BRNDNUR, I have read your Trademark Class Guide and need assistance selecting the correct trademark classes for my business. Could you please guide me on class classification, multi-class fees, and next steps?"
+  message:
+    "Hi BRNDNUR, I have read your Trademark Class Guide and need assistance selecting the correct trademark classes for my business. Could you please guide me on class classification, multi-class fees, and next steps?",
 });
 ---
 
@@ -20,6 +22,7 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
   description={description}
   canonical={canonical}
   currentPath="/resources/trademark-class-guide/"
+  heroImage="/assets/guide-class-hero.webp"
 >
   <main id="main-content">
     <!-- Hero Section (Harmonized with Reference Layout) -->
@@ -31,20 +34,22 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
       primaryCta={{
         text: "View Commercial Classes",
         href: "/trademark-classes/",
-        icon: "→"
+        icon: "→",
       }}
       secondaryCta={{
         text: "Back to Resources",
         href: "/resources/",
-        icon: "→"
+        icon: "→",
       }}
       trustBadges={[
         { icon: "♢", title: "45 International", subtitle: "NICE Classes" },
         { icon: "▱", title: "Classes 1–34", subtitle: "Physical Goods" },
-        { icon: "⌖", title: "Classes 35–45", subtitle: "Services" }
+        { icon: "⌖", title: "Classes 35–45", subtitle: "Services" },
       ]}
       image="/assets/guide-class-hero.webp"
       imageAlt="Trademark class identification and statutory categorization guidance"
+      imagePosition="right 42%"
+      imagePositionMobile="57% 54%"
     />
 
     <!-- Guide Content -->
@@ -56,7 +61,13 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
               <span class="value-icon">♙</span>
               <div>
                 <strong>Classification Core Rule</strong>
-                <p>Under Indian trademark law, registration is strictly class-specific. Owning a trademark in Class 25 (Apparel) does not prevent an unrelated entity from registering the same name in Class 30 (Spices) unless your mark is officially declared a Well-Known mark under Section 11(8).</p>
+                <p>
+                  Under Indian trademark law, registration is strictly
+                  class-specific. Owning a trademark in Class 25 (Apparel) does
+                  not prevent an unrelated entity from registering the same name
+                  in Class 30 (Spices) unless your mark is officially declared a
+                  Well-Known mark under Section 11(8).
+                </p>
               </div>
             </div>
           </div>
@@ -64,10 +75,23 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
           <p class="eyebrow">International Standards</p>
           <h2>1. The Architecture of the Nice Classification</h2>
           <div class="gold-rule"></div>
-          <p>India follows the Nice Agreement concerning the International Classification of Goods and Services. The system divides commerce into 45 classes:</p>
+          <p>
+            India follows the Nice Agreement concerning the International
+            Classification of Goods and Services. The system divides commerce
+            into 45 classes:
+          </p>
           <ul>
-            <li><strong>Classes 1 to 34 (Goods):</strong> Physical products ranging from raw agricultural produce and industrial chemicals to packaged foods, textiles, electronics, and cosmetics.</li>
-            <li><strong>Classes 35 to 45 (Services):</strong> Commercial activities including advertising and retail (Class 35), financial operations (Class 36), telecommunications (Class 38), software &amp; SaaS (Class 42), and hospitality &amp; dining (Class 43).</li>
+            <li>
+              <strong>Classes 1 to 34 (Goods):</strong> Physical products ranging
+              from raw agricultural produce and industrial chemicals to packaged foods,
+              textiles, electronics, and cosmetics.
+            </li>
+            <li>
+              <strong>Classes 35 to 45 (Services):</strong> Commercial activities
+              including advertising and retail (Class 35), financial operations (Class
+              36), telecommunications (Class 38), software &amp; SaaS (Class 42),
+              and hospitality &amp; dining (Class 43).
+            </li>
           </ul>
 
           <p class="eyebrow">Key Commercial Sectors</p>
@@ -96,22 +120,32 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
                 <tr>
                   <td><strong>Class 30</strong></td>
                   <td>Spices &amp; Bakery</td>
-                  <td>Spices, tea, coffee, bakery goods, confectionery, snacks</td>
+                  <td
+                    >Spices, tea, coffee, bakery goods, confectionery, snacks</td
+                  >
                 </tr>
                 <tr>
                   <td><strong>Class 35</strong></td>
                   <td>Retail &amp; E-Com</td>
-                  <td>Retail stores, supermarkets, e-commerce platforms, marketing</td>
+                  <td
+                    >Retail stores, supermarkets, e-commerce platforms,
+                    marketing</td
+                  >
                 </tr>
                 <tr>
                   <td><strong>Class 42</strong></td>
                   <td>Tech &amp; SaaS</td>
-                  <td>Software engineering, cloud hosting, SaaS platforms, IT design</td>
+                  <td
+                    >Software engineering, cloud hosting, SaaS platforms, IT
+                    design</td
+                  >
                 </tr>
                 <tr>
                   <td><strong>Class 43</strong></td>
                   <td>Restaurants</td>
-                  <td>Restaurants, cafes, cloud kitchens, catering, hotel stays</td>
+                  <td
+                    >Restaurants, cafes, cloud kitchens, catering, hotel stays</td
+                  >
                 </tr>
               </tbody>
             </table>
@@ -120,25 +154,51 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
           <p class="eyebrow">Statutory Fee Rules</p>
           <h2>3. Multi-Class Applications (Form TM-A)</h2>
           <div class="gold-rule"></div>
-          <p>Under the Trade Marks Rules, 2017, applicants can file a single application covering multiple classes. However, statutory government fees multiply with each added class (₹4,500/class for MSMEs/individuals, ₹9,000/class for standard companies).</p>
+          <p>
+            Under the Trade Marks Rules, 2017, applicants can file a single
+            application covering multiple classes. However, statutory government
+            fees multiply with each added class (₹4,500/class for
+            MSMEs/individuals, ₹9,000/class for standard companies).
+          </p>
 
           <p class="eyebrow">Allied Goods &amp; Services</p>
           <h2>4. Cross-Class Conflicts</h2>
           <div class="gold-rule"></div>
-          <p>Registry examiners inspect closely allied classes. For example, a restaurant brand in Class 43 that expands into selling packaged curry powders in Class 30 could encounter relative grounds of objection under Section 11 if a confusingly similar brand already occupies Class 30.</p>
+          <p>
+            Registry examiners inspect closely allied classes. For example, a
+            restaurant brand in Class 43 that expands into selling packaged
+            curry powders in Class 30 could encounter relative grounds of
+            objection under Section 11 if a confusingly similar brand already
+            occupies Class 30.
+          </p>
         </article>
       </div>
     </section>
 
     <!-- Signature Full-Width Dark Navy CTA Band (Harmonized with Homepage) -->
     <section class="cta-band">
-      <img class="cta-leaves" src="/assets/cta-leaves.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+      <img
+        class="cta-leaves"
+        src="/assets/cta-leaves.webp"
+        alt=""
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+      />
       <div class="container cta-inner">
         <div class="cta-copy">
           <p class="eyebrow">Need Class Guidance?</p>
-          <h2>Map Your Commercial Catalog<br>with Our Advisors.</h2>
-          <p>Send us your product list for a tailored classification assessment.</p>
-          <a class="btn btn-gold" href={closingWhatsAppUrl} target="_blank" rel="noopener noreferrer">Inquire on WhatsApp <span>→</span></a>
+          <h2>Map Your Commercial Catalog<br />with Our Advisors.</h2>
+          <p>
+            Send us your product list for a tailored classification assessment.
+          </p>
+          <a
+            class="btn btn-gold"
+            href={closingWhatsAppUrl}
+            target="_blank"
+            rel="noopener noreferrer">Inquire on WhatsApp <span>→</span></a
+          >
         </div>
         <div class="cta-benefits">
           <div class="cta-benefit">
@@ -152,7 +212,10 @@ const closingWhatsAppUrl = buildWhatsAppUrl({
             <span class="value-icon">♢</span>
             <div>
               <strong>Fee Optimization</strong>
-              <p>Eliminate unnecessary classes to reduce non-refundable statutory fees.</p>
+              <p>
+                Eliminate unnecessary classes to reduce non-refundable statutory
+                fees.
+              </p>
             </div>
           </div>
           <div class="cta-benefit">

@@ -51,6 +51,7 @@ const oppositionWhatsAppUrl = buildWhatsAppUrl({
   canonical={canonical}
   ogImage={ogImage}
   currentPath="/services/"
+  heroImage="/services/assets/hero-trademark.webp"
   hasCustomSchema={true}
 >
   <Fragment slot="head">
@@ -161,6 +162,8 @@ const oppositionWhatsAppUrl = buildWhatsAppUrl({
       ]}
       image="/services/assets/hero-trademark.webp"
       imageAlt="BRNDNUR Services - Build. Protect. Grow Your Brand"
+      imagePosition="right 40%"
+      imagePositionMobile="57% 54%"
       variant="service"
     />
 
@@ -478,7 +481,7 @@ const oppositionWhatsAppUrl = buildWhatsAppUrl({
   </main>
 </BaseLayout>
 
-<style is:global>
+<style>
 :root {
   --ivory: #F4EFE4;
   --ivory-soft: #F8F4EB;
@@ -497,15 +500,15 @@ const oppositionWhatsAppUrl = buildWhatsAppUrl({
   --content: 1200px;
   --shadow: 0 12px 28px rgba(35, 30, 20, .07);
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+
 body {
   margin: 0; background: var(--ivory); color: var(--ink); font-family: var(--sans);
   font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
-img { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; }
+
+
+
 .wrap { width: min(var(--content), calc(100% - 96px)); margin-inline: auto; }
 .eyebrow {
   display: block; color: var(--gold); font-size: 11.5px; line-height: 1.45; font-weight: 700;

@@ -7,8 +7,11 @@ module.exports = {
         '/trademark-registration/',
         '/services/',
         '/packages/',
+        '/about/',
+        '/how-it-works/',
         '/faqs/',
         '/contact/',
+        '/resources/',
       ],
       numberOfRuns: 1,
       settings: {

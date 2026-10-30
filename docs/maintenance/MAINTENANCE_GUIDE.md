@@ -116,4 +116,4 @@ When maintaining or updating this project, the following core invariants must be
 4. **Universal 5-Second Autoplay:**
    All card tracks, carousels, and image sliders must advance every `5000ms`, with hover/focus pause enabled and reduced-motion respected.
 5. **Verified Contact Details:**
-   Official office: *Skatt Business Park, Manjeri*. Phone: `+91 90481 88899`. Email: `brndnuradvisoryllp@gmail.com`.
+   Official office: *Skatt Business Park, Manjeri, Malappuram - 676121*. Phone: `+91 90481 88899`. Email: `brndnuradvisoryllp@gmail.com`.

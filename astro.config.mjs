@@ -9,6 +9,7 @@ export default defineConfig({
   build: {
     format: 'directory',
     assets: 'site-assets',
+    inlineStylesheets: 'always',
   },
   integrations: [
     tailwind({

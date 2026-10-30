@@ -29,6 +29,7 @@ const aboutClosingWhatsAppUrl = buildWhatsAppUrl({
   canonical={canonical}
   ogImage={ogImage}
   currentPath="/about/"
+  heroImage="/assets/about-hero-guidance.webp"
   hasCustomSchema={true}
 >
   <main id="main-content">
@@ -52,11 +53,14 @@ const aboutClosingWhatsAppUrl = buildWhatsAppUrl({
       }}
       trustBadges={[
         { icon: "♢", title: "Trade Marks Act", subtitle: "1999 Guidance" },
-        { icon: "▱", title: "Based in", subtitle: "Manjeri, Malappuram" },
+        { icon: "▱", title: "Based in", subtitle: "Skatt Business Park, Manjeri, Malappuram - 676121" },
         { icon: "⌖", title: "Advisory-First", subtitle: "Not a Filing Agent" }
       ]}
       image="/assets/about-hero-guidance.webp"
       imageAlt="BRNDNUR Advisory executive workspace in Manjeri, Malappuram"
+      imagePosition="left 35%"
+      imagePositionMobile="50% 50%"
+      imageTransform="scale(1.25) translateX(14%) translateY(-2%)"
     />
 
     <!-- Who We Are (Condensed Single-Paragraph Advisory Section) -->
@@ -164,33 +168,7 @@ const aboutClosingWhatsAppUrl = buildWhatsAppUrl({
   </main>
 </BaseLayout>
 
-<style is:global>
-:root {
-  --ivory: #F4EFE4;
-  --ivory-soft: #F8F4EB;
-  --ivory-deep: #EDE3D1;
-  --navy: #13233A;
-  --navy-deep: #0C1C2C;
-  --gold: #A8781A;
-  --gold-pale: #F0E2C8;
-  --line: #DCCEB6;
-  --body: #334155;
-  --serif: "DM Sans", Arial, Helvetica, sans-serif;
-  --sans: "DM Sans", Arial, sans-serif;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--ivory); color: var(--navy); font-family: var(--sans); }
-.container { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
-.section { padding-block: 72px; }
-.text-center { text-align: center; }
-
-.eyebrow {
-  display: block; color: var(--gold); font-size: 11.5px; line-height: 1.45; font-weight: 700;
-  letter-spacing: .18em; text-transform: uppercase; margin: 0 0 10px;
-}
-h2 { font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin-bottom: 12px; }
-.gold-rule { width: 36px; height: 2px; background: var(--gold); margin: 14px 0 18px; }
-
+<style>
 /* Story Split */
 .split-section {
   display: grid;
@@ -228,7 +206,6 @@ h2 { font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin-bottom: 12
   color: #2D3A4B;
   margin-bottom: 16px;
 }
-
 
 /* Differentiators Grid */
 .why-section {
@@ -268,18 +245,6 @@ h2 { font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin-bottom: 12
   color: #4A5568;
   margin: 0;
 }
-
-
-
-/* Buttons */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px;
-  padding: 12px 22px; border-radius: 6px; font-size: 14.5px; font-weight: 600; line-height: 1.3;
-  transition: transform .2s ease, background .2s ease, border-color .2s ease; cursor: pointer; text-decoration: none;
-}
-.btn:hover { transform: translateY(-2px); }
-.btn-gold { background: var(--gold); color: #FFFFFF; border: 1.5px solid var(--gold); }
-.btn-gold:hover { background: #8F6214; border-color: #8F6214; }
 
 @media (max-width: 900px) {
   .split-section {
